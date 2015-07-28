@@ -96,7 +96,7 @@ namespace SuperPOS.UI
             if (CommonData.UsrList.Any(s => s.UsrPwd.Equals(txtPwd.Text)))
             {
                 Hide();
-                FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel();
+                FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel(CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text)));
                 frmAdminMain.ShowDialog();
             }
         }
