@@ -26,8 +26,8 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "DtTo")]
         public virtual DateTime DtTo { get; set; }
 
-        [XmlElement(ElementName = "SpecialPriceEnable")]
-        public virtual int SpecialPriceEnable { get; set; }
+        [XmlElement(ElementName = "SpecialEnable")]
+        public virtual int SpecialEnable { get; set; }
 
         [XmlElement(ElementName = "SpecialContent")]
         public virtual string SpecialContent { get; set; }
