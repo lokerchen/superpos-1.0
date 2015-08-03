@@ -12,7 +12,7 @@
     <property name="OtherName" column="OtherName" type="System.String" />
     <property name="DtFrom" column="DtFrom" type="System.DateTime" />
     <property name="DtTo" column="DtTo" type="System.DateTime" />
-    <property name="SpecialPriceEnable" column="SpecialPriceEnable" type="System.Int32" />
+    <property name="SpecialEnable" column="SpecialEnable" type="System.Int32" />
     <property name="SpecialContent" column="SpecialContent" type="System.String" />
     <!--<property name="SpecialPrice" column="SpecialPrice" type="System.String" />-->
   </class>
