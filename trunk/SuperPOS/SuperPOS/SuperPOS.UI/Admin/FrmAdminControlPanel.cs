@@ -30,5 +30,12 @@ namespace SuperPOS.UI.Admin
             if (usrInfo.UsrRight == 1)
                 gupBoxEatInSetting.Visible = false;
         }
+
+        private void btnShiftCode_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmShiftCodeEntry frmShiftCodeEntry = new FrmShiftCodeEntry();
+            frmShiftCodeEntry.ShowDialog();
+        }
     }
 }
