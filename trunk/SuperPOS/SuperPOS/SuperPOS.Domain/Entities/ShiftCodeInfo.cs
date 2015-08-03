@@ -29,7 +29,10 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "SpecialPriceEnable")]
         public virtual int SpecialPriceEnable { get; set; }
 
-        [XmlElement(ElementName = "SpecialPrice")]
-        public virtual string SpecialPrice { get; set; }
+        [XmlElement(ElementName = "SpecialContent")]
+        public virtual string SpecialContent { get; set; }
+
+        //[XmlElement(ElementName = "SpecialPrice")]
+        //public virtual string SpecialPrice { get; set; }
     }
 }
