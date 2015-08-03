@@ -97,10 +97,10 @@
     <Compile Include="FrmMainShow.Designer.cs">
       <DependentUpon>FrmMainShow.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmShiftCodeEntry.cs">
+    <Compile Include="Admin\FrmShiftCodeEntry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmShiftCodeEntry.Designer.cs">
+    <Compile Include="Admin\FrmShiftCodeEntry.Designer.cs">
       <DependentUpon>FrmShiftCodeEntry.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmWelcome.cs">
@@ -120,7 +120,7 @@
     <EmbeddedResource Include="FrmMainShow.resx">
       <DependentUpon>FrmMainShow.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmShiftCodeEntry.resx">
+    <EmbeddedResource Include="Admin\FrmShiftCodeEntry.resx">
       <DependentUpon>FrmShiftCodeEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmWelcome.resx">
