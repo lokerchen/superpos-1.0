@@ -37,5 +37,12 @@ namespace SuperPOS.UI.Admin
             FrmShiftCodeEntry frmShiftCodeEntry = new FrmShiftCodeEntry();
             frmShiftCodeEntry.ShowDialog();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmLogon frmLogon = new FrmLogon();
+            frmLogon.ShowDialog();
+        }
     }
 }
