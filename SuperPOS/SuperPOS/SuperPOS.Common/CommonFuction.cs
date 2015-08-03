@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SuperPOS.Common
 {
-    public class ComonFuction
+    public class CommonFuction
     {
         public enum Week
         {
