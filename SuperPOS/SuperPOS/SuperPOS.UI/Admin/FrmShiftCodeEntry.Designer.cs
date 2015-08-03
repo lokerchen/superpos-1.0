@@ -30,6 +30,11 @@
         {
             this.grpBoxSCEntry = new System.Windows.Forms.GroupBox();
             this.grpBoxSCContentInput = new System.Windows.Forms.GroupBox();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.bntEdit = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -54,11 +59,6 @@
             this.columnHeaderCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderShiftName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderOtherName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.bntEdit = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
             this.grpBoxSCEntry.SuspendLayout();
             this.grpBoxSCContentInput.SuspendLayout();
             this.grpBoxSpecialPrice.SuspendLayout();
@@ -102,6 +102,66 @@
             this.grpBoxSCContentInput.TabIndex = 1;
             this.grpBoxSCContentInput.TabStop = false;
             this.grpBoxSCContentInput.Text = "Shift Code Content Input";
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(184, 391);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 69);
+            this.btnExit.TabIndex = 15;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(22, 430);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 30);
+            this.btnSave.TabIndex = 14;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // btnDel
+            // 
+            this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDel.ForeColor = System.Drawing.Color.White;
+            this.btnDel.Location = new System.Drawing.Point(103, 430);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(75, 30);
+            this.btnDel.TabIndex = 13;
+            this.btnDel.Text = "Delete";
+            this.btnDel.UseVisualStyleBackColor = false;
+            // 
+            // bntEdit
+            // 
+            this.bntEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.bntEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bntEdit.ForeColor = System.Drawing.Color.White;
+            this.bntEdit.Location = new System.Drawing.Point(103, 391);
+            this.bntEdit.Name = "bntEdit";
+            this.bntEdit.Size = new System.Drawing.Size(75, 30);
+            this.bntEdit.TabIndex = 12;
+            this.bntEdit.Text = "Edit";
+            this.bntEdit.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(22, 391);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 30);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseVisualStyleBackColor = false;
             // 
             // dateTimePicker2
             // 
@@ -324,66 +384,6 @@
             this.columnHeaderOtherName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.columnHeaderOtherName.Width = 130;
             // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(22, 391);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 30);
-            this.btnAdd.TabIndex = 11;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // bntEdit
-            // 
-            this.bntEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bntEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bntEdit.ForeColor = System.Drawing.Color.White;
-            this.bntEdit.Location = new System.Drawing.Point(103, 391);
-            this.bntEdit.Name = "bntEdit";
-            this.bntEdit.Size = new System.Drawing.Size(75, 30);
-            this.bntEdit.TabIndex = 12;
-            this.bntEdit.Text = "Edit";
-            this.bntEdit.UseVisualStyleBackColor = false;
-            // 
-            // btnDel
-            // 
-            this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(103, 430);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(75, 30);
-            this.btnDel.TabIndex = 13;
-            this.btnDel.Text = "Delete";
-            this.btnDel.UseVisualStyleBackColor = false;
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(22, 430);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 30);
-            this.btnSave.TabIndex = 14;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(184, 391);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 69);
-            this.btnExit.TabIndex = 15;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
             // FrmShiftCodeEntry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -392,6 +392,7 @@
             this.Controls.Add(this.grpBoxSCEntry);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmShiftCodeEntry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmShiftCodeEntry";
             this.grpBoxSCEntry.ResumeLayout(false);
             this.grpBoxSCContentInput.ResumeLayout(false);
