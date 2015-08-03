@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.grpBoxCtlPanel = new System.Windows.Forms.GroupBox();
+            this.btnSysControl = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.grpBoxReporting = new System.Windows.Forms.GroupBox();
             this.btnReport = new System.Windows.Forms.Button();
             this.btnRptAccountSummary = new System.Windows.Forms.Button();
@@ -61,8 +63,6 @@
             this.btnDataManager = new System.Windows.Forms.Button();
             this.btnUsrMaint = new System.Windows.Forms.Button();
             this.btnSysConfig = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnSysControl = new System.Windows.Forms.Button();
             this.grpBoxCtlPanel.SuspendLayout();
             this.grpBoxReporting.SuspendLayout();
             this.gupBoxEatInSetting.SuspendLayout();
@@ -85,6 +85,30 @@
             this.grpBoxCtlPanel.TabIndex = 0;
             this.grpBoxCtlPanel.TabStop = false;
             this.grpBoxCtlPanel.Text = "Control Panel";
+            // 
+            // btnSysControl
+            // 
+            this.btnSysControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSysControl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSysControl.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSysControl.Location = new System.Drawing.Point(283, 432);
+            this.btnSysControl.Name = "btnSysControl";
+            this.btnSysControl.Size = new System.Drawing.Size(110, 40);
+            this.btnSysControl.TabIndex = 5;
+            this.btnSysControl.Text = "System Control";
+            this.btnSysControl.UseVisualStyleBackColor = false;
+            this.btnSysControl.Visible = false;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.Location = new System.Drawing.Point(599, 451);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(137, 50);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
             // 
             // grpBoxReporting
             // 
@@ -450,6 +474,7 @@
             this.btnShiftCode.TabIndex = 5;
             this.btnShiftCode.Text = "Shift Code";
             this.btnShiftCode.UseVisualStyleBackColor = false;
+            this.btnShiftCode.Click += new System.EventHandler(this.btnShiftCode_Click);
             // 
             // btnComputerAddr
             // 
@@ -515,30 +540,6 @@
             this.btnSysConfig.TabIndex = 0;
             this.btnSysConfig.Text = "System Configuration";
             this.btnSysConfig.UseVisualStyleBackColor = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.DarkCyan;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Location = new System.Drawing.Point(599, 451);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(137, 50);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            // 
-            // btnSysControl
-            // 
-            this.btnSysControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSysControl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSysControl.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSysControl.Location = new System.Drawing.Point(283, 432);
-            this.btnSysControl.Name = "btnSysControl";
-            this.btnSysControl.Size = new System.Drawing.Size(110, 40);
-            this.btnSysControl.TabIndex = 5;
-            this.btnSysControl.Text = "System Control";
-            this.btnSysControl.UseVisualStyleBackColor = false;
-            this.btnSysControl.Visible = false;
             // 
             // FrmAdminControlPanel
             // 
