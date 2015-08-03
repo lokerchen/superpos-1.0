@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="BLLException.cs" />
     <Compile Include="CommonBase.cs" />
+    <Compile Include="ComonFuction.cs" />
     <Compile Include="DALException.cs" />
     <Compile Include="EntityControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
