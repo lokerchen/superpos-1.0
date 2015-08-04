@@ -58,6 +58,29 @@ namespace SuperPOS.Common
             return flag;
         }
 
+        #region 新增或更新
+
+        public void SaveOrUpdateEntity(Object entity)
+        {
+            using (var session = SessionFactory.OpenSession())
+            {
+                using (var transaction = session.BeginTransaction())
+                {
+                    try
+                    {
+                        session.SaveOrUpdate(entity);
+                        transaction.Commit();
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
+            }
+        }
+        #endregion
+
         #endregion
 
         #region 更新对象
