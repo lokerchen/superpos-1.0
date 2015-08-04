@@ -1,4 +1,4 @@
-﻿namespace SuperPOS.UI
+﻿namespace SuperPOS.UI.Admin
 {
     partial class FrmShiftCodeEntry
     {
@@ -33,13 +33,13 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
-            this.bntEdit = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.txtOtherName = new System.Windows.Forms.TextBox();
+            this.txtShiftName = new System.Windows.Forms.TextBox();
+            this.txtShiftCode = new System.Windows.Forms.TextBox();
             this.grpBoxSpecialPrice = new System.Windows.Forms.GroupBox();
             this.chkBoxSaturday = new System.Windows.Forms.CheckBox();
             this.chkBoxFriday = new System.Windows.Forms.CheckBox();
@@ -55,6 +55,7 @@
             this.lblShiftName = new System.Windows.Forms.Label();
             this.lblShiftCode = new System.Windows.Forms.Label();
             this.grpBoxSCList = new System.Windows.Forms.GroupBox();
+            this.dgvShiftCode = new System.Windows.Forms.DataGridView();
             this.lvShiftCode = new System.Windows.Forms.ListView();
             this.columnHeaderCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderShiftName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -63,6 +64,7 @@
             this.grpBoxSCContentInput.SuspendLayout();
             this.grpBoxSpecialPrice.SuspendLayout();
             this.grpBoxSCList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShiftCode)).BeginInit();
             this.SuspendLayout();
             // 
             // grpBoxSCEntry
@@ -82,13 +84,13 @@
             this.grpBoxSCContentInput.Controls.Add(this.btnExit);
             this.grpBoxSCContentInput.Controls.Add(this.btnSave);
             this.grpBoxSCContentInput.Controls.Add(this.btnDel);
-            this.grpBoxSCContentInput.Controls.Add(this.bntEdit);
+            this.grpBoxSCContentInput.Controls.Add(this.btnEdit);
             this.grpBoxSCContentInput.Controls.Add(this.btnAdd);
-            this.grpBoxSCContentInput.Controls.Add(this.dateTimePicker2);
-            this.grpBoxSCContentInput.Controls.Add(this.dateTimePicker1);
-            this.grpBoxSCContentInput.Controls.Add(this.textBox3);
-            this.grpBoxSCContentInput.Controls.Add(this.textBox2);
-            this.grpBoxSCContentInput.Controls.Add(this.textBox1);
+            this.grpBoxSCContentInput.Controls.Add(this.dtpTo);
+            this.grpBoxSCContentInput.Controls.Add(this.dtpFrom);
+            this.grpBoxSCContentInput.Controls.Add(this.txtOtherName);
+            this.grpBoxSCContentInput.Controls.Add(this.txtShiftName);
+            this.grpBoxSCContentInput.Controls.Add(this.txtShiftCode);
             this.grpBoxSCContentInput.Controls.Add(this.grpBoxSpecialPrice);
             this.grpBoxSCContentInput.Controls.Add(this.lblTo);
             this.grpBoxSCContentInput.Controls.Add(this.lblFrom);
@@ -114,6 +116,7 @@
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -126,6 +129,7 @@
             this.btnSave.TabIndex = 14;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDel
             // 
@@ -138,18 +142,20 @@
             this.btnDel.TabIndex = 13;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
-            // bntEdit
+            // btnEdit
             // 
-            this.bntEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bntEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bntEdit.ForeColor = System.Drawing.Color.White;
-            this.bntEdit.Location = new System.Drawing.Point(103, 391);
-            this.bntEdit.Name = "bntEdit";
-            this.bntEdit.Size = new System.Drawing.Size(75, 30);
-            this.bntEdit.TabIndex = 12;
-            this.bntEdit.Text = "Edit";
-            this.bntEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(103, 391);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 30);
+            this.btnEdit.TabIndex = 12;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.bntEdit_Click);
             // 
             // btnAdd
             // 
@@ -162,45 +168,56 @@
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // dateTimePicker2
+            // dtpTo
             // 
-            this.dateTimePicker2.CustomFormat = "HH:mm";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(181, 145);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(64, 23);
-            this.dateTimePicker2.TabIndex = 10;
+            this.dtpTo.CustomFormat = "HH:mm";
+            this.dtpTo.Enabled = false;
+            this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpTo.Location = new System.Drawing.Point(181, 145);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.ShowUpDown = true;
+            this.dtpTo.Size = new System.Drawing.Size(64, 23);
+            this.dtpTo.TabIndex = 10;
+            this.dtpTo.Value = new System.DateTime(2015, 8, 4, 15, 46, 0, 0);
             // 
-            // dateTimePicker1
+            // dtpFrom
             // 
-            this.dateTimePicker1.CustomFormat = "HH:mm";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(70, 145);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(64, 23);
-            this.dateTimePicker1.TabIndex = 9;
+            this.dtpFrom.CustomFormat = "HH:mm";
+            this.dtpFrom.Enabled = false;
+            this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpFrom.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dtpFrom.Location = new System.Drawing.Point(70, 145);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dtpFrom.ShowUpDown = true;
+            this.dtpFrom.Size = new System.Drawing.Size(64, 23);
+            this.dtpFrom.TabIndex = 9;
             // 
-            // textBox3
+            // txtOtherName
             // 
-            this.textBox3.Location = new System.Drawing.Point(124, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 8;
+            this.txtOtherName.Enabled = false;
+            this.txtOtherName.Location = new System.Drawing.Point(124, 97);
+            this.txtOtherName.Name = "txtOtherName";
+            this.txtOtherName.Size = new System.Drawing.Size(100, 23);
+            this.txtOtherName.TabIndex = 8;
             // 
-            // textBox2
+            // txtShiftName
             // 
-            this.textBox2.Location = new System.Drawing.Point(124, 64);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 7;
+            this.txtShiftName.Enabled = false;
+            this.txtShiftName.Location = new System.Drawing.Point(124, 64);
+            this.txtShiftName.Name = "txtShiftName";
+            this.txtShiftName.Size = new System.Drawing.Size(100, 23);
+            this.txtShiftName.TabIndex = 7;
             // 
-            // textBox1
+            // txtShiftCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(124, 28);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 23);
-            this.textBox1.TabIndex = 6;
+            this.txtShiftCode.Enabled = false;
+            this.txtShiftCode.Location = new System.Drawing.Point(124, 28);
+            this.txtShiftCode.Name = "txtShiftCode";
+            this.txtShiftCode.Size = new System.Drawing.Size(100, 23);
+            this.txtShiftCode.TabIndex = 6;
             // 
             // grpBoxSpecialPrice
             // 
@@ -298,6 +315,7 @@
             this.chkBoxEnable.TabIndex = 0;
             this.chkBoxEnable.Text = "Enable";
             this.chkBoxEnable.UseVisualStyleBackColor = true;
+            this.chkBoxEnable.CheckedChanged += new System.EventHandler(this.chkBoxEnable_CheckedChanged);
             // 
             // lblTo
             // 
@@ -346,6 +364,7 @@
             // 
             // grpBoxSCList
             // 
+            this.grpBoxSCList.Controls.Add(this.dgvShiftCode);
             this.grpBoxSCList.Controls.Add(this.lvShiftCode);
             this.grpBoxSCList.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxSCList.Location = new System.Drawing.Point(6, 22);
@@ -355,6 +374,20 @@
             this.grpBoxSCList.TabStop = false;
             this.grpBoxSCList.Text = "Shift Code List";
             // 
+            // dgvShiftCode
+            // 
+            this.dgvShiftCode.AllowUserToAddRows = false;
+            this.dgvShiftCode.AllowUserToDeleteRows = false;
+            this.dgvShiftCode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShiftCode.Location = new System.Drawing.Point(6, 251);
+            this.dgvShiftCode.Name = "dgvShiftCode";
+            this.dgvShiftCode.ReadOnly = true;
+            this.dgvShiftCode.RowTemplate.Height = 23;
+            this.dgvShiftCode.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvShiftCode.Size = new System.Drawing.Size(319, 150);
+            this.dgvShiftCode.TabIndex = 1;
+            this.dgvShiftCode.SelectionChanged += new System.EventHandler(this.dgvShiftCode_SelectionChanged);
+            // 
             // lvShiftCode
             // 
             this.lvShiftCode.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -363,10 +396,11 @@
             this.columnHeaderOtherName});
             this.lvShiftCode.Location = new System.Drawing.Point(6, 22);
             this.lvShiftCode.Name = "lvShiftCode";
-            this.lvShiftCode.Size = new System.Drawing.Size(320, 441);
+            this.lvShiftCode.Size = new System.Drawing.Size(320, 213);
             this.lvShiftCode.TabIndex = 0;
             this.lvShiftCode.UseCompatibleStateImageBehavior = false;
             this.lvShiftCode.View = System.Windows.Forms.View.Details;
+            this.lvShiftCode.SelectedIndexChanged += new System.EventHandler(this.lvShiftCode_SelectedIndexChanged);
             // 
             // columnHeaderCode
             // 
@@ -394,12 +428,14 @@
             this.Name = "FrmShiftCodeEntry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmShiftCodeEntry";
+            this.Load += new System.EventHandler(this.FrmShiftCodeEntry_Load);
             this.grpBoxSCEntry.ResumeLayout(false);
             this.grpBoxSCContentInput.ResumeLayout(false);
             this.grpBoxSCContentInput.PerformLayout();
             this.grpBoxSpecialPrice.ResumeLayout(false);
             this.grpBoxSpecialPrice.PerformLayout();
             this.grpBoxSCList.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShiftCode)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,15 +445,11 @@
         private System.Windows.Forms.GroupBox grpBoxSCEntry;
         private System.Windows.Forms.GroupBox grpBoxSCContentInput;
         private System.Windows.Forms.GroupBox grpBoxSCList;
-        private System.Windows.Forms.ListView lvShiftCode;
-        private System.Windows.Forms.ColumnHeader columnHeaderCode;
-        private System.Windows.Forms.ColumnHeader columnHeaderShiftName;
-        private System.Windows.Forms.ColumnHeader columnHeaderOtherName;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dtpTo;
+        private System.Windows.Forms.DateTimePicker dtpFrom;
+        private System.Windows.Forms.TextBox txtOtherName;
+        private System.Windows.Forms.TextBox txtShiftName;
+        private System.Windows.Forms.TextBox txtShiftCode;
         private System.Windows.Forms.GroupBox grpBoxSpecialPrice;
         private System.Windows.Forms.CheckBox chkBoxSaturday;
         private System.Windows.Forms.CheckBox chkBoxFriday;
@@ -435,7 +467,12 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Button bntEdit;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DataGridView dgvShiftCode;
+        private System.Windows.Forms.ListView lvShiftCode;
+        private System.Windows.Forms.ColumnHeader columnHeaderCode;
+        private System.Windows.Forms.ColumnHeader columnHeaderShiftName;
+        private System.Windows.Forms.ColumnHeader columnHeaderOtherName;
     }
 }
