@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,10 +22,10 @@ namespace SuperPOS.Domain.Entities
         public virtual string OtherName { get; set; }
 
         [XmlElement(ElementName = "DtFrom")]
-        public virtual DateTime DtFrom { get; set; }
+        public virtual string DtFrom { get; set; }
 
         [XmlElement(ElementName = "DtTo")]
-        public virtual DateTime DtTo { get; set; }
+        public virtual string DtTo { get; set; }
 
         [XmlElement(ElementName = "SpecialEnable")]
         public virtual int SpecialEnable { get; set; }
