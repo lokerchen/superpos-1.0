@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using SuperPOS.Common;
 using SuperPOS.DAL;
+using SuperPOS.Domain.Entities;
 using SuperPOS.UI.Admin;
 
 namespace SuperPOS.UI
@@ -45,16 +46,25 @@ namespace SuperPOS.UI
             lblDate.Text = DateTime.Now.ToShortDateString();
             lblTime.Text = DateTime.Now.ToLongTimeString();
 
-            foreach (var sc in CommonData.ShiftCodeList)
-            {
-                Console.WriteLine(@"SystemKey:" + sc.SystemKey
-                                    + @" Shift Code:" + sc.ShiftCode
-                                    + @" Shift Name:" + sc.ShiftName
-                                    + @" Other Name:" + sc.OtherName
-                                    + @" DtFrom: " + sc.DtFrom
-                                    + @" DtTo: " + sc.DtTo
-                                    + @" SpecialPriceEnable: " + sc.SpecialPriceEnable);   
-            }
+            new OnLoadSystemCommonData().GetShiftCodeList();
+            ShiftCodeInfo scInfo = new ShiftCodeInfo();
+            scInfo = CommonData.ShiftCodeList.FirstOrDefault(sc =>
+                            DateTime.Compare(Convert.ToDateTime(DateTime.Now.ToShortTimeString()), Convert.ToDateTime(sc.DtFrom)) >= 0
+                            &&
+                            DateTime.Compare(Convert.ToDateTime(DateTime.Now.ToShortTimeString()), Convert.ToDateTime(sc.DtTo)) <= 0);
+
+            if (scInfo != null) lblSession.Text = scInfo.ShiftName;
+
+            //foreach (var sc in CommonData.ShiftCodeList)
+            //{
+            //    Console.WriteLine(@"SystemKey:" + sc.SystemKey
+            //                        + @" Shift Code:" + sc.ShiftCode
+            //                        + @" Shift Name:" + sc.ShiftName
+            //                        + @" Other Name:" + sc.OtherName
+            //                        + @" DtFrom: " + sc.DtFrom
+            //                        + @" DtTo: " + sc.DtTo
+            //                        + @" SpecialPriceEnable: " + sc.SpecialPriceEnable);   
+            //}
         }
 
         #region 按钮输入事件
