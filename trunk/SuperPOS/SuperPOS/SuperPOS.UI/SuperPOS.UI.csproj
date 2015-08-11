@@ -70,6 +70,7 @@
       <HintPath>..\packages\System.Data.SQLite.Linq.1.0.97.0\lib\net20\System.Data.SQLite.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
@@ -84,6 +85,12 @@
     </Compile>
     <Compile Include="Admin\FrmAdminControlPanel.Designer.cs">
       <DependentUpon>FrmAdminControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\FrmSysConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmSysConfig.Designer.cs">
+      <DependentUpon>FrmSysConfig.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogon.cs">
       <SubType>Form</SubType>
@@ -113,6 +120,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin\FrmAdminControlPanel.resx">
       <DependentUpon>FrmAdminControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmSysConfig.resx">
+      <DependentUpon>FrmSysConfig.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogon.resx">
       <DependentUpon>FrmLogon.cs</DependentUpon>
@@ -149,7 +159,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="hibernate.cfg.xml" />
+    <Content Include="hibernate.cfg.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Img\SuperPOS-LOGO.jpg" />
   </ItemGroup>
   <ItemGroup>
