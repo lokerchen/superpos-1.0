@@ -44,5 +44,12 @@ namespace SuperPOS.UI.Admin
             FrmLogon frmLogon = new FrmLogon();
             frmLogon.ShowDialog();
         }
+
+        private void btnSysConfig_Click(object sender, EventArgs e)
+        {
+            FrmSysConfig frmSysConfig = new FrmSysConfig();
+            Hide();
+            frmSysConfig.ShowDialog();
+        }
     }
 }

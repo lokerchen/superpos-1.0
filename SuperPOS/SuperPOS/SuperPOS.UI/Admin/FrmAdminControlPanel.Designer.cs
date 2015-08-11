@@ -541,6 +541,7 @@
             this.btnSysConfig.TabIndex = 0;
             this.btnSysConfig.Text = "System Configuration";
             this.btnSysConfig.UseVisualStyleBackColor = false;
+            this.btnSysConfig.Click += new System.EventHandler(this.btnSysConfig_Click);
             // 
             // FrmAdminControlPanel
             // 
