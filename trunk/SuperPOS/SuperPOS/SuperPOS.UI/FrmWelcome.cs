@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SuperPOS.BLL;
 using SuperPOS.Common;
 using SuperPOS.DAL;
 
@@ -60,9 +61,7 @@ namespace SuperPOS.UI
             timerPgBarInit.Enabled = true;
 
             //加载系统数据
-            OnLoadSystemCommonData onLoad = new OnLoadSystemCommonData();
-            onLoad.GetUserList();
-            onLoad.GetShiftCodeList();
+            DALCommon.GetAllInfoList();
         }
     }
 }
