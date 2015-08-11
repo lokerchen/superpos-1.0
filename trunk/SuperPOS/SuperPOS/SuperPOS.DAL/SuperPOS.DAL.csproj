@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonData.cs" />
+    <Compile Include="DALCommon.cs" />
     <Compile Include="OnLoadSystemCommonData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
