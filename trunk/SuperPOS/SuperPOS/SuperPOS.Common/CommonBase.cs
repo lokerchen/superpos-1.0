@@ -26,6 +26,10 @@ namespace SuperPOS.Common
         public static string FILE_TEAMVIEW_DEFAULT_X86 = @"C:\Program Files\TeamViewer\";
         public static string FILE_TEAMVIEW_DEFAULT_X64 = @"C:\Program Files (x86)\TeamViewer\";
 
+        //TeamView程序名称
         public static string FILE_TEAMVIEW_NAME = @"TeamViewer.exe";
+
+        //查询所有磁盘
+        public static string SELECT_WIN32_LOGICALDISK = @"SELECT * FROM WIN32_LOGICALDISK";
     }
 }
