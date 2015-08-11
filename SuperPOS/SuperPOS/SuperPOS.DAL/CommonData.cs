@@ -19,5 +19,11 @@ namespace SuperPOS.DAL
             get;
             set;
         }
+
+        public static IList<SysConfigInfo> SysConfigList
+        {
+            get;
+            set;
+        }
     }
 }

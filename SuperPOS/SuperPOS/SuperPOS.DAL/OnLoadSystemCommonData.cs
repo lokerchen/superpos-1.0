@@ -25,5 +25,10 @@ namespace SuperPOS.DAL
         {
             CommonData.ShiftCodeList = _control.SelectAll<ShiftCodeInfo>();
         }
+
+        public void GetSysConfigList()
+        {
+            CommonData.SysConfigList = _control.SelectAll<SysConfigInfo>();
+        }
     }
 }
