@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SuperPOS"
+                   namespace="SuperPOS.Domain">
+
+  <class name="SuperPOS.Domain.Entities.SysConfigInfo, SuperPOS.Domain" table="SysConfig">
+    <id name="SystemKey" column="SystemKey" type="System.Guid">
+      <generator class="guid" />
+    </id>
+    <property name="ShopName" column="ShopName" type="System.String" />
+    <property name="ShopAddr" column="ShopAddr" type="System.String" />
+    <property name="IsDisplayItemCodeSelect" column="IsDisplayItemCodeSelect" type="System.String" />
+    <property name="IsInputNumberOfPerson" column="IsInputNumberOfPerson" type="System.String" />
+    <property name="IsBackUpWhenExit" column="IsBackUpWhenExit" type="System.String" />
+    <property name="BackUpDrive" column="BackUpDrive" type="System.String" />
+    <property name="TillNum" column="TillNum" type="System.String" />
+    <property name="DefaultOrderInputPage" column="DefaultOrderInputPage" type="System.String" />
+    <property name="Currency" column="Currency" type="System.String" />
+    <property name="VATPerct" column="VATPerct" type="System.String" />
+    <property name="IsUseCashDrawer" column="IsUseCashDrawer" type="System.String" />
+    <property name="RptPrinter" column="RptPrinter" type="System.String" />
+    <property name="A4RptPrinter" column="A4RptPrinter" type="System.String" />
+    <property name="RoundUpDecimal" column="RoundUpDecimal" type="System.String" />
+    <property name="KeypadSet" column="KeypadSet" type="System.String" />
+    <property name="Remark" column="Remark" type="System.String" />
+  </class>
+
+</hibernate-mapping>
