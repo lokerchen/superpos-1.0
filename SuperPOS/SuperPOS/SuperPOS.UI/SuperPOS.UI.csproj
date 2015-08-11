@@ -165,6 +165,10 @@
     <None Include="Img\SuperPOS-LOGO.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SuperPOS.BLL\SuperPOS.BLL.csproj">
+      <Project>{f818fe74-bb03-489f-8ab1-18cc77d91d42}</Project>
+      <Name>SuperPOS.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SuperPOS.Common\SuperPOS.Common.csproj">
       <Project>{ac163905-db2a-4318-a454-f1ea4c3728a5}</Project>
       <Name>SuperPOS.Common</Name>
