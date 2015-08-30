@@ -103,8 +103,17 @@ namespace SuperPOS.UI
 
         private void btnOK_Click(object sender, EventArgs e)
         {
+            new OnLoadSystemCommonData().GetSysConfigList();
+
             if (CommonData.UsrList.Any(s => s.UsrPwd.Equals(txtPwd.Text)))
             {
+                if (CommonData.SysConfigList.Count <= 0)
+                {
+                    MessageBox.Show("No restaurant, please first add first");
+                    FrmSysConfig frmSysConfig = new FrmSysConfig(0);
+                    frmSysConfig.ShowDialog();
+                }
+                    
                 Hide();
                 FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel(CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text)));
                 frmAdminMain.ShowDialog();
