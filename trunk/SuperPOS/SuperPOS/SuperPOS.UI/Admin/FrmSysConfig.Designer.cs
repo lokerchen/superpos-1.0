@@ -32,42 +32,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.grpBoxKeypadSet = new System.Windows.Forms.GroupBox();
-            this.grpBoxCashDrawerSet = new System.Windows.Forms.GroupBox();
-            this.grpBoxPrintOption = new System.Windows.Forms.GroupBox();
-            this.lblRoundUpDecimal = new System.Windows.Forms.Label();
-            this.lblA4RptPrint = new System.Windows.Forms.Label();
-            this.lblRptPrint = new System.Windows.Forms.Label();
-            this.grpBoxGenSet = new System.Windows.Forms.GroupBox();
-            this.grpBoxShopDetail = new System.Windows.Forms.GroupBox();
-            this.lblAddr = new System.Windows.Forms.Label();
-            this.txtAddr = new System.Windows.Forms.TextBox();
-            this.txtShopName = new System.Windows.Forms.TextBox();
-            this.lblShopName = new System.Windows.Forms.Label();
-            this.lblVATPerct = new System.Windows.Forms.Label();
-            this.lblCurrency = new System.Windows.Forms.Label();
-            this.lblDefOrderInputPage = new System.Windows.Forms.Label();
-            this.lblTillNum = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.chkBoxDisItemCodeSelect = new System.Windows.Forms.CheckBox();
-            this.chkBoxInputNumPerson = new System.Windows.Forms.CheckBox();
-            this.txtTillNum = new System.Windows.Forms.TextBox();
-            this.comBoxDefOrderInputPage = new System.Windows.Forms.ComboBox();
-            this.txtCurrency = new System.Windows.Forms.TextBox();
-            this.txtVATPerct = new System.Windows.Forms.TextBox();
-            this.comBoxRptPrint = new System.Windows.Forms.ComboBox();
-            this.comBoxA4RptPrint = new System.Windows.Forms.ComboBox();
-            this.txtRoundUpDecimal = new System.Windows.Forms.TextBox();
-            this.chkBoxUseCashDrawer = new System.Windows.Forms.CheckBox();
-            this.lblKey1 = new System.Windows.Forms.Label();
-            this.lblKey2 = new System.Windows.Forms.Label();
-            this.lblKey3 = new System.Windows.Forms.Label();
-            this.lblKey4 = new System.Windows.Forms.Label();
-            this.lblKey5 = new System.Windows.Forms.Label();
-            this.txtKey1 = new System.Windows.Forms.TextBox();
-            this.txtKey2 = new System.Windows.Forms.TextBox();
-            this.txtKey3 = new System.Windows.Forms.TextBox();
-            this.txtKey4 = new System.Windows.Forms.TextBox();
-            this.txtKey5 = new System.Windows.Forms.TextBox();
             this.txtKey10 = new System.Windows.Forms.TextBox();
             this.txtKey9 = new System.Windows.Forms.TextBox();
             this.txtKey8 = new System.Windows.Forms.TextBox();
@@ -78,8 +42,44 @@
             this.lblKey8 = new System.Windows.Forms.Label();
             this.lblKey7 = new System.Windows.Forms.Label();
             this.lblKey6 = new System.Windows.Forms.Label();
-            this.chkBoxBackUpWhenExit = new System.Windows.Forms.CheckBox();
+            this.txtKey5 = new System.Windows.Forms.TextBox();
+            this.txtKey4 = new System.Windows.Forms.TextBox();
+            this.txtKey3 = new System.Windows.Forms.TextBox();
+            this.txtKey2 = new System.Windows.Forms.TextBox();
+            this.txtKey1 = new System.Windows.Forms.TextBox();
+            this.lblKey5 = new System.Windows.Forms.Label();
+            this.lblKey4 = new System.Windows.Forms.Label();
+            this.lblKey3 = new System.Windows.Forms.Label();
+            this.lblKey2 = new System.Windows.Forms.Label();
+            this.lblKey1 = new System.Windows.Forms.Label();
+            this.grpBoxCashDrawerSet = new System.Windows.Forms.GroupBox();
+            this.chkBoxUseCashDrawer = new System.Windows.Forms.CheckBox();
+            this.grpBoxPrintOption = new System.Windows.Forms.GroupBox();
+            this.txtRoundUpDecimal = new System.Windows.Forms.TextBox();
+            this.comBoxA4RptPrint = new System.Windows.Forms.ComboBox();
+            this.comBoxRptPrint = new System.Windows.Forms.ComboBox();
+            this.lblRoundUpDecimal = new System.Windows.Forms.Label();
+            this.lblA4RptPrint = new System.Windows.Forms.Label();
+            this.lblRptPrint = new System.Windows.Forms.Label();
+            this.grpBoxGenSet = new System.Windows.Forms.GroupBox();
             this.comBoxBackUpDrive = new System.Windows.Forms.ComboBox();
+            this.chkBoxBackUpWhenExit = new System.Windows.Forms.CheckBox();
+            this.txtVATPerct = new System.Windows.Forms.TextBox();
+            this.txtCurrency = new System.Windows.Forms.TextBox();
+            this.comBoxDefOrderInputPage = new System.Windows.Forms.ComboBox();
+            this.txtTillNum = new System.Windows.Forms.TextBox();
+            this.chkBoxInputNumPerson = new System.Windows.Forms.CheckBox();
+            this.chkBoxDisItemCodeSelect = new System.Windows.Forms.CheckBox();
+            this.lblVATPerct = new System.Windows.Forms.Label();
+            this.lblCurrency = new System.Windows.Forms.Label();
+            this.lblDefOrderInputPage = new System.Windows.Forms.Label();
+            this.lblTillNum = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.grpBoxShopDetail = new System.Windows.Forms.GroupBox();
+            this.lblAddr = new System.Windows.Forms.Label();
+            this.txtAddr = new System.Windows.Forms.TextBox();
+            this.txtShopName = new System.Windows.Forms.TextBox();
+            this.lblShopName = new System.Windows.Forms.Label();
             this.grpBoxConf.SuspendLayout();
             this.grpBoxKeypadSet.SuspendLayout();
             this.grpBoxCashDrawerSet.SuspendLayout();
@@ -157,351 +157,6 @@
             this.grpBoxKeypadSet.TabIndex = 4;
             this.grpBoxKeypadSet.TabStop = false;
             this.grpBoxKeypadSet.Text = "Keypad Setting";
-            // 
-            // grpBoxCashDrawerSet
-            // 
-            this.grpBoxCashDrawerSet.Controls.Add(this.chkBoxUseCashDrawer);
-            this.grpBoxCashDrawerSet.Location = new System.Drawing.Point(15, 435);
-            this.grpBoxCashDrawerSet.Name = "grpBoxCashDrawerSet";
-            this.grpBoxCashDrawerSet.Size = new System.Drawing.Size(307, 66);
-            this.grpBoxCashDrawerSet.TabIndex = 3;
-            this.grpBoxCashDrawerSet.TabStop = false;
-            this.grpBoxCashDrawerSet.Text = "Cash Drawer Setting";
-            // 
-            // grpBoxPrintOption
-            // 
-            this.grpBoxPrintOption.Controls.Add(this.txtRoundUpDecimal);
-            this.grpBoxPrintOption.Controls.Add(this.comBoxA4RptPrint);
-            this.grpBoxPrintOption.Controls.Add(this.comBoxRptPrint);
-            this.grpBoxPrintOption.Controls.Add(this.lblRoundUpDecimal);
-            this.grpBoxPrintOption.Controls.Add(this.lblA4RptPrint);
-            this.grpBoxPrintOption.Controls.Add(this.lblRptPrint);
-            this.grpBoxPrintOption.Location = new System.Drawing.Point(363, 50);
-            this.grpBoxPrintOption.Name = "grpBoxPrintOption";
-            this.grpBoxPrintOption.Size = new System.Drawing.Size(277, 116);
-            this.grpBoxPrintOption.TabIndex = 2;
-            this.grpBoxPrintOption.TabStop = false;
-            this.grpBoxPrintOption.Text = "Print Options";
-            // 
-            // lblRoundUpDecimal
-            // 
-            this.lblRoundUpDecimal.AutoSize = true;
-            this.lblRoundUpDecimal.Location = new System.Drawing.Point(27, 85);
-            this.lblRoundUpDecimal.Name = "lblRoundUpDecimal";
-            this.lblRoundUpDecimal.Size = new System.Drawing.Size(136, 16);
-            this.lblRoundUpDecimal.TabIndex = 2;
-            this.lblRoundUpDecimal.Text = "Round Up Decimal";
-            // 
-            // lblA4RptPrint
-            // 
-            this.lblA4RptPrint.AutoSize = true;
-            this.lblA4RptPrint.Location = new System.Drawing.Point(20, 55);
-            this.lblA4RptPrint.Name = "lblA4RptPrint";
-            this.lblA4RptPrint.Size = new System.Drawing.Size(144, 16);
-            this.lblA4RptPrint.TabIndex = 1;
-            this.lblA4RptPrint.Text = "A4 Report Printer";
-            // 
-            // lblRptPrint
-            // 
-            this.lblRptPrint.AutoSize = true;
-            this.lblRptPrint.Location = new System.Drawing.Point(36, 25);
-            this.lblRptPrint.Name = "lblRptPrint";
-            this.lblRptPrint.Size = new System.Drawing.Size(120, 16);
-            this.lblRptPrint.TabIndex = 0;
-            this.lblRptPrint.Text = "Report Printer";
-            // 
-            // grpBoxGenSet
-            // 
-            this.grpBoxGenSet.Controls.Add(this.comBoxBackUpDrive);
-            this.grpBoxGenSet.Controls.Add(this.chkBoxBackUpWhenExit);
-            this.grpBoxGenSet.Controls.Add(this.txtVATPerct);
-            this.grpBoxGenSet.Controls.Add(this.txtCurrency);
-            this.grpBoxGenSet.Controls.Add(this.comBoxDefOrderInputPage);
-            this.grpBoxGenSet.Controls.Add(this.txtTillNum);
-            this.grpBoxGenSet.Controls.Add(this.chkBoxInputNumPerson);
-            this.grpBoxGenSet.Controls.Add(this.chkBoxDisItemCodeSelect);
-            this.grpBoxGenSet.Controls.Add(this.lblVATPerct);
-            this.grpBoxGenSet.Controls.Add(this.lblCurrency);
-            this.grpBoxGenSet.Controls.Add(this.lblDefOrderInputPage);
-            this.grpBoxGenSet.Controls.Add(this.lblTillNum);
-            this.grpBoxGenSet.Controls.Add(this.label4);
-            this.grpBoxGenSet.Location = new System.Drawing.Point(15, 150);
-            this.grpBoxGenSet.Name = "grpBoxGenSet";
-            this.grpBoxGenSet.Size = new System.Drawing.Size(307, 268);
-            this.grpBoxGenSet.TabIndex = 1;
-            this.grpBoxGenSet.TabStop = false;
-            this.grpBoxGenSet.Text = "General Setting";
-            // 
-            // grpBoxShopDetail
-            // 
-            this.grpBoxShopDetail.Controls.Add(this.lblAddr);
-            this.grpBoxShopDetail.Controls.Add(this.txtAddr);
-            this.grpBoxShopDetail.Controls.Add(this.txtShopName);
-            this.grpBoxShopDetail.Controls.Add(this.lblShopName);
-            this.grpBoxShopDetail.Location = new System.Drawing.Point(15, 25);
-            this.grpBoxShopDetail.Name = "grpBoxShopDetail";
-            this.grpBoxShopDetail.Size = new System.Drawing.Size(307, 108);
-            this.grpBoxShopDetail.TabIndex = 0;
-            this.grpBoxShopDetail.TabStop = false;
-            this.grpBoxShopDetail.Text = "Shop Details";
-            // 
-            // lblAddr
-            // 
-            this.lblAddr.AutoSize = true;
-            this.lblAddr.Location = new System.Drawing.Point(22, 78);
-            this.lblAddr.Name = "lblAddr";
-            this.lblAddr.Size = new System.Drawing.Size(72, 16);
-            this.lblAddr.TabIndex = 3;
-            this.lblAddr.Text = "Address:";
-            // 
-            // txtAddr
-            // 
-            this.txtAddr.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtAddr.Location = new System.Drawing.Point(100, 71);
-            this.txtAddr.Name = "txtAddr";
-            this.txtAddr.Size = new System.Drawing.Size(190, 23);
-            this.txtAddr.TabIndex = 2;
-            // 
-            // txtShopName
-            // 
-            this.txtShopName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtShopName.Location = new System.Drawing.Point(100, 37);
-            this.txtShopName.Name = "txtShopName";
-            this.txtShopName.Size = new System.Drawing.Size(190, 23);
-            this.txtShopName.TabIndex = 1;
-            // 
-            // lblShopName
-            // 
-            this.lblShopName.AutoSize = true;
-            this.lblShopName.Location = new System.Drawing.Point(6, 38);
-            this.lblShopName.Name = "lblShopName";
-            this.lblShopName.Size = new System.Drawing.Size(88, 16);
-            this.lblShopName.TabIndex = 0;
-            this.lblShopName.Text = "Shop Name:";
-            // 
-            // lblVATPerct
-            // 
-            this.lblVATPerct.AutoSize = true;
-            this.lblVATPerct.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblVATPerct.Location = new System.Drawing.Point(20, 235);
-            this.lblVATPerct.Name = "lblVATPerct";
-            this.lblVATPerct.Size = new System.Drawing.Size(134, 15);
-            this.lblVATPerct.TabIndex = 7;
-            this.lblVATPerct.Text = "VAT Percentage：";
-            // 
-            // lblCurrency
-            // 
-            this.lblCurrency.AutoSize = true;
-            this.lblCurrency.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblCurrency.Location = new System.Drawing.Point(20, 205);
-            this.lblCurrency.Name = "lblCurrency";
-            this.lblCurrency.Size = new System.Drawing.Size(86, 15);
-            this.lblCurrency.TabIndex = 6;
-            this.lblCurrency.Text = "Currency：";
-            // 
-            // lblDefOrderInputPage
-            // 
-            this.lblDefOrderInputPage.AutoSize = true;
-            this.lblDefOrderInputPage.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblDefOrderInputPage.Location = new System.Drawing.Point(20, 175);
-            this.lblDefOrderInputPage.Name = "lblDefOrderInputPage";
-            this.lblDefOrderInputPage.Size = new System.Drawing.Size(214, 15);
-            this.lblDefOrderInputPage.TabIndex = 5;
-            this.lblDefOrderInputPage.Text = "Default Order Input Page：";
-            // 
-            // lblTillNum
-            // 
-            this.lblTillNum.AutoSize = true;
-            this.lblTillNum.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblTillNum.Location = new System.Drawing.Point(22, 143);
-            this.lblTillNum.Name = "lblTillNum";
-            this.lblTillNum.Size = new System.Drawing.Size(110, 15);
-            this.lblTillNum.TabIndex = 4;
-            this.lblTillNum.Text = "Till Number：";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(17, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 15);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Back Up Drive：";
-            // 
-            // chkBoxDisItemCodeSelect
-            // 
-            this.chkBoxDisItemCodeSelect.AutoSize = true;
-            this.chkBoxDisItemCodeSelect.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.chkBoxDisItemCodeSelect.Location = new System.Drawing.Point(20, 25);
-            this.chkBoxDisItemCodeSelect.Name = "chkBoxDisItemCodeSelect";
-            this.chkBoxDisItemCodeSelect.Size = new System.Drawing.Size(218, 19);
-            this.chkBoxDisItemCodeSelect.TabIndex = 8;
-            this.chkBoxDisItemCodeSelect.Text = "Display Item Code Select";
-            this.chkBoxDisItemCodeSelect.UseVisualStyleBackColor = true;
-            this.chkBoxDisItemCodeSelect.CheckedChanged += new System.EventHandler(this.chkBoxDisItemCodeSelect_CheckedChanged);
-            // 
-            // chkBoxInputNumPerson
-            // 
-            this.chkBoxInputNumPerson.AutoSize = true;
-            this.chkBoxInputNumPerson.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.chkBoxInputNumPerson.Location = new System.Drawing.Point(20, 55);
-            this.chkBoxInputNumPerson.Name = "chkBoxInputNumPerson";
-            this.chkBoxInputNumPerson.Size = new System.Drawing.Size(210, 19);
-            this.chkBoxInputNumPerson.TabIndex = 9;
-            this.chkBoxInputNumPerson.Text = "Input Number of Persons";
-            this.chkBoxInputNumPerson.UseVisualStyleBackColor = true;
-            this.chkBoxInputNumPerson.CheckedChanged += new System.EventHandler(this.chkBoxInputNumPerson_CheckedChanged);
-            // 
-            // txtTillNum
-            // 
-            this.txtTillNum.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtTillNum.Location = new System.Drawing.Point(130, 133);
-            this.txtTillNum.Name = "txtTillNum";
-            this.txtTillNum.Size = new System.Drawing.Size(70, 25);
-            this.txtTillNum.TabIndex = 10;
-            // 
-            // comBoxDefOrderInputPage
-            // 
-            this.comBoxDefOrderInputPage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comBoxDefOrderInputPage.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comBoxDefOrderInputPage.FormattingEnabled = true;
-            this.comBoxDefOrderInputPage.Location = new System.Drawing.Point(227, 167);
-            this.comBoxDefOrderInputPage.Name = "comBoxDefOrderInputPage";
-            this.comBoxDefOrderInputPage.Size = new System.Drawing.Size(51, 23);
-            this.comBoxDefOrderInputPage.TabIndex = 11;
-            // 
-            // txtCurrency
-            // 
-            this.txtCurrency.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtCurrency.Location = new System.Drawing.Point(100, 195);
-            this.txtCurrency.Name = "txtCurrency";
-            this.txtCurrency.Size = new System.Drawing.Size(43, 25);
-            this.txtCurrency.TabIndex = 12;
-            // 
-            // txtVATPerct
-            // 
-            this.txtVATPerct.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtVATPerct.Location = new System.Drawing.Point(148, 225);
-            this.txtVATPerct.Name = "txtVATPerct";
-            this.txtVATPerct.Size = new System.Drawing.Size(52, 25);
-            this.txtVATPerct.TabIndex = 13;
-            // 
-            // comBoxRptPrint
-            // 
-            this.comBoxRptPrint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comBoxRptPrint.FormattingEnabled = true;
-            this.comBoxRptPrint.Location = new System.Drawing.Point(169, 17);
-            this.comBoxRptPrint.Name = "comBoxRptPrint";
-            this.comBoxRptPrint.Size = new System.Drawing.Size(92, 24);
-            this.comBoxRptPrint.TabIndex = 3;
-            // 
-            // comBoxA4RptPrint
-            // 
-            this.comBoxA4RptPrint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comBoxA4RptPrint.FormattingEnabled = true;
-            this.comBoxA4RptPrint.Location = new System.Drawing.Point(169, 47);
-            this.comBoxA4RptPrint.Name = "comBoxA4RptPrint";
-            this.comBoxA4RptPrint.Size = new System.Drawing.Size(92, 24);
-            this.comBoxA4RptPrint.TabIndex = 4;
-            // 
-            // txtRoundUpDecimal
-            // 
-            this.txtRoundUpDecimal.Location = new System.Drawing.Point(172, 75);
-            this.txtRoundUpDecimal.Name = "txtRoundUpDecimal";
-            this.txtRoundUpDecimal.Size = new System.Drawing.Size(89, 26);
-            this.txtRoundUpDecimal.TabIndex = 5;
-            // 
-            // chkBoxUseCashDrawer
-            // 
-            this.chkBoxUseCashDrawer.AutoSize = true;
-            this.chkBoxUseCashDrawer.Location = new System.Drawing.Point(23, 35);
-            this.chkBoxUseCashDrawer.Name = "chkBoxUseCashDrawer";
-            this.chkBoxUseCashDrawer.Size = new System.Drawing.Size(147, 20);
-            this.chkBoxUseCashDrawer.TabIndex = 3;
-            this.chkBoxUseCashDrawer.Text = "Use Cash Drawer";
-            this.chkBoxUseCashDrawer.UseVisualStyleBackColor = true;
-            this.chkBoxUseCashDrawer.CheckedChanged += new System.EventHandler(this.chkBoxUseCashDrawer_CheckedChanged);
-            // 
-            // lblKey1
-            // 
-            this.lblKey1.AutoSize = true;
-            this.lblKey1.Location = new System.Drawing.Point(20, 40);
-            this.lblKey1.Name = "lblKey1";
-            this.lblKey1.Size = new System.Drawing.Size(40, 16);
-            this.lblKey1.TabIndex = 0;
-            this.lblKey1.Text = "Key1";
-            // 
-            // lblKey2
-            // 
-            this.lblKey2.AutoSize = true;
-            this.lblKey2.Location = new System.Drawing.Point(20, 75);
-            this.lblKey2.Name = "lblKey2";
-            this.lblKey2.Size = new System.Drawing.Size(40, 16);
-            this.lblKey2.TabIndex = 1;
-            this.lblKey2.Text = "Key2";
-            // 
-            // lblKey3
-            // 
-            this.lblKey3.AutoSize = true;
-            this.lblKey3.Location = new System.Drawing.Point(20, 110);
-            this.lblKey3.Name = "lblKey3";
-            this.lblKey3.Size = new System.Drawing.Size(40, 16);
-            this.lblKey3.TabIndex = 2;
-            this.lblKey3.Text = "Key3";
-            // 
-            // lblKey4
-            // 
-            this.lblKey4.AutoSize = true;
-            this.lblKey4.Location = new System.Drawing.Point(20, 145);
-            this.lblKey4.Name = "lblKey4";
-            this.lblKey4.Size = new System.Drawing.Size(40, 16);
-            this.lblKey4.TabIndex = 3;
-            this.lblKey4.Text = "Key4";
-            // 
-            // lblKey5
-            // 
-            this.lblKey5.AutoSize = true;
-            this.lblKey5.Location = new System.Drawing.Point(20, 180);
-            this.lblKey5.Name = "lblKey5";
-            this.lblKey5.Size = new System.Drawing.Size(40, 16);
-            this.lblKey5.TabIndex = 4;
-            this.lblKey5.Text = "Key5";
-            // 
-            // txtKey1
-            // 
-            this.txtKey1.Location = new System.Drawing.Point(66, 30);
-            this.txtKey1.Name = "txtKey1";
-            this.txtKey1.Size = new System.Drawing.Size(49, 26);
-            this.txtKey1.TabIndex = 5;
-            // 
-            // txtKey2
-            // 
-            this.txtKey2.Location = new System.Drawing.Point(66, 67);
-            this.txtKey2.Name = "txtKey2";
-            this.txtKey2.Size = new System.Drawing.Size(49, 26);
-            this.txtKey2.TabIndex = 6;
-            // 
-            // txtKey3
-            // 
-            this.txtKey3.Location = new System.Drawing.Point(66, 100);
-            this.txtKey3.Name = "txtKey3";
-            this.txtKey3.Size = new System.Drawing.Size(49, 26);
-            this.txtKey3.TabIndex = 7;
-            // 
-            // txtKey4
-            // 
-            this.txtKey4.Location = new System.Drawing.Point(66, 135);
-            this.txtKey4.Name = "txtKey4";
-            this.txtKey4.Size = new System.Drawing.Size(49, 26);
-            this.txtKey4.TabIndex = 8;
-            // 
-            // txtKey5
-            // 
-            this.txtKey5.Location = new System.Drawing.Point(66, 170);
-            this.txtKey5.Name = "txtKey5";
-            this.txtKey5.Size = new System.Drawing.Size(49, 26);
-            this.txtKey5.TabIndex = 9;
             // 
             // txtKey10
             // 
@@ -583,15 +238,195 @@
             this.lblKey6.TabIndex = 10;
             this.lblKey6.Text = "Key6";
             // 
-            // chkBoxBackUpWhenExit
+            // txtKey5
             // 
-            this.chkBoxBackUpWhenExit.AutoSize = true;
-            this.chkBoxBackUpWhenExit.Location = new System.Drawing.Point(20, 80);
-            this.chkBoxBackUpWhenExit.Name = "chkBoxBackUpWhenExit";
-            this.chkBoxBackUpWhenExit.Size = new System.Drawing.Size(163, 20);
-            this.chkBoxBackUpWhenExit.TabIndex = 14;
-            this.chkBoxBackUpWhenExit.Text = "Back Up When Exit";
-            this.chkBoxBackUpWhenExit.UseVisualStyleBackColor = true;
+            this.txtKey5.Location = new System.Drawing.Point(66, 170);
+            this.txtKey5.Name = "txtKey5";
+            this.txtKey5.Size = new System.Drawing.Size(49, 26);
+            this.txtKey5.TabIndex = 9;
+            // 
+            // txtKey4
+            // 
+            this.txtKey4.Location = new System.Drawing.Point(66, 135);
+            this.txtKey4.Name = "txtKey4";
+            this.txtKey4.Size = new System.Drawing.Size(49, 26);
+            this.txtKey4.TabIndex = 8;
+            // 
+            // txtKey3
+            // 
+            this.txtKey3.Location = new System.Drawing.Point(66, 100);
+            this.txtKey3.Name = "txtKey3";
+            this.txtKey3.Size = new System.Drawing.Size(49, 26);
+            this.txtKey3.TabIndex = 7;
+            // 
+            // txtKey2
+            // 
+            this.txtKey2.Location = new System.Drawing.Point(66, 67);
+            this.txtKey2.Name = "txtKey2";
+            this.txtKey2.Size = new System.Drawing.Size(49, 26);
+            this.txtKey2.TabIndex = 6;
+            // 
+            // txtKey1
+            // 
+            this.txtKey1.Location = new System.Drawing.Point(66, 30);
+            this.txtKey1.Name = "txtKey1";
+            this.txtKey1.Size = new System.Drawing.Size(49, 26);
+            this.txtKey1.TabIndex = 5;
+            // 
+            // lblKey5
+            // 
+            this.lblKey5.AutoSize = true;
+            this.lblKey5.Location = new System.Drawing.Point(20, 180);
+            this.lblKey5.Name = "lblKey5";
+            this.lblKey5.Size = new System.Drawing.Size(40, 16);
+            this.lblKey5.TabIndex = 4;
+            this.lblKey5.Text = "Key5";
+            // 
+            // lblKey4
+            // 
+            this.lblKey4.AutoSize = true;
+            this.lblKey4.Location = new System.Drawing.Point(20, 145);
+            this.lblKey4.Name = "lblKey4";
+            this.lblKey4.Size = new System.Drawing.Size(40, 16);
+            this.lblKey4.TabIndex = 3;
+            this.lblKey4.Text = "Key4";
+            // 
+            // lblKey3
+            // 
+            this.lblKey3.AutoSize = true;
+            this.lblKey3.Location = new System.Drawing.Point(20, 110);
+            this.lblKey3.Name = "lblKey3";
+            this.lblKey3.Size = new System.Drawing.Size(40, 16);
+            this.lblKey3.TabIndex = 2;
+            this.lblKey3.Text = "Key3";
+            // 
+            // lblKey2
+            // 
+            this.lblKey2.AutoSize = true;
+            this.lblKey2.Location = new System.Drawing.Point(20, 75);
+            this.lblKey2.Name = "lblKey2";
+            this.lblKey2.Size = new System.Drawing.Size(40, 16);
+            this.lblKey2.TabIndex = 1;
+            this.lblKey2.Text = "Key2";
+            // 
+            // lblKey1
+            // 
+            this.lblKey1.AutoSize = true;
+            this.lblKey1.Location = new System.Drawing.Point(20, 40);
+            this.lblKey1.Name = "lblKey1";
+            this.lblKey1.Size = new System.Drawing.Size(40, 16);
+            this.lblKey1.TabIndex = 0;
+            this.lblKey1.Text = "Key1";
+            // 
+            // grpBoxCashDrawerSet
+            // 
+            this.grpBoxCashDrawerSet.Controls.Add(this.chkBoxUseCashDrawer);
+            this.grpBoxCashDrawerSet.Location = new System.Drawing.Point(15, 435);
+            this.grpBoxCashDrawerSet.Name = "grpBoxCashDrawerSet";
+            this.grpBoxCashDrawerSet.Size = new System.Drawing.Size(307, 66);
+            this.grpBoxCashDrawerSet.TabIndex = 3;
+            this.grpBoxCashDrawerSet.TabStop = false;
+            this.grpBoxCashDrawerSet.Text = "Cash Drawer Setting";
+            // 
+            // chkBoxUseCashDrawer
+            // 
+            this.chkBoxUseCashDrawer.AutoSize = true;
+            this.chkBoxUseCashDrawer.Location = new System.Drawing.Point(23, 35);
+            this.chkBoxUseCashDrawer.Name = "chkBoxUseCashDrawer";
+            this.chkBoxUseCashDrawer.Size = new System.Drawing.Size(147, 20);
+            this.chkBoxUseCashDrawer.TabIndex = 3;
+            this.chkBoxUseCashDrawer.Text = "Use Cash Drawer";
+            this.chkBoxUseCashDrawer.UseVisualStyleBackColor = true;
+            this.chkBoxUseCashDrawer.CheckedChanged += new System.EventHandler(this.chkBoxUseCashDrawer_CheckedChanged);
+            // 
+            // grpBoxPrintOption
+            // 
+            this.grpBoxPrintOption.Controls.Add(this.txtRoundUpDecimal);
+            this.grpBoxPrintOption.Controls.Add(this.comBoxA4RptPrint);
+            this.grpBoxPrintOption.Controls.Add(this.comBoxRptPrint);
+            this.grpBoxPrintOption.Controls.Add(this.lblRoundUpDecimal);
+            this.grpBoxPrintOption.Controls.Add(this.lblA4RptPrint);
+            this.grpBoxPrintOption.Controls.Add(this.lblRptPrint);
+            this.grpBoxPrintOption.Location = new System.Drawing.Point(331, 47);
+            this.grpBoxPrintOption.Name = "grpBoxPrintOption";
+            this.grpBoxPrintOption.Size = new System.Drawing.Size(321, 116);
+            this.grpBoxPrintOption.TabIndex = 2;
+            this.grpBoxPrintOption.TabStop = false;
+            this.grpBoxPrintOption.Text = "Print Options";
+            // 
+            // txtRoundUpDecimal
+            // 
+            this.txtRoundUpDecimal.Location = new System.Drawing.Point(172, 75);
+            this.txtRoundUpDecimal.Name = "txtRoundUpDecimal";
+            this.txtRoundUpDecimal.Size = new System.Drawing.Size(137, 26);
+            this.txtRoundUpDecimal.TabIndex = 5;
+            // 
+            // comBoxA4RptPrint
+            // 
+            this.comBoxA4RptPrint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comBoxA4RptPrint.FormattingEnabled = true;
+            this.comBoxA4RptPrint.Location = new System.Drawing.Point(169, 47);
+            this.comBoxA4RptPrint.Name = "comBoxA4RptPrint";
+            this.comBoxA4RptPrint.Size = new System.Drawing.Size(140, 24);
+            this.comBoxA4RptPrint.TabIndex = 4;
+            // 
+            // comBoxRptPrint
+            // 
+            this.comBoxRptPrint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comBoxRptPrint.FormattingEnabled = true;
+            this.comBoxRptPrint.Location = new System.Drawing.Point(169, 17);
+            this.comBoxRptPrint.Name = "comBoxRptPrint";
+            this.comBoxRptPrint.Size = new System.Drawing.Size(140, 24);
+            this.comBoxRptPrint.TabIndex = 3;
+            // 
+            // lblRoundUpDecimal
+            // 
+            this.lblRoundUpDecimal.AutoSize = true;
+            this.lblRoundUpDecimal.Location = new System.Drawing.Point(27, 85);
+            this.lblRoundUpDecimal.Name = "lblRoundUpDecimal";
+            this.lblRoundUpDecimal.Size = new System.Drawing.Size(136, 16);
+            this.lblRoundUpDecimal.TabIndex = 2;
+            this.lblRoundUpDecimal.Text = "Round Up Decimal";
+            // 
+            // lblA4RptPrint
+            // 
+            this.lblA4RptPrint.AutoSize = true;
+            this.lblA4RptPrint.Location = new System.Drawing.Point(20, 55);
+            this.lblA4RptPrint.Name = "lblA4RptPrint";
+            this.lblA4RptPrint.Size = new System.Drawing.Size(144, 16);
+            this.lblA4RptPrint.TabIndex = 1;
+            this.lblA4RptPrint.Text = "A4 Report Printer";
+            // 
+            // lblRptPrint
+            // 
+            this.lblRptPrint.AutoSize = true;
+            this.lblRptPrint.Location = new System.Drawing.Point(36, 25);
+            this.lblRptPrint.Name = "lblRptPrint";
+            this.lblRptPrint.Size = new System.Drawing.Size(120, 16);
+            this.lblRptPrint.TabIndex = 0;
+            this.lblRptPrint.Text = "Report Printer";
+            // 
+            // grpBoxGenSet
+            // 
+            this.grpBoxGenSet.Controls.Add(this.comBoxBackUpDrive);
+            this.grpBoxGenSet.Controls.Add(this.chkBoxBackUpWhenExit);
+            this.grpBoxGenSet.Controls.Add(this.txtVATPerct);
+            this.grpBoxGenSet.Controls.Add(this.txtCurrency);
+            this.grpBoxGenSet.Controls.Add(this.comBoxDefOrderInputPage);
+            this.grpBoxGenSet.Controls.Add(this.txtTillNum);
+            this.grpBoxGenSet.Controls.Add(this.chkBoxInputNumPerson);
+            this.grpBoxGenSet.Controls.Add(this.chkBoxDisItemCodeSelect);
+            this.grpBoxGenSet.Controls.Add(this.lblVATPerct);
+            this.grpBoxGenSet.Controls.Add(this.lblCurrency);
+            this.grpBoxGenSet.Controls.Add(this.lblDefOrderInputPage);
+            this.grpBoxGenSet.Controls.Add(this.lblTillNum);
+            this.grpBoxGenSet.Controls.Add(this.label4);
+            this.grpBoxGenSet.Location = new System.Drawing.Point(15, 150);
+            this.grpBoxGenSet.Name = "grpBoxGenSet";
+            this.grpBoxGenSet.Size = new System.Drawing.Size(307, 268);
+            this.grpBoxGenSet.TabIndex = 1;
+            this.grpBoxGenSet.TabStop = false;
+            this.grpBoxGenSet.Text = "General Setting";
             // 
             // comBoxBackUpDrive
             // 
@@ -602,6 +437,171 @@
             this.comBoxBackUpDrive.Name = "comBoxBackUpDrive";
             this.comBoxBackUpDrive.Size = new System.Drawing.Size(35, 23);
             this.comBoxBackUpDrive.TabIndex = 15;
+            // 
+            // chkBoxBackUpWhenExit
+            // 
+            this.chkBoxBackUpWhenExit.AutoSize = true;
+            this.chkBoxBackUpWhenExit.Location = new System.Drawing.Point(20, 80);
+            this.chkBoxBackUpWhenExit.Name = "chkBoxBackUpWhenExit";
+            this.chkBoxBackUpWhenExit.Size = new System.Drawing.Size(163, 20);
+            this.chkBoxBackUpWhenExit.TabIndex = 14;
+            this.chkBoxBackUpWhenExit.Text = "Back Up When Exit";
+            this.chkBoxBackUpWhenExit.UseVisualStyleBackColor = true;
+            // 
+            // txtVATPerct
+            // 
+            this.txtVATPerct.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtVATPerct.Location = new System.Drawing.Point(148, 225);
+            this.txtVATPerct.Name = "txtVATPerct";
+            this.txtVATPerct.Size = new System.Drawing.Size(52, 25);
+            this.txtVATPerct.TabIndex = 13;
+            // 
+            // txtCurrency
+            // 
+            this.txtCurrency.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtCurrency.Location = new System.Drawing.Point(100, 195);
+            this.txtCurrency.Name = "txtCurrency";
+            this.txtCurrency.Size = new System.Drawing.Size(43, 25);
+            this.txtCurrency.TabIndex = 12;
+            // 
+            // comBoxDefOrderInputPage
+            // 
+            this.comBoxDefOrderInputPage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comBoxDefOrderInputPage.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comBoxDefOrderInputPage.FormattingEnabled = true;
+            this.comBoxDefOrderInputPage.Location = new System.Drawing.Point(227, 167);
+            this.comBoxDefOrderInputPage.Name = "comBoxDefOrderInputPage";
+            this.comBoxDefOrderInputPage.Size = new System.Drawing.Size(51, 23);
+            this.comBoxDefOrderInputPage.TabIndex = 11;
+            // 
+            // txtTillNum
+            // 
+            this.txtTillNum.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtTillNum.Location = new System.Drawing.Point(130, 133);
+            this.txtTillNum.Name = "txtTillNum";
+            this.txtTillNum.Size = new System.Drawing.Size(70, 25);
+            this.txtTillNum.TabIndex = 10;
+            // 
+            // chkBoxInputNumPerson
+            // 
+            this.chkBoxInputNumPerson.AutoSize = true;
+            this.chkBoxInputNumPerson.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.chkBoxInputNumPerson.Location = new System.Drawing.Point(20, 55);
+            this.chkBoxInputNumPerson.Name = "chkBoxInputNumPerson";
+            this.chkBoxInputNumPerson.Size = new System.Drawing.Size(210, 19);
+            this.chkBoxInputNumPerson.TabIndex = 9;
+            this.chkBoxInputNumPerson.Text = "Input Number of Persons";
+            this.chkBoxInputNumPerson.UseVisualStyleBackColor = true;
+            this.chkBoxInputNumPerson.CheckedChanged += new System.EventHandler(this.chkBoxInputNumPerson_CheckedChanged);
+            // 
+            // chkBoxDisItemCodeSelect
+            // 
+            this.chkBoxDisItemCodeSelect.AutoSize = true;
+            this.chkBoxDisItemCodeSelect.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.chkBoxDisItemCodeSelect.Location = new System.Drawing.Point(20, 25);
+            this.chkBoxDisItemCodeSelect.Name = "chkBoxDisItemCodeSelect";
+            this.chkBoxDisItemCodeSelect.Size = new System.Drawing.Size(218, 19);
+            this.chkBoxDisItemCodeSelect.TabIndex = 8;
+            this.chkBoxDisItemCodeSelect.Text = "Display Item Code Select";
+            this.chkBoxDisItemCodeSelect.UseVisualStyleBackColor = true;
+            this.chkBoxDisItemCodeSelect.CheckedChanged += new System.EventHandler(this.chkBoxDisItemCodeSelect_CheckedChanged);
+            // 
+            // lblVATPerct
+            // 
+            this.lblVATPerct.AutoSize = true;
+            this.lblVATPerct.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblVATPerct.Location = new System.Drawing.Point(20, 235);
+            this.lblVATPerct.Name = "lblVATPerct";
+            this.lblVATPerct.Size = new System.Drawing.Size(134, 15);
+            this.lblVATPerct.TabIndex = 7;
+            this.lblVATPerct.Text = "VAT Percentage：";
+            // 
+            // lblCurrency
+            // 
+            this.lblCurrency.AutoSize = true;
+            this.lblCurrency.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblCurrency.Location = new System.Drawing.Point(20, 205);
+            this.lblCurrency.Name = "lblCurrency";
+            this.lblCurrency.Size = new System.Drawing.Size(86, 15);
+            this.lblCurrency.TabIndex = 6;
+            this.lblCurrency.Text = "Currency：";
+            // 
+            // lblDefOrderInputPage
+            // 
+            this.lblDefOrderInputPage.AutoSize = true;
+            this.lblDefOrderInputPage.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblDefOrderInputPage.Location = new System.Drawing.Point(20, 175);
+            this.lblDefOrderInputPage.Name = "lblDefOrderInputPage";
+            this.lblDefOrderInputPage.Size = new System.Drawing.Size(214, 15);
+            this.lblDefOrderInputPage.TabIndex = 5;
+            this.lblDefOrderInputPage.Text = "Default Order Input Page：";
+            // 
+            // lblTillNum
+            // 
+            this.lblTillNum.AutoSize = true;
+            this.lblTillNum.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblTillNum.Location = new System.Drawing.Point(22, 143);
+            this.lblTillNum.Name = "lblTillNum";
+            this.lblTillNum.Size = new System.Drawing.Size(110, 15);
+            this.lblTillNum.TabIndex = 4;
+            this.lblTillNum.Text = "Till Number：";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(17, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 15);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Back Up Drive：";
+            // 
+            // grpBoxShopDetail
+            // 
+            this.grpBoxShopDetail.Controls.Add(this.lblAddr);
+            this.grpBoxShopDetail.Controls.Add(this.txtAddr);
+            this.grpBoxShopDetail.Controls.Add(this.txtShopName);
+            this.grpBoxShopDetail.Controls.Add(this.lblShopName);
+            this.grpBoxShopDetail.Location = new System.Drawing.Point(15, 25);
+            this.grpBoxShopDetail.Name = "grpBoxShopDetail";
+            this.grpBoxShopDetail.Size = new System.Drawing.Size(307, 108);
+            this.grpBoxShopDetail.TabIndex = 0;
+            this.grpBoxShopDetail.TabStop = false;
+            this.grpBoxShopDetail.Text = "Shop Details";
+            // 
+            // lblAddr
+            // 
+            this.lblAddr.AutoSize = true;
+            this.lblAddr.Location = new System.Drawing.Point(22, 78);
+            this.lblAddr.Name = "lblAddr";
+            this.lblAddr.Size = new System.Drawing.Size(72, 16);
+            this.lblAddr.TabIndex = 3;
+            this.lblAddr.Text = "Address:";
+            // 
+            // txtAddr
+            // 
+            this.txtAddr.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtAddr.Location = new System.Drawing.Point(100, 71);
+            this.txtAddr.Name = "txtAddr";
+            this.txtAddr.Size = new System.Drawing.Size(190, 23);
+            this.txtAddr.TabIndex = 2;
+            // 
+            // txtShopName
+            // 
+            this.txtShopName.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtShopName.Location = new System.Drawing.Point(100, 37);
+            this.txtShopName.Name = "txtShopName";
+            this.txtShopName.Size = new System.Drawing.Size(190, 23);
+            this.txtShopName.TabIndex = 1;
+            // 
+            // lblShopName
+            // 
+            this.lblShopName.AutoSize = true;
+            this.lblShopName.Location = new System.Drawing.Point(6, 38);
+            this.lblShopName.Name = "lblShopName";
+            this.lblShopName.Size = new System.Drawing.Size(88, 16);
+            this.lblShopName.TabIndex = 0;
+            this.lblShopName.Text = "Shop Name:";
             // 
             // FrmSysConfig
             // 

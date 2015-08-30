@@ -3,18 +3,28 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Management;
 using SuperPOS.Common;
+using SuperPOS.DAL;
 
 namespace SuperPOS.UI.Admin
 {
     public partial class FrmSysConfig : Form
     {
+        private int iExistRest = 0;       //是否存在餐厅,0没有餐厅，1有餐厅
+
         public FrmSysConfig()
         {
+            InitializeComponent();
+        }
+
+        public FrmSysConfig(int iExist)
+        {
+            iExistRest = iExist;
             InitializeComponent();
         }
 
@@ -54,7 +64,19 @@ namespace SuperPOS.UI.Admin
         private void FrmSysConfig_Load(object sender, EventArgs e)
         {
             GetSysDir();
+            GetPrinter();
             SetDefInputPat();
+
+            if (iExistRest != 1) return;
+            //有数据
+            new OnLoadSystemCommonData().GetSysConfigList();
+
+            var lstSysConfig = CommonData.SysConfigList.First();
+            txtShopName.Text = lstSysConfig.ShopName;
+            txtAddr.Text = lstSysConfig.ShopAddr;
+            chkBoxDisItemCodeSelect.Checked = lstSysConfig.IsDisplayItemCodeSelect.Equals("1");
+            chkBoxInputNumPerson.Checked = lstSysConfig.IsInputNumberOfPerson.Equals("1");
+            chkBoxBackUpWhenExit.Checked = lstSysConfig.IsBackUpWhenExit.Equals("1");
         }
         #endregion
 
@@ -158,6 +180,22 @@ namespace SuperPOS.UI.Admin
         }
         #endregion
 
-        #endregion
-    }
+        #region 获得所有打印列表
+
+        private void GetPrinter()
+        {
+            foreach (string sPrint in PrinterSettings.InstalledPrinters)//获取所有打印机名称
+            {
+                PrintDocument print = new PrintDocument();
+                string sDefault = print.PrinterSettings.PrinterName;//默认打印机名
+
+                comBoxRptPrint.Items.Add(sPrint);
+                if (sPrint == sDefault)
+                    comBoxRptPrint.SelectedIndex = comBoxRptPrint.Items.IndexOf(sPrint);
+            }
+        }
+    #endregion
+
+    #endregion
+}
 }
