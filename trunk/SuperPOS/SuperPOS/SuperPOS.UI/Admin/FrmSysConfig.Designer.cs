@@ -160,6 +160,7 @@
             // 
             // txtKey10
             // 
+            this.txtKey10.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtKey10.Location = new System.Drawing.Point(196, 170);
             this.txtKey10.Name = "txtKey10";
             this.txtKey10.Size = new System.Drawing.Size(49, 26);
@@ -167,6 +168,7 @@
             // 
             // txtKey9
             // 
+            this.txtKey9.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtKey9.Location = new System.Drawing.Point(196, 135);
             this.txtKey9.Name = "txtKey9";
             this.txtKey9.Size = new System.Drawing.Size(49, 26);
@@ -174,6 +176,7 @@
             // 
             // txtKey8
             // 
+            this.txtKey8.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtKey8.Location = new System.Drawing.Point(196, 100);
             this.txtKey8.Name = "txtKey8";
             this.txtKey8.Size = new System.Drawing.Size(49, 26);
@@ -181,6 +184,7 @@
             // 
             // txtKey7
             // 
+            this.txtKey7.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtKey7.Location = new System.Drawing.Point(196, 67);
             this.txtKey7.Name = "txtKey7";
             this.txtKey7.Size = new System.Drawing.Size(49, 26);
@@ -188,6 +192,7 @@
             // 
             // txtKey6
             // 
+            this.txtKey6.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtKey6.Location = new System.Drawing.Point(196, 30);
             this.txtKey6.Name = "txtKey6";
             this.txtKey6.Size = new System.Drawing.Size(49, 26);
@@ -240,6 +245,7 @@
             // 
             // txtKey5
             // 
+            this.txtKey5.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtKey5.Location = new System.Drawing.Point(66, 170);
             this.txtKey5.Name = "txtKey5";
             this.txtKey5.Size = new System.Drawing.Size(49, 26);
@@ -247,6 +253,7 @@
             // 
             // txtKey4
             // 
+            this.txtKey4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtKey4.Location = new System.Drawing.Point(66, 135);
             this.txtKey4.Name = "txtKey4";
             this.txtKey4.Size = new System.Drawing.Size(49, 26);
@@ -254,6 +261,7 @@
             // 
             // txtKey3
             // 
+            this.txtKey3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtKey3.Location = new System.Drawing.Point(66, 100);
             this.txtKey3.Name = "txtKey3";
             this.txtKey3.Size = new System.Drawing.Size(49, 26);
@@ -261,6 +269,7 @@
             // 
             // txtKey2
             // 
+            this.txtKey2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtKey2.Location = new System.Drawing.Point(66, 67);
             this.txtKey2.Name = "txtKey2";
             this.txtKey2.Size = new System.Drawing.Size(49, 26);
@@ -268,6 +277,7 @@
             // 
             // txtKey1
             // 
+            this.txtKey1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtKey1.Location = new System.Drawing.Point(66, 30);
             this.txtKey1.Name = "txtKey1";
             this.txtKey1.Size = new System.Drawing.Size(49, 26);
@@ -360,6 +370,7 @@
             this.txtRoundUpDecimal.Name = "txtRoundUpDecimal";
             this.txtRoundUpDecimal.Size = new System.Drawing.Size(137, 26);
             this.txtRoundUpDecimal.TabIndex = 5;
+            this.txtRoundUpDecimal.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRoundUpDecimal_KeyPress);
             // 
             // comBoxA4RptPrint
             // 
@@ -455,6 +466,7 @@
             this.txtVATPerct.Name = "txtVATPerct";
             this.txtVATPerct.Size = new System.Drawing.Size(52, 25);
             this.txtVATPerct.TabIndex = 13;
+            this.txtVATPerct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVATPerct_KeyPress);
             // 
             // txtCurrency
             // 
@@ -469,9 +481,9 @@
             this.comBoxDefOrderInputPage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comBoxDefOrderInputPage.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comBoxDefOrderInputPage.FormattingEnabled = true;
-            this.comBoxDefOrderInputPage.Location = new System.Drawing.Point(227, 167);
+            this.comBoxDefOrderInputPage.Location = new System.Drawing.Point(214, 167);
             this.comBoxDefOrderInputPage.Name = "comBoxDefOrderInputPage";
-            this.comBoxDefOrderInputPage.Size = new System.Drawing.Size(51, 23);
+            this.comBoxDefOrderInputPage.Size = new System.Drawing.Size(87, 23);
             this.comBoxDefOrderInputPage.TabIndex = 11;
             // 
             // txtTillNum
@@ -481,6 +493,7 @@
             this.txtTillNum.Name = "txtTillNum";
             this.txtTillNum.Size = new System.Drawing.Size(70, 25);
             this.txtTillNum.TabIndex = 10;
+            this.txtTillNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTillNum_KeyPress);
             // 
             // chkBoxInputNumPerson
             // 
@@ -530,7 +543,7 @@
             // 
             this.lblDefOrderInputPage.AutoSize = true;
             this.lblDefOrderInputPage.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblDefOrderInputPage.Location = new System.Drawing.Point(20, 175);
+            this.lblDefOrderInputPage.Location = new System.Drawing.Point(12, 175);
             this.lblDefOrderInputPage.Name = "lblDefOrderInputPage";
             this.lblDefOrderInputPage.Size = new System.Drawing.Size(214, 15);
             this.lblDefOrderInputPage.TabIndex = 5;
@@ -540,7 +553,7 @@
             // 
             this.lblTillNum.AutoSize = true;
             this.lblTillNum.Font = new System.Drawing.Font("宋体", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblTillNum.Location = new System.Drawing.Point(22, 143);
+            this.lblTillNum.Location = new System.Drawing.Point(17, 143);
             this.lblTillNum.Name = "lblTillNum";
             this.lblTillNum.Size = new System.Drawing.Size(110, 15);
             this.lblTillNum.TabIndex = 4;
