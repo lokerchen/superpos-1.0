@@ -113,11 +113,11 @@ namespace SuperPOS.UI.Admin
                     MessageBox.Show("Save failure!MSG=" + ex.InnerException);
                 }
             }
-            //else
-            //{
-            //    MessageBox.Show(isCtlNull);
-            //    return;
-            //}
+            else
+            {
+                MessageBox.Show(isCtlNull);
+                return;
+            }
         }
         #endregion
 
