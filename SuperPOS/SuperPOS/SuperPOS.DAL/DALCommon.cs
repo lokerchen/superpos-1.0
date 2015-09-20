@@ -20,6 +20,8 @@ namespace SuperPOS.DAL
             onLoad.GetShiftCodeList();
             //System Configuration
             onLoad.GetSysConfigList();
+            //User Maintenance
+            onLoad.GetUsrMaintenance();
         }
         #endregion
     }

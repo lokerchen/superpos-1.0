@@ -11,24 +11,14 @@ namespace SuperPOS.DAL
     {
         private EntityControl _control;
 
-        public OnLoadSystemCommonData()
-        {
-            _control = EntityControl.CreateEntityControl();
-        }
+        public OnLoadSystemCommonData() { _control = EntityControl.CreateEntityControl(); }
 
-        public void GetUserList()
-        {
-            CommonData.UsrList = _control.SelectAll<UserInfo>();
-        }
+        public void GetUserList() { CommonData.UsrList = _control.SelectAll<UserInfo>(); }
 
-        public void GetShiftCodeList()
-        {
-            CommonData.ShiftCodeList = _control.SelectAll<ShiftCodeInfo>();
-        }
+        public void GetShiftCodeList() { CommonData.ShiftCodeList = _control.SelectAll<ShiftCodeInfo>(); }
 
-        public void GetSysConfigList()
-        {
-            CommonData.SysConfigList = _control.SelectAll<SysConfigInfo>();
-        }
+        public void GetSysConfigList() { CommonData.SysConfigList = _control.SelectAll<SysConfigInfo>(); }
+
+        public void GetUsrMaintenance() { CommonData.UsrMaintenanceList = _control.SelectAll<UsrMaintenanceInfo>(); }
     }
 }
