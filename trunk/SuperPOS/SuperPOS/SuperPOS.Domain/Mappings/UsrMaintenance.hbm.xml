@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SuperPOS"
+                   namespace="SuperPOS.Domain">
+
+  <class name="SuperPOS.Domain.Entities.UsrMaintenanceInfo, SuperPOS.Domain" table="UsrMaintenance">
+    <id name="SystemKey">
+      <generator class="guid" />
+    </id>
+    <property name="UsrCode" />
+    <property name="TACtlPanel" />
+    <property name="TAChangePrice" />
+    <property name="TASOPrtAcctSum" />
+    <property name="TASOChangePayment" />
+    <property name="TASOEditOrder" />
+    <property name="TASOPrtReceipt" />
+    <property name="TACLExportData" />
+    <property name="QDCtlPanel" />
+    <property name="QDChangePrice" />
+    <property name="QDSOPrtAcctSum" />
+    <property name="QDSOChangePayment" />
+    <property name="QDSOEditOrder" />
+    <property name="QDSOPrtReceipt" />
+    <property name="GSSSystemConfig" />
+    <property name="GSSUsrMaint" />
+    <property name="GSSDataManager" />
+    <property name="GSSCompactDb" />
+    <property name="GRpt" />
+    <property name="GRAccountSum" />
+    <property name="GASSumView" />
+    <property name="GExitPos" />
+    <property name="GSSCoputAdd" />
+    <property name="GSSShiftCode" />
+    <property name="GTakeawayConfig" />
+    <property name="GEatInConfig" />
+    <property name="GTakewayPrtSetUp" />
+    <property name="GEatInPrtSetUp" />
+    <property name="GASPrtSalesRpt" />
+    <property name="GOpenCash" />
+    <property name="EICtlPanel" />
+    <property name="EIPay" />
+    <property name="EIPrtBill" />
+    <property name="EIRemoveItemAfterPrt" />
+    <property name="EITblBooking" />
+    <property name="EISOPrtAcctSum" />
+    <property name="EISOChangePayment" />
+    <property name="EISOEditOrder" />
+    <property name="EISOPrtReceipt" />
+    <property name="EIPBDicount" />
+    <property name="Remark" />
+  </class>
+</hibernate-mapping>
