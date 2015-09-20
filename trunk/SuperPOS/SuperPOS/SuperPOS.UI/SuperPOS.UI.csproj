@@ -92,6 +92,12 @@
     <Compile Include="Admin\FrmSysConfig.Designer.cs">
       <DependentUpon>FrmSysConfig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\FrmUsrMaintenance.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\FrmSysConfig.resx">
       <DependentUpon>FrmSysConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\FrmUsrMaintenance.resx">
       <DependentUpon>FrmUsrMaintenance.cs</DependentUpon>
