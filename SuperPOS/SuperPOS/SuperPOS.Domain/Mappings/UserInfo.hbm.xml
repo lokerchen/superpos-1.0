@@ -7,8 +7,9 @@
     <id name="SystemKey">
       <generator class="guid" />
     </id>
+    <property name="UsrCode" />
     <property name="UsrName" />
     <property name="UsrPwd" />
-    <property name="UsrRight" />
+    <property name="Remark" />
   </class>
 </hibernate-mapping>

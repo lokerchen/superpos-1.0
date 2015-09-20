@@ -13,6 +13,10 @@ namespace SuperPOS.Domain.Entities
         public virtual Guid SystemKey { get; set; }
 
         //用户密码
+        [XmlElement(ElementName = "UsrCode")]
+        public virtual string UsrCode { get; set; }
+
+        //用户密码
         [XmlElement(ElementName = "UsrName")]
         public virtual string UsrName { get; set; }
 
@@ -21,7 +25,7 @@ namespace SuperPOS.Domain.Entities
         public virtual string UsrPwd { get; set; }
 
         //用户权限
-        [XmlElement(ElementName = "UsrRight")]
-        public virtual int UsrRight { get; set; }
+        [XmlElement(ElementName = "Remark")]
+        public virtual int Remark { get; set; }
     }
 }
