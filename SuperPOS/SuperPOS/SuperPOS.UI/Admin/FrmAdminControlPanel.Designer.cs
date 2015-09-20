@@ -528,6 +528,7 @@
             this.btnUsrMaint.TabIndex = 1;
             this.btnUsrMaint.Text = "User Maintenance";
             this.btnUsrMaint.UseVisualStyleBackColor = false;
+            this.btnUsrMaint.Click += new System.EventHandler(this.btnUsrMaint_Click);
             // 
             // btnSysConfig
             // 

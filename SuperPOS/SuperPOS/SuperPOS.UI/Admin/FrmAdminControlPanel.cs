@@ -27,8 +27,8 @@ namespace SuperPOS.UI.Admin
 
         private void FrmAdminControlPanel_Load(object sender, EventArgs e)
         {
-            if (usrInfo.UsrRight == 1)
-                gupBoxEatInSetting.Visible = false;
+            //if (usrInfo.UsrRight == 1)
+            //    gupBoxEatInSetting.Visible = false;
         }
 
         private void btnShiftCode_Click(object sender, EventArgs e)
@@ -50,6 +50,13 @@ namespace SuperPOS.UI.Admin
             FrmSysConfig frmSysConfig = new FrmSysConfig();
             Hide();
             frmSysConfig.ShowDialog();
+        }
+
+        private void btnUsrMaint_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmUsrMaintenance frmUsrMaintenance = new FrmUsrMaintenance();
+            frmUsrMaintenance.ShowDialog();
         }
     }
 }
