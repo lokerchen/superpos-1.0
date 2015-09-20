@@ -22,5 +22,11 @@ namespace SuperPOS.UI.Admin
             FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
             frmAdminControl.ShowDialog();
         }
+
+        private void btnEditUsr_Click(object sender, EventArgs e)
+        {
+            FrmUser frmUser = new FrmUser();
+            frmUser.ShowDialog();
+        }
     }
 }
