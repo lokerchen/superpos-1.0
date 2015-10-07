@@ -6,7 +6,7 @@ using System.Xml.Serialization;
 
 namespace SuperPOS.Domain.Entities
 {
-    public class UsrMaintenanceInfo
+    public class UserMaintenanceInfo
     {
         //SystemKey
         [XmlElement(ElementName = "SystemKey")]
