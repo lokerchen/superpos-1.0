@@ -19,6 +19,6 @@ namespace SuperPOS.DAL
 
         public void GetSysConfigList() { CommonData.SysConfigList = _control.SelectAll<SysConfigInfo>(); }
 
-        public void GetUsrMaintenance() { CommonData.UsrMaintenanceList = _control.SelectAll<UsrMaintenanceInfo>(); }
+        public void GetUsrMaintenance() { CommonData.UsrMaintenanceList = _control.SelectAll<UserMaintenanceInfo>(); }
     }
 }
