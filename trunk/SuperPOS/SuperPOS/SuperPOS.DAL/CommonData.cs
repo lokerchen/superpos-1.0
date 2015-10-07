@@ -15,6 +15,6 @@ namespace SuperPOS.DAL
 
         public static IList<SysConfigInfo> SysConfigList { get; set; }
 
-        public static IList<UsrMaintenanceInfo> UsrMaintenanceList { get; set; }
+        public static IList<UserMaintenanceInfo> UsrMaintenanceList { get; set; }
     }
 }
