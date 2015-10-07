@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblUsrCode = new System.Windows.Forms.Label();
-            this.lblUsrName = new System.Windows.Forms.Label();
-            this.lblUsrPwd = new System.Windows.Forms.Label();
+            this.dgvUserList = new System.Windows.Forms.DataGridView();
+            this.txtUsrPwd = new System.Windows.Forms.TextBox();
+            this.txtUsrName = new System.Windows.Forms.TextBox();
+            this.txtUsrCode = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.txtUsrCode = new System.Windows.Forms.TextBox();
-            this.txtUsrName = new System.Windows.Forms.TextBox();
-            this.txtUsrPwd = new System.Windows.Forms.TextBox();
-            this.dgvUserList = new System.Windows.Forms.DataGridView();
+            this.lblUsrPwd = new System.Windows.Forms.Label();
+            this.lblUsrName = new System.Windows.Forms.Label();
+            this.lblUsrCode = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).BeginInit();
             this.SuspendLayout();
@@ -67,32 +68,51 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User List";
             // 
-            // lblUsrCode
+            // dgvUserList
             // 
-            this.lblUsrCode.AutoSize = true;
-            this.lblUsrCode.Location = new System.Drawing.Point(333, 72);
-            this.lblUsrCode.Name = "lblUsrCode";
-            this.lblUsrCode.Size = new System.Drawing.Size(88, 16);
-            this.lblUsrCode.TabIndex = 1;
-            this.lblUsrCode.Text = "User Code:";
+            this.dgvUserList.AllowUserToAddRows = false;
+            this.dgvUserList.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUserList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUserList.Location = new System.Drawing.Point(15, 25);
+            this.dgvUserList.Name = "dgvUserList";
+            this.dgvUserList.ReadOnly = true;
+            this.dgvUserList.RowTemplate.Height = 23;
+            this.dgvUserList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUserList.Size = new System.Drawing.Size(257, 274);
+            this.dgvUserList.TabIndex = 24;
+            this.dgvUserList.SelectionChanged += new System.EventHandler(this.dgvUserList_SelectionChanged);
             // 
-            // lblUsrName
+            // txtUsrPwd
             // 
-            this.lblUsrName.AutoSize = true;
-            this.lblUsrName.Location = new System.Drawing.Point(333, 114);
-            this.lblUsrName.Name = "lblUsrName";
-            this.lblUsrName.Size = new System.Drawing.Size(88, 16);
-            this.lblUsrName.TabIndex = 2;
-            this.lblUsrName.Text = "User Name:";
+            this.txtUsrPwd.Enabled = false;
+            this.txtUsrPwd.Location = new System.Drawing.Point(427, 149);
+            this.txtUsrPwd.Name = "txtUsrPwd";
+            this.txtUsrPwd.Size = new System.Drawing.Size(143, 26);
+            this.txtUsrPwd.TabIndex = 23;
             // 
-            // lblUsrPwd
+            // txtUsrName
             // 
-            this.lblUsrPwd.AutoSize = true;
-            this.lblUsrPwd.Location = new System.Drawing.Point(301, 159);
-            this.lblUsrPwd.Name = "lblUsrPwd";
-            this.lblUsrPwd.Size = new System.Drawing.Size(120, 16);
-            this.lblUsrPwd.TabIndex = 3;
-            this.lblUsrPwd.Text = "User Password:";
+            this.txtUsrName.Enabled = false;
+            this.txtUsrName.Location = new System.Drawing.Point(427, 106);
+            this.txtUsrName.Name = "txtUsrName";
+            this.txtUsrName.Size = new System.Drawing.Size(143, 26);
+            this.txtUsrName.TabIndex = 22;
+            // 
+            // txtUsrCode
+            // 
+            this.txtUsrCode.Enabled = false;
+            this.txtUsrCode.Location = new System.Drawing.Point(427, 62);
+            this.txtUsrCode.Name = "txtUsrCode";
+            this.txtUsrCode.Size = new System.Drawing.Size(143, 26);
+            this.txtUsrCode.TabIndex = 21;
             // 
             // btnExit
             // 
@@ -118,6 +138,7 @@
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDel
             // 
@@ -130,6 +151,7 @@
             this.btnDel.TabIndex = 18;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnEdit
             // 
@@ -142,6 +164,7 @@
             this.btnEdit.TabIndex = 17;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -154,36 +177,34 @@
             this.btnAdd.TabIndex = 16;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // txtUsrCode
+            // lblUsrPwd
             // 
-            this.txtUsrCode.Location = new System.Drawing.Point(427, 62);
-            this.txtUsrCode.Name = "txtUsrCode";
-            this.txtUsrCode.Size = new System.Drawing.Size(143, 26);
-            this.txtUsrCode.TabIndex = 21;
+            this.lblUsrPwd.AutoSize = true;
+            this.lblUsrPwd.Location = new System.Drawing.Point(301, 159);
+            this.lblUsrPwd.Name = "lblUsrPwd";
+            this.lblUsrPwd.Size = new System.Drawing.Size(120, 16);
+            this.lblUsrPwd.TabIndex = 3;
+            this.lblUsrPwd.Text = "User Password:";
             // 
-            // txtUsrName
+            // lblUsrName
             // 
-            this.txtUsrName.Location = new System.Drawing.Point(427, 106);
-            this.txtUsrName.Name = "txtUsrName";
-            this.txtUsrName.Size = new System.Drawing.Size(143, 26);
-            this.txtUsrName.TabIndex = 22;
+            this.lblUsrName.AutoSize = true;
+            this.lblUsrName.Location = new System.Drawing.Point(333, 114);
+            this.lblUsrName.Name = "lblUsrName";
+            this.lblUsrName.Size = new System.Drawing.Size(88, 16);
+            this.lblUsrName.TabIndex = 2;
+            this.lblUsrName.Text = "User Name:";
             // 
-            // txtUsrPwd
+            // lblUsrCode
             // 
-            this.txtUsrPwd.Location = new System.Drawing.Point(427, 149);
-            this.txtUsrPwd.Name = "txtUsrPwd";
-            this.txtUsrPwd.Size = new System.Drawing.Size(143, 26);
-            this.txtUsrPwd.TabIndex = 23;
-            // 
-            // dgvUserList
-            // 
-            this.dgvUserList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserList.Location = new System.Drawing.Point(15, 25);
-            this.dgvUserList.Name = "dgvUserList";
-            this.dgvUserList.RowTemplate.Height = 23;
-            this.dgvUserList.Size = new System.Drawing.Size(257, 274);
-            this.dgvUserList.TabIndex = 24;
+            this.lblUsrCode.AutoSize = true;
+            this.lblUsrCode.Location = new System.Drawing.Point(333, 72);
+            this.lblUsrCode.Name = "lblUsrCode";
+            this.lblUsrCode.Size = new System.Drawing.Size(88, 16);
+            this.lblUsrCode.TabIndex = 1;
+            this.lblUsrCode.Text = "User Code:";
             // 
             // FrmUser
             // 
