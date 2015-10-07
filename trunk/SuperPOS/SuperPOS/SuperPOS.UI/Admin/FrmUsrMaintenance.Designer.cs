@@ -32,7 +32,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEditUsr = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comBoxUsrList = new System.Windows.Forms.ComboBox();
             this.grpBoxEatIn = new System.Windows.Forms.GroupBox();
             this.chkEIPrtBillDisc = new System.Windows.Forms.CheckBox();
             this.chkEISOPrtReceipt = new System.Windows.Forms.CheckBox();
@@ -89,7 +89,7 @@
             this.grpBoxUsrMaintenance.Controls.Add(this.btnExit);
             this.grpBoxUsrMaintenance.Controls.Add(this.btnSave);
             this.grpBoxUsrMaintenance.Controls.Add(this.btnEditUsr);
-            this.grpBoxUsrMaintenance.Controls.Add(this.comboBox1);
+            this.grpBoxUsrMaintenance.Controls.Add(this.comBoxUsrList);
             this.grpBoxUsrMaintenance.Controls.Add(this.grpBoxEatIn);
             this.grpBoxUsrMaintenance.Controls.Add(this.label1);
             this.grpBoxUsrMaintenance.Controls.Add(this.grpBoxGeneral);
@@ -127,6 +127,7 @@
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEditUsr
             // 
@@ -142,13 +143,15 @@
             this.btnEditUsr.UseVisualStyleBackColor = false;
             this.btnEditUsr.Click += new System.EventHandler(this.btnEditUsr_Click);
             // 
-            // comboBox1
+            // comBoxUsrList
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(122, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 5;
+            this.comBoxUsrList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comBoxUsrList.FormattingEnabled = true;
+            this.comBoxUsrList.Location = new System.Drawing.Point(122, 39);
+            this.comBoxUsrList.Name = "comBoxUsrList";
+            this.comBoxUsrList.Size = new System.Drawing.Size(121, 24);
+            this.comBoxUsrList.TabIndex = 5;
+            this.comBoxUsrList.SelectedIndexChanged += new System.EventHandler(this.comBoxUsrList_SelectedIndexChanged);
             // 
             // grpBoxEatIn
             // 
@@ -634,6 +637,7 @@
             this.Name = "FrmUsrMaintenance";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmUsrMaintenance";
+            this.Load += new System.EventHandler(this.FrmUsrMaintenance_Load);
             this.grpBoxUsrMaintenance.ResumeLayout(false);
             this.grpBoxUsrMaintenance.PerformLayout();
             this.grpBoxEatIn.ResumeLayout(false);
@@ -698,6 +702,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnEditUsr;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comBoxUsrList;
     }
 }
