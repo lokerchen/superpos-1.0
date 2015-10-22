@@ -21,6 +21,6 @@ namespace SuperPOS.Domain.Entities
 
         //Remark
         [XmlElement(ElementName = "Remark")]
-        public virtual int Remark { get; set; }
+        public virtual string Remark { get; set; }
     }
 }
