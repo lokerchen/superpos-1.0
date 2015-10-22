@@ -489,6 +489,7 @@
             this.btnComputerAddr.TabIndex = 4;
             this.btnComputerAddr.Text = "Computer Address";
             this.btnComputerAddr.UseVisualStyleBackColor = false;
+            this.btnComputerAddr.Click += new System.EventHandler(this.btnComputerAddr_Click);
             // 
             // btnCompactDB
             // 
@@ -515,6 +516,7 @@
             this.btnDataManager.TabIndex = 2;
             this.btnDataManager.Text = "Data Manager";
             this.btnDataManager.UseVisualStyleBackColor = false;
+            this.btnDataManager.Click += new System.EventHandler(this.btnDataManager_Click);
             // 
             // btnUsrMaint
             // 

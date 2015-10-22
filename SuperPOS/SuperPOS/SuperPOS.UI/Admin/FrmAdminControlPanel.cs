@@ -54,9 +54,21 @@ namespace SuperPOS.UI.Admin
 
         private void btnUsrMaint_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            Hide();
             FrmUsrMaintenance frmUsrMaintenance = new FrmUsrMaintenance();
             frmUsrMaintenance.ShowDialog();
+        }
+
+        private void btnDataManager_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnComputerAddr_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmComputerEntry frmComputerEntry = new FrmComputerEntry();
+            frmComputerEntry.ShowDialog();
         }
     }
 }
