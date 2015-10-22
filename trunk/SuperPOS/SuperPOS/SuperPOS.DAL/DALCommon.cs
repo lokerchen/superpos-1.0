@@ -22,6 +22,8 @@ namespace SuperPOS.DAL
             onLoad.GetSysConfigList();
             //User Maintenance
             onLoad.GetUsrMaintenance();
+            //Computer Address
+            onLoad.GetCompAddr();
         }
         #endregion
     }
