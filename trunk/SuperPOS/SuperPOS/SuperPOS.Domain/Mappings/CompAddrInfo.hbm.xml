@@ -9,6 +9,7 @@
     </id>
     <property name="AddrCode" column="AddrCode" type="System.String" />
     <property name="CompName" column="CompName" type="System.String" />
+    <property name="CompDateTime" column="CompDateTime" type="System.String" />
     <property name="Remark" column="Remark" type="System.String" />
   </class>
 

@@ -19,6 +19,10 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "CompName")]
         public virtual string CompName { get; set; }
 
+        //Add/Edit DateTime
+        [XmlElement(ElementName = "CompDateTime")]
+        public virtual string CompDateTime { get; set; }
+
         //Remark
         [XmlElement(ElementName = "Remark")]
         public virtual string Remark { get; set; }
