@@ -86,6 +86,12 @@
     <Compile Include="Admin\FrmAdminControlPanel.Designer.cs">
       <DependentUpon>FrmAdminControlPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\FrmComputerEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\FrmComputerEntry.Designer.cs">
+      <DependentUpon>FrmComputerEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\FrmSysConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin\FrmAdminControlPanel.resx">
       <DependentUpon>FrmAdminControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\FrmComputerEntry.resx">
+      <DependentUpon>FrmComputerEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\FrmSysConfig.resx">
       <DependentUpon>FrmSysConfig.cs</DependentUpon>
