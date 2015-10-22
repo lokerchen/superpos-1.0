@@ -20,5 +20,7 @@ namespace SuperPOS.DAL
         public void GetSysConfigList() { CommonData.SysConfigList = _control.SelectAll<SysConfigInfo>(); }
 
         public void GetUsrMaintenance() { CommonData.UsrMaintenanceList = _control.SelectAll<UserMaintenanceInfo>(); }
+
+        public void GetCompAddr() { CommonData.CompAddrList = _control.SelectAll<CompAddrInfo>(); }
     }
 }
