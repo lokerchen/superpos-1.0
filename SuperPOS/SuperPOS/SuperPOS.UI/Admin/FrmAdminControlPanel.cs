@@ -70,5 +70,12 @@ namespace SuperPOS.UI.Admin
             FrmComputerEntry frmComputerEntry = new FrmComputerEntry();
             frmComputerEntry.ShowDialog();
         }
+
+        private void btnCompactDB_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmCompactDB frmCompactDb = new FrmCompactDB();
+            frmCompactDb.ShowDialog();
+        }
     }
 }

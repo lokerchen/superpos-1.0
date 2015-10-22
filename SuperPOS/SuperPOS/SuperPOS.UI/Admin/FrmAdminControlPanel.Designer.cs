@@ -503,6 +503,7 @@
             this.btnCompactDB.TabIndex = 3;
             this.btnCompactDB.Text = "Compact Database";
             this.btnCompactDB.UseVisualStyleBackColor = false;
+            this.btnCompactDB.Click += new System.EventHandler(this.btnCompactDB_Click);
             // 
             // btnDataManager
             // 
