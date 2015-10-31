@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using SuperPOS.Domain.Entities;
+using SuperPOS.UI.TakeAway;
 
 namespace SuperPOS.UI.Admin
 {
@@ -76,6 +77,13 @@ namespace SuperPOS.UI.Admin
             Hide();
             FrmCompactDB frmCompactDb = new FrmCompactDB();
             frmCompactDb.ShowDialog();
+        }
+
+        private void btnTQTakeawayConfig_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTAConfig frmTaConfig = new FrmTAConfig();
+            frmTaConfig.ShowDialog();
         }
     }
 }
