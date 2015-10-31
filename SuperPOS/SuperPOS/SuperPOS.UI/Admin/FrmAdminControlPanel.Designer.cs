@@ -446,6 +446,7 @@
             this.btnTQTakeawayConfig.TabIndex = 0;
             this.btnTQTakeawayConfig.Text = "Takeaway Configuration";
             this.btnTQTakeawayConfig.UseVisualStyleBackColor = false;
+            this.btnTQTakeawayConfig.Click += new System.EventHandler(this.btnTQTakeawayConfig_Click);
             // 
             // grpBoxSysSetting
             // 
