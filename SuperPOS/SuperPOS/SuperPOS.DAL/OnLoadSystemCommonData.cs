@@ -22,5 +22,17 @@ namespace SuperPOS.DAL
         public void GetUsrMaintenance() { CommonData.UsrMaintenanceList = _control.SelectAll<UserMaintenanceInfo>(); }
 
         public void GetCompAddr() { CommonData.CompAddrList = _control.SelectAll<CompAddrInfo>(); }
+
+        public void GetTAPayType() { CommonData.TaPayTypeList = _control.SelectAll<TAPayTypeInfo>(); }
+
+        public void GetTAPayTypeDisc() { CommonData.TaPayTypeDiscList = _control.SelectAll<TAPayTypeDiscInfo>(); }
+
+        public void GetTADistCharge() { CommonData.TaDistChargeList = _control.SelectAll<TADistChargeInfo>(); }
+
+        public void GetTADistChargeRemark() { CommonData.TaDistChargeRemarkList = _control.SelectAll<TADistChargeRemarkInfo>(); }
+
+        public void GetTAPostCode() { CommonData.TaPostCodeList = _control.SelectAll<TAPostCodeInfo>(); }
+
+        public void GetTAPostCodeRemark() { CommonData.TaPostCodeRemark = _control.SelectAll<TAPostCodeRemarkInfo>(); }
     }
 }

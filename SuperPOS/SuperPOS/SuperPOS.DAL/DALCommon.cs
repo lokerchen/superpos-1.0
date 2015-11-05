@@ -24,6 +24,15 @@ namespace SuperPOS.DAL
             onLoad.GetUsrMaintenance();
             //Computer Address
             onLoad.GetCompAddr();
+            //Take away Payment Type
+            onLoad.GetTAPayType();
+            onLoad.GetTAPayTypeDisc();
+            //Take away Delivery Distance Charge
+            onLoad.GetTADistCharge();
+            onLoad.GetTADistChargeRemark();
+            //Take away Post Code
+            onLoad.GetTAPostCode();
+            onLoad.GetTAPostCodeRemark();
         }
         #endregion
     }
