@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SuperPOS"
+                   namespace="SuperPOS.Domain">
+
+  <class name="SuperPOS.Domain.Entities.TADistChargeRemarkInfo, SuperPOS.Domain" table="TA_Conf_Delivery_DistCharge_Remark">
+    <id name="SystemKey" column="SystemKey" type="System.Guid">
+      <generator class="guid" />
+    </id>
+    <property name="PerMileThereafter" column="PerMileThereafter" type="System.String" />
+    <property name="OrderThreshold" column="OrderThreshold" type="System.String" />
+    <property name="SurchargeAmount" column="SurchargeAmount" type="System.String" />
+    <property name="DeliveryChargeIncludesInOrder" column="DeliveryChargeIncludesInOrder" type="System.String" />
+    <property name="IgnoreDeliverySurchargeWhenDistExceeds" column="IgnoreDeliverySurchargeWhenDistExceeds" type="System.String" />
+    <property name="IgnoreDeliveryDistChargeIfSurchargeAppl" column="IgnoreDeliveryDistChargeIfSurchargeAppl" type="System.String" />
+    <property name="Remark" column="Remark" type="System.String" />
+  </class>
+
+</hibernate-mapping>
