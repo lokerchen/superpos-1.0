@@ -18,5 +18,17 @@ namespace SuperPOS.DAL
         public static IList<UserMaintenanceInfo> UsrMaintenanceList { get; set; }
 
         public static IList<CompAddrInfo> CompAddrList { get; set; }
+
+        public static IList<TAPayTypeInfo> TaPayTypeList { get; set; }
+
+        public static IList<TAPayTypeDiscInfo> TaPayTypeDiscList { get; set; }
+
+        public static IList<TADistChargeInfo> TaDistChargeList { get; set; } 
+
+        public static IList<TADistChargeRemarkInfo> TaDistChargeRemarkList { get; set; }
+
+        public static IList<TAPostCodeInfo> TaPostCodeList { get; set; }
+
+        public static IList<TAPostCodeRemarkInfo> TaPostCodeRemark { get; set; }
     }
 }
