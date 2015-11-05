@@ -78,6 +78,12 @@
     <Compile Include="Entities\CompAddrInfo.cs" />
     <Compile Include="Entities\ShiftCodeInfo.cs" />
     <Compile Include="Entities\SysConfigInfo.cs" />
+    <Compile Include="Entities\TADistChargeInfo.cs" />
+    <Compile Include="Entities\TADistChargeRemarkInfo.cs" />
+    <Compile Include="Entities\TAPayTypeDiscInfo.cs" />
+    <Compile Include="Entities\TAPayTypeInfo.cs" />
+    <Compile Include="Entities\TAPostCodeInfo.cs" />
+    <Compile Include="Entities\TAPostCodeRemarkInfo.cs" />
     <Compile Include="Entities\UserInfo.cs" />
     <Compile Include="Entities\UserMaintenanceInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +106,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\CompAddrInfo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\TAPayTypeInfo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\TAPostCodeInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TAPostCodeRemarkInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TADistChargeInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TADistChargeRemarkInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TAPayTypeDiscInfo.hbm.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.97.0\build\net20\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.97.0\build\net20\System.Data.SQLite.Core.targets')" />
