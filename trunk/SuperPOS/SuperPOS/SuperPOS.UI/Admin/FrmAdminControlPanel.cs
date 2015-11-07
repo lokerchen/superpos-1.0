@@ -11,7 +11,7 @@ using SuperPOS.UI.TakeAway;
 
 namespace SuperPOS.UI.Admin
 {
-    public partial class FrmAdminControlPanel : Form
+    public partial class  FrmAdminControlPanel : Form
     {
         private UserInfo usrInfo = new UserInfo();
 
@@ -84,6 +84,13 @@ namespace SuperPOS.UI.Admin
             Hide();
             FrmTAConfig frmTaConfig = new FrmTAConfig();
             frmTaConfig.ShowDialog();
+        }
+
+        private void btnTQManageMenuSet_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTAManageMenuSet frmTaManageMenuSet = new FrmTAManageMenuSet();
+            frmTaManageMenuSet.ShowDialog();
         }
     }
 }
