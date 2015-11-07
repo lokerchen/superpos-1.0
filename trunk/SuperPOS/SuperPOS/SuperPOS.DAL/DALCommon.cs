@@ -33,6 +33,8 @@ namespace SuperPOS.DAL
             //Take away Post Code
             onLoad.GetTAPostCode();
             onLoad.GetTAPostCodeRemark();
+            //Take away Menu Set
+            onLoad.GetTAMenuSet();
         }
         #endregion
     }
