@@ -97,7 +97,7 @@ namespace SuperPOS.UI.TakeAway
             dgvPostCode.Columns[3].HeaderCell.Value = "Map";
             dgvPostCode.Columns[4].HeaderCell.Value = "Distance";
 
-            if (CommonData.TaPostCodeRemark == null || CommonData.TaPostCodeRemark.Count <= 0)
+            if (CommonData.TaPostCodeRemarkList == null || CommonData.TaPostCodeRemarkList.Count <= 0)
             {
                 txtYourStd.Text = "";
                 txtPostCode.Text = "";
@@ -106,7 +106,7 @@ namespace SuperPOS.UI.TakeAway
             }
             else
             {
-                var qList = CommonData.TaPostCodeRemark.FirstOrDefault();
+                var qList = CommonData.TaPostCodeRemarkList.FirstOrDefault();
                 txtYourStd.Text = qList.UrSTD;
                 txtPostCode.Text = qList.UrPostCode;
                 txtYourX.Text = qList.UrX;

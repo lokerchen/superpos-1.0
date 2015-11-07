@@ -142,11 +142,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TakeAway\FrmDeptCodeEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmDeptCodeEntry.Designer.cs">
+      <DependentUpon>FrmDeptCodeEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeAway\FrmTAConfig.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TakeAway\FrmTAConfig.Designer.cs">
       <DependentUpon>FrmTAConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAManageMenuSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAManageMenuSet.Designer.cs">
+      <DependentUpon>FrmTAManageMenuSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAMenuCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAMenuCategory.Designer.cs">
+      <DependentUpon>FrmTAMenuCategory.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin\FrmAdminControlPanel.resx">
       <DependentUpon>FrmAdminControlPanel.cs</DependentUpon>
@@ -188,8 +206,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TakeAway\FrmDeptCodeEntry.resx">
+      <DependentUpon>FrmDeptCodeEntry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAConfig.resx">
       <DependentUpon>FrmTAConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTAManageMenuSet.resx">
+      <DependentUpon>FrmTAManageMenuSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTAMenuCategory.resx">
+      <DependentUpon>FrmTAMenuCategory.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
