@@ -407,6 +407,7 @@
             this.btnTQManageMenuSet.TabIndex = 3;
             this.btnTQManageMenuSet.Text = "Manage Menu Set";
             this.btnTQManageMenuSet.UseVisualStyleBackColor = false;
+            this.btnTQManageMenuSet.Click += new System.EventHandler(this.btnTQManageMenuSet_Click);
             // 
             // btnTQMenuItem
             // 
