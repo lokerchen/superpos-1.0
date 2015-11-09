@@ -32,5 +32,9 @@ namespace SuperPOS.DAL
         public static IList<TAPostCodeRemarkInfo> TaPostCodeRemarkList { get; set; }
 
         public static IList<TAMenuSetInfo> TaMenuSetList { get; set; } 
+
+        public static IList<TADeptCodeInfo> TaDeptCodeList { get; set; }
+
+        public static IList<TADeptCodeDetailInfo> TaDeptCodeDetailList { get; set; }
     }
 }

@@ -36,5 +36,9 @@ namespace SuperPOS.DAL
         public void GetTAPostCodeRemark() { CommonData.TaPostCodeRemarkList = _control.SelectAll<TAPostCodeRemarkInfo>(); }
 
         public void GetTAMenuSet() { CommonData.TaMenuSetList = _control.SelectAll<TAMenuSetInfo>(); }
+
+        public void GetTADeptCode() { CommonData.TaDeptCodeList = _control.SelectAll<TADeptCodeInfo>(); }
+
+        public void GetTADeptCodeDetail() { CommonData.TaDeptCodeDetailList = _control.SelectAll<TADeptCodeDetailInfo>(); }
     }
 }
