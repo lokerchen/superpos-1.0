@@ -92,5 +92,12 @@ namespace SuperPOS.UI.Admin
             FrmTAManageMenuSet frmTaManageMenuSet = new FrmTAManageMenuSet();
             frmTaManageMenuSet.ShowDialog();
         }
+
+        private void btnTQDeptCode_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTADeptCode frmTaDeptCode = new FrmTADeptCode();
+            frmTaDeptCode.ShowDialog();
+        }
     }
 }

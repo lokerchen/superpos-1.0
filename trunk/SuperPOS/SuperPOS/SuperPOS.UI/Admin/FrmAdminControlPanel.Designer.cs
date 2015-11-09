@@ -368,6 +368,7 @@
             this.btnTQDeptCode.TabIndex = 6;
             this.btnTQDeptCode.Text = "Department Code";
             this.btnTQDeptCode.UseVisualStyleBackColor = false;
+            this.btnTQDeptCode.Click += new System.EventHandler(this.btnTQDeptCode_Click);
             // 
             // btnTQOrderControl
             // 
