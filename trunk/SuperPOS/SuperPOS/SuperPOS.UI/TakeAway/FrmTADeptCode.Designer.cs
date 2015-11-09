@@ -1,6 +1,6 @@
 ﻿namespace SuperPOS.UI.TakeAway
 {
-    partial class FrmDeptCode
+    partial class FrmTADeptCode
     {
         /// <summary>
         /// Required designer variable.
@@ -93,6 +93,7 @@
             this.btnExit.TabIndex = 30;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -141,6 +142,7 @@
             this.btnAdd.TabIndex = 26;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // groupBox5
             // 
@@ -149,9 +151,9 @@
             this.groupBox5.Controls.Add(this.cmbBoxPrinterName2);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Location = new System.Drawing.Point(398, 328);
+            this.groupBox5.Location = new System.Drawing.Point(398, 317);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(310, 115);
+            this.groupBox5.Size = new System.Drawing.Size(310, 126);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Printer #2 Assignment";
@@ -159,7 +161,8 @@
             // chkPrtDishSeper2
             // 
             this.chkPrtDishSeper2.AutoSize = true;
-            this.chkPrtDishSeper2.Location = new System.Drawing.Point(28, 89);
+            this.chkPrtDishSeper2.Enabled = false;
+            this.chkPrtDishSeper2.Location = new System.Drawing.Point(17, 100);
             this.chkPrtDishSeper2.Name = "chkPrtDishSeper2";
             this.chkPrtDishSeper2.Size = new System.Drawing.Size(211, 20);
             this.chkPrtDishSeper2.TabIndex = 4;
@@ -168,6 +171,7 @@
             // 
             // cmbBoxNumberOfCopy2
             // 
+            this.cmbBoxNumberOfCopy2.Enabled = false;
             this.cmbBoxNumberOfCopy2.FormattingEnabled = true;
             this.cmbBoxNumberOfCopy2.Location = new System.Drawing.Point(136, 59);
             this.cmbBoxNumberOfCopy2.Name = "cmbBoxNumberOfCopy2";
@@ -176,6 +180,7 @@
             // 
             // cmbBoxPrinterName2
             // 
+            this.cmbBoxPrinterName2.Enabled = false;
             this.cmbBoxPrinterName2.FormattingEnabled = true;
             this.cmbBoxPrinterName2.Location = new System.Drawing.Point(136, 26);
             this.cmbBoxPrinterName2.Name = "cmbBoxPrinterName2";
@@ -217,6 +222,7 @@
             // chkPrtDishSeper1
             // 
             this.chkPrtDishSeper1.AutoSize = true;
+            this.chkPrtDishSeper1.Enabled = false;
             this.chkPrtDishSeper1.Location = new System.Drawing.Point(17, 112);
             this.chkPrtDishSeper1.Name = "chkPrtDishSeper1";
             this.chkPrtDishSeper1.Size = new System.Drawing.Size(211, 20);
@@ -226,6 +232,7 @@
             // 
             // cmbBoxNumberOfCopy1
             // 
+            this.cmbBoxNumberOfCopy1.Enabled = false;
             this.cmbBoxNumberOfCopy1.FormattingEnabled = true;
             this.cmbBoxNumberOfCopy1.Location = new System.Drawing.Point(141, 71);
             this.cmbBoxNumberOfCopy1.Name = "cmbBoxNumberOfCopy1";
@@ -234,6 +241,7 @@
             // 
             // cmbBoxPrinterName1
             // 
+            this.cmbBoxPrinterName1.Enabled = false;
             this.cmbBoxPrinterName1.FormattingEnabled = true;
             this.cmbBoxPrinterName1.Location = new System.Drawing.Point(141, 31);
             this.cmbBoxPrinterName1.Name = "cmbBoxPrinterName1";
@@ -275,6 +283,7 @@
             // 
             // txtOtherName
             // 
+            this.txtOtherName.Enabled = false;
             this.txtOtherName.Location = new System.Drawing.Point(141, 92);
             this.txtOtherName.Name = "txtOtherName";
             this.txtOtherName.Size = new System.Drawing.Size(138, 26);
@@ -282,6 +291,7 @@
             // 
             // txtDeptName
             // 
+            this.txtDeptName.Enabled = false;
             this.txtDeptName.Location = new System.Drawing.Point(141, 58);
             this.txtDeptName.Name = "txtDeptName";
             this.txtDeptName.Size = new System.Drawing.Size(138, 26);
@@ -289,6 +299,7 @@
             // 
             // txtDeptCode
             // 
+            this.txtDeptCode.Enabled = false;
             this.txtDeptCode.Location = new System.Drawing.Point(141, 22);
             this.txtDeptCode.Name = "txtDeptCode";
             this.txtDeptCode.Size = new System.Drawing.Size(138, 26);
@@ -333,23 +344,24 @@
             // 
             // dgvDeptCode
             // 
-            this.dgvDeptCode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeptCode.Location = new System.Drawing.Point(10, 25);
             this.dgvDeptCode.Name = "dgvDeptCode";
             this.dgvDeptCode.RowTemplate.Height = 23;
             this.dgvDeptCode.Size = new System.Drawing.Size(345, 373);
             this.dgvDeptCode.TabIndex = 0;
+            this.dgvDeptCode.SelectionChanged += new System.EventHandler(this.dgvDeptCode_SelectionChanged);
             // 
-            // FrmDeptCode
+            // FrmTADeptCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(814, 557);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmDeptCode";
+            this.Name = "FrmTADeptCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDeptCode";
+            this.Load += new System.EventHandler(this.FrmDeptCode_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
