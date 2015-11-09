@@ -142,11 +142,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TakeAway\FrmDeptCode.cs">
+    <Compile Include="TakeAway\FrmTADeptCode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TakeAway\FrmDeptCode.Designer.cs">
-      <DependentUpon>FrmDeptCode.cs</DependentUpon>
+    <Compile Include="TakeAway\FrmTADeptCode.Designer.cs">
+      <DependentUpon>FrmTADeptCode.cs</DependentUpon>
     </Compile>
     <Compile Include="TakeAway\FrmDeptCodeEntry.cs">
       <SubType>Form</SubType>
@@ -212,8 +212,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TakeAway\FrmDeptCode.resx">
-      <DependentUpon>FrmDeptCode.cs</DependentUpon>
+    <EmbeddedResource Include="TakeAway\FrmTADeptCode.resx">
+      <DependentUpon>FrmTADeptCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmDeptCodeEntry.resx">
       <DependentUpon>FrmDeptCodeEntry.cs</DependentUpon>
