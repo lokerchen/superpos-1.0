@@ -22,9 +22,5 @@ namespace SuperPOS.Domain.Entities
         //Add/Edit DateTime
         [XmlElement(ElementName = "OtherName")]
         public virtual string OtherName { get; set; }
-
-        //Remark
-        [XmlElement(ElementName = "Remark")]
-        public virtual string Remark { get; set; }
     }
 }
