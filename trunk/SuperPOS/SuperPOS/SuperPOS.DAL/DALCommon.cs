@@ -35,6 +35,10 @@ namespace SuperPOS.DAL
             onLoad.GetTAPostCodeRemark();
             //Take away Menu Set
             onLoad.GetTAMenuSet();
+            //Dept Code
+            onLoad.GetTADeptCode();
+            //Dept Code Detail
+            onLoad.GetTADeptCodeDetail();
         }
         #endregion
     }
