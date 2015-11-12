@@ -7,7 +7,9 @@ using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SuperPOS.Common;
 using SuperPOS.DAL;
+using SuperPOS.Domain.Entities;
 using SuperPOS.UI.Admin;
 
 namespace SuperPOS.UI.TakeAway
@@ -15,6 +17,9 @@ namespace SuperPOS.UI.TakeAway
     public partial class FrmTADeptCode : Form
     {
         private int iStatus;
+
+        private readonly EntityControl _control = new EntityControl();
+
         public FrmTADeptCode()
         {
             InitializeComponent();
@@ -113,6 +118,21 @@ namespace SuperPOS.UI.TakeAway
             cmbBoxPrinterName2.Enabled = true;
             cmbBoxNumberOfCopy2.Enabled = true;
             chkPrtDishSeper2.Enabled = true;
+
+            txtDeptCode.Text = "";
+            txtDeptName.Text = "";
+            txtOtherName.Enabled = true;
+
+            GetPrinter1();
+            cmbBoxNumberOfCopy1.Items.Add("1");
+            chkPrtDishSeper1.Checked = false;
+
+            GetPrinter2();
+            cmbBoxNumberOfCopy2.Items.Add("1");
+            chkPrtDishSeper2.Checked = false;
+
+            btnEdit.Enabled = false;
+            btnDel.Enabled = false;
         }
 
         private void dgvDeptCode_SelectionChanged(object sender, EventArgs e)
@@ -148,6 +168,136 @@ namespace SuperPOS.UI.TakeAway
                 cmbBoxNumberOfCopy2.SelectedIndex = cmbBoxNumberOfCopy2.Items.IndexOf(deptCode.NumCopy2.Equals("1") ? "1" : "2");
                 chkPrtDishSeper2.Checked = deptCode.PrtDishSeper2.Equals("Y");
             }
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            iStatus = 2;
+
+            txtDeptCode.Enabled = true;
+            txtDeptName.Enabled = true;
+            txtOtherName.Enabled = true;
+
+            cmbBoxPrinterName1.Enabled = true;
+            cmbBoxNumberOfCopy1.Enabled = true;
+            chkPrtDishSeper1.Enabled = true;
+
+            cmbBoxPrinterName2.Enabled = true;
+            cmbBoxNumberOfCopy2.Enabled = true;
+            chkPrtDishSeper2.Enabled = true;
+
+            btnAdd.Enabled = false;
+            btnDel.Enabled = false;
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            if (dgvDeptCode.CurrentRow == null) return;
+            new OnLoadSystemCommonData().GetTAMenuSet();
+            var shiftCodeInfo = CommonData.TaMenuSetList.FirstOrDefault(s => s.SystemKey.Equals(dgvDeptCode.CurrentRow.Cells[0].Value));
+            if (shiftCodeInfo != null)
+                _control.DeleteEntity(shiftCodeInfo);
+
+            //刷新数据
+            new OnLoadSystemCommonData().GetTADeptCode();
+            new OnLoadSystemCommonData().GetTADeptCodeDetail();
+            dgvDeptCode.DataSource = CommonData.TaDeptCodeList;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txtDeptCode.Text.Trim()))
+            {
+                MessageBox.Show("Department Code is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtDeptName.Text.Trim()))
+            {
+                MessageBox.Show("Department Name is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txtOtherName.Text.Trim()))
+            {
+                MessageBox.Show("Other Name is empty,please enter!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(cmbBoxPrinterName1.Text))
+            {
+                MessageBox.Show("Printer Name is empty, please select!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(cmbBoxNumberOfCopy1.Text))
+            {
+                MessageBox.Show("Number of Copy is empty, Please select!");
+                return;
+            }
+
+            TADeptCodeInfo taDeptCodeInfo = new TADeptCodeInfo();
+            TADeptCodeDetailInfo taDeptCodeDetailInfo = new TADeptCodeDetailInfo();
+
+            taDeptCodeInfo.DeptCode = txtDeptCode.Text.Trim();
+            taDeptCodeInfo.DeptName = txtDeptName.Text.Trim();
+            taDeptCodeInfo.OtherName = txtOtherName.Text.Trim();
+
+            //taDeptCodeDetailInfo.DeptCodeSysKey = taDeptCodeInfo.SystemKey.ToString().ToUpper();
+            taDeptCodeDetailInfo.PrintName1 = cmbBoxPrinterName1.Text.Trim();
+            taDeptCodeDetailInfo.NumCopy1 = cmbBoxNumberOfCopy1.Text.Trim();
+            taDeptCodeDetailInfo.PrtDishSeper1 = chkPrtDishSeper1.Checked ? "Y" : "N";
+            taDeptCodeDetailInfo.PrintName2 = cmbBoxPrinterName2.Text.Trim();
+            taDeptCodeDetailInfo.NumCopy2 = cmbBoxNumberOfCopy2.Text.Trim();
+            taDeptCodeDetailInfo.PrtDishSeper2 = chkPrtDishSeper2.Checked ? "Y" : "N";
+
+            if (iStatus == 1)
+            {
+                taDeptCodeInfo.SystemKey = new Guid(Guid.NewGuid().ToString().ToUpper());
+                _control.AddEntity(taDeptCodeInfo);
+
+                taDeptCodeDetailInfo.SystemKey = new Guid(Guid.NewGuid().ToString().ToUpper());
+                taDeptCodeDetailInfo.DeptCodeSysKey = taDeptCodeInfo.SystemKey.ToString();
+                _control.AddEntity(taDeptCodeDetailInfo);
+            }
+            else //iStatus == 2
+            {
+                if (dgvDeptCode.CurrentRow != null)
+                {
+                    taDeptCodeInfo.SystemKey = new Guid(dgvDeptCode.CurrentRow.Cells[0].Value.ToString().ToUpper());
+
+                    new OnLoadSystemCommonData().GetTADeptCodeDetail();
+                    var dcDetail = CommonData.TaDeptCodeDetailList.Where(s => s.DeptCodeSysKey.Equals(taDeptCodeInfo.SystemKey.ToString()));
+
+                    if (dcDetail.Any())
+                    {
+                        TADeptCodeDetailInfo taDept = new TADeptCodeDetailInfo();
+                        taDept = dcDetail.FirstOrDefault();
+                        taDept = taDeptCodeDetailInfo;
+                        //taDeptCodeDetailInfo.PrintName1 = cmbBoxPrinterName1.Text.Trim();
+                        //taDeptCodeDetailInfo.NumCopy1 = cmbBoxNumberOfCopy1.Text.Trim();
+                        //taDeptCodeDetailInfo.PrtDishSeper1 = chkPrtDishSeper1.Checked ? "Y" : "N";
+                        //taDeptCodeDetailInfo.PrintName2 = cmbBoxPrinterName2.Text.Trim();
+                        //taDeptCodeDetailInfo.NumCopy2 = cmbBoxNumberOfCopy2.Text.Trim();
+                        //taDeptCodeDetailInfo.PrtDishSeper2 = chkPrtDishSeper2.Checked ? "Y" : "N";
+
+                        _control.UpdateEntity(taDept);
+                    }
+                    else
+                    {
+                        taDeptCodeDetailInfo.SystemKey = new Guid(Guid.NewGuid().ToString().ToUpper());
+                        _control.AddEntity(taDeptCodeDetailInfo);
+                    }
+
+                    _control.UpdateEntity(taDeptCodeInfo);
+                }
+                else return;
+            }
+
+            new OnLoadSystemCommonData().GetTADeptCode();
+            dgvDeptCode.DataSource = CommonData.TaDeptCodeList;
+
+            iStatus = 0;
         }
     }
 }
