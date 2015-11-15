@@ -40,5 +40,7 @@ namespace SuperPOS.DAL
         public void GetTADeptCode() { CommonData.TaDeptCodeList = _control.SelectAll<TADeptCodeInfo>(); }
 
         public void GetTADeptCodeDetail() { CommonData.TaDeptCodeDetailList = _control.SelectAll<TADeptCodeDetailInfo>(); }
+
+        public void GetTAMenuCategory() { CommonData.TaMenuCategoryList = _control.SelectAll<TAMenuCategoryInfo>(); }
     }
 }

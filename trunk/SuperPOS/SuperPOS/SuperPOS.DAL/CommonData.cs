@@ -36,5 +36,7 @@ namespace SuperPOS.DAL
         public static IList<TADeptCodeInfo> TaDeptCodeList { get; set; }
 
         public static IList<TADeptCodeDetailInfo> TaDeptCodeDetailList { get; set; }
+
+        public static IList<TAMenuCategoryInfo> TaMenuCategoryList { get; set; }
     }
 }
