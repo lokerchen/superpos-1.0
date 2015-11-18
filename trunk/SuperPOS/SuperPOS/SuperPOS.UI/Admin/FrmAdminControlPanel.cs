@@ -99,5 +99,45 @@ namespace SuperPOS.UI.Admin
             FrmTADeptCode frmTaDeptCode = new FrmTADeptCode();
             frmTaDeptCode.ShowDialog();
         }
+
+        private void btnTQMenuCategory_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTAMenuCategory frmTaMenuCategory = new FrmTAMenuCategory();
+            frmTaMenuCategory.ShowDialog();
+        }
+
+        private void btnTQMenuItem_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTAMenuItem frmTaMenuItem = new FrmTAMenuItem();
+            frmTaMenuItem.ShowDialog();
+        }
+
+        private void btnTQOrderControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnTQTableSetup_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTATblSetup frmTaTblSetup = new FrmTATblSetup();
+            frmTaTblSetup.ShowDialog();
+        }
+
+        private void btnTQExtraMenuEdit_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTAExtraMenuEdit frmTAExtraMenuEdit = new FrmTAExtraMenuEdit();
+            frmTAExtraMenuEdit.ShowDialog();
+        }
+
+        private void btnTQPrintSetup_Click(object sender, EventArgs e)
+        {
+            Hide();
+            FrmTAPrtSetup frmTaPrtSetup = new FrmTAPrtSetup();
+            frmTaPrtSetup.ShowDialog();
+        }
     }
 }
