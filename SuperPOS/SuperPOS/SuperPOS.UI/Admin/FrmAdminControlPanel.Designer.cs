@@ -342,6 +342,7 @@
             this.btnTQPrintSetup.TabIndex = 8;
             this.btnTQPrintSetup.Text = "Print Setup";
             this.btnTQPrintSetup.UseVisualStyleBackColor = false;
+            this.btnTQPrintSetup.Click += new System.EventHandler(this.btnTQPrintSetup_Click);
             // 
             // btnTQTableSetup
             // 
@@ -355,6 +356,7 @@
             this.btnTQTableSetup.TabIndex = 7;
             this.btnTQTableSetup.Text = "Table Setup";
             this.btnTQTableSetup.UseVisualStyleBackColor = false;
+            this.btnTQTableSetup.Click += new System.EventHandler(this.btnTQTableSetup_Click);
             // 
             // btnTQDeptCode
             // 
@@ -382,6 +384,7 @@
             this.btnTQOrderControl.TabIndex = 5;
             this.btnTQOrderControl.Text = "Order Control";
             this.btnTQOrderControl.UseVisualStyleBackColor = false;
+            this.btnTQOrderControl.Click += new System.EventHandler(this.btnTQOrderControl_Click);
             // 
             // btnTQExtraMenuEdit
             // 
@@ -395,6 +398,7 @@
             this.btnTQExtraMenuEdit.TabIndex = 4;
             this.btnTQExtraMenuEdit.Text = "Extra Menu Edit";
             this.btnTQExtraMenuEdit.UseVisualStyleBackColor = false;
+            this.btnTQExtraMenuEdit.Click += new System.EventHandler(this.btnTQExtraMenuEdit_Click);
             // 
             // btnTQManageMenuSet
             // 
@@ -422,6 +426,7 @@
             this.btnTQMenuItem.TabIndex = 2;
             this.btnTQMenuItem.Text = "Menu Item";
             this.btnTQMenuItem.UseVisualStyleBackColor = false;
+            this.btnTQMenuItem.Click += new System.EventHandler(this.btnTQMenuItem_Click);
             // 
             // btnTQMenuCategory
             // 
@@ -435,6 +440,7 @@
             this.btnTQMenuCategory.TabIndex = 1;
             this.btnTQMenuCategory.Text = "Menu Category";
             this.btnTQMenuCategory.UseVisualStyleBackColor = false;
+            this.btnTQMenuCategory.Click += new System.EventHandler(this.btnTQMenuCategory_Click);
             // 
             // btnTQTakeawayConfig
             // 
