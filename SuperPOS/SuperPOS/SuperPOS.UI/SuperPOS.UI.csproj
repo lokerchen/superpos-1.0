@@ -142,6 +142,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TakeAway\FrmTAExtraMenuEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAExtraMenuEdit.Designer.cs">
+      <DependentUpon>FrmTAExtraMenuEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeAway\FrmTADeptCode.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,24 @@
     </Compile>
     <Compile Include="TakeAway\FrmTAMenuCategory.Designer.cs">
       <DependentUpon>FrmTAMenuCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAMenuItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAMenuItem.Designer.cs">
+      <DependentUpon>FrmTAMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAPrtSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAPrtSetup.Designer.cs">
+      <DependentUpon>FrmTAPrtSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeAway\FrmTATblSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTATblSetup.Designer.cs">
+      <DependentUpon>FrmTATblSetup.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin\FrmAdminControlPanel.resx">
       <DependentUpon>FrmAdminControlPanel.cs</DependentUpon>
@@ -220,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAConfig.resx">
       <DependentUpon>FrmTAConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTAExtraMenuEdit.resx">
+      <DependentUpon>FrmTAExtraMenuEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAManageMenuSet.resx">
       <DependentUpon>FrmTAManageMenuSet.cs</DependentUpon>
