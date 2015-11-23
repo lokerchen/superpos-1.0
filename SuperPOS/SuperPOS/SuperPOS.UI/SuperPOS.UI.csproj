@@ -166,6 +166,12 @@
     <Compile Include="TakeAway\FrmTAConfig.Designer.cs">
       <DependentUpon>FrmTAConfig.cs</DependentUpon>
     </Compile>
+    <Compile Include="TakeAway\FrmTAMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAMain.Designer.cs">
+      <DependentUpon>FrmTAMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeAway\FrmTAManageMenuSet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -247,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAExtraMenuEdit.resx">
       <DependentUpon>FrmTAExtraMenuEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTAMain.resx">
+      <DependentUpon>FrmTAMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAManageMenuSet.resx">
       <DependentUpon>FrmTAManageMenuSet.cs</DependentUpon>
