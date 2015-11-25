@@ -21,7 +21,7 @@ namespace SuperPOS.Domain.Entities
         public virtual string UsrName { get; set; }
 
         //用户名
-        [XmlElement(ElementName = "UsrName")]
+        [XmlElement(ElementName = "UsrPwd")]
         public virtual string UsrPwd { get; set; }
 
         //用户权限
