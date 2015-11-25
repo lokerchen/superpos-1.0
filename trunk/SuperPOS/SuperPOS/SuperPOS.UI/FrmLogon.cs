@@ -115,8 +115,10 @@ namespace SuperPOS.UI
                 }
                     
                 Hide();
-                FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel(CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text)));
-                frmAdminMain.ShowDialog();
+                //FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel(CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text)));
+                //frmAdminMain.ShowDialog();
+                FrmSelectMenu frmSelectMenu = new FrmSelectMenu(CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text)));
+                frmSelectMenu.ShowDialog();
             }
         }
     }
