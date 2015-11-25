@@ -7,13 +7,6 @@
     <id name="SystemKey" column="SystemKey" type="System.Guid">
       <generator class="guid" />
     </id>
-    "EnglishName"  TEXT,
-    "OtherName"  TEXT,
-    "DisplayPosition"  TEXT,
-    "DeptSysKey"  TEXT,
-    "DeptCode"  TEXT,
-    "IsHotKey"  TEXT,
-    "DishCode"  TEXT
     <property name="EnglishName" column="EnglishName" type="System.String" />
     <property name="OtherName" column="OtherName" type="System.String" />
     <property name="DisplayPosition" column="DisplayPosition" type="System.String" />
