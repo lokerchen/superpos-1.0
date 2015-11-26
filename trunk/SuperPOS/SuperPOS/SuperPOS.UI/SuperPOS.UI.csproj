@@ -146,6 +146,12 @@
     <Compile Include="TakeAway\FrmTACustInfo.Designer.cs">
       <DependentUpon>FrmTACustInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="TakeAway\FrmTAOrderListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAOrderListView.Designer.cs">
+      <DependentUpon>FrmTAOrderListView.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeAway\FrmTAShowOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +258,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTACustInfo.resx">
       <DependentUpon>FrmTACustInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTAOrderListView.resx">
+      <DependentUpon>FrmTAOrderListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAShowOrder.resx">
       <DependentUpon>FrmTAShowOrder.cs</DependentUpon>
