@@ -125,7 +125,7 @@ namespace SuperPOS.UI
         private void btnShowOrder_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmShowOrder frmShowOrder = new FrmShowOrder(userInfo);
+            FrmTAShowOrder frmShowOrder = new FrmTAShowOrder(userInfo);
             frmShowOrder.ShowDialog();
         }
     }

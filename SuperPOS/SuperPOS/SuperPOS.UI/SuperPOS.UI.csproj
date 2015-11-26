@@ -140,11 +140,11 @@
     <Compile Include="FrmSelectMenu.Designer.cs">
       <DependentUpon>FrmSelectMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmShowOrder.cs">
+    <Compile Include="TakeAway\FrmTAShowOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmShowOrder.Designer.cs">
-      <DependentUpon>FrmShowOrder.cs</DependentUpon>
+    <Compile Include="TakeAway\FrmTAShowOrder.Designer.cs">
+      <DependentUpon>FrmTAShowOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmWelcome.cs">
       <SubType>Form</SubType>
@@ -244,8 +244,8 @@
     <EmbeddedResource Include="FrmSelectMenu.resx">
       <DependentUpon>FrmSelectMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmShowOrder.resx">
-      <DependentUpon>FrmShowOrder.cs</DependentUpon>
+    <EmbeddedResource Include="TakeAway\FrmTAShowOrder.resx">
+      <DependentUpon>FrmTAShowOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmWelcome.resx">
       <DependentUpon>FrmWelcome.cs</DependentUpon>
