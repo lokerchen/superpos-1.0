@@ -41,6 +41,8 @@ namespace SuperPOS.DAL
             onLoad.GetTADeptCodeDetail();
             //Take away Menu Category
             onLoad.GetTAMenuCategory();
+            //System Control
+            onLoad.GetSysControlList();
         }
         #endregion
     }
