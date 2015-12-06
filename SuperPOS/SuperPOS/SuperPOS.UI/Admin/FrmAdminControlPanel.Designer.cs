@@ -101,6 +101,7 @@
             this.btnSysControl.Text = "System Control";
             this.btnSysControl.UseVisualStyleBackColor = false;
             this.btnSysControl.Visible = false;
+            this.btnSysControl.Click += new System.EventHandler(this.btnSysControl_Click);
             // 
             // btnExit
             // 

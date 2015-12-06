@@ -139,5 +139,12 @@ namespace SuperPOS.UI.Admin
             FrmTAPrtSetup frmTaPrtSetup = new FrmTAPrtSetup();
             frmTaPrtSetup.ShowDialog();
         }
+
+        private void btnSysControl_Click(object sender, EventArgs e)
+        {
+            FrmSysCtl frmSysCtl = new FrmSysCtl();
+            Hide();
+            frmSysCtl.ShowDialog();
+        }
     }
 }
