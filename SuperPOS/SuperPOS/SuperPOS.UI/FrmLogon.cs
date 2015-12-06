@@ -15,6 +15,7 @@ namespace SuperPOS.UI
 {
     public partial class FrmLogon : Form
     {
+        private readonly EntityControl _control = new EntityControl();
         public FrmLogon()
         {
             InitializeComponent();
@@ -101,11 +102,12 @@ namespace SuperPOS.UI
         }
         #endregion
 
+        #region 登录
         private void btnOK_Click(object sender, EventArgs e)
         {
             new OnLoadSystemCommonData().GetSysConfigList();
 
-            if (CommonData.UsrList.Any(s => s.UsrPwd.Equals(txtPwd.Text)))
+            if (CommonData.UsrList.Any(s => s.UsrPwd.Equals(txtPwd.Text)) || txtPwd.Text.Equals(CommonBase.SYS_CONTROL_PWD))
             {
                 if (CommonData.SysConfigList.Count <= 0)
                 {
@@ -113,13 +115,48 @@ namespace SuperPOS.UI
                     FrmSysConfig frmSysConfig = new FrmSysConfig(0);
                     frmSysConfig.ShowDialog();
                 }
-                    
+
                 Hide();
-                //FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel(CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text)));
-                //frmAdminMain.ShowDialog();
-                FrmSelectMenu frmSelectMenu = new FrmSelectMenu(CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text)));
-                frmSelectMenu.ShowDialog();
+
+                var uList = CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text));
+                if (uList == null) //超级管理员
+                {
+                    if (txtPwd.Text.Equals(CommonBase.SYS_CONTROL_PWD))
+                    {
+                        UserInfo user = new UserInfo();
+                        user.SystemKey = Guid.NewGuid();
+                        user.UsrCode = "888";
+                        user.UsrName = "888";
+                        user.UsrPwd = CommonBase.SYS_CONTROL_PWD;
+                        user.Remark = 0;
+                        _control.AddEntity(user);
+                        new OnLoadSystemCommonData().GetUserList();
+                        uList = CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text));
+                    }
+                    else
+                    {
+                        txtPwd.Text = "";
+                        return;
+                    }
+                }
+
+                var fPage = CommonData.SysConfigList.FirstOrDefault();
+                switch (fPage.DefaultOrderInputPage)
+                {
+                    case "System Control":
+                        FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel(uList, txtPwd.Text.Equals(CommonBase.SYS_CONTROL_PWD));
+                        frmAdminMain.ShowDialog();
+                        break;
+                    case "Takeaway":
+                    case "Eat In":
+                        FrmSelectMenu frmSelectMenu = new FrmSelectMenu(CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text)));
+                        frmSelectMenu.ShowDialog();
+                        break;
+                    case "Quick Food":
+                        break;
+                }
             }
         }
+        #endregion
     }
 }
