@@ -31,5 +31,8 @@ namespace SuperPOS.Common
 
         //查询所有磁盘
         public static string SELECT_WIN32_LOGICALDISK = @"SELECT * FROM WIN32_LOGICALDISK";
+
+        //默认管理员密码
+        public static string SYS_CONTROL_PWD = "111";
     }
 }
