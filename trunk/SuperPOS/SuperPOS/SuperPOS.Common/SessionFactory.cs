@@ -30,9 +30,10 @@ namespace SuperPOS.Common
             {
                 _sessions = _cfg.Configure("hibernate.cfg.xml").BuildSessionFactory();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 //Resources.DBNotConnected:Database not started up or connected, please contact system administrator                
+                Console.WriteLine(ex.InnerException.ToString());
                 throw new DALException("Database not started up or connected, please contact system administrator");
             }
         }
