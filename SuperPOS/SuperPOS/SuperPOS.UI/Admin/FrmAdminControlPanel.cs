@@ -14,22 +14,25 @@ namespace SuperPOS.UI.Admin
     public partial class  FrmAdminControlPanel : Form
     {
         private UserInfo usrInfo = new UserInfo();
+        private bool isShowSysCtl = false; //是否显示System Control按钮
 
         public FrmAdminControlPanel()
         {
             InitializeComponent();
         }
 
-        public FrmAdminControlPanel(UserInfo uInfo)
+        public FrmAdminControlPanel(UserInfo uInfo, bool isShow)
         {
             InitializeComponent();
             usrInfo = uInfo;
+            isShowSysCtl = isShow;
         }
 
         private void FrmAdminControlPanel_Load(object sender, EventArgs e)
         {
             //if (usrInfo.UsrRight == 1)
             //    gupBoxEatInSetting.Visible = false;
+            btnSysControl.Visible = isShowSysCtl;
         }
 
         private void btnShiftCode_Click(object sender, EventArgs e)
