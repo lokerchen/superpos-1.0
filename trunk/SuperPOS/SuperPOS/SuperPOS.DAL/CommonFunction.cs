@@ -10,6 +10,12 @@ namespace SuperPOS.DAL
 {
     public static class CommonFunction
     {
+        #region 判断是否有GSSSystemConfig权限
+        /// <summary>
+        /// 判断是否有GSSSystemConfig权限
+        /// </summary>
+        /// <param name="strPwd">用户密码</param>
+        /// <returns></returns>
         public static bool GetAuthorityGSSysConf(string strPwd)
         {
             new OnLoadSystemCommonData().GetUsrMaintenance();
@@ -18,20 +24,14 @@ namespace SuperPOS.DAL
             var uList = CommonData.UsrMaintenanceList.Join(CommonData.UsrList, umList => umList.UsrCode,
                 usrList => usrList.UsrCode, (umList, usrList) => new {uPwd = usrList.UsrPwd, uGSSSysConfig = umList.GSSSystemConfig });
 
-            if (!uList.Any())
-                return false;
-            else
-            {
-                return uList.Any(s => s.uPwd.Equals(strPwd) && s.uGSSSysConfig.Equals("Y"));
-            }
-            //var uList = CommonData.UsrMaintenanceList.Where(s => s.UsrCode.Equals(strPwd));
-
-            //if (uList == null || !uList.Any())
+            //if (!uList.Any())
             //    return false;
             //else
-            //    return uList.FirstOrDefault().GSSSystemConfig.Equals("Y");
-            //return strPwd.Equals(CommonBase.SYS_CONTROL_PWD) ||
-            //       uList.Any() && uList.FirstOrDefault().GSSSystemConfig.Equals("Y");
+            //{
+            //    return uList.Any(s => s.uPwd.Equals(strPwd) && s.uGSSSysConfig.Equals("Y"));
+            //}
+            return uList.Any() && uList.Any(s => s.uPwd.Equals(strPwd) && s.uGSSSysConfig.Equals("Y"));
         }
+        #endregion
     }
 }
