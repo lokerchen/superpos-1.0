@@ -146,6 +146,18 @@
     <Compile Include="FrmSelectMenu.Designer.cs">
       <DependentUpon>FrmSelectMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="TakeAway\FrmCall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmCall.Designer.cs">
+      <DependentUpon>FrmCall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TakeAway\FrmCallNewCus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmCallNewCus.Designer.cs">
+      <DependentUpon>FrmCallNewCus.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeAway\FrmTACustInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +282,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSelectMenu.resx">
       <DependentUpon>FrmSelectMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmCall.resx">
+      <DependentUpon>FrmCall.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmCallNewCus.resx">
+      <DependentUpon>FrmCallNewCus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTACustInfo.resx">
       <DependentUpon>FrmTACustInfo.cs</DependentUpon>
