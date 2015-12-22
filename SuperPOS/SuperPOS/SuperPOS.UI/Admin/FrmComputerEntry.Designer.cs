@@ -54,10 +54,12 @@
             this.grpBoxCompAddrEntry.Controls.Add(this.btnDel);
             this.grpBoxCompAddrEntry.Controls.Add(this.btnEdit);
             this.grpBoxCompAddrEntry.Controls.Add(this.btnAdd);
-            this.grpBoxCompAddrEntry.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grpBoxCompAddrEntry.Location = new System.Drawing.Point(27, 21);
+            this.grpBoxCompAddrEntry.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grpBoxCompAddrEntry.Location = new System.Drawing.Point(12, 13);
+            this.grpBoxCompAddrEntry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxCompAddrEntry.Name = "grpBoxCompAddrEntry";
-            this.grpBoxCompAddrEntry.Size = new System.Drawing.Size(318, 431);
+            this.grpBoxCompAddrEntry.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpBoxCompAddrEntry.Size = new System.Drawing.Size(622, 265);
             this.grpBoxCompAddrEntry.TabIndex = 0;
             this.grpBoxCompAddrEntry.TabStop = false;
             this.grpBoxCompAddrEntry.Text = "Computer Address Entry";
@@ -67,9 +69,10 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(201, 347);
+            this.btnExit.Location = new System.Drawing.Point(211, 155);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 69);
+            this.btnExit.Size = new System.Drawing.Size(87, 98);
             this.btnExit.TabIndex = 25;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -78,12 +81,13 @@
             // dgvAddr
             // 
             this.dgvAddr.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAddr.Location = new System.Drawing.Point(26, 167);
+            this.dgvAddr.Location = new System.Drawing.Point(316, 27);
+            this.dgvAddr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvAddr.Name = "dgvAddr";
             this.dgvAddr.ReadOnly = true;
             this.dgvAddr.RowTemplate.Height = 23;
             this.dgvAddr.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAddr.Size = new System.Drawing.Size(272, 158);
+            this.dgvAddr.Size = new System.Drawing.Size(293, 226);
             this.dgvAddr.TabIndex = 1;
             this.dgvAddr.SelectionChanged += new System.EventHandler(this.dgvAddr_SelectionChanged);
             // 
@@ -92,9 +96,10 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(39, 386);
+            this.btnSave.Location = new System.Drawing.Point(22, 210);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 30);
+            this.btnSave.Size = new System.Drawing.Size(87, 42);
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -106,10 +111,12 @@
             this.grpBoxAddrEntry.Controls.Add(this.txtCode);
             this.grpBoxAddrEntry.Controls.Add(this.label2);
             this.grpBoxAddrEntry.Controls.Add(this.label1);
-            this.grpBoxAddrEntry.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grpBoxAddrEntry.Location = new System.Drawing.Point(26, 36);
+            this.grpBoxAddrEntry.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grpBoxAddrEntry.Location = new System.Drawing.Point(17, 27);
+            this.grpBoxAddrEntry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxAddrEntry.Name = "grpBoxAddrEntry";
-            this.grpBoxAddrEntry.Size = new System.Drawing.Size(272, 109);
+            this.grpBoxAddrEntry.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpBoxAddrEntry.Size = new System.Drawing.Size(293, 101);
             this.grpBoxAddrEntry.TabIndex = 0;
             this.grpBoxAddrEntry.TabStop = false;
             this.grpBoxAddrEntry.Text = "Address Entry";
@@ -117,34 +124,36 @@
             // txtCompName
             // 
             this.txtCompName.Enabled = false;
-            this.txtCompName.Location = new System.Drawing.Point(123, 66);
+            this.txtCompName.Location = new System.Drawing.Point(134, 61);
+            this.txtCompName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCompName.Name = "txtCompName";
-            this.txtCompName.Size = new System.Drawing.Size(127, 23);
+            this.txtCompName.Size = new System.Drawing.Size(147, 26);
             this.txtCompName.TabIndex = 3;
             // 
             // txtCode
             // 
             this.txtCode.Enabled = false;
-            this.txtCode.Location = new System.Drawing.Point(123, 32);
+            this.txtCode.Location = new System.Drawing.Point(134, 27);
+            this.txtCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(127, 23);
+            this.txtCode.Size = new System.Drawing.Size(147, 26);
             this.txtCode.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 75);
+            this.label2.Location = new System.Drawing.Point(5, 67);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 14);
+            this.label2.Size = new System.Drawing.Size(123, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Computer Name:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 41);
+            this.label1.Location = new System.Drawing.Point(81, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 14);
+            this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Code:";
             // 
@@ -153,9 +162,10 @@
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(120, 386);
+            this.btnDel.Location = new System.Drawing.Point(117, 210);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(75, 30);
+            this.btnDel.Size = new System.Drawing.Size(87, 42);
             this.btnDel.TabIndex = 23;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
@@ -166,9 +176,10 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(120, 347);
+            this.btnEdit.Location = new System.Drawing.Point(117, 155);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 30);
+            this.btnEdit.Size = new System.Drawing.Size(87, 42);
             this.btnEdit.TabIndex = 22;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -179,9 +190,10 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(39, 347);
+            this.btnAdd.Location = new System.Drawing.Point(22, 155);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 30);
+            this.btnAdd.Size = new System.Drawing.Size(87, 42);
             this.btnAdd.TabIndex = 21;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -189,11 +201,13 @@
             // 
             // FrmComputerEntry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 461);
+            this.ClientSize = new System.Drawing.Size(651, 292);
             this.Controls.Add(this.grpBoxCompAddrEntry);
+            this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmComputerEntry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmComputerEntry";
