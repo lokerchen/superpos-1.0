@@ -29,6 +29,7 @@ namespace SuperPOS.UI.Admin
         public FrmSysConfig(int iExist)
         {
             iExistRest = iExist;
+
             InitializeComponent();
         }
 
@@ -68,7 +69,8 @@ namespace SuperPOS.UI.Admin
         private void FrmSysConfig_Load(object sender, EventArgs e)
         {
             GetSysDir();
-            GetPrinter();
+            GetPrinter(1);
+            GetPrinter(2);
             SetDefInputPat();
 
             //if (iExistRest != 1) return;
@@ -227,16 +229,23 @@ namespace SuperPOS.UI.Admin
 
         #region 获得所有打印列表
 
-        private void GetPrinter()
+        private void GetPrinter(int i)
         {
             foreach (string sPrint in PrinterSettings.InstalledPrinters)//获取所有打印机名称
             {
                 PrintDocument print = new PrintDocument();
                 string sDefault = print.PrinterSettings.PrinterName;//默认打印机名
 
-                comBoxRptPrint.Items.Add(sPrint);
-                if (sPrint == sDefault)
-                    comBoxRptPrint.SelectedIndex = comBoxRptPrint.Items.IndexOf(sPrint);
+                if (i == 1)
+                {
+                    comBoxRptPrint.Items.Add(sPrint);
+                    if (sPrint == sDefault) comBoxRptPrint.SelectedIndex = comBoxRptPrint.Items.IndexOf(sPrint);
+                }
+                else
+                {
+                    comBoxA4RptPrint.Items.Add(sPrint);
+                    if (sPrint == sDefault) comBoxA4RptPrint.SelectedIndex = comBoxA4RptPrint.Items.IndexOf(sPrint);
+                }
             }
         }
         #endregion
