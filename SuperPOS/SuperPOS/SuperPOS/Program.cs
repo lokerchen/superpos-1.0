@@ -35,12 +35,12 @@ namespace SuperPOS
                     catch (Exception ex)
                     {
                         MessageBox.Show("发生错误在程序启动时");
+                        Console.Out.WriteLine(ex.InnerException);
                         throw ex;
                     }
 
                 }
-                else
-                    MessageBox.Show("一次只能运行一个程序");
+                else MessageBox.Show("一次只能运行一个程序");
             }
         }
     }
