@@ -144,8 +144,11 @@ namespace SuperPOS.UI
                 switch (fPage.DefaultOrderInputPage)
                 {
                     case "System Control":
-                        FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel(uList, txtPwd.Text.Equals(CommonBase.SYS_CONTROL_PWD));
-                        frmAdminMain.ShowDialog();
+                        if (CommonFunction.GetAuthorityGSSysConf(txtPwd.Text))
+                        {
+                            FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel(uList, txtPwd.Text.Equals(CommonBase.SYS_CONTROL_PWD));
+                            frmAdminMain.ShowDialog();
+                        }
                         break;
                     case "Takeaway":
                     case "Eat In":
