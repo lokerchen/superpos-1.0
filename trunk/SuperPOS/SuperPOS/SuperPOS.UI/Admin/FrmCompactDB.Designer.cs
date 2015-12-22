@@ -40,9 +40,12 @@
             // 
             this.grpBoxDataManager.Controls.Add(this.btnRestoreData);
             this.grpBoxDataManager.Controls.Add(this.btnBackupData);
-            this.grpBoxDataManager.Location = new System.Drawing.Point(12, 12);
+            this.grpBoxDataManager.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grpBoxDataManager.Location = new System.Drawing.Point(14, 17);
+            this.grpBoxDataManager.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxDataManager.Name = "grpBoxDataManager";
-            this.grpBoxDataManager.Size = new System.Drawing.Size(335, 131);
+            this.grpBoxDataManager.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.grpBoxDataManager.Size = new System.Drawing.Size(391, 122);
             this.grpBoxDataManager.TabIndex = 0;
             this.grpBoxDataManager.TabStop = false;
             this.grpBoxDataManager.Text = "Data Manager";
@@ -52,9 +55,10 @@
             this.btnRestoreData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnRestoreData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRestoreData.ForeColor = System.Drawing.Color.White;
-            this.btnRestoreData.Location = new System.Drawing.Point(177, 52);
+            this.btnRestoreData.Location = new System.Drawing.Point(203, 41);
+            this.btnRestoreData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnRestoreData.Name = "btnRestoreData";
-            this.btnRestoreData.Size = new System.Drawing.Size(125, 45);
+            this.btnRestoreData.Size = new System.Drawing.Size(146, 64);
             this.btnRestoreData.TabIndex = 21;
             this.btnRestoreData.Text = "Restore Data";
             this.btnRestoreData.UseVisualStyleBackColor = false;
@@ -65,9 +69,10 @@
             this.btnBackupData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnBackupData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBackupData.ForeColor = System.Drawing.Color.White;
-            this.btnBackupData.Location = new System.Drawing.Point(33, 52);
+            this.btnBackupData.Location = new System.Drawing.Point(32, 41);
+            this.btnBackupData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBackupData.Name = "btnBackupData";
-            this.btnBackupData.Size = new System.Drawing.Size(125, 45);
+            this.btnBackupData.Size = new System.Drawing.Size(146, 64);
             this.btnBackupData.TabIndex = 20;
             this.btnBackupData.Text = "Backup Data";
             this.btnBackupData.UseVisualStyleBackColor = false;
@@ -78,9 +83,10 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(111, 169);
+            this.btnExit.Location = new System.Drawing.Point(432, 58);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(125, 45);
+            this.btnExit.Size = new System.Drawing.Size(146, 64);
             this.btnExit.TabIndex = 21;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -92,12 +98,14 @@
             // 
             // FrmCompactDB
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 237);
+            this.ClientSize = new System.Drawing.Size(640, 160);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.grpBoxDataManager);
+            this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmCompactDB";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmCompactDB";
