@@ -175,15 +175,15 @@ namespace SuperPOS.UI.Admin
             btnSave.Enabled = false;
         }
 
-        private void lvShiftCode_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (lvShiftCode.SelectedItems.Count <= 0) return;
-            txtShiftCode.Text = lvShiftCode.SelectedItems[0].SubItems[1].Text;
-            txtShiftName.Text = lvShiftCode.SelectedItems[0].SubItems[2].Text;
-            txtOtherName.Text = lvShiftCode.SelectedItems[0].SubItems[3].Text;
-            dtpFrom.Text = lvShiftCode.SelectedItems[0].SubItems[4].Text;
-            dtpTo.Text = lvShiftCode.SelectedItems[0].SubItems[5].Text;
-        }
+        //private void lvShiftCode_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if (lvShiftCode.SelectedItems.Count <= 0) return;
+        //    txtShiftCode.Text = lvShiftCode.SelectedItems[0].SubItems[1].Text;
+        //    txtShiftName.Text = lvShiftCode.SelectedItems[0].SubItems[2].Text;
+        //    txtOtherName.Text = lvShiftCode.SelectedItems[0].SubItems[3].Text;
+        //    dtpFrom.Text = lvShiftCode.SelectedItems[0].SubItems[4].Text;
+        //    dtpTo.Text = lvShiftCode.SelectedItems[0].SubItems[5].Text;
+        //}
 
         private void dgvShiftCode_SelectionChanged(object sender, EventArgs e)
         {
