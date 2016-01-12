@@ -28,123 +28,95 @@ namespace SuperPOS.UI.TakeAway
             OnLoadSystemCommonData onLoad = new OnLoadSystemCommonData();
             onLoad.GetTAMenuSet();
 
-            dgvMenuSet.DataSource = CommonData.TaMenuSetList;
-            dgvMenuSet.Columns[0].Visible = false;
-            dgvMenuSet.Columns[3].Visible = false;
-            dgvMenuSet.Columns[1].HeaderCell.Value = "English Name";
-            dgvMenuSet.Columns[2].HeaderCell.Value = "Other Name";
-        }
+            comboxFrom1.Items.Add("Takeaway");
+            comboxFrom1.Items.Add("Eat-In");
+            comboxFrom1.Items.Add("QuickDining");
+            comboxTo1.Items.Add("Takeaway");
+            comboxTo1.Items.Add("Eat-In");
+            comboxTo1.Items.Add("QuickDining");
 
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            iStatus = 1;
-            if (dgvMenuSet.Rows.Count >= 4)
+            comboxFrom1.SelectedIndex = 0;
+            comboxTo1.SelectedIndex = 0;
+
+            OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
+            onLoadSystemCommonData.GetTAMenuSet();
+
+            for (int i = 1; i < 5; i++)
             {
-                MessageBox.Show("Up to four records are allowed.");
-                return;
+                TAMenuSetInfo taMenuSetInfo = CommonData.TaMenuSetList.FirstOrDefault(s => s.ID.Equals(i.ToString()));
+                if (taMenuSetInfo != null)
+                {
+                    switch (i)
+                    {
+                        case 1:
+                            txtEngName1.Text = taMenuSetInfo.EnglishName;
+                            txtOtherName1.Text = taMenuSetInfo.OtherName;
+                            break;
+                        case 2:
+                            txtEngName2.Text = taMenuSetInfo.EnglishName;
+                            txtOtherName2.Text = taMenuSetInfo.OtherName;
+                            break;
+                        case 3:
+                            txtEngName3.Text = taMenuSetInfo.EnglishName;
+                            txtOtherName3.Text = taMenuSetInfo.OtherName;
+                            break;
+                        case 4:
+                            txtEngName4.Text = taMenuSetInfo.EnglishName;
+                            txtOtherName4.Text = taMenuSetInfo.OtherName;
+                            break;
+                    }
+                }
             }
 
-            txtEnglishName.Text = "";
-            txtOtherName.Text = "";
-
-            btnSave.Enabled = true;
-            btnDel.Enabled = false;
-            btnEdit.Enabled = false;
-
-            txtEnglishName.Enabled = true;
-            txtOtherName.Enabled = true;
-        }
-
-        private void btnEdit_Click(object sender, EventArgs e)
-        {
-            iStatus = 2;
-
-            btnSave.Enabled = true;
-            btnDel.Enabled = false;
-            btnAdd.Enabled = false;
-
-            txtEnglishName.Enabled = true;
-            txtOtherName.Enabled = true;
-        }
-
-        private void dgvMenuSet_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvMenuSet.RowCount == 0)
-            {
-                MessageBox.Show("This table is empty,please add data first!");
-                return;
-            }
-
-            if (dgvMenuSet.CurrentRow == null)
-                return;
-
-            if (dgvMenuSet.CurrentRow.Index < 0) return;
-            //English Name
-            txtEnglishName.Text = dgvMenuSet.CurrentRow.Cells[1].Value.ToString();
-            //Other Name
-            txtOtherName.Text = dgvMenuSet.CurrentRow.Cells[2].Value.ToString();
-
-            //btnAdd.Enabled = false;
-            //btnDel.Enabled = false;
-            //btnSave.Enabled = true;
-        }
-
-        private void btnDel_Click(object sender, EventArgs e)
-        {
-            if (dgvMenuSet.CurrentRow == null) return;
-            new OnLoadSystemCommonData().GetTAMenuSet();
-            var shiftCodeInfo = CommonData.TaMenuSetList.FirstOrDefault(s => s.SystemKey.Equals(dgvMenuSet.CurrentRow.Cells[0].Value));
-            if (shiftCodeInfo != null)
-                _control.DeleteEntity(shiftCodeInfo);
-
-            //刷新数据
-            new OnLoadSystemCommonData().GetShiftCodeList();
-            dgvMenuSet.DataSource = CommonData.ShiftCodeList;
+            IList<string> lstType = CommonData.TaMenuSetList.Select(s => s.EnglishName).ToList();
+            comboxFrom2.DataSource = lstType;
+            comboxTo2.DataSource = lstType;
+            comboxFrom2.SelectedIndex = 0;
+            comboxTo2.SelectedIndex = 0;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txtEnglishName.Text.Trim()))
+            OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
+            onLoadSystemCommonData.GetTAMenuSet();
+
+            try
             {
-                MessageBox.Show("Englis Name is empty,please enter!");
-                return;
-            }
+                for (int i = 1; i < 5; i++)
+                {
+                    TAMenuSetInfo taMenuSetInfo = CommonData.TaMenuSetList.FirstOrDefault(s => s.ID.Equals(i.ToString()));
+                    if (taMenuSetInfo != null)
+                    {
+                        switch (i)
+                        {
+                            case 1:
+                                taMenuSetInfo.EnglishName = txtEngName1.Text.Trim();
+                                taMenuSetInfo.OtherName = txtOtherName1.Text.Trim();
+                                break;
+                            case 2:
+                                taMenuSetInfo.EnglishName = txtEngName2.Text.Trim();
+                                taMenuSetInfo.OtherName = txtOtherName2.Text.Trim();
+                                break;
+                            case 3:
+                                taMenuSetInfo.EnglishName = txtEngName3.Text.Trim();
+                                taMenuSetInfo.OtherName = txtOtherName3.Text.Trim();
+                                break;
+                            case 4:
+                                taMenuSetInfo.EnglishName = txtEngName4.Text.Trim();
+                                taMenuSetInfo.OtherName = txtOtherName4.Text.Trim();
+                                break;
+                        }
+                        _control.UpdateEntity(taMenuSetInfo);
+                    }
+                }
 
-            if (string.IsNullOrEmpty(txtOtherName.Text.Trim()))
+                MessageBox.Show("Save success!");
+            }
+            catch (Exception)
             {
-                MessageBox.Show("Other Name is empty,please enter!");
-                return;
+                MessageBox.Show("Save Failed!");
+                throw;
             }
-
-            var menuSetInfo = new TAMenuSetInfo();
-            menuSetInfo.EnglishName = txtEnglishName.Text.Trim();
-            menuSetInfo.OtherName = txtOtherName.Text.Trim();
-
-            if (iStatus == 1)
-            {
-                menuSetInfo.SystemKey = new Guid(Guid.NewGuid().ToString().ToUpper());
-                _control.AddEntity(menuSetInfo);
-            }
-            else //iStatus == 2
-            {
-                if (dgvMenuSet.CurrentRow != null)
-                    menuSetInfo.SystemKey = new Guid(dgvMenuSet.CurrentRow.Cells[0].Value.ToString().ToUpper());
-                else 
-                    return;
-
-                _control.UpdateEntity(menuSetInfo);
-            }
-
-            new OnLoadSystemCommonData().GetTAMenuSet();
-            dgvMenuSet.DataSource = CommonData.TaMenuSetList;
-            
-            iStatus = 0;
-            btnAdd.Enabled = true;
-            btnEdit.Enabled = true;
-            btnDel.Enabled = true;
-
-            txtEnglishName.Enabled = false;
-            txtOtherName.Enabled = false;
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -152,6 +124,16 @@ namespace SuperPOS.UI.TakeAway
             Hide();
             FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
             frmAdminControl.ShowDialog();
+        }
+
+        private void comboxTo1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

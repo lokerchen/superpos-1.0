@@ -29,72 +29,84 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvMenuSet = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.btnDel = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtEnglishName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtOtherName = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtEngName1 = new System.Windows.Forms.TextBox();
+            this.txtOtherName1 = new System.Windows.Forms.TextBox();
+            this.txtOtherName2 = new System.Windows.Forms.TextBox();
+            this.txtEngName2 = new System.Windows.Forms.TextBox();
+            this.txtOtherName3 = new System.Windows.Forms.TextBox();
+            this.txtEngName3 = new System.Windows.Forms.TextBox();
+            this.txtOtherName4 = new System.Windows.Forms.TextBox();
+            this.txtEngName4 = new System.Windows.Forms.TextBox();
+            this.btnDelMenu1 = new System.Windows.Forms.Button();
+            this.btnDelMenu2 = new System.Windows.Forms.Button();
+            this.btnDelMenu3 = new System.Windows.Forms.Button();
+            this.btnDelMenu4 = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboxFrom1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboxTo1 = new System.Windows.Forms.ComboBox();
+            this.comboxFrom2 = new System.Windows.Forms.ComboBox();
+            this.comboxTo2 = new System.Windows.Forms.ComboBox();
+            this.btnCopy = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMenuSet)).BeginInit();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtOtherName);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtEnglishName);
-            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.btnSave);
-            this.groupBox1.Controls.Add(this.btnDel);
-            this.groupBox1.Controls.Add(this.btnEdit);
-            this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Location = new System.Drawing.Point(14, 17);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(641, 399);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(620, 566);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Manage Menu Set";
             // 
-            // groupBox2
+            // label2
             // 
-            this.groupBox2.Controls.Add(this.dgvMenuSet);
-            this.groupBox2.Location = new System.Drawing.Point(16, 36);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(345, 348);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Names of Menu Set";
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(202, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(91, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Other Name";
             // 
-            // dgvMenuSet
+            // label1
             // 
-            this.dgvMenuSet.AllowUserToDeleteRows = false;
-            this.dgvMenuSet.Location = new System.Drawing.Point(16, 33);
-            this.dgvMenuSet.Name = "dgvMenuSet";
-            this.dgvMenuSet.ReadOnly = true;
-            this.dgvMenuSet.RowTemplate.Height = 23;
-            this.dgvMenuSet.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMenuSet.Size = new System.Drawing.Size(315, 296);
-            this.dgvMenuSet.TabIndex = 0;
-            this.dgvMenuSet.SelectionChanged += new System.EventHandler(this.dgvMenuSet_SelectionChanged);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(28, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 20);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "English Name";
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(541, 255);
+            this.btnExit.Location = new System.Drawing.Point(381, 487);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 69);
+            this.btnExit.Size = new System.Drawing.Size(87, 66);
             this.btnExit.TabIndex = 25;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -105,102 +117,246 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(379, 294);
+            this.btnSave.Location = new System.Drawing.Point(143, 491);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 30);
+            this.btnSave.Size = new System.Drawing.Size(91, 62);
             this.btnSave.TabIndex = 24;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // btnDel
+            // groupBox2
             // 
-            this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(460, 294);
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(75, 30);
-            this.btnDel.TabIndex = 23;
-            this.btnDel.Text = "Delete";
-            this.btnDel.UseVisualStyleBackColor = false;
-            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
+            this.groupBox2.Controls.Add(this.btnDelMenu4);
+            this.groupBox2.Controls.Add(this.btnDelMenu3);
+            this.groupBox2.Controls.Add(this.btnDelMenu2);
+            this.groupBox2.Controls.Add(this.btnDelMenu1);
+            this.groupBox2.Controls.Add(this.txtOtherName4);
+            this.groupBox2.Controls.Add(this.txtEngName4);
+            this.groupBox2.Controls.Add(this.txtOtherName3);
+            this.groupBox2.Controls.Add(this.txtEngName3);
+            this.groupBox2.Controls.Add(this.txtOtherName2);
+            this.groupBox2.Controls.Add(this.txtEngName2);
+            this.groupBox2.Controls.Add(this.txtOtherName1);
+            this.groupBox2.Controls.Add(this.txtEngName1);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Location = new System.Drawing.Point(48, 63);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox2.Size = new System.Drawing.Size(520, 236);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Names of Menu Set";
             // 
-            // btnEdit
+            // txtEngName1
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(460, 255);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 30);
-            this.btnEdit.TabIndex = 22;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.txtEngName1.Location = new System.Drawing.Point(16, 66);
+            this.txtEngName1.Name = "txtEngName1";
+            this.txtEngName1.Size = new System.Drawing.Size(125, 26);
+            this.txtEngName1.TabIndex = 29;
             // 
-            // btnAdd
+            // txtOtherName1
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(379, 255);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 30);
-            this.btnAdd.TabIndex = 21;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.txtOtherName1.Location = new System.Drawing.Point(181, 66);
+            this.txtOtherName1.Name = "txtOtherName1";
+            this.txtOtherName1.Size = new System.Drawing.Size(125, 26);
+            this.txtOtherName1.TabIndex = 30;
             // 
-            // label1
+            // txtOtherName2
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(384, 138);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 14);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "English Name";
+            this.txtOtherName2.Location = new System.Drawing.Point(181, 106);
+            this.txtOtherName2.Name = "txtOtherName2";
+            this.txtOtherName2.Size = new System.Drawing.Size(125, 26);
+            this.txtOtherName2.TabIndex = 32;
             // 
-            // txtEnglishName
+            // txtEngName2
             // 
-            this.txtEnglishName.Enabled = false;
-            this.txtEnglishName.Location = new System.Drawing.Point(481, 129);
-            this.txtEnglishName.Name = "txtEnglishName";
-            this.txtEnglishName.Size = new System.Drawing.Size(139, 23);
-            this.txtEnglishName.TabIndex = 27;
+            this.txtEngName2.Location = new System.Drawing.Point(16, 106);
+            this.txtEngName2.Name = "txtEngName2";
+            this.txtEngName2.Size = new System.Drawing.Size(125, 26);
+            this.txtEngName2.TabIndex = 31;
             // 
-            // label2
+            // txtOtherName3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(398, 194);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 14);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Other Name";
+            this.txtOtherName3.Location = new System.Drawing.Point(181, 146);
+            this.txtOtherName3.Name = "txtOtherName3";
+            this.txtOtherName3.Size = new System.Drawing.Size(125, 26);
+            this.txtOtherName3.TabIndex = 34;
             // 
-            // txtOtherName
+            // txtEngName3
             // 
-            this.txtOtherName.Enabled = false;
-            this.txtOtherName.Location = new System.Drawing.Point(481, 185);
-            this.txtOtherName.Name = "txtOtherName";
-            this.txtOtherName.Size = new System.Drawing.Size(139, 23);
-            this.txtOtherName.TabIndex = 29;
+            this.txtEngName3.Location = new System.Drawing.Point(16, 146);
+            this.txtEngName3.Name = "txtEngName3";
+            this.txtEngName3.Size = new System.Drawing.Size(125, 26);
+            this.txtEngName3.TabIndex = 33;
+            // 
+            // txtOtherName4
+            // 
+            this.txtOtherName4.Location = new System.Drawing.Point(181, 186);
+            this.txtOtherName4.Name = "txtOtherName4";
+            this.txtOtherName4.Size = new System.Drawing.Size(125, 26);
+            this.txtOtherName4.TabIndex = 36;
+            // 
+            // txtEngName4
+            // 
+            this.txtEngName4.Location = new System.Drawing.Point(16, 186);
+            this.txtEngName4.Name = "txtEngName4";
+            this.txtEngName4.Size = new System.Drawing.Size(125, 26);
+            this.txtEngName4.TabIndex = 35;
+            // 
+            // btnDelMenu1
+            // 
+            this.btnDelMenu1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDelMenu1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelMenu1.ForeColor = System.Drawing.Color.White;
+            this.btnDelMenu1.Location = new System.Drawing.Point(333, 64);
+            this.btnDelMenu1.Name = "btnDelMenu1";
+            this.btnDelMenu1.Size = new System.Drawing.Size(165, 30);
+            this.btnDelMenu1.TabIndex = 37;
+            this.btnDelMenu1.Text = "Delete Menu Content";
+            this.btnDelMenu1.UseVisualStyleBackColor = false;
+            // 
+            // btnDelMenu2
+            // 
+            this.btnDelMenu2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDelMenu2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelMenu2.ForeColor = System.Drawing.Color.White;
+            this.btnDelMenu2.Location = new System.Drawing.Point(333, 104);
+            this.btnDelMenu2.Name = "btnDelMenu2";
+            this.btnDelMenu2.Size = new System.Drawing.Size(165, 30);
+            this.btnDelMenu2.TabIndex = 38;
+            this.btnDelMenu2.Text = "Delete Menu Content";
+            this.btnDelMenu2.UseVisualStyleBackColor = false;
+            // 
+            // btnDelMenu3
+            // 
+            this.btnDelMenu3.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDelMenu3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelMenu3.ForeColor = System.Drawing.Color.White;
+            this.btnDelMenu3.Location = new System.Drawing.Point(333, 144);
+            this.btnDelMenu3.Name = "btnDelMenu3";
+            this.btnDelMenu3.Size = new System.Drawing.Size(165, 30);
+            this.btnDelMenu3.TabIndex = 39;
+            this.btnDelMenu3.Text = "Delete Menu Content";
+            this.btnDelMenu3.UseVisualStyleBackColor = false;
+            // 
+            // btnDelMenu4
+            // 
+            this.btnDelMenu4.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnDelMenu4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelMenu4.ForeColor = System.Drawing.Color.White;
+            this.btnDelMenu4.Location = new System.Drawing.Point(333, 184);
+            this.btnDelMenu4.Name = "btnDelMenu4";
+            this.btnDelMenu4.Size = new System.Drawing.Size(165, 30);
+            this.btnDelMenu4.TabIndex = 40;
+            this.btnDelMenu4.Text = "Delete Menu Content";
+            this.btnDelMenu4.UseVisualStyleBackColor = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.btnCopy);
+            this.groupBox3.Controls.Add(this.comboxTo2);
+            this.groupBox3.Controls.Add(this.comboxFrom2);
+            this.groupBox3.Controls.Add(this.comboxTo1);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.comboxFrom1);
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Location = new System.Drawing.Point(48, 322);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(520, 153);
+            this.groupBox3.TabIndex = 26;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Copy Menu Content";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(75, 61);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "From";
+            // 
+            // comboxFrom1
+            // 
+            this.comboxFrom1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxFrom1.FormattingEnabled = true;
+            this.comboxFrom1.Location = new System.Drawing.Point(124, 54);
+            this.comboxFrom1.Name = "comboxFrom1";
+            this.comboxFrom1.Size = new System.Drawing.Size(121, 28);
+            this.comboxFrom1.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(82, 110);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(26, 20);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "To";
+            // 
+            // comboxTo1
+            // 
+            this.comboxTo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxTo1.FormattingEnabled = true;
+            this.comboxTo1.Location = new System.Drawing.Point(124, 104);
+            this.comboxTo1.Name = "comboxTo1";
+            this.comboxTo1.Size = new System.Drawing.Size(121, 28);
+            this.comboxTo1.TabIndex = 3;
+            this.comboxTo1.SelectedIndexChanged += new System.EventHandler(this.comboxTo1_SelectedIndexChanged);
+            // 
+            // comboxFrom2
+            // 
+            this.comboxFrom2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxFrom2.FormattingEnabled = true;
+            this.comboxFrom2.Location = new System.Drawing.Point(268, 53);
+            this.comboxFrom2.Name = "comboxFrom2";
+            this.comboxFrom2.Size = new System.Drawing.Size(121, 28);
+            this.comboxFrom2.TabIndex = 4;
+            // 
+            // comboxTo2
+            // 
+            this.comboxTo2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboxTo2.FormattingEnabled = true;
+            this.comboxTo2.Location = new System.Drawing.Point(268, 102);
+            this.comboxTo2.Name = "comboxTo2";
+            this.comboxTo2.Size = new System.Drawing.Size(121, 28);
+            this.comboxTo2.TabIndex = 5;
+            // 
+            // btnCopy
+            // 
+            this.btnCopy.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCopy.ForeColor = System.Drawing.Color.White;
+            this.btnCopy.Location = new System.Drawing.Point(406, 61);
+            this.btnCopy.Name = "btnCopy";
+            this.btnCopy.Size = new System.Drawing.Size(78, 69);
+            this.btnCopy.TabIndex = 6;
+            this.btnCopy.Text = "Copy";
+            this.btnCopy.UseVisualStyleBackColor = false;
+            this.btnCopy.Click += new System.EventHandler(this.btnCopy_Click);
             // 
             // FrmTAManageMenuSet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 422);
+            this.ClientSize = new System.Drawing.Size(649, 592);
             this.Controls.Add(this.groupBox1);
+            this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmTAManageMenuSet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTAManageMenuSet";
             this.Load += new System.EventHandler(this.FrmTAManageMenuSet_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMenuSet)).EndInit();
+            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -209,15 +365,29 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dgvMenuSet;
-        private System.Windows.Forms.TextBox txtOtherName;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtEnglishName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button btnCopy;
+        private System.Windows.Forms.ComboBox comboxTo2;
+        private System.Windows.Forms.ComboBox comboxFrom2;
+        private System.Windows.Forms.ComboBox comboxTo1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboxFrom1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnDelMenu4;
+        private System.Windows.Forms.Button btnDelMenu3;
+        private System.Windows.Forms.Button btnDelMenu2;
+        private System.Windows.Forms.Button btnDelMenu1;
+        private System.Windows.Forms.TextBox txtOtherName4;
+        private System.Windows.Forms.TextBox txtEngName4;
+        private System.Windows.Forms.TextBox txtOtherName3;
+        private System.Windows.Forms.TextBox txtEngName3;
+        private System.Windows.Forms.TextBox txtOtherName2;
+        private System.Windows.Forms.TextBox txtEngName2;
+        private System.Windows.Forms.TextBox txtOtherName1;
+        private System.Windows.Forms.TextBox txtEngName1;
     }
 }
