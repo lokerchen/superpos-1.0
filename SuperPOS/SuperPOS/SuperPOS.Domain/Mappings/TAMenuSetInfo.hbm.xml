@@ -7,10 +7,9 @@
     <id name="SystemKey" column="SystemKey" type="System.Guid">
       <generator class="guid" />
     </id>
+    <property name="ID" column="ID" type="System.String" />
     <property name="EnglishName" column="EnglishName" type="System.String" />
     <property name="OtherName" column="OtherName" type="System.String" />
     <property name="Remark" column="Remark" type="System.String" />
-    <!--<property name="SpecialPrice" column="SpecialPrice" type="System.String" />-->
   </class>
-
 </hibernate-mapping>

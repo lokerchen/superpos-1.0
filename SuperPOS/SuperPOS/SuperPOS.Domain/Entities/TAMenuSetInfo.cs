@@ -11,6 +11,9 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "SystemKey")]
         public virtual Guid SystemKey { get; set; }
 
+        [XmlElement(ElementName = "ID")]
+        public virtual string ID { get; set; }
+
         //Code
         [XmlElement(ElementName = "EnglishName")]
         public virtual string EnglishName { get; set; }
