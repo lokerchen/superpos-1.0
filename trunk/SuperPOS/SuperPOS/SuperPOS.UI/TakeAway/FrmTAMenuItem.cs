@@ -15,5 +15,18 @@ namespace SuperPOS.UI.TakeAway
         {
             InitializeComponent();
         }
+
+        private void FrmTAMenuItem_Load(object sender, EventArgs e)
+        {
+            btn1.Click += btn_Click;
+            btn2.Click += btn_Click;
+            btn3.Click += btn_Click;
+            btn4.Click += btn_Click;
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
