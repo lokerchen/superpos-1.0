@@ -93,6 +93,7 @@ namespace SuperPOS.Common
                     try
                     {
                         session.Update(entity);
+                        session.Flush();
                         transaction.Commit();
                     }
                     catch
@@ -115,6 +116,7 @@ namespace SuperPOS.Common
             try
             {
                 session.Update(entity, key);
+                session.Flush();
                 transaction.Commit();
             }
             catch (HibernateException hEx)
