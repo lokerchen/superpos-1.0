@@ -53,6 +53,9 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "PrinterName")]
         public virtual string PrinterName { get; set; }
 
+        [XmlElement(ElementName = "PrinterOrder")]
+        public virtual string PrinterOrder { get; set; }
+
         [XmlElement(ElementName = "Qty")]
         public virtual string Qty { get; set; }
 
