@@ -80,6 +80,9 @@ namespace SuperPOS.UI.TakeAway
             OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
             onLoadSystemCommonData.GetTAMenuSet();
 
+            Guid g = Guid.NewGuid();
+            Console.Out.WriteLine(g.ToString());
+
             try
             {
                 for (int i = 1; i < 5; i++)
@@ -90,18 +93,22 @@ namespace SuperPOS.UI.TakeAway
                         switch (i)
                         {
                             case 1:
+                                taMenuSetInfo.ID = "1";
                                 taMenuSetInfo.EnglishName = txtEngName1.Text.Trim();
                                 taMenuSetInfo.OtherName = txtOtherName1.Text.Trim();
                                 break;
                             case 2:
+                                taMenuSetInfo.ID = "2";
                                 taMenuSetInfo.EnglishName = txtEngName2.Text.Trim();
                                 taMenuSetInfo.OtherName = txtOtherName2.Text.Trim();
                                 break;
                             case 3:
+                                taMenuSetInfo.ID = "3";
                                 taMenuSetInfo.EnglishName = txtEngName3.Text.Trim();
                                 taMenuSetInfo.OtherName = txtOtherName3.Text.Trim();
                                 break;
                             case 4:
+                                taMenuSetInfo.ID = "4";
                                 taMenuSetInfo.EnglishName = txtEngName4.Text.Trim();
                                 taMenuSetInfo.OtherName = txtOtherName4.Text.Trim();
                                 break;
