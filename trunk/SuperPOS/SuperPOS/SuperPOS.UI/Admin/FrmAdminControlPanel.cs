@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SuperPOS.Common;
 using SuperPOS.Domain.Entities;
 using SuperPOS.UI.TakeAway;
 
@@ -21,133 +22,84 @@ namespace SuperPOS.UI.Admin
             InitializeComponent();
         }
 
-        public FrmAdminControlPanel(UserInfo uInfo, bool isShow)
+        public FrmAdminControlPanel(UserInfo uInfo)
         {
             InitializeComponent();
             usrInfo = uInfo;
-            isShowSysCtl = isShow;
+            //isShowSysCtl = isShow;
         }
 
         private void FrmAdminControlPanel_Load(object sender, EventArgs e)
         {
-            //if (usrInfo.UsrRight == 1)
-            //    gupBoxEatInSetting.Visible = false;
-            btnSysControl.Visible = isShowSysCtl;
-        }
+            picBoxWelCome.Image = Image.FromFile(CommonBase.IMG_PATH_DEFAULT + CommonBase.IMG_FILE_LOGO_LOGON);
 
-        private void btnShiftCode_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FrmShiftCodeEntry frmShiftCodeEntry = new FrmShiftCodeEntry();
-            frmShiftCodeEntry.ShowDialog();
+            treeViewMenu.ExpandAll();
+
+            if (usrInfo.IsSysCtrl.Equals("0"))
+            {
+                treeViewMenu.Nodes.Remove(treeViewMenu.Nodes[4]);
+            }
+            else
+            {
+                if (!treeViewMenu.Nodes.Cast<TreeNode>().Any(nd => nd.Text.Equals("System Control") && nd.Name.Equals("5")))
+                {
+                    TreeNode node = new TreeNode("System Control");
+                    node.Name = "5";
+                    treeViewMenu.Nodes.Add(node);
+                }
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmLogon frmLogon = new FrmLogon();
-            frmLogon.ShowDialog();
+            FrmSelectMenu frmSelectMenu = new FrmSelectMenu(usrInfo);
+            frmSelectMenu.ShowDialog();
         }
 
-        private void btnSysConfig_Click(object sender, EventArgs e)
+        private void treeViewMenu_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            FrmSysConfig frmSysConfig = new FrmSysConfig();
-            Hide();
-            frmSysConfig.ShowDialog();
-        }
-
-        private void btnUsrMaint_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmUsrMaintenance frmUsrMaintenance = new FrmUsrMaintenance();
-            frmUsrMaintenance.ShowDialog();
-        }
-
-        private void btnDataManager_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnComputerAddr_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmComputerEntry frmComputerEntry = new FrmComputerEntry();
-            frmComputerEntry.ShowDialog();
-        }
-
-        private void btnCompactDB_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmCompactDB frmCompactDb = new FrmCompactDB();
-            frmCompactDb.ShowDialog();
-        }
-
-        private void btnTQTakeawayConfig_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmTAConfig frmTaConfig = new FrmTAConfig();
-            frmTaConfig.ShowDialog();
-        }
-
-        private void btnTQManageMenuSet_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmTAManageMenuSet frmTaManageMenuSet = new FrmTAManageMenuSet();
-            frmTaManageMenuSet.ShowDialog();
-        }
-
-        private void btnTQDeptCode_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmTADeptCode frmTaDeptCode = new FrmTADeptCode();
-            frmTaDeptCode.ShowDialog();
-        }
-
-        private void btnTQMenuCategory_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmTAMenuCategory frmTaMenuCategory = new FrmTAMenuCategory();
-            frmTaMenuCategory.ShowDialog();
-        }
-
-        private void btnTQMenuItem_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmTAMenuItem frmTaMenuItem = new FrmTAMenuItem();
-            frmTaMenuItem.ShowDialog();
-        }
-
-        private void btnTQOrderControl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnTQTableSetup_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmTATblSetup frmTaTblSetup = new FrmTATblSetup();
-            frmTaTblSetup.ShowDialog();
-        }
-
-        private void btnTQExtraMenuEdit_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmTAExtraMenuEdit frmTAExtraMenuEdit = new FrmTAExtraMenuEdit();
-            frmTAExtraMenuEdit.ShowDialog();
-        }
-
-        private void btnTQPrintSetup_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmTAPrtSetup frmTaPrtSetup = new FrmTAPrtSetup();
-            frmTaPrtSetup.ShowDialog();
-        }
-
-        private void btnSysControl_Click(object sender, EventArgs e)
-        {
-            FrmSysCtl frmSysCtl = new FrmSysCtl();
-            Hide();
-            frmSysCtl.ShowDialog();
+            //Console.Out.WriteLine(e.Node.Name);
+            string nodeName = e.Node.Name;
+            switch (nodeName)
+            {
+                case "101":
+                    break;
+                case "102":
+                    break;
+                case "103":
+                    break;
+                case "104":
+                    break;
+                case "105":
+                    break;
+                case "106":
+                    break;
+                case "201":
+                    break;
+                case "202":
+                    break;
+                case "203":
+                    break;
+                case "204":
+                    break;
+                case "205":
+                    break;
+                case "206":
+                    break;
+                case "207":
+                    break;
+                case "208":
+                    break;
+                case "209":
+                    break;
+                case "210":
+                    break;
+                case "5":
+                    FrmSysCtl frmSysCtl = new FrmSysCtl();
+                    frmSysCtl.ShowDialog();
+                    break;
+            }
         }
     }
 }

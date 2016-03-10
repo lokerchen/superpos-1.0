@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -38,9 +39,15 @@ namespace SuperPOS.UI
 
         private void FrmLogon_Load(object sender, EventArgs e)
         {
-            picBoxLogo.Image = Image.FromFile(CommonBase.IMG_PATH_DEFAULT + CommonBase.IMG_FILE_LOGO_LOGON);
-            picBoxLogoCust.Image = Image.FromFile(CommonBase.IMG_PATH_DEFAULT + CommonBase.IMG_FILE_CUSTOMER_LOGO);
+            string strImgWelcome2 = "";
+            strImgWelcome2 = CommonFunction.GetSysImg("2");
 
+            string strImgWelcome3 = "";
+            strImgWelcome3 = CommonFunction.GetSysImg("3");
+
+            picBoxLogo.Image = File.Exists(strImgWelcome2) ? Image.FromFile(strImgWelcome2) : null;
+            picBoxLogoCust.Image = File.Exists(strImgWelcome3) ? Image.FromFile(strImgWelcome3) : null;
+            
             //lblDate.Text = "";
             //lblTime.Text = "";
             //lblSession.Text = "";
@@ -99,65 +106,75 @@ namespace SuperPOS.UI
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
         #endregion
 
         #region 登录
         private void btnOK_Click(object sender, EventArgs e)
         {
+
             new OnLoadSystemCommonData().GetSysConfigList();
 
-            if (CommonData.UsrList.Any(s => s.UsrPwd.Equals(txtPwd.Text)) || txtPwd.Text.Equals(CommonBase.SYS_CONTROL_PWD))
+            if (CommonData.UsrList.Any(s => s.UsrPwd.Equals(txtPwd.Text)))
             {
-                if (CommonData.SysConfigList.Count <= 0)
-                {
-                    MessageBox.Show("No restaurant, please first add first");
-                    FrmSysConfig frmSysConfig = new FrmSysConfig(0);
-                    frmSysConfig.ShowDialog();
-                }
+                #region 注释
+                //if (CommonData.SysConfigList.Count <= 0)
+                //{
+                //    MessageBox.Show("No restaurant, please first add first");
+                //    FrmSysConfig frmSysConfig = new FrmSysConfig(0);
+                //    frmSysConfig.ShowDialog();
+                //}
 
+                //Hide();
+
+                //var uList = CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text));
+                //if (uList == null) //超级管理员
+                //{
+                //    if (txtPwd.Text.Equals(CommonBase.SYS_CONTROL_PWD))
+                //    {
+                //        UserInfo user = new UserInfo();
+                //        user.SystemKey = Guid.NewGuid();
+                //        user.UsrCode = "888";
+                //        user.UsrName = "888";
+                //        user.UsrPwd = CommonBase.SYS_CONTROL_PWD;
+                //        user.Remark = 0;
+                //        _control.AddEntity(user);
+                //        new OnLoadSystemCommonData().GetUserList();
+                //        uList = CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text));
+                //    }
+                //    else
+                //    {
+                //        txtPwd.Text = "";
+                //        return;
+                //    }
+                //}
+
+                //var fPage = CommonData.SysConfigList.FirstOrDefault();
+                //switch (fPage.DefaultOrderInputPage)
+                //{
+                //    case "System Control":
+                //        if (CommonFunction.GetAuthorityGSSysConf(txtPwd.Text))
+                //        {
+                //            FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel(uList, txtPwd.Text.Equals(CommonBase.SYS_CONTROL_PWD));
+                //            frmAdminMain.ShowDialog();
+                //        }
+                //        break;
+                //    case "Takeaway":
+                //    case "Eat In":
+                //        FrmSelectMenu frmSelectMenu = new FrmSelectMenu(CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text)));
+                //        frmSelectMenu.ShowDialog();
+                //        break;
+                //    case "Quick Food":
+                //        break;
+                //}
+                #endregion
+
+                var userInfo = CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text));
+                
+                FrmSelectMenu frmSelectMenu = new FrmSelectMenu(userInfo);
                 Hide();
-
-                var uList = CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text));
-                if (uList == null) //超级管理员
-                {
-                    if (txtPwd.Text.Equals(CommonBase.SYS_CONTROL_PWD))
-                    {
-                        UserInfo user = new UserInfo();
-                        user.SystemKey = Guid.NewGuid();
-                        user.UsrCode = "888";
-                        user.UsrName = "888";
-                        user.UsrPwd = CommonBase.SYS_CONTROL_PWD;
-                        user.Remark = 0;
-                        _control.AddEntity(user);
-                        new OnLoadSystemCommonData().GetUserList();
-                        uList = CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text));
-                    }
-                    else
-                    {
-                        txtPwd.Text = "";
-                        return;
-                    }
-                }
-
-                var fPage = CommonData.SysConfigList.FirstOrDefault();
-                switch (fPage.DefaultOrderInputPage)
-                {
-                    case "System Control":
-                        if (CommonFunction.GetAuthorityGSSysConf(txtPwd.Text))
-                        {
-                            FrmAdminControlPanel frmAdminMain = new FrmAdminControlPanel(uList, txtPwd.Text.Equals(CommonBase.SYS_CONTROL_PWD));
-                            frmAdminMain.ShowDialog();
-                        }
-                        break;
-                    case "Takeaway":
-                    case "Eat In":
-                        FrmSelectMenu frmSelectMenu = new FrmSelectMenu(CommonData.UsrList.FirstOrDefault(s => s.UsrPwd.Equals(txtPwd.Text)));
-                        frmSelectMenu.ShowDialog();
-                        break;
-                    case "Quick Food":
-                        break;
-                }
+                frmSelectMenu.ShowDialog();
             }
         }
         #endregion

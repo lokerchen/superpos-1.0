@@ -24,6 +24,7 @@ namespace SuperPOS.UI
             if (pgBarInit.Value < pgBarInit.Maximum)
             {
                 pgBarInit.Value++;
+                lblPgBarMsg.Text = "Loading system data..." + pgBarInit.Value + @"%";
             }
             else
             {
@@ -40,27 +41,17 @@ namespace SuperPOS.UI
             //进度条初始值
             pgBarInit.Value = 0;
             pgBarInit.Minimum = 0;
-            lblPgBarMsg.Text = "Loading system necessary images...";
-
-            timerPgBarInit.Enabled = false;
-            if (!File.Exists(CommonBase.IMG_PATH_DEFAULT + CommonBase.IMG_FILE_LOGO_MY))
-            {
-                MessageBox.Show("Can not found the system image,NAME=" + CommonBase.IMG_FILE_LOGO_MY);
-                this.Close();
-            }
-
-            if (!File.Exists(CommonBase.IMG_PATH_DEFAULT + CommonBase.IMG_FILE_LOGO_MY))
-            {
-                MessageBox.Show("Can not fount the system image, NAME=" + CommonBase.IMG_FILE_LOGO_MY);
-                this.Close();
-            }
-
-            //加载LOGO
-            picBoxLogo.Image = Image.FromFile(CommonBase.IMG_PATH_DEFAULT + CommonBase.IMG_FILE_LOGO_MY);
-            timerPgBarInit.Enabled = true;
 
             //加载系统数据
             DALCommon.GetAllInfoList();
+
+            string strImgWelcome = "";
+            strImgWelcome = CommonFunction.GetSysImg("1");
+            picBoxLogo.Image = File.Exists(strImgWelcome) ? Image.FromFile(strImgWelcome) : null;
+
+            timerPgBarInit.Enabled = false;
+
+            timerPgBarInit.Enabled = true;
         }
     }
 }
