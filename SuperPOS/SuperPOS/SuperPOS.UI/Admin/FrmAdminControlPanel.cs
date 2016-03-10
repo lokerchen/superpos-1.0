@@ -31,7 +31,7 @@ namespace SuperPOS.UI.Admin
 
         private void FrmAdminControlPanel_Load(object sender, EventArgs e)
         {
-            picBoxWelCome.Image = Image.FromFile(CommonBase.IMG_PATH_DEFAULT + CommonBase.IMG_FILE_LOGO_LOGON);
+            //picBoxWelCome.Image = Image.FromFile(CommonBase.IMG_PATH_DEFAULT + CommonBase.IMG_FILE_LOGO_LOGON);
 
             treeViewMenu.ExpandAll();
 
