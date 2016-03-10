@@ -12,17 +12,24 @@ namespace SuperPOS.UI.Admin
     {
         private readonly EntityControl _control = new EntityControl();
         private int iStatus;
+        private UserInfo userInfo = new UserInfo();
 
         public FrmShiftCodeEntry()
         {
             InitializeComponent();
         }
 
+        public FrmShiftCodeEntry(UserInfo uInfo)
+        {
+            InitializeComponent();
+            userInfo = uInfo;
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
-            var frmAdminControlPanel = new FrmAdminControlPanel();
-            frmAdminControlPanel.ShowDialog();
+            //FrmAdminControlPanel frmAdminControlPanel = new FrmAdminControlPanel(userInfo);
+            //frmAdminControlPanel.ShowDialog();
         }
 
         #region 添加功能按钮
@@ -120,7 +127,7 @@ namespace SuperPOS.UI.Admin
             else //iStatus == 2
             {
                 if (dgvShiftCode.CurrentRow != null)
-                    shiftCodeInfo.SystemKey = new Guid(dgvShiftCode.CurrentRow.Cells[0].Value.ToString().ToUpper());
+                    shiftCodeInfo.SystemKey = new Guid(dgvShiftCode.CurrentRow.Cells[0].Value.ToString());
 
                 _control.UpdateEntity(shiftCodeInfo);
             }
@@ -174,16 +181,6 @@ namespace SuperPOS.UI.Admin
 
             btnSave.Enabled = false;
         }
-
-        //private void lvShiftCode_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if (lvShiftCode.SelectedItems.Count <= 0) return;
-        //    txtShiftCode.Text = lvShiftCode.SelectedItems[0].SubItems[1].Text;
-        //    txtShiftName.Text = lvShiftCode.SelectedItems[0].SubItems[2].Text;
-        //    txtOtherName.Text = lvShiftCode.SelectedItems[0].SubItems[3].Text;
-        //    dtpFrom.Text = lvShiftCode.SelectedItems[0].SubItems[4].Text;
-        //    dtpTo.Text = lvShiftCode.SelectedItems[0].SubItems[5].Text;
-        //}
 
         private void dgvShiftCode_SelectionChanged(object sender, EventArgs e)
         {
