@@ -24,6 +24,10 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "UsrPwd")]
         public virtual string UsrPwd { get; set; }
 
+        //是否System Control权限
+        [XmlElement(ElementName = "IsSysCtrl")]
+        public virtual string IsSysCtrl { get; set; }
+
         //用户权限
         [XmlElement(ElementName = "Remark")]
         public virtual int Remark { get; set; }
