@@ -50,8 +50,9 @@ namespace SuperPOS.Common
                     session.Save(entity);
                     session.Flush();
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Console.Out.WriteLine(ex.InnerException);
                     flag = false;
                 }
             }
@@ -96,8 +97,9 @@ namespace SuperPOS.Common
                         session.Flush();
                         transaction.Commit();
                     }
-                    catch
+                    catch (Exception ex)
                     {
+                        Console.Out.WriteLine(ex.Message);
                         transaction.Rollback();
                         throw;
                     }
