@@ -41,6 +41,17 @@ namespace SuperPOS.UI
             txtDate.Text = DateTime.Now.ToShortDateString();
             txtTime.Text = DateTime.Now.ToLongTimeString();
 
+            new OnLoadSystemCommonData().GetShiftCodeList();
+            ShiftCodeInfo scInfo = new ShiftCodeInfo();
+            scInfo = CommonData.ShiftCodeList.FirstOrDefault(sc =>
+                            DateTime.Compare(Convert.ToDateTime(DateTime.Now.ToShortTimeString()), Convert.ToDateTime(sc.DtFrom)) >= 0
+                            &&
+                            DateTime.Compare(Convert.ToDateTime(DateTime.Now.ToShortTimeString()), Convert.ToDateTime(sc.DtTo)) <= 0);
+
+            if (scInfo != null) txtSession.Text = scInfo.ShiftName;
+
+            txtStaff.Text = userInfo.UsrName;
+
             OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
             onLoadSystemCommonData.GetSysControlList();
 
