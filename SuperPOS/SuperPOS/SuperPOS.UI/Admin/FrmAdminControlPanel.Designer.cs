@@ -28,584 +28,158 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpBoxCtlPanel = new System.Windows.Forms.GroupBox();
-            this.btnSysControl = new System.Windows.Forms.Button();
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("System Configuration");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("User Maintenance");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Data Manager");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Compact Database");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Computer Address");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Shift Code");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("System Setting", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6});
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Takeaway Configuration");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Menu Category");
+            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Menu Item");
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Manage Menu Set");
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Extra Menu Edit");
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Order Control");
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Department Code");
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Table Setup");
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Print Setup");
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Driver Setup");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Takeaway & Quick Dining Setting", new System.Windows.Forms.TreeNode[] {
+            treeNode8,
+            treeNode9,
+            treeNode10,
+            treeNode11,
+            treeNode12,
+            treeNode13,
+            treeNode14,
+            treeNode15,
+            treeNode16,
+            treeNode17});
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Eat In Setting");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Reporting");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("System Control");
+            this.grpBoxCtrlPanel = new System.Windows.Forms.GroupBox();
+            this.treeViewMenu = new System.Windows.Forms.TreeView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.picBoxWelCome = new System.Windows.Forms.PictureBox();
             this.btnExit = new System.Windows.Forms.Button();
-            this.grpBoxReporting = new System.Windows.Forms.GroupBox();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnRptAccountSummary = new System.Windows.Forms.Button();
-            this.gupBoxEatInSetting = new System.Windows.Forms.GroupBox();
-            this.btnEIPrintSetup = new System.Windows.Forms.Button();
-            this.btnEIPrintOrderEntry = new System.Windows.Forms.Button();
-            this.btnEITableSetup = new System.Windows.Forms.Button();
-            this.btnEIDeptCode = new System.Windows.Forms.Button();
-            this.btnEIOrderControl = new System.Windows.Forms.Button();
-            this.btnEIExtraMenuEdit = new System.Windows.Forms.Button();
-            this.btnEIManageMenuSet = new System.Windows.Forms.Button();
-            this.btnEIMenuItem = new System.Windows.Forms.Button();
-            this.btnEIMenuCategory = new System.Windows.Forms.Button();
-            this.btnEIConfig = new System.Windows.Forms.Button();
-            this.grpBoxTakeAndQuickSetting = new System.Windows.Forms.GroupBox();
-            this.btnTQCallerRecord = new System.Windows.Forms.Button();
-            this.btnTQPrintSetup = new System.Windows.Forms.Button();
-            this.btnTQTableSetup = new System.Windows.Forms.Button();
-            this.btnTQDeptCode = new System.Windows.Forms.Button();
-            this.btnTQOrderControl = new System.Windows.Forms.Button();
-            this.btnTQExtraMenuEdit = new System.Windows.Forms.Button();
-            this.btnTQManageMenuSet = new System.Windows.Forms.Button();
-            this.btnTQMenuItem = new System.Windows.Forms.Button();
-            this.btnTQMenuCategory = new System.Windows.Forms.Button();
-            this.btnTQTakeawayConfig = new System.Windows.Forms.Button();
-            this.grpBoxSysSetting = new System.Windows.Forms.GroupBox();
-            this.btnShiftCode = new System.Windows.Forms.Button();
-            this.btnComputerAddr = new System.Windows.Forms.Button();
-            this.btnCompactDB = new System.Windows.Forms.Button();
-            this.btnDataManager = new System.Windows.Forms.Button();
-            this.btnUsrMaint = new System.Windows.Forms.Button();
-            this.btnSysConfig = new System.Windows.Forms.Button();
-            this.grpBoxCtlPanel.SuspendLayout();
-            this.grpBoxReporting.SuspendLayout();
-            this.gupBoxEatInSetting.SuspendLayout();
-            this.grpBoxTakeAndQuickSetting.SuspendLayout();
-            this.grpBoxSysSetting.SuspendLayout();
+            this.grpBoxCtrlPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxWelCome)).BeginInit();
             this.SuspendLayout();
             // 
-            // grpBoxCtlPanel
+            // grpBoxCtrlPanel
             // 
-            this.grpBoxCtlPanel.Controls.Add(this.btnSysControl);
-            this.grpBoxCtlPanel.Controls.Add(this.btnExit);
-            this.grpBoxCtlPanel.Controls.Add(this.grpBoxReporting);
-            this.grpBoxCtlPanel.Controls.Add(this.gupBoxEatInSetting);
-            this.grpBoxCtlPanel.Controls.Add(this.grpBoxTakeAndQuickSetting);
-            this.grpBoxCtlPanel.Controls.Add(this.grpBoxSysSetting);
-            this.grpBoxCtlPanel.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grpBoxCtlPanel.Location = new System.Drawing.Point(14, 17);
-            this.grpBoxCtlPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxCtlPanel.Name = "grpBoxCtlPanel";
-            this.grpBoxCtlPanel.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxCtlPanel.Size = new System.Drawing.Size(895, 607);
-            this.grpBoxCtlPanel.TabIndex = 0;
-            this.grpBoxCtlPanel.TabStop = false;
-            this.grpBoxCtlPanel.Text = "Control Panel";
+            this.grpBoxCtrlPanel.Controls.Add(this.btnExit);
+            this.grpBoxCtrlPanel.Controls.Add(this.panel1);
+            this.grpBoxCtrlPanel.Controls.Add(this.treeViewMenu);
+            this.grpBoxCtrlPanel.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grpBoxCtrlPanel.Location = new System.Drawing.Point(12, 4);
+            this.grpBoxCtrlPanel.Name = "grpBoxCtrlPanel";
+            this.grpBoxCtrlPanel.Size = new System.Drawing.Size(1017, 592);
+            this.grpBoxCtrlPanel.TabIndex = 0;
+            this.grpBoxCtrlPanel.TabStop = false;
+            this.grpBoxCtrlPanel.Text = "Control Panel";
             // 
-            // btnSysControl
+            // treeViewMenu
             // 
-            this.btnSysControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSysControl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSysControl.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSysControl.Location = new System.Drawing.Point(349, 535);
-            this.btnSysControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSysControl.Name = "btnSysControl";
-            this.btnSysControl.Size = new System.Drawing.Size(128, 57);
-            this.btnSysControl.TabIndex = 5;
-            this.btnSysControl.Text = "System Control";
-            this.btnSysControl.UseVisualStyleBackColor = false;
-            this.btnSysControl.Visible = false;
-            this.btnSysControl.Click += new System.EventHandler(this.btnSysControl_Click);
+            this.treeViewMenu.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.treeViewMenu.Location = new System.Drawing.Point(15, 64);
+            this.treeViewMenu.Name = "treeViewMenu";
+            treeNode1.Name = "101";
+            treeNode1.Text = "System Configuration";
+            treeNode2.Name = "102";
+            treeNode2.Text = "User Maintenance";
+            treeNode3.Name = "103";
+            treeNode3.Text = "Data Manager";
+            treeNode4.Name = "104";
+            treeNode4.Text = "Compact Database";
+            treeNode5.Name = "105";
+            treeNode5.Text = "Computer Address";
+            treeNode6.Name = "106";
+            treeNode6.Text = "Shift Code";
+            treeNode7.Name = "1";
+            treeNode7.Text = "System Setting";
+            treeNode8.Name = "201";
+            treeNode8.Text = "Takeaway Configuration";
+            treeNode9.Name = "202";
+            treeNode9.Text = "Menu Category";
+            treeNode10.Name = "203";
+            treeNode10.Text = "Menu Item";
+            treeNode11.Name = "204";
+            treeNode11.Text = "Manage Menu Set";
+            treeNode12.Name = "205";
+            treeNode12.Text = "Extra Menu Edit";
+            treeNode13.Name = "206";
+            treeNode13.Text = "Order Control";
+            treeNode14.Name = "207";
+            treeNode14.Text = "Department Code";
+            treeNode15.Name = "208";
+            treeNode15.Text = "Table Setup";
+            treeNode16.Name = "209";
+            treeNode16.Text = "Print Setup";
+            treeNode17.Name = "210";
+            treeNode17.Text = "Driver Setup";
+            treeNode18.Name = "2";
+            treeNode18.Text = "Takeaway & Quick Dining Setting";
+            treeNode19.Name = "3";
+            treeNode19.Text = "Eat In Setting";
+            treeNode20.Name = "4";
+            treeNode20.Text = "Reporting";
+            treeNode21.Name = "5";
+            treeNode21.Text = "System Control";
+            this.treeViewMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode7,
+            treeNode18,
+            treeNode19,
+            treeNode20,
+            treeNode21});
+            this.treeViewMenu.Size = new System.Drawing.Size(291, 515);
+            this.treeViewMenu.TabIndex = 0;
+            this.treeViewMenu.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewMenu_AfterSelect);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.picBoxWelCome);
+            this.panel1.Location = new System.Drawing.Point(312, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(687, 515);
+            this.panel1.TabIndex = 1;
+            // 
+            // picBoxWelCome
+            // 
+            this.picBoxWelCome.Location = new System.Drawing.Point(133, 111);
+            this.picBoxWelCome.Name = "picBoxWelCome";
+            this.picBoxWelCome.Size = new System.Drawing.Size(462, 295);
+            this.picBoxWelCome.TabIndex = 0;
+            this.picBoxWelCome.TabStop = false;
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.DarkCyan;
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExit.Location = new System.Drawing.Point(691, 530);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(868, 22);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(160, 71);
-            this.btnExit.TabIndex = 4;
+            this.btnExit.Size = new System.Drawing.Size(106, 36);
+            this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // grpBoxReporting
-            // 
-            this.grpBoxReporting.Controls.Add(this.btnReport);
-            this.grpBoxReporting.Controls.Add(this.btnRptAccountSummary);
-            this.grpBoxReporting.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grpBoxReporting.Location = new System.Drawing.Point(19, 508);
-            this.grpBoxReporting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxReporting.Name = "grpBoxReporting";
-            this.grpBoxReporting.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxReporting.Size = new System.Drawing.Size(293, 99);
-            this.grpBoxReporting.TabIndex = 3;
-            this.grpBoxReporting.TabStop = false;
-            this.grpBoxReporting.Text = "Reporting";
-            // 
-            // btnReport
-            // 
-            this.btnReport.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnReport.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Location = new System.Drawing.Point(152, 34);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(120, 50);
-            this.btnReport.TabIndex = 1;
-            this.btnReport.Text = "Reports";
-            this.btnReport.UseVisualStyleBackColor = false;
-            // 
-            // btnRptAccountSummary
-            // 
-            this.btnRptAccountSummary.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnRptAccountSummary.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnRptAccountSummary.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnRptAccountSummary.ForeColor = System.Drawing.Color.White;
-            this.btnRptAccountSummary.Location = new System.Drawing.Point(12, 34);
-            this.btnRptAccountSummary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnRptAccountSummary.Name = "btnRptAccountSummary";
-            this.btnRptAccountSummary.Size = new System.Drawing.Size(120, 50);
-            this.btnRptAccountSummary.TabIndex = 0;
-            this.btnRptAccountSummary.Text = "Account Summary";
-            this.btnRptAccountSummary.UseVisualStyleBackColor = false;
-            // 
-            // gupBoxEatInSetting
-            // 
-            this.gupBoxEatInSetting.Controls.Add(this.btnEIPrintSetup);
-            this.gupBoxEatInSetting.Controls.Add(this.btnEIPrintOrderEntry);
-            this.gupBoxEatInSetting.Controls.Add(this.btnEITableSetup);
-            this.gupBoxEatInSetting.Controls.Add(this.btnEIDeptCode);
-            this.gupBoxEatInSetting.Controls.Add(this.btnEIOrderControl);
-            this.gupBoxEatInSetting.Controls.Add(this.btnEIExtraMenuEdit);
-            this.gupBoxEatInSetting.Controls.Add(this.btnEIManageMenuSet);
-            this.gupBoxEatInSetting.Controls.Add(this.btnEIMenuItem);
-            this.gupBoxEatInSetting.Controls.Add(this.btnEIMenuCategory);
-            this.gupBoxEatInSetting.Controls.Add(this.btnEIConfig);
-            this.gupBoxEatInSetting.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gupBoxEatInSetting.Location = new System.Drawing.Point(19, 324);
-            this.gupBoxEatInSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gupBoxEatInSetting.Name = "gupBoxEatInSetting";
-            this.gupBoxEatInSetting.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.gupBoxEatInSetting.Size = new System.Drawing.Size(852, 176);
-            this.gupBoxEatInSetting.TabIndex = 2;
-            this.gupBoxEatInSetting.TabStop = false;
-            this.gupBoxEatInSetting.Text = "Eat In Setting";
-            // 
-            // btnEIPrintSetup
-            // 
-            this.btnEIPrintSetup.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEIPrintSetup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEIPrintSetup.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEIPrintSetup.ForeColor = System.Drawing.Color.White;
-            this.btnEIPrintSetup.Location = new System.Drawing.Point(432, 116);
-            this.btnEIPrintSetup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEIPrintSetup.Name = "btnEIPrintSetup";
-            this.btnEIPrintSetup.Size = new System.Drawing.Size(120, 50);
-            this.btnEIPrintSetup.TabIndex = 9;
-            this.btnEIPrintSetup.Text = "Print Setup";
-            this.btnEIPrintSetup.UseVisualStyleBackColor = false;
-            // 
-            // btnEIPrintOrderEntry
-            // 
-            this.btnEIPrintOrderEntry.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEIPrintOrderEntry.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEIPrintOrderEntry.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEIPrintOrderEntry.ForeColor = System.Drawing.Color.White;
-            this.btnEIPrintOrderEntry.Location = new System.Drawing.Point(292, 116);
-            this.btnEIPrintOrderEntry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEIPrintOrderEntry.Name = "btnEIPrintOrderEntry";
-            this.btnEIPrintOrderEntry.Size = new System.Drawing.Size(120, 50);
-            this.btnEIPrintOrderEntry.TabIndex = 8;
-            this.btnEIPrintOrderEntry.Text = "Printer Order Entry";
-            this.btnEIPrintOrderEntry.UseVisualStyleBackColor = false;
-            // 
-            // btnEITableSetup
-            // 
-            this.btnEITableSetup.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEITableSetup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEITableSetup.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEITableSetup.ForeColor = System.Drawing.Color.White;
-            this.btnEITableSetup.Location = new System.Drawing.Point(152, 116);
-            this.btnEITableSetup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEITableSetup.Name = "btnEITableSetup";
-            this.btnEITableSetup.Size = new System.Drawing.Size(120, 50);
-            this.btnEITableSetup.TabIndex = 7;
-            this.btnEITableSetup.Text = "Table Setup";
-            this.btnEITableSetup.UseVisualStyleBackColor = false;
-            // 
-            // btnEIDeptCode
-            // 
-            this.btnEIDeptCode.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEIDeptCode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEIDeptCode.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEIDeptCode.ForeColor = System.Drawing.Color.White;
-            this.btnEIDeptCode.Location = new System.Drawing.Point(12, 116);
-            this.btnEIDeptCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEIDeptCode.Name = "btnEIDeptCode";
-            this.btnEIDeptCode.Size = new System.Drawing.Size(120, 50);
-            this.btnEIDeptCode.TabIndex = 6;
-            this.btnEIDeptCode.Text = "button23";
-            this.btnEIDeptCode.UseVisualStyleBackColor = false;
-            // 
-            // btnEIOrderControl
-            // 
-            this.btnEIOrderControl.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEIOrderControl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEIOrderControl.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEIOrderControl.ForeColor = System.Drawing.Color.White;
-            this.btnEIOrderControl.Location = new System.Drawing.Point(712, 42);
-            this.btnEIOrderControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEIOrderControl.Name = "btnEIOrderControl";
-            this.btnEIOrderControl.Size = new System.Drawing.Size(120, 50);
-            this.btnEIOrderControl.TabIndex = 5;
-            this.btnEIOrderControl.Text = "Order Control";
-            this.btnEIOrderControl.UseVisualStyleBackColor = false;
-            // 
-            // btnEIExtraMenuEdit
-            // 
-            this.btnEIExtraMenuEdit.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEIExtraMenuEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEIExtraMenuEdit.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEIExtraMenuEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEIExtraMenuEdit.Location = new System.Drawing.Point(572, 42);
-            this.btnEIExtraMenuEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEIExtraMenuEdit.Name = "btnEIExtraMenuEdit";
-            this.btnEIExtraMenuEdit.Size = new System.Drawing.Size(120, 50);
-            this.btnEIExtraMenuEdit.TabIndex = 4;
-            this.btnEIExtraMenuEdit.Text = "Extra Menu Edit";
-            this.btnEIExtraMenuEdit.UseVisualStyleBackColor = false;
-            // 
-            // btnEIManageMenuSet
-            // 
-            this.btnEIManageMenuSet.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEIManageMenuSet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEIManageMenuSet.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEIManageMenuSet.ForeColor = System.Drawing.Color.White;
-            this.btnEIManageMenuSet.Location = new System.Drawing.Point(432, 42);
-            this.btnEIManageMenuSet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEIManageMenuSet.Name = "btnEIManageMenuSet";
-            this.btnEIManageMenuSet.Size = new System.Drawing.Size(120, 50);
-            this.btnEIManageMenuSet.TabIndex = 3;
-            this.btnEIManageMenuSet.Text = "Manage Menu Set";
-            this.btnEIManageMenuSet.UseVisualStyleBackColor = false;
-            // 
-            // btnEIMenuItem
-            // 
-            this.btnEIMenuItem.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEIMenuItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEIMenuItem.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEIMenuItem.ForeColor = System.Drawing.Color.White;
-            this.btnEIMenuItem.Location = new System.Drawing.Point(292, 42);
-            this.btnEIMenuItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEIMenuItem.Name = "btnEIMenuItem";
-            this.btnEIMenuItem.Size = new System.Drawing.Size(120, 50);
-            this.btnEIMenuItem.TabIndex = 2;
-            this.btnEIMenuItem.Text = "Menu Item";
-            this.btnEIMenuItem.UseVisualStyleBackColor = false;
-            // 
-            // btnEIMenuCategory
-            // 
-            this.btnEIMenuCategory.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEIMenuCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEIMenuCategory.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEIMenuCategory.ForeColor = System.Drawing.Color.White;
-            this.btnEIMenuCategory.Location = new System.Drawing.Point(152, 42);
-            this.btnEIMenuCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEIMenuCategory.Name = "btnEIMenuCategory";
-            this.btnEIMenuCategory.Size = new System.Drawing.Size(120, 50);
-            this.btnEIMenuCategory.TabIndex = 1;
-            this.btnEIMenuCategory.Text = "Menu Category";
-            this.btnEIMenuCategory.UseVisualStyleBackColor = false;
-            // 
-            // btnEIConfig
-            // 
-            this.btnEIConfig.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnEIConfig.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEIConfig.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEIConfig.ForeColor = System.Drawing.Color.White;
-            this.btnEIConfig.Location = new System.Drawing.Point(12, 42);
-            this.btnEIConfig.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEIConfig.Name = "btnEIConfig";
-            this.btnEIConfig.Size = new System.Drawing.Size(120, 50);
-            this.btnEIConfig.TabIndex = 0;
-            this.btnEIConfig.Text = "Eat-In Configuration";
-            this.btnEIConfig.UseVisualStyleBackColor = false;
-            // 
-            // grpBoxTakeAndQuickSetting
-            // 
-            this.grpBoxTakeAndQuickSetting.Controls.Add(this.btnTQCallerRecord);
-            this.grpBoxTakeAndQuickSetting.Controls.Add(this.btnTQPrintSetup);
-            this.grpBoxTakeAndQuickSetting.Controls.Add(this.btnTQTableSetup);
-            this.grpBoxTakeAndQuickSetting.Controls.Add(this.btnTQDeptCode);
-            this.grpBoxTakeAndQuickSetting.Controls.Add(this.btnTQOrderControl);
-            this.grpBoxTakeAndQuickSetting.Controls.Add(this.btnTQExtraMenuEdit);
-            this.grpBoxTakeAndQuickSetting.Controls.Add(this.btnTQManageMenuSet);
-            this.grpBoxTakeAndQuickSetting.Controls.Add(this.btnTQMenuItem);
-            this.grpBoxTakeAndQuickSetting.Controls.Add(this.btnTQMenuCategory);
-            this.grpBoxTakeAndQuickSetting.Controls.Add(this.btnTQTakeawayConfig);
-            this.grpBoxTakeAndQuickSetting.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grpBoxTakeAndQuickSetting.Location = new System.Drawing.Point(19, 140);
-            this.grpBoxTakeAndQuickSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxTakeAndQuickSetting.Name = "grpBoxTakeAndQuickSetting";
-            this.grpBoxTakeAndQuickSetting.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxTakeAndQuickSetting.Size = new System.Drawing.Size(852, 176);
-            this.grpBoxTakeAndQuickSetting.TabIndex = 1;
-            this.grpBoxTakeAndQuickSetting.TabStop = false;
-            this.grpBoxTakeAndQuickSetting.Text = "Takeaway AND Quick Dining Setting";
-            // 
-            // btnTQCallerRecord
-            // 
-            this.btnTQCallerRecord.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTQCallerRecord.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTQCallerRecord.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTQCallerRecord.ForeColor = System.Drawing.Color.White;
-            this.btnTQCallerRecord.Location = new System.Drawing.Point(432, 113);
-            this.btnTQCallerRecord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTQCallerRecord.Name = "btnTQCallerRecord";
-            this.btnTQCallerRecord.Size = new System.Drawing.Size(120, 50);
-            this.btnTQCallerRecord.TabIndex = 9;
-            this.btnTQCallerRecord.Text = "Caller Record";
-            this.btnTQCallerRecord.UseVisualStyleBackColor = false;
-            // 
-            // btnTQPrintSetup
-            // 
-            this.btnTQPrintSetup.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTQPrintSetup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTQPrintSetup.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTQPrintSetup.ForeColor = System.Drawing.Color.White;
-            this.btnTQPrintSetup.Location = new System.Drawing.Point(292, 113);
-            this.btnTQPrintSetup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTQPrintSetup.Name = "btnTQPrintSetup";
-            this.btnTQPrintSetup.Size = new System.Drawing.Size(120, 50);
-            this.btnTQPrintSetup.TabIndex = 8;
-            this.btnTQPrintSetup.Text = "Print Setup";
-            this.btnTQPrintSetup.UseVisualStyleBackColor = false;
-            this.btnTQPrintSetup.Click += new System.EventHandler(this.btnTQPrintSetup_Click);
-            // 
-            // btnTQTableSetup
-            // 
-            this.btnTQTableSetup.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTQTableSetup.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTQTableSetup.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTQTableSetup.ForeColor = System.Drawing.Color.White;
-            this.btnTQTableSetup.Location = new System.Drawing.Point(152, 113);
-            this.btnTQTableSetup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTQTableSetup.Name = "btnTQTableSetup";
-            this.btnTQTableSetup.Size = new System.Drawing.Size(120, 50);
-            this.btnTQTableSetup.TabIndex = 7;
-            this.btnTQTableSetup.Text = "Table Setup";
-            this.btnTQTableSetup.UseVisualStyleBackColor = false;
-            this.btnTQTableSetup.Click += new System.EventHandler(this.btnTQTableSetup_Click);
-            // 
-            // btnTQDeptCode
-            // 
-            this.btnTQDeptCode.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTQDeptCode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTQDeptCode.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTQDeptCode.ForeColor = System.Drawing.Color.White;
-            this.btnTQDeptCode.Location = new System.Drawing.Point(12, 113);
-            this.btnTQDeptCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTQDeptCode.Name = "btnTQDeptCode";
-            this.btnTQDeptCode.Size = new System.Drawing.Size(120, 50);
-            this.btnTQDeptCode.TabIndex = 6;
-            this.btnTQDeptCode.Text = "Department Code";
-            this.btnTQDeptCode.UseVisualStyleBackColor = false;
-            this.btnTQDeptCode.Click += new System.EventHandler(this.btnTQDeptCode_Click);
-            // 
-            // btnTQOrderControl
-            // 
-            this.btnTQOrderControl.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTQOrderControl.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTQOrderControl.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTQOrderControl.ForeColor = System.Drawing.Color.White;
-            this.btnTQOrderControl.Location = new System.Drawing.Point(712, 42);
-            this.btnTQOrderControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTQOrderControl.Name = "btnTQOrderControl";
-            this.btnTQOrderControl.Size = new System.Drawing.Size(120, 50);
-            this.btnTQOrderControl.TabIndex = 5;
-            this.btnTQOrderControl.Text = "Order Control";
-            this.btnTQOrderControl.UseVisualStyleBackColor = false;
-            this.btnTQOrderControl.Click += new System.EventHandler(this.btnTQOrderControl_Click);
-            // 
-            // btnTQExtraMenuEdit
-            // 
-            this.btnTQExtraMenuEdit.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTQExtraMenuEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTQExtraMenuEdit.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTQExtraMenuEdit.ForeColor = System.Drawing.Color.White;
-            this.btnTQExtraMenuEdit.Location = new System.Drawing.Point(572, 42);
-            this.btnTQExtraMenuEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTQExtraMenuEdit.Name = "btnTQExtraMenuEdit";
-            this.btnTQExtraMenuEdit.Size = new System.Drawing.Size(120, 50);
-            this.btnTQExtraMenuEdit.TabIndex = 4;
-            this.btnTQExtraMenuEdit.Text = "Extra Menu Edit";
-            this.btnTQExtraMenuEdit.UseVisualStyleBackColor = false;
-            this.btnTQExtraMenuEdit.Click += new System.EventHandler(this.btnTQExtraMenuEdit_Click);
-            // 
-            // btnTQManageMenuSet
-            // 
-            this.btnTQManageMenuSet.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTQManageMenuSet.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTQManageMenuSet.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTQManageMenuSet.ForeColor = System.Drawing.Color.White;
-            this.btnTQManageMenuSet.Location = new System.Drawing.Point(432, 42);
-            this.btnTQManageMenuSet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTQManageMenuSet.Name = "btnTQManageMenuSet";
-            this.btnTQManageMenuSet.Size = new System.Drawing.Size(120, 50);
-            this.btnTQManageMenuSet.TabIndex = 3;
-            this.btnTQManageMenuSet.Text = "Manage Menu Set";
-            this.btnTQManageMenuSet.UseVisualStyleBackColor = false;
-            this.btnTQManageMenuSet.Click += new System.EventHandler(this.btnTQManageMenuSet_Click);
-            // 
-            // btnTQMenuItem
-            // 
-            this.btnTQMenuItem.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTQMenuItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTQMenuItem.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTQMenuItem.ForeColor = System.Drawing.Color.White;
-            this.btnTQMenuItem.Location = new System.Drawing.Point(292, 42);
-            this.btnTQMenuItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTQMenuItem.Name = "btnTQMenuItem";
-            this.btnTQMenuItem.Size = new System.Drawing.Size(120, 50);
-            this.btnTQMenuItem.TabIndex = 2;
-            this.btnTQMenuItem.Text = "Menu Item";
-            this.btnTQMenuItem.UseVisualStyleBackColor = false;
-            this.btnTQMenuItem.Click += new System.EventHandler(this.btnTQMenuItem_Click);
-            // 
-            // btnTQMenuCategory
-            // 
-            this.btnTQMenuCategory.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTQMenuCategory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTQMenuCategory.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTQMenuCategory.ForeColor = System.Drawing.Color.White;
-            this.btnTQMenuCategory.Location = new System.Drawing.Point(152, 42);
-            this.btnTQMenuCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTQMenuCategory.Name = "btnTQMenuCategory";
-            this.btnTQMenuCategory.Size = new System.Drawing.Size(120, 50);
-            this.btnTQMenuCategory.TabIndex = 1;
-            this.btnTQMenuCategory.Text = "Menu Category";
-            this.btnTQMenuCategory.UseVisualStyleBackColor = false;
-            this.btnTQMenuCategory.Click += new System.EventHandler(this.btnTQMenuCategory_Click);
-            // 
-            // btnTQTakeawayConfig
-            // 
-            this.btnTQTakeawayConfig.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnTQTakeawayConfig.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTQTakeawayConfig.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTQTakeawayConfig.ForeColor = System.Drawing.Color.White;
-            this.btnTQTakeawayConfig.Location = new System.Drawing.Point(12, 42);
-            this.btnTQTakeawayConfig.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnTQTakeawayConfig.Name = "btnTQTakeawayConfig";
-            this.btnTQTakeawayConfig.Size = new System.Drawing.Size(120, 50);
-            this.btnTQTakeawayConfig.TabIndex = 0;
-            this.btnTQTakeawayConfig.Text = "Takeaway Configuration";
-            this.btnTQTakeawayConfig.UseVisualStyleBackColor = false;
-            this.btnTQTakeawayConfig.Click += new System.EventHandler(this.btnTQTakeawayConfig_Click);
-            // 
-            // grpBoxSysSetting
-            // 
-            this.grpBoxSysSetting.Controls.Add(this.btnShiftCode);
-            this.grpBoxSysSetting.Controls.Add(this.btnComputerAddr);
-            this.grpBoxSysSetting.Controls.Add(this.btnCompactDB);
-            this.grpBoxSysSetting.Controls.Add(this.btnDataManager);
-            this.grpBoxSysSetting.Controls.Add(this.btnUsrMaint);
-            this.grpBoxSysSetting.Controls.Add(this.btnSysConfig);
-            this.grpBoxSysSetting.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grpBoxSysSetting.Location = new System.Drawing.Point(19, 30);
-            this.grpBoxSysSetting.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxSysSetting.Name = "grpBoxSysSetting";
-            this.grpBoxSysSetting.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxSysSetting.Size = new System.Drawing.Size(852, 102);
-            this.grpBoxSysSetting.TabIndex = 0;
-            this.grpBoxSysSetting.TabStop = false;
-            this.grpBoxSysSetting.Text = "System Setting";
-            // 
-            // btnShiftCode
-            // 
-            this.btnShiftCode.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnShiftCode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShiftCode.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnShiftCode.ForeColor = System.Drawing.Color.White;
-            this.btnShiftCode.Location = new System.Drawing.Point(712, 34);
-            this.btnShiftCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnShiftCode.Name = "btnShiftCode";
-            this.btnShiftCode.Size = new System.Drawing.Size(120, 50);
-            this.btnShiftCode.TabIndex = 5;
-            this.btnShiftCode.Text = "Shift Code";
-            this.btnShiftCode.UseVisualStyleBackColor = false;
-            this.btnShiftCode.Click += new System.EventHandler(this.btnShiftCode_Click);
-            // 
-            // btnComputerAddr
-            // 
-            this.btnComputerAddr.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnComputerAddr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnComputerAddr.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnComputerAddr.ForeColor = System.Drawing.Color.White;
-            this.btnComputerAddr.Location = new System.Drawing.Point(572, 34);
-            this.btnComputerAddr.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnComputerAddr.Name = "btnComputerAddr";
-            this.btnComputerAddr.Size = new System.Drawing.Size(120, 50);
-            this.btnComputerAddr.TabIndex = 4;
-            this.btnComputerAddr.Text = "Computer Address";
-            this.btnComputerAddr.UseVisualStyleBackColor = false;
-            this.btnComputerAddr.Click += new System.EventHandler(this.btnComputerAddr_Click);
-            // 
-            // btnCompactDB
-            // 
-            this.btnCompactDB.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnCompactDB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCompactDB.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCompactDB.ForeColor = System.Drawing.Color.White;
-            this.btnCompactDB.Location = new System.Drawing.Point(432, 34);
-            this.btnCompactDB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCompactDB.Name = "btnCompactDB";
-            this.btnCompactDB.Size = new System.Drawing.Size(120, 50);
-            this.btnCompactDB.TabIndex = 3;
-            this.btnCompactDB.Text = "Compact Database";
-            this.btnCompactDB.UseVisualStyleBackColor = false;
-            this.btnCompactDB.Click += new System.EventHandler(this.btnCompactDB_Click);
-            // 
-            // btnDataManager
-            // 
-            this.btnDataManager.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnDataManager.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDataManager.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDataManager.ForeColor = System.Drawing.Color.White;
-            this.btnDataManager.Location = new System.Drawing.Point(292, 34);
-            this.btnDataManager.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnDataManager.Name = "btnDataManager";
-            this.btnDataManager.Size = new System.Drawing.Size(120, 50);
-            this.btnDataManager.TabIndex = 2;
-            this.btnDataManager.Text = "Data Manager";
-            this.btnDataManager.UseVisualStyleBackColor = false;
-            this.btnDataManager.Click += new System.EventHandler(this.btnDataManager_Click);
-            // 
-            // btnUsrMaint
-            // 
-            this.btnUsrMaint.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnUsrMaint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnUsrMaint.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnUsrMaint.ForeColor = System.Drawing.Color.White;
-            this.btnUsrMaint.Location = new System.Drawing.Point(152, 34);
-            this.btnUsrMaint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnUsrMaint.Name = "btnUsrMaint";
-            this.btnUsrMaint.Size = new System.Drawing.Size(120, 50);
-            this.btnUsrMaint.TabIndex = 1;
-            this.btnUsrMaint.Text = "User Maintenance";
-            this.btnUsrMaint.UseVisualStyleBackColor = false;
-            this.btnUsrMaint.Click += new System.EventHandler(this.btnUsrMaint_Click);
-            // 
-            // btnSysConfig
-            // 
-            this.btnSysConfig.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnSysConfig.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSysConfig.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSysConfig.ForeColor = System.Drawing.Color.White;
-            this.btnSysConfig.Location = new System.Drawing.Point(12, 34);
-            this.btnSysConfig.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSysConfig.Name = "btnSysConfig";
-            this.btnSysConfig.Size = new System.Drawing.Size(120, 50);
-            this.btnSysConfig.TabIndex = 0;
-            this.btnSysConfig.Text = "System Configuration";
-            this.btnSysConfig.UseVisualStyleBackColor = false;
-            this.btnSysConfig.Click += new System.EventHandler(this.btnSysConfig_Click);
             // 
             // FrmAdminControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 636);
-            this.Controls.Add(this.grpBoxCtlPanel);
+            this.ClientSize = new System.Drawing.Size(1045, 606);
+            this.Controls.Add(this.grpBoxCtrlPanel);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -613,51 +187,19 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdminMain";
             this.Load += new System.EventHandler(this.FrmAdminControlPanel_Load);
-            this.grpBoxCtlPanel.ResumeLayout(false);
-            this.grpBoxReporting.ResumeLayout(false);
-            this.gupBoxEatInSetting.ResumeLayout(false);
-            this.grpBoxTakeAndQuickSetting.ResumeLayout(false);
-            this.grpBoxSysSetting.ResumeLayout(false);
+            this.grpBoxCtrlPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxWelCome)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grpBoxCtlPanel;
-        private System.Windows.Forms.GroupBox grpBoxReporting;
-        private System.Windows.Forms.GroupBox gupBoxEatInSetting;
-        private System.Windows.Forms.GroupBox grpBoxTakeAndQuickSetting;
-        private System.Windows.Forms.GroupBox grpBoxSysSetting;
-        private System.Windows.Forms.Button btnReport;
-        private System.Windows.Forms.Button btnRptAccountSummary;
-        private System.Windows.Forms.Button btnEIPrintSetup;
-        private System.Windows.Forms.Button btnEIPrintOrderEntry;
-        private System.Windows.Forms.Button btnEITableSetup;
-        private System.Windows.Forms.Button btnEIDeptCode;
-        private System.Windows.Forms.Button btnEIOrderControl;
-        private System.Windows.Forms.Button btnEIExtraMenuEdit;
-        private System.Windows.Forms.Button btnEIManageMenuSet;
-        private System.Windows.Forms.Button btnEIMenuItem;
-        private System.Windows.Forms.Button btnEIMenuCategory;
-        private System.Windows.Forms.Button btnEIConfig;
-        private System.Windows.Forms.Button btnTQCallerRecord;
-        private System.Windows.Forms.Button btnTQPrintSetup;
-        private System.Windows.Forms.Button btnTQTableSetup;
-        private System.Windows.Forms.Button btnTQDeptCode;
-        private System.Windows.Forms.Button btnTQOrderControl;
-        private System.Windows.Forms.Button btnTQExtraMenuEdit;
-        private System.Windows.Forms.Button btnTQManageMenuSet;
-        private System.Windows.Forms.Button btnTQMenuItem;
-        private System.Windows.Forms.Button btnTQMenuCategory;
-        private System.Windows.Forms.Button btnTQTakeawayConfig;
-        private System.Windows.Forms.Button btnShiftCode;
-        private System.Windows.Forms.Button btnComputerAddr;
-        private System.Windows.Forms.Button btnCompactDB;
-        private System.Windows.Forms.Button btnDataManager;
-        private System.Windows.Forms.Button btnUsrMaint;
-        private System.Windows.Forms.Button btnSysConfig;
-        private System.Windows.Forms.Button btnSysControl;
+        private System.Windows.Forms.GroupBox grpBoxCtrlPanel;
+        private System.Windows.Forms.TreeView treeViewMenu;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox picBoxWelCome;
         private System.Windows.Forms.Button btnExit;
     }
 }

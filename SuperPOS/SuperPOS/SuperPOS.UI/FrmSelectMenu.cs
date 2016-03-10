@@ -16,6 +16,7 @@ namespace SuperPOS.UI
     {
         private UserInfo userInfo = new UserInfo();
 
+        #region 构造函数
         public FrmSelectMenu()
         {
             InitializeComponent();
@@ -27,22 +28,40 @@ namespace SuperPOS.UI
             userInfo = user;
         }
 
+        #endregion
+
+        #region 事件
+
+        #region 窗口加载
+        private void FrmSelectMenu_Load(object sender, EventArgs e)
+        {
+            txtDate.Text = DateTime.Now.ToShortDateString();
+            txtTime.Text = DateTime.Now.ToLongTimeString();
+        }
+        #endregion
+
+        #region Takeaway按钮
         private void btnTakeaway_Click(object sender, EventArgs e)
         {
             Hide();
             FrmTAMain frmTaMain = new FrmTAMain(userInfo);
             frmTaMain.ShowDialog();
         }
+        #endregion
 
+        #region Eat In按钮
         private void btnEatIn_Click(object sender, EventArgs e)
         {
-            
-        }
 
+        }
+        #endregion
+
+        #region QuickFood按钮
         private void btnQuickFood_Click(object sender, EventArgs e)
         {
 
         }
+        #endregion
 
         #region 登出
         private void btnLogout_Click(object sender, EventArgs e)
@@ -57,17 +76,19 @@ namespace SuperPOS.UI
         private void btnCtlPanel_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
+            FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel(userInfo);
             frmAdminControl.ShowDialog();
         }
         #endregion
-        
 
-        private void FrmSelectMenu_Load(object sender, EventArgs e)
+        #region Show Order按钮
+        private void btnShowOrder_Click(object sender, EventArgs e)
         {
-            txtDate.Text = DateTime.Now.ToShortDateString();
-            txtTime.Text = DateTime.Now.ToLongTimeString();
+            Hide();
+            FrmTAShowOrder frmShowOrder = new FrmTAShowOrder(userInfo);
+            frmShowOrder.ShowDialog();
         }
+        #endregion
 
         #region 秒表变化
         private void timerShow_Tick(object sender, EventArgs e)
@@ -122,11 +143,6 @@ namespace SuperPOS.UI
 
         #endregion
 
-        private void btnShowOrder_Click(object sender, EventArgs e)
-        {
-            Hide();
-            FrmTAShowOrder frmShowOrder = new FrmTAShowOrder(userInfo);
-            frmShowOrder.ShowDialog();
-        }
+        #endregion
     }
 }
