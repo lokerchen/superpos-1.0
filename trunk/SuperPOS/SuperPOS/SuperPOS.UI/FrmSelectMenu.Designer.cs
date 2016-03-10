@@ -30,14 +30,14 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.txtTime = new System.Windows.Forms.TextBox();
-            this.txtSession = new System.Windows.Forms.TextBox();
-            this.txtStaff = new System.Windows.Forms.TextBox();
-            this.btnDrawer = new System.Windows.Forms.Button();
-            this.btnShowOrder = new System.Windows.Forms.Button();
-            this.btnCtlPanel = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnCtlPanel = new System.Windows.Forms.Button();
+            this.btnShowOrder = new System.Windows.Forms.Button();
+            this.btnDrawer = new System.Windows.Forms.Button();
+            this.txtStaff = new System.Windows.Forms.TextBox();
+            this.txtSession = new System.Windows.Forms.TextBox();
+            this.txtTime = new System.Windows.Forms.TextBox();
+            this.txtDate = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.btnTakeaway = new System.Windows.Forms.Button();
             this.btnEatIn = new System.Windows.Forms.Button();
@@ -63,84 +63,19 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // txtDate
+            // btnLogout
             // 
-            this.txtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDate.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtDate.Location = new System.Drawing.Point(22, 22);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(133, 34);
-            this.txtDate.TabIndex = 0;
-            this.txtDate.Text = "25/11/2015";
-            this.txtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtTime
-            // 
-            this.txtTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTime.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtTime.Location = new System.Drawing.Point(22, 65);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(133, 34);
-            this.txtTime.TabIndex = 1;
-            this.txtTime.Text = "23:23:23";
-            this.txtTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtSession
-            // 
-            this.txtSession.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSession.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtSession.Location = new System.Drawing.Point(22, 105);
-            this.txtSession.Name = "txtSession";
-            this.txtSession.Size = new System.Drawing.Size(133, 34);
-            this.txtSession.TabIndex = 2;
-            this.txtSession.Text = "DINNER";
-            this.txtSession.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtStaff
-            // 
-            this.txtStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStaff.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtStaff.Location = new System.Drawing.Point(22, 144);
-            this.txtStaff.Name = "txtStaff";
-            this.txtStaff.Size = new System.Drawing.Size(133, 34);
-            this.txtStaff.TabIndex = 3;
-            this.txtStaff.Text = "STAFF8";
-            this.txtStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnDrawer
-            // 
-            this.btnDrawer.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnDrawer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDrawer.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDrawer.ForeColor = System.Drawing.Color.White;
-            this.btnDrawer.Location = new System.Drawing.Point(22, 220);
-            this.btnDrawer.Name = "btnDrawer";
-            this.btnDrawer.Size = new System.Drawing.Size(133, 60);
-            this.btnDrawer.TabIndex = 4;
-            this.btnDrawer.Text = "Cash Drawer";
-            this.btnDrawer.UseVisualStyleBackColor = false;
-            // 
-            // btnShowOrder
-            // 
-            this.btnShowOrder.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnShowOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShowOrder.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnShowOrder.ForeColor = System.Drawing.Color.White;
-            this.btnShowOrder.Location = new System.Drawing.Point(22, 300);
-            this.btnShowOrder.Name = "btnShowOrder";
-            this.btnShowOrder.Size = new System.Drawing.Size(133, 60);
-            this.btnShowOrder.TabIndex = 5;
-            this.btnShowOrder.Text = "Show Order";
-            this.btnShowOrder.UseVisualStyleBackColor = false;
-            this.btnShowOrder.Click += new System.EventHandler(this.btnShowOrder_Click);
+            this.btnLogout.BackColor = System.Drawing.Color.Red;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogout.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(22, 460);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(133, 60);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseVisualStyleBackColor = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnCtlPanel
             // 
@@ -156,19 +91,88 @@
             this.btnCtlPanel.UseVisualStyleBackColor = false;
             this.btnCtlPanel.Click += new System.EventHandler(this.btnCtlPanel_Click);
             // 
-            // btnLogout
+            // btnShowOrder
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.Red;
-            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogout.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(22, 460);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(133, 60);
-            this.btnLogout.TabIndex = 7;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.UseVisualStyleBackColor = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnShowOrder.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnShowOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShowOrder.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnShowOrder.ForeColor = System.Drawing.Color.White;
+            this.btnShowOrder.Location = new System.Drawing.Point(22, 300);
+            this.btnShowOrder.Name = "btnShowOrder";
+            this.btnShowOrder.Size = new System.Drawing.Size(133, 60);
+            this.btnShowOrder.TabIndex = 5;
+            this.btnShowOrder.Text = "Show Order";
+            this.btnShowOrder.UseVisualStyleBackColor = false;
+            this.btnShowOrder.Click += new System.EventHandler(this.btnShowOrder_Click);
+            // 
+            // btnDrawer
+            // 
+            this.btnDrawer.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnDrawer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDrawer.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDrawer.ForeColor = System.Drawing.Color.White;
+            this.btnDrawer.Location = new System.Drawing.Point(22, 220);
+            this.btnDrawer.Name = "btnDrawer";
+            this.btnDrawer.Size = new System.Drawing.Size(133, 60);
+            this.btnDrawer.TabIndex = 4;
+            this.btnDrawer.Text = "Cash Drawer";
+            this.btnDrawer.UseVisualStyleBackColor = false;
+            // 
+            // txtStaff
+            // 
+            this.txtStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStaff.Enabled = false;
+            this.txtStaff.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtStaff.Location = new System.Drawing.Point(22, 144);
+            this.txtStaff.Name = "txtStaff";
+            this.txtStaff.Size = new System.Drawing.Size(133, 34);
+            this.txtStaff.TabIndex = 3;
+            this.txtStaff.Text = "STAFF8";
+            this.txtStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtSession
+            // 
+            this.txtSession.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSession.Enabled = false;
+            this.txtSession.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtSession.Location = new System.Drawing.Point(22, 105);
+            this.txtSession.Name = "txtSession";
+            this.txtSession.Size = new System.Drawing.Size(133, 34);
+            this.txtSession.TabIndex = 2;
+            this.txtSession.Text = "DINNER";
+            this.txtSession.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtTime
+            // 
+            this.txtTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTime.Enabled = false;
+            this.txtTime.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtTime.Location = new System.Drawing.Point(22, 65);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(133, 34);
+            this.txtTime.TabIndex = 1;
+            this.txtTime.Text = "23:23:23";
+            this.txtTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtDate
+            // 
+            this.txtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDate.Enabled = false;
+            this.txtDate.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtDate.Location = new System.Drawing.Point(22, 22);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(133, 34);
+            this.txtDate.TabIndex = 0;
+            this.txtDate.Text = "25/11/2015";
+            this.txtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button5
             // 
