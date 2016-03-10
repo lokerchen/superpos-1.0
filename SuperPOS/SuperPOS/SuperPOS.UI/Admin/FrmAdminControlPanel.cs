@@ -14,7 +14,7 @@ namespace SuperPOS.UI.Admin
 {
     public partial class  FrmAdminControlPanel : Form
     {
-        private UserInfo usrInfo = new UserInfo();
+        private UserInfo userInfo = new UserInfo();
         private bool isShowSysCtl = false; //是否显示System Control按钮
 
         public FrmAdminControlPanel()
@@ -25,7 +25,7 @@ namespace SuperPOS.UI.Admin
         public FrmAdminControlPanel(UserInfo uInfo)
         {
             InitializeComponent();
-            usrInfo = uInfo;
+            userInfo = uInfo;
             //isShowSysCtl = isShow;
         }
 
@@ -35,7 +35,7 @@ namespace SuperPOS.UI.Admin
 
             treeViewMenu.ExpandAll();
 
-            if (usrInfo.IsSysCtrl.Equals("0"))
+            if (userInfo.IsSysCtrl.Equals("0"))
             {
                 treeViewMenu.Nodes.Remove(treeViewMenu.Nodes[4]);
             }
@@ -53,7 +53,7 @@ namespace SuperPOS.UI.Admin
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmSelectMenu frmSelectMenu = new FrmSelectMenu(usrInfo);
+            FrmSelectMenu frmSelectMenu = new FrmSelectMenu(userInfo);
             frmSelectMenu.ShowDialog();
         }
 
@@ -79,7 +79,7 @@ namespace SuperPOS.UI.Admin
                 case "105":
                     break;
                 case "106":
-                    FrmShiftCodeEntry frmShiftCode = new FrmShiftCodeEntry();
+                    FrmShiftCodeEntry frmShiftCode = new FrmShiftCodeEntry(userInfo);
                     frmShiftCode.ShowDialog();
                     break;
                 case "201":
