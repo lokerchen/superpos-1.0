@@ -180,9 +180,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("微软雅黑", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(241, 36);
+            this.button5.Location = new System.Drawing.Point(209, 36);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(645, 98);
+            this.button5.Size = new System.Drawing.Size(518, 98);
             this.button5.TabIndex = 1;
             this.button5.Text = "Desktop Area";
             this.button5.UseVisualStyleBackColor = false;
@@ -193,7 +193,7 @@
             this.btnTakeaway.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTakeaway.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTakeaway.ForeColor = System.Drawing.Color.White;
-            this.btnTakeaway.Location = new System.Drawing.Point(398, 180);
+            this.btnTakeaway.Location = new System.Drawing.Point(307, 169);
             this.btnTakeaway.Name = "btnTakeaway";
             this.btnTakeaway.Size = new System.Drawing.Size(300, 90);
             this.btnTakeaway.TabIndex = 2;
@@ -209,7 +209,7 @@
             this.btnEatIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEatIn.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnEatIn.ForeColor = System.Drawing.Color.White;
-            this.btnEatIn.Location = new System.Drawing.Point(398, 286);
+            this.btnEatIn.Location = new System.Drawing.Point(307, 275);
             this.btnEatIn.Name = "btnEatIn";
             this.btnEatIn.Size = new System.Drawing.Size(300, 90);
             this.btnEatIn.TabIndex = 3;
@@ -225,7 +225,7 @@
             this.btnQuickFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnQuickFood.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnQuickFood.ForeColor = System.Drawing.Color.White;
-            this.btnQuickFood.Location = new System.Drawing.Point(398, 392);
+            this.btnQuickFood.Location = new System.Drawing.Point(307, 381);
             this.btnQuickFood.Name = "btnQuickFood";
             this.btnQuickFood.Size = new System.Drawing.Size(300, 90);
             this.btnQuickFood.TabIndex = 4;
@@ -245,7 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(910, 561);
+            this.ClientSize = new System.Drawing.Size(746, 561);
             this.Controls.Add(this.btnQuickFood);
             this.Controls.Add(this.btnEatIn);
             this.Controls.Add(this.btnTakeaway);
