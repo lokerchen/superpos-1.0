@@ -79,6 +79,8 @@ namespace SuperPOS.UI.Admin
                 case "105":
                     break;
                 case "106":
+                    FrmShiftCodeEntry frmShiftCode = new FrmShiftCodeEntry();
+                    frmShiftCode.ShowDialog();
                     break;
                 case "201":
                     break;
