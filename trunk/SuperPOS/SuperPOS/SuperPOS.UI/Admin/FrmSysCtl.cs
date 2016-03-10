@@ -42,6 +42,11 @@ namespace SuperPOS.UI.Admin
                 txtKey1.Text = qList.Key1;
                 txtKey2.Text = qList.Key2;
                 txtAccessCode.Text = qList.AccessCode;
+                txtImg1.Text = qList.ImgPath1;
+                txtImg2.Text = qList.ImgPath2;
+                txtImg3.Text = qList.ImgPath3;
+                txtImg4.Text = qList.ImgPath4;
+                txtImg5.Text = qList.ImgPath5;
             }
             else
             {
@@ -57,6 +62,11 @@ namespace SuperPOS.UI.Admin
                 txtKey1.Text = "";
                 txtKey2.Text = "";
                 txtAccessCode.Text = "";
+                txtImg1.Text = "";
+                txtImg2.Text = "";
+                txtImg3.Text = "";
+                txtImg4.Text = "";
+                txtImg5.Text = "";
             }
         }
 
@@ -121,12 +131,72 @@ namespace SuperPOS.UI.Admin
             sysControl.Key2 = txtKey2.Text.Trim();
             sysControl.AccessCode = txtAccessCode.Text.Trim();
 
+            sysControl.ImgPath1 = txtImg1.Text.Trim();
+            sysControl.ImgPath2 = txtImg2.Text.Trim();
+            sysControl.ImgPath3 = txtImg3.Text.Trim();
+            sysControl.ImgPath4 = txtImg4.Text.Trim();
+            sysControl.ImgPath5 = txtImg5.Text.Trim();
+
             if (string.IsNullOrEmpty(sysGuid))
             {
                 sysControl.SystemKey = new Guid(Guid.NewGuid().ToString().ToUpper());
                 _control.AddEntity(sysControl);
             }
-            else _control.UpdateEntity(sysControl);
+            else
+            {
+                sysControl.SystemKey = new Guid(sysGuid);
+                _control.UpdateEntity(sysControl);
+            }
+        }
+
+        private void btnImg1_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = false;
+            fileDialog.Title = "Please select file";
+            fileDialog.Filter = "Images|*.jpg;*.bmp;*.jpeg";
+
+            if (fileDialog.ShowDialog() == DialogResult.OK) { txtImg1.Text = fileDialog.FileName; }
+        }
+
+        private void btnImg2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = false;
+            fileDialog.Title = "Please select file";
+            fileDialog.Filter = "Images|*.jpg;*.bmp;*.jpeg";
+
+            if (fileDialog.ShowDialog() == DialogResult.OK) { txtImg2.Text = fileDialog.FileName; }
+        }
+
+        private void btnImg3_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = false;
+            fileDialog.Title = "Please select file";
+            fileDialog.Filter = "Images|*.jpg;*.bmp;*.jpeg";
+
+            if (fileDialog.ShowDialog() == DialogResult.OK) { txtImg3.Text = fileDialog.FileName; }
+        }
+
+        private void btnImg4_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = false;
+            fileDialog.Title = "Please select file";
+            fileDialog.Filter = "Execute file|*.exe";
+
+            if (fileDialog.ShowDialog() == DialogResult.OK) { txtImg4.Text = fileDialog.FileName; }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
+        private void txtKey2_KeyDown(object sender, KeyEventArgs e)
+        {
+            txtKey2.Text = GetKey(e.KeyCode);
         }
     }
 }
