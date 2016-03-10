@@ -60,6 +60,11 @@ namespace SuperPOS.UI.Admin
         private void treeViewMenu_AfterSelect(object sender, TreeViewEventArgs e)
         {
             //Console.Out.WriteLine(e.Node.Name);
+            
+        }
+
+        private void treeViewMenu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
             string nodeName = e.Node.Name;
             switch (nodeName)
             {
