@@ -10,6 +10,7 @@
     <property name="UsrCode" />
     <property name="UsrName" />
     <property name="UsrPwd" />
+    <property name="IsSysCtrl" />
     <property name="Remark" />
   </class>
 </hibernate-mapping>
