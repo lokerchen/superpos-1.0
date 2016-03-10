@@ -17,6 +17,11 @@
     <property name="Key1" column="Key1" type="System.String" />
     <property name="Key2" column="Key2" type="System.String" />
     <property name="AccessCode" column="AccessCode" type="System.String" />
+    <property name="ImgPath1" column="ImgPath1" type="System.String" />
+    <property name="ImgPath2" column="ImgPath2" type="System.String" />
+    <property name="ImgPath3" column="ImgPath3" type="System.String" />
+    <property name="ImgPath4" column="ImgPath4" type="System.String" />
+    <property name="ImgPath5" column="ImgPath5" type="System.String" />
   </class>
 
 </hibernate-mapping>
