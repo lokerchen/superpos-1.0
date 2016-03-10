@@ -66,10 +66,10 @@
             System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Reporting");
             System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("System Control");
             this.grpBoxCtrlPanel = new System.Windows.Forms.GroupBox();
-            this.treeViewMenu = new System.Windows.Forms.TreeView();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picBoxWelCome = new System.Windows.Forms.PictureBox();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.treeViewMenu = new System.Windows.Forms.TreeView();
             this.grpBoxCtrlPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxWelCome)).BeginInit();
@@ -83,14 +83,43 @@
             this.grpBoxCtrlPanel.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxCtrlPanel.Location = new System.Drawing.Point(12, 4);
             this.grpBoxCtrlPanel.Name = "grpBoxCtrlPanel";
-            this.grpBoxCtrlPanel.Size = new System.Drawing.Size(1017, 592);
+            this.grpBoxCtrlPanel.Size = new System.Drawing.Size(880, 547);
             this.grpBoxCtrlPanel.TabIndex = 0;
             this.grpBoxCtrlPanel.TabStop = false;
             this.grpBoxCtrlPanel.Text = "Control Panel";
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(761, 22);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(106, 36);
+            this.btnExit.TabIndex = 2;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.picBoxWelCome);
+            this.panel1.Location = new System.Drawing.Point(312, 64);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(555, 470);
+            this.panel1.TabIndex = 1;
+            // 
+            // picBoxWelCome
+            // 
+            this.picBoxWelCome.Location = new System.Drawing.Point(50, 67);
+            this.picBoxWelCome.Name = "picBoxWelCome";
+            this.picBoxWelCome.Size = new System.Drawing.Size(462, 295);
+            this.picBoxWelCome.TabIndex = 0;
+            this.picBoxWelCome.TabStop = false;
+            // 
             // treeViewMenu
             // 
-            this.treeViewMenu.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.treeViewMenu.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.treeViewMenu.Location = new System.Drawing.Point(15, 64);
             this.treeViewMenu.Name = "treeViewMenu";
             treeNode1.Name = "101";
@@ -141,44 +170,16 @@
             treeNode19,
             treeNode20,
             treeNode21});
-            this.treeViewMenu.Size = new System.Drawing.Size(291, 515);
+            this.treeViewMenu.Size = new System.Drawing.Size(291, 470);
             this.treeViewMenu.TabIndex = 0;
             this.treeViewMenu.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewMenu_AfterSelect);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.picBoxWelCome);
-            this.panel1.Location = new System.Drawing.Point(312, 64);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(687, 515);
-            this.panel1.TabIndex = 1;
-            // 
-            // picBoxWelCome
-            // 
-            this.picBoxWelCome.Location = new System.Drawing.Point(133, 111);
-            this.picBoxWelCome.Name = "picBoxWelCome";
-            this.picBoxWelCome.Size = new System.Drawing.Size(462, 295);
-            this.picBoxWelCome.TabIndex = 0;
-            this.picBoxWelCome.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(868, 22);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(106, 36);
-            this.btnExit.TabIndex = 2;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.treeViewMenu.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeViewMenu_NodeMouseClick);
             // 
             // FrmAdminControlPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 606);
+            this.ClientSize = new System.Drawing.Size(902, 556);
             this.Controls.Add(this.grpBoxCtrlPanel);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
