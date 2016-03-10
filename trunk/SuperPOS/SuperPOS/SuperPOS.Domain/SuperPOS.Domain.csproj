@@ -138,7 +138,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Mappings\SysControlInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\SysControlInfo.hbm.xml" />
     <EmbeddedResource Include="Mappings\TAMenuItemInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
