@@ -98,7 +98,7 @@
             this.grpBoxConf.Controls.Add(this.grpBoxGenSet);
             this.grpBoxConf.Controls.Add(this.grpBoxShopDetail);
             this.grpBoxConf.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grpBoxConf.Location = new System.Drawing.Point(14, 17);
+            this.grpBoxConf.Location = new System.Drawing.Point(12, 7);
             this.grpBoxConf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxConf.Name = "grpBoxConf";
             this.grpBoxConf.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -155,6 +155,7 @@
             this.grpBoxKeypadSet.Controls.Add(this.lblKey3);
             this.grpBoxKeypadSet.Controls.Add(this.lblKey2);
             this.grpBoxKeypadSet.Controls.Add(this.lblKey1);
+            this.grpBoxKeypadSet.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxKeypadSet.Location = new System.Drawing.Point(381, 174);
             this.grpBoxKeypadSet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxKeypadSet.Name = "grpBoxKeypadSet";
@@ -377,6 +378,7 @@
             // grpBoxCashDrawerSet
             // 
             this.grpBoxCashDrawerSet.Controls.Add(this.chkBoxUseCashDrawer);
+            this.grpBoxCashDrawerSet.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxCashDrawerSet.Location = new System.Drawing.Point(17, 441);
             this.grpBoxCashDrawerSet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxCashDrawerSet.Name = "grpBoxCashDrawerSet";
@@ -392,7 +394,7 @@
             this.chkBoxUseCashDrawer.Location = new System.Drawing.Point(11, 30);
             this.chkBoxUseCashDrawer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxUseCashDrawer.Name = "chkBoxUseCashDrawer";
-            this.chkBoxUseCashDrawer.Size = new System.Drawing.Size(159, 25);
+            this.chkBoxUseCashDrawer.Size = new System.Drawing.Size(140, 24);
             this.chkBoxUseCashDrawer.TabIndex = 3;
             this.chkBoxUseCashDrawer.Text = "Use Cash Drawer";
             this.chkBoxUseCashDrawer.UseVisualStyleBackColor = true;
@@ -406,6 +408,7 @@
             this.grpBoxPrintOption.Controls.Add(this.lblRoundUpDecimal);
             this.grpBoxPrintOption.Controls.Add(this.lblA4RptPrint);
             this.grpBoxPrintOption.Controls.Add(this.lblRptPrint);
+            this.grpBoxPrintOption.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxPrintOption.Location = new System.Drawing.Point(381, 35);
             this.grpBoxPrintOption.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxPrintOption.Name = "grpBoxPrintOption";
@@ -492,6 +495,7 @@
             this.grpBoxGenSet.Controls.Add(this.lblDefOrderInputPage);
             this.grpBoxGenSet.Controls.Add(this.lblTillNum);
             this.grpBoxGenSet.Controls.Add(this.label4);
+            this.grpBoxGenSet.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxGenSet.Location = new System.Drawing.Point(17, 139);
             this.grpBoxGenSet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxGenSet.Name = "grpBoxGenSet";
@@ -646,6 +650,7 @@
             this.grpBoxShopDetail.Controls.Add(this.txtAddr);
             this.grpBoxShopDetail.Controls.Add(this.txtShopName);
             this.grpBoxShopDetail.Controls.Add(this.lblShopName);
+            this.grpBoxShopDetail.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxShopDetail.Location = new System.Drawing.Point(17, 35);
             this.grpBoxShopDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxShopDetail.Name = "grpBoxShopDetail";
@@ -697,7 +702,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 554);
+            this.ClientSize = new System.Drawing.Size(751, 546);
             this.Controls.Add(this.grpBoxConf);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
