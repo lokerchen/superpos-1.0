@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SuperPOS.DAL;
 using SuperPOS.Domain.Entities;
 using SuperPOS.UI.Admin;
 using SuperPOS.UI.TakeAway;
@@ -15,6 +16,7 @@ namespace SuperPOS.UI
     public partial class FrmSelectMenu : Form
     {
         private UserInfo userInfo = new UserInfo();
+        private SysControlInfo sysControlInfo = new SysControlInfo();
 
         #region 构造函数
         public FrmSelectMenu()
@@ -33,33 +35,58 @@ namespace SuperPOS.UI
         #region 事件
 
         #region 窗口加载
+
         private void FrmSelectMenu_Load(object sender, EventArgs e)
         {
             txtDate.Text = DateTime.Now.ToShortDateString();
             txtTime.Text = DateTime.Now.ToLongTimeString();
+
+            OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
+            onLoadSystemCommonData.GetSysControlList();
+
+            string strImg = "";
+            if (CommonData.SysControlList.Any())
+            {
+                sysControlInfo = CommonData.SysControlList.FirstOrDefault();
+            }
+            else
+            {
+                MessageBox.Show("S001:System data error,Please contact system Administrator!");
+                Close();
+            }
         }
+
         #endregion
 
         #region Takeaway按钮
         private void btnTakeaway_Click(object sender, EventArgs e)
         {
-            Hide();
-            FrmTAMain frmTaMain = new FrmTAMain(userInfo);
-            frmTaMain.ShowDialog();
+            if (sysControlInfo.IsTakeaway.Equals("Y"))
+            {
+                Hide();
+                FrmTAMain frmTaMain = new FrmTAMain(userInfo);
+                frmTaMain.ShowDialog();
+            }
         }
         #endregion
 
         #region Eat In按钮
         private void btnEatIn_Click(object sender, EventArgs e)
         {
-
+            if (sysControlInfo.IsEatIn.Equals("Y"))
+            {
+                
+            }
         }
         #endregion
 
         #region QuickFood按钮
         private void btnQuickFood_Click(object sender, EventArgs e)
         {
-
+            if (sysControlInfo.IsQuickFood.Equals("Y"))
+            {
+                
+            }
         }
         #endregion
 
@@ -102,42 +129,42 @@ namespace SuperPOS.UI
         #region Takeaway按钮特效，鼠标经过时变更按钮颜色
         private void btnTakeaway_MouseMove(object sender, MouseEventArgs e)
         {
-            btnTakeaway.BackColor = Color.RoyalBlue;
+            if (sysControlInfo.IsTakeaway.Equals("Y")) btnTakeaway.BackColor = Color.RoyalBlue;
         }
         #endregion
 
         #region Takeaway按钮特效，鼠标离开时变回原颜色
         private void btnTakeaway_MouseLeave(object sender, EventArgs e)
         {
-            btnTakeaway.BackColor = Color.Silver;
+            if (sysControlInfo.IsTakeaway.Equals("Y")) btnTakeaway.BackColor = Color.Silver;
         }
         #endregion
 
         #region Eat In按钮特效，鼠标经过时变更按钮颜色
         private void btnEatIn_MouseMove(object sender, MouseEventArgs e)
         {
-            btnEatIn.BackColor = Color.RoyalBlue;
+            if (sysControlInfo.IsEatIn.Equals("Y")) btnEatIn.BackColor = Color.RoyalBlue;
         }
         #endregion
 
         #region Eat In按钮特效，鼠标离开时变回原颜色
         private void btnEatIn_MouseLeave(object sender, EventArgs e)
         {
-            btnEatIn.BackColor = Color.Silver;
+            if (sysControlInfo.IsEatIn.Equals("Y")) btnEatIn.BackColor = Color.Silver;
         }
         #endregion
 
         #region Quick Food按钮特效，鼠标经过时变更按钮颜色
         private void btnQuickFood_MouseMove(object sender, MouseEventArgs e)
         {
-            btnQuickFood.BackColor = Color.RoyalBlue;
+            if (sysControlInfo.IsQuickFood.Equals("Y")) btnQuickFood.BackColor = Color.RoyalBlue;
         }
         #endregion
 
         #region Quick Food按钮特效，鼠标离开时变回原颜色
         private void btnQuickFood_MouseLeave(object sender, EventArgs e)
         {
-            btnQuickFood.BackColor = Color.Silver;
+            if (sysControlInfo.IsQuickFood.Equals("Y")) btnQuickFood.BackColor = Color.Silver;
         }
         #endregion
 
