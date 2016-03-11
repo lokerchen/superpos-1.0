@@ -60,7 +60,10 @@ namespace SuperPOS.UI.Admin
             
             new OnLoadSystemCommonData().GetUsrMaintenance();
             if (CommonData.UsrMaintenanceList.Any(s => s.UsrCode.Equals(comBoxUsrList.Text.Substring(0, 3))))
+            {
+                usrMaintenanceInfo.SystemKey = CommonData.UsrMaintenanceList.FirstOrDefault(s => s.UsrCode.Equals(comBoxUsrList.Text.Substring(0, 3))).SystemKey;
                 _control.UpdateEntity(usrMaintenanceInfo);
+            }
             else
             {
                 usrMaintenanceInfo.SystemKey = Guid.NewGuid();
