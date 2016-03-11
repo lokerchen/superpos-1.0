@@ -74,8 +74,12 @@ namespace SuperPOS.UI.Admin
             switch (nodeName)
             {
                 case "101":
+                    FrmSysConfig frmSysConfig = new FrmSysConfig(userInfo);
+                    frmSysConfig.ShowDialog();
                     break;
                 case "102":
+                    FrmUsrMaintenance frmUsrMaintenance = new FrmUsrMaintenance(userInfo);
+                    frmUsrMaintenance.ShowDialog();
                     break;
                 case "103":
                     break;
