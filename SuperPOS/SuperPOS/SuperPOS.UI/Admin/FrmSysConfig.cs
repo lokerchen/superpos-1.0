@@ -21,6 +21,8 @@ namespace SuperPOS.UI.Admin
 
         private readonly EntityControl _control = new EntityControl();
 
+        private UserInfo userInfo = new UserInfo();
+
         public FrmSysConfig()
         {
             InitializeComponent();
@@ -33,14 +35,20 @@ namespace SuperPOS.UI.Admin
             InitializeComponent();
         }
 
+        public FrmSysConfig(UserInfo uInfo)
+        {
+            InitializeComponent();
+            userInfo = uInfo;
+        }
+
         #region 事件
 
         #region Exit按钮点击事件
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
-            frmAdminControl.ShowDialog();
+            //FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
+            //frmAdminControl.ShowDialog();
         }
         #endregion
 

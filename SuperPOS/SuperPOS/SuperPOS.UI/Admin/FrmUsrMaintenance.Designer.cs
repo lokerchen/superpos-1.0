@@ -171,6 +171,7 @@
             this.grpBoxEatIn.Controls.Add(this.chkEIPrintBill);
             this.grpBoxEatIn.Controls.Add(this.chkEIPay);
             this.grpBoxEatIn.Controls.Add(this.chkEICtrlPanel);
+            this.grpBoxEatIn.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxEatIn.Location = new System.Drawing.Point(643, 83);
             this.grpBoxEatIn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxEatIn.Name = "grpBoxEatIn";
@@ -186,7 +187,7 @@
             this.chkEIPrtBillDisc.Location = new System.Drawing.Point(16, 385);
             this.chkEIPrtBillDisc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEIPrtBillDisc.Name = "chkEIPrtBillDisc";
-            this.chkEIPrtBillDisc.Size = new System.Drawing.Size(176, 25);
+            this.chkEIPrtBillDisc.Size = new System.Drawing.Size(159, 24);
             this.chkEIPrtBillDisc.TabIndex = 9;
             this.chkEIPrtBillDisc.Text = "Print Bill / Discount";
             this.chkEIPrtBillDisc.UseVisualStyleBackColor = true;
@@ -197,7 +198,7 @@
             this.chkEISOPrtReceipt.Location = new System.Drawing.Point(16, 299);
             this.chkEISOPrtReceipt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEISOPrtReceipt.Name = "chkEISOPrtReceipt";
-            this.chkEISOPrtReceipt.Size = new System.Drawing.Size(234, 25);
+            this.chkEISOPrtReceipt.Size = new System.Drawing.Size(207, 24);
             this.chkEISOPrtReceipt.TabIndex = 8;
             this.chkEISOPrtReceipt.Text = "Show Order / Print Receipt";
             this.chkEISOPrtReceipt.UseVisualStyleBackColor = true;
@@ -208,7 +209,7 @@
             this.chkEISOEditOrder.Location = new System.Drawing.Point(16, 268);
             this.chkEISOEditOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEISOEditOrder.Name = "chkEISOEditOrder";
-            this.chkEISOEditOrder.Size = new System.Drawing.Size(215, 25);
+            this.chkEISOEditOrder.Size = new System.Drawing.Size(189, 24);
             this.chkEISOEditOrder.TabIndex = 7;
             this.chkEISOEditOrder.Text = "Show Order / Edit Order";
             this.chkEISOEditOrder.UseVisualStyleBackColor = true;
@@ -219,7 +220,7 @@
             this.chkEISOChangePayment.Location = new System.Drawing.Point(16, 235);
             this.chkEISOChangePayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEISOChangePayment.Name = "chkEISOChangePayment";
-            this.chkEISOChangePayment.Size = new System.Drawing.Size(268, 25);
+            this.chkEISOChangePayment.Size = new System.Drawing.Size(236, 24);
             this.chkEISOChangePayment.TabIndex = 6;
             this.chkEISOChangePayment.Text = "Show Order / Change Payment";
             this.chkEISOChangePayment.UseVisualStyleBackColor = true;
@@ -230,7 +231,7 @@
             this.chkEISOPrtAcctSummary.Location = new System.Drawing.Point(16, 203);
             this.chkEISOPrtAcctSummary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEISOPrtAcctSummary.Name = "chkEISOPrtAcctSummary";
-            this.chkEISOPrtAcctSummary.Size = new System.Drawing.Size(288, 25);
+            this.chkEISOPrtAcctSummary.Size = new System.Drawing.Size(253, 24);
             this.chkEISOPrtAcctSummary.TabIndex = 5;
             this.chkEISOPrtAcctSummary.Text = "Show Order / Print Acct Summary";
             this.chkEISOPrtAcctSummary.UseVisualStyleBackColor = true;
@@ -241,7 +242,7 @@
             this.chkEITblBooking.Location = new System.Drawing.Point(16, 171);
             this.chkEITblBooking.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEITblBooking.Name = "chkEITblBooking";
-            this.chkEITblBooking.Size = new System.Drawing.Size(138, 25);
+            this.chkEITblBooking.Size = new System.Drawing.Size(126, 24);
             this.chkEITblBooking.TabIndex = 4;
             this.chkEITblBooking.Text = "Table Booking";
             this.chkEITblBooking.UseVisualStyleBackColor = true;
@@ -252,7 +253,7 @@
             this.chkEIRemoveItemAfterPrt.Location = new System.Drawing.Point(16, 137);
             this.chkEIRemoveItemAfterPrt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEIRemoveItemAfterPrt.Name = "chkEIRemoveItemAfterPrt";
-            this.chkEIRemoveItemAfterPrt.Size = new System.Drawing.Size(233, 25);
+            this.chkEIRemoveItemAfterPrt.Size = new System.Drawing.Size(206, 24);
             this.chkEIRemoveItemAfterPrt.TabIndex = 3;
             this.chkEIRemoveItemAfterPrt.Text = "Remove Item After Printed";
             this.chkEIRemoveItemAfterPrt.UseVisualStyleBackColor = true;
@@ -263,7 +264,7 @@
             this.chkEIPrintBill.Location = new System.Drawing.Point(16, 106);
             this.chkEIPrintBill.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEIPrintBill.Name = "chkEIPrintBill";
-            this.chkEIPrintBill.Size = new System.Drawing.Size(92, 25);
+            this.chkEIPrintBill.Size = new System.Drawing.Size(85, 24);
             this.chkEIPrintBill.TabIndex = 2;
             this.chkEIPrintBill.Text = "Print Bill";
             this.chkEIPrintBill.UseVisualStyleBackColor = true;
@@ -274,7 +275,7 @@
             this.chkEIPay.Location = new System.Drawing.Point(16, 74);
             this.chkEIPay.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEIPay.Name = "chkEIPay";
-            this.chkEIPay.Size = new System.Drawing.Size(56, 25);
+            this.chkEIPay.Size = new System.Drawing.Size(52, 24);
             this.chkEIPay.TabIndex = 1;
             this.chkEIPay.Text = "Pay";
             this.chkEIPay.UseVisualStyleBackColor = true;
@@ -285,7 +286,7 @@
             this.chkEICtrlPanel.Location = new System.Drawing.Point(16, 41);
             this.chkEICtrlPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkEICtrlPanel.Name = "chkEICtrlPanel";
-            this.chkEICtrlPanel.Size = new System.Drawing.Size(133, 25);
+            this.chkEICtrlPanel.Size = new System.Drawing.Size(120, 24);
             this.chkEICtrlPanel.TabIndex = 0;
             this.chkEICtrlPanel.Text = "Control Panel";
             this.chkEICtrlPanel.UseVisualStyleBackColor = true;
@@ -317,6 +318,7 @@
             this.grpBoxGeneral.Controls.Add(this.chkGSSDataManager);
             this.grpBoxGeneral.Controls.Add(this.chkGSSUsrMaintenance);
             this.grpBoxGeneral.Controls.Add(this.chkGSSSysConf);
+            this.grpBoxGeneral.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxGeneral.Location = new System.Drawing.Point(6, 332);
             this.grpBoxGeneral.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxGeneral.Name = "grpBoxGeneral";
@@ -332,7 +334,7 @@
             this.chkGOpenCashDrawer.Location = new System.Drawing.Point(343, 254);
             this.chkGOpenCashDrawer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGOpenCashDrawer.Name = "chkGOpenCashDrawer";
-            this.chkGOpenCashDrawer.Size = new System.Drawing.Size(173, 25);
+            this.chkGOpenCashDrawer.Size = new System.Drawing.Size(153, 24);
             this.chkGOpenCashDrawer.TabIndex = 15;
             this.chkGOpenCashDrawer.Text = "Open Cash Drawer";
             this.chkGOpenCashDrawer.UseVisualStyleBackColor = true;
@@ -343,7 +345,7 @@
             this.chkGASPrtSalesRpt.Location = new System.Drawing.Point(343, 222);
             this.chkGASPrtSalesRpt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGASPrtSalesRpt.Name = "chkGASPrtSalesRpt";
-            this.chkGASPrtSalesRpt.Size = new System.Drawing.Size(296, 25);
+            this.chkGASPrtSalesRpt.Size = new System.Drawing.Size(262, 24);
             this.chkGASPrtSalesRpt.TabIndex = 14;
             this.chkGASPrtSalesRpt.Text = "Account Summary / Print Sales Rpt";
             this.chkGASPrtSalesRpt.UseVisualStyleBackColor = true;
@@ -354,7 +356,7 @@
             this.chkGEIPrtSetup.Location = new System.Drawing.Point(343, 189);
             this.chkGEIPrtSetup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGEIPrtSetup.Name = "chkGEIPrtSetup";
-            this.chkGEIPrtSetup.Size = new System.Drawing.Size(177, 25);
+            this.chkGEIPrtSetup.Size = new System.Drawing.Size(157, 24);
             this.chkGEIPrtSetup.TabIndex = 13;
             this.chkGEIPrtSetup.Text = "Eat-In / Print Setup";
             this.chkGEIPrtSetup.UseVisualStyleBackColor = true;
@@ -365,7 +367,7 @@
             this.chkGTakeawayPrtSetup.Location = new System.Drawing.Point(343, 157);
             this.chkGTakeawayPrtSetup.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGTakeawayPrtSetup.Name = "chkGTakeawayPrtSetup";
-            this.chkGTakeawayPrtSetup.Size = new System.Drawing.Size(206, 25);
+            this.chkGTakeawayPrtSetup.Size = new System.Drawing.Size(183, 24);
             this.chkGTakeawayPrtSetup.TabIndex = 12;
             this.chkGTakeawayPrtSetup.Text = "Takeaway / Print Setup";
             this.chkGTakeawayPrtSetup.UseVisualStyleBackColor = true;
@@ -376,7 +378,7 @@
             this.chkGEatInConfig.Location = new System.Drawing.Point(343, 126);
             this.chkGEatInConfig.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGEatInConfig.Name = "chkGEatInConfig";
-            this.chkGEatInConfig.Size = new System.Drawing.Size(186, 25);
+            this.chkGEatInConfig.Size = new System.Drawing.Size(166, 24);
             this.chkGEatInConfig.TabIndex = 11;
             this.chkGEatInConfig.Text = "Eat-In Configuration";
             this.chkGEatInConfig.UseVisualStyleBackColor = true;
@@ -387,7 +389,7 @@
             this.chkGTakeawayConfig.Location = new System.Drawing.Point(343, 93);
             this.chkGTakeawayConfig.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGTakeawayConfig.Name = "chkGTakeawayConfig";
-            this.chkGTakeawayConfig.Size = new System.Drawing.Size(215, 25);
+            this.chkGTakeawayConfig.Size = new System.Drawing.Size(192, 24);
             this.chkGTakeawayConfig.TabIndex = 10;
             this.chkGTakeawayConfig.Text = "Takeaway Configuration";
             this.chkGTakeawayConfig.UseVisualStyleBackColor = true;
@@ -398,7 +400,7 @@
             this.chkGSSShiftCode.Location = new System.Drawing.Point(343, 60);
             this.chkGSSShiftCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGSSShiftCode.Name = "chkGSSShiftCode";
-            this.chkGSSShiftCode.Size = new System.Drawing.Size(239, 25);
+            this.chkGSSShiftCode.Size = new System.Drawing.Size(211, 24);
             this.chkGSSShiftCode.TabIndex = 9;
             this.chkGSSShiftCode.Text = "System Setting / Shift Code";
             this.chkGSSShiftCode.UseVisualStyleBackColor = true;
@@ -409,7 +411,7 @@
             this.chkGSSComputerAdd.Location = new System.Drawing.Point(343, 28);
             this.chkGSSComputerAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGSSComputerAdd.Name = "chkGSSComputerAdd";
-            this.chkGSSComputerAdd.Size = new System.Drawing.Size(276, 25);
+            this.chkGSSComputerAdd.Size = new System.Drawing.Size(243, 24);
             this.chkGSSComputerAdd.TabIndex = 8;
             this.chkGSSComputerAdd.Text = "System Setting / Computer Add.";
             this.chkGSSComputerAdd.UseVisualStyleBackColor = true;
@@ -420,7 +422,7 @@
             this.chkGLogon.Location = new System.Drawing.Point(20, 254);
             this.chkGLogon.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGLogon.Name = "chkGLogon";
-            this.chkGLogon.Size = new System.Drawing.Size(277, 25);
+            this.chkGLogon.Size = new System.Drawing.Size(244, 24);
             this.chkGLogon.TabIndex = 7;
             this.chkGLogon.Text = "Logon screen EXIT POS software";
             this.chkGLogon.UseVisualStyleBackColor = true;
@@ -431,7 +433,7 @@
             this.chkGASSummaryView.Location = new System.Drawing.Point(20, 222);
             this.chkGASSummaryView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGASSummaryView.Name = "chkGASSummaryView";
-            this.chkGASSummaryView.Size = new System.Drawing.Size(300, 25);
+            this.chkGASSummaryView.Size = new System.Drawing.Size(264, 24);
             this.chkGASSummaryView.TabIndex = 6;
             this.chkGASSummaryView.Text = "Account Summary / Summary View";
             this.chkGASSummaryView.UseVisualStyleBackColor = true;
@@ -442,7 +444,7 @@
             this.chkRptAccountSummary.Location = new System.Drawing.Point(20, 189);
             this.chkRptAccountSummary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkRptAccountSummary.Name = "chkRptAccountSummary";
-            this.chkRptAccountSummary.Size = new System.Drawing.Size(261, 25);
+            this.chkRptAccountSummary.Size = new System.Drawing.Size(232, 24);
             this.chkRptAccountSummary.TabIndex = 5;
             this.chkRptAccountSummary.Text = "Reporting / Account Summary";
             this.chkRptAccountSummary.UseVisualStyleBackColor = true;
@@ -453,7 +455,7 @@
             this.chkRptRpt.Location = new System.Drawing.Point(20, 157);
             this.chkRptRpt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkRptRpt.Name = "chkRptRpt";
-            this.chkRptRpt.Size = new System.Drawing.Size(179, 25);
+            this.chkRptRpt.Size = new System.Drawing.Size(160, 24);
             this.chkRptRpt.TabIndex = 4;
             this.chkRptRpt.Text = "Reporting / Reports";
             this.chkRptRpt.UseVisualStyleBackColor = true;
@@ -464,7 +466,7 @@
             this.chkGSSCompactDB.Location = new System.Drawing.Point(20, 126);
             this.chkGSSCompactDB.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGSSCompactDB.Name = "chkGSSCompactDB";
-            this.chkGSSCompactDB.Size = new System.Drawing.Size(304, 25);
+            this.chkGSSCompactDB.Size = new System.Drawing.Size(268, 24);
             this.chkGSSCompactDB.TabIndex = 3;
             this.chkGSSCompactDB.Text = "System Setting / Compact Database";
             this.chkGSSCompactDB.UseVisualStyleBackColor = true;
@@ -475,7 +477,7 @@
             this.chkGSSDataManager.Location = new System.Drawing.Point(20, 93);
             this.chkGSSDataManager.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGSSDataManager.Name = "chkGSSDataManager";
-            this.chkGSSDataManager.Size = new System.Drawing.Size(269, 25);
+            this.chkGSSDataManager.Size = new System.Drawing.Size(238, 24);
             this.chkGSSDataManager.TabIndex = 2;
             this.chkGSSDataManager.Text = "System Setting / Data Manager";
             this.chkGSSDataManager.UseVisualStyleBackColor = true;
@@ -486,7 +488,7 @@
             this.chkGSSUsrMaintenance.Location = new System.Drawing.Point(20, 60);
             this.chkGSSUsrMaintenance.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGSSUsrMaintenance.Name = "chkGSSUsrMaintenance";
-            this.chkGSSUsrMaintenance.Size = new System.Drawing.Size(298, 25);
+            this.chkGSSUsrMaintenance.Size = new System.Drawing.Size(263, 24);
             this.chkGSSUsrMaintenance.TabIndex = 1;
             this.chkGSSUsrMaintenance.Text = "System Setting / User Maintenance";
             this.chkGSSUsrMaintenance.UseVisualStyleBackColor = true;
@@ -497,7 +499,7 @@
             this.chkGSSSysConf.Location = new System.Drawing.Point(20, 28);
             this.chkGSSSysConf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkGSSSysConf.Name = "chkGSSSysConf";
-            this.chkGSSSysConf.Size = new System.Drawing.Size(269, 25);
+            this.chkGSSSysConf.Size = new System.Drawing.Size(237, 24);
             this.chkGSSSysConf.TabIndex = 0;
             this.chkGSSSysConf.Text = "System Setting / System Config";
             this.chkGSSSysConf.UseVisualStyleBackColor = true;
@@ -510,6 +512,7 @@
             this.grpBoxQuickDining.Controls.Add(this.chkQDSOPrtAcctSummary);
             this.grpBoxQuickDining.Controls.Add(this.chkQDChangePrice);
             this.grpBoxQuickDining.Controls.Add(this.chkQDCtrlPanel);
+            this.grpBoxQuickDining.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxQuickDining.Location = new System.Drawing.Point(330, 82);
             this.grpBoxQuickDining.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxQuickDining.Name = "grpBoxQuickDining";
@@ -525,7 +528,7 @@
             this.chkQDSOPrtReceipt.Location = new System.Drawing.Point(19, 200);
             this.chkQDSOPrtReceipt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkQDSOPrtReceipt.Name = "chkQDSOPrtReceipt";
-            this.chkQDSOPrtReceipt.Size = new System.Drawing.Size(234, 25);
+            this.chkQDSOPrtReceipt.Size = new System.Drawing.Size(207, 24);
             this.chkQDSOPrtReceipt.TabIndex = 5;
             this.chkQDSOPrtReceipt.Text = "Show Order / Print Receipt";
             this.chkQDSOPrtReceipt.UseVisualStyleBackColor = true;
@@ -536,7 +539,7 @@
             this.chkQDSOEditOrder.Location = new System.Drawing.Point(19, 168);
             this.chkQDSOEditOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkQDSOEditOrder.Name = "chkQDSOEditOrder";
-            this.chkQDSOEditOrder.Size = new System.Drawing.Size(215, 25);
+            this.chkQDSOEditOrder.Size = new System.Drawing.Size(189, 24);
             this.chkQDSOEditOrder.TabIndex = 4;
             this.chkQDSOEditOrder.Text = "Show Order / Edit Order";
             this.chkQDSOEditOrder.UseVisualStyleBackColor = true;
@@ -547,7 +550,7 @@
             this.chkQDSOChangePayment.Location = new System.Drawing.Point(19, 136);
             this.chkQDSOChangePayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkQDSOChangePayment.Name = "chkQDSOChangePayment";
-            this.chkQDSOChangePayment.Size = new System.Drawing.Size(268, 25);
+            this.chkQDSOChangePayment.Size = new System.Drawing.Size(236, 24);
             this.chkQDSOChangePayment.TabIndex = 3;
             this.chkQDSOChangePayment.Text = "Show Order / Change Payment";
             this.chkQDSOChangePayment.UseVisualStyleBackColor = true;
@@ -558,7 +561,7 @@
             this.chkQDSOPrtAcctSummary.Location = new System.Drawing.Point(19, 104);
             this.chkQDSOPrtAcctSummary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkQDSOPrtAcctSummary.Name = "chkQDSOPrtAcctSummary";
-            this.chkQDSOPrtAcctSummary.Size = new System.Drawing.Size(288, 25);
+            this.chkQDSOPrtAcctSummary.Size = new System.Drawing.Size(253, 24);
             this.chkQDSOPrtAcctSummary.TabIndex = 2;
             this.chkQDSOPrtAcctSummary.Text = "Show Order / Print Acct Summary";
             this.chkQDSOPrtAcctSummary.UseVisualStyleBackColor = true;
@@ -569,7 +572,7 @@
             this.chkQDChangePrice.Location = new System.Drawing.Point(19, 71);
             this.chkQDChangePrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkQDChangePrice.Name = "chkQDChangePrice";
-            this.chkQDChangePrice.Size = new System.Drawing.Size(130, 25);
+            this.chkQDChangePrice.Size = new System.Drawing.Size(117, 24);
             this.chkQDChangePrice.TabIndex = 1;
             this.chkQDChangePrice.Text = "Change Price";
             this.chkQDChangePrice.UseVisualStyleBackColor = true;
@@ -580,7 +583,7 @@
             this.chkQDCtrlPanel.Location = new System.Drawing.Point(19, 39);
             this.chkQDCtrlPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkQDCtrlPanel.Name = "chkQDCtrlPanel";
-            this.chkQDCtrlPanel.Size = new System.Drawing.Size(133, 25);
+            this.chkQDCtrlPanel.Size = new System.Drawing.Size(120, 24);
             this.chkQDCtrlPanel.TabIndex = 0;
             this.chkQDCtrlPanel.Text = "Control Panel";
             this.chkQDCtrlPanel.UseVisualStyleBackColor = true;
@@ -594,6 +597,7 @@
             this.grpBoxTakeaway.Controls.Add(this.chkTASOPrtAcctSummary);
             this.grpBoxTakeaway.Controls.Add(this.chkTAChangePrice);
             this.grpBoxTakeaway.Controls.Add(this.chkTACtrlPanel);
+            this.grpBoxTakeaway.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxTakeaway.Location = new System.Drawing.Point(6, 79);
             this.grpBoxTakeaway.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxTakeaway.Name = "grpBoxTakeaway";
@@ -609,7 +613,7 @@
             this.chkTACusLstExprotData.Location = new System.Drawing.Point(18, 216);
             this.chkTACusLstExprotData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkTACusLstExprotData.Name = "chkTACusLstExprotData";
-            this.chkTACusLstExprotData.Size = new System.Drawing.Size(240, 25);
+            this.chkTACusLstExprotData.Size = new System.Drawing.Size(211, 24);
             this.chkTACusLstExprotData.TabIndex = 6;
             this.chkTACusLstExprotData.Text = "Customer List / Export Data";
             this.chkTACusLstExprotData.UseVisualStyleBackColor = true;
@@ -620,7 +624,7 @@
             this.chkTASOPrintReceipt.Location = new System.Drawing.Point(18, 189);
             this.chkTASOPrintReceipt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkTASOPrintReceipt.Name = "chkTASOPrintReceipt";
-            this.chkTASOPrintReceipt.Size = new System.Drawing.Size(234, 25);
+            this.chkTASOPrintReceipt.Size = new System.Drawing.Size(207, 24);
             this.chkTASOPrintReceipt.TabIndex = 5;
             this.chkTASOPrintReceipt.Text = "Show Order / Print Receipt";
             this.chkTASOPrintReceipt.UseVisualStyleBackColor = true;
@@ -631,7 +635,7 @@
             this.chkTASOEditOrder.Location = new System.Drawing.Point(18, 157);
             this.chkTASOEditOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkTASOEditOrder.Name = "chkTASOEditOrder";
-            this.chkTASOEditOrder.Size = new System.Drawing.Size(215, 25);
+            this.chkTASOEditOrder.Size = new System.Drawing.Size(189, 24);
             this.chkTASOEditOrder.TabIndex = 4;
             this.chkTASOEditOrder.Text = "Show Order / Edit Order";
             this.chkTASOEditOrder.UseVisualStyleBackColor = true;
@@ -642,7 +646,7 @@
             this.chkTASOChangePayment.Location = new System.Drawing.Point(18, 124);
             this.chkTASOChangePayment.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkTASOChangePayment.Name = "chkTASOChangePayment";
-            this.chkTASOChangePayment.Size = new System.Drawing.Size(268, 25);
+            this.chkTASOChangePayment.Size = new System.Drawing.Size(236, 24);
             this.chkTASOChangePayment.TabIndex = 3;
             this.chkTASOChangePayment.Text = "Show Order / Change Payment";
             this.chkTASOChangePayment.UseVisualStyleBackColor = true;
@@ -653,7 +657,7 @@
             this.chkTASOPrtAcctSummary.Location = new System.Drawing.Point(18, 92);
             this.chkTASOPrtAcctSummary.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkTASOPrtAcctSummary.Name = "chkTASOPrtAcctSummary";
-            this.chkTASOPrtAcctSummary.Size = new System.Drawing.Size(288, 25);
+            this.chkTASOPrtAcctSummary.Size = new System.Drawing.Size(253, 24);
             this.chkTASOPrtAcctSummary.TabIndex = 2;
             this.chkTASOPrtAcctSummary.Text = "Show Order / Print Acct Summary";
             this.chkTASOPrtAcctSummary.UseVisualStyleBackColor = true;
@@ -664,7 +668,7 @@
             this.chkTAChangePrice.Location = new System.Drawing.Point(18, 59);
             this.chkTAChangePrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkTAChangePrice.Name = "chkTAChangePrice";
-            this.chkTAChangePrice.Size = new System.Drawing.Size(130, 25);
+            this.chkTAChangePrice.Size = new System.Drawing.Size(117, 24);
             this.chkTAChangePrice.TabIndex = 1;
             this.chkTAChangePrice.Text = "Change Price";
             this.chkTAChangePrice.UseVisualStyleBackColor = true;
@@ -675,7 +679,7 @@
             this.chkTACtrlPanel.Location = new System.Drawing.Point(18, 26);
             this.chkTACtrlPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkTACtrlPanel.Name = "chkTACtrlPanel";
-            this.chkTACtrlPanel.Size = new System.Drawing.Size(133, 25);
+            this.chkTACtrlPanel.Size = new System.Drawing.Size(120, 24);
             this.chkTACtrlPanel.TabIndex = 0;
             this.chkTACtrlPanel.Text = "Control Panel";
             this.chkTACtrlPanel.UseVisualStyleBackColor = true;

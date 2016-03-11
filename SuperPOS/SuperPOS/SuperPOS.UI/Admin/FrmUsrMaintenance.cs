@@ -16,17 +16,24 @@ namespace SuperPOS.UI.Admin
     {
         private UserMaintenanceInfo usrMaintenanceInfo = null;
         private readonly EntityControl _control = new EntityControl();
+        private UserInfo userInfo = new UserInfo();
 
         public FrmUsrMaintenance()
         {
             InitializeComponent();
         }
 
+        public FrmUsrMaintenance(UserInfo uInfo)
+        {
+            InitializeComponent();
+            userInfo = uInfo;
+        }
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
-            frmAdminControl.ShowDialog();
+            //FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
+            //frmAdminControl.ShowDialog();
         }
 
         private void btnEditUsr_Click(object sender, EventArgs e)
