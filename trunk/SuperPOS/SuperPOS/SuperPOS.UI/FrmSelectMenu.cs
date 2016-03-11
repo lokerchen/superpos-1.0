@@ -113,10 +113,16 @@ namespace SuperPOS.UI
         #region Control Panel按钮
         private void btnCtlPanel_Click(object sender, EventArgs e)
         {
-            Hide();
-            FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel(userInfo);
-            frmAdminControl.ShowDialog();
+            //权限判断
+            if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "401"))
+            {
+                Hide();
+                FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel(userInfo);
+                frmAdminControl.ShowDialog();
+            }
+            else MessageBox.Show("You do not have permission to access!");
         }
+
         #endregion
 
         #region Show Order按钮
