@@ -18,6 +18,7 @@ namespace SuperPOS.UI.Admin
     {
         private UserInfo userInfo = new UserInfo();
         private bool isShowSysCtl = false; //是否显示System Control按钮
+        private UserMaintenanceInfo userMaintenance = null;
 
         public FrmAdminControlPanel()
         {
@@ -37,7 +38,7 @@ namespace SuperPOS.UI.Admin
             string strImgWelcome = "";
             strImgWelcome = CommonFunction.GetSysImg("1");
             picBoxWelCome.Image = File.Exists(strImgWelcome) ? Image.FromFile(strImgWelcome) : null;
-
+            
             treeViewMenu.ExpandAll();
 
             if (userInfo.IsSysCtrl.Equals("0"))
@@ -71,25 +72,53 @@ namespace SuperPOS.UI.Admin
         private void treeViewMenu_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             string nodeName = e.Node.Name;
+            string strMsg = "You do not have permission to access!";
             switch (nodeName)
             {
                 case "101":
-                    FrmSysConfig frmSysConfig = new FrmSysConfig(userInfo);
-                    frmSysConfig.ShowDialog();
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "402"))
+                    {
+                        FrmSysConfig frmSysConfig = new FrmSysConfig(userInfo);
+                        frmSysConfig.ShowDialog();
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "102":
-                    FrmUsrMaintenance frmUsrMaintenance = new FrmUsrMaintenance(userInfo);
-                    frmUsrMaintenance.ShowDialog();
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "403"))
+                    {
+                        FrmUsrMaintenance frmUsrMaintenance = new FrmUsrMaintenance(userInfo);
+                        frmUsrMaintenance.ShowDialog();
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "103":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "403"))
+                    {
+                        
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "104":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "404"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "105":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "409"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "106":
-                    FrmShiftCodeEntry frmShiftCode = new FrmShiftCodeEntry(userInfo);
-                    frmShiftCode.ShowDialog();
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "410"))
+                    {
+                        FrmShiftCodeEntry frmShiftCode = new FrmShiftCodeEntry(userInfo);
+                        frmShiftCode.ShowDialog();
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "201":
                     break;
