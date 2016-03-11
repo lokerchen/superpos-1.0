@@ -114,6 +114,7 @@
             this.picBoxWelCome.Location = new System.Drawing.Point(50, 67);
             this.picBoxWelCome.Name = "picBoxWelCome";
             this.picBoxWelCome.Size = new System.Drawing.Size(462, 295);
+            this.picBoxWelCome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picBoxWelCome.TabIndex = 0;
             this.picBoxWelCome.TabStop = false;
             // 
