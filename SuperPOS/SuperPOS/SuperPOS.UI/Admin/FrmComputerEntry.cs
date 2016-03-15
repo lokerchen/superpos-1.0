@@ -16,9 +16,17 @@ namespace SuperPOS.UI.Admin
     {
         private readonly EntityControl _control = new EntityControl();
         private int iStatus;
+        private UserInfo userInfo = new UserInfo();
+
         public FrmComputerEntry()
         {
             InitializeComponent();
+        }
+
+        public FrmComputerEntry(UserInfo uInfo)
+        {
+            InitializeComponent();
+            userInfo = uInfo;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -116,8 +124,8 @@ namespace SuperPOS.UI.Admin
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
-            frmAdminControl.ShowDialog();
+            //FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
+            //frmAdminControl.ShowDialog();
         }
 
         private void dgvAddr_SelectionChanged(object sender, EventArgs e)
