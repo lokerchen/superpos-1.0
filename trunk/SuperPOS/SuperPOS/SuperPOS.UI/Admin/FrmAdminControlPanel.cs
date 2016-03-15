@@ -109,7 +109,8 @@ namespace SuperPOS.UI.Admin
                 case "105":
                     if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "409"))
                     {
-
+                        FrmComputerEntry frmComputerEntry = new FrmComputerEntry(userInfo);
+                        frmComputerEntry.ShowDialog();
                     }
                     else MessageBox.Show(strMsg);
                     break;
