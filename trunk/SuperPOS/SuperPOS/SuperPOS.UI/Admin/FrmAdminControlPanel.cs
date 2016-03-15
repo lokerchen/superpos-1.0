@@ -94,15 +94,15 @@ namespace SuperPOS.UI.Admin
                 case "103":
                     if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "403"))
                     {
-                        FrmCompactDB frmCompactDb = new FrmCompactDB(userInfo);
-                        frmCompactDb.ShowDialog();
+                        
                     }
                     else MessageBox.Show(strMsg);
                     break;
                 case "104":
                     if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "404"))
                     {
-
+                        FrmCompactDB frmCompactDb = new FrmCompactDB(userInfo);
+                        frmCompactDb.ShowDialog();
                     }
                     else MessageBox.Show(strMsg);
                     break;
