@@ -8,15 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using SuperPOS.Domain.Entities;
 
 namespace SuperPOS.UI.Admin
 {
     public partial class FrmCompactDB : Form
     {
         private string fileName = "";
+        private UserInfo userInfo = new UserInfo();
         public FrmCompactDB()
         {
             InitializeComponent();
+        }
+
+        public FrmCompactDB(UserInfo uInfo)
+        {
+            InitializeComponent();
+            userInfo = uInfo;
         }
 
         private void btnBackupData_Click(object sender, EventArgs e)
@@ -88,8 +96,8 @@ namespace SuperPOS.UI.Admin
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmAdminControlPanel frmAdminControlPanel = new FrmAdminControlPanel();
-            frmAdminControlPanel.ShowDialog();
+            //FrmAdminControlPanel frmAdminControlPanel = new FrmAdminControlPanel();
+            //frmAdminControlPanel.ShowDialog();
         }
     }
 }
