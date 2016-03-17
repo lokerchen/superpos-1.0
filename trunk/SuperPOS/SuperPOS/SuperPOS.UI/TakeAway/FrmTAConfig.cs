@@ -120,8 +120,8 @@ namespace SuperPOS.UI.TakeAway
         private void btnGSExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
-            frmAdminControl.ShowDialog();
+            //FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
+            //frmAdminControl.ShowDialog();
         }
         #endregion
 
@@ -143,8 +143,8 @@ namespace SuperPOS.UI.TakeAway
         private void btnDSExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
-            frmAdminControl.ShowDialog();
+            //FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
+            //frmAdminControl.ShowDialog();
         }
         #endregion
 
@@ -236,5 +236,10 @@ namespace SuperPOS.UI.TakeAway
             e.Handled = !(Char.IsNumber(e.KeyChar)) && e.KeyChar != (char)13 && e.KeyChar != (char)8 && e.KeyChar != '.';
         }
         #endregion
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }
