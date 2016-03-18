@@ -123,24 +123,75 @@ namespace SuperPOS.UI.Admin
                     else MessageBox.Show(strMsg);
                     break;
                 case "201":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+                        FrmTAConfig frmTaConfig = new FrmTAConfig(userInfo);
+                        frmTaConfig.ShowDialog();
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "202":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "203":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "204":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "205":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "206":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "207":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "208":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "209":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "210":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+
+                    }
+                    else MessageBox.Show(strMsg);
                     break;
                 case "5":
                     FrmSysCtl frmSysCtl = new FrmSysCtl();
