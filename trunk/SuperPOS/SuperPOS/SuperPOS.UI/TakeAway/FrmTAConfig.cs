@@ -6,16 +6,30 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SuperPOS.Common;
 using SuperPOS.DAL;
+using SuperPOS.Domain.Entities;
 using SuperPOS.UI.Admin;
 
 namespace SuperPOS.UI.TakeAway
 {
     public partial class FrmTAConfig : Form
     {
+        private UserInfo userInfo = new UserInfo();
+        private Guid TaPayTypeDiscSysKey = Guid.NewGuid();
+        private List<TAPayTypeInfo> payTypeList = new List<TAPayTypeInfo>();
+        private List<TADistChargeInfo> distChrgList = new List<TADistChargeInfo>();
+        private Guid DisChrgRmkSyskey = Guid.NewGuid();
+        private readonly EntityControl _control = new EntityControl();
         public FrmTAConfig()
         {
             InitializeComponent();
+        }
+
+        public FrmTAConfig(UserInfo uInfo)
+        {
+            InitializeComponent();
+            userInfo = uInfo;
         }
 
         private void FrmTAConfig_Load(object sender, EventArgs e)
@@ -29,7 +43,8 @@ namespace SuperPOS.UI.TakeAway
             onLoad.GetTAPostCodeRemark();
 
             #region 绑定General Setting的Payment Type
-            dgvTAPayType.DataSource = CommonData.TaPayTypeList;
+            payTypeList = CommonData.TaPayTypeList.ToList();
+            dgvTAPayType.DataSource = payTypeList;
             dgvTAPayType.Columns[0].Visible = false;
             dgvTAPayType.Columns[5].Visible = false;
             dgvTAPayType.Columns[1].HeaderCell.Value = "Payment Type";
@@ -51,6 +66,7 @@ namespace SuperPOS.UI.TakeAway
             else
             {
                 var qList = CommonData.TaPayTypeDiscList.FirstOrDefault();
+                TaPayTypeDiscSysKey = qList.SystemKey;
                 txtDeliveryDis.Text = qList.DeliveryDisc;
                 txtDeliveryDisThres.Text = qList.DeliveryDiscThres;
                 txtCollDis.Text = qList.CollectionDisc;
@@ -61,7 +77,8 @@ namespace SuperPOS.UI.TakeAway
             #endregion
 
             #region Delivery Setting Distance Charge
-            dgvDSDist.DataSource = CommonData.TaDistChargeList;
+            distChrgList = CommonData.TaDistChargeList.ToList();
+            dgvDSDist.DataSource = distChrgList;
             dgvDSDist.Columns[0].Visible = false;
             dgvDSDist.Columns[4].Visible = false;
             dgvDSDist.Columns[1].HeaderCell.Value = "Distance From";
@@ -79,6 +96,7 @@ namespace SuperPOS.UI.TakeAway
             else
             {
                 var qList = CommonData.TaDistChargeRemarkList.FirstOrDefault();
+                DisChrgRmkSyskey = qList.SystemKey;
                 txtPerMileThereafter.Text = qList.PerMileThereafter;
                 chkDiliveryChargeIncludeInOrder.Checked = qList.DeliveryChargeIncludesInOrder.Equals("Y");
                 txtIgnoreMiles.Text = qList.IgnoreDeliverySurchargeWhenDistExceeds;
@@ -128,14 +146,22 @@ namespace SuperPOS.UI.TakeAway
         #region General Settings Save按钮     
         private void btnGSSave_Click(object sender, EventArgs e)
         {
+            // 保存Payment Type
+            SavePayType();
 
+            // 保存Pay type discount
+            SavePayTypeDisc();
         }
         #endregion  
 
         #region Delivery Settings Save按钮     
         private void btnDSSave_Click(object sender, EventArgs e)
         {
+            //保存Delivery Distance Charge 列表
+            SaveDeliDistChrg();
 
+            //保存Delivery Surcharge和Charge Options
+            SaveDistChrgRmk();
         }
         #endregion
 
@@ -240,6 +266,47 @@ namespace SuperPOS.UI.TakeAway
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void SavePayType()
+        {
+            foreach (var payType in payTypeList) { _control.UpdateEntity(payType); }
+        }
+
+        private void SavePayTypeDisc()
+        {
+            TAPayTypeDiscInfo taPayTypeDisc = new TAPayTypeDiscInfo();
+            taPayTypeDisc.SystemKey = TaPayTypeDiscSysKey;
+            taPayTypeDisc.DeliveryDisc = txtDeliveryDis.Text;
+            taPayTypeDisc.DeliveryDiscThres = txtDeliveryDisThres.Text;
+            taPayTypeDisc.CollectionDisc = txtCollDis.Text;
+            taPayTypeDisc.CollectionDiscThres = txtCollDisThres.Text;
+            taPayTypeDisc.ShopDisc = txtShopDis.Text;
+            taPayTypeDisc.ShopDiscThres = txtShopDisThres.Text;
+            _control.UpdateEntity(taPayTypeDisc);
+        }
+
+        private void SaveDeliDistChrg()
+        {
+            foreach (var distChrg in distChrgList) { _control.UpdateEntity(distChrg); }
+        }
+
+        private void SaveDistChrgRmk()
+        {
+            TADistChargeRemarkInfo taDistChargeRemark = new TADistChargeRemarkInfo();
+            taDistChargeRemark.SystemKey = DisChrgRmkSyskey;
+            taDistChargeRemark.PerMileThereafter = txtPerMileThereafter.Text;
+            taDistChargeRemark.DeliveryChargeIncludesInOrder = chkDiliveryChargeIncludeInOrder.Checked ? "Y" : "N";
+            taDistChargeRemark.IgnoreDeliverySurchargeWhenDistExceeds = txtIgnoreMiles.Text;
+            taDistChargeRemark.IgnoreDeliveryDistChargeIfSurchargeAppl = chkIgnoreCharge.Checked ? "Y" : "N";
+            taDistChargeRemark.OrderThreshold = txtOrderThreshold.Text;
+            taDistChargeRemark.SurchargeAmount = txtSurchargeAmount.Text;
+            _control.UpdateEntity(taDistChargeRemark);
         }
     }
 }
