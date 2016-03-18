@@ -136,6 +136,7 @@
             this.tabControl1.Size = new System.Drawing.Size(593, 467);
             this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPage1
             // 
@@ -314,11 +315,11 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvTAPayType);
-            this.groupBox1.Location = new System.Drawing.Point(8, 8);
+            this.groupBox1.Location = new System.Drawing.Point(5, 8);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(566, 177);
+            this.groupBox1.Size = new System.Drawing.Size(574, 177);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Payment Type and Surcharges";
@@ -342,7 +343,7 @@
             this.dgvTAPayType.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvTAPayType.RowTemplate.Height = 23;
             this.dgvTAPayType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTAPayType.Size = new System.Drawing.Size(547, 145);
+            this.dgvTAPayType.Size = new System.Drawing.Size(559, 145);
             this.dgvTAPayType.TabIndex = 0;
             // 
             // tabPage2
