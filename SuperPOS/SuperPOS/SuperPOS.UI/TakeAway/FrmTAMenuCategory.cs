@@ -17,10 +17,17 @@ namespace SuperPOS.UI.TakeAway
     {
         private int iStatus;
         private readonly EntityControl _control = new EntityControl();
+        private UserInfo userInfo = new UserInfo();
 
         public FrmTAMenuCategory()
         {
             InitializeComponent();
+        }
+
+        public FrmTAMenuCategory(UserInfo uInfo)
+        {
+            InitializeComponent();
+            userInfo = uInfo;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -94,10 +101,8 @@ namespace SuperPOS.UI.TakeAway
         {
             if (dgvCategory.CurrentRow == null) return;
             new OnLoadSystemCommonData().GetTAMenuCategory();
-            var menuCategoryInfo = 
-                CommonData.TaMenuCategoryList.FirstOrDefault(s => s.SystemKey.Equals(dgvCategory.CurrentRow.Cells[0].Value));
-            if (menuCategoryInfo != null)
-                _control.DeleteEntity(menuCategoryInfo);
+            var menuCategoryInfo = CommonData.TaMenuCategoryList.FirstOrDefault(s => s.SystemKey.Equals(dgvCategory.CurrentRow.Cells[0].Value));
+            if (menuCategoryInfo != null) _control.DeleteEntity(menuCategoryInfo);
 
             //刷新数据
             new OnLoadSystemCommonData().GetTAMenuCategory();
@@ -107,8 +112,8 @@ namespace SuperPOS.UI.TakeAway
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmAdminControlPanel frmAdmin = new FrmAdminControlPanel();
-            frmAdmin.ShowDialog();
+            //FrmAdminControlPanel frmAdmin = new FrmAdminControlPanel();
+            //frmAdmin.ShowDialog();
         }
 
         private void FrmTAMenuCategory_Load(object sender, EventArgs e)
@@ -123,6 +128,7 @@ namespace SuperPOS.UI.TakeAway
             dgvCategory.Columns[5].Visible = false;
             dgvCategory.Columns[6].Visible = false;
             dgvCategory.Columns[7].Visible = false;
+
         }
 
         private void chkHotKey_CheckedChanged(object sender, EventArgs e)
