@@ -74,10 +74,10 @@
             this.groupBox1.Controls.Add(this.groupBox4);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(718, 533);
+            this.groupBox1.Size = new System.Drawing.Size(718, 491);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Department Code Entry";
@@ -87,7 +87,7 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(575, 460);
+            this.btnExit.Location = new System.Drawing.Point(575, 413);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 65);
             this.btnExit.TabIndex = 30;
@@ -100,7 +100,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(335, 460);
+            this.btnSave.Location = new System.Drawing.Point(335, 413);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 65);
             this.btnSave.TabIndex = 29;
@@ -113,7 +113,7 @@
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(455, 460);
+            this.btnDel.Location = new System.Drawing.Point(455, 413);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(75, 65);
             this.btnDel.TabIndex = 28;
@@ -126,7 +126,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(215, 460);
+            this.btnEdit.Location = new System.Drawing.Point(215, 413);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 65);
             this.btnEdit.TabIndex = 27;
@@ -139,7 +139,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(95, 460);
+            this.btnAdd.Location = new System.Drawing.Point(95, 413);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 65);
             this.btnAdd.TabIndex = 26;
@@ -154,9 +154,9 @@
             this.groupBox5.Controls.Add(this.cmbBoxPrinterName2);
             this.groupBox5.Controls.Add(this.label7);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Location = new System.Drawing.Point(398, 317);
+            this.groupBox5.Location = new System.Drawing.Point(398, 276);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(310, 126);
+            this.groupBox5.Size = new System.Drawing.Size(310, 114);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Printer #2 Assignment";
@@ -165,46 +165,48 @@
             // 
             this.chkPrtDishSeper2.AutoSize = true;
             this.chkPrtDishSeper2.Enabled = false;
-            this.chkPrtDishSeper2.Location = new System.Drawing.Point(17, 100);
+            this.chkPrtDishSeper2.Location = new System.Drawing.Point(16, 84);
             this.chkPrtDishSeper2.Name = "chkPrtDishSeper2";
-            this.chkPrtDishSeper2.Size = new System.Drawing.Size(203, 25);
+            this.chkPrtDishSeper2.Size = new System.Drawing.Size(160, 21);
             this.chkPrtDishSeper2.TabIndex = 4;
             this.chkPrtDishSeper2.Text = "Print Dishes Seperately";
             this.chkPrtDishSeper2.UseVisualStyleBackColor = true;
             // 
             // cmbBoxNumberOfCopy2
             // 
+            this.cmbBoxNumberOfCopy2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxNumberOfCopy2.Enabled = false;
             this.cmbBoxNumberOfCopy2.FormattingEnabled = true;
-            this.cmbBoxNumberOfCopy2.Location = new System.Drawing.Point(151, 59);
+            this.cmbBoxNumberOfCopy2.Location = new System.Drawing.Point(125, 53);
             this.cmbBoxNumberOfCopy2.Name = "cmbBoxNumberOfCopy2";
-            this.cmbBoxNumberOfCopy2.Size = new System.Drawing.Size(155, 29);
+            this.cmbBoxNumberOfCopy2.Size = new System.Drawing.Size(155, 25);
             this.cmbBoxNumberOfCopy2.TabIndex = 3;
             // 
             // cmbBoxPrinterName2
             // 
+            this.cmbBoxPrinterName2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxPrinterName2.Enabled = false;
             this.cmbBoxPrinterName2.FormattingEnabled = true;
-            this.cmbBoxPrinterName2.Location = new System.Drawing.Point(151, 26);
+            this.cmbBoxPrinterName2.Location = new System.Drawing.Point(125, 22);
             this.cmbBoxPrinterName2.Name = "cmbBoxPrinterName2";
-            this.cmbBoxPrinterName2.Size = new System.Drawing.Size(155, 29);
+            this.cmbBoxPrinterName2.Size = new System.Drawing.Size(155, 25);
             this.cmbBoxPrinterName2.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(14, 67);
+            this.label7.Location = new System.Drawing.Point(14, 63);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(138, 21);
+            this.label7.Size = new System.Drawing.Size(106, 17);
             this.label7.TabIndex = 1;
             this.label7.Text = "Number of Copy";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(14, 34);
+            this.label6.Location = new System.Drawing.Point(14, 30);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 21);
+            this.label6.Size = new System.Drawing.Size(85, 17);
             this.label6.TabIndex = 0;
             this.label6.Text = "Pirnter Name";
             // 
@@ -215,9 +217,9 @@
             this.groupBox4.Controls.Add(this.cmbBoxPrinterName1);
             this.groupBox4.Controls.Add(this.label5);
             this.groupBox4.Controls.Add(this.label4);
-            this.groupBox4.Location = new System.Drawing.Point(398, 173);
+            this.groupBox4.Location = new System.Drawing.Point(398, 151);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(310, 138);
+            this.groupBox4.Size = new System.Drawing.Size(310, 111);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Printer #1 Assignment";
@@ -226,46 +228,48 @@
             // 
             this.chkPrtDishSeper1.AutoSize = true;
             this.chkPrtDishSeper1.Enabled = false;
-            this.chkPrtDishSeper1.Location = new System.Drawing.Point(17, 112);
+            this.chkPrtDishSeper1.Location = new System.Drawing.Point(16, 82);
             this.chkPrtDishSeper1.Name = "chkPrtDishSeper1";
-            this.chkPrtDishSeper1.Size = new System.Drawing.Size(203, 25);
+            this.chkPrtDishSeper1.Size = new System.Drawing.Size(160, 21);
             this.chkPrtDishSeper1.TabIndex = 4;
             this.chkPrtDishSeper1.Text = "Print Dishes Seperately";
             this.chkPrtDishSeper1.UseVisualStyleBackColor = true;
             // 
             // cmbBoxNumberOfCopy1
             // 
+            this.cmbBoxNumberOfCopy1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxNumberOfCopy1.Enabled = false;
             this.cmbBoxNumberOfCopy1.FormattingEnabled = true;
-            this.cmbBoxNumberOfCopy1.Location = new System.Drawing.Point(156, 71);
+            this.cmbBoxNumberOfCopy1.Location = new System.Drawing.Point(125, 51);
             this.cmbBoxNumberOfCopy1.Name = "cmbBoxNumberOfCopy1";
-            this.cmbBoxNumberOfCopy1.Size = new System.Drawing.Size(150, 29);
+            this.cmbBoxNumberOfCopy1.Size = new System.Drawing.Size(150, 25);
             this.cmbBoxNumberOfCopy1.TabIndex = 3;
             // 
             // cmbBoxPrinterName1
             // 
+            this.cmbBoxPrinterName1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbBoxPrinterName1.Enabled = false;
             this.cmbBoxPrinterName1.FormattingEnabled = true;
-            this.cmbBoxPrinterName1.Location = new System.Drawing.Point(156, 31);
+            this.cmbBoxPrinterName1.Location = new System.Drawing.Point(125, 20);
             this.cmbBoxPrinterName1.Name = "cmbBoxPrinterName1";
-            this.cmbBoxPrinterName1.Size = new System.Drawing.Size(150, 29);
+            this.cmbBoxPrinterName1.Size = new System.Drawing.Size(150, 25);
             this.cmbBoxPrinterName1.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(14, 79);
+            this.label5.Location = new System.Drawing.Point(13, 59);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 21);
+            this.label5.Size = new System.Drawing.Size(106, 17);
             this.label5.TabIndex = 1;
             this.label5.Text = "Number of Copy";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 39);
+            this.label4.Location = new System.Drawing.Point(14, 28);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 21);
+            this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 0;
             this.label4.Text = "Printer Name";
             // 
@@ -279,7 +283,7 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(398, 30);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(310, 128);
+            this.groupBox3.Size = new System.Drawing.Size(310, 111);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Department Code Content Input";
@@ -287,51 +291,51 @@
             // txtOtherName
             // 
             this.txtOtherName.Enabled = false;
-            this.txtOtherName.Location = new System.Drawing.Point(148, 92);
+            this.txtOtherName.Location = new System.Drawing.Point(125, 80);
             this.txtOtherName.Name = "txtOtherName";
-            this.txtOtherName.Size = new System.Drawing.Size(138, 29);
+            this.txtOtherName.Size = new System.Drawing.Size(138, 23);
             this.txtOtherName.TabIndex = 5;
             // 
             // txtDeptName
             // 
             this.txtDeptName.Enabled = false;
-            this.txtDeptName.Location = new System.Drawing.Point(148, 58);
+            this.txtDeptName.Location = new System.Drawing.Point(125, 51);
             this.txtDeptName.Name = "txtDeptName";
-            this.txtDeptName.Size = new System.Drawing.Size(138, 29);
+            this.txtDeptName.Size = new System.Drawing.Size(138, 23);
             this.txtDeptName.TabIndex = 4;
             // 
             // txtDeptCode
             // 
             this.txtDeptCode.Enabled = false;
-            this.txtDeptCode.Location = new System.Drawing.Point(148, 22);
+            this.txtDeptCode.Location = new System.Drawing.Point(125, 22);
             this.txtDeptCode.Name = "txtDeptCode";
-            this.txtDeptCode.Size = new System.Drawing.Size(138, 29);
+            this.txtDeptCode.Size = new System.Drawing.Size(138, 23);
             this.txtDeptCode.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 102);
+            this.label3.Location = new System.Drawing.Point(30, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 21);
+            this.label3.Size = new System.Drawing.Size(80, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Other Name";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 63);
+            this.label2.Location = new System.Drawing.Point(31, 57);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 21);
+            this.label2.Size = new System.Drawing.Size(75, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Dept Name";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(27, 25);
+            this.label1.Location = new System.Drawing.Point(31, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 21);
+            this.label1.Size = new System.Drawing.Size(74, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Dept. Code";
             // 
@@ -340,17 +344,19 @@
             this.groupBox2.Controls.Add(this.dgvDeptCode);
             this.groupBox2.Location = new System.Drawing.Point(17, 30);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(368, 413);
+            this.groupBox2.Size = new System.Drawing.Size(368, 360);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Department Code List";
             // 
             // dgvDeptCode
             // 
+            this.dgvDeptCode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeptCode.Location = new System.Drawing.Point(10, 25);
             this.dgvDeptCode.Name = "dgvDeptCode";
             this.dgvDeptCode.RowTemplate.Height = 23;
-            this.dgvDeptCode.Size = new System.Drawing.Size(345, 373);
+            this.dgvDeptCode.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDeptCode.Size = new System.Drawing.Size(345, 323);
             this.dgvDeptCode.TabIndex = 0;
             this.dgvDeptCode.SelectionChanged += new System.EventHandler(this.dgvDeptCode_SelectionChanged);
             // 
@@ -358,7 +364,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 557);
+            this.ClientSize = new System.Drawing.Size(741, 512);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTADeptCode";
