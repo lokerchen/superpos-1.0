@@ -129,8 +129,8 @@
     <EmbeddedResource Include="Mappings\TAMenuSetInfo.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Mappings\TADeptCode.hbm.xml" />
-    <EmbeddedResource Include="Mappings\TADeptCodeDetail.xml" />
+    <EmbeddedResource Include="Mappings\TADeptCodeInfo.hbm.xml" />
+    <EmbeddedResource Include="Mappings\TADeptCodeDetailInfo.hbm.xml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\TAMenuCategoryInfo.hbm.xml">
