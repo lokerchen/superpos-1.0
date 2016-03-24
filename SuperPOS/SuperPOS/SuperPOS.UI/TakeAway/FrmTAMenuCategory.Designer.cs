@@ -82,7 +82,7 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(565, 369);
+            this.btnExit.Location = new System.Drawing.Point(565, 325);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 69);
             this.btnExit.TabIndex = 43;
@@ -95,7 +95,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(403, 408);
+            this.btnSave.Location = new System.Drawing.Point(403, 364);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 30);
             this.btnSave.TabIndex = 42;
@@ -108,7 +108,7 @@
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(484, 408);
+            this.btnDel.Location = new System.Drawing.Point(484, 364);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(75, 30);
             this.btnDel.TabIndex = 41;
@@ -121,7 +121,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(484, 369);
+            this.btnEdit.Location = new System.Drawing.Point(484, 325);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 30);
             this.btnEdit.TabIndex = 40;
@@ -134,7 +134,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(403, 369);
+            this.btnAdd.Location = new System.Drawing.Point(403, 325);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 30);
             this.btnAdd.TabIndex = 39;
@@ -147,18 +147,20 @@
             this.groupBox7.Controls.Add(this.txtDishCode);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.chkHotKey);
-            this.groupBox7.Location = new System.Drawing.Point(365, 252);
+            this.groupBox7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox7.Location = new System.Drawing.Point(365, 219);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(309, 100);
+            this.groupBox7.Size = new System.Drawing.Size(309, 66);
             this.groupBox7.TabIndex = 38;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Hot Key Set Up";
             // 
             // txtDishCode
             // 
+            this.txtDishCode.Enabled = false;
             this.txtDishCode.Location = new System.Drawing.Point(192, 34);
             this.txtDishCode.Name = "txtDishCode";
-            this.txtDishCode.Size = new System.Drawing.Size(100, 23);
+            this.txtDishCode.Size = new System.Drawing.Size(100, 21);
             this.txtDishCode.TabIndex = 2;
             // 
             // label6
@@ -166,16 +168,17 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(116, 40);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 14);
+            this.label6.Size = new System.Drawing.Size(59, 12);
             this.label6.TabIndex = 1;
             this.label6.Text = "Dish Code";
             // 
             // chkHotKey
             // 
             this.chkHotKey.AutoSize = true;
+            this.chkHotKey.Enabled = false;
             this.chkHotKey.Location = new System.Drawing.Point(26, 39);
             this.chkHotKey.Name = "chkHotKey";
-            this.chkHotKey.Size = new System.Drawing.Size(75, 18);
+            this.chkHotKey.Size = new System.Drawing.Size(66, 16);
             this.chkHotKey.TabIndex = 0;
             this.chkHotKey.Text = "Hot Key";
             this.chkHotKey.UseVisualStyleBackColor = true;
@@ -185,7 +188,8 @@
             // 
             this.groupBox8.Controls.Add(this.cmbBoxDeptCode);
             this.groupBox8.Controls.Add(this.label7);
-            this.groupBox8.Location = new System.Drawing.Point(365, 173);
+            this.groupBox8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox8.Location = new System.Drawing.Point(365, 140);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(309, 73);
             this.groupBox8.TabIndex = 37;
@@ -194,18 +198,21 @@
             // 
             // cmbBoxDeptCode
             // 
+            this.cmbBoxDeptCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBoxDeptCode.Enabled = false;
             this.cmbBoxDeptCode.FormattingEnabled = true;
-            this.cmbBoxDeptCode.Location = new System.Drawing.Point(152, 32);
+            this.cmbBoxDeptCode.Location = new System.Drawing.Point(145, 32);
             this.cmbBoxDeptCode.Name = "cmbBoxDeptCode";
-            this.cmbBoxDeptCode.Size = new System.Drawing.Size(128, 22);
+            this.cmbBoxDeptCode.Size = new System.Drawing.Size(128, 20);
             this.cmbBoxDeptCode.TabIndex = 1;
+            this.cmbBoxDeptCode.SelectedIndexChanged += new System.EventHandler(this.cmbBoxDeptCode_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(23, 40);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(112, 14);
+            this.label7.Size = new System.Drawing.Size(95, 12);
             this.label7.TabIndex = 0;
             this.label7.Text = "Department Code";
             // 
@@ -217,63 +224,68 @@
             this.groupBox9.Controls.Add(this.label8);
             this.groupBox9.Controls.Add(this.label9);
             this.groupBox9.Controls.Add(this.label10);
+            this.groupBox9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox9.Location = new System.Drawing.Point(365, 22);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(309, 145);
+            this.groupBox9.Size = new System.Drawing.Size(309, 112);
             this.groupBox9.TabIndex = 36;
             this.groupBox9.TabStop = false;
             // 
             // txtDisplayPosition
             // 
-            this.txtDisplayPosition.Location = new System.Drawing.Point(152, 100);
+            this.txtDisplayPosition.Enabled = false;
+            this.txtDisplayPosition.Location = new System.Drawing.Point(145, 69);
             this.txtDisplayPosition.Name = "txtDisplayPosition";
-            this.txtDisplayPosition.Size = new System.Drawing.Size(128, 23);
+            this.txtDisplayPosition.Size = new System.Drawing.Size(128, 21);
             this.txtDisplayPosition.TabIndex = 5;
             // 
             // txtOtherName
             // 
-            this.txtOtherName.Location = new System.Drawing.Point(152, 61);
+            this.txtOtherName.Enabled = false;
+            this.txtOtherName.Location = new System.Drawing.Point(145, 45);
             this.txtOtherName.Name = "txtOtherName";
-            this.txtOtherName.Size = new System.Drawing.Size(128, 23);
+            this.txtOtherName.Size = new System.Drawing.Size(128, 21);
             this.txtOtherName.TabIndex = 4;
             // 
             // txtEnglishName
             // 
-            this.txtEnglishName.Location = new System.Drawing.Point(152, 20);
+            this.txtEnglishName.Enabled = false;
+            this.txtEnglishName.Location = new System.Drawing.Point(145, 20);
             this.txtEnglishName.Name = "txtEnglishName";
-            this.txtEnglishName.Size = new System.Drawing.Size(128, 23);
+            this.txtEnglishName.Size = new System.Drawing.Size(128, 21);
             this.txtEnglishName.TabIndex = 3;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 109);
+            this.label8.Location = new System.Drawing.Point(17, 78);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(119, 14);
+            this.label8.Size = new System.Drawing.Size(101, 12);
             this.label8.TabIndex = 2;
             this.label8.Text = "Display Position";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(58, 70);
+            this.label9.Location = new System.Drawing.Point(48, 54);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 14);
+            this.label9.Size = new System.Drawing.Size(65, 12);
             this.label9.TabIndex = 1;
             this.label9.Text = "Other Name";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 23);
+            this.label10.Location = new System.Drawing.Point(23, 29);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(112, 14);
+            this.label10.Size = new System.Drawing.Size(95, 12);
             this.label10.TabIndex = 0;
             this.label10.Text = "Name in English";
             // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.dgvCategory);
+            this.groupBox10.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox10.Location = new System.Drawing.Point(14, 16);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(345, 428);
@@ -284,7 +296,8 @@
             // dgvCategory
             // 
             this.dgvCategory.AllowUserToDeleteRows = false;
-            this.dgvCategory.Location = new System.Drawing.Point(16, 33);
+            this.dgvCategory.ColumnHeadersHeight = 20;
+            this.dgvCategory.Location = new System.Drawing.Point(6, 20);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.ReadOnly = true;
             this.dgvCategory.RowTemplate.Height = 23;
