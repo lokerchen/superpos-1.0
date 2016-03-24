@@ -148,7 +148,8 @@ namespace SuperPOS.UI.Admin
                 case "204":
                     if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
                     {
-
+                        FrmTAManageMenuSet frmTaManageMenuSet = new FrmTAManageMenuSet(userInfo);
+                        frmTaManageMenuSet.ShowDialog();
                     }
                     else MessageBox.Show(strMsg);
                     break;
