@@ -18,9 +18,16 @@ namespace SuperPOS.UI.TakeAway
         private int iStatus;
 
         private readonly EntityControl _control = new EntityControl();
+        private UserInfo userInfo = new UserInfo();
         public FrmTAManageMenuSet()
         {
             InitializeComponent();
+        }
+
+        public FrmTAManageMenuSet(UserInfo uInfo)
+        {
+            InitializeComponent();
+            userInfo = uInfo;
         }
 
         private void FrmTAManageMenuSet_Load(object sender, EventArgs e)
@@ -129,8 +136,8 @@ namespace SuperPOS.UI.TakeAway
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
-            frmAdminControl.ShowDialog();
+            //FrmAdminControlPanel frmAdminControl = new FrmAdminControlPanel();
+            //frmAdminControl.ShowDialog();
         }
 
         private void comboxTo1_SelectedIndexChanged(object sender, EventArgs e)
@@ -141,6 +148,35 @@ namespace SuperPOS.UI.TakeAway
         private void btnCopy_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDelMenu_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnDelMenu1_Click(object sender, EventArgs e)
+        {
+            txtEngName1.Text = "";
+            txtOtherName1.Text = "";
+        }
+
+        private void btnDelMenu2_Click(object sender, EventArgs e)
+        {
+            txtEngName2.Text = "";
+            txtOtherName2.Text = "";
+        }
+
+        private void btnDelMenu3_Click(object sender, EventArgs e)
+        {
+            txtEngName3.Text = "";
+            txtOtherName3.Text = "";
+        }
+
+        private void btnDelMenu4_Click(object sender, EventArgs e)
+        {
+            txtEngName4.Text = "";
+            txtOtherName4.Text = "";
         }
     }
 }
