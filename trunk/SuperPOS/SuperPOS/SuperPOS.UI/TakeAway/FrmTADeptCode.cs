@@ -19,10 +19,17 @@ namespace SuperPOS.UI.TakeAway
         private int iStatus;
 
         private readonly EntityControl _control = new EntityControl();
+        private UserInfo userInfo = new UserInfo();
 
         public FrmTADeptCode()
         {
             InitializeComponent();
+        }
+
+        public FrmTADeptCode(UserInfo uInfo)
+        {
+            InitializeComponent();
+            userInfo = uInfo;
         }
 
         private void FrmDeptCode_Load(object sender, EventArgs e)
@@ -46,22 +53,42 @@ namespace SuperPOS.UI.TakeAway
                     txtDeptName.Text = dgvDeptCode.CurrentRow.Cells[2].Value.ToString();
                     txtOtherName.Text = dgvDeptCode.CurrentRow.Cells[3].Value.ToString();
 
-                    var deptCode = CommonData.TaDeptCodeDetailList.FirstOrDefault(s => s.DeptCodeSysKey.Equals(dgvDeptCode.CurrentRow.Cells[0].Value.ToString()));
+                    var deptCode =
+                        CommonData.TaDeptCodeDetailList.FirstOrDefault(
+                            s => s.DeptCodeSysKey.Equals(dgvDeptCode.CurrentRow.Cells[0].Value.ToString()));
                     if (deptCode != null)
                     {
+                        cmbBoxPrinterName1.Items.Clear();
                         GetPrinter1();
+                        cmbBoxNumberOfCopy1.Items.Clear();
                         cmbBoxNumberOfCopy1.Items.Add("1");
                         cmbBoxNumberOfCopy1.Items.Add("2");
                         cmbBoxNumberOfCopy1.SelectedIndex = cmbBoxNumberOfCopy1.Items.IndexOf(deptCode.NumCopy1.Equals("1") ? "1" : "2");
                         chkPrtDishSeper1.Checked = deptCode.PrtDishSeper1.Equals("Y");
 
+                        cmbBoxPrinterName2.Items.Clear();
                         GetPrinter2();
+                        cmbBoxNumberOfCopy2.Items.Clear();
                         cmbBoxNumberOfCopy2.Items.Add("1");
                         cmbBoxNumberOfCopy2.Items.Add("2");
                         cmbBoxNumberOfCopy2.SelectedIndex = cmbBoxNumberOfCopy2.Items.IndexOf(deptCode.NumCopy2.Equals("1") ? "1" : "2");
                         chkPrtDishSeper2.Checked = deptCode.PrtDishSeper2.Equals("Y");
                     }
                 }
+            }
+            else
+            {
+                cmbBoxPrinterName1.Items.Clear();
+                GetPrinter1();
+                cmbBoxNumberOfCopy1.Items.Clear();
+                cmbBoxNumberOfCopy1.Items.Add("1");
+                cmbBoxNumberOfCopy1.Items.Add("2");
+
+                cmbBoxPrinterName2.Items.Clear();
+                GetPrinter2();
+                cmbBoxNumberOfCopy2.Items.Clear();
+                cmbBoxNumberOfCopy2.Items.Add("1");
+                cmbBoxNumberOfCopy2.Items.Add("2");
             }
         }
 
@@ -99,8 +126,8 @@ namespace SuperPOS.UI.TakeAway
         private void btnExit_Click(object sender, EventArgs e)
         {
             Hide();
-            FrmAdminControlPanel frmAdmin = new FrmAdminControlPanel();
-            frmAdmin.ShowDialog();
+            //FrmAdminControlPanel frmAdmin = new FrmAdminControlPanel();
+            //frmAdmin.ShowDialog();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -121,14 +148,16 @@ namespace SuperPOS.UI.TakeAway
 
             txtDeptCode.Text = "";
             txtDeptName.Text = "";
-            txtOtherName.Enabled = true;
+            txtOtherName.Text = "";
 
-            GetPrinter1();
-            cmbBoxNumberOfCopy1.Items.Add("1");
+            //GetPrinter1();
+            //cmbBoxNumberOfCopy1.Items.Add("1");
+            cmbBoxNumberOfCopy1.SelectedIndex = 0;
             chkPrtDishSeper1.Checked = false;
 
-            GetPrinter2();
-            cmbBoxNumberOfCopy2.Items.Add("1");
+            //GetPrinter2();
+            //cmbBoxNumberOfCopy2.Items.Add("1");
+            cmbBoxNumberOfCopy2.SelectedIndex = 0;
             chkPrtDishSeper2.Checked = false;
 
             btnEdit.Enabled = false;
@@ -156,13 +185,19 @@ namespace SuperPOS.UI.TakeAway
             var deptCode = CommonData.TaDeptCodeDetailList.FirstOrDefault(s => s.DeptCodeSysKey.Equals(dgvDeptCode.CurrentRow.Cells[0].Value.ToString()));
             if (deptCode != null)
             {
+                cmbBoxPrinterName1.Items.Clear();
                 GetPrinter1();
+                //cmbBoxPrinterName1.SelectedItem = deptCode.PrintName1;
+                cmbBoxNumberOfCopy1.Items.Clear();
                 cmbBoxNumberOfCopy1.Items.Add("1");
                 cmbBoxNumberOfCopy1.Items.Add("2");
                 cmbBoxNumberOfCopy1.SelectedIndex = cmbBoxNumberOfCopy1.Items.IndexOf(deptCode.NumCopy1.Equals("1") ? "1" : "2");
                 chkPrtDishSeper1.Checked = deptCode.PrtDishSeper1.Equals("Y");
 
+                cmbBoxPrinterName2.Items.Clear();
                 GetPrinter2();
+                //cmbBoxPrinterName2.SelectedItem = deptCode.PrintName2;
+                cmbBoxNumberOfCopy2.Items.Clear();
                 cmbBoxNumberOfCopy2.Items.Add("1");
                 cmbBoxNumberOfCopy2.Items.Add("2");
                 cmbBoxNumberOfCopy2.SelectedIndex = cmbBoxNumberOfCopy2.Items.IndexOf(deptCode.NumCopy2.Equals("1") ? "1" : "2");
@@ -172,6 +207,8 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (dgvDeptCode.RowCount <= 0) return;
+
             iStatus = 2;
 
             txtDeptCode.Enabled = true;
@@ -188,20 +225,42 @@ namespace SuperPOS.UI.TakeAway
 
             btnAdd.Enabled = false;
             btnDel.Enabled = false;
+            btnSave.Enabled = true;
         }
 
         private void btnDel_Click(object sender, EventArgs e)
         {
             if (dgvDeptCode.CurrentRow == null) return;
-            new OnLoadSystemCommonData().GetTAMenuSet();
-            var shiftCodeInfo = CommonData.TaMenuSetList.FirstOrDefault(s => s.SystemKey.Equals(dgvDeptCode.CurrentRow.Cells[0].Value));
-            if (shiftCodeInfo != null)
-                _control.DeleteEntity(shiftCodeInfo);
+            new OnLoadSystemCommonData().GetTADeptCode();
+            var taDeptCodeInfo = CommonData.TaDeptCodeList.FirstOrDefault(s => s.SystemKey.Equals(dgvDeptCode.CurrentRow.Cells[0].Value));
+            if (taDeptCodeInfo != null) _control.DeleteEntity(taDeptCodeInfo);
+
+            new OnLoadSystemCommonData().GetTADeptCodeDetail();
+            var taDeptCodeDetailInfo = CommonData.TaDeptCodeDetailList.FirstOrDefault(s => s.DeptCodeSysKey.Equals(dgvDeptCode.CurrentRow.Cells[0].Value));
+            if (taDeptCodeDetailInfo != null) _control.DeleteEntity(taDeptCodeDetailInfo);
 
             //刷新数据
             new OnLoadSystemCommonData().GetTADeptCode();
             new OnLoadSystemCommonData().GetTADeptCodeDetail();
             dgvDeptCode.DataSource = CommonData.TaDeptCodeList;
+
+            if (CommonData.TaDeptCodeList.Count <= 0)
+            {
+                txtDeptCode.Text = "";
+                txtDeptName.Text = "";
+                txtOtherName.Text = "";
+
+                GetPrinter1();
+                cmbBoxNumberOfCopy1.Items.Add("1");
+                chkPrtDishSeper1.Checked = false;
+
+                GetPrinter2();
+                cmbBoxNumberOfCopy2.Items.Add("1");
+                chkPrtDishSeper2.Checked = false;
+            }
+
+            btnAdd.Enabled = true;
+            btnDel.Enabled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -271,9 +330,12 @@ namespace SuperPOS.UI.TakeAway
 
                     if (dcDetail.Any())
                     {
-                        TADeptCodeDetailInfo taDept = new TADeptCodeDetailInfo();
-                        taDept = dcDetail.FirstOrDefault();
-                        taDept = taDeptCodeDetailInfo;
+                        taDeptCodeDetailInfo.SystemKey = dcDetail.FirstOrDefault().SystemKey;
+                        taDeptCodeDetailInfo.DeptCodeSysKey = dcDetail.FirstOrDefault().DeptCodeSysKey;
+                        //TADeptCodeDetailInfo taDeptDetail = new TADeptCodeDetailInfo();
+                        //taDeptDetail.SystemKey = dcDetail.FirstOrDefault().SystemKey;
+                        //taDeptDetail.DeptCodeSysKey = dcDetail.FirstOrDefault().DeptCodeSysKey;
+                        ////taDeptDetail = taDeptCodeDetailInfo;
                         //taDeptCodeDetailInfo.PrintName1 = cmbBoxPrinterName1.Text.Trim();
                         //taDeptCodeDetailInfo.NumCopy1 = cmbBoxNumberOfCopy1.Text.Trim();
                         //taDeptCodeDetailInfo.PrtDishSeper1 = chkPrtDishSeper1.Checked ? "Y" : "N";
@@ -281,7 +343,7 @@ namespace SuperPOS.UI.TakeAway
                         //taDeptCodeDetailInfo.NumCopy2 = cmbBoxNumberOfCopy2.Text.Trim();
                         //taDeptCodeDetailInfo.PrtDishSeper2 = chkPrtDishSeper2.Checked ? "Y" : "N";
 
-                        _control.UpdateEntity(taDept);
+                        _control.UpdateEntity(taDeptCodeDetailInfo);
                     }
                     else
                     {
@@ -296,8 +358,23 @@ namespace SuperPOS.UI.TakeAway
 
             new OnLoadSystemCommonData().GetTADeptCode();
             dgvDeptCode.DataSource = CommonData.TaDeptCodeList;
-
+            
             iStatus = 0;
+
+            txtDeptCode.Enabled = false;
+            txtDeptName.Enabled = false;
+            txtOtherName.Enabled = false;
+            cmbBoxPrinterName1.Enabled = false;
+            cmbBoxNumberOfCopy1.Enabled = false;
+            chkPrtDishSeper1.Enabled = false;
+            cmbBoxPrinterName2.Enabled = false;
+            cmbBoxNumberOfCopy2.Enabled = false;
+            chkPrtDishSeper2.Enabled = false;
+
+            btnAdd.Enabled = true;
+            btnEdit.Enabled = true;
+            btnDel.Enabled = true;
+            btnSave.Enabled = false;
         }
     }
 }
