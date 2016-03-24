@@ -72,7 +72,7 @@
             this.grpBoxSCEntry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxSCEntry.Name = "grpBoxSCEntry";
             this.grpBoxSCEntry.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxSCEntry.Size = new System.Drawing.Size(735, 534);
+            this.grpBoxSCEntry.Size = new System.Drawing.Size(735, 487);
             this.grpBoxSCEntry.TabIndex = 1;
             this.grpBoxSCEntry.TabStop = false;
             this.grpBoxSCEntry.Text = "Shift Code Entry";
@@ -95,12 +95,12 @@
             this.grpBoxSCContentInput.Controls.Add(this.lblOtherName);
             this.grpBoxSCContentInput.Controls.Add(this.lblShiftName);
             this.grpBoxSCContentInput.Controls.Add(this.lblShiftCode);
-            this.grpBoxSCContentInput.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grpBoxSCContentInput.Location = new System.Drawing.Point(412, 31);
+            this.grpBoxSCContentInput.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grpBoxSCContentInput.Location = new System.Drawing.Point(399, 31);
             this.grpBoxSCContentInput.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxSCContentInput.Name = "grpBoxSCContentInput";
             this.grpBoxSCContentInput.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxSCContentInput.Size = new System.Drawing.Size(316, 493);
+            this.grpBoxSCContentInput.Size = new System.Drawing.Size(316, 445);
             this.grpBoxSCContentInput.TabIndex = 1;
             this.grpBoxSCContentInput.TabStop = false;
             this.grpBoxSCContentInput.Text = "Shift Code Content Input";
@@ -110,7 +110,7 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(195, 387);
+            this.btnExit.Location = new System.Drawing.Point(195, 338);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(87, 98);
@@ -124,7 +124,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(6, 442);
+            this.btnSave.Location = new System.Drawing.Point(6, 393);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(87, 42);
@@ -138,7 +138,7 @@
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(100, 442);
+            this.btnDel.Location = new System.Drawing.Point(100, 393);
             this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(87, 42);
@@ -152,7 +152,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(100, 387);
+            this.btnEdit.Location = new System.Drawing.Point(100, 338);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(87, 42);
@@ -166,7 +166,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(6, 387);
+            this.btnAdd.Location = new System.Drawing.Point(6, 338);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(87, 42);
@@ -180,11 +180,11 @@
             this.dtpTo.CustomFormat = "HH:mm";
             this.dtpTo.Enabled = false;
             this.dtpTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpTo.Location = new System.Drawing.Point(206, 153);
+            this.dtpTo.Location = new System.Drawing.Point(190, 107);
             this.dtpTo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.ShowUpDown = true;
-            this.dtpTo.Size = new System.Drawing.Size(74, 26);
+            this.dtpTo.Size = new System.Drawing.Size(74, 23);
             this.dtpTo.TabIndex = 10;
             this.dtpTo.Value = new System.DateTime(2015, 8, 4, 15, 46, 0, 0);
             // 
@@ -194,39 +194,39 @@
             this.dtpFrom.Enabled = false;
             this.dtpFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFrom.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dtpFrom.Location = new System.Drawing.Point(77, 153);
+            this.dtpFrom.Location = new System.Drawing.Point(67, 107);
             this.dtpFrom.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtpFrom.ShowUpDown = true;
-            this.dtpFrom.Size = new System.Drawing.Size(74, 26);
+            this.dtpFrom.Size = new System.Drawing.Size(74, 23);
             this.dtpFrom.TabIndex = 9;
             // 
             // txtOtherName
             // 
             this.txtOtherName.Enabled = false;
-            this.txtOtherName.Location = new System.Drawing.Point(145, 106);
+            this.txtOtherName.Location = new System.Drawing.Point(135, 74);
             this.txtOtherName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherName.Name = "txtOtherName";
-            this.txtOtherName.Size = new System.Drawing.Size(116, 26);
+            this.txtOtherName.Size = new System.Drawing.Size(116, 23);
             this.txtOtherName.TabIndex = 8;
             // 
             // txtShiftName
             // 
             this.txtShiftName.Enabled = false;
-            this.txtShiftName.Location = new System.Drawing.Point(145, 72);
+            this.txtShiftName.Location = new System.Drawing.Point(135, 47);
             this.txtShiftName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtShiftName.Name = "txtShiftName";
-            this.txtShiftName.Size = new System.Drawing.Size(116, 26);
+            this.txtShiftName.Size = new System.Drawing.Size(116, 23);
             this.txtShiftName.TabIndex = 7;
             // 
             // txtShiftCode
             // 
             this.txtShiftCode.Enabled = false;
-            this.txtShiftCode.Location = new System.Drawing.Point(145, 40);
+            this.txtShiftCode.Location = new System.Drawing.Point(135, 20);
             this.txtShiftCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtShiftCode.Name = "txtShiftCode";
-            this.txtShiftCode.Size = new System.Drawing.Size(116, 26);
+            this.txtShiftCode.Size = new System.Drawing.Size(116, 23);
             this.txtShiftCode.TabIndex = 6;
             // 
             // grpBoxSpecialPrice
@@ -239,7 +239,7 @@
             this.grpBoxSpecialPrice.Controls.Add(this.chkBoxMonday);
             this.grpBoxSpecialPrice.Controls.Add(this.chkBoxSunday);
             this.grpBoxSpecialPrice.Controls.Add(this.chkBoxEnable);
-            this.grpBoxSpecialPrice.Location = new System.Drawing.Point(26, 187);
+            this.grpBoxSpecialPrice.Location = new System.Drawing.Point(27, 138);
             this.grpBoxSpecialPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxSpecialPrice.Name = "grpBoxSpecialPrice";
             this.grpBoxSpecialPrice.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -254,7 +254,7 @@
             this.chkBoxSaturday.Location = new System.Drawing.Point(138, 92);
             this.chkBoxSaturday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxSaturday.Name = "chkBoxSaturday";
-            this.chkBoxSaturday.Size = new System.Drawing.Size(87, 24);
+            this.chkBoxSaturday.Size = new System.Drawing.Size(78, 21);
             this.chkBoxSaturday.TabIndex = 7;
             this.chkBoxSaturday.Text = "Saturday";
             this.chkBoxSaturday.UseVisualStyleBackColor = true;
@@ -265,7 +265,7 @@
             this.chkBoxFriday.Location = new System.Drawing.Point(138, 72);
             this.chkBoxFriday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxFriday.Name = "chkBoxFriday";
-            this.chkBoxFriday.Size = new System.Drawing.Size(68, 24);
+            this.chkBoxFriday.Size = new System.Drawing.Size(62, 21);
             this.chkBoxFriday.TabIndex = 6;
             this.chkBoxFriday.Text = "Friday";
             this.chkBoxFriday.UseVisualStyleBackColor = true;
@@ -276,7 +276,7 @@
             this.chkBoxThursday.Location = new System.Drawing.Point(17, 152);
             this.chkBoxThursday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxThursday.Name = "chkBoxThursday";
-            this.chkBoxThursday.Size = new System.Drawing.Size(89, 24);
+            this.chkBoxThursday.Size = new System.Drawing.Size(80, 21);
             this.chkBoxThursday.TabIndex = 5;
             this.chkBoxThursday.Text = "Thursday";
             this.chkBoxThursday.UseVisualStyleBackColor = true;
@@ -287,7 +287,7 @@
             this.chkBoxWednesday.Location = new System.Drawing.Point(17, 132);
             this.chkBoxWednesday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxWednesday.Name = "chkBoxWednesday";
-            this.chkBoxWednesday.Size = new System.Drawing.Size(106, 24);
+            this.chkBoxWednesday.Size = new System.Drawing.Size(95, 21);
             this.chkBoxWednesday.TabIndex = 4;
             this.chkBoxWednesday.Text = "Wednesday";
             this.chkBoxWednesday.UseVisualStyleBackColor = true;
@@ -298,7 +298,7 @@
             this.chkBoxTuesday.Location = new System.Drawing.Point(17, 112);
             this.chkBoxTuesday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxTuesday.Name = "chkBoxTuesday";
-            this.chkBoxTuesday.Size = new System.Drawing.Size(83, 24);
+            this.chkBoxTuesday.Size = new System.Drawing.Size(75, 21);
             this.chkBoxTuesday.TabIndex = 3;
             this.chkBoxTuesday.Text = "Tuesday";
             this.chkBoxTuesday.UseVisualStyleBackColor = true;
@@ -309,7 +309,7 @@
             this.chkBoxMonday.Location = new System.Drawing.Point(17, 92);
             this.chkBoxMonday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxMonday.Name = "chkBoxMonday";
-            this.chkBoxMonday.Size = new System.Drawing.Size(84, 24);
+            this.chkBoxMonday.Size = new System.Drawing.Size(75, 21);
             this.chkBoxMonday.TabIndex = 2;
             this.chkBoxMonday.Text = "Monday";
             this.chkBoxMonday.UseVisualStyleBackColor = true;
@@ -320,7 +320,7 @@
             this.chkBoxSunday.Location = new System.Drawing.Point(17, 72);
             this.chkBoxSunday.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxSunday.Name = "chkBoxSunday";
-            this.chkBoxSunday.Size = new System.Drawing.Size(78, 24);
+            this.chkBoxSunday.Size = new System.Drawing.Size(69, 21);
             this.chkBoxSunday.TabIndex = 1;
             this.chkBoxSunday.Text = "Sunday";
             this.chkBoxSunday.UseVisualStyleBackColor = true;
@@ -331,7 +331,7 @@
             this.chkBoxEnable.Location = new System.Drawing.Point(20, 31);
             this.chkBoxEnable.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxEnable.Name = "chkBoxEnable";
-            this.chkBoxEnable.Size = new System.Drawing.Size(74, 24);
+            this.chkBoxEnable.Size = new System.Drawing.Size(66, 21);
             this.chkBoxEnable.TabIndex = 0;
             this.chkBoxEnable.Text = "Enable";
             this.chkBoxEnable.UseVisualStyleBackColor = true;
@@ -340,57 +340,57 @@
             // lblTo
             // 
             this.lblTo.AutoSize = true;
-            this.lblTo.Location = new System.Drawing.Point(162, 158);
+            this.lblTo.Location = new System.Drawing.Point(152, 112);
             this.lblTo.Name = "lblTo";
-            this.lblTo.Size = new System.Drawing.Size(40, 20);
+            this.lblTo.Size = new System.Drawing.Size(35, 17);
             this.lblTo.TabIndex = 4;
             this.lblTo.Text = "To：";
             // 
             // lblFrom
             // 
             this.lblFrom.AutoSize = true;
-            this.lblFrom.Location = new System.Drawing.Point(19, 158);
+            this.lblFrom.Location = new System.Drawing.Point(16, 112);
             this.lblFrom.Name = "lblFrom";
-            this.lblFrom.Size = new System.Drawing.Size(57, 20);
+            this.lblFrom.Size = new System.Drawing.Size(50, 17);
             this.lblFrom.TabIndex = 3;
             this.lblFrom.Text = "From：";
             // 
             // lblOtherName
             // 
             this.lblOtherName.AutoSize = true;
-            this.lblOtherName.Location = new System.Drawing.Point(34, 112);
+            this.lblOtherName.Location = new System.Drawing.Point(30, 80);
             this.lblOtherName.Name = "lblOtherName";
-            this.lblOtherName.Size = new System.Drawing.Size(105, 20);
+            this.lblOtherName.Size = new System.Drawing.Size(92, 17);
             this.lblOtherName.TabIndex = 2;
             this.lblOtherName.Text = "Other Name：";
             // 
             // lblShiftName
             // 
             this.lblShiftName.AutoSize = true;
-            this.lblShiftName.Location = new System.Drawing.Point(41, 78);
+            this.lblShiftName.Location = new System.Drawing.Point(33, 53);
             this.lblShiftName.Name = "lblShiftName";
-            this.lblShiftName.Size = new System.Drawing.Size(98, 20);
+            this.lblShiftName.Size = new System.Drawing.Size(84, 17);
             this.lblShiftName.TabIndex = 1;
             this.lblShiftName.Text = "Shift Name：";
             // 
             // lblShiftCode
             // 
             this.lblShiftCode.AutoSize = true;
-            this.lblShiftCode.Location = new System.Drawing.Point(46, 46);
+            this.lblShiftCode.Location = new System.Drawing.Point(36, 26);
             this.lblShiftCode.Name = "lblShiftCode";
-            this.lblShiftCode.Size = new System.Drawing.Size(93, 20);
+            this.lblShiftCode.Size = new System.Drawing.Size(80, 17);
             this.lblShiftCode.TabIndex = 0;
             this.lblShiftCode.Text = "Shift Code：";
             // 
             // grpBoxSCList
             // 
             this.grpBoxSCList.Controls.Add(this.dgvShiftCode);
-            this.grpBoxSCList.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.grpBoxSCList.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxSCList.Location = new System.Drawing.Point(7, 31);
             this.grpBoxSCList.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxSCList.Name = "grpBoxSCList";
             this.grpBoxSCList.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxSCList.Size = new System.Drawing.Size(386, 493);
+            this.grpBoxSCList.Size = new System.Drawing.Size(386, 445);
             this.grpBoxSCList.TabIndex = 0;
             this.grpBoxSCList.TabStop = false;
             this.grpBoxSCList.Text = "Shift Code List";
@@ -406,7 +406,7 @@
             this.dgvShiftCode.ReadOnly = true;
             this.dgvShiftCode.RowTemplate.Height = 23;
             this.dgvShiftCode.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvShiftCode.Size = new System.Drawing.Size(365, 465);
+            this.dgvShiftCode.Size = new System.Drawing.Size(365, 417);
             this.dgvShiftCode.TabIndex = 1;
             this.dgvShiftCode.SelectionChanged += new System.EventHandler(this.dgvShiftCode_SelectionChanged);
             // 
@@ -414,7 +414,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(772, 562);
+            this.ClientSize = new System.Drawing.Size(768, 516);
             this.Controls.Add(this.grpBoxSCEntry);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
