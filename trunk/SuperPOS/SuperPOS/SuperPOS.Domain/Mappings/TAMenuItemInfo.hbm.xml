@@ -28,5 +28,9 @@
     <property name="IsWithoutVAT" column="IsWithoutVAT" type="System.String" />
     <property name="IsInventoryCheck" column="IsInventoryCheck" type="System.String" />
     <property name="MenuSetID" column="MenuSetID" type="System.String" />
+    <property name="MenuCateID" column="MenuSetID" type="System.String" />
+    <property name="SplySft" column="MenuSetID" type="System.String" />
+    <property name="PrtName" column="MenuSetID" type="System.String" />
+    <property name="PrtOrder" column="MenuSetID" type="System.String" />
   </class>
 </hibernate-mapping>
