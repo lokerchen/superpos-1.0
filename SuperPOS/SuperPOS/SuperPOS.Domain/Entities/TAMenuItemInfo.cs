@@ -79,14 +79,5 @@ namespace SuperPOS.Domain.Entities
 
         [XmlElement(ElementName = "MenuCateID")]
         public virtual string MenuCateID { get; set; }
-
-        [XmlElement(ElementName = "SplySft")]
-        public virtual string SplySft { get; set; }
-
-        [XmlElement(ElementName = "PrtName")]
-        public virtual string PrtName { get; set; }
-
-        [XmlElement(ElementName = "PrtOrder")]
-        public virtual string PrtOrder { get; set; }
     }
 }
