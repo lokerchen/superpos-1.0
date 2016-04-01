@@ -31,6 +31,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.chkBoxPrtOrderX = new System.Windows.Forms.CheckBox();
+            this.chkBoxPrtOrderByDept = new System.Windows.Forms.CheckBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.cmbBoxSplySft = new System.Windows.Forms.ComboBox();
+            this.label38 = new System.Windows.Forms.Label();
             this.btnDAEdit = new System.Windows.Forms.Button();
             this.chkInventoryCheck = new System.Windows.Forms.CheckBox();
             this.chkWithoutVAT = new System.Windows.Forms.CheckBox();
@@ -57,8 +64,12 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.cmbBoxMenuCate3 = new System.Windows.Forms.ComboBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.cmbBoxMenuCate2 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbBoxMenuCate1 = new System.Windows.Forms.ComboBox();
             this.label18 = new System.Windows.Forms.Label();
             this.txtSSmall = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -318,6 +329,7 @@
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox7.SuspendLayout();
@@ -368,6 +380,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox15);
             this.tabPage1.Controls.Add(this.btnDAEdit);
             this.tabPage1.Controls.Add(this.chkInventoryCheck);
             this.tabPage1.Controls.Add(this.chkWithoutVAT);
@@ -391,6 +404,80 @@
             this.tabPage1.Text = "Dish Attributes";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.chkBoxPrtOrderX);
+            this.groupBox15.Controls.Add(this.chkBoxPrtOrderByDept);
+            this.groupBox15.Controls.Add(this.label40);
+            this.groupBox15.Controls.Add(this.label39);
+            this.groupBox15.Controls.Add(this.cmbBoxSplySft);
+            this.groupBox15.Controls.Add(this.label38);
+            this.groupBox15.Location = new System.Drawing.Point(634, 21);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(269, 115);
+            this.groupBox15.TabIndex = 42;
+            this.groupBox15.TabStop = false;
+            // 
+            // chkBoxPrtOrderX
+            // 
+            this.chkBoxPrtOrderX.AutoSize = true;
+            this.chkBoxPrtOrderX.Enabled = false;
+            this.chkBoxPrtOrderX.Location = new System.Drawing.Point(123, 83);
+            this.chkBoxPrtOrderX.Name = "chkBoxPrtOrderX";
+            this.chkBoxPrtOrderX.Size = new System.Drawing.Size(35, 21);
+            this.chkBoxPrtOrderX.TabIndex = 6;
+            this.chkBoxPrtOrderX.Text = "X";
+            this.chkBoxPrtOrderX.UseVisualStyleBackColor = true;
+            // 
+            // chkBoxPrtOrderByDept
+            // 
+            this.chkBoxPrtOrderByDept.AutoSize = true;
+            this.chkBoxPrtOrderByDept.Enabled = false;
+            this.chkBoxPrtOrderByDept.Location = new System.Drawing.Point(123, 55);
+            this.chkBoxPrtOrderByDept.Name = "chkBoxPrtOrderByDept";
+            this.chkBoxPrtOrderByDept.Size = new System.Drawing.Size(73, 21);
+            this.chkBoxPrtOrderByDept.TabIndex = 5;
+            this.chkBoxPrtOrderByDept.Text = "By Dept";
+            this.chkBoxPrtOrderByDept.UseVisualStyleBackColor = true;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(30, 85);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(73, 17);
+            this.label40.TabIndex = 4;
+            this.label40.Text = "Print Order";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(30, 55);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(73, 17);
+            this.label39.TabIndex = 2;
+            this.label39.Text = "Print Name";
+            // 
+            // cmbBoxSplySft
+            // 
+            this.cmbBoxSplySft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBoxSplySft.Enabled = false;
+            this.cmbBoxSplySft.FormattingEnabled = true;
+            this.cmbBoxSplySft.Location = new System.Drawing.Point(123, 16);
+            this.cmbBoxSplySft.Name = "cmbBoxSplySft";
+            this.cmbBoxSplySft.Size = new System.Drawing.Size(121, 25);
+            this.cmbBoxSplySft.TabIndex = 1;
+            this.cmbBoxSplySft.SelectedIndexChanged += new System.EventHandler(this.cmbBoxSplySft_SelectedIndexChanged);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(30, 24);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(76, 17);
+            this.label38.TabIndex = 0;
+            this.label38.Text = "Supply Shift";
+            // 
             // btnDAEdit
             // 
             this.btnDAEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -403,6 +490,7 @@
             this.btnDAEdit.TabIndex = 41;
             this.btnDAEdit.Text = "Edit";
             this.btnDAEdit.UseVisualStyleBackColor = false;
+            this.btnDAEdit.Click += new System.EventHandler(this.btnDAEdit_Click);
             // 
             // chkInventoryCheck
             // 
@@ -463,6 +551,7 @@
             this.btnDASave.TabIndex = 37;
             this.btnDASave.Text = "Save";
             this.btnDASave.UseVisualStyleBackColor = false;
+            this.btnDASave.Click += new System.EventHandler(this.btnDASave_Click);
             // 
             // chkNegativePrice
             // 
@@ -519,7 +608,7 @@
             this.groupBox6.Controls.Add(this.btnDishNameSearch);
             this.groupBox6.Controls.Add(this.txtDishName);
             this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Location = new System.Drawing.Point(634, 146);
+            this.groupBox6.Location = new System.Drawing.Point(634, 142);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(269, 261);
             this.groupBox6.TabIndex = 13;
@@ -605,6 +694,7 @@
             this.dgvDAMenu.Name = "dgvDAMenu";
             this.dgvDAMenu.Size = new System.Drawing.Size(373, 345);
             this.dgvDAMenu.TabIndex = 6;
+            this.dgvDAMenu.SelectionChanged += new System.EventHandler(this.dgvDAMenu_SelectionChanged);
             // 
             // cmDABoxDish
             // 
@@ -664,8 +754,12 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label42);
+            this.groupBox4.Controls.Add(this.cmbBoxMenuCate3);
+            this.groupBox4.Controls.Add(this.label41);
+            this.groupBox4.Controls.Add(this.cmbBoxMenuCate2);
             this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Controls.Add(this.comboBox1);
+            this.groupBox4.Controls.Add(this.cmbBoxMenuCate1);
             this.groupBox4.Controls.Add(this.label18);
             this.groupBox4.Controls.Add(this.txtSSmall);
             this.groupBox4.Controls.Add(this.label13);
@@ -693,25 +787,71 @@
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label42.ForeColor = System.Drawing.Color.White;
+            this.label42.Location = new System.Drawing.Point(4, 464);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(105, 17);
+            this.label42.TabIndex = 26;
+            this.label42.Text = "Menu Category3";
+            // 
+            // cmbBoxMenuCate3
+            // 
+            this.cmbBoxMenuCate3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBoxMenuCate3.Enabled = false;
+            this.cmbBoxMenuCate3.FormattingEnabled = true;
+            this.cmbBoxMenuCate3.Location = new System.Drawing.Point(111, 456);
+            this.cmbBoxMenuCate3.Name = "cmbBoxMenuCate3";
+            this.cmbBoxMenuCate3.Size = new System.Drawing.Size(93, 25);
+            this.cmbBoxMenuCate3.TabIndex = 25;
+            this.cmbBoxMenuCate3.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMenuCate3_SelectedIndexChanged);
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label41.ForeColor = System.Drawing.Color.White;
+            this.label41.Location = new System.Drawing.Point(4, 431);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(105, 17);
+            this.label41.TabIndex = 24;
+            this.label41.Text = "Menu Category2";
+            // 
+            // cmbBoxMenuCate2
+            // 
+            this.cmbBoxMenuCate2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBoxMenuCate2.Enabled = false;
+            this.cmbBoxMenuCate2.FormattingEnabled = true;
+            this.cmbBoxMenuCate2.Location = new System.Drawing.Point(111, 423);
+            this.cmbBoxMenuCate2.Name = "cmbBoxMenuCate2";
+            this.cmbBoxMenuCate2.Size = new System.Drawing.Size(93, 25);
+            this.cmbBoxMenuCate2.TabIndex = 23;
+            this.cmbBoxMenuCate2.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMenuCate2_SelectedIndexChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(43, 390);
+            this.label1.Location = new System.Drawing.Point(4, 396);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 17);
+            this.label1.Size = new System.Drawing.Size(105, 17);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Menu Category";
+            this.label1.Text = "Menu Category1";
             // 
-            // comboBox1
+            // cmbBoxMenuCate1
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(31, 410);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 25);
-            this.comboBox1.TabIndex = 21;
+            this.cmbBoxMenuCate1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbBoxMenuCate1.Enabled = false;
+            this.cmbBoxMenuCate1.FormattingEnabled = true;
+            this.cmbBoxMenuCate1.Location = new System.Drawing.Point(111, 388);
+            this.cmbBoxMenuCate1.Name = "cmbBoxMenuCate1";
+            this.cmbBoxMenuCate1.Size = new System.Drawing.Size(93, 25);
+            this.cmbBoxMenuCate1.TabIndex = 21;
+            this.cmbBoxMenuCate1.SelectedIndexChanged += new System.EventHandler(this.cmbBoxMenuCate1_SelectedIndexChanged);
             // 
             // label18
             // 
@@ -3175,6 +3315,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -3271,7 +3413,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnDAEdit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbBoxMenuCate1;
         private System.Windows.Forms.CheckBox chkSCAutoAppend1;
         private System.Windows.Forms.TextBox txtSCAddPrice1;
         private System.Windows.Forms.TextBox txtSCOtherName1;
@@ -3498,5 +3640,16 @@
         private System.Windows.Forms.TextBox textBox97;
         private System.Windows.Forms.TextBox textBox98;
         private System.Windows.Forms.TextBox textBox99;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ComboBox cmbBoxSplySft;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.CheckBox chkBoxPrtOrderX;
+        private System.Windows.Forms.CheckBox chkBoxPrtOrderByDept;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.ComboBox cmbBoxMenuCate3;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.ComboBox cmbBoxMenuCate2;
     }
 }
