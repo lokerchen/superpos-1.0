@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SuperPOS"
+                   namespace="SuperPOS.Domain">
+
+  <class name="SuperPOS.Domain.Entities.TAMenuItemTHInfo, SuperPOS.Domain" table="TA_MenuItem_TH">
+    <id name="SystemKey" column="SystemKey" type="System.Guid">
+      <generator class="guid" />
+    </id>
+    <property name="MenuItemID" column="MenuItemID" type="System.String" />
+    <property name="MenuSetID" column="MenuSetID" type="System.String" />
+    <property name="EnglishName" column="EnglishName" type="System.String" />
+    <property name="OtherName" column="OtherName" type="System.String" />
+    <property name="AddPrice" column="AddPrice" type="System.String" />
+    <property name="AutoAppend" column="AutoAppend" type="System.String" />
+    <property name="IsEnableChoices" column="IsEnableChoices" type="System.String" />
+  </class>
+</hibernate-mapping>
