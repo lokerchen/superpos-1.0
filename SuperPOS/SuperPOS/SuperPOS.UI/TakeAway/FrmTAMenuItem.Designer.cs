@@ -98,86 +98,82 @@
             this.btnDA1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.checkBox36 = new System.Windows.Forms.CheckBox();
-            this.textBox100 = new System.Windows.Forms.TextBox();
-            this.textBox101 = new System.Windows.Forms.TextBox();
-            this.textBox102 = new System.Windows.Forms.TextBox();
-            this.checkBox37 = new System.Windows.Forms.CheckBox();
-            this.textBox103 = new System.Windows.Forms.TextBox();
-            this.textBox104 = new System.Windows.Forms.TextBox();
-            this.textBox105 = new System.Windows.Forms.TextBox();
-            this.checkBox31 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox57 = new System.Windows.Forms.TextBox();
-            this.checkBox32 = new System.Windows.Forms.CheckBox();
-            this.textBox88 = new System.Windows.Forms.TextBox();
-            this.textBox89 = new System.Windows.Forms.TextBox();
-            this.textBox90 = new System.Windows.Forms.TextBox();
-            this.checkBox33 = new System.Windows.Forms.CheckBox();
-            this.textBox91 = new System.Windows.Forms.TextBox();
-            this.textBox92 = new System.Windows.Forms.TextBox();
-            this.textBox93 = new System.Windows.Forms.TextBox();
-            this.checkBox34 = new System.Windows.Forms.CheckBox();
-            this.textBox94 = new System.Windows.Forms.TextBox();
-            this.textBox95 = new System.Windows.Forms.TextBox();
-            this.textBox96 = new System.Windows.Forms.TextBox();
-            this.checkBox35 = new System.Windows.Forms.CheckBox();
-            this.textBox97 = new System.Windows.Forms.TextBox();
-            this.textBox98 = new System.Windows.Forms.TextBox();
-            this.textBox99 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend17 = new System.Windows.Forms.CheckBox();
+            this.txtSCAddPrice17 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName17 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName17 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend16 = new System.Windows.Forms.CheckBox();
+            this.txtSCAddPrice16 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName16 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName16 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend15 = new System.Windows.Forms.CheckBox();
+            this.txtSCAddPrice15 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName15 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName15 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend14 = new System.Windows.Forms.CheckBox();
+            this.txtSCAddPrice14 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName14 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName14 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend13 = new System.Windows.Forms.CheckBox();
+            this.txtSCAddPrice13 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName13 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName13 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend12 = new System.Windows.Forms.CheckBox();
+            this.txtSCAddPrice12 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName12 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName12 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend11 = new System.Windows.Forms.CheckBox();
+            this.txtSCAddPrice11 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName11 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName11 = new System.Windows.Forms.TextBox();
             this.txtSCOtherName1 = new System.Windows.Forms.TextBox();
-            this.chkEnableChoices = new System.Windows.Forms.CheckBox();
-            this.btnCopyChoices = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.btnSCEngName1 = new System.Windows.Forms.TextBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend10 = new System.Windows.Forms.CheckBox();
+            this.txtSCEngName1 = new System.Windows.Forms.TextBox();
+            this.txtSCAddPrice10 = new System.Windows.Forms.TextBox();
             this.txtSCAddPrice1 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName10 = new System.Windows.Forms.TextBox();
             this.chkSCAutoAppend1 = new System.Windows.Forms.CheckBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.btnSCEngName2 = new System.Windows.Forms.TextBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.txtSCEngName10 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName2 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend9 = new System.Windows.Forms.CheckBox();
             this.txtSCOtherName2 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtSCAddPrice9 = new System.Windows.Forms.TextBox();
             this.txtSCAddPrice2 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName9 = new System.Windows.Forms.TextBox();
             this.chkSCAutoAppend2 = new System.Windows.Forms.CheckBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.btnSCEdit = new System.Windows.Forms.Button();
+            this.txtSCEngName9 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName3 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend8 = new System.Windows.Forms.CheckBox();
+            this.txtSCOtherName3 = new System.Windows.Forms.TextBox();
+            this.txtSCAddPrice8 = new System.Windows.Forms.TextBox();
+            this.txtSCAddPrice3 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName8 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend3 = new System.Windows.Forms.CheckBox();
+            this.txtSCEngName8 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName4 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend7 = new System.Windows.Forms.CheckBox();
+            this.txtSCOtherName4 = new System.Windows.Forms.TextBox();
+            this.txtSCAddPrice7 = new System.Windows.Forms.TextBox();
+            this.txtSCAddPrice4 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName7 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend4 = new System.Windows.Forms.CheckBox();
+            this.txtSCEngName7 = new System.Windows.Forms.TextBox();
+            this.txtSCEngName5 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend6 = new System.Windows.Forms.CheckBox();
+            this.txtSCOtherName5 = new System.Windows.Forms.TextBox();
+            this.txtSCAddPrice6 = new System.Windows.Forms.TextBox();
+            this.txtSCAddPrice5 = new System.Windows.Forms.TextBox();
+            this.txtSCOtherName6 = new System.Windows.Forms.TextBox();
+            this.chkSCAutoAppend5 = new System.Windows.Forms.CheckBox();
+            this.txtSCEngName6 = new System.Windows.Forms.TextBox();
+            this.chkSCEnableChoices = new System.Windows.Forms.CheckBox();
+            this.btnCopyChoices = new System.Windows.Forms.Button();
             this.btnSCExit = new System.Windows.Forms.Button();
             this.btnSCSave = new System.Windows.Forms.Button();
-            this.btnSCDel = new System.Windows.Forms.Button();
-            this.btnSCCopy = new System.Windows.Forms.Button();
-            this.btnSCAdd = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvSCMenu = new System.Windows.Forms.DataGridView();
             this.cmSCBoxDish = new System.Windows.Forms.ComboBox();
@@ -193,58 +189,82 @@
             this.btnSC1 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.button12 = new System.Windows.Forms.Button();
+            this.chkTCAutoAppend17 = new System.Windows.Forms.CheckBox();
+            this.txtTCAddPrice17 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName17 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName17 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend16 = new System.Windows.Forms.CheckBox();
+            this.txtTCAddPrice16 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName16 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName16 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend15 = new System.Windows.Forms.CheckBox();
+            this.txtTCAddPrice15 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName15 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName15 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend14 = new System.Windows.Forms.CheckBox();
+            this.txtTCAddPrice14 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName14 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName14 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend13 = new System.Windows.Forms.CheckBox();
+            this.txtTCAddPrice13 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName13 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName13 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend12 = new System.Windows.Forms.CheckBox();
+            this.txtTCAddPrice12 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName12 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName12 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend11 = new System.Windows.Forms.CheckBox();
+            this.txtTCAddPrice11 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName11 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName11 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName1 = new System.Windows.Forms.TextBox();
+            this.chkTCEnableChoices = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.checkBox15 = new System.Windows.Forms.CheckBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.checkBox16 = new System.Windows.Forms.CheckBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
-            this.textBox49 = new System.Windows.Forms.TextBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.textBox50 = new System.Windows.Forms.TextBox();
-            this.textBox51 = new System.Windows.Forms.TextBox();
-            this.checkBox18 = new System.Windows.Forms.CheckBox();
-            this.textBox52 = new System.Windows.Forms.TextBox();
-            this.textBox53 = new System.Windows.Forms.TextBox();
-            this.textBox54 = new System.Windows.Forms.TextBox();
-            this.textBox55 = new System.Windows.Forms.TextBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.textBox56 = new System.Windows.Forms.TextBox();
-            this.btnTCEdit = new System.Windows.Forms.Button();
+            this.chkTCAutoAppend10 = new System.Windows.Forms.CheckBox();
+            this.txtTCEngName1 = new System.Windows.Forms.TextBox();
+            this.txtTCAddPrice10 = new System.Windows.Forms.TextBox();
+            this.txtTCAddPrice1 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName10 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend1 = new System.Windows.Forms.CheckBox();
+            this.txtTCEngName10 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName2 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend9 = new System.Windows.Forms.CheckBox();
+            this.txtTCOtherName2 = new System.Windows.Forms.TextBox();
+            this.txtTCAddPrice9 = new System.Windows.Forms.TextBox();
+            this.txtTCAddPrice2 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName9 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend2 = new System.Windows.Forms.CheckBox();
+            this.txtTCEngName9 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName3 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend8 = new System.Windows.Forms.CheckBox();
+            this.txtTCOtherName3 = new System.Windows.Forms.TextBox();
+            this.txtTCAddPrice8 = new System.Windows.Forms.TextBox();
+            this.txtTCAddPrice3 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName8 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend3 = new System.Windows.Forms.CheckBox();
+            this.txtTCEngName8 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName4 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend7 = new System.Windows.Forms.CheckBox();
+            this.txtTCOtherName4 = new System.Windows.Forms.TextBox();
+            this.txtTCAddPrice7 = new System.Windows.Forms.TextBox();
+            this.txtTCAddPrice4 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName7 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend4 = new System.Windows.Forms.CheckBox();
+            this.txtTCEngName7 = new System.Windows.Forms.TextBox();
+            this.txtTCEngName5 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend6 = new System.Windows.Forms.CheckBox();
+            this.txtTCOtherName5 = new System.Windows.Forms.TextBox();
+            this.txtTCAddPrice6 = new System.Windows.Forms.TextBox();
+            this.txtTCAddPrice5 = new System.Windows.Forms.TextBox();
+            this.txtTCOtherName6 = new System.Windows.Forms.TextBox();
+            this.chkTCAutoAppend5 = new System.Windows.Forms.CheckBox();
+            this.txtTCEngName6 = new System.Windows.Forms.TextBox();
             this.btnTCExit = new System.Windows.Forms.Button();
             this.btnTCSave = new System.Windows.Forms.Button();
-            this.btnTCDel = new System.Windows.Forms.Button();
-            this.btnTCCopy = new System.Windows.Forms.Button();
-            this.btnTCAdd = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.dgvTCMenu = new System.Windows.Forms.DataGridView();
             this.cmTCBoxDish = new System.Windows.Forms.ComboBox();
@@ -260,58 +280,82 @@
             this.btnTC1 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.textBox58 = new System.Windows.Forms.TextBox();
-            this.checkBox20 = new System.Windows.Forms.CheckBox();
-            this.button24 = new System.Windows.Forms.Button();
+            this.chkTHAutoAppend17 = new System.Windows.Forms.CheckBox();
+            this.txtTHAddPrice17 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName17 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName17 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend16 = new System.Windows.Forms.CheckBox();
+            this.txtTHAddPrice16 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName16 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName16 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend15 = new System.Windows.Forms.CheckBox();
+            this.txtTHAddPrice15 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName15 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName15 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend14 = new System.Windows.Forms.CheckBox();
+            this.txtTHAddPrice14 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName14 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName14 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend13 = new System.Windows.Forms.CheckBox();
+            this.txtTHAddPrice13 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName13 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName13 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend12 = new System.Windows.Forms.CheckBox();
+            this.txtTHAddPrice12 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName12 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName12 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend11 = new System.Windows.Forms.CheckBox();
+            this.txtTHAddPrice11 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName11 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName11 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName1 = new System.Windows.Forms.TextBox();
+            this.chkTHEnableChoices = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.textBox59 = new System.Windows.Forms.TextBox();
-            this.textBox60 = new System.Windows.Forms.TextBox();
-            this.textBox61 = new System.Windows.Forms.TextBox();
-            this.textBox62 = new System.Windows.Forms.TextBox();
-            this.checkBox22 = new System.Windows.Forms.CheckBox();
-            this.textBox63 = new System.Windows.Forms.TextBox();
-            this.textBox64 = new System.Windows.Forms.TextBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.textBox65 = new System.Windows.Forms.TextBox();
-            this.textBox66 = new System.Windows.Forms.TextBox();
-            this.textBox67 = new System.Windows.Forms.TextBox();
-            this.textBox68 = new System.Windows.Forms.TextBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.textBox69 = new System.Windows.Forms.TextBox();
-            this.textBox70 = new System.Windows.Forms.TextBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
-            this.textBox71 = new System.Windows.Forms.TextBox();
-            this.textBox72 = new System.Windows.Forms.TextBox();
-            this.textBox73 = new System.Windows.Forms.TextBox();
-            this.textBox74 = new System.Windows.Forms.TextBox();
-            this.checkBox26 = new System.Windows.Forms.CheckBox();
-            this.textBox75 = new System.Windows.Forms.TextBox();
-            this.textBox76 = new System.Windows.Forms.TextBox();
-            this.checkBox27 = new System.Windows.Forms.CheckBox();
-            this.textBox77 = new System.Windows.Forms.TextBox();
-            this.textBox78 = new System.Windows.Forms.TextBox();
-            this.textBox79 = new System.Windows.Forms.TextBox();
-            this.textBox80 = new System.Windows.Forms.TextBox();
-            this.checkBox28 = new System.Windows.Forms.CheckBox();
-            this.textBox81 = new System.Windows.Forms.TextBox();
-            this.textBox82 = new System.Windows.Forms.TextBox();
-            this.checkBox29 = new System.Windows.Forms.CheckBox();
-            this.textBox83 = new System.Windows.Forms.TextBox();
-            this.textBox84 = new System.Windows.Forms.TextBox();
-            this.textBox85 = new System.Windows.Forms.TextBox();
-            this.textBox86 = new System.Windows.Forms.TextBox();
-            this.checkBox30 = new System.Windows.Forms.CheckBox();
-            this.textBox87 = new System.Windows.Forms.TextBox();
-            this.btnTHEdit = new System.Windows.Forms.Button();
+            this.chkTHAutoAppend10 = new System.Windows.Forms.CheckBox();
+            this.txtTHEngName1 = new System.Windows.Forms.TextBox();
+            this.txtTHAddPrice10 = new System.Windows.Forms.TextBox();
+            this.txtTHAddPrice1 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName10 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend1 = new System.Windows.Forms.CheckBox();
+            this.txtTHEngName10 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName2 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend9 = new System.Windows.Forms.CheckBox();
+            this.txtTHOtherName2 = new System.Windows.Forms.TextBox();
+            this.txtTHAddPrice9 = new System.Windows.Forms.TextBox();
+            this.txtTHAddPrice2 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName9 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend2 = new System.Windows.Forms.CheckBox();
+            this.txtTHEngName9 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName3 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend8 = new System.Windows.Forms.CheckBox();
+            this.txtTHOtherName3 = new System.Windows.Forms.TextBox();
+            this.txtTHAddPrice8 = new System.Windows.Forms.TextBox();
+            this.txtTHAddPrice3 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName8 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend3 = new System.Windows.Forms.CheckBox();
+            this.txtTHEngName8 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName4 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend7 = new System.Windows.Forms.CheckBox();
+            this.txtTHOtherName4 = new System.Windows.Forms.TextBox();
+            this.txtTHAddPrice7 = new System.Windows.Forms.TextBox();
+            this.txtTHAddPrice4 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName7 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend4 = new System.Windows.Forms.CheckBox();
+            this.txtTHEngName7 = new System.Windows.Forms.TextBox();
+            this.txtTHEngName5 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend6 = new System.Windows.Forms.CheckBox();
+            this.txtTHOtherName5 = new System.Windows.Forms.TextBox();
+            this.txtTHAddPrice6 = new System.Windows.Forms.TextBox();
+            this.txtTHAddPrice5 = new System.Windows.Forms.TextBox();
+            this.txtTHOtherName6 = new System.Windows.Forms.TextBox();
+            this.chkTHAutoAppend5 = new System.Windows.Forms.CheckBox();
+            this.txtTHEngName6 = new System.Windows.Forms.TextBox();
             this.btnTHExit = new System.Windows.Forms.Button();
             this.btnTHSave = new System.Windows.Forms.Button();
-            this.btnTHDel = new System.Windows.Forms.Button();
-            this.btnTHCopy = new System.Windows.Forms.Button();
-            this.btnTHAdd = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.dgvTHMenu = new System.Windows.Forms.DataGridView();
             this.cmTHBoxDish = new System.Windows.Forms.ComboBox();
@@ -326,6 +370,68 @@
             this.btnTH2 = new System.Windows.Forms.Button();
             this.btnTH1 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.txtDishOtherName15 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName15 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName14 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName14 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName13 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName13 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName12 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName12 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName11 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName11 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName10 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName10 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName9 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName9 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName8 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName8 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName7 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName7 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName6 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName6 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName5 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName5 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName4 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName4 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName3 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName3 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName2 = new System.Windows.Forms.TextBox();
+            this.txtDishEngName2 = new System.Windows.Forms.TextBox();
+            this.txtDishOtherName1 = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.txtDishEngName1 = new System.Windows.Forms.TextBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.chkSMPrtOrder = new System.Windows.Forms.CheckBox();
+            this.chkSMPrtName = new System.Windows.Forms.CheckBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.cmbSMSupplyShift = new System.Windows.Forms.ComboBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.chkSMInventoryCheck = new System.Windows.Forms.CheckBox();
+            this.chkSMWithoutVAT = new System.Windows.Forms.CheckBox();
+            this.chkSMDisountable = new System.Windows.Forms.CheckBox();
+            this.chkSMNegativePrice = new System.Windows.Forms.CheckBox();
+            this.chkSMUnavailable = new System.Windows.Forms.CheckBox();
+            this.txtSMPrice = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.txtSMOtherName = new System.Windows.Forms.TextBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.txtSMEngName = new System.Windows.Forms.TextBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.txtSMDisplayPosition = new System.Windows.Forms.TextBox();
+            this.label58 = new System.Windows.Forms.Label();
+            this.txtSMDishCode = new System.Windows.Forms.TextBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.dgvSubMenu = new System.Windows.Forms.DataGridView();
+            this.btnSubMenuEdit = new System.Windows.Forms.Button();
+            this.btnSubMenuExit = new System.Windows.Forms.Button();
+            this.btnSubMenuSave = new System.Windows.Forms.Button();
+            this.btnSubMenuDel = new System.Windows.Forms.Button();
+            this.btnSubMenuAdd = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -351,6 +457,11 @@
             this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHMenu)).BeginInit();
             this.groupBox14.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubMenu)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -358,7 +469,7 @@
             this.groupBox1.Controls.Add(this.tabControl1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1014, 658);
+            this.groupBox1.Size = new System.Drawing.Size(1000, 658);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu Item";
@@ -375,7 +486,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(981, 624);
+            this.tabControl1.Size = new System.Drawing.Size(975, 630);
             this.tabControl1.TabIndex = 13;
             // 
             // tabPage1
@@ -399,7 +510,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 26);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(973, 594);
+            this.tabPage1.Size = new System.Drawing.Size(967, 600);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dish Attributes";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -576,6 +687,7 @@
             this.btnDADel.TabIndex = 35;
             this.btnDADel.Text = "Delete";
             this.btnDADel.UseVisualStyleBackColor = false;
+            this.btnDADel.Click += new System.EventHandler(this.btnDADel_Click);
             // 
             // chkUnavailable
             // 
@@ -600,6 +712,7 @@
             this.btnDACopy.TabIndex = 33;
             this.btnDACopy.Text = "Copy";
             this.btnDACopy.UseVisualStyleBackColor = false;
+            this.btnDACopy.Click += new System.EventHandler(this.btnDACopy_Click);
             // 
             // groupBox6
             // 
@@ -692,6 +805,8 @@
             this.dgvDAMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDAMenu.Location = new System.Drawing.Point(10, 73);
             this.dgvDAMenu.Name = "dgvDAMenu";
+            this.dgvDAMenu.ReadOnly = true;
+            this.dgvDAMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDAMenu.Size = new System.Drawing.Size(373, 345);
             this.dgvDAMenu.TabIndex = 6;
             this.dgvDAMenu.SelectionChanged += new System.EventHandler(this.dgvDAMenu_SelectionChanged);
@@ -704,6 +819,7 @@
             this.cmDABoxDish.Name = "cmDABoxDish";
             this.cmDABoxDish.Size = new System.Drawing.Size(121, 25);
             this.cmDABoxDish.TabIndex = 5;
+            this.cmDABoxDish.SelectedIndexChanged += new System.EventHandler(this.cmDABoxDish_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -1118,681 +1234,664 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.btnSCEdit);
             this.tabPage2.Controls.Add(this.btnSCExit);
             this.tabPage2.Controls.Add(this.btnSCSave);
-            this.tabPage2.Controls.Add(this.btnSCDel);
-            this.tabPage2.Controls.Add(this.btnSCCopy);
-            this.tabPage2.Controls.Add(this.btnSCAdd);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(973, 594);
+            this.tabPage2.Size = new System.Drawing.Size(967, 600);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Second Choices";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.checkBox36);
-            this.groupBox8.Controls.Add(this.textBox100);
-            this.groupBox8.Controls.Add(this.textBox101);
-            this.groupBox8.Controls.Add(this.textBox102);
-            this.groupBox8.Controls.Add(this.checkBox37);
-            this.groupBox8.Controls.Add(this.textBox103);
-            this.groupBox8.Controls.Add(this.textBox104);
-            this.groupBox8.Controls.Add(this.textBox105);
-            this.groupBox8.Controls.Add(this.checkBox31);
-            this.groupBox8.Controls.Add(this.textBox1);
-            this.groupBox8.Controls.Add(this.textBox13);
-            this.groupBox8.Controls.Add(this.textBox57);
-            this.groupBox8.Controls.Add(this.checkBox32);
-            this.groupBox8.Controls.Add(this.textBox88);
-            this.groupBox8.Controls.Add(this.textBox89);
-            this.groupBox8.Controls.Add(this.textBox90);
-            this.groupBox8.Controls.Add(this.checkBox33);
-            this.groupBox8.Controls.Add(this.textBox91);
-            this.groupBox8.Controls.Add(this.textBox92);
-            this.groupBox8.Controls.Add(this.textBox93);
-            this.groupBox8.Controls.Add(this.checkBox34);
-            this.groupBox8.Controls.Add(this.textBox94);
-            this.groupBox8.Controls.Add(this.textBox95);
-            this.groupBox8.Controls.Add(this.textBox96);
-            this.groupBox8.Controls.Add(this.checkBox35);
-            this.groupBox8.Controls.Add(this.textBox97);
-            this.groupBox8.Controls.Add(this.textBox98);
-            this.groupBox8.Controls.Add(this.textBox99);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend17);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice17);
+            this.groupBox8.Controls.Add(this.txtSCOtherName17);
+            this.groupBox8.Controls.Add(this.txtSCEngName17);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend16);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice16);
+            this.groupBox8.Controls.Add(this.txtSCOtherName16);
+            this.groupBox8.Controls.Add(this.txtSCEngName16);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend15);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice15);
+            this.groupBox8.Controls.Add(this.txtSCOtherName15);
+            this.groupBox8.Controls.Add(this.txtSCEngName15);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend14);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice14);
+            this.groupBox8.Controls.Add(this.txtSCOtherName14);
+            this.groupBox8.Controls.Add(this.txtSCEngName14);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend13);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice13);
+            this.groupBox8.Controls.Add(this.txtSCOtherName13);
+            this.groupBox8.Controls.Add(this.txtSCEngName13);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend12);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice12);
+            this.groupBox8.Controls.Add(this.txtSCOtherName12);
+            this.groupBox8.Controls.Add(this.txtSCEngName12);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend11);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice11);
+            this.groupBox8.Controls.Add(this.txtSCOtherName11);
+            this.groupBox8.Controls.Add(this.txtSCEngName11);
             this.groupBox8.Controls.Add(this.txtSCOtherName1);
-            this.groupBox8.Controls.Add(this.chkEnableChoices);
-            this.groupBox8.Controls.Add(this.btnCopyChoices);
             this.groupBox8.Controls.Add(this.label20);
             this.groupBox8.Controls.Add(this.label21);
             this.groupBox8.Controls.Add(this.label22);
             this.groupBox8.Controls.Add(this.label23);
-            this.groupBox8.Controls.Add(this.checkBox7);
-            this.groupBox8.Controls.Add(this.btnSCEngName1);
-            this.groupBox8.Controls.Add(this.textBox21);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend10);
+            this.groupBox8.Controls.Add(this.txtSCEngName1);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice10);
             this.groupBox8.Controls.Add(this.txtSCAddPrice1);
-            this.groupBox8.Controls.Add(this.textBox22);
+            this.groupBox8.Controls.Add(this.txtSCOtherName10);
             this.groupBox8.Controls.Add(this.chkSCAutoAppend1);
-            this.groupBox8.Controls.Add(this.textBox23);
-            this.groupBox8.Controls.Add(this.btnSCEngName2);
-            this.groupBox8.Controls.Add(this.checkBox8);
+            this.groupBox8.Controls.Add(this.txtSCEngName10);
+            this.groupBox8.Controls.Add(this.txtSCEngName2);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend9);
             this.groupBox8.Controls.Add(this.txtSCOtherName2);
-            this.groupBox8.Controls.Add(this.textBox24);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice9);
             this.groupBox8.Controls.Add(this.txtSCAddPrice2);
-            this.groupBox8.Controls.Add(this.textBox25);
+            this.groupBox8.Controls.Add(this.txtSCOtherName9);
             this.groupBox8.Controls.Add(this.chkSCAutoAppend2);
-            this.groupBox8.Controls.Add(this.textBox26);
-            this.groupBox8.Controls.Add(this.textBox7);
-            this.groupBox8.Controls.Add(this.checkBox3);
-            this.groupBox8.Controls.Add(this.textBox6);
-            this.groupBox8.Controls.Add(this.textBox8);
-            this.groupBox8.Controls.Add(this.textBox5);
-            this.groupBox8.Controls.Add(this.textBox9);
-            this.groupBox8.Controls.Add(this.checkBox2);
-            this.groupBox8.Controls.Add(this.textBox10);
-            this.groupBox8.Controls.Add(this.textBox4);
-            this.groupBox8.Controls.Add(this.checkBox4);
-            this.groupBox8.Controls.Add(this.textBox3);
-            this.groupBox8.Controls.Add(this.textBox11);
-            this.groupBox8.Controls.Add(this.textBox2);
-            this.groupBox8.Controls.Add(this.textBox12);
-            this.groupBox8.Controls.Add(this.checkBox1);
-            this.groupBox8.Controls.Add(this.textBox14);
-            this.groupBox8.Controls.Add(this.textBox20);
-            this.groupBox8.Controls.Add(this.checkBox5);
-            this.groupBox8.Controls.Add(this.textBox19);
-            this.groupBox8.Controls.Add(this.textBox15);
-            this.groupBox8.Controls.Add(this.textBox18);
-            this.groupBox8.Controls.Add(this.textBox16);
-            this.groupBox8.Controls.Add(this.checkBox6);
-            this.groupBox8.Controls.Add(this.textBox17);
-            this.groupBox8.Location = new System.Drawing.Point(497, 6);
+            this.groupBox8.Controls.Add(this.txtSCEngName9);
+            this.groupBox8.Controls.Add(this.txtSCEngName3);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend8);
+            this.groupBox8.Controls.Add(this.txtSCOtherName3);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice8);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice3);
+            this.groupBox8.Controls.Add(this.txtSCOtherName8);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend3);
+            this.groupBox8.Controls.Add(this.txtSCEngName8);
+            this.groupBox8.Controls.Add(this.txtSCEngName4);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend7);
+            this.groupBox8.Controls.Add(this.txtSCOtherName4);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice7);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice4);
+            this.groupBox8.Controls.Add(this.txtSCOtherName7);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend4);
+            this.groupBox8.Controls.Add(this.txtSCEngName7);
+            this.groupBox8.Controls.Add(this.txtSCEngName5);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend6);
+            this.groupBox8.Controls.Add(this.txtSCOtherName5);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice6);
+            this.groupBox8.Controls.Add(this.txtSCAddPrice5);
+            this.groupBox8.Controls.Add(this.txtSCOtherName6);
+            this.groupBox8.Controls.Add(this.chkSCAutoAppend5);
+            this.groupBox8.Controls.Add(this.txtSCEngName6);
+            this.groupBox8.Controls.Add(this.chkSCEnableChoices);
+            this.groupBox8.Controls.Add(this.btnCopyChoices);
+            this.groupBox8.Location = new System.Drawing.Point(404, 9);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(470, 582);
+            this.groupBox8.Size = new System.Drawing.Size(451, 582);
             this.groupBox8.TabIndex = 102;
             this.groupBox8.TabStop = false;
             // 
-            // checkBox36
+            // chkSCAutoAppend17
             // 
-            this.checkBox36.AutoSize = true;
-            this.checkBox36.Location = new System.Drawing.Point(415, 554);
-            this.checkBox36.Name = "checkBox36";
-            this.checkBox36.Size = new System.Drawing.Size(15, 14);
-            this.checkBox36.TabIndex = 123;
-            this.checkBox36.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend17.AutoSize = true;
+            this.chkSCAutoAppend17.Location = new System.Drawing.Point(394, 552);
+            this.chkSCAutoAppend17.Name = "chkSCAutoAppend17";
+            this.chkSCAutoAppend17.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend17.TabIndex = 195;
+            this.chkSCAutoAppend17.UseVisualStyleBackColor = true;
             // 
-            // textBox100
+            // txtSCAddPrice17
             // 
-            this.textBox100.Location = new System.Drawing.Point(311, 550);
-            this.textBox100.Name = "textBox100";
-            this.textBox100.Size = new System.Drawing.Size(64, 23);
-            this.textBox100.TabIndex = 122;
+            this.txtSCAddPrice17.Location = new System.Drawing.Point(290, 548);
+            this.txtSCAddPrice17.Name = "txtSCAddPrice17";
+            this.txtSCAddPrice17.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice17.TabIndex = 194;
             // 
-            // textBox101
+            // txtSCOtherName17
             // 
-            this.textBox101.Location = new System.Drawing.Point(189, 550);
-            this.textBox101.Name = "textBox101";
-            this.textBox101.Size = new System.Drawing.Size(110, 23);
-            this.textBox101.TabIndex = 121;
+            this.txtSCOtherName17.Location = new System.Drawing.Point(168, 548);
+            this.txtSCOtherName17.Name = "txtSCOtherName17";
+            this.txtSCOtherName17.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName17.TabIndex = 193;
             // 
-            // textBox102
+            // txtSCEngName17
             // 
-            this.textBox102.Location = new System.Drawing.Point(28, 550);
-            this.textBox102.Name = "textBox102";
-            this.textBox102.Size = new System.Drawing.Size(150, 23);
-            this.textBox102.TabIndex = 120;
+            this.txtSCEngName17.Location = new System.Drawing.Point(7, 548);
+            this.txtSCEngName17.Name = "txtSCEngName17";
+            this.txtSCEngName17.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName17.TabIndex = 192;
             // 
-            // checkBox37
+            // chkSCAutoAppend16
             // 
-            this.checkBox37.AutoSize = true;
-            this.checkBox37.Location = new System.Drawing.Point(415, 525);
-            this.checkBox37.Name = "checkBox37";
-            this.checkBox37.Size = new System.Drawing.Size(15, 14);
-            this.checkBox37.TabIndex = 119;
-            this.checkBox37.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend16.AutoSize = true;
+            this.chkSCAutoAppend16.Location = new System.Drawing.Point(394, 523);
+            this.chkSCAutoAppend16.Name = "chkSCAutoAppend16";
+            this.chkSCAutoAppend16.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend16.TabIndex = 191;
+            this.chkSCAutoAppend16.UseVisualStyleBackColor = true;
             // 
-            // textBox103
+            // txtSCAddPrice16
             // 
-            this.textBox103.Location = new System.Drawing.Point(311, 521);
-            this.textBox103.Name = "textBox103";
-            this.textBox103.Size = new System.Drawing.Size(64, 23);
-            this.textBox103.TabIndex = 118;
+            this.txtSCAddPrice16.Location = new System.Drawing.Point(290, 519);
+            this.txtSCAddPrice16.Name = "txtSCAddPrice16";
+            this.txtSCAddPrice16.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice16.TabIndex = 190;
             // 
-            // textBox104
+            // txtSCOtherName16
             // 
-            this.textBox104.Location = new System.Drawing.Point(189, 521);
-            this.textBox104.Name = "textBox104";
-            this.textBox104.Size = new System.Drawing.Size(110, 23);
-            this.textBox104.TabIndex = 117;
+            this.txtSCOtherName16.Location = new System.Drawing.Point(168, 519);
+            this.txtSCOtherName16.Name = "txtSCOtherName16";
+            this.txtSCOtherName16.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName16.TabIndex = 189;
             // 
-            // textBox105
+            // txtSCEngName16
             // 
-            this.textBox105.Location = new System.Drawing.Point(28, 521);
-            this.textBox105.Name = "textBox105";
-            this.textBox105.Size = new System.Drawing.Size(150, 23);
-            this.textBox105.TabIndex = 116;
+            this.txtSCEngName16.Location = new System.Drawing.Point(7, 519);
+            this.txtSCEngName16.Name = "txtSCEngName16";
+            this.txtSCEngName16.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName16.TabIndex = 188;
             // 
-            // checkBox31
+            // chkSCAutoAppend15
             // 
-            this.checkBox31.AutoSize = true;
-            this.checkBox31.Location = new System.Drawing.Point(415, 496);
-            this.checkBox31.Name = "checkBox31";
-            this.checkBox31.Size = new System.Drawing.Size(15, 14);
-            this.checkBox31.TabIndex = 115;
-            this.checkBox31.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend15.AutoSize = true;
+            this.chkSCAutoAppend15.Location = new System.Drawing.Point(394, 494);
+            this.chkSCAutoAppend15.Name = "chkSCAutoAppend15";
+            this.chkSCAutoAppend15.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend15.TabIndex = 187;
+            this.chkSCAutoAppend15.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtSCAddPrice15
             // 
-            this.textBox1.Location = new System.Drawing.Point(311, 492);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(64, 23);
-            this.textBox1.TabIndex = 114;
+            this.txtSCAddPrice15.Location = new System.Drawing.Point(290, 490);
+            this.txtSCAddPrice15.Name = "txtSCAddPrice15";
+            this.txtSCAddPrice15.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice15.TabIndex = 186;
             // 
-            // textBox13
+            // txtSCOtherName15
             // 
-            this.textBox13.Location = new System.Drawing.Point(189, 492);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(110, 23);
-            this.textBox13.TabIndex = 113;
+            this.txtSCOtherName15.Location = new System.Drawing.Point(168, 490);
+            this.txtSCOtherName15.Name = "txtSCOtherName15";
+            this.txtSCOtherName15.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName15.TabIndex = 185;
             // 
-            // textBox57
+            // txtSCEngName15
             // 
-            this.textBox57.Location = new System.Drawing.Point(28, 492);
-            this.textBox57.Name = "textBox57";
-            this.textBox57.Size = new System.Drawing.Size(150, 23);
-            this.textBox57.TabIndex = 112;
+            this.txtSCEngName15.Location = new System.Drawing.Point(7, 490);
+            this.txtSCEngName15.Name = "txtSCEngName15";
+            this.txtSCEngName15.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName15.TabIndex = 184;
             // 
-            // checkBox32
+            // chkSCAutoAppend14
             // 
-            this.checkBox32.AutoSize = true;
-            this.checkBox32.Location = new System.Drawing.Point(415, 467);
-            this.checkBox32.Name = "checkBox32";
-            this.checkBox32.Size = new System.Drawing.Size(15, 14);
-            this.checkBox32.TabIndex = 111;
-            this.checkBox32.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend14.AutoSize = true;
+            this.chkSCAutoAppend14.Location = new System.Drawing.Point(394, 465);
+            this.chkSCAutoAppend14.Name = "chkSCAutoAppend14";
+            this.chkSCAutoAppend14.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend14.TabIndex = 183;
+            this.chkSCAutoAppend14.UseVisualStyleBackColor = true;
             // 
-            // textBox88
+            // txtSCAddPrice14
             // 
-            this.textBox88.Location = new System.Drawing.Point(311, 463);
-            this.textBox88.Name = "textBox88";
-            this.textBox88.Size = new System.Drawing.Size(64, 23);
-            this.textBox88.TabIndex = 110;
+            this.txtSCAddPrice14.Location = new System.Drawing.Point(290, 461);
+            this.txtSCAddPrice14.Name = "txtSCAddPrice14";
+            this.txtSCAddPrice14.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice14.TabIndex = 182;
             // 
-            // textBox89
+            // txtSCOtherName14
             // 
-            this.textBox89.Location = new System.Drawing.Point(189, 463);
-            this.textBox89.Name = "textBox89";
-            this.textBox89.Size = new System.Drawing.Size(110, 23);
-            this.textBox89.TabIndex = 109;
+            this.txtSCOtherName14.Location = new System.Drawing.Point(168, 461);
+            this.txtSCOtherName14.Name = "txtSCOtherName14";
+            this.txtSCOtherName14.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName14.TabIndex = 181;
             // 
-            // textBox90
+            // txtSCEngName14
             // 
-            this.textBox90.Location = new System.Drawing.Point(28, 463);
-            this.textBox90.Name = "textBox90";
-            this.textBox90.Size = new System.Drawing.Size(150, 23);
-            this.textBox90.TabIndex = 108;
+            this.txtSCEngName14.Location = new System.Drawing.Point(7, 461);
+            this.txtSCEngName14.Name = "txtSCEngName14";
+            this.txtSCEngName14.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName14.TabIndex = 180;
             // 
-            // checkBox33
+            // chkSCAutoAppend13
             // 
-            this.checkBox33.AutoSize = true;
-            this.checkBox33.Location = new System.Drawing.Point(415, 438);
-            this.checkBox33.Name = "checkBox33";
-            this.checkBox33.Size = new System.Drawing.Size(15, 14);
-            this.checkBox33.TabIndex = 107;
-            this.checkBox33.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend13.AutoSize = true;
+            this.chkSCAutoAppend13.Location = new System.Drawing.Point(394, 436);
+            this.chkSCAutoAppend13.Name = "chkSCAutoAppend13";
+            this.chkSCAutoAppend13.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend13.TabIndex = 179;
+            this.chkSCAutoAppend13.UseVisualStyleBackColor = true;
             // 
-            // textBox91
+            // txtSCAddPrice13
             // 
-            this.textBox91.Location = new System.Drawing.Point(311, 434);
-            this.textBox91.Name = "textBox91";
-            this.textBox91.Size = new System.Drawing.Size(64, 23);
-            this.textBox91.TabIndex = 106;
+            this.txtSCAddPrice13.Location = new System.Drawing.Point(290, 432);
+            this.txtSCAddPrice13.Name = "txtSCAddPrice13";
+            this.txtSCAddPrice13.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice13.TabIndex = 178;
             // 
-            // textBox92
+            // txtSCOtherName13
             // 
-            this.textBox92.Location = new System.Drawing.Point(189, 434);
-            this.textBox92.Name = "textBox92";
-            this.textBox92.Size = new System.Drawing.Size(110, 23);
-            this.textBox92.TabIndex = 105;
+            this.txtSCOtherName13.Location = new System.Drawing.Point(168, 432);
+            this.txtSCOtherName13.Name = "txtSCOtherName13";
+            this.txtSCOtherName13.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName13.TabIndex = 177;
             // 
-            // textBox93
+            // txtSCEngName13
             // 
-            this.textBox93.Location = new System.Drawing.Point(28, 434);
-            this.textBox93.Name = "textBox93";
-            this.textBox93.Size = new System.Drawing.Size(150, 23);
-            this.textBox93.TabIndex = 104;
+            this.txtSCEngName13.Location = new System.Drawing.Point(7, 432);
+            this.txtSCEngName13.Name = "txtSCEngName13";
+            this.txtSCEngName13.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName13.TabIndex = 176;
             // 
-            // checkBox34
+            // chkSCAutoAppend12
             // 
-            this.checkBox34.AutoSize = true;
-            this.checkBox34.Location = new System.Drawing.Point(415, 409);
-            this.checkBox34.Name = "checkBox34";
-            this.checkBox34.Size = new System.Drawing.Size(15, 14);
-            this.checkBox34.TabIndex = 103;
-            this.checkBox34.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend12.AutoSize = true;
+            this.chkSCAutoAppend12.Location = new System.Drawing.Point(394, 407);
+            this.chkSCAutoAppend12.Name = "chkSCAutoAppend12";
+            this.chkSCAutoAppend12.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend12.TabIndex = 175;
+            this.chkSCAutoAppend12.UseVisualStyleBackColor = true;
             // 
-            // textBox94
+            // txtSCAddPrice12
             // 
-            this.textBox94.Location = new System.Drawing.Point(311, 405);
-            this.textBox94.Name = "textBox94";
-            this.textBox94.Size = new System.Drawing.Size(64, 23);
-            this.textBox94.TabIndex = 102;
+            this.txtSCAddPrice12.Location = new System.Drawing.Point(290, 403);
+            this.txtSCAddPrice12.Name = "txtSCAddPrice12";
+            this.txtSCAddPrice12.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice12.TabIndex = 174;
             // 
-            // textBox95
+            // txtSCOtherName12
             // 
-            this.textBox95.Location = new System.Drawing.Point(189, 405);
-            this.textBox95.Name = "textBox95";
-            this.textBox95.Size = new System.Drawing.Size(110, 23);
-            this.textBox95.TabIndex = 101;
+            this.txtSCOtherName12.Location = new System.Drawing.Point(168, 403);
+            this.txtSCOtherName12.Name = "txtSCOtherName12";
+            this.txtSCOtherName12.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName12.TabIndex = 173;
             // 
-            // textBox96
+            // txtSCEngName12
             // 
-            this.textBox96.Location = new System.Drawing.Point(28, 405);
-            this.textBox96.Name = "textBox96";
-            this.textBox96.Size = new System.Drawing.Size(150, 23);
-            this.textBox96.TabIndex = 100;
+            this.txtSCEngName12.Location = new System.Drawing.Point(7, 403);
+            this.txtSCEngName12.Name = "txtSCEngName12";
+            this.txtSCEngName12.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName12.TabIndex = 172;
             // 
-            // checkBox35
+            // chkSCAutoAppend11
             // 
-            this.checkBox35.AutoSize = true;
-            this.checkBox35.Location = new System.Drawing.Point(415, 380);
-            this.checkBox35.Name = "checkBox35";
-            this.checkBox35.Size = new System.Drawing.Size(15, 14);
-            this.checkBox35.TabIndex = 99;
-            this.checkBox35.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend11.AutoSize = true;
+            this.chkSCAutoAppend11.Location = new System.Drawing.Point(394, 378);
+            this.chkSCAutoAppend11.Name = "chkSCAutoAppend11";
+            this.chkSCAutoAppend11.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend11.TabIndex = 171;
+            this.chkSCAutoAppend11.UseVisualStyleBackColor = true;
             // 
-            // textBox97
+            // txtSCAddPrice11
             // 
-            this.textBox97.Location = new System.Drawing.Point(311, 376);
-            this.textBox97.Name = "textBox97";
-            this.textBox97.Size = new System.Drawing.Size(64, 23);
-            this.textBox97.TabIndex = 98;
+            this.txtSCAddPrice11.Location = new System.Drawing.Point(290, 374);
+            this.txtSCAddPrice11.Name = "txtSCAddPrice11";
+            this.txtSCAddPrice11.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice11.TabIndex = 170;
             // 
-            // textBox98
+            // txtSCOtherName11
             // 
-            this.textBox98.Location = new System.Drawing.Point(189, 376);
-            this.textBox98.Name = "textBox98";
-            this.textBox98.Size = new System.Drawing.Size(110, 23);
-            this.textBox98.TabIndex = 97;
+            this.txtSCOtherName11.Location = new System.Drawing.Point(168, 374);
+            this.txtSCOtherName11.Name = "txtSCOtherName11";
+            this.txtSCOtherName11.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName11.TabIndex = 169;
             // 
-            // textBox99
+            // txtSCEngName11
             // 
-            this.textBox99.Location = new System.Drawing.Point(28, 376);
-            this.textBox99.Name = "textBox99";
-            this.textBox99.Size = new System.Drawing.Size(150, 23);
-            this.textBox99.TabIndex = 96;
+            this.txtSCEngName11.Location = new System.Drawing.Point(7, 374);
+            this.txtSCEngName11.Name = "txtSCEngName11";
+            this.txtSCEngName11.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName11.TabIndex = 168;
             // 
             // txtSCOtherName1
             // 
-            this.txtSCOtherName1.Location = new System.Drawing.Point(189, 86);
+            this.txtSCOtherName1.Location = new System.Drawing.Point(168, 84);
             this.txtSCOtherName1.Name = "txtSCOtherName1";
             this.txtSCOtherName1.Size = new System.Drawing.Size(110, 23);
-            this.txtSCOtherName1.TabIndex = 57;
-            // 
-            // chkEnableChoices
-            // 
-            this.chkEnableChoices.AutoSize = true;
-            this.chkEnableChoices.Location = new System.Drawing.Point(111, 31);
-            this.chkEnableChoices.Name = "chkEnableChoices";
-            this.chkEnableChoices.Size = new System.Drawing.Size(115, 21);
-            this.chkEnableChoices.TabIndex = 50;
-            this.chkEnableChoices.Text = "Enable Choices";
-            this.chkEnableChoices.UseVisualStyleBackColor = true;
-            // 
-            // btnCopyChoices
-            // 
-            this.btnCopyChoices.Location = new System.Drawing.Point(359, 29);
-            this.btnCopyChoices.Name = "btnCopyChoices";
-            this.btnCopyChoices.Size = new System.Drawing.Size(97, 23);
-            this.btnCopyChoices.TabIndex = 51;
-            this.btnCopyChoices.Text = "Copy Choices";
-            this.btnCopyChoices.UseVisualStyleBackColor = true;
+            this.txtSCOtherName1.TabIndex = 129;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(25, 66);
+            this.label20.Location = new System.Drawing.Point(40, 64);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(88, 17);
-            this.label20.TabIndex = 52;
+            this.label20.TabIndex = 124;
             this.label20.Text = "English Name";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(186, 64);
+            this.label21.Location = new System.Drawing.Point(181, 62);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(80, 17);
-            this.label21.TabIndex = 53;
+            this.label21.TabIndex = 125;
             this.label21.Text = "Other Name";
             // 
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(308, 64);
+            this.label22.Location = new System.Drawing.Point(287, 62);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(67, 17);
-            this.label22.TabIndex = 54;
+            this.label22.TabIndex = 126;
             this.label22.Text = "Add. Price";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(385, 64);
+            this.label23.Location = new System.Drawing.Point(364, 62);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(85, 17);
-            this.label23.TabIndex = 55;
+            this.label23.TabIndex = 127;
             this.label23.Text = "Auto Append";
             // 
-            // checkBox7
+            // chkSCAutoAppend10
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(415, 351);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(15, 14);
-            this.checkBox7.TabIndex = 95;
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend10.AutoSize = true;
+            this.chkSCAutoAppend10.Location = new System.Drawing.Point(394, 349);
+            this.chkSCAutoAppend10.Name = "chkSCAutoAppend10";
+            this.chkSCAutoAppend10.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend10.TabIndex = 167;
+            this.chkSCAutoAppend10.UseVisualStyleBackColor = true;
             // 
-            // btnSCEngName1
+            // txtSCEngName1
             // 
-            this.btnSCEngName1.Location = new System.Drawing.Point(28, 86);
-            this.btnSCEngName1.Name = "btnSCEngName1";
-            this.btnSCEngName1.Size = new System.Drawing.Size(150, 23);
-            this.btnSCEngName1.TabIndex = 56;
+            this.txtSCEngName1.Location = new System.Drawing.Point(7, 84);
+            this.txtSCEngName1.Name = "txtSCEngName1";
+            this.txtSCEngName1.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName1.TabIndex = 128;
             // 
-            // textBox21
+            // txtSCAddPrice10
             // 
-            this.textBox21.Location = new System.Drawing.Point(311, 347);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(64, 23);
-            this.textBox21.TabIndex = 94;
+            this.txtSCAddPrice10.Location = new System.Drawing.Point(290, 345);
+            this.txtSCAddPrice10.Name = "txtSCAddPrice10";
+            this.txtSCAddPrice10.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice10.TabIndex = 166;
             // 
             // txtSCAddPrice1
             // 
-            this.txtSCAddPrice1.Location = new System.Drawing.Point(311, 86);
+            this.txtSCAddPrice1.Location = new System.Drawing.Point(290, 84);
             this.txtSCAddPrice1.Name = "txtSCAddPrice1";
             this.txtSCAddPrice1.Size = new System.Drawing.Size(64, 23);
-            this.txtSCAddPrice1.TabIndex = 58;
+            this.txtSCAddPrice1.TabIndex = 130;
             // 
-            // textBox22
+            // txtSCOtherName10
             // 
-            this.textBox22.Location = new System.Drawing.Point(189, 347);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(110, 23);
-            this.textBox22.TabIndex = 93;
+            this.txtSCOtherName10.Location = new System.Drawing.Point(168, 345);
+            this.txtSCOtherName10.Name = "txtSCOtherName10";
+            this.txtSCOtherName10.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName10.TabIndex = 165;
             // 
             // chkSCAutoAppend1
             // 
             this.chkSCAutoAppend1.AutoSize = true;
-            this.chkSCAutoAppend1.Location = new System.Drawing.Point(415, 90);
+            this.chkSCAutoAppend1.Location = new System.Drawing.Point(394, 88);
             this.chkSCAutoAppend1.Name = "chkSCAutoAppend1";
             this.chkSCAutoAppend1.Size = new System.Drawing.Size(15, 14);
-            this.chkSCAutoAppend1.TabIndex = 59;
+            this.chkSCAutoAppend1.TabIndex = 131;
             this.chkSCAutoAppend1.UseVisualStyleBackColor = true;
             // 
-            // textBox23
+            // txtSCEngName10
             // 
-            this.textBox23.Location = new System.Drawing.Point(28, 347);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(150, 23);
-            this.textBox23.TabIndex = 92;
+            this.txtSCEngName10.Location = new System.Drawing.Point(7, 345);
+            this.txtSCEngName10.Name = "txtSCEngName10";
+            this.txtSCEngName10.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName10.TabIndex = 164;
             // 
-            // btnSCEngName2
+            // txtSCEngName2
             // 
-            this.btnSCEngName2.Location = new System.Drawing.Point(28, 115);
-            this.btnSCEngName2.Name = "btnSCEngName2";
-            this.btnSCEngName2.Size = new System.Drawing.Size(150, 23);
-            this.btnSCEngName2.TabIndex = 60;
+            this.txtSCEngName2.Location = new System.Drawing.Point(7, 113);
+            this.txtSCEngName2.Name = "txtSCEngName2";
+            this.txtSCEngName2.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName2.TabIndex = 132;
             // 
-            // checkBox8
+            // chkSCAutoAppend9
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(415, 322);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(15, 14);
-            this.checkBox8.TabIndex = 91;
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend9.AutoSize = true;
+            this.chkSCAutoAppend9.Location = new System.Drawing.Point(394, 320);
+            this.chkSCAutoAppend9.Name = "chkSCAutoAppend9";
+            this.chkSCAutoAppend9.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend9.TabIndex = 163;
+            this.chkSCAutoAppend9.UseVisualStyleBackColor = true;
             // 
             // txtSCOtherName2
             // 
-            this.txtSCOtherName2.Location = new System.Drawing.Point(189, 115);
+            this.txtSCOtherName2.Location = new System.Drawing.Point(168, 113);
             this.txtSCOtherName2.Name = "txtSCOtherName2";
             this.txtSCOtherName2.Size = new System.Drawing.Size(110, 23);
-            this.txtSCOtherName2.TabIndex = 61;
+            this.txtSCOtherName2.TabIndex = 133;
             // 
-            // textBox24
+            // txtSCAddPrice9
             // 
-            this.textBox24.Location = new System.Drawing.Point(311, 318);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(64, 23);
-            this.textBox24.TabIndex = 90;
+            this.txtSCAddPrice9.Location = new System.Drawing.Point(290, 316);
+            this.txtSCAddPrice9.Name = "txtSCAddPrice9";
+            this.txtSCAddPrice9.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice9.TabIndex = 162;
             // 
             // txtSCAddPrice2
             // 
-            this.txtSCAddPrice2.Location = new System.Drawing.Point(311, 115);
+            this.txtSCAddPrice2.Location = new System.Drawing.Point(290, 113);
             this.txtSCAddPrice2.Name = "txtSCAddPrice2";
             this.txtSCAddPrice2.Size = new System.Drawing.Size(64, 23);
-            this.txtSCAddPrice2.TabIndex = 62;
+            this.txtSCAddPrice2.TabIndex = 134;
             // 
-            // textBox25
+            // txtSCOtherName9
             // 
-            this.textBox25.Location = new System.Drawing.Point(189, 318);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(110, 23);
-            this.textBox25.TabIndex = 89;
+            this.txtSCOtherName9.Location = new System.Drawing.Point(168, 316);
+            this.txtSCOtherName9.Name = "txtSCOtherName9";
+            this.txtSCOtherName9.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName9.TabIndex = 161;
             // 
             // chkSCAutoAppend2
             // 
             this.chkSCAutoAppend2.AutoSize = true;
-            this.chkSCAutoAppend2.Location = new System.Drawing.Point(415, 119);
+            this.chkSCAutoAppend2.Location = new System.Drawing.Point(394, 117);
             this.chkSCAutoAppend2.Name = "chkSCAutoAppend2";
             this.chkSCAutoAppend2.Size = new System.Drawing.Size(15, 14);
-            this.chkSCAutoAppend2.TabIndex = 63;
+            this.chkSCAutoAppend2.TabIndex = 135;
             this.chkSCAutoAppend2.UseVisualStyleBackColor = true;
             // 
-            // textBox26
+            // txtSCEngName9
             // 
-            this.textBox26.Location = new System.Drawing.Point(28, 318);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(150, 23);
-            this.textBox26.TabIndex = 88;
+            this.txtSCEngName9.Location = new System.Drawing.Point(7, 316);
+            this.txtSCEngName9.Name = "txtSCEngName9";
+            this.txtSCEngName9.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName9.TabIndex = 160;
             // 
-            // textBox7
+            // txtSCEngName3
             // 
-            this.textBox7.Location = new System.Drawing.Point(28, 144);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(150, 23);
-            this.textBox7.TabIndex = 64;
+            this.txtSCEngName3.Location = new System.Drawing.Point(7, 142);
+            this.txtSCEngName3.Name = "txtSCEngName3";
+            this.txtSCEngName3.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName3.TabIndex = 136;
             // 
-            // checkBox3
+            // chkSCAutoAppend8
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(415, 293);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 87;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend8.AutoSize = true;
+            this.chkSCAutoAppend8.Location = new System.Drawing.Point(394, 291);
+            this.chkSCAutoAppend8.Name = "chkSCAutoAppend8";
+            this.chkSCAutoAppend8.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend8.TabIndex = 159;
+            this.chkSCAutoAppend8.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txtSCOtherName3
             // 
-            this.textBox6.Location = new System.Drawing.Point(189, 144);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(110, 23);
-            this.textBox6.TabIndex = 65;
+            this.txtSCOtherName3.Location = new System.Drawing.Point(168, 142);
+            this.txtSCOtherName3.Name = "txtSCOtherName3";
+            this.txtSCOtherName3.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName3.TabIndex = 137;
             // 
-            // textBox8
+            // txtSCAddPrice8
             // 
-            this.textBox8.Location = new System.Drawing.Point(311, 289);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(64, 23);
-            this.textBox8.TabIndex = 86;
+            this.txtSCAddPrice8.Location = new System.Drawing.Point(290, 287);
+            this.txtSCAddPrice8.Name = "txtSCAddPrice8";
+            this.txtSCAddPrice8.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice8.TabIndex = 158;
             // 
-            // textBox5
+            // txtSCAddPrice3
             // 
-            this.textBox5.Location = new System.Drawing.Point(311, 144);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(64, 23);
-            this.textBox5.TabIndex = 66;
+            this.txtSCAddPrice3.Location = new System.Drawing.Point(290, 142);
+            this.txtSCAddPrice3.Name = "txtSCAddPrice3";
+            this.txtSCAddPrice3.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice3.TabIndex = 138;
             // 
-            // textBox9
+            // txtSCOtherName8
             // 
-            this.textBox9.Location = new System.Drawing.Point(189, 289);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(110, 23);
-            this.textBox9.TabIndex = 85;
+            this.txtSCOtherName8.Location = new System.Drawing.Point(168, 287);
+            this.txtSCOtherName8.Name = "txtSCOtherName8";
+            this.txtSCOtherName8.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName8.TabIndex = 157;
             // 
-            // checkBox2
+            // chkSCAutoAppend3
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(415, 148);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 67;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend3.AutoSize = true;
+            this.chkSCAutoAppend3.Location = new System.Drawing.Point(394, 146);
+            this.chkSCAutoAppend3.Name = "chkSCAutoAppend3";
+            this.chkSCAutoAppend3.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend3.TabIndex = 139;
+            this.chkSCAutoAppend3.UseVisualStyleBackColor = true;
             // 
-            // textBox10
+            // txtSCEngName8
             // 
-            this.textBox10.Location = new System.Drawing.Point(28, 289);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(150, 23);
-            this.textBox10.TabIndex = 84;
+            this.txtSCEngName8.Location = new System.Drawing.Point(7, 287);
+            this.txtSCEngName8.Name = "txtSCEngName8";
+            this.txtSCEngName8.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName8.TabIndex = 156;
             // 
-            // textBox4
+            // txtSCEngName4
             // 
-            this.textBox4.Location = new System.Drawing.Point(28, 173);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(150, 23);
-            this.textBox4.TabIndex = 68;
+            this.txtSCEngName4.Location = new System.Drawing.Point(7, 171);
+            this.txtSCEngName4.Name = "txtSCEngName4";
+            this.txtSCEngName4.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName4.TabIndex = 140;
             // 
-            // checkBox4
+            // chkSCAutoAppend7
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(415, 264);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 83;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend7.AutoSize = true;
+            this.chkSCAutoAppend7.Location = new System.Drawing.Point(394, 262);
+            this.chkSCAutoAppend7.Name = "chkSCAutoAppend7";
+            this.chkSCAutoAppend7.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend7.TabIndex = 155;
+            this.chkSCAutoAppend7.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtSCOtherName4
             // 
-            this.textBox3.Location = new System.Drawing.Point(189, 173);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(110, 23);
-            this.textBox3.TabIndex = 69;
+            this.txtSCOtherName4.Location = new System.Drawing.Point(168, 171);
+            this.txtSCOtherName4.Name = "txtSCOtherName4";
+            this.txtSCOtherName4.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName4.TabIndex = 141;
             // 
-            // textBox11
+            // txtSCAddPrice7
             // 
-            this.textBox11.Location = new System.Drawing.Point(311, 260);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(64, 23);
-            this.textBox11.TabIndex = 82;
+            this.txtSCAddPrice7.Location = new System.Drawing.Point(290, 258);
+            this.txtSCAddPrice7.Name = "txtSCAddPrice7";
+            this.txtSCAddPrice7.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice7.TabIndex = 154;
             // 
-            // textBox2
+            // txtSCAddPrice4
             // 
-            this.textBox2.Location = new System.Drawing.Point(311, 173);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(64, 23);
-            this.textBox2.TabIndex = 70;
+            this.txtSCAddPrice4.Location = new System.Drawing.Point(290, 171);
+            this.txtSCAddPrice4.Name = "txtSCAddPrice4";
+            this.txtSCAddPrice4.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice4.TabIndex = 142;
             // 
-            // textBox12
+            // txtSCOtherName7
             // 
-            this.textBox12.Location = new System.Drawing.Point(189, 260);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(110, 23);
-            this.textBox12.TabIndex = 81;
+            this.txtSCOtherName7.Location = new System.Drawing.Point(168, 258);
+            this.txtSCOtherName7.Name = "txtSCOtherName7";
+            this.txtSCOtherName7.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName7.TabIndex = 153;
             // 
-            // checkBox1
+            // chkSCAutoAppend4
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(415, 177);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 71;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend4.AutoSize = true;
+            this.chkSCAutoAppend4.Location = new System.Drawing.Point(394, 175);
+            this.chkSCAutoAppend4.Name = "chkSCAutoAppend4";
+            this.chkSCAutoAppend4.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend4.TabIndex = 143;
+            this.chkSCAutoAppend4.UseVisualStyleBackColor = true;
             // 
-            // textBox14
+            // txtSCEngName7
             // 
-            this.textBox14.Location = new System.Drawing.Point(28, 260);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(150, 23);
-            this.textBox14.TabIndex = 80;
+            this.txtSCEngName7.Location = new System.Drawing.Point(7, 258);
+            this.txtSCEngName7.Name = "txtSCEngName7";
+            this.txtSCEngName7.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName7.TabIndex = 152;
             // 
-            // textBox20
+            // txtSCEngName5
             // 
-            this.textBox20.Location = new System.Drawing.Point(28, 202);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(150, 23);
-            this.textBox20.TabIndex = 72;
+            this.txtSCEngName5.Location = new System.Drawing.Point(7, 200);
+            this.txtSCEngName5.Name = "txtSCEngName5";
+            this.txtSCEngName5.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName5.TabIndex = 144;
             // 
-            // checkBox5
+            // chkSCAutoAppend6
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(415, 235);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
-            this.checkBox5.TabIndex = 79;
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend6.AutoSize = true;
+            this.chkSCAutoAppend6.Location = new System.Drawing.Point(394, 233);
+            this.chkSCAutoAppend6.Name = "chkSCAutoAppend6";
+            this.chkSCAutoAppend6.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend6.TabIndex = 151;
+            this.chkSCAutoAppend6.UseVisualStyleBackColor = true;
             // 
-            // textBox19
+            // txtSCOtherName5
             // 
-            this.textBox19.Location = new System.Drawing.Point(189, 202);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(110, 23);
-            this.textBox19.TabIndex = 73;
+            this.txtSCOtherName5.Location = new System.Drawing.Point(168, 200);
+            this.txtSCOtherName5.Name = "txtSCOtherName5";
+            this.txtSCOtherName5.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName5.TabIndex = 145;
             // 
-            // textBox15
+            // txtSCAddPrice6
             // 
-            this.textBox15.Location = new System.Drawing.Point(311, 231);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(64, 23);
-            this.textBox15.TabIndex = 78;
+            this.txtSCAddPrice6.Location = new System.Drawing.Point(290, 229);
+            this.txtSCAddPrice6.Name = "txtSCAddPrice6";
+            this.txtSCAddPrice6.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice6.TabIndex = 150;
             // 
-            // textBox18
+            // txtSCAddPrice5
             // 
-            this.textBox18.Location = new System.Drawing.Point(311, 202);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(64, 23);
-            this.textBox18.TabIndex = 74;
+            this.txtSCAddPrice5.Location = new System.Drawing.Point(290, 200);
+            this.txtSCAddPrice5.Name = "txtSCAddPrice5";
+            this.txtSCAddPrice5.Size = new System.Drawing.Size(64, 23);
+            this.txtSCAddPrice5.TabIndex = 146;
             // 
-            // textBox16
+            // txtSCOtherName6
             // 
-            this.textBox16.Location = new System.Drawing.Point(189, 231);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(110, 23);
-            this.textBox16.TabIndex = 77;
+            this.txtSCOtherName6.Location = new System.Drawing.Point(168, 229);
+            this.txtSCOtherName6.Name = "txtSCOtherName6";
+            this.txtSCOtherName6.Size = new System.Drawing.Size(110, 23);
+            this.txtSCOtherName6.TabIndex = 149;
             // 
-            // checkBox6
+            // chkSCAutoAppend5
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(415, 206);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
-            this.checkBox6.TabIndex = 75;
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chkSCAutoAppend5.AutoSize = true;
+            this.chkSCAutoAppend5.Location = new System.Drawing.Point(394, 204);
+            this.chkSCAutoAppend5.Name = "chkSCAutoAppend5";
+            this.chkSCAutoAppend5.Size = new System.Drawing.Size(15, 14);
+            this.chkSCAutoAppend5.TabIndex = 147;
+            this.chkSCAutoAppend5.UseVisualStyleBackColor = true;
             // 
-            // textBox17
+            // txtSCEngName6
             // 
-            this.textBox17.Location = new System.Drawing.Point(28, 231);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(150, 23);
-            this.textBox17.TabIndex = 76;
+            this.txtSCEngName6.Location = new System.Drawing.Point(7, 229);
+            this.txtSCEngName6.Name = "txtSCEngName6";
+            this.txtSCEngName6.Size = new System.Drawing.Size(150, 23);
+            this.txtSCEngName6.TabIndex = 148;
             // 
-            // btnSCEdit
+            // chkSCEnableChoices
             // 
-            this.btnSCEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSCEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSCEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSCEdit.ForeColor = System.Drawing.Color.White;
-            this.btnSCEdit.Location = new System.Drawing.Point(89, 526);
-            this.btnSCEdit.Name = "btnSCEdit";
-            this.btnSCEdit.Size = new System.Drawing.Size(75, 45);
-            this.btnSCEdit.TabIndex = 101;
-            this.btnSCEdit.Text = "Edit";
-            this.btnSCEdit.UseVisualStyleBackColor = false;
+            this.chkSCEnableChoices.AutoSize = true;
+            this.chkSCEnableChoices.Location = new System.Drawing.Point(111, 31);
+            this.chkSCEnableChoices.Name = "chkSCEnableChoices";
+            this.chkSCEnableChoices.Size = new System.Drawing.Size(115, 21);
+            this.chkSCEnableChoices.TabIndex = 50;
+            this.chkSCEnableChoices.Text = "Enable Choices";
+            this.chkSCEnableChoices.UseVisualStyleBackColor = true;
+            // 
+            // btnCopyChoices
+            // 
+            this.btnCopyChoices.Location = new System.Drawing.Point(290, 28);
+            this.btnCopyChoices.Name = "btnCopyChoices";
+            this.btnCopyChoices.Size = new System.Drawing.Size(97, 23);
+            this.btnCopyChoices.TabIndex = 51;
+            this.btnCopyChoices.Text = "Copy Choices";
+            this.btnCopyChoices.UseVisualStyleBackColor = true;
             // 
             // btnSCExit
             // 
@@ -1800,12 +1899,13 @@
             this.btnSCExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSCExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSCExit.ForeColor = System.Drawing.Color.White;
-            this.btnSCExit.Location = new System.Drawing.Point(409, 526);
+            this.btnSCExit.Location = new System.Drawing.Point(246, 534);
             this.btnSCExit.Name = "btnSCExit";
             this.btnSCExit.Size = new System.Drawing.Size(75, 45);
             this.btnSCExit.TabIndex = 100;
             this.btnSCExit.Text = "Exit";
             this.btnSCExit.UseVisualStyleBackColor = false;
+            this.btnSCExit.Click += new System.EventHandler(this.btnSCExit_Click);
             // 
             // btnSCSave
             // 
@@ -1813,51 +1913,13 @@
             this.btnSCSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSCSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSCSave.ForeColor = System.Drawing.Color.White;
-            this.btnSCSave.Location = new System.Drawing.Point(249, 526);
+            this.btnSCSave.Location = new System.Drawing.Point(72, 534);
             this.btnSCSave.Name = "btnSCSave";
             this.btnSCSave.Size = new System.Drawing.Size(75, 45);
             this.btnSCSave.TabIndex = 99;
             this.btnSCSave.Text = "Save";
             this.btnSCSave.UseVisualStyleBackColor = false;
-            // 
-            // btnSCDel
-            // 
-            this.btnSCDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSCDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSCDel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSCDel.ForeColor = System.Drawing.Color.White;
-            this.btnSCDel.Location = new System.Drawing.Point(169, 526);
-            this.btnSCDel.Name = "btnSCDel";
-            this.btnSCDel.Size = new System.Drawing.Size(75, 45);
-            this.btnSCDel.TabIndex = 98;
-            this.btnSCDel.Text = "Delete";
-            this.btnSCDel.UseVisualStyleBackColor = false;
-            // 
-            // btnSCCopy
-            // 
-            this.btnSCCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSCCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSCCopy.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSCCopy.ForeColor = System.Drawing.Color.White;
-            this.btnSCCopy.Location = new System.Drawing.Point(329, 526);
-            this.btnSCCopy.Name = "btnSCCopy";
-            this.btnSCCopy.Size = new System.Drawing.Size(75, 45);
-            this.btnSCCopy.TabIndex = 97;
-            this.btnSCCopy.Text = "Copy";
-            this.btnSCCopy.UseVisualStyleBackColor = false;
-            // 
-            // btnSCAdd
-            // 
-            this.btnSCAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSCAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSCAdd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSCAdd.ForeColor = System.Drawing.Color.White;
-            this.btnSCAdd.Location = new System.Drawing.Point(9, 526);
-            this.btnSCAdd.Name = "btnSCAdd";
-            this.btnSCAdd.Size = new System.Drawing.Size(75, 45);
-            this.btnSCAdd.TabIndex = 96;
-            this.btnSCAdd.Text = "Add";
-            this.btnSCAdd.UseVisualStyleBackColor = false;
+            this.btnSCSave.Click += new System.EventHandler(this.btnSCSave_Click);
             // 
             // groupBox2
             // 
@@ -1879,8 +1941,11 @@
             this.dgvSCMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSCMenu.Location = new System.Drawing.Point(10, 73);
             this.dgvSCMenu.Name = "dgvSCMenu";
+            this.dgvSCMenu.ReadOnly = true;
+            this.dgvSCMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSCMenu.Size = new System.Drawing.Size(373, 345);
             this.dgvSCMenu.TabIndex = 6;
+            this.dgvSCMenu.SelectionChanged += new System.EventHandler(this.dgvSCMenu_SelectionChanged);
             // 
             // cmSCBoxDish
             // 
@@ -1890,6 +1955,7 @@
             this.cmSCBoxDish.Name = "cmSCBoxDish";
             this.cmSCBoxDish.Size = new System.Drawing.Size(121, 25);
             this.cmSCBoxDish.TabIndex = 5;
+            this.cmSCBoxDish.SelectedIndexChanged += new System.EventHandler(this.cmSCBoxDish_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -2002,105 +2068,339 @@
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.groupBox9);
-            this.tabPage3.Controls.Add(this.btnTCEdit);
             this.tabPage3.Controls.Add(this.btnTCExit);
             this.tabPage3.Controls.Add(this.btnTCSave);
-            this.tabPage3.Controls.Add(this.btnTCDel);
-            this.tabPage3.Controls.Add(this.btnTCCopy);
-            this.tabPage3.Controls.Add(this.btnTCAdd);
             this.tabPage3.Controls.Add(this.groupBox10);
             this.tabPage3.Controls.Add(this.groupBox11);
             this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(973, 594);
+            this.tabPage3.Size = new System.Drawing.Size(967, 600);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Third Choices";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.textBox27);
-            this.groupBox9.Controls.Add(this.checkBox9);
-            this.groupBox9.Controls.Add(this.button12);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend17);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice17);
+            this.groupBox9.Controls.Add(this.txtTCOtherName17);
+            this.groupBox9.Controls.Add(this.txtTCEngName17);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend16);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice16);
+            this.groupBox9.Controls.Add(this.txtTCOtherName16);
+            this.groupBox9.Controls.Add(this.txtTCEngName16);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend15);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice15);
+            this.groupBox9.Controls.Add(this.txtTCOtherName15);
+            this.groupBox9.Controls.Add(this.txtTCEngName15);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend14);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice14);
+            this.groupBox9.Controls.Add(this.txtTCOtherName14);
+            this.groupBox9.Controls.Add(this.txtTCEngName14);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend13);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice13);
+            this.groupBox9.Controls.Add(this.txtTCOtherName13);
+            this.groupBox9.Controls.Add(this.txtTCEngName13);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend12);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice12);
+            this.groupBox9.Controls.Add(this.txtTCOtherName12);
+            this.groupBox9.Controls.Add(this.txtTCEngName12);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend11);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice11);
+            this.groupBox9.Controls.Add(this.txtTCOtherName11);
+            this.groupBox9.Controls.Add(this.txtTCEngName11);
+            this.groupBox9.Controls.Add(this.txtTCOtherName1);
+            this.groupBox9.Controls.Add(this.chkTCEnableChoices);
+            this.groupBox9.Controls.Add(this.button1);
             this.groupBox9.Controls.Add(this.label24);
             this.groupBox9.Controls.Add(this.label25);
             this.groupBox9.Controls.Add(this.label26);
             this.groupBox9.Controls.Add(this.label27);
-            this.groupBox9.Controls.Add(this.checkBox10);
-            this.groupBox9.Controls.Add(this.textBox28);
-            this.groupBox9.Controls.Add(this.textBox29);
-            this.groupBox9.Controls.Add(this.textBox30);
-            this.groupBox9.Controls.Add(this.textBox31);
-            this.groupBox9.Controls.Add(this.checkBox11);
-            this.groupBox9.Controls.Add(this.textBox32);
-            this.groupBox9.Controls.Add(this.textBox33);
-            this.groupBox9.Controls.Add(this.checkBox12);
-            this.groupBox9.Controls.Add(this.textBox34);
-            this.groupBox9.Controls.Add(this.textBox35);
-            this.groupBox9.Controls.Add(this.textBox36);
-            this.groupBox9.Controls.Add(this.textBox37);
-            this.groupBox9.Controls.Add(this.checkBox13);
-            this.groupBox9.Controls.Add(this.textBox38);
-            this.groupBox9.Controls.Add(this.textBox39);
-            this.groupBox9.Controls.Add(this.checkBox14);
-            this.groupBox9.Controls.Add(this.textBox40);
-            this.groupBox9.Controls.Add(this.textBox41);
-            this.groupBox9.Controls.Add(this.textBox42);
-            this.groupBox9.Controls.Add(this.textBox43);
-            this.groupBox9.Controls.Add(this.checkBox15);
-            this.groupBox9.Controls.Add(this.textBox44);
-            this.groupBox9.Controls.Add(this.textBox45);
-            this.groupBox9.Controls.Add(this.checkBox16);
-            this.groupBox9.Controls.Add(this.textBox46);
-            this.groupBox9.Controls.Add(this.textBox47);
-            this.groupBox9.Controls.Add(this.textBox48);
-            this.groupBox9.Controls.Add(this.textBox49);
-            this.groupBox9.Controls.Add(this.checkBox17);
-            this.groupBox9.Controls.Add(this.textBox50);
-            this.groupBox9.Controls.Add(this.textBox51);
-            this.groupBox9.Controls.Add(this.checkBox18);
-            this.groupBox9.Controls.Add(this.textBox52);
-            this.groupBox9.Controls.Add(this.textBox53);
-            this.groupBox9.Controls.Add(this.textBox54);
-            this.groupBox9.Controls.Add(this.textBox55);
-            this.groupBox9.Controls.Add(this.checkBox19);
-            this.groupBox9.Controls.Add(this.textBox56);
-            this.groupBox9.Location = new System.Drawing.Point(447, 53);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend10);
+            this.groupBox9.Controls.Add(this.txtTCEngName1);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice10);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice1);
+            this.groupBox9.Controls.Add(this.txtTCOtherName10);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend1);
+            this.groupBox9.Controls.Add(this.txtTCEngName10);
+            this.groupBox9.Controls.Add(this.txtTCEngName2);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend9);
+            this.groupBox9.Controls.Add(this.txtTCOtherName2);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice9);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice2);
+            this.groupBox9.Controls.Add(this.txtTCOtherName9);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend2);
+            this.groupBox9.Controls.Add(this.txtTCEngName9);
+            this.groupBox9.Controls.Add(this.txtTCEngName3);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend8);
+            this.groupBox9.Controls.Add(this.txtTCOtherName3);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice8);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice3);
+            this.groupBox9.Controls.Add(this.txtTCOtherName8);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend3);
+            this.groupBox9.Controls.Add(this.txtTCEngName8);
+            this.groupBox9.Controls.Add(this.txtTCEngName4);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend7);
+            this.groupBox9.Controls.Add(this.txtTCOtherName4);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice7);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice4);
+            this.groupBox9.Controls.Add(this.txtTCOtherName7);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend4);
+            this.groupBox9.Controls.Add(this.txtTCEngName7);
+            this.groupBox9.Controls.Add(this.txtTCEngName5);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend6);
+            this.groupBox9.Controls.Add(this.txtTCOtherName5);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice6);
+            this.groupBox9.Controls.Add(this.txtTCAddPrice5);
+            this.groupBox9.Controls.Add(this.txtTCOtherName6);
+            this.groupBox9.Controls.Add(this.chkTCAutoAppend5);
+            this.groupBox9.Controls.Add(this.txtTCEngName6);
+            this.groupBox9.Location = new System.Drawing.Point(407, 12);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(483, 395);
+            this.groupBox9.Size = new System.Drawing.Size(470, 576);
             this.groupBox9.TabIndex = 111;
             this.groupBox9.TabStop = false;
             // 
-            // textBox27
+            // chkTCAutoAppend17
             // 
-            this.textBox27.Location = new System.Drawing.Point(189, 86);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(110, 23);
-            this.textBox27.TabIndex = 57;
+            this.chkTCAutoAppend17.AutoSize = true;
+            this.chkTCAutoAppend17.Location = new System.Drawing.Point(393, 543);
+            this.chkTCAutoAppend17.Name = "chkTCAutoAppend17";
+            this.chkTCAutoAppend17.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend17.TabIndex = 123;
+            this.chkTCAutoAppend17.UseVisualStyleBackColor = true;
             // 
-            // checkBox9
+            // txtTCAddPrice17
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Location = new System.Drawing.Point(111, 31);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(115, 21);
-            this.checkBox9.TabIndex = 50;
-            this.checkBox9.Text = "Enable Choices";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.txtTCAddPrice17.Location = new System.Drawing.Point(289, 539);
+            this.txtTCAddPrice17.Name = "txtTCAddPrice17";
+            this.txtTCAddPrice17.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice17.TabIndex = 122;
             // 
-            // button12
+            // txtTCOtherName17
             // 
-            this.button12.Location = new System.Drawing.Point(359, 29);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(97, 23);
-            this.button12.TabIndex = 51;
-            this.button12.Text = "Copy Choices";
-            this.button12.UseVisualStyleBackColor = true;
+            this.txtTCOtherName17.Location = new System.Drawing.Point(167, 539);
+            this.txtTCOtherName17.Name = "txtTCOtherName17";
+            this.txtTCOtherName17.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName17.TabIndex = 121;
+            // 
+            // txtTCEngName17
+            // 
+            this.txtTCEngName17.Location = new System.Drawing.Point(6, 539);
+            this.txtTCEngName17.Name = "txtTCEngName17";
+            this.txtTCEngName17.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName17.TabIndex = 120;
+            // 
+            // chkTCAutoAppend16
+            // 
+            this.chkTCAutoAppend16.AutoSize = true;
+            this.chkTCAutoAppend16.Location = new System.Drawing.Point(393, 514);
+            this.chkTCAutoAppend16.Name = "chkTCAutoAppend16";
+            this.chkTCAutoAppend16.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend16.TabIndex = 119;
+            this.chkTCAutoAppend16.UseVisualStyleBackColor = true;
+            // 
+            // txtTCAddPrice16
+            // 
+            this.txtTCAddPrice16.Location = new System.Drawing.Point(289, 510);
+            this.txtTCAddPrice16.Name = "txtTCAddPrice16";
+            this.txtTCAddPrice16.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice16.TabIndex = 118;
+            // 
+            // txtTCOtherName16
+            // 
+            this.txtTCOtherName16.Location = new System.Drawing.Point(167, 510);
+            this.txtTCOtherName16.Name = "txtTCOtherName16";
+            this.txtTCOtherName16.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName16.TabIndex = 117;
+            // 
+            // txtTCEngName16
+            // 
+            this.txtTCEngName16.Location = new System.Drawing.Point(6, 510);
+            this.txtTCEngName16.Name = "txtTCEngName16";
+            this.txtTCEngName16.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName16.TabIndex = 116;
+            // 
+            // chkTCAutoAppend15
+            // 
+            this.chkTCAutoAppend15.AutoSize = true;
+            this.chkTCAutoAppend15.Location = new System.Drawing.Point(393, 485);
+            this.chkTCAutoAppend15.Name = "chkTCAutoAppend15";
+            this.chkTCAutoAppend15.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend15.TabIndex = 115;
+            this.chkTCAutoAppend15.UseVisualStyleBackColor = true;
+            // 
+            // txtTCAddPrice15
+            // 
+            this.txtTCAddPrice15.Location = new System.Drawing.Point(289, 481);
+            this.txtTCAddPrice15.Name = "txtTCAddPrice15";
+            this.txtTCAddPrice15.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice15.TabIndex = 114;
+            // 
+            // txtTCOtherName15
+            // 
+            this.txtTCOtherName15.Location = new System.Drawing.Point(167, 481);
+            this.txtTCOtherName15.Name = "txtTCOtherName15";
+            this.txtTCOtherName15.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName15.TabIndex = 113;
+            // 
+            // txtTCEngName15
+            // 
+            this.txtTCEngName15.Location = new System.Drawing.Point(6, 481);
+            this.txtTCEngName15.Name = "txtTCEngName15";
+            this.txtTCEngName15.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName15.TabIndex = 112;
+            // 
+            // chkTCAutoAppend14
+            // 
+            this.chkTCAutoAppend14.AutoSize = true;
+            this.chkTCAutoAppend14.Location = new System.Drawing.Point(393, 456);
+            this.chkTCAutoAppend14.Name = "chkTCAutoAppend14";
+            this.chkTCAutoAppend14.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend14.TabIndex = 111;
+            this.chkTCAutoAppend14.UseVisualStyleBackColor = true;
+            // 
+            // txtTCAddPrice14
+            // 
+            this.txtTCAddPrice14.Location = new System.Drawing.Point(289, 452);
+            this.txtTCAddPrice14.Name = "txtTCAddPrice14";
+            this.txtTCAddPrice14.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice14.TabIndex = 110;
+            // 
+            // txtTCOtherName14
+            // 
+            this.txtTCOtherName14.Location = new System.Drawing.Point(167, 452);
+            this.txtTCOtherName14.Name = "txtTCOtherName14";
+            this.txtTCOtherName14.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName14.TabIndex = 109;
+            // 
+            // txtTCEngName14
+            // 
+            this.txtTCEngName14.Location = new System.Drawing.Point(6, 452);
+            this.txtTCEngName14.Name = "txtTCEngName14";
+            this.txtTCEngName14.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName14.TabIndex = 108;
+            // 
+            // chkTCAutoAppend13
+            // 
+            this.chkTCAutoAppend13.AutoSize = true;
+            this.chkTCAutoAppend13.Location = new System.Drawing.Point(393, 427);
+            this.chkTCAutoAppend13.Name = "chkTCAutoAppend13";
+            this.chkTCAutoAppend13.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend13.TabIndex = 107;
+            this.chkTCAutoAppend13.UseVisualStyleBackColor = true;
+            // 
+            // txtTCAddPrice13
+            // 
+            this.txtTCAddPrice13.Location = new System.Drawing.Point(289, 423);
+            this.txtTCAddPrice13.Name = "txtTCAddPrice13";
+            this.txtTCAddPrice13.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice13.TabIndex = 106;
+            // 
+            // txtTCOtherName13
+            // 
+            this.txtTCOtherName13.Location = new System.Drawing.Point(167, 423);
+            this.txtTCOtherName13.Name = "txtTCOtherName13";
+            this.txtTCOtherName13.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName13.TabIndex = 105;
+            // 
+            // txtTCEngName13
+            // 
+            this.txtTCEngName13.Location = new System.Drawing.Point(6, 423);
+            this.txtTCEngName13.Name = "txtTCEngName13";
+            this.txtTCEngName13.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName13.TabIndex = 104;
+            // 
+            // chkTCAutoAppend12
+            // 
+            this.chkTCAutoAppend12.AutoSize = true;
+            this.chkTCAutoAppend12.Location = new System.Drawing.Point(393, 398);
+            this.chkTCAutoAppend12.Name = "chkTCAutoAppend12";
+            this.chkTCAutoAppend12.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend12.TabIndex = 103;
+            this.chkTCAutoAppend12.UseVisualStyleBackColor = true;
+            // 
+            // txtTCAddPrice12
+            // 
+            this.txtTCAddPrice12.Location = new System.Drawing.Point(289, 394);
+            this.txtTCAddPrice12.Name = "txtTCAddPrice12";
+            this.txtTCAddPrice12.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice12.TabIndex = 102;
+            // 
+            // txtTCOtherName12
+            // 
+            this.txtTCOtherName12.Location = new System.Drawing.Point(167, 394);
+            this.txtTCOtherName12.Name = "txtTCOtherName12";
+            this.txtTCOtherName12.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName12.TabIndex = 101;
+            // 
+            // txtTCEngName12
+            // 
+            this.txtTCEngName12.Location = new System.Drawing.Point(6, 394);
+            this.txtTCEngName12.Name = "txtTCEngName12";
+            this.txtTCEngName12.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName12.TabIndex = 100;
+            // 
+            // chkTCAutoAppend11
+            // 
+            this.chkTCAutoAppend11.AutoSize = true;
+            this.chkTCAutoAppend11.Location = new System.Drawing.Point(393, 369);
+            this.chkTCAutoAppend11.Name = "chkTCAutoAppend11";
+            this.chkTCAutoAppend11.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend11.TabIndex = 99;
+            this.chkTCAutoAppend11.UseVisualStyleBackColor = true;
+            // 
+            // txtTCAddPrice11
+            // 
+            this.txtTCAddPrice11.Location = new System.Drawing.Point(289, 365);
+            this.txtTCAddPrice11.Name = "txtTCAddPrice11";
+            this.txtTCAddPrice11.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice11.TabIndex = 98;
+            // 
+            // txtTCOtherName11
+            // 
+            this.txtTCOtherName11.Location = new System.Drawing.Point(167, 365);
+            this.txtTCOtherName11.Name = "txtTCOtherName11";
+            this.txtTCOtherName11.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName11.TabIndex = 97;
+            // 
+            // txtTCEngName11
+            // 
+            this.txtTCEngName11.Location = new System.Drawing.Point(6, 365);
+            this.txtTCEngName11.Name = "txtTCEngName11";
+            this.txtTCEngName11.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName11.TabIndex = 96;
+            // 
+            // txtTCOtherName1
+            // 
+            this.txtTCOtherName1.Location = new System.Drawing.Point(167, 75);
+            this.txtTCOtherName1.Name = "txtTCOtherName1";
+            this.txtTCOtherName1.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName1.TabIndex = 57;
+            // 
+            // chkTCEnableChoices
+            // 
+            this.chkTCEnableChoices.AutoSize = true;
+            this.chkTCEnableChoices.Location = new System.Drawing.Point(111, 31);
+            this.chkTCEnableChoices.Name = "chkTCEnableChoices";
+            this.chkTCEnableChoices.Size = new System.Drawing.Size(115, 21);
+            this.chkTCEnableChoices.TabIndex = 50;
+            this.chkTCEnableChoices.Text = "Enable Choices";
+            this.chkTCEnableChoices.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(359, 29);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(97, 23);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "Copy Choices";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(25, 66);
+            this.label24.Location = new System.Drawing.Point(31, 55);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(88, 17);
             this.label24.TabIndex = 52;
@@ -2109,7 +2409,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(186, 64);
+            this.label25.Location = new System.Drawing.Point(180, 55);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(80, 17);
             this.label25.TabIndex = 53;
@@ -2118,7 +2418,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(308, 64);
+            this.label26.Location = new System.Drawing.Point(286, 53);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(67, 17);
             this.label26.TabIndex = 54;
@@ -2127,317 +2427,304 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(385, 64);
+            this.label27.Location = new System.Drawing.Point(363, 53);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(85, 17);
             this.label27.TabIndex = 55;
             this.label27.Text = "Auto Append";
             // 
-            // checkBox10
+            // chkTCAutoAppend10
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Location = new System.Drawing.Point(415, 351);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(15, 14);
-            this.checkBox10.TabIndex = 95;
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.chkTCAutoAppend10.AutoSize = true;
+            this.chkTCAutoAppend10.Location = new System.Drawing.Point(393, 340);
+            this.chkTCAutoAppend10.Name = "chkTCAutoAppend10";
+            this.chkTCAutoAppend10.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend10.TabIndex = 95;
+            this.chkTCAutoAppend10.UseVisualStyleBackColor = true;
             // 
-            // textBox28
+            // txtTCEngName1
             // 
-            this.textBox28.Location = new System.Drawing.Point(28, 86);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(150, 23);
-            this.textBox28.TabIndex = 56;
+            this.txtTCEngName1.Location = new System.Drawing.Point(6, 75);
+            this.txtTCEngName1.Name = "txtTCEngName1";
+            this.txtTCEngName1.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName1.TabIndex = 56;
             // 
-            // textBox29
+            // txtTCAddPrice10
             // 
-            this.textBox29.Location = new System.Drawing.Point(311, 347);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(64, 23);
-            this.textBox29.TabIndex = 94;
+            this.txtTCAddPrice10.Location = new System.Drawing.Point(289, 336);
+            this.txtTCAddPrice10.Name = "txtTCAddPrice10";
+            this.txtTCAddPrice10.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice10.TabIndex = 94;
             // 
-            // textBox30
+            // txtTCAddPrice1
             // 
-            this.textBox30.Location = new System.Drawing.Point(311, 86);
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(64, 23);
-            this.textBox30.TabIndex = 58;
+            this.txtTCAddPrice1.Location = new System.Drawing.Point(289, 75);
+            this.txtTCAddPrice1.Name = "txtTCAddPrice1";
+            this.txtTCAddPrice1.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice1.TabIndex = 58;
             // 
-            // textBox31
+            // txtTCOtherName10
             // 
-            this.textBox31.Location = new System.Drawing.Point(189, 347);
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(110, 23);
-            this.textBox31.TabIndex = 93;
+            this.txtTCOtherName10.Location = new System.Drawing.Point(167, 336);
+            this.txtTCOtherName10.Name = "txtTCOtherName10";
+            this.txtTCOtherName10.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName10.TabIndex = 93;
             // 
-            // checkBox11
+            // chkTCAutoAppend1
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Location = new System.Drawing.Point(415, 90);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(15, 14);
-            this.checkBox11.TabIndex = 59;
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.chkTCAutoAppend1.AutoSize = true;
+            this.chkTCAutoAppend1.Location = new System.Drawing.Point(393, 79);
+            this.chkTCAutoAppend1.Name = "chkTCAutoAppend1";
+            this.chkTCAutoAppend1.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend1.TabIndex = 59;
+            this.chkTCAutoAppend1.UseVisualStyleBackColor = true;
             // 
-            // textBox32
+            // txtTCEngName10
             // 
-            this.textBox32.Location = new System.Drawing.Point(28, 347);
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(150, 23);
-            this.textBox32.TabIndex = 92;
+            this.txtTCEngName10.Location = new System.Drawing.Point(6, 336);
+            this.txtTCEngName10.Name = "txtTCEngName10";
+            this.txtTCEngName10.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName10.TabIndex = 92;
             // 
-            // textBox33
+            // txtTCEngName2
             // 
-            this.textBox33.Location = new System.Drawing.Point(28, 115);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(150, 23);
-            this.textBox33.TabIndex = 60;
+            this.txtTCEngName2.Location = new System.Drawing.Point(6, 104);
+            this.txtTCEngName2.Name = "txtTCEngName2";
+            this.txtTCEngName2.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName2.TabIndex = 60;
             // 
-            // checkBox12
+            // chkTCAutoAppend9
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Location = new System.Drawing.Point(415, 322);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(15, 14);
-            this.checkBox12.TabIndex = 91;
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.chkTCAutoAppend9.AutoSize = true;
+            this.chkTCAutoAppend9.Location = new System.Drawing.Point(393, 311);
+            this.chkTCAutoAppend9.Name = "chkTCAutoAppend9";
+            this.chkTCAutoAppend9.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend9.TabIndex = 91;
+            this.chkTCAutoAppend9.UseVisualStyleBackColor = true;
             // 
-            // textBox34
+            // txtTCOtherName2
             // 
-            this.textBox34.Location = new System.Drawing.Point(189, 115);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(110, 23);
-            this.textBox34.TabIndex = 61;
+            this.txtTCOtherName2.Location = new System.Drawing.Point(167, 104);
+            this.txtTCOtherName2.Name = "txtTCOtherName2";
+            this.txtTCOtherName2.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName2.TabIndex = 61;
             // 
-            // textBox35
+            // txtTCAddPrice9
             // 
-            this.textBox35.Location = new System.Drawing.Point(311, 318);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(64, 23);
-            this.textBox35.TabIndex = 90;
+            this.txtTCAddPrice9.Location = new System.Drawing.Point(289, 307);
+            this.txtTCAddPrice9.Name = "txtTCAddPrice9";
+            this.txtTCAddPrice9.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice9.TabIndex = 90;
             // 
-            // textBox36
+            // txtTCAddPrice2
             // 
-            this.textBox36.Location = new System.Drawing.Point(311, 115);
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(64, 23);
-            this.textBox36.TabIndex = 62;
+            this.txtTCAddPrice2.Location = new System.Drawing.Point(289, 104);
+            this.txtTCAddPrice2.Name = "txtTCAddPrice2";
+            this.txtTCAddPrice2.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice2.TabIndex = 62;
             // 
-            // textBox37
+            // txtTCOtherName9
             // 
-            this.textBox37.Location = new System.Drawing.Point(189, 318);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(110, 23);
-            this.textBox37.TabIndex = 89;
+            this.txtTCOtherName9.Location = new System.Drawing.Point(167, 307);
+            this.txtTCOtherName9.Name = "txtTCOtherName9";
+            this.txtTCOtherName9.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName9.TabIndex = 89;
             // 
-            // checkBox13
+            // chkTCAutoAppend2
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Location = new System.Drawing.Point(415, 119);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(15, 14);
-            this.checkBox13.TabIndex = 63;
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.chkTCAutoAppend2.AutoSize = true;
+            this.chkTCAutoAppend2.Location = new System.Drawing.Point(393, 108);
+            this.chkTCAutoAppend2.Name = "chkTCAutoAppend2";
+            this.chkTCAutoAppend2.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend2.TabIndex = 63;
+            this.chkTCAutoAppend2.UseVisualStyleBackColor = true;
             // 
-            // textBox38
+            // txtTCEngName9
             // 
-            this.textBox38.Location = new System.Drawing.Point(28, 318);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(150, 23);
-            this.textBox38.TabIndex = 88;
+            this.txtTCEngName9.Location = new System.Drawing.Point(6, 307);
+            this.txtTCEngName9.Name = "txtTCEngName9";
+            this.txtTCEngName9.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName9.TabIndex = 88;
             // 
-            // textBox39
+            // txtTCEngName3
             // 
-            this.textBox39.Location = new System.Drawing.Point(28, 144);
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(150, 23);
-            this.textBox39.TabIndex = 64;
+            this.txtTCEngName3.Location = new System.Drawing.Point(6, 133);
+            this.txtTCEngName3.Name = "txtTCEngName3";
+            this.txtTCEngName3.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName3.TabIndex = 64;
             // 
-            // checkBox14
+            // chkTCAutoAppend8
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Location = new System.Drawing.Point(415, 293);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(15, 14);
-            this.checkBox14.TabIndex = 87;
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.chkTCAutoAppend8.AutoSize = true;
+            this.chkTCAutoAppend8.Location = new System.Drawing.Point(393, 282);
+            this.chkTCAutoAppend8.Name = "chkTCAutoAppend8";
+            this.chkTCAutoAppend8.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend8.TabIndex = 87;
+            this.chkTCAutoAppend8.UseVisualStyleBackColor = true;
             // 
-            // textBox40
+            // txtTCOtherName3
             // 
-            this.textBox40.Location = new System.Drawing.Point(189, 144);
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(110, 23);
-            this.textBox40.TabIndex = 65;
+            this.txtTCOtherName3.Location = new System.Drawing.Point(167, 133);
+            this.txtTCOtherName3.Name = "txtTCOtherName3";
+            this.txtTCOtherName3.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName3.TabIndex = 65;
             // 
-            // textBox41
+            // txtTCAddPrice8
             // 
-            this.textBox41.Location = new System.Drawing.Point(311, 289);
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(64, 23);
-            this.textBox41.TabIndex = 86;
+            this.txtTCAddPrice8.Location = new System.Drawing.Point(289, 278);
+            this.txtTCAddPrice8.Name = "txtTCAddPrice8";
+            this.txtTCAddPrice8.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice8.TabIndex = 86;
             // 
-            // textBox42
+            // txtTCAddPrice3
             // 
-            this.textBox42.Location = new System.Drawing.Point(311, 144);
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(64, 23);
-            this.textBox42.TabIndex = 66;
+            this.txtTCAddPrice3.Location = new System.Drawing.Point(289, 133);
+            this.txtTCAddPrice3.Name = "txtTCAddPrice3";
+            this.txtTCAddPrice3.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice3.TabIndex = 66;
             // 
-            // textBox43
+            // txtTCOtherName8
             // 
-            this.textBox43.Location = new System.Drawing.Point(189, 289);
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(110, 23);
-            this.textBox43.TabIndex = 85;
+            this.txtTCOtherName8.Location = new System.Drawing.Point(167, 278);
+            this.txtTCOtherName8.Name = "txtTCOtherName8";
+            this.txtTCOtherName8.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName8.TabIndex = 85;
             // 
-            // checkBox15
+            // chkTCAutoAppend3
             // 
-            this.checkBox15.AutoSize = true;
-            this.checkBox15.Location = new System.Drawing.Point(415, 148);
-            this.checkBox15.Name = "checkBox15";
-            this.checkBox15.Size = new System.Drawing.Size(15, 14);
-            this.checkBox15.TabIndex = 67;
-            this.checkBox15.UseVisualStyleBackColor = true;
+            this.chkTCAutoAppend3.AutoSize = true;
+            this.chkTCAutoAppend3.Location = new System.Drawing.Point(393, 137);
+            this.chkTCAutoAppend3.Name = "chkTCAutoAppend3";
+            this.chkTCAutoAppend3.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend3.TabIndex = 67;
+            this.chkTCAutoAppend3.UseVisualStyleBackColor = true;
             // 
-            // textBox44
+            // txtTCEngName8
             // 
-            this.textBox44.Location = new System.Drawing.Point(28, 289);
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(150, 23);
-            this.textBox44.TabIndex = 84;
+            this.txtTCEngName8.Location = new System.Drawing.Point(6, 278);
+            this.txtTCEngName8.Name = "txtTCEngName8";
+            this.txtTCEngName8.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName8.TabIndex = 84;
             // 
-            // textBox45
+            // txtTCEngName4
             // 
-            this.textBox45.Location = new System.Drawing.Point(28, 173);
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(150, 23);
-            this.textBox45.TabIndex = 68;
+            this.txtTCEngName4.Location = new System.Drawing.Point(6, 162);
+            this.txtTCEngName4.Name = "txtTCEngName4";
+            this.txtTCEngName4.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName4.TabIndex = 68;
             // 
-            // checkBox16
+            // chkTCAutoAppend7
             // 
-            this.checkBox16.AutoSize = true;
-            this.checkBox16.Location = new System.Drawing.Point(415, 264);
-            this.checkBox16.Name = "checkBox16";
-            this.checkBox16.Size = new System.Drawing.Size(15, 14);
-            this.checkBox16.TabIndex = 83;
-            this.checkBox16.UseVisualStyleBackColor = true;
+            this.chkTCAutoAppend7.AutoSize = true;
+            this.chkTCAutoAppend7.Location = new System.Drawing.Point(393, 253);
+            this.chkTCAutoAppend7.Name = "chkTCAutoAppend7";
+            this.chkTCAutoAppend7.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend7.TabIndex = 83;
+            this.chkTCAutoAppend7.UseVisualStyleBackColor = true;
             // 
-            // textBox46
+            // txtTCOtherName4
             // 
-            this.textBox46.Location = new System.Drawing.Point(189, 173);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(110, 23);
-            this.textBox46.TabIndex = 69;
+            this.txtTCOtherName4.Location = new System.Drawing.Point(167, 162);
+            this.txtTCOtherName4.Name = "txtTCOtherName4";
+            this.txtTCOtherName4.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName4.TabIndex = 69;
             // 
-            // textBox47
+            // txtTCAddPrice7
             // 
-            this.textBox47.Location = new System.Drawing.Point(311, 260);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(64, 23);
-            this.textBox47.TabIndex = 82;
+            this.txtTCAddPrice7.Location = new System.Drawing.Point(289, 249);
+            this.txtTCAddPrice7.Name = "txtTCAddPrice7";
+            this.txtTCAddPrice7.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice7.TabIndex = 82;
             // 
-            // textBox48
+            // txtTCAddPrice4
             // 
-            this.textBox48.Location = new System.Drawing.Point(311, 173);
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(64, 23);
-            this.textBox48.TabIndex = 70;
+            this.txtTCAddPrice4.Location = new System.Drawing.Point(289, 162);
+            this.txtTCAddPrice4.Name = "txtTCAddPrice4";
+            this.txtTCAddPrice4.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice4.TabIndex = 70;
             // 
-            // textBox49
+            // txtTCOtherName7
             // 
-            this.textBox49.Location = new System.Drawing.Point(189, 260);
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(110, 23);
-            this.textBox49.TabIndex = 81;
+            this.txtTCOtherName7.Location = new System.Drawing.Point(167, 249);
+            this.txtTCOtherName7.Name = "txtTCOtherName7";
+            this.txtTCOtherName7.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName7.TabIndex = 81;
             // 
-            // checkBox17
+            // chkTCAutoAppend4
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(415, 177);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(15, 14);
-            this.checkBox17.TabIndex = 71;
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.chkTCAutoAppend4.AutoSize = true;
+            this.chkTCAutoAppend4.Location = new System.Drawing.Point(393, 166);
+            this.chkTCAutoAppend4.Name = "chkTCAutoAppend4";
+            this.chkTCAutoAppend4.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend4.TabIndex = 71;
+            this.chkTCAutoAppend4.UseVisualStyleBackColor = true;
             // 
-            // textBox50
+            // txtTCEngName7
             // 
-            this.textBox50.Location = new System.Drawing.Point(28, 260);
-            this.textBox50.Name = "textBox50";
-            this.textBox50.Size = new System.Drawing.Size(150, 23);
-            this.textBox50.TabIndex = 80;
+            this.txtTCEngName7.Location = new System.Drawing.Point(6, 249);
+            this.txtTCEngName7.Name = "txtTCEngName7";
+            this.txtTCEngName7.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName7.TabIndex = 80;
             // 
-            // textBox51
+            // txtTCEngName5
             // 
-            this.textBox51.Location = new System.Drawing.Point(28, 202);
-            this.textBox51.Name = "textBox51";
-            this.textBox51.Size = new System.Drawing.Size(150, 23);
-            this.textBox51.TabIndex = 72;
+            this.txtTCEngName5.Location = new System.Drawing.Point(6, 191);
+            this.txtTCEngName5.Name = "txtTCEngName5";
+            this.txtTCEngName5.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName5.TabIndex = 72;
             // 
-            // checkBox18
+            // chkTCAutoAppend6
             // 
-            this.checkBox18.AutoSize = true;
-            this.checkBox18.Location = new System.Drawing.Point(415, 235);
-            this.checkBox18.Name = "checkBox18";
-            this.checkBox18.Size = new System.Drawing.Size(15, 14);
-            this.checkBox18.TabIndex = 79;
-            this.checkBox18.UseVisualStyleBackColor = true;
+            this.chkTCAutoAppend6.AutoSize = true;
+            this.chkTCAutoAppend6.Location = new System.Drawing.Point(393, 224);
+            this.chkTCAutoAppend6.Name = "chkTCAutoAppend6";
+            this.chkTCAutoAppend6.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend6.TabIndex = 79;
+            this.chkTCAutoAppend6.UseVisualStyleBackColor = true;
             // 
-            // textBox52
+            // txtTCOtherName5
             // 
-            this.textBox52.Location = new System.Drawing.Point(189, 202);
-            this.textBox52.Name = "textBox52";
-            this.textBox52.Size = new System.Drawing.Size(110, 23);
-            this.textBox52.TabIndex = 73;
+            this.txtTCOtherName5.Location = new System.Drawing.Point(167, 191);
+            this.txtTCOtherName5.Name = "txtTCOtherName5";
+            this.txtTCOtherName5.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName5.TabIndex = 73;
             // 
-            // textBox53
+            // txtTCAddPrice6
             // 
-            this.textBox53.Location = new System.Drawing.Point(311, 231);
-            this.textBox53.Name = "textBox53";
-            this.textBox53.Size = new System.Drawing.Size(64, 23);
-            this.textBox53.TabIndex = 78;
+            this.txtTCAddPrice6.Location = new System.Drawing.Point(289, 220);
+            this.txtTCAddPrice6.Name = "txtTCAddPrice6";
+            this.txtTCAddPrice6.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice6.TabIndex = 78;
             // 
-            // textBox54
+            // txtTCAddPrice5
             // 
-            this.textBox54.Location = new System.Drawing.Point(311, 202);
-            this.textBox54.Name = "textBox54";
-            this.textBox54.Size = new System.Drawing.Size(64, 23);
-            this.textBox54.TabIndex = 74;
+            this.txtTCAddPrice5.Location = new System.Drawing.Point(289, 191);
+            this.txtTCAddPrice5.Name = "txtTCAddPrice5";
+            this.txtTCAddPrice5.Size = new System.Drawing.Size(64, 23);
+            this.txtTCAddPrice5.TabIndex = 74;
             // 
-            // textBox55
+            // txtTCOtherName6
             // 
-            this.textBox55.Location = new System.Drawing.Point(189, 231);
-            this.textBox55.Name = "textBox55";
-            this.textBox55.Size = new System.Drawing.Size(110, 23);
-            this.textBox55.TabIndex = 77;
+            this.txtTCOtherName6.Location = new System.Drawing.Point(167, 220);
+            this.txtTCOtherName6.Name = "txtTCOtherName6";
+            this.txtTCOtherName6.Size = new System.Drawing.Size(110, 23);
+            this.txtTCOtherName6.TabIndex = 77;
             // 
-            // checkBox19
+            // chkTCAutoAppend5
             // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(415, 206);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(15, 14);
-            this.checkBox19.TabIndex = 75;
-            this.checkBox19.UseVisualStyleBackColor = true;
+            this.chkTCAutoAppend5.AutoSize = true;
+            this.chkTCAutoAppend5.Location = new System.Drawing.Point(393, 195);
+            this.chkTCAutoAppend5.Name = "chkTCAutoAppend5";
+            this.chkTCAutoAppend5.Size = new System.Drawing.Size(15, 14);
+            this.chkTCAutoAppend5.TabIndex = 75;
+            this.chkTCAutoAppend5.UseVisualStyleBackColor = true;
             // 
-            // textBox56
+            // txtTCEngName6
             // 
-            this.textBox56.Location = new System.Drawing.Point(28, 231);
-            this.textBox56.Name = "textBox56";
-            this.textBox56.Size = new System.Drawing.Size(150, 23);
-            this.textBox56.TabIndex = 76;
-            // 
-            // btnTCEdit
-            // 
-            this.btnTCEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTCEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTCEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTCEdit.ForeColor = System.Drawing.Color.White;
-            this.btnTCEdit.Location = new System.Drawing.Point(98, 532);
-            this.btnTCEdit.Name = "btnTCEdit";
-            this.btnTCEdit.Size = new System.Drawing.Size(80, 50);
-            this.btnTCEdit.TabIndex = 110;
-            this.btnTCEdit.Text = "Edit";
-            this.btnTCEdit.UseVisualStyleBackColor = false;
+            this.txtTCEngName6.Location = new System.Drawing.Point(6, 220);
+            this.txtTCEngName6.Name = "txtTCEngName6";
+            this.txtTCEngName6.Size = new System.Drawing.Size(150, 23);
+            this.txtTCEngName6.TabIndex = 76;
             // 
             // btnTCExit
             // 
@@ -2445,12 +2732,13 @@
             this.btnTCExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTCExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTCExit.ForeColor = System.Drawing.Color.White;
-            this.btnTCExit.Location = new System.Drawing.Point(447, 532);
+            this.btnTCExit.Location = new System.Drawing.Point(250, 532);
             this.btnTCExit.Name = "btnTCExit";
-            this.btnTCExit.Size = new System.Drawing.Size(80, 50);
+            this.btnTCExit.Size = new System.Drawing.Size(75, 45);
             this.btnTCExit.TabIndex = 109;
             this.btnTCExit.Text = "Exit";
             this.btnTCExit.UseVisualStyleBackColor = false;
+            this.btnTCExit.Click += new System.EventHandler(this.btnTCExit_Click);
             // 
             // btnTCSave
             // 
@@ -2458,51 +2746,13 @@
             this.btnTCSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTCSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTCSave.ForeColor = System.Drawing.Color.White;
-            this.btnTCSave.Location = new System.Drawing.Point(270, 532);
+            this.btnTCSave.Location = new System.Drawing.Point(66, 532);
             this.btnTCSave.Name = "btnTCSave";
-            this.btnTCSave.Size = new System.Drawing.Size(80, 50);
+            this.btnTCSave.Size = new System.Drawing.Size(75, 45);
             this.btnTCSave.TabIndex = 108;
             this.btnTCSave.Text = "Save";
             this.btnTCSave.UseVisualStyleBackColor = false;
-            // 
-            // btnTCDel
-            // 
-            this.btnTCDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTCDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTCDel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTCDel.ForeColor = System.Drawing.Color.White;
-            this.btnTCDel.Location = new System.Drawing.Point(184, 532);
-            this.btnTCDel.Name = "btnTCDel";
-            this.btnTCDel.Size = new System.Drawing.Size(80, 50);
-            this.btnTCDel.TabIndex = 107;
-            this.btnTCDel.Text = "Delete";
-            this.btnTCDel.UseVisualStyleBackColor = false;
-            // 
-            // btnTCCopy
-            // 
-            this.btnTCCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTCCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTCCopy.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTCCopy.ForeColor = System.Drawing.Color.White;
-            this.btnTCCopy.Location = new System.Drawing.Point(356, 532);
-            this.btnTCCopy.Name = "btnTCCopy";
-            this.btnTCCopy.Size = new System.Drawing.Size(80, 50);
-            this.btnTCCopy.TabIndex = 106;
-            this.btnTCCopy.Text = "Copy";
-            this.btnTCCopy.UseVisualStyleBackColor = false;
-            // 
-            // btnTCAdd
-            // 
-            this.btnTCAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTCAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTCAdd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTCAdd.ForeColor = System.Drawing.Color.White;
-            this.btnTCAdd.Location = new System.Drawing.Point(12, 532);
-            this.btnTCAdd.Name = "btnTCAdd";
-            this.btnTCAdd.Size = new System.Drawing.Size(80, 50);
-            this.btnTCAdd.TabIndex = 105;
-            this.btnTCAdd.Text = "Add";
-            this.btnTCAdd.UseVisualStyleBackColor = false;
+            this.btnTCSave.Click += new System.EventHandler(this.btnTCSave_Click);
             // 
             // groupBox10
             // 
@@ -2524,8 +2774,11 @@
             this.dgvTCMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTCMenu.Location = new System.Drawing.Point(10, 73);
             this.dgvTCMenu.Name = "dgvTCMenu";
+            this.dgvTCMenu.ReadOnly = true;
+            this.dgvTCMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTCMenu.Size = new System.Drawing.Size(373, 345);
             this.dgvTCMenu.TabIndex = 6;
+            this.dgvTCMenu.SelectionChanged += new System.EventHandler(this.dgvTCMenu_SelectionChanged);
             // 
             // cmTCBoxDish
             // 
@@ -2535,6 +2788,7 @@
             this.cmTCBoxDish.Name = "cmTCBoxDish";
             this.cmTCBoxDish.Size = new System.Drawing.Size(121, 25);
             this.cmTCBoxDish.TabIndex = 5;
+            this.cmTCBoxDish.SelectedIndexChanged += new System.EventHandler(this.cmTCBoxDish_SelectedIndexChanged);
             // 
             // label28
             // 
@@ -2647,105 +2901,340 @@
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupBox12);
-            this.tabPage4.Controls.Add(this.btnTHEdit);
             this.tabPage4.Controls.Add(this.btnTHExit);
             this.tabPage4.Controls.Add(this.btnTHSave);
-            this.tabPage4.Controls.Add(this.btnTHDel);
-            this.tabPage4.Controls.Add(this.btnTHCopy);
-            this.tabPage4.Controls.Add(this.btnTHAdd);
             this.tabPage4.Controls.Add(this.groupBox13);
             this.tabPage4.Controls.Add(this.groupBox14);
             this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(973, 594);
+            this.tabPage4.Size = new System.Drawing.Size(967, 600);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Taste Handling";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.textBox58);
-            this.groupBox12.Controls.Add(this.checkBox20);
-            this.groupBox12.Controls.Add(this.button24);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend17);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice17);
+            this.groupBox12.Controls.Add(this.txtTHOtherName17);
+            this.groupBox12.Controls.Add(this.txtTHEngName17);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend16);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice16);
+            this.groupBox12.Controls.Add(this.txtTHOtherName16);
+            this.groupBox12.Controls.Add(this.txtTHEngName16);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend15);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice15);
+            this.groupBox12.Controls.Add(this.txtTHOtherName15);
+            this.groupBox12.Controls.Add(this.txtTHEngName15);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend14);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice14);
+            this.groupBox12.Controls.Add(this.txtTHOtherName14);
+            this.groupBox12.Controls.Add(this.txtTHEngName14);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend13);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice13);
+            this.groupBox12.Controls.Add(this.txtTHOtherName13);
+            this.groupBox12.Controls.Add(this.txtTHEngName13);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend12);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice12);
+            this.groupBox12.Controls.Add(this.txtTHOtherName12);
+            this.groupBox12.Controls.Add(this.txtTHEngName12);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend11);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice11);
+            this.groupBox12.Controls.Add(this.txtTHOtherName11);
+            this.groupBox12.Controls.Add(this.txtTHEngName11);
+            this.groupBox12.Controls.Add(this.txtTHOtherName1);
+            this.groupBox12.Controls.Add(this.chkTHEnableChoices);
+            this.groupBox12.Controls.Add(this.button2);
             this.groupBox12.Controls.Add(this.label31);
             this.groupBox12.Controls.Add(this.label32);
             this.groupBox12.Controls.Add(this.label33);
             this.groupBox12.Controls.Add(this.label34);
-            this.groupBox12.Controls.Add(this.checkBox21);
-            this.groupBox12.Controls.Add(this.textBox59);
-            this.groupBox12.Controls.Add(this.textBox60);
-            this.groupBox12.Controls.Add(this.textBox61);
-            this.groupBox12.Controls.Add(this.textBox62);
-            this.groupBox12.Controls.Add(this.checkBox22);
-            this.groupBox12.Controls.Add(this.textBox63);
-            this.groupBox12.Controls.Add(this.textBox64);
-            this.groupBox12.Controls.Add(this.checkBox23);
-            this.groupBox12.Controls.Add(this.textBox65);
-            this.groupBox12.Controls.Add(this.textBox66);
-            this.groupBox12.Controls.Add(this.textBox67);
-            this.groupBox12.Controls.Add(this.textBox68);
-            this.groupBox12.Controls.Add(this.checkBox24);
-            this.groupBox12.Controls.Add(this.textBox69);
-            this.groupBox12.Controls.Add(this.textBox70);
-            this.groupBox12.Controls.Add(this.checkBox25);
-            this.groupBox12.Controls.Add(this.textBox71);
-            this.groupBox12.Controls.Add(this.textBox72);
-            this.groupBox12.Controls.Add(this.textBox73);
-            this.groupBox12.Controls.Add(this.textBox74);
-            this.groupBox12.Controls.Add(this.checkBox26);
-            this.groupBox12.Controls.Add(this.textBox75);
-            this.groupBox12.Controls.Add(this.textBox76);
-            this.groupBox12.Controls.Add(this.checkBox27);
-            this.groupBox12.Controls.Add(this.textBox77);
-            this.groupBox12.Controls.Add(this.textBox78);
-            this.groupBox12.Controls.Add(this.textBox79);
-            this.groupBox12.Controls.Add(this.textBox80);
-            this.groupBox12.Controls.Add(this.checkBox28);
-            this.groupBox12.Controls.Add(this.textBox81);
-            this.groupBox12.Controls.Add(this.textBox82);
-            this.groupBox12.Controls.Add(this.checkBox29);
-            this.groupBox12.Controls.Add(this.textBox83);
-            this.groupBox12.Controls.Add(this.textBox84);
-            this.groupBox12.Controls.Add(this.textBox85);
-            this.groupBox12.Controls.Add(this.textBox86);
-            this.groupBox12.Controls.Add(this.checkBox30);
-            this.groupBox12.Controls.Add(this.textBox87);
-            this.groupBox12.Location = new System.Drawing.Point(464, 53);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend10);
+            this.groupBox12.Controls.Add(this.txtTHEngName1);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice10);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice1);
+            this.groupBox12.Controls.Add(this.txtTHOtherName10);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend1);
+            this.groupBox12.Controls.Add(this.txtTHEngName10);
+            this.groupBox12.Controls.Add(this.txtTHEngName2);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend9);
+            this.groupBox12.Controls.Add(this.txtTHOtherName2);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice9);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice2);
+            this.groupBox12.Controls.Add(this.txtTHOtherName9);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend2);
+            this.groupBox12.Controls.Add(this.txtTHEngName9);
+            this.groupBox12.Controls.Add(this.txtTHEngName3);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend8);
+            this.groupBox12.Controls.Add(this.txtTHOtherName3);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice8);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice3);
+            this.groupBox12.Controls.Add(this.txtTHOtherName8);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend3);
+            this.groupBox12.Controls.Add(this.txtTHEngName8);
+            this.groupBox12.Controls.Add(this.txtTHEngName4);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend7);
+            this.groupBox12.Controls.Add(this.txtTHOtherName4);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice7);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice4);
+            this.groupBox12.Controls.Add(this.txtTHOtherName7);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend4);
+            this.groupBox12.Controls.Add(this.txtTHEngName7);
+            this.groupBox12.Controls.Add(this.txtTHEngName5);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend6);
+            this.groupBox12.Controls.Add(this.txtTHOtherName5);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice6);
+            this.groupBox12.Controls.Add(this.txtTHAddPrice5);
+            this.groupBox12.Controls.Add(this.txtTHOtherName6);
+            this.groupBox12.Controls.Add(this.chkTHAutoAppend5);
+            this.groupBox12.Controls.Add(this.txtTHEngName6);
+            this.groupBox12.Location = new System.Drawing.Point(401, 12);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(483, 395);
+            this.groupBox12.Size = new System.Drawing.Size(470, 582);
             this.groupBox12.TabIndex = 120;
             this.groupBox12.TabStop = false;
             // 
-            // textBox58
+            // chkTHAutoAppend17
             // 
-            this.textBox58.Location = new System.Drawing.Point(189, 86);
-            this.textBox58.Name = "textBox58";
-            this.textBox58.Size = new System.Drawing.Size(110, 23);
-            this.textBox58.TabIndex = 57;
+            this.chkTHAutoAppend17.AutoSize = true;
+            this.chkTHAutoAppend17.Location = new System.Drawing.Point(396, 545);
+            this.chkTHAutoAppend17.Name = "chkTHAutoAppend17";
+            this.chkTHAutoAppend17.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend17.TabIndex = 123;
+            this.chkTHAutoAppend17.UseVisualStyleBackColor = true;
             // 
-            // checkBox20
+            // txtTHAddPrice17
             // 
-            this.checkBox20.AutoSize = true;
-            this.checkBox20.Location = new System.Drawing.Point(111, 31);
-            this.checkBox20.Name = "checkBox20";
-            this.checkBox20.Size = new System.Drawing.Size(115, 21);
-            this.checkBox20.TabIndex = 50;
-            this.checkBox20.Text = "Enable Choices";
-            this.checkBox20.UseVisualStyleBackColor = true;
+            this.txtTHAddPrice17.Location = new System.Drawing.Point(292, 541);
+            this.txtTHAddPrice17.Name = "txtTHAddPrice17";
+            this.txtTHAddPrice17.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice17.TabIndex = 122;
             // 
-            // button24
+            // txtTHOtherName17
             // 
-            this.button24.Location = new System.Drawing.Point(359, 29);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(97, 23);
-            this.button24.TabIndex = 51;
-            this.button24.Text = "Copy Choices";
-            this.button24.UseVisualStyleBackColor = true;
+            this.txtTHOtherName17.Location = new System.Drawing.Point(170, 541);
+            this.txtTHOtherName17.Name = "txtTHOtherName17";
+            this.txtTHOtherName17.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName17.TabIndex = 121;
+            // 
+            // txtTHEngName17
+            // 
+            this.txtTHEngName17.Location = new System.Drawing.Point(9, 541);
+            this.txtTHEngName17.Name = "txtTHEngName17";
+            this.txtTHEngName17.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName17.TabIndex = 120;
+            // 
+            // chkTHAutoAppend16
+            // 
+            this.chkTHAutoAppend16.AutoSize = true;
+            this.chkTHAutoAppend16.Location = new System.Drawing.Point(396, 516);
+            this.chkTHAutoAppend16.Name = "chkTHAutoAppend16";
+            this.chkTHAutoAppend16.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend16.TabIndex = 119;
+            this.chkTHAutoAppend16.UseVisualStyleBackColor = true;
+            // 
+            // txtTHAddPrice16
+            // 
+            this.txtTHAddPrice16.Location = new System.Drawing.Point(292, 512);
+            this.txtTHAddPrice16.Name = "txtTHAddPrice16";
+            this.txtTHAddPrice16.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice16.TabIndex = 118;
+            // 
+            // txtTHOtherName16
+            // 
+            this.txtTHOtherName16.Location = new System.Drawing.Point(170, 512);
+            this.txtTHOtherName16.Name = "txtTHOtherName16";
+            this.txtTHOtherName16.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName16.TabIndex = 117;
+            // 
+            // txtTHEngName16
+            // 
+            this.txtTHEngName16.Location = new System.Drawing.Point(9, 512);
+            this.txtTHEngName16.Name = "txtTHEngName16";
+            this.txtTHEngName16.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName16.TabIndex = 116;
+            // 
+            // chkTHAutoAppend15
+            // 
+            this.chkTHAutoAppend15.AutoSize = true;
+            this.chkTHAutoAppend15.Location = new System.Drawing.Point(396, 487);
+            this.chkTHAutoAppend15.Name = "chkTHAutoAppend15";
+            this.chkTHAutoAppend15.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend15.TabIndex = 115;
+            this.chkTHAutoAppend15.UseVisualStyleBackColor = true;
+            // 
+            // txtTHAddPrice15
+            // 
+            this.txtTHAddPrice15.Location = new System.Drawing.Point(292, 483);
+            this.txtTHAddPrice15.Name = "txtTHAddPrice15";
+            this.txtTHAddPrice15.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice15.TabIndex = 114;
+            // 
+            // txtTHOtherName15
+            // 
+            this.txtTHOtherName15.Location = new System.Drawing.Point(170, 483);
+            this.txtTHOtherName15.Name = "txtTHOtherName15";
+            this.txtTHOtherName15.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName15.TabIndex = 113;
+            // 
+            // txtTHEngName15
+            // 
+            this.txtTHEngName15.Location = new System.Drawing.Point(9, 483);
+            this.txtTHEngName15.Name = "txtTHEngName15";
+            this.txtTHEngName15.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName15.TabIndex = 112;
+            // 
+            // chkTHAutoAppend14
+            // 
+            this.chkTHAutoAppend14.AutoSize = true;
+            this.chkTHAutoAppend14.Location = new System.Drawing.Point(396, 458);
+            this.chkTHAutoAppend14.Name = "chkTHAutoAppend14";
+            this.chkTHAutoAppend14.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend14.TabIndex = 111;
+            this.chkTHAutoAppend14.UseVisualStyleBackColor = true;
+            // 
+            // txtTHAddPrice14
+            // 
+            this.txtTHAddPrice14.Location = new System.Drawing.Point(292, 454);
+            this.txtTHAddPrice14.Name = "txtTHAddPrice14";
+            this.txtTHAddPrice14.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice14.TabIndex = 110;
+            // 
+            // txtTHOtherName14
+            // 
+            this.txtTHOtherName14.Location = new System.Drawing.Point(170, 454);
+            this.txtTHOtherName14.Name = "txtTHOtherName14";
+            this.txtTHOtherName14.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName14.TabIndex = 109;
+            // 
+            // txtTHEngName14
+            // 
+            this.txtTHEngName14.Location = new System.Drawing.Point(9, 454);
+            this.txtTHEngName14.Name = "txtTHEngName14";
+            this.txtTHEngName14.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName14.TabIndex = 108;
+            // 
+            // chkTHAutoAppend13
+            // 
+            this.chkTHAutoAppend13.AutoSize = true;
+            this.chkTHAutoAppend13.Location = new System.Drawing.Point(396, 429);
+            this.chkTHAutoAppend13.Name = "chkTHAutoAppend13";
+            this.chkTHAutoAppend13.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend13.TabIndex = 107;
+            this.chkTHAutoAppend13.UseVisualStyleBackColor = true;
+            // 
+            // txtTHAddPrice13
+            // 
+            this.txtTHAddPrice13.Location = new System.Drawing.Point(292, 425);
+            this.txtTHAddPrice13.Name = "txtTHAddPrice13";
+            this.txtTHAddPrice13.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice13.TabIndex = 106;
+            // 
+            // txtTHOtherName13
+            // 
+            this.txtTHOtherName13.Location = new System.Drawing.Point(170, 425);
+            this.txtTHOtherName13.Name = "txtTHOtherName13";
+            this.txtTHOtherName13.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName13.TabIndex = 105;
+            // 
+            // txtTHEngName13
+            // 
+            this.txtTHEngName13.Location = new System.Drawing.Point(9, 425);
+            this.txtTHEngName13.Name = "txtTHEngName13";
+            this.txtTHEngName13.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName13.TabIndex = 104;
+            // 
+            // chkTHAutoAppend12
+            // 
+            this.chkTHAutoAppend12.AutoSize = true;
+            this.chkTHAutoAppend12.Location = new System.Drawing.Point(396, 400);
+            this.chkTHAutoAppend12.Name = "chkTHAutoAppend12";
+            this.chkTHAutoAppend12.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend12.TabIndex = 103;
+            this.chkTHAutoAppend12.UseVisualStyleBackColor = true;
+            // 
+            // txtTHAddPrice12
+            // 
+            this.txtTHAddPrice12.Location = new System.Drawing.Point(292, 396);
+            this.txtTHAddPrice12.Name = "txtTHAddPrice12";
+            this.txtTHAddPrice12.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice12.TabIndex = 102;
+            // 
+            // txtTHOtherName12
+            // 
+            this.txtTHOtherName12.Location = new System.Drawing.Point(170, 396);
+            this.txtTHOtherName12.Name = "txtTHOtherName12";
+            this.txtTHOtherName12.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName12.TabIndex = 101;
+            // 
+            // txtTHEngName12
+            // 
+            this.txtTHEngName12.Location = new System.Drawing.Point(9, 396);
+            this.txtTHEngName12.Name = "txtTHEngName12";
+            this.txtTHEngName12.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName12.TabIndex = 100;
+            // 
+            // chkTHAutoAppend11
+            // 
+            this.chkTHAutoAppend11.AutoSize = true;
+            this.chkTHAutoAppend11.Location = new System.Drawing.Point(396, 371);
+            this.chkTHAutoAppend11.Name = "chkTHAutoAppend11";
+            this.chkTHAutoAppend11.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend11.TabIndex = 99;
+            this.chkTHAutoAppend11.UseVisualStyleBackColor = true;
+            // 
+            // txtTHAddPrice11
+            // 
+            this.txtTHAddPrice11.Location = new System.Drawing.Point(292, 367);
+            this.txtTHAddPrice11.Name = "txtTHAddPrice11";
+            this.txtTHAddPrice11.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice11.TabIndex = 98;
+            // 
+            // txtTHOtherName11
+            // 
+            this.txtTHOtherName11.Location = new System.Drawing.Point(170, 367);
+            this.txtTHOtherName11.Name = "txtTHOtherName11";
+            this.txtTHOtherName11.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName11.TabIndex = 97;
+            // 
+            // txtTHEngName11
+            // 
+            this.txtTHEngName11.Location = new System.Drawing.Point(9, 367);
+            this.txtTHEngName11.Name = "txtTHEngName11";
+            this.txtTHEngName11.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName11.TabIndex = 96;
+            // 
+            // txtTHOtherName1
+            // 
+            this.txtTHOtherName1.Location = new System.Drawing.Point(170, 77);
+            this.txtTHOtherName1.Name = "txtTHOtherName1";
+            this.txtTHOtherName1.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName1.TabIndex = 57;
+            // 
+            // chkTHEnableChoices
+            // 
+            this.chkTHEnableChoices.AutoSize = true;
+            this.chkTHEnableChoices.Location = new System.Drawing.Point(111, 31);
+            this.chkTHEnableChoices.Name = "chkTHEnableChoices";
+            this.chkTHEnableChoices.Size = new System.Drawing.Size(115, 21);
+            this.chkTHEnableChoices.TabIndex = 50;
+            this.chkTHEnableChoices.Text = "Enable Choices";
+            this.chkTHEnableChoices.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(359, 29);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(97, 23);
+            this.button2.TabIndex = 51;
+            this.button2.Text = "Copy Choices";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(25, 66);
+            this.label31.Enabled = false;
+            this.label31.Location = new System.Drawing.Point(31, 57);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(88, 17);
             this.label31.TabIndex = 52;
@@ -2754,7 +3243,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(186, 64);
+            this.label32.Location = new System.Drawing.Point(182, 55);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(80, 17);
             this.label32.TabIndex = 53;
@@ -2763,7 +3252,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(308, 64);
+            this.label33.Location = new System.Drawing.Point(289, 55);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(67, 17);
             this.label33.TabIndex = 54;
@@ -2772,317 +3261,304 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(385, 64);
+            this.label34.Location = new System.Drawing.Point(366, 55);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(85, 17);
             this.label34.TabIndex = 55;
             this.label34.Text = "Auto Append";
             // 
-            // checkBox21
+            // chkTHAutoAppend10
             // 
-            this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(415, 351);
-            this.checkBox21.Name = "checkBox21";
-            this.checkBox21.Size = new System.Drawing.Size(15, 14);
-            this.checkBox21.TabIndex = 95;
-            this.checkBox21.UseVisualStyleBackColor = true;
+            this.chkTHAutoAppend10.AutoSize = true;
+            this.chkTHAutoAppend10.Location = new System.Drawing.Point(396, 342);
+            this.chkTHAutoAppend10.Name = "chkTHAutoAppend10";
+            this.chkTHAutoAppend10.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend10.TabIndex = 95;
+            this.chkTHAutoAppend10.UseVisualStyleBackColor = true;
             // 
-            // textBox59
+            // txtTHEngName1
             // 
-            this.textBox59.Location = new System.Drawing.Point(28, 86);
-            this.textBox59.Name = "textBox59";
-            this.textBox59.Size = new System.Drawing.Size(150, 23);
-            this.textBox59.TabIndex = 56;
+            this.txtTHEngName1.Location = new System.Drawing.Point(9, 77);
+            this.txtTHEngName1.Name = "txtTHEngName1";
+            this.txtTHEngName1.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName1.TabIndex = 56;
             // 
-            // textBox60
+            // txtTHAddPrice10
             // 
-            this.textBox60.Location = new System.Drawing.Point(311, 347);
-            this.textBox60.Name = "textBox60";
-            this.textBox60.Size = new System.Drawing.Size(64, 23);
-            this.textBox60.TabIndex = 94;
+            this.txtTHAddPrice10.Location = new System.Drawing.Point(292, 338);
+            this.txtTHAddPrice10.Name = "txtTHAddPrice10";
+            this.txtTHAddPrice10.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice10.TabIndex = 94;
             // 
-            // textBox61
+            // txtTHAddPrice1
             // 
-            this.textBox61.Location = new System.Drawing.Point(311, 86);
-            this.textBox61.Name = "textBox61";
-            this.textBox61.Size = new System.Drawing.Size(64, 23);
-            this.textBox61.TabIndex = 58;
+            this.txtTHAddPrice1.Location = new System.Drawing.Point(292, 77);
+            this.txtTHAddPrice1.Name = "txtTHAddPrice1";
+            this.txtTHAddPrice1.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice1.TabIndex = 58;
             // 
-            // textBox62
+            // txtTHOtherName10
             // 
-            this.textBox62.Location = new System.Drawing.Point(189, 347);
-            this.textBox62.Name = "textBox62";
-            this.textBox62.Size = new System.Drawing.Size(110, 23);
-            this.textBox62.TabIndex = 93;
+            this.txtTHOtherName10.Location = new System.Drawing.Point(170, 338);
+            this.txtTHOtherName10.Name = "txtTHOtherName10";
+            this.txtTHOtherName10.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName10.TabIndex = 93;
             // 
-            // checkBox22
+            // chkTHAutoAppend1
             // 
-            this.checkBox22.AutoSize = true;
-            this.checkBox22.Location = new System.Drawing.Point(415, 90);
-            this.checkBox22.Name = "checkBox22";
-            this.checkBox22.Size = new System.Drawing.Size(15, 14);
-            this.checkBox22.TabIndex = 59;
-            this.checkBox22.UseVisualStyleBackColor = true;
+            this.chkTHAutoAppend1.AutoSize = true;
+            this.chkTHAutoAppend1.Location = new System.Drawing.Point(396, 81);
+            this.chkTHAutoAppend1.Name = "chkTHAutoAppend1";
+            this.chkTHAutoAppend1.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend1.TabIndex = 59;
+            this.chkTHAutoAppend1.UseVisualStyleBackColor = true;
             // 
-            // textBox63
+            // txtTHEngName10
             // 
-            this.textBox63.Location = new System.Drawing.Point(28, 347);
-            this.textBox63.Name = "textBox63";
-            this.textBox63.Size = new System.Drawing.Size(150, 23);
-            this.textBox63.TabIndex = 92;
+            this.txtTHEngName10.Location = new System.Drawing.Point(9, 338);
+            this.txtTHEngName10.Name = "txtTHEngName10";
+            this.txtTHEngName10.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName10.TabIndex = 92;
             // 
-            // textBox64
+            // txtTHEngName2
             // 
-            this.textBox64.Location = new System.Drawing.Point(28, 115);
-            this.textBox64.Name = "textBox64";
-            this.textBox64.Size = new System.Drawing.Size(150, 23);
-            this.textBox64.TabIndex = 60;
+            this.txtTHEngName2.Location = new System.Drawing.Point(9, 106);
+            this.txtTHEngName2.Name = "txtTHEngName2";
+            this.txtTHEngName2.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName2.TabIndex = 60;
             // 
-            // checkBox23
+            // chkTHAutoAppend9
             // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(415, 322);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(15, 14);
-            this.checkBox23.TabIndex = 91;
-            this.checkBox23.UseVisualStyleBackColor = true;
+            this.chkTHAutoAppend9.AutoSize = true;
+            this.chkTHAutoAppend9.Location = new System.Drawing.Point(396, 313);
+            this.chkTHAutoAppend9.Name = "chkTHAutoAppend9";
+            this.chkTHAutoAppend9.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend9.TabIndex = 91;
+            this.chkTHAutoAppend9.UseVisualStyleBackColor = true;
             // 
-            // textBox65
+            // txtTHOtherName2
             // 
-            this.textBox65.Location = new System.Drawing.Point(189, 115);
-            this.textBox65.Name = "textBox65";
-            this.textBox65.Size = new System.Drawing.Size(110, 23);
-            this.textBox65.TabIndex = 61;
+            this.txtTHOtherName2.Location = new System.Drawing.Point(170, 106);
+            this.txtTHOtherName2.Name = "txtTHOtherName2";
+            this.txtTHOtherName2.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName2.TabIndex = 61;
             // 
-            // textBox66
+            // txtTHAddPrice9
             // 
-            this.textBox66.Location = new System.Drawing.Point(311, 318);
-            this.textBox66.Name = "textBox66";
-            this.textBox66.Size = new System.Drawing.Size(64, 23);
-            this.textBox66.TabIndex = 90;
+            this.txtTHAddPrice9.Location = new System.Drawing.Point(292, 309);
+            this.txtTHAddPrice9.Name = "txtTHAddPrice9";
+            this.txtTHAddPrice9.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice9.TabIndex = 90;
             // 
-            // textBox67
+            // txtTHAddPrice2
             // 
-            this.textBox67.Location = new System.Drawing.Point(311, 115);
-            this.textBox67.Name = "textBox67";
-            this.textBox67.Size = new System.Drawing.Size(64, 23);
-            this.textBox67.TabIndex = 62;
+            this.txtTHAddPrice2.Location = new System.Drawing.Point(292, 106);
+            this.txtTHAddPrice2.Name = "txtTHAddPrice2";
+            this.txtTHAddPrice2.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice2.TabIndex = 62;
             // 
-            // textBox68
+            // txtTHOtherName9
             // 
-            this.textBox68.Location = new System.Drawing.Point(189, 318);
-            this.textBox68.Name = "textBox68";
-            this.textBox68.Size = new System.Drawing.Size(110, 23);
-            this.textBox68.TabIndex = 89;
+            this.txtTHOtherName9.Location = new System.Drawing.Point(170, 309);
+            this.txtTHOtherName9.Name = "txtTHOtherName9";
+            this.txtTHOtherName9.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName9.TabIndex = 89;
             // 
-            // checkBox24
+            // chkTHAutoAppend2
             // 
-            this.checkBox24.AutoSize = true;
-            this.checkBox24.Location = new System.Drawing.Point(415, 119);
-            this.checkBox24.Name = "checkBox24";
-            this.checkBox24.Size = new System.Drawing.Size(15, 14);
-            this.checkBox24.TabIndex = 63;
-            this.checkBox24.UseVisualStyleBackColor = true;
+            this.chkTHAutoAppend2.AutoSize = true;
+            this.chkTHAutoAppend2.Location = new System.Drawing.Point(396, 110);
+            this.chkTHAutoAppend2.Name = "chkTHAutoAppend2";
+            this.chkTHAutoAppend2.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend2.TabIndex = 63;
+            this.chkTHAutoAppend2.UseVisualStyleBackColor = true;
             // 
-            // textBox69
+            // txtTHEngName9
             // 
-            this.textBox69.Location = new System.Drawing.Point(28, 318);
-            this.textBox69.Name = "textBox69";
-            this.textBox69.Size = new System.Drawing.Size(150, 23);
-            this.textBox69.TabIndex = 88;
+            this.txtTHEngName9.Location = new System.Drawing.Point(9, 309);
+            this.txtTHEngName9.Name = "txtTHEngName9";
+            this.txtTHEngName9.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName9.TabIndex = 88;
             // 
-            // textBox70
+            // txtTHEngName3
             // 
-            this.textBox70.Location = new System.Drawing.Point(28, 144);
-            this.textBox70.Name = "textBox70";
-            this.textBox70.Size = new System.Drawing.Size(150, 23);
-            this.textBox70.TabIndex = 64;
+            this.txtTHEngName3.Location = new System.Drawing.Point(9, 135);
+            this.txtTHEngName3.Name = "txtTHEngName3";
+            this.txtTHEngName3.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName3.TabIndex = 64;
             // 
-            // checkBox25
+            // chkTHAutoAppend8
             // 
-            this.checkBox25.AutoSize = true;
-            this.checkBox25.Location = new System.Drawing.Point(415, 293);
-            this.checkBox25.Name = "checkBox25";
-            this.checkBox25.Size = new System.Drawing.Size(15, 14);
-            this.checkBox25.TabIndex = 87;
-            this.checkBox25.UseVisualStyleBackColor = true;
+            this.chkTHAutoAppend8.AutoSize = true;
+            this.chkTHAutoAppend8.Location = new System.Drawing.Point(396, 284);
+            this.chkTHAutoAppend8.Name = "chkTHAutoAppend8";
+            this.chkTHAutoAppend8.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend8.TabIndex = 87;
+            this.chkTHAutoAppend8.UseVisualStyleBackColor = true;
             // 
-            // textBox71
+            // txtTHOtherName3
             // 
-            this.textBox71.Location = new System.Drawing.Point(189, 144);
-            this.textBox71.Name = "textBox71";
-            this.textBox71.Size = new System.Drawing.Size(110, 23);
-            this.textBox71.TabIndex = 65;
+            this.txtTHOtherName3.Location = new System.Drawing.Point(170, 135);
+            this.txtTHOtherName3.Name = "txtTHOtherName3";
+            this.txtTHOtherName3.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName3.TabIndex = 65;
             // 
-            // textBox72
+            // txtTHAddPrice8
             // 
-            this.textBox72.Location = new System.Drawing.Point(311, 289);
-            this.textBox72.Name = "textBox72";
-            this.textBox72.Size = new System.Drawing.Size(64, 23);
-            this.textBox72.TabIndex = 86;
+            this.txtTHAddPrice8.Location = new System.Drawing.Point(292, 280);
+            this.txtTHAddPrice8.Name = "txtTHAddPrice8";
+            this.txtTHAddPrice8.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice8.TabIndex = 86;
             // 
-            // textBox73
+            // txtTHAddPrice3
             // 
-            this.textBox73.Location = new System.Drawing.Point(311, 144);
-            this.textBox73.Name = "textBox73";
-            this.textBox73.Size = new System.Drawing.Size(64, 23);
-            this.textBox73.TabIndex = 66;
+            this.txtTHAddPrice3.Location = new System.Drawing.Point(292, 135);
+            this.txtTHAddPrice3.Name = "txtTHAddPrice3";
+            this.txtTHAddPrice3.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice3.TabIndex = 66;
             // 
-            // textBox74
+            // txtTHOtherName8
             // 
-            this.textBox74.Location = new System.Drawing.Point(189, 289);
-            this.textBox74.Name = "textBox74";
-            this.textBox74.Size = new System.Drawing.Size(110, 23);
-            this.textBox74.TabIndex = 85;
+            this.txtTHOtherName8.Location = new System.Drawing.Point(170, 280);
+            this.txtTHOtherName8.Name = "txtTHOtherName8";
+            this.txtTHOtherName8.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName8.TabIndex = 85;
             // 
-            // checkBox26
+            // chkTHAutoAppend3
             // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.Location = new System.Drawing.Point(415, 148);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(15, 14);
-            this.checkBox26.TabIndex = 67;
-            this.checkBox26.UseVisualStyleBackColor = true;
+            this.chkTHAutoAppend3.AutoSize = true;
+            this.chkTHAutoAppend3.Location = new System.Drawing.Point(396, 139);
+            this.chkTHAutoAppend3.Name = "chkTHAutoAppend3";
+            this.chkTHAutoAppend3.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend3.TabIndex = 67;
+            this.chkTHAutoAppend3.UseVisualStyleBackColor = true;
             // 
-            // textBox75
+            // txtTHEngName8
             // 
-            this.textBox75.Location = new System.Drawing.Point(28, 289);
-            this.textBox75.Name = "textBox75";
-            this.textBox75.Size = new System.Drawing.Size(150, 23);
-            this.textBox75.TabIndex = 84;
+            this.txtTHEngName8.Location = new System.Drawing.Point(9, 280);
+            this.txtTHEngName8.Name = "txtTHEngName8";
+            this.txtTHEngName8.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName8.TabIndex = 84;
             // 
-            // textBox76
+            // txtTHEngName4
             // 
-            this.textBox76.Location = new System.Drawing.Point(28, 173);
-            this.textBox76.Name = "textBox76";
-            this.textBox76.Size = new System.Drawing.Size(150, 23);
-            this.textBox76.TabIndex = 68;
+            this.txtTHEngName4.Location = new System.Drawing.Point(9, 164);
+            this.txtTHEngName4.Name = "txtTHEngName4";
+            this.txtTHEngName4.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName4.TabIndex = 68;
             // 
-            // checkBox27
+            // chkTHAutoAppend7
             // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.Location = new System.Drawing.Point(415, 264);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(15, 14);
-            this.checkBox27.TabIndex = 83;
-            this.checkBox27.UseVisualStyleBackColor = true;
+            this.chkTHAutoAppend7.AutoSize = true;
+            this.chkTHAutoAppend7.Location = new System.Drawing.Point(396, 255);
+            this.chkTHAutoAppend7.Name = "chkTHAutoAppend7";
+            this.chkTHAutoAppend7.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend7.TabIndex = 83;
+            this.chkTHAutoAppend7.UseVisualStyleBackColor = true;
             // 
-            // textBox77
+            // txtTHOtherName4
             // 
-            this.textBox77.Location = new System.Drawing.Point(189, 173);
-            this.textBox77.Name = "textBox77";
-            this.textBox77.Size = new System.Drawing.Size(110, 23);
-            this.textBox77.TabIndex = 69;
+            this.txtTHOtherName4.Location = new System.Drawing.Point(170, 164);
+            this.txtTHOtherName4.Name = "txtTHOtherName4";
+            this.txtTHOtherName4.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName4.TabIndex = 69;
             // 
-            // textBox78
+            // txtTHAddPrice7
             // 
-            this.textBox78.Location = new System.Drawing.Point(311, 260);
-            this.textBox78.Name = "textBox78";
-            this.textBox78.Size = new System.Drawing.Size(64, 23);
-            this.textBox78.TabIndex = 82;
+            this.txtTHAddPrice7.Location = new System.Drawing.Point(292, 251);
+            this.txtTHAddPrice7.Name = "txtTHAddPrice7";
+            this.txtTHAddPrice7.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice7.TabIndex = 82;
             // 
-            // textBox79
+            // txtTHAddPrice4
             // 
-            this.textBox79.Location = new System.Drawing.Point(311, 173);
-            this.textBox79.Name = "textBox79";
-            this.textBox79.Size = new System.Drawing.Size(64, 23);
-            this.textBox79.TabIndex = 70;
+            this.txtTHAddPrice4.Location = new System.Drawing.Point(292, 164);
+            this.txtTHAddPrice4.Name = "txtTHAddPrice4";
+            this.txtTHAddPrice4.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice4.TabIndex = 70;
             // 
-            // textBox80
+            // txtTHOtherName7
             // 
-            this.textBox80.Location = new System.Drawing.Point(189, 260);
-            this.textBox80.Name = "textBox80";
-            this.textBox80.Size = new System.Drawing.Size(110, 23);
-            this.textBox80.TabIndex = 81;
+            this.txtTHOtherName7.Location = new System.Drawing.Point(170, 251);
+            this.txtTHOtherName7.Name = "txtTHOtherName7";
+            this.txtTHOtherName7.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName7.TabIndex = 81;
             // 
-            // checkBox28
+            // chkTHAutoAppend4
             // 
-            this.checkBox28.AutoSize = true;
-            this.checkBox28.Location = new System.Drawing.Point(415, 177);
-            this.checkBox28.Name = "checkBox28";
-            this.checkBox28.Size = new System.Drawing.Size(15, 14);
-            this.checkBox28.TabIndex = 71;
-            this.checkBox28.UseVisualStyleBackColor = true;
+            this.chkTHAutoAppend4.AutoSize = true;
+            this.chkTHAutoAppend4.Location = new System.Drawing.Point(396, 168);
+            this.chkTHAutoAppend4.Name = "chkTHAutoAppend4";
+            this.chkTHAutoAppend4.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend4.TabIndex = 71;
+            this.chkTHAutoAppend4.UseVisualStyleBackColor = true;
             // 
-            // textBox81
+            // txtTHEngName7
             // 
-            this.textBox81.Location = new System.Drawing.Point(28, 260);
-            this.textBox81.Name = "textBox81";
-            this.textBox81.Size = new System.Drawing.Size(150, 23);
-            this.textBox81.TabIndex = 80;
+            this.txtTHEngName7.Location = new System.Drawing.Point(9, 251);
+            this.txtTHEngName7.Name = "txtTHEngName7";
+            this.txtTHEngName7.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName7.TabIndex = 80;
             // 
-            // textBox82
+            // txtTHEngName5
             // 
-            this.textBox82.Location = new System.Drawing.Point(28, 202);
-            this.textBox82.Name = "textBox82";
-            this.textBox82.Size = new System.Drawing.Size(150, 23);
-            this.textBox82.TabIndex = 72;
+            this.txtTHEngName5.Location = new System.Drawing.Point(9, 193);
+            this.txtTHEngName5.Name = "txtTHEngName5";
+            this.txtTHEngName5.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName5.TabIndex = 72;
             // 
-            // checkBox29
+            // chkTHAutoAppend6
             // 
-            this.checkBox29.AutoSize = true;
-            this.checkBox29.Location = new System.Drawing.Point(415, 235);
-            this.checkBox29.Name = "checkBox29";
-            this.checkBox29.Size = new System.Drawing.Size(15, 14);
-            this.checkBox29.TabIndex = 79;
-            this.checkBox29.UseVisualStyleBackColor = true;
+            this.chkTHAutoAppend6.AutoSize = true;
+            this.chkTHAutoAppend6.Location = new System.Drawing.Point(396, 226);
+            this.chkTHAutoAppend6.Name = "chkTHAutoAppend6";
+            this.chkTHAutoAppend6.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend6.TabIndex = 79;
+            this.chkTHAutoAppend6.UseVisualStyleBackColor = true;
             // 
-            // textBox83
+            // txtTHOtherName5
             // 
-            this.textBox83.Location = new System.Drawing.Point(189, 202);
-            this.textBox83.Name = "textBox83";
-            this.textBox83.Size = new System.Drawing.Size(110, 23);
-            this.textBox83.TabIndex = 73;
+            this.txtTHOtherName5.Location = new System.Drawing.Point(170, 193);
+            this.txtTHOtherName5.Name = "txtTHOtherName5";
+            this.txtTHOtherName5.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName5.TabIndex = 73;
             // 
-            // textBox84
+            // txtTHAddPrice6
             // 
-            this.textBox84.Location = new System.Drawing.Point(311, 231);
-            this.textBox84.Name = "textBox84";
-            this.textBox84.Size = new System.Drawing.Size(64, 23);
-            this.textBox84.TabIndex = 78;
+            this.txtTHAddPrice6.Location = new System.Drawing.Point(292, 222);
+            this.txtTHAddPrice6.Name = "txtTHAddPrice6";
+            this.txtTHAddPrice6.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice6.TabIndex = 78;
             // 
-            // textBox85
+            // txtTHAddPrice5
             // 
-            this.textBox85.Location = new System.Drawing.Point(311, 202);
-            this.textBox85.Name = "textBox85";
-            this.textBox85.Size = new System.Drawing.Size(64, 23);
-            this.textBox85.TabIndex = 74;
+            this.txtTHAddPrice5.Location = new System.Drawing.Point(292, 193);
+            this.txtTHAddPrice5.Name = "txtTHAddPrice5";
+            this.txtTHAddPrice5.Size = new System.Drawing.Size(64, 23);
+            this.txtTHAddPrice5.TabIndex = 74;
             // 
-            // textBox86
+            // txtTHOtherName6
             // 
-            this.textBox86.Location = new System.Drawing.Point(189, 231);
-            this.textBox86.Name = "textBox86";
-            this.textBox86.Size = new System.Drawing.Size(110, 23);
-            this.textBox86.TabIndex = 77;
+            this.txtTHOtherName6.Location = new System.Drawing.Point(170, 222);
+            this.txtTHOtherName6.Name = "txtTHOtherName6";
+            this.txtTHOtherName6.Size = new System.Drawing.Size(110, 23);
+            this.txtTHOtherName6.TabIndex = 77;
             // 
-            // checkBox30
+            // chkTHAutoAppend5
             // 
-            this.checkBox30.AutoSize = true;
-            this.checkBox30.Location = new System.Drawing.Point(415, 206);
-            this.checkBox30.Name = "checkBox30";
-            this.checkBox30.Size = new System.Drawing.Size(15, 14);
-            this.checkBox30.TabIndex = 75;
-            this.checkBox30.UseVisualStyleBackColor = true;
+            this.chkTHAutoAppend5.AutoSize = true;
+            this.chkTHAutoAppend5.Location = new System.Drawing.Point(396, 197);
+            this.chkTHAutoAppend5.Name = "chkTHAutoAppend5";
+            this.chkTHAutoAppend5.Size = new System.Drawing.Size(15, 14);
+            this.chkTHAutoAppend5.TabIndex = 75;
+            this.chkTHAutoAppend5.UseVisualStyleBackColor = true;
             // 
-            // textBox87
+            // txtTHEngName6
             // 
-            this.textBox87.Location = new System.Drawing.Point(28, 231);
-            this.textBox87.Name = "textBox87";
-            this.textBox87.Size = new System.Drawing.Size(150, 23);
-            this.textBox87.TabIndex = 76;
-            // 
-            // btnTHEdit
-            // 
-            this.btnTHEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTHEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTHEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTHEdit.ForeColor = System.Drawing.Color.White;
-            this.btnTHEdit.Location = new System.Drawing.Point(115, 532);
-            this.btnTHEdit.Name = "btnTHEdit";
-            this.btnTHEdit.Size = new System.Drawing.Size(80, 50);
-            this.btnTHEdit.TabIndex = 119;
-            this.btnTHEdit.Text = "Edit";
-            this.btnTHEdit.UseVisualStyleBackColor = false;
+            this.txtTHEngName6.Location = new System.Drawing.Point(9, 222);
+            this.txtTHEngName6.Name = "txtTHEngName6";
+            this.txtTHEngName6.Size = new System.Drawing.Size(150, 23);
+            this.txtTHEngName6.TabIndex = 76;
             // 
             // btnTHExit
             // 
@@ -3090,12 +3566,13 @@
             this.btnTHExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTHExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTHExit.ForeColor = System.Drawing.Color.White;
-            this.btnTHExit.Location = new System.Drawing.Point(464, 532);
+            this.btnTHExit.Location = new System.Drawing.Point(242, 531);
             this.btnTHExit.Name = "btnTHExit";
-            this.btnTHExit.Size = new System.Drawing.Size(80, 50);
+            this.btnTHExit.Size = new System.Drawing.Size(75, 45);
             this.btnTHExit.TabIndex = 118;
             this.btnTHExit.Text = "Exit";
             this.btnTHExit.UseVisualStyleBackColor = false;
+            this.btnTHExit.Click += new System.EventHandler(this.btnTHExit_Click);
             // 
             // btnTHSave
             // 
@@ -3103,51 +3580,13 @@
             this.btnTHSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTHSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTHSave.ForeColor = System.Drawing.Color.White;
-            this.btnTHSave.Location = new System.Drawing.Point(287, 532);
+            this.btnTHSave.Location = new System.Drawing.Point(82, 531);
             this.btnTHSave.Name = "btnTHSave";
-            this.btnTHSave.Size = new System.Drawing.Size(80, 50);
+            this.btnTHSave.Size = new System.Drawing.Size(75, 45);
             this.btnTHSave.TabIndex = 117;
             this.btnTHSave.Text = "Save";
             this.btnTHSave.UseVisualStyleBackColor = false;
-            // 
-            // btnTHDel
-            // 
-            this.btnTHDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTHDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTHDel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTHDel.ForeColor = System.Drawing.Color.White;
-            this.btnTHDel.Location = new System.Drawing.Point(201, 532);
-            this.btnTHDel.Name = "btnTHDel";
-            this.btnTHDel.Size = new System.Drawing.Size(80, 50);
-            this.btnTHDel.TabIndex = 116;
-            this.btnTHDel.Text = "Delete";
-            this.btnTHDel.UseVisualStyleBackColor = false;
-            // 
-            // btnTHCopy
-            // 
-            this.btnTHCopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTHCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTHCopy.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTHCopy.ForeColor = System.Drawing.Color.White;
-            this.btnTHCopy.Location = new System.Drawing.Point(373, 532);
-            this.btnTHCopy.Name = "btnTHCopy";
-            this.btnTHCopy.Size = new System.Drawing.Size(80, 50);
-            this.btnTHCopy.TabIndex = 115;
-            this.btnTHCopy.Text = "Copy";
-            this.btnTHCopy.UseVisualStyleBackColor = false;
-            // 
-            // btnTHAdd
-            // 
-            this.btnTHAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTHAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTHAdd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTHAdd.ForeColor = System.Drawing.Color.White;
-            this.btnTHAdd.Location = new System.Drawing.Point(29, 532);
-            this.btnTHAdd.Name = "btnTHAdd";
-            this.btnTHAdd.Size = new System.Drawing.Size(80, 50);
-            this.btnTHAdd.TabIndex = 114;
-            this.btnTHAdd.Text = "Add";
-            this.btnTHAdd.UseVisualStyleBackColor = false;
+            this.btnTHSave.Click += new System.EventHandler(this.btnTHSave_Click);
             // 
             // groupBox13
             // 
@@ -3158,7 +3597,7 @@
             this.groupBox13.Controls.Add(this.txtTHDishCode);
             this.groupBox13.Controls.Add(this.label36);
             this.groupBox13.Controls.Add(this.label37);
-            this.groupBox13.Location = new System.Drawing.Point(26, 87);
+            this.groupBox13.Location = new System.Drawing.Point(3, 87);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(392, 424);
             this.groupBox13.TabIndex = 113;
@@ -3169,8 +3608,11 @@
             this.dgvTHMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTHMenu.Location = new System.Drawing.Point(10, 73);
             this.dgvTHMenu.Name = "dgvTHMenu";
+            this.dgvTHMenu.ReadOnly = true;
+            this.dgvTHMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTHMenu.Size = new System.Drawing.Size(373, 345);
             this.dgvTHMenu.TabIndex = 6;
+            this.dgvTHMenu.SelectionChanged += new System.EventHandler(this.dgvTHMenu_SelectionChanged);
             // 
             // cmTHBoxDish
             // 
@@ -3180,6 +3622,7 @@
             this.cmTHBoxDish.Name = "cmTHBoxDish";
             this.cmTHBoxDish.Size = new System.Drawing.Size(121, 25);
             this.cmTHBoxDish.TabIndex = 5;
+            this.cmTHBoxDish.SelectedIndexChanged += new System.EventHandler(this.cmTHBoxDish_SelectedIndexChanged);
             // 
             // label35
             // 
@@ -3234,7 +3677,7 @@
             this.groupBox14.Controls.Add(this.btnTH3);
             this.groupBox14.Controls.Add(this.btnTH2);
             this.groupBox14.Controls.Add(this.btnTH1);
-            this.groupBox14.Location = new System.Drawing.Point(26, 12);
+            this.groupBox14.Location = new System.Drawing.Point(3, 12);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(392, 74);
             this.groupBox14.TabIndex = 112;
@@ -3291,18 +3734,652 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.groupBox18);
+            this.tabPage5.Controls.Add(this.groupBox17);
+            this.tabPage5.Controls.Add(this.dgvSubMenu);
+            this.tabPage5.Controls.Add(this.btnSubMenuEdit);
+            this.tabPage5.Controls.Add(this.btnSubMenuExit);
+            this.tabPage5.Controls.Add(this.btnSubMenuSave);
+            this.tabPage5.Controls.Add(this.btnSubMenuDel);
+            this.tabPage5.Controls.Add(this.btnSubMenuAdd);
             this.tabPage5.Location = new System.Drawing.Point(4, 26);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(973, 594);
+            this.tabPage5.Size = new System.Drawing.Size(967, 600);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Sub Menu";
             this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.txtDishOtherName15);
+            this.groupBox18.Controls.Add(this.txtDishEngName15);
+            this.groupBox18.Controls.Add(this.txtDishOtherName14);
+            this.groupBox18.Controls.Add(this.txtDishEngName14);
+            this.groupBox18.Controls.Add(this.txtDishOtherName13);
+            this.groupBox18.Controls.Add(this.txtDishEngName13);
+            this.groupBox18.Controls.Add(this.txtDishOtherName12);
+            this.groupBox18.Controls.Add(this.txtDishEngName12);
+            this.groupBox18.Controls.Add(this.txtDishOtherName11);
+            this.groupBox18.Controls.Add(this.txtDishEngName11);
+            this.groupBox18.Controls.Add(this.txtDishOtherName10);
+            this.groupBox18.Controls.Add(this.txtDishEngName10);
+            this.groupBox18.Controls.Add(this.txtDishOtherName9);
+            this.groupBox18.Controls.Add(this.txtDishEngName9);
+            this.groupBox18.Controls.Add(this.txtDishOtherName8);
+            this.groupBox18.Controls.Add(this.txtDishEngName8);
+            this.groupBox18.Controls.Add(this.txtDishOtherName7);
+            this.groupBox18.Controls.Add(this.txtDishEngName7);
+            this.groupBox18.Controls.Add(this.txtDishOtherName6);
+            this.groupBox18.Controls.Add(this.txtDishEngName6);
+            this.groupBox18.Controls.Add(this.txtDishOtherName5);
+            this.groupBox18.Controls.Add(this.txtDishEngName5);
+            this.groupBox18.Controls.Add(this.txtDishOtherName4);
+            this.groupBox18.Controls.Add(this.txtDishEngName4);
+            this.groupBox18.Controls.Add(this.txtDishOtherName3);
+            this.groupBox18.Controls.Add(this.txtDishEngName3);
+            this.groupBox18.Controls.Add(this.txtDishOtherName2);
+            this.groupBox18.Controls.Add(this.txtDishEngName2);
+            this.groupBox18.Controls.Add(this.txtDishOtherName1);
+            this.groupBox18.Controls.Add(this.label46);
+            this.groupBox18.Controls.Add(this.label47);
+            this.groupBox18.Controls.Add(this.txtDishEngName1);
+            this.groupBox18.Location = new System.Drawing.Point(632, 20);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(297, 558);
+            this.groupBox18.TabIndex = 56;
+            this.groupBox18.TabStop = false;
+            // 
+            // txtDishOtherName15
+            // 
+            this.txtDishOtherName15.Enabled = false;
+            this.txtDishOtherName15.Location = new System.Drawing.Point(174, 448);
+            this.txtDishOtherName15.Name = "txtDishOtherName15";
+            this.txtDishOtherName15.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName15.TabIndex = 161;
+            // 
+            // txtDishEngName15
+            // 
+            this.txtDishEngName15.Enabled = false;
+            this.txtDishEngName15.Location = new System.Drawing.Point(13, 448);
+            this.txtDishEngName15.Name = "txtDishEngName15";
+            this.txtDishEngName15.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName15.TabIndex = 160;
+            // 
+            // txtDishOtherName14
+            // 
+            this.txtDishOtherName14.Enabled = false;
+            this.txtDishOtherName14.Location = new System.Drawing.Point(174, 419);
+            this.txtDishOtherName14.Name = "txtDishOtherName14";
+            this.txtDishOtherName14.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName14.TabIndex = 159;
+            // 
+            // txtDishEngName14
+            // 
+            this.txtDishEngName14.Enabled = false;
+            this.txtDishEngName14.Location = new System.Drawing.Point(13, 419);
+            this.txtDishEngName14.Name = "txtDishEngName14";
+            this.txtDishEngName14.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName14.TabIndex = 158;
+            // 
+            // txtDishOtherName13
+            // 
+            this.txtDishOtherName13.Enabled = false;
+            this.txtDishOtherName13.Location = new System.Drawing.Point(174, 390);
+            this.txtDishOtherName13.Name = "txtDishOtherName13";
+            this.txtDishOtherName13.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName13.TabIndex = 157;
+            // 
+            // txtDishEngName13
+            // 
+            this.txtDishEngName13.Enabled = false;
+            this.txtDishEngName13.Location = new System.Drawing.Point(13, 390);
+            this.txtDishEngName13.Name = "txtDishEngName13";
+            this.txtDishEngName13.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName13.TabIndex = 156;
+            // 
+            // txtDishOtherName12
+            // 
+            this.txtDishOtherName12.Enabled = false;
+            this.txtDishOtherName12.Location = new System.Drawing.Point(174, 361);
+            this.txtDishOtherName12.Name = "txtDishOtherName12";
+            this.txtDishOtherName12.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName12.TabIndex = 155;
+            // 
+            // txtDishEngName12
+            // 
+            this.txtDishEngName12.Enabled = false;
+            this.txtDishEngName12.Location = new System.Drawing.Point(13, 361);
+            this.txtDishEngName12.Name = "txtDishEngName12";
+            this.txtDishEngName12.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName12.TabIndex = 154;
+            // 
+            // txtDishOtherName11
+            // 
+            this.txtDishOtherName11.Enabled = false;
+            this.txtDishOtherName11.Location = new System.Drawing.Point(174, 332);
+            this.txtDishOtherName11.Name = "txtDishOtherName11";
+            this.txtDishOtherName11.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName11.TabIndex = 153;
+            // 
+            // txtDishEngName11
+            // 
+            this.txtDishEngName11.Enabled = false;
+            this.txtDishEngName11.Location = new System.Drawing.Point(13, 332);
+            this.txtDishEngName11.Name = "txtDishEngName11";
+            this.txtDishEngName11.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName11.TabIndex = 152;
+            // 
+            // txtDishOtherName10
+            // 
+            this.txtDishOtherName10.Enabled = false;
+            this.txtDishOtherName10.Location = new System.Drawing.Point(174, 303);
+            this.txtDishOtherName10.Name = "txtDishOtherName10";
+            this.txtDishOtherName10.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName10.TabIndex = 151;
+            // 
+            // txtDishEngName10
+            // 
+            this.txtDishEngName10.Enabled = false;
+            this.txtDishEngName10.Location = new System.Drawing.Point(13, 303);
+            this.txtDishEngName10.Name = "txtDishEngName10";
+            this.txtDishEngName10.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName10.TabIndex = 150;
+            // 
+            // txtDishOtherName9
+            // 
+            this.txtDishOtherName9.Enabled = false;
+            this.txtDishOtherName9.Location = new System.Drawing.Point(174, 274);
+            this.txtDishOtherName9.Name = "txtDishOtherName9";
+            this.txtDishOtherName9.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName9.TabIndex = 149;
+            // 
+            // txtDishEngName9
+            // 
+            this.txtDishEngName9.Enabled = false;
+            this.txtDishEngName9.Location = new System.Drawing.Point(13, 274);
+            this.txtDishEngName9.Name = "txtDishEngName9";
+            this.txtDishEngName9.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName9.TabIndex = 148;
+            // 
+            // txtDishOtherName8
+            // 
+            this.txtDishOtherName8.Enabled = false;
+            this.txtDishOtherName8.Location = new System.Drawing.Point(174, 245);
+            this.txtDishOtherName8.Name = "txtDishOtherName8";
+            this.txtDishOtherName8.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName8.TabIndex = 147;
+            // 
+            // txtDishEngName8
+            // 
+            this.txtDishEngName8.Enabled = false;
+            this.txtDishEngName8.Location = new System.Drawing.Point(13, 245);
+            this.txtDishEngName8.Name = "txtDishEngName8";
+            this.txtDishEngName8.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName8.TabIndex = 146;
+            // 
+            // txtDishOtherName7
+            // 
+            this.txtDishOtherName7.Enabled = false;
+            this.txtDishOtherName7.Location = new System.Drawing.Point(174, 216);
+            this.txtDishOtherName7.Name = "txtDishOtherName7";
+            this.txtDishOtherName7.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName7.TabIndex = 145;
+            // 
+            // txtDishEngName7
+            // 
+            this.txtDishEngName7.Enabled = false;
+            this.txtDishEngName7.Location = new System.Drawing.Point(13, 216);
+            this.txtDishEngName7.Name = "txtDishEngName7";
+            this.txtDishEngName7.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName7.TabIndex = 144;
+            // 
+            // txtDishOtherName6
+            // 
+            this.txtDishOtherName6.Enabled = false;
+            this.txtDishOtherName6.Location = new System.Drawing.Point(174, 187);
+            this.txtDishOtherName6.Name = "txtDishOtherName6";
+            this.txtDishOtherName6.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName6.TabIndex = 143;
+            // 
+            // txtDishEngName6
+            // 
+            this.txtDishEngName6.Enabled = false;
+            this.txtDishEngName6.Location = new System.Drawing.Point(13, 187);
+            this.txtDishEngName6.Name = "txtDishEngName6";
+            this.txtDishEngName6.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName6.TabIndex = 142;
+            // 
+            // txtDishOtherName5
+            // 
+            this.txtDishOtherName5.Enabled = false;
+            this.txtDishOtherName5.Location = new System.Drawing.Point(174, 158);
+            this.txtDishOtherName5.Name = "txtDishOtherName5";
+            this.txtDishOtherName5.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName5.TabIndex = 141;
+            // 
+            // txtDishEngName5
+            // 
+            this.txtDishEngName5.Enabled = false;
+            this.txtDishEngName5.Location = new System.Drawing.Point(13, 158);
+            this.txtDishEngName5.Name = "txtDishEngName5";
+            this.txtDishEngName5.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName5.TabIndex = 140;
+            // 
+            // txtDishOtherName4
+            // 
+            this.txtDishOtherName4.Enabled = false;
+            this.txtDishOtherName4.Location = new System.Drawing.Point(174, 129);
+            this.txtDishOtherName4.Name = "txtDishOtherName4";
+            this.txtDishOtherName4.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName4.TabIndex = 139;
+            // 
+            // txtDishEngName4
+            // 
+            this.txtDishEngName4.Enabled = false;
+            this.txtDishEngName4.Location = new System.Drawing.Point(13, 129);
+            this.txtDishEngName4.Name = "txtDishEngName4";
+            this.txtDishEngName4.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName4.TabIndex = 138;
+            // 
+            // txtDishOtherName3
+            // 
+            this.txtDishOtherName3.Enabled = false;
+            this.txtDishOtherName3.Location = new System.Drawing.Point(174, 100);
+            this.txtDishOtherName3.Name = "txtDishOtherName3";
+            this.txtDishOtherName3.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName3.TabIndex = 137;
+            // 
+            // txtDishEngName3
+            // 
+            this.txtDishEngName3.Enabled = false;
+            this.txtDishEngName3.Location = new System.Drawing.Point(13, 100);
+            this.txtDishEngName3.Name = "txtDishEngName3";
+            this.txtDishEngName3.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName3.TabIndex = 136;
+            // 
+            // txtDishOtherName2
+            // 
+            this.txtDishOtherName2.Enabled = false;
+            this.txtDishOtherName2.Location = new System.Drawing.Point(174, 71);
+            this.txtDishOtherName2.Name = "txtDishOtherName2";
+            this.txtDishOtherName2.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName2.TabIndex = 135;
+            // 
+            // txtDishEngName2
+            // 
+            this.txtDishEngName2.Enabled = false;
+            this.txtDishEngName2.Location = new System.Drawing.Point(13, 71);
+            this.txtDishEngName2.Name = "txtDishEngName2";
+            this.txtDishEngName2.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName2.TabIndex = 134;
+            // 
+            // txtDishOtherName1
+            // 
+            this.txtDishOtherName1.Enabled = false;
+            this.txtDishOtherName1.Location = new System.Drawing.Point(174, 42);
+            this.txtDishOtherName1.Name = "txtDishOtherName1";
+            this.txtDishOtherName1.Size = new System.Drawing.Size(110, 23);
+            this.txtDishOtherName1.TabIndex = 133;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(34, 22);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(117, 17);
+            this.label46.TabIndex = 130;
+            this.label46.Text = "Dish English Name";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(175, 22);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(109, 17);
+            this.label47.TabIndex = 131;
+            this.label47.Text = "Dish Other Name";
+            // 
+            // txtDishEngName1
+            // 
+            this.txtDishEngName1.Enabled = false;
+            this.txtDishEngName1.Location = new System.Drawing.Point(13, 42);
+            this.txtDishEngName1.Name = "txtDishEngName1";
+            this.txtDishEngName1.Size = new System.Drawing.Size(150, 23);
+            this.txtDishEngName1.TabIndex = 132;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.groupBox16);
+            this.groupBox17.Controls.Add(this.chkSMInventoryCheck);
+            this.groupBox17.Controls.Add(this.chkSMWithoutVAT);
+            this.groupBox17.Controls.Add(this.chkSMDisountable);
+            this.groupBox17.Controls.Add(this.chkSMNegativePrice);
+            this.groupBox17.Controls.Add(this.chkSMUnavailable);
+            this.groupBox17.Controls.Add(this.txtSMPrice);
+            this.groupBox17.Controls.Add(this.label55);
+            this.groupBox17.Controls.Add(this.txtSMOtherName);
+            this.groupBox17.Controls.Add(this.label56);
+            this.groupBox17.Controls.Add(this.txtSMEngName);
+            this.groupBox17.Controls.Add(this.label57);
+            this.groupBox17.Controls.Add(this.txtSMDisplayPosition);
+            this.groupBox17.Controls.Add(this.label58);
+            this.groupBox17.Controls.Add(this.txtSMDishCode);
+            this.groupBox17.Controls.Add(this.label59);
+            this.groupBox17.Location = new System.Drawing.Point(317, 11);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(279, 491);
+            this.groupBox17.TabIndex = 49;
+            this.groupBox17.TabStop = false;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.chkSMPrtOrder);
+            this.groupBox16.Controls.Add(this.chkSMPrtName);
+            this.groupBox16.Controls.Add(this.label43);
+            this.groupBox16.Controls.Add(this.label44);
+            this.groupBox16.Controls.Add(this.cmbSMSupplyShift);
+            this.groupBox16.Controls.Add(this.label45);
+            this.groupBox16.Location = new System.Drawing.Point(6, 370);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(262, 115);
+            this.groupBox16.TabIndex = 56;
+            this.groupBox16.TabStop = false;
+            // 
+            // chkSMPrtOrder
+            // 
+            this.chkSMPrtOrder.AutoSize = true;
+            this.chkSMPrtOrder.Enabled = false;
+            this.chkSMPrtOrder.Location = new System.Drawing.Point(123, 83);
+            this.chkSMPrtOrder.Name = "chkSMPrtOrder";
+            this.chkSMPrtOrder.Size = new System.Drawing.Size(35, 21);
+            this.chkSMPrtOrder.TabIndex = 6;
+            this.chkSMPrtOrder.Text = "X";
+            this.chkSMPrtOrder.UseVisualStyleBackColor = true;
+            // 
+            // chkSMPrtName
+            // 
+            this.chkSMPrtName.AutoSize = true;
+            this.chkSMPrtName.Enabled = false;
+            this.chkSMPrtName.Location = new System.Drawing.Point(123, 55);
+            this.chkSMPrtName.Name = "chkSMPrtName";
+            this.chkSMPrtName.Size = new System.Drawing.Size(73, 21);
+            this.chkSMPrtName.TabIndex = 5;
+            this.chkSMPrtName.Text = "By Dept";
+            this.chkSMPrtName.UseVisualStyleBackColor = true;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(30, 85);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(73, 17);
+            this.label43.TabIndex = 4;
+            this.label43.Text = "Print Order";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(30, 55);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(73, 17);
+            this.label44.TabIndex = 2;
+            this.label44.Text = "Print Name";
+            // 
+            // cmbSMSupplyShift
+            // 
+            this.cmbSMSupplyShift.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSMSupplyShift.Enabled = false;
+            this.cmbSMSupplyShift.FormattingEnabled = true;
+            this.cmbSMSupplyShift.Location = new System.Drawing.Point(123, 16);
+            this.cmbSMSupplyShift.Name = "cmbSMSupplyShift";
+            this.cmbSMSupplyShift.Size = new System.Drawing.Size(121, 25);
+            this.cmbSMSupplyShift.TabIndex = 1;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(30, 24);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(76, 17);
+            this.label45.TabIndex = 0;
+            this.label45.Text = "Supply Shift";
+            // 
+            // chkSMInventoryCheck
+            // 
+            this.chkSMInventoryCheck.AutoSize = true;
+            this.chkSMInventoryCheck.Enabled = false;
+            this.chkSMInventoryCheck.Location = new System.Drawing.Point(11, 291);
+            this.chkSMInventoryCheck.Name = "chkSMInventoryCheck";
+            this.chkSMInventoryCheck.Size = new System.Drawing.Size(120, 21);
+            this.chkSMInventoryCheck.TabIndex = 48;
+            this.chkSMInventoryCheck.Text = "Inventory Check";
+            this.chkSMInventoryCheck.UseVisualStyleBackColor = true;
+            // 
+            // chkSMWithoutVAT
+            // 
+            this.chkSMWithoutVAT.AutoSize = true;
+            this.chkSMWithoutVAT.Enabled = false;
+            this.chkSMWithoutVAT.Location = new System.Drawing.Point(11, 345);
+            this.chkSMWithoutVAT.Name = "chkSMWithoutVAT";
+            this.chkSMWithoutVAT.Size = new System.Drawing.Size(99, 21);
+            this.chkSMWithoutVAT.TabIndex = 47;
+            this.chkSMWithoutVAT.Text = "Without VAT";
+            this.chkSMWithoutVAT.UseVisualStyleBackColor = true;
+            // 
+            // chkSMDisountable
+            // 
+            this.chkSMDisountable.AutoSize = true;
+            this.chkSMDisountable.Enabled = false;
+            this.chkSMDisountable.Location = new System.Drawing.Point(115, 264);
+            this.chkSMDisountable.Name = "chkSMDisountable";
+            this.chkSMDisountable.Size = new System.Drawing.Size(96, 21);
+            this.chkSMDisountable.TabIndex = 46;
+            this.chkSMDisountable.Text = "Disountable";
+            this.chkSMDisountable.UseVisualStyleBackColor = true;
+            // 
+            // chkSMNegativePrice
+            // 
+            this.chkSMNegativePrice.AutoSize = true;
+            this.chkSMNegativePrice.Enabled = false;
+            this.chkSMNegativePrice.Location = new System.Drawing.Point(11, 318);
+            this.chkSMNegativePrice.Name = "chkSMNegativePrice";
+            this.chkSMNegativePrice.Size = new System.Drawing.Size(111, 21);
+            this.chkSMNegativePrice.TabIndex = 45;
+            this.chkSMNegativePrice.Text = "Negative Price";
+            this.chkSMNegativePrice.UseVisualStyleBackColor = true;
+            // 
+            // chkSMUnavailable
+            // 
+            this.chkSMUnavailable.AutoSize = true;
+            this.chkSMUnavailable.Enabled = false;
+            this.chkSMUnavailable.Location = new System.Drawing.Point(11, 264);
+            this.chkSMUnavailable.Name = "chkSMUnavailable";
+            this.chkSMUnavailable.Size = new System.Drawing.Size(94, 21);
+            this.chkSMUnavailable.TabIndex = 44;
+            this.chkSMUnavailable.Text = "Unavailable";
+            this.chkSMUnavailable.UseVisualStyleBackColor = true;
+            // 
+            // txtSMPrice
+            // 
+            this.txtSMPrice.Enabled = false;
+            this.txtSMPrice.Location = new System.Drawing.Point(56, 210);
+            this.txtSMPrice.Name = "txtSMPrice";
+            this.txtSMPrice.Size = new System.Drawing.Size(145, 23);
+            this.txtSMPrice.TabIndex = 9;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label55.ForeColor = System.Drawing.Color.White;
+            this.label55.Location = new System.Drawing.Point(11, 216);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(36, 17);
+            this.label55.TabIndex = 8;
+            this.label55.Text = "Price";
+            // 
+            // txtSMOtherName
+            // 
+            this.txtSMOtherName.Enabled = false;
+            this.txtSMOtherName.Location = new System.Drawing.Point(11, 179);
+            this.txtSMOtherName.Name = "txtSMOtherName";
+            this.txtSMOtherName.Size = new System.Drawing.Size(190, 23);
+            this.txtSMOtherName.TabIndex = 7;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label56.ForeColor = System.Drawing.Color.White;
+            this.label56.Location = new System.Drawing.Point(11, 159);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(80, 17);
+            this.label56.TabIndex = 6;
+            this.label56.Text = "Other Name";
+            // 
+            // txtSMEngName
+            // 
+            this.txtSMEngName.Enabled = false;
+            this.txtSMEngName.Location = new System.Drawing.Point(11, 125);
+            this.txtSMEngName.Name = "txtSMEngName";
+            this.txtSMEngName.Size = new System.Drawing.Size(190, 23);
+            this.txtSMEngName.TabIndex = 5;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label57.ForeColor = System.Drawing.Color.White;
+            this.label57.Location = new System.Drawing.Point(11, 105);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(88, 17);
+            this.label57.TabIndex = 4;
+            this.label57.Text = "English Name";
+            // 
+            // txtSMDisplayPosition
+            // 
+            this.txtSMDisplayPosition.Enabled = false;
+            this.txtSMDisplayPosition.Location = new System.Drawing.Point(115, 62);
+            this.txtSMDisplayPosition.Name = "txtSMDisplayPosition";
+            this.txtSMDisplayPosition.Size = new System.Drawing.Size(86, 23);
+            this.txtSMDisplayPosition.TabIndex = 3;
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label58.ForeColor = System.Drawing.Color.White;
+            this.label58.Location = new System.Drawing.Point(11, 68);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(100, 17);
+            this.label58.TabIndex = 2;
+            this.label58.Text = "Display Position";
+            // 
+            // txtSMDishCode
+            // 
+            this.txtSMDishCode.Enabled = false;
+            this.txtSMDishCode.Location = new System.Drawing.Point(88, 25);
+            this.txtSMDishCode.Name = "txtSMDishCode";
+            this.txtSMDishCode.Size = new System.Drawing.Size(113, 23);
+            this.txtSMDishCode.TabIndex = 1;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.label59.ForeColor = System.Drawing.Color.White;
+            this.label59.Location = new System.Drawing.Point(11, 31);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(68, 17);
+            this.label59.TabIndex = 0;
+            this.label59.Text = "Dish Code";
+            // 
+            // dgvSubMenu
+            // 
+            this.dgvSubMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubMenu.Location = new System.Drawing.Point(13, 11);
+            this.dgvSubMenu.Name = "dgvSubMenu";
+            this.dgvSubMenu.ReadOnly = true;
+            this.dgvSubMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSubMenu.Size = new System.Drawing.Size(298, 491);
+            this.dgvSubMenu.TabIndex = 43;
+            this.dgvSubMenu.SelectionChanged += new System.EventHandler(this.dgSubMenu_SelectionChanged);
+            // 
+            // btnSubMenuEdit
+            // 
+            this.btnSubMenuEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSubMenuEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubMenuEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSubMenuEdit.ForeColor = System.Drawing.Color.White;
+            this.btnSubMenuEdit.Location = new System.Drawing.Point(116, 528);
+            this.btnSubMenuEdit.Name = "btnSubMenuEdit";
+            this.btnSubMenuEdit.Size = new System.Drawing.Size(80, 50);
+            this.btnSubMenuEdit.TabIndex = 55;
+            this.btnSubMenuEdit.Text = "Edit";
+            this.btnSubMenuEdit.UseVisualStyleBackColor = false;
+            this.btnSubMenuEdit.Click += new System.EventHandler(this.btnSubMenuEdit_Click);
+            // 
+            // btnSubMenuExit
+            // 
+            this.btnSubMenuExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSubMenuExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubMenuExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSubMenuExit.ForeColor = System.Drawing.Color.White;
+            this.btnSubMenuExit.Location = new System.Drawing.Point(374, 528);
+            this.btnSubMenuExit.Name = "btnSubMenuExit";
+            this.btnSubMenuExit.Size = new System.Drawing.Size(80, 50);
+            this.btnSubMenuExit.TabIndex = 54;
+            this.btnSubMenuExit.Text = "Exit";
+            this.btnSubMenuExit.UseVisualStyleBackColor = false;
+            this.btnSubMenuExit.Click += new System.EventHandler(this.btnSubMenuExit_Click);
+            // 
+            // btnSubMenuSave
+            // 
+            this.btnSubMenuSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSubMenuSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubMenuSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSubMenuSave.ForeColor = System.Drawing.Color.White;
+            this.btnSubMenuSave.Location = new System.Drawing.Point(288, 528);
+            this.btnSubMenuSave.Name = "btnSubMenuSave";
+            this.btnSubMenuSave.Size = new System.Drawing.Size(80, 50);
+            this.btnSubMenuSave.TabIndex = 53;
+            this.btnSubMenuSave.Text = "Save";
+            this.btnSubMenuSave.UseVisualStyleBackColor = false;
+            this.btnSubMenuSave.Click += new System.EventHandler(this.btnSubMenuSave_Click);
+            // 
+            // btnSubMenuDel
+            // 
+            this.btnSubMenuDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSubMenuDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubMenuDel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSubMenuDel.ForeColor = System.Drawing.Color.White;
+            this.btnSubMenuDel.Location = new System.Drawing.Point(202, 528);
+            this.btnSubMenuDel.Name = "btnSubMenuDel";
+            this.btnSubMenuDel.Size = new System.Drawing.Size(80, 50);
+            this.btnSubMenuDel.TabIndex = 52;
+            this.btnSubMenuDel.Text = "Delete";
+            this.btnSubMenuDel.UseVisualStyleBackColor = false;
+            this.btnSubMenuDel.Click += new System.EventHandler(this.btnSubMenuDel_Click);
+            // 
+            // btnSubMenuAdd
+            // 
+            this.btnSubMenuAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSubMenuAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubMenuAdd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSubMenuAdd.ForeColor = System.Drawing.Color.White;
+            this.btnSubMenuAdd.Location = new System.Drawing.Point(30, 528);
+            this.btnSubMenuAdd.Name = "btnSubMenuAdd";
+            this.btnSubMenuAdd.Size = new System.Drawing.Size(80, 50);
+            this.btnSubMenuAdd.TabIndex = 50;
+            this.btnSubMenuAdd.Text = "Add";
+            this.btnSubMenuAdd.UseVisualStyleBackColor = false;
+            this.btnSubMenuAdd.Click += new System.EventHandler(this.btnSubMenuAdd_Click);
             // 
             // FrmTAMenuItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1038, 683);
+            this.ClientSize = new System.Drawing.Size(1025, 683);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -3347,6 +4424,14 @@
             this.groupBox13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHMenu)).EndInit();
             this.groupBox14.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSubMenu)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3414,16 +4499,8 @@
         private System.Windows.Forms.Button btnDAEdit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbBoxMenuCate1;
-        private System.Windows.Forms.CheckBox chkSCAutoAppend1;
-        private System.Windows.Forms.TextBox txtSCAddPrice1;
-        private System.Windows.Forms.TextBox txtSCOtherName1;
-        private System.Windows.Forms.TextBox btnSCEngName1;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnCopyChoices;
-        private System.Windows.Forms.CheckBox chkEnableChoices;
+        private System.Windows.Forms.CheckBox chkSCEnableChoices;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvSCMenu;
         private System.Windows.Forms.ComboBox cmSCBoxDish;
@@ -3437,102 +4514,11 @@
         private System.Windows.Forms.Button btnSC3;
         private System.Windows.Forms.Button btnSC2;
         private System.Windows.Forms.Button btnSC1;
-        private System.Windows.Forms.CheckBox chkSCAutoAppend2;
-        private System.Windows.Forms.TextBox txtSCAddPrice2;
-        private System.Windows.Forms.TextBox txtSCOtherName2;
-        private System.Windows.Forms.TextBox btnSCEngName2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.TextBox textBox18;
-        private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.Button btnSCEdit;
         private System.Windows.Forms.Button btnSCExit;
         private System.Windows.Forms.Button btnSCSave;
-        private System.Windows.Forms.Button btnSCDel;
-        private System.Windows.Forms.Button btnSCCopy;
-        private System.Windows.Forms.Button btnSCAdd;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.CheckBox checkBox10;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.TextBox textBox32;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.TextBox textBox34;
-        private System.Windows.Forms.TextBox textBox35;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.CheckBox checkBox13;
-        private System.Windows.Forms.TextBox textBox38;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.CheckBox checkBox14;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox43;
-        private System.Windows.Forms.CheckBox checkBox15;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.CheckBox checkBox16;
-        private System.Windows.Forms.TextBox textBox46;
-        private System.Windows.Forms.TextBox textBox47;
-        private System.Windows.Forms.TextBox textBox48;
-        private System.Windows.Forms.TextBox textBox49;
-        private System.Windows.Forms.CheckBox checkBox17;
-        private System.Windows.Forms.TextBox textBox50;
-        private System.Windows.Forms.TextBox textBox51;
-        private System.Windows.Forms.CheckBox checkBox18;
-        private System.Windows.Forms.TextBox textBox52;
-        private System.Windows.Forms.TextBox textBox53;
-        private System.Windows.Forms.TextBox textBox54;
-        private System.Windows.Forms.TextBox textBox55;
-        private System.Windows.Forms.CheckBox checkBox19;
-        private System.Windows.Forms.TextBox textBox56;
-        private System.Windows.Forms.Button btnTCEdit;
         private System.Windows.Forms.Button btnTCExit;
         private System.Windows.Forms.Button btnTCSave;
-        private System.Windows.Forms.Button btnTCDel;
-        private System.Windows.Forms.Button btnTCCopy;
-        private System.Windows.Forms.Button btnTCAdd;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.DataGridView dgvTCMenu;
         private System.Windows.Forms.ComboBox cmTCBoxDish;
@@ -3546,59 +4532,8 @@
         private System.Windows.Forms.Button btnTC3;
         private System.Windows.Forms.Button btnTC2;
         private System.Windows.Forms.Button btnTC1;
-        private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.TextBox textBox58;
-        private System.Windows.Forms.CheckBox checkBox20;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.CheckBox checkBox21;
-        private System.Windows.Forms.TextBox textBox59;
-        private System.Windows.Forms.TextBox textBox60;
-        private System.Windows.Forms.TextBox textBox61;
-        private System.Windows.Forms.TextBox textBox62;
-        private System.Windows.Forms.CheckBox checkBox22;
-        private System.Windows.Forms.TextBox textBox63;
-        private System.Windows.Forms.TextBox textBox64;
-        private System.Windows.Forms.CheckBox checkBox23;
-        private System.Windows.Forms.TextBox textBox65;
-        private System.Windows.Forms.TextBox textBox66;
-        private System.Windows.Forms.TextBox textBox67;
-        private System.Windows.Forms.TextBox textBox68;
-        private System.Windows.Forms.CheckBox checkBox24;
-        private System.Windows.Forms.TextBox textBox69;
-        private System.Windows.Forms.TextBox textBox70;
-        private System.Windows.Forms.CheckBox checkBox25;
-        private System.Windows.Forms.TextBox textBox71;
-        private System.Windows.Forms.TextBox textBox72;
-        private System.Windows.Forms.TextBox textBox73;
-        private System.Windows.Forms.TextBox textBox74;
-        private System.Windows.Forms.CheckBox checkBox26;
-        private System.Windows.Forms.TextBox textBox75;
-        private System.Windows.Forms.TextBox textBox76;
-        private System.Windows.Forms.CheckBox checkBox27;
-        private System.Windows.Forms.TextBox textBox77;
-        private System.Windows.Forms.TextBox textBox78;
-        private System.Windows.Forms.TextBox textBox79;
-        private System.Windows.Forms.TextBox textBox80;
-        private System.Windows.Forms.CheckBox checkBox28;
-        private System.Windows.Forms.TextBox textBox81;
-        private System.Windows.Forms.TextBox textBox82;
-        private System.Windows.Forms.CheckBox checkBox29;
-        private System.Windows.Forms.TextBox textBox83;
-        private System.Windows.Forms.TextBox textBox84;
-        private System.Windows.Forms.TextBox textBox85;
-        private System.Windows.Forms.TextBox textBox86;
-        private System.Windows.Forms.CheckBox checkBox30;
-        private System.Windows.Forms.TextBox textBox87;
-        private System.Windows.Forms.Button btnTHEdit;
         private System.Windows.Forms.Button btnTHExit;
         private System.Windows.Forms.Button btnTHSave;
-        private System.Windows.Forms.Button btnTHDel;
-        private System.Windows.Forms.Button btnTHCopy;
-        private System.Windows.Forms.Button btnTHAdd;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.DataGridView dgvTHMenu;
         private System.Windows.Forms.ComboBox cmTHBoxDish;
@@ -3612,34 +4547,6 @@
         private System.Windows.Forms.Button btnTH3;
         private System.Windows.Forms.Button btnTH2;
         private System.Windows.Forms.Button btnTH1;
-        private System.Windows.Forms.CheckBox checkBox36;
-        private System.Windows.Forms.TextBox textBox100;
-        private System.Windows.Forms.TextBox textBox101;
-        private System.Windows.Forms.TextBox textBox102;
-        private System.Windows.Forms.CheckBox checkBox37;
-        private System.Windows.Forms.TextBox textBox103;
-        private System.Windows.Forms.TextBox textBox104;
-        private System.Windows.Forms.TextBox textBox105;
-        private System.Windows.Forms.CheckBox checkBox31;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox57;
-        private System.Windows.Forms.CheckBox checkBox32;
-        private System.Windows.Forms.TextBox textBox88;
-        private System.Windows.Forms.TextBox textBox89;
-        private System.Windows.Forms.TextBox textBox90;
-        private System.Windows.Forms.CheckBox checkBox33;
-        private System.Windows.Forms.TextBox textBox91;
-        private System.Windows.Forms.TextBox textBox92;
-        private System.Windows.Forms.TextBox textBox93;
-        private System.Windows.Forms.CheckBox checkBox34;
-        private System.Windows.Forms.TextBox textBox94;
-        private System.Windows.Forms.TextBox textBox95;
-        private System.Windows.Forms.TextBox textBox96;
-        private System.Windows.Forms.CheckBox checkBox35;
-        private System.Windows.Forms.TextBox textBox97;
-        private System.Windows.Forms.TextBox textBox98;
-        private System.Windows.Forms.TextBox textBox99;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
@@ -3651,5 +4558,289 @@
         private System.Windows.Forms.ComboBox cmbBoxMenuCate3;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.ComboBox cmbBoxMenuCate2;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend17;
+        private System.Windows.Forms.TextBox txtTCAddPrice17;
+        private System.Windows.Forms.TextBox txtTCOtherName17;
+        private System.Windows.Forms.TextBox txtTCEngName17;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend16;
+        private System.Windows.Forms.TextBox txtTCAddPrice16;
+        private System.Windows.Forms.TextBox txtTCOtherName16;
+        private System.Windows.Forms.TextBox txtTCEngName16;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend15;
+        private System.Windows.Forms.TextBox txtTCAddPrice15;
+        private System.Windows.Forms.TextBox txtTCOtherName15;
+        private System.Windows.Forms.TextBox txtTCEngName15;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend14;
+        private System.Windows.Forms.TextBox txtTCAddPrice14;
+        private System.Windows.Forms.TextBox txtTCOtherName14;
+        private System.Windows.Forms.TextBox txtTCEngName14;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend13;
+        private System.Windows.Forms.TextBox txtTCAddPrice13;
+        private System.Windows.Forms.TextBox txtTCOtherName13;
+        private System.Windows.Forms.TextBox txtTCEngName13;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend12;
+        private System.Windows.Forms.TextBox txtTCAddPrice12;
+        private System.Windows.Forms.TextBox txtTCOtherName12;
+        private System.Windows.Forms.TextBox txtTCEngName12;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend11;
+        private System.Windows.Forms.TextBox txtTCAddPrice11;
+        private System.Windows.Forms.TextBox txtTCOtherName11;
+        private System.Windows.Forms.TextBox txtTCEngName11;
+        private System.Windows.Forms.TextBox txtTCOtherName1;
+        private System.Windows.Forms.CheckBox chkTCEnableChoices;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend10;
+        private System.Windows.Forms.TextBox txtTCEngName1;
+        private System.Windows.Forms.TextBox txtTCAddPrice10;
+        private System.Windows.Forms.TextBox txtTCAddPrice1;
+        private System.Windows.Forms.TextBox txtTCOtherName10;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend1;
+        private System.Windows.Forms.TextBox txtTCEngName10;
+        private System.Windows.Forms.TextBox txtTCEngName2;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend9;
+        private System.Windows.Forms.TextBox txtTCOtherName2;
+        private System.Windows.Forms.TextBox txtTCAddPrice9;
+        private System.Windows.Forms.TextBox txtTCAddPrice2;
+        private System.Windows.Forms.TextBox txtTCOtherName9;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend2;
+        private System.Windows.Forms.TextBox txtTCEngName9;
+        private System.Windows.Forms.TextBox txtTCEngName3;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend8;
+        private System.Windows.Forms.TextBox txtTCOtherName3;
+        private System.Windows.Forms.TextBox txtTCAddPrice8;
+        private System.Windows.Forms.TextBox txtTCAddPrice3;
+        private System.Windows.Forms.TextBox txtTCOtherName8;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend3;
+        private System.Windows.Forms.TextBox txtTCEngName8;
+        private System.Windows.Forms.TextBox txtTCEngName4;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend7;
+        private System.Windows.Forms.TextBox txtTCOtherName4;
+        private System.Windows.Forms.TextBox txtTCAddPrice7;
+        private System.Windows.Forms.TextBox txtTCAddPrice4;
+        private System.Windows.Forms.TextBox txtTCOtherName7;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend4;
+        private System.Windows.Forms.TextBox txtTCEngName7;
+        private System.Windows.Forms.TextBox txtTCEngName5;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend6;
+        private System.Windows.Forms.TextBox txtTCOtherName5;
+        private System.Windows.Forms.TextBox txtTCAddPrice6;
+        private System.Windows.Forms.TextBox txtTCAddPrice5;
+        private System.Windows.Forms.TextBox txtTCOtherName6;
+        private System.Windows.Forms.CheckBox chkTCAutoAppend5;
+        private System.Windows.Forms.TextBox txtTCEngName6;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend17;
+        private System.Windows.Forms.TextBox txtTHAddPrice17;
+        private System.Windows.Forms.TextBox txtTHOtherName17;
+        private System.Windows.Forms.TextBox txtTHEngName17;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend16;
+        private System.Windows.Forms.TextBox txtTHAddPrice16;
+        private System.Windows.Forms.TextBox txtTHOtherName16;
+        private System.Windows.Forms.TextBox txtTHEngName16;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend15;
+        private System.Windows.Forms.TextBox txtTHAddPrice15;
+        private System.Windows.Forms.TextBox txtTHOtherName15;
+        private System.Windows.Forms.TextBox txtTHEngName15;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend14;
+        private System.Windows.Forms.TextBox txtTHAddPrice14;
+        private System.Windows.Forms.TextBox txtTHOtherName14;
+        private System.Windows.Forms.TextBox txtTHEngName14;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend13;
+        private System.Windows.Forms.TextBox txtTHAddPrice13;
+        private System.Windows.Forms.TextBox txtTHOtherName13;
+        private System.Windows.Forms.TextBox txtTHEngName13;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend12;
+        private System.Windows.Forms.TextBox txtTHAddPrice12;
+        private System.Windows.Forms.TextBox txtTHOtherName12;
+        private System.Windows.Forms.TextBox txtTHEngName12;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend11;
+        private System.Windows.Forms.TextBox txtTHAddPrice11;
+        private System.Windows.Forms.TextBox txtTHOtherName11;
+        private System.Windows.Forms.TextBox txtTHEngName11;
+        private System.Windows.Forms.TextBox txtTHOtherName1;
+        private System.Windows.Forms.CheckBox chkTHEnableChoices;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend10;
+        private System.Windows.Forms.TextBox txtTHEngName1;
+        private System.Windows.Forms.TextBox txtTHAddPrice10;
+        private System.Windows.Forms.TextBox txtTHAddPrice1;
+        private System.Windows.Forms.TextBox txtTHOtherName10;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend1;
+        private System.Windows.Forms.TextBox txtTHEngName10;
+        private System.Windows.Forms.TextBox txtTHEngName2;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend9;
+        private System.Windows.Forms.TextBox txtTHOtherName2;
+        private System.Windows.Forms.TextBox txtTHAddPrice9;
+        private System.Windows.Forms.TextBox txtTHAddPrice2;
+        private System.Windows.Forms.TextBox txtTHOtherName9;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend2;
+        private System.Windows.Forms.TextBox txtTHEngName9;
+        private System.Windows.Forms.TextBox txtTHEngName3;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend8;
+        private System.Windows.Forms.TextBox txtTHOtherName3;
+        private System.Windows.Forms.TextBox txtTHAddPrice8;
+        private System.Windows.Forms.TextBox txtTHAddPrice3;
+        private System.Windows.Forms.TextBox txtTHOtherName8;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend3;
+        private System.Windows.Forms.TextBox txtTHEngName8;
+        private System.Windows.Forms.TextBox txtTHEngName4;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend7;
+        private System.Windows.Forms.TextBox txtTHOtherName4;
+        private System.Windows.Forms.TextBox txtTHAddPrice7;
+        private System.Windows.Forms.TextBox txtTHAddPrice4;
+        private System.Windows.Forms.TextBox txtTHOtherName7;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend4;
+        private System.Windows.Forms.TextBox txtTHEngName7;
+        private System.Windows.Forms.TextBox txtTHEngName5;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend6;
+        private System.Windows.Forms.TextBox txtTHOtherName5;
+        private System.Windows.Forms.TextBox txtTHAddPrice6;
+        private System.Windows.Forms.TextBox txtTHAddPrice5;
+        private System.Windows.Forms.TextBox txtTHOtherName6;
+        private System.Windows.Forms.CheckBox chkTHAutoAppend5;
+        private System.Windows.Forms.TextBox txtTHEngName6;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend17;
+        private System.Windows.Forms.TextBox txtSCAddPrice17;
+        private System.Windows.Forms.TextBox txtSCOtherName17;
+        private System.Windows.Forms.TextBox txtSCEngName17;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend16;
+        private System.Windows.Forms.TextBox txtSCAddPrice16;
+        private System.Windows.Forms.TextBox txtSCOtherName16;
+        private System.Windows.Forms.TextBox txtSCEngName16;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend15;
+        private System.Windows.Forms.TextBox txtSCAddPrice15;
+        private System.Windows.Forms.TextBox txtSCOtherName15;
+        private System.Windows.Forms.TextBox txtSCEngName15;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend14;
+        private System.Windows.Forms.TextBox txtSCAddPrice14;
+        private System.Windows.Forms.TextBox txtSCOtherName14;
+        private System.Windows.Forms.TextBox txtSCEngName14;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend13;
+        private System.Windows.Forms.TextBox txtSCAddPrice13;
+        private System.Windows.Forms.TextBox txtSCOtherName13;
+        private System.Windows.Forms.TextBox txtSCEngName13;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend12;
+        private System.Windows.Forms.TextBox txtSCAddPrice12;
+        private System.Windows.Forms.TextBox txtSCOtherName12;
+        private System.Windows.Forms.TextBox txtSCEngName12;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend11;
+        private System.Windows.Forms.TextBox txtSCAddPrice11;
+        private System.Windows.Forms.TextBox txtSCOtherName11;
+        private System.Windows.Forms.TextBox txtSCEngName11;
+        private System.Windows.Forms.TextBox txtSCOtherName1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend10;
+        private System.Windows.Forms.TextBox txtSCEngName1;
+        private System.Windows.Forms.TextBox txtSCAddPrice10;
+        private System.Windows.Forms.TextBox txtSCAddPrice1;
+        private System.Windows.Forms.TextBox txtSCOtherName10;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend1;
+        private System.Windows.Forms.TextBox txtSCEngName10;
+        private System.Windows.Forms.TextBox txtSCEngName2;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend9;
+        private System.Windows.Forms.TextBox txtSCOtherName2;
+        private System.Windows.Forms.TextBox txtSCAddPrice9;
+        private System.Windows.Forms.TextBox txtSCAddPrice2;
+        private System.Windows.Forms.TextBox txtSCOtherName9;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend2;
+        private System.Windows.Forms.TextBox txtSCEngName9;
+        private System.Windows.Forms.TextBox txtSCEngName3;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend8;
+        private System.Windows.Forms.TextBox txtSCOtherName3;
+        private System.Windows.Forms.TextBox txtSCAddPrice8;
+        private System.Windows.Forms.TextBox txtSCAddPrice3;
+        private System.Windows.Forms.TextBox txtSCOtherName8;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend3;
+        private System.Windows.Forms.TextBox txtSCEngName8;
+        private System.Windows.Forms.TextBox txtSCEngName4;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend7;
+        private System.Windows.Forms.TextBox txtSCOtherName4;
+        private System.Windows.Forms.TextBox txtSCAddPrice7;
+        private System.Windows.Forms.TextBox txtSCAddPrice4;
+        private System.Windows.Forms.TextBox txtSCOtherName7;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend4;
+        private System.Windows.Forms.TextBox txtSCEngName7;
+        private System.Windows.Forms.TextBox txtSCEngName5;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend6;
+        private System.Windows.Forms.TextBox txtSCOtherName5;
+        private System.Windows.Forms.TextBox txtSCAddPrice6;
+        private System.Windows.Forms.TextBox txtSCAddPrice5;
+        private System.Windows.Forms.TextBox txtSCOtherName6;
+        private System.Windows.Forms.CheckBox chkSCAutoAppend5;
+        private System.Windows.Forms.TextBox txtSCEngName6;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.CheckBox chkSMPrtOrder;
+        private System.Windows.Forms.CheckBox chkSMPrtName;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.ComboBox cmbSMSupplyShift;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.CheckBox chkSMInventoryCheck;
+        private System.Windows.Forms.CheckBox chkSMWithoutVAT;
+        private System.Windows.Forms.CheckBox chkSMDisountable;
+        private System.Windows.Forms.CheckBox chkSMNegativePrice;
+        private System.Windows.Forms.CheckBox chkSMUnavailable;
+        private System.Windows.Forms.TextBox txtSMPrice;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.TextBox txtSMOtherName;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.TextBox txtSMEngName;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.TextBox txtSMDisplayPosition;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.TextBox txtSMDishCode;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.DataGridView dgvSubMenu;
+        private System.Windows.Forms.Button btnSubMenuEdit;
+        private System.Windows.Forms.Button btnSubMenuExit;
+        private System.Windows.Forms.Button btnSubMenuSave;
+        private System.Windows.Forms.Button btnSubMenuDel;
+        private System.Windows.Forms.Button btnSubMenuAdd;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.TextBox txtDishOtherName1;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox txtDishEngName1;
+        private System.Windows.Forms.TextBox txtDishOtherName10;
+        private System.Windows.Forms.TextBox txtDishEngName10;
+        private System.Windows.Forms.TextBox txtDishOtherName9;
+        private System.Windows.Forms.TextBox txtDishEngName9;
+        private System.Windows.Forms.TextBox txtDishOtherName8;
+        private System.Windows.Forms.TextBox txtDishEngName8;
+        private System.Windows.Forms.TextBox txtDishOtherName7;
+        private System.Windows.Forms.TextBox txtDishEngName7;
+        private System.Windows.Forms.TextBox txtDishOtherName6;
+        private System.Windows.Forms.TextBox txtDishEngName6;
+        private System.Windows.Forms.TextBox txtDishOtherName5;
+        private System.Windows.Forms.TextBox txtDishEngName5;
+        private System.Windows.Forms.TextBox txtDishOtherName4;
+        private System.Windows.Forms.TextBox txtDishEngName4;
+        private System.Windows.Forms.TextBox txtDishOtherName3;
+        private System.Windows.Forms.TextBox txtDishEngName3;
+        private System.Windows.Forms.TextBox txtDishOtherName2;
+        private System.Windows.Forms.TextBox txtDishEngName2;
+        private System.Windows.Forms.TextBox txtDishOtherName15;
+        private System.Windows.Forms.TextBox txtDishEngName15;
+        private System.Windows.Forms.TextBox txtDishOtherName14;
+        private System.Windows.Forms.TextBox txtDishEngName14;
+        private System.Windows.Forms.TextBox txtDishOtherName13;
+        private System.Windows.Forms.TextBox txtDishEngName13;
+        private System.Windows.Forms.TextBox txtDishOtherName12;
+        private System.Windows.Forms.TextBox txtDishEngName12;
+        private System.Windows.Forms.TextBox txtDishOtherName11;
+        private System.Windows.Forms.TextBox txtDishEngName11;
     }
 }

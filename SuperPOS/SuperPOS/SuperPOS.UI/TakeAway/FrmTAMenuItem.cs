@@ -15,6 +15,7 @@ namespace SuperPOS.UI.TakeAway
 {
     public partial class FrmTAMenuItem : Form
     {
+        #region 定义
         private string btnID = "1";
         private UserInfo userInfo = new UserInfo();
         private Guid btnDAGuid = Guid.Empty;
@@ -49,7 +50,29 @@ namespace SuperPOS.UI.TakeAway
 
         private int iStatus = 0;
 
+        private TextBox[] scTxtEngName = new TextBox[17];
+        private TextBox[] scTxtOtherName = new TextBox[17];
+        private TextBox[] scTxtPricce = new TextBox[17];
+        private CheckBox[] scChkApd = new CheckBox[17];
+
+        private TextBox[] tcTxtEngName = new TextBox[17];
+        private TextBox[] tcTxtOtherName = new TextBox[17];
+        private TextBox[] tcTxtPricce = new TextBox[17];
+        private CheckBox[] tcChkApd = new CheckBox[17];
+
+        private TextBox[] thTxtEngName = new TextBox[17];
+        private TextBox[] thTxtOtherName = new TextBox[17];
+        private TextBox[] thTxtPricce = new TextBox[17];
+        private CheckBox[] thChkApd = new CheckBox[17];
+
+        private TextBox[] txtSubMenuEngName = new TextBox[15];
+        private TextBox[] txtSubMenuOtherName = new TextBox[15];
+
+        private int iSubMenuStatus = 0;
+
         private readonly EntityControl _control = new EntityControl();
+        #endregion
+
         public FrmTAMenuItem()
         {
             InitializeComponent();
@@ -66,17 +89,21 @@ namespace SuperPOS.UI.TakeAway
             OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
             onLoadSystemCommonData.GetTAMenuCategory();
             onLoadSystemCommonData.GetTAMenuItemList();
+            onLoadSystemCommonData.GetTAMenuItemSubMenuList();
 
             #region Menu Category下拉选择
+
             //cmbBoxMenuCate1.DataSource = CommonData.TaMenuCategoryList.Select(s => s.EnglishName).ToList();
             //cmbBoxMenuCate2.DataSource = CommonData.TaMenuCategoryList.Select(s => s.EnglishName).ToList();
             //cmbBoxMenuCate3.DataSource = CommonData.TaMenuCategoryList.Select(s => s.EnglishName).ToList();
             BindCmbData();
+
             #endregion
 
             //cmBoxDish.DataSource = CommonData.TaMenuCategoryList.Select(s => new {});
 
             #region  Dish Attributes Menu Set 按钮
+
             btnDA1.Click += btnDA_Click;
             btnDA2.Click += btnDA_Click;
             btnDA3.Click += btnDA_Click;
@@ -96,6 +123,8 @@ namespace SuperPOS.UI.TakeAway
                     case "1":
                         btnDA1.Text = tsl.EnglishName;
                         btnDAGuid1 = tsl.SystemKey;
+                        //默认值
+                        btnDAGuid = btnDAGuid1;
                         break;
                     case "2":
                         btnDA2.Text = tsl.EnglishName;
@@ -110,12 +139,12 @@ namespace SuperPOS.UI.TakeAway
                         btnDAGuid4 = tsl.SystemKey;
                         break;
                 }
-                //默认值
-                btnDAGuid = tsl.SystemKey;
             }
+
             #endregion
 
             #region  Second Choices Menu Set 按钮
+
             btnSC1.Click += btnSC_Click;
             btnSC2.Click += btnSC_Click;
             btnSC3.Click += btnSC_Click;
@@ -135,6 +164,8 @@ namespace SuperPOS.UI.TakeAway
                     case "1":
                         btnSC1.Text = tsl.EnglishName;
                         btnSCGuid1 = tsl.SystemKey;
+                        //默认值
+                        btnSCGuid = btnSCGuid1;
                         break;
                     case "2":
                         btnSC2.Text = tsl.EnglishName;
@@ -149,12 +180,12 @@ namespace SuperPOS.UI.TakeAway
                         btnSCGuid4 = tsl.SystemKey;
                         break;
                 }
-                //默认值
-                btnSCGuid = tsl.SystemKey;
             }
+
             #endregion
 
             #region  Third Choices Menu Set 按钮
+
             btnTC1.Click += btnTC_Click;
             btnTC2.Click += btnTC_Click;
             btnTC3.Click += btnTC_Click;
@@ -174,6 +205,8 @@ namespace SuperPOS.UI.TakeAway
                     case "1":
                         btnTC1.Text = tsl.EnglishName;
                         btnTCGuid1 = tsl.SystemKey;
+                        //默认值
+                        btnTCGuid = btnTCGuid1;
                         break;
                     case "2":
                         btnTC2.Text = tsl.EnglishName;
@@ -188,12 +221,12 @@ namespace SuperPOS.UI.TakeAway
                         btnTCGuid4 = tsl.SystemKey;
                         break;
                 }
-                //默认值
-                btnTCGuid = tsl.SystemKey;
             }
+
             #endregion
 
             #region  Taste Handling Menu Set 按钮
+
             btnTH1.Click += btnTH_Click;
             btnTH2.Click += btnTH_Click;
             btnTH3.Click += btnTH_Click;
@@ -213,6 +246,8 @@ namespace SuperPOS.UI.TakeAway
                     case "1":
                         btnTH1.Text = tsl.EnglishName;
                         btnTHGuid1 = tsl.SystemKey;
+                        //默认值
+                        btnTHGuid = btnTHGuid1;
                         break;
                     case "2":
                         btnTH2.Text = tsl.EnglishName;
@@ -227,64 +262,421 @@ namespace SuperPOS.UI.TakeAway
                         btnTHGuid4 = tsl.SystemKey;
                         break;
                 }
-                //默认值
-                btnTHGuid = tsl.SystemKey;
             }
+
             #endregion
 
             onLoadSystemCommonData.GetTAMenuCategory();
 
             #region Dish Attributes category Search下拉菜单
+
             cmDABoxDish.DataSource = CommonData.TaMenuCategoryList.Select(s => s.EnglishName).ToList();
+
             #endregion
 
             #region Second Choices category Search下拉菜单
+
             cmSCBoxDish.DataSource = CommonData.TaMenuCategoryList.Select(s => s.EnglishName).ToList();
+
             #endregion
 
             #region Third Choices category Search下拉菜单
+
             cmTCBoxDish.DataSource = CommonData.TaMenuCategoryList.Select(s => s.EnglishName).ToList();
+
             #endregion
 
             #region Taste Handling category Search下拉菜单
+
             cmTHBoxDish.DataSource = CommonData.TaMenuCategoryList.Select(s => s.EnglishName).ToList();
+
             #endregion
-            
+
             #region dgvMenu
+
             onLoadSystemCommonData.GetTAMenuItemList();
             dgvDAMenu.DataSource = CommonData.TaMenuItemList;
+            dgvSCMenu.DataSource = CommonData.TaMenuItemList;
+            dgvTCMenu.DataSource = CommonData.TaMenuItemList;
+            dgvTHMenu.DataSource = CommonData.TaMenuItemList;
+            dgvSubMenu.DataSource = CommonData.TaMenuItemSubMenuList;
+
             #region DataGrid控制
+
+            for (int i = 4; i < 23; i++)
+            {
+                dgvDAMenu.Columns[i].Visible = false;
+            }
             dgvDAMenu.Columns[0].Visible = false;
-            for (int i = 2; i < 23; i++) { dgvDAMenu.Columns[i].Visible = false; }
-            //dgvDAMenu.Columns[2].Visible = false;
-            //dgvDAMenu.Columns[4].Visible = false;
-            //dgvDAMenu.Columns[5].Visible = false;
-            //dgvDAMenu.Columns[6].Visible = false;
-            //dgvDAMenu.Columns[7].Visible = false;
-            //dgvDAMenu.Columns[8].Visible = false;
-            //dgvDAMenu.Columns[9].Visible = false;
-            //dgvDAMenu.Columns[10].Visible = false;
-            //dgvDAMenu.Columns[11].Visible = false;
-            //dgvDAMenu.Columns[12].Visible = false;
-            //dgvDAMenu.Columns[13].Visible = false;
-            //dgvDAMenu.Columns[14].Visible = false;
-            //dgvDAMenu.Columns[15].Visible = false;
-            //dgvDAMenu.Columns[16].Visible = false;
-            //dgvDAMenu.Columns[17].Visible = false;
-            //dgvDAMenu.Columns[18].Visible = false;
-            //dgvDAMenu.Columns[19].Visible = false;
-            //dgvDAMenu.Columns[20].Visible = false;
-            //dgvDAMenu.Columns[21].Visible = false;
-            //dgvDAMenu.Columns[22].Visible = false;
-            //dgvDAMenu.Columns[23].Visible = false;
-            //dgvDAMenu.Columns[24].Visible = false;
-            //dgvDAMenu.Columns[25].Visible = false;
-            dgvDAMenu.Columns[0].HeaderText = @"Code";
-            dgvDAMenu.Columns[0].Width = 40;
-            dgvDAMenu.Columns[1].HeaderText = @"ItemName";
+            dgvDAMenu.Columns[1].HeaderText = @"Code";
+            dgvDAMenu.Columns[1].Width = 40;
+            dgvDAMenu.Columns[2].Visible = false;
+            dgvDAMenu.Columns[3].HeaderText = @"Item Name";
+
+            for (int i = 4; i < 23; i++)
+            {
+                dgvSCMenu.Columns[i].Visible = false;
+            }
+            dgvSCMenu.Columns[0].Visible = false;
+            dgvSCMenu.Columns[1].HeaderText = @"Code";
+            dgvSCMenu.Columns[1].Width = 40;
+            dgvSCMenu.Columns[2].Visible = false;
+            dgvSCMenu.Columns[3].HeaderText = @"ItemName";
+
+            for (int i = 4; i < 23; i++)
+            {
+                dgvTCMenu.Columns[i].Visible = false;
+            }
+            dgvTCMenu.Columns[0].Visible = false;
+            dgvTCMenu.Columns[1].HeaderText = @"Code";
+            dgvTCMenu.Columns[1].Width = 40;
+            dgvTCMenu.Columns[2].Visible = false;
+            dgvTCMenu.Columns[3].HeaderText = @"Item Name";
+
+            for (int i = 4; i < 23; i++)
+            {
+                dgvTHMenu.Columns[i].Visible = false;
+            }
+            dgvTHMenu.Columns[0].Visible = false;
+            dgvTHMenu.Columns[1].HeaderText = @"Code";
+            dgvTHMenu.Columns[1].Width = 40;
+            dgvTHMenu.Columns[2].Visible = false;
+            dgvTHMenu.Columns[3].HeaderText = @"Item Name";
+
+            for (int i = 6; i < 14; i++)
+            {
+                dgvSubMenu.Columns[i].Visible = false;
+            }
+            dgvSubMenu.Columns[0].Visible = false;
+            dgvSubMenu.Columns[1].HeaderText = @"Code";
+            dgvSubMenu.Columns[2].Visible = false;
+            dgvSubMenu.Columns[3].HeaderText = @"Item Name";
+            dgvSubMenu.Columns[4].Visible = false;
+            dgvSubMenu.Columns[5].HeaderText = @"Price";
             #endregion
 
             #endregion
+
+            #region Second Choices文本框控件数组
+
+            #region English Name
+
+            scTxtEngName[0] = txtSCEngName1;
+            scTxtEngName[1] = txtSCEngName2;
+            scTxtEngName[2] = txtSCEngName3;
+            scTxtEngName[3] = txtSCEngName4;
+            scTxtEngName[4] = txtSCEngName5;
+            scTxtEngName[5] = txtSCEngName6;
+            scTxtEngName[6] = txtSCEngName7;
+            scTxtEngName[7] = txtSCEngName8;
+            scTxtEngName[8] = txtSCEngName9;
+            scTxtEngName[9] = txtSCEngName10;
+            scTxtEngName[10] = txtSCEngName11;
+            scTxtEngName[11] = txtSCEngName12;
+            scTxtEngName[12] = txtSCEngName13;
+            scTxtEngName[13] = txtSCEngName14;
+            scTxtEngName[14] = txtSCEngName15;
+            scTxtEngName[15] = txtSCEngName16;
+            scTxtEngName[16] = txtSCEngName17;
+
+            #endregion
+
+            #region Other Name
+
+            scTxtOtherName[0] = txtSCOtherName1;
+            scTxtOtherName[1] = txtSCOtherName2;
+            scTxtOtherName[2] = txtSCOtherName3;
+            scTxtOtherName[3] = txtSCOtherName4;
+            scTxtOtherName[4] = txtSCOtherName5;
+            scTxtOtherName[5] = txtSCOtherName6;
+            scTxtOtherName[6] = txtSCOtherName7;
+            scTxtOtherName[7] = txtSCOtherName8;
+            scTxtOtherName[8] = txtSCOtherName9;
+            scTxtOtherName[9] = txtSCOtherName10;
+            scTxtOtherName[10] = txtSCOtherName11;
+            scTxtOtherName[11] = txtSCOtherName12;
+            scTxtOtherName[12] = txtSCOtherName13;
+            scTxtOtherName[13] = txtSCOtherName14;
+            scTxtOtherName[14] = txtSCOtherName15;
+            scTxtOtherName[15] = txtSCOtherName16;
+            scTxtOtherName[16] = txtSCOtherName17;
+
+            #endregion
+
+            #region Add. Price
+
+            scTxtPricce[0] = txtSCAddPrice1;
+            scTxtPricce[1] = txtSCAddPrice2;
+            scTxtPricce[2] = txtSCAddPrice3;
+            scTxtPricce[3] = txtSCAddPrice4;
+            scTxtPricce[4] = txtSCAddPrice5;
+            scTxtPricce[5] = txtSCAddPrice6;
+            scTxtPricce[6] = txtSCAddPrice7;
+            scTxtPricce[7] = txtSCAddPrice8;
+            scTxtPricce[8] = txtSCAddPrice9;
+            scTxtPricce[9] = txtSCAddPrice10;
+            scTxtPricce[10] = txtSCAddPrice11;
+            scTxtPricce[11] = txtSCAddPrice12;
+            scTxtPricce[12] = txtSCAddPrice13;
+            scTxtPricce[13] = txtSCAddPrice14;
+            scTxtPricce[14] = txtSCAddPrice15;
+            scTxtPricce[15] = txtSCAddPrice16;
+            scTxtPricce[16] = txtSCAddPrice17;
+
+            #endregion
+
+            #region Auto Append
+
+            scChkApd[0] = chkSCAutoAppend1;
+            scChkApd[1] = chkSCAutoAppend2;
+            scChkApd[2] = chkSCAutoAppend3;
+            scChkApd[3] = chkSCAutoAppend4;
+            scChkApd[4] = chkSCAutoAppend5;
+            scChkApd[5] = chkSCAutoAppend6;
+            scChkApd[6] = chkSCAutoAppend7;
+            scChkApd[7] = chkSCAutoAppend8;
+            scChkApd[8] = chkSCAutoAppend9;
+            scChkApd[9] = chkSCAutoAppend10;
+            scChkApd[10] = chkSCAutoAppend11;
+            scChkApd[11] = chkSCAutoAppend12;
+            scChkApd[12] = chkSCAutoAppend13;
+            scChkApd[13] = chkSCAutoAppend14;
+            scChkApd[14] = chkSCAutoAppend15;
+            scChkApd[15] = chkSCAutoAppend16;
+            scChkApd[16] = chkSCAutoAppend17;
+
+            #endregion
+
+            #endregion
+
+            #region Third Choices文本框控件数组
+
+            #region English Name
+
+            tcTxtEngName[0] = txtTCEngName1;
+            tcTxtEngName[1] = txtTCEngName2;
+            tcTxtEngName[2] = txtTCEngName3;
+            tcTxtEngName[3] = txtTCEngName4;
+            tcTxtEngName[4] = txtTCEngName5;
+            tcTxtEngName[5] = txtTCEngName6;
+            tcTxtEngName[6] = txtTCEngName7;
+            tcTxtEngName[7] = txtTCEngName8;
+            tcTxtEngName[8] = txtTCEngName9;
+            tcTxtEngName[9] = txtTCEngName10;
+            tcTxtEngName[10] = txtTCEngName11;
+            tcTxtEngName[11] = txtTCEngName12;
+            tcTxtEngName[12] = txtTCEngName13;
+            tcTxtEngName[13] = txtTCEngName14;
+            tcTxtEngName[14] = txtTCEngName15;
+            tcTxtEngName[15] = txtTCEngName16;
+            tcTxtEngName[16] = txtTCEngName17;
+
+            #endregion
+
+            #region Other Name
+
+            tcTxtOtherName[0] = txtTCOtherName1;
+            tcTxtOtherName[1] = txtTCOtherName2;
+            tcTxtOtherName[2] = txtTCOtherName3;
+            tcTxtOtherName[3] = txtTCOtherName4;
+            tcTxtOtherName[4] = txtTCOtherName5;
+            tcTxtOtherName[5] = txtTCOtherName6;
+            tcTxtOtherName[6] = txtTCOtherName7;
+            tcTxtOtherName[7] = txtTCOtherName8;
+            tcTxtOtherName[8] = txtTCOtherName9;
+            tcTxtOtherName[9] = txtTCOtherName10;
+            tcTxtOtherName[10] = txtTCOtherName11;
+            tcTxtOtherName[11] = txtTCOtherName12;
+            tcTxtOtherName[12] = txtTCOtherName13;
+            tcTxtOtherName[13] = txtTCOtherName14;
+            tcTxtOtherName[14] = txtTCOtherName15;
+            tcTxtOtherName[15] = txtTCOtherName16;
+            tcTxtOtherName[16] = txtTCOtherName17;
+
+            #endregion
+
+            #region Add. Price
+
+            tcTxtPricce[0] = txtTCAddPrice1;
+            tcTxtPricce[1] = txtTCAddPrice2;
+            tcTxtPricce[2] = txtTCAddPrice3;
+            tcTxtPricce[3] = txtTCAddPrice4;
+            tcTxtPricce[4] = txtTCAddPrice5;
+            tcTxtPricce[5] = txtTCAddPrice6;
+            tcTxtPricce[6] = txtTCAddPrice7;
+            tcTxtPricce[7] = txtTCAddPrice8;
+            tcTxtPricce[8] = txtTCAddPrice9;
+            tcTxtPricce[9] = txtTCAddPrice10;
+            tcTxtPricce[10] = txtTCAddPrice11;
+            tcTxtPricce[11] = txtTCAddPrice12;
+            tcTxtPricce[12] = txtTCAddPrice13;
+            tcTxtPricce[13] = txtTCAddPrice14;
+            tcTxtPricce[14] = txtTCAddPrice15;
+            tcTxtPricce[15] = txtTCAddPrice16;
+            tcTxtPricce[16] = txtTCAddPrice17;
+
+            #endregion
+
+            #region Auto Append
+
+            tcChkApd[0] = chkTCAutoAppend1;
+            tcChkApd[1] = chkTCAutoAppend2;
+            tcChkApd[2] = chkTCAutoAppend3;
+            tcChkApd[3] = chkTCAutoAppend4;
+            tcChkApd[4] = chkTCAutoAppend5;
+            tcChkApd[5] = chkTCAutoAppend6;
+            tcChkApd[6] = chkTCAutoAppend7;
+            tcChkApd[7] = chkTCAutoAppend8;
+            tcChkApd[8] = chkTCAutoAppend9;
+            tcChkApd[9] = chkTCAutoAppend10;
+            tcChkApd[10] = chkTCAutoAppend11;
+            tcChkApd[11] = chkTCAutoAppend12;
+            tcChkApd[12] = chkTCAutoAppend13;
+            tcChkApd[13] = chkTCAutoAppend14;
+            tcChkApd[14] = chkTCAutoAppend15;
+            tcChkApd[15] = chkTCAutoAppend16;
+            tcChkApd[16] = chkTCAutoAppend17;
+
+            #endregion
+
+            #endregion
+
+            #region Taste Handling文本框控件数组
+
+            #region English Name
+
+            thTxtEngName[0] = txtTHEngName1;
+            thTxtEngName[1] = txtTHEngName2;
+            thTxtEngName[2] = txtTHEngName3;
+            thTxtEngName[3] = txtTHEngName4;
+            thTxtEngName[4] = txtTHEngName5;
+            thTxtEngName[5] = txtTHEngName6;
+            thTxtEngName[6] = txtTHEngName7;
+            thTxtEngName[7] = txtTHEngName8;
+            thTxtEngName[8] = txtTHEngName9;
+            thTxtEngName[9] = txtTHEngName10;
+            thTxtEngName[10] = txtTHEngName11;
+            thTxtEngName[11] = txtTHEngName12;
+            thTxtEngName[12] = txtTHEngName13;
+            thTxtEngName[13] = txtTHEngName14;
+            thTxtEngName[14] = txtTHEngName15;
+            thTxtEngName[15] = txtTHEngName16;
+            thTxtEngName[16] = txtTHEngName17;
+
+            #endregion
+
+            #region Other Name
+
+            thTxtOtherName[0] = txtTHOtherName1;
+            thTxtOtherName[1] = txtTHOtherName2;
+            thTxtOtherName[2] = txtTHOtherName3;
+            thTxtOtherName[3] = txtTHOtherName4;
+            thTxtOtherName[4] = txtTHOtherName5;
+            thTxtOtherName[5] = txtTHOtherName6;
+            thTxtOtherName[6] = txtTHOtherName7;
+            thTxtOtherName[7] = txtTHOtherName8;
+            thTxtOtherName[8] = txtTHOtherName9;
+            thTxtOtherName[9] = txtTHOtherName10;
+            thTxtOtherName[10] = txtTHOtherName11;
+            thTxtOtherName[11] = txtTHOtherName12;
+            thTxtOtherName[12] = txtTHOtherName13;
+            thTxtOtherName[13] = txtTHOtherName14;
+            thTxtOtherName[14] = txtTHOtherName15;
+            thTxtOtherName[15] = txtTHOtherName16;
+            thTxtOtherName[16] = txtTHOtherName17;
+
+            #endregion
+
+            #region Add. Price
+
+            thTxtPricce[0] = txtTHAddPrice1;
+            thTxtPricce[1] = txtTHAddPrice2;
+            thTxtPricce[2] = txtTHAddPrice3;
+            thTxtPricce[3] = txtTHAddPrice4;
+            thTxtPricce[4] = txtTHAddPrice5;
+            thTxtPricce[5] = txtTHAddPrice6;
+            thTxtPricce[6] = txtTHAddPrice7;
+            thTxtPricce[7] = txtTHAddPrice8;
+            thTxtPricce[8] = txtTHAddPrice9;
+            thTxtPricce[9] = txtTHAddPrice10;
+            thTxtPricce[10] = txtTHAddPrice11;
+            thTxtPricce[11] = txtTHAddPrice12;
+            thTxtPricce[12] = txtTHAddPrice13;
+            thTxtPricce[13] = txtTHAddPrice14;
+            thTxtPricce[14] = txtTHAddPrice15;
+            thTxtPricce[15] = txtTHAddPrice16;
+            thTxtPricce[16] = txtTHAddPrice17;
+
+            #endregion
+
+            #region Auto Append
+
+            thChkApd[0] = chkTHAutoAppend1;
+            thChkApd[1] = chkTHAutoAppend2;
+            thChkApd[2] = chkTHAutoAppend3;
+            thChkApd[3] = chkTHAutoAppend4;
+            thChkApd[4] = chkTHAutoAppend5;
+            thChkApd[5] = chkTHAutoAppend6;
+            thChkApd[6] = chkTHAutoAppend7;
+            thChkApd[7] = chkTHAutoAppend8;
+            thChkApd[8] = chkTHAutoAppend9;
+            thChkApd[9] = chkTHAutoAppend10;
+            thChkApd[10] = chkTHAutoAppend11;
+            thChkApd[11] = chkTHAutoAppend12;
+            thChkApd[12] = chkTHAutoAppend13;
+            thChkApd[13] = chkTHAutoAppend14;
+            thChkApd[14] = chkTHAutoAppend15;
+            thChkApd[15] = chkTHAutoAppend16;
+            thChkApd[16] = chkTHAutoAppend17;
+
+            #endregion
+
+            #endregion
+
+            #region SubMenu 文本框控件数组
+            txtSubMenuEngName[0] = txtDishEngName1;
+            txtSubMenuEngName[1] = txtDishEngName2;
+            txtSubMenuEngName[2] = txtDishEngName3;
+            txtSubMenuEngName[3] = txtDishEngName4;
+            txtSubMenuEngName[4] = txtDishEngName5;
+            txtSubMenuEngName[5] = txtDishEngName6;
+            txtSubMenuEngName[6] = txtDishEngName7;
+            txtSubMenuEngName[7] = txtDishEngName8;
+            txtSubMenuEngName[8] = txtDishEngName9;
+            txtSubMenuEngName[9] = txtDishEngName10;
+            txtSubMenuEngName[10] = txtDishEngName11;
+            txtSubMenuEngName[11] = txtDishEngName12;
+            txtSubMenuEngName[12] = txtDishEngName13;
+            txtSubMenuEngName[13] = txtDishEngName14;
+            txtSubMenuEngName[14] = txtDishEngName15;
+
+            txtSubMenuOtherName[0] = txtDishOtherName1;
+            txtSubMenuOtherName[1] = txtDishOtherName2;
+            txtSubMenuOtherName[2] = txtDishOtherName3;
+            txtSubMenuOtherName[3] = txtDishOtherName4;
+            txtSubMenuOtherName[4] = txtDishOtherName5;
+            txtSubMenuOtherName[5] = txtDishOtherName6;
+            txtSubMenuOtherName[6] = txtDishOtherName7;
+            txtSubMenuOtherName[7] = txtDishOtherName8;
+            txtSubMenuOtherName[8] = txtDishOtherName9;
+            txtSubMenuOtherName[9] = txtDishOtherName10;
+            txtSubMenuOtherName[10] = txtDishOtherName11;
+            txtSubMenuOtherName[11] = txtDishOtherName12;
+            txtSubMenuOtherName[12] = txtDishOtherName13;
+            txtSubMenuOtherName[13] = txtDishOtherName14;
+            txtSubMenuOtherName[14] = txtDishOtherName15;
+            #endregion
+
+            //dgvSCDetail.DataSource = CommonData.TaMenuItemSCList.Where(s => s.MenuSetID.Equals(btnSCGuid)).ToList();
+            //dgvSCDetail.Columns[0].Visible = false;
+            //dgvSCDetail.Columns[1].Visible = false;
+            //dgvSCDetail.Columns[2].Visible = false;
+            //dgvSCDetail.Columns[3].HeaderText = "English Name";
+            //dgvSCDetail.Columns[4].HeaderText = "Other Name";
+            //dgvSCDetail.Columns[5].HeaderText = "Add. Price";
+            //dgvSCDetail.Columns[6].HeaderText = "Auto Append";
+            //dgvSCDetail.Columns[7].Visible = false;
+            //Console.Out.WriteLine(Guid.NewGuid());
         }
 
         private void btnDA_Click(object sender, EventArgs e)
@@ -324,14 +716,23 @@ namespace SuperPOS.UI.TakeAway
                     btn.BackColor = Color.CornflowerBlue;
                     btnDAGuid = btnDAGuid4;
                     break;
+                default:
+                    btnID = "1";
+                    btn.BackColor = Color.CornflowerBlue;
+                    btnDA2.BackColor = Color.Gray;
+                    btnDA3.BackColor = Color.Gray;
+                    btnDA4.BackColor = Color.Gray;
+                    btnDAGuid = btnDAGuid1;
+                    break;
             }
+            dgvDAMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
             //if (btn1.BackColor = Color.Gray)
             //Console.Out.WriteLine(btnDAGuid.ToString());
         }
 
         private void btnSC_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            Button btn = (Button) sender;
             switch (btn.Name)
             {
                 case "btnSC1":
@@ -369,11 +770,12 @@ namespace SuperPOS.UI.TakeAway
             }
             //if (btn1.BackColor = Color.Gray)
             //Console.Out.WriteLine(btnDAGuid.ToString());
+            dgvSCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnSCGuid.ToString())).ToList();
         }
 
         private void btnTC_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            Button btn = (Button) sender;
             switch (btn.Name)
             {
                 case "btnTC1":
@@ -411,11 +813,12 @@ namespace SuperPOS.UI.TakeAway
             }
             //if (btn1.BackColor = Color.Gray)
             //Console.Out.WriteLine(btnDAGuid.ToString());
+            dgvTCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnTCGuid.ToString())).ToList();
         }
 
         private void btnTH_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            Button btn = (Button) sender;
             switch (btn.Name)
             {
                 case "btnTH1":
@@ -453,6 +856,7 @@ namespace SuperPOS.UI.TakeAway
             }
             //if (btn1.BackColor = Color.Gray)
             //Console.Out.WriteLine(btnDAGuid.ToString());
+            dgvTHMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnTHGuid.ToString())).ToList();
         }
 
         private void btnDAExit_Click(object sender, EventArgs e)
@@ -462,22 +866,30 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnDADishCodeSearch_Click(object sender, EventArgs e)
         {
-            dgvDAMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtDADishCode.Text.Trim()));
+            dgvDAMenu.DataSource = !string.IsNullOrEmpty(txtDADishCode.Text)
+                ? CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtDADishCode.Text.Trim())).ToList()
+                : CommonData.TaMenuItemList.ToList();
         }
 
         private void btnSCDishCodeSearch_Click(object sender, EventArgs e)
         {
-            dgvSCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtSCDishCode.Text.Trim()));
+            dgvDAMenu.DataSource = !string.IsNullOrEmpty(txtSCDishCode.Text)
+                ? CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtSCDishCode.Text.Trim())).ToList()
+                : CommonData.TaMenuItemList.ToList();
         }
 
         private void btnTCDishCodeSearch_Click(object sender, EventArgs e)
         {
-            dgvTCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtTCDishCode.Text.Trim()));
+            dgvTCMenu.DataSource = !string.IsNullOrEmpty(txtTCDishCode.Text)
+                ? CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtTCDishCode.Text.Trim())).ToList()
+                : CommonData.TaMenuItemList.ToList();
         }
 
         private void btnTHDishCodeSearch_Click(object sender, EventArgs e)
         {
-            dgvTHMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtTHDishCode.Text.Trim()));
+            dgvTHMenu.DataSource = !string.IsNullOrEmpty(txtTHDishCode.Text)
+                ? CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtTHDishCode.Text.Trim())).ToList()
+                : CommonData.TaMenuItemList.ToList();
         }
 
         private void btnDAAdd_Click(object sender, EventArgs e)
@@ -518,12 +930,18 @@ namespace SuperPOS.UI.TakeAway
             chkInventoryCheck.Checked = false;
 
             cmbBoxSplySft.Enabled = true;
+            cmbBoxSplySft.SelectedIndex = 0;
             chkBoxPrtOrderByDept.Enabled = true;
+            chkBoxPrtOrderByDept.Checked = false;
             chkBoxPrtOrderX.Enabled = true;
+            chkBoxPrtOrderX.Checked = false;
 
             cmbBoxMenuCate1.Enabled = true;
             cmbBoxMenuCate2.Enabled = true;
             cmbBoxMenuCate3.Enabled = true;
+            cmbBoxMenuCate1.SelectedIndex = 0;
+            cmbBoxMenuCate2.SelectedIndex = 0;
+            cmbBoxMenuCate3.SelectedIndex = 0;
 
             btnDAEdit.Enabled = false;
             btnDADel.Enabled = false;
@@ -533,14 +951,16 @@ namespace SuperPOS.UI.TakeAway
 
         private void BindCmbData()
         {
-            var lstDeptCate = CommonData.TaMenuCategoryList.OrderBy(s => s.DisplayPosition).Select(lstDC => new { DeptCode = lstDC.EnglishName, SysKey = lstDC.SystemKey });
+            var lstDeptCate =
+                CommonData.TaMenuCategoryList.OrderBy(s => s.DisplayPosition)
+                    .Select(lstDC => new {DeptCode = lstDC.EnglishName, SysKey = lstDC.SystemKey});
             //cmbBoxDeptCode.DataSource = lstDeptCode.ToList();
             //lstDeptCode.ToList().Add(new { DeptCode = "", SysKey = Guid.Empty });
 
             cmbBoxMenuCate1.DataSource = lstDeptCate.ToList();
             cmbBoxMenuCate1.ValueMember = "SysKey";
             cmbBoxMenuCate1.DisplayMember = "DeptCode";
-            
+
 
             cmbBoxMenuCate2.DataSource = lstDeptCate.ToList();
             cmbBoxMenuCate2.ValueMember = "SysKey";
@@ -551,10 +971,14 @@ namespace SuperPOS.UI.TakeAway
             cmbBoxMenuCate3.DisplayMember = "DeptCode";
 
             var lstSupplySft = CommonData.ShiftCodeList.OrderBy(s => s.DtFrom)
-                    .Select(lstSS => new {sDate = lstSS.ShiftName, sSysKey = lstSS.SystemKey});
+                .Select(lstSS => new {sDate = lstSS.ShiftName, sSysKey = lstSS.SystemKey});
             cmbBoxSplySft.DataSource = lstSupplySft.ToList();
             cmbBoxSplySft.ValueMember = "sSysKey";
             cmbBoxSplySft.DisplayMember = "sDate";
+
+            cmbSMSupplyShift.DataSource = lstSupplySft.ToList();
+            cmbSMSupplyShift.ValueMember = "sSysKey";
+            cmbSMSupplyShift.DisplayMember = "sDate";
         }
 
         private void cmbBoxMenuCate1_SelectedIndexChanged(object sender, EventArgs e)
@@ -691,7 +1115,7 @@ namespace SuperPOS.UI.TakeAway
 
             taMenuItem.Qty = "0";
 
-            taMenuItem.MenuSetID = "";
+            taMenuItem.MenuSetID = btnDAGuid.ToString();
 
             if (iStatus == 1)
             {
@@ -714,6 +1138,474 @@ namespace SuperPOS.UI.TakeAway
             btnDACopy.Enabled = true;
             btnDADel.Enabled = true;
             btnDASave.Enabled = false;
+            btnDAEdit.Enabled = true;
+
+            SetCtlEnable(false);
+
+            iStatus = 0;
+        }
+
+        private void SetCtlEnable(bool bl)
+        {
+            txtDishCode.Enabled = bl;
+            txtDisPosition.Enabled = bl;
+            txtEngName.Enabled = bl;
+            txtOtherName.Enabled = bl;
+            txtWLarge.Enabled = bl;
+            txtWRegular.Enabled = bl;
+            txtWSmall.Enabled = bl;
+            txtSLarge.Enabled = bl;
+            txtSRegular.Enabled = bl;
+            txtSSmall.Enabled = bl;
+
+            chkUnavailable.Enabled = bl;
+            chkNegativePrice.Enabled = bl;
+            chkDisountable.Enabled = bl;
+            chkWithoutVAT.Enabled = bl;
+            chkInventoryCheck.Enabled = bl;
+            chkUnavailable.Checked = bl;
+            chkNegativePrice.Checked = bl;
+            chkDisountable.Checked = bl;
+            chkWithoutVAT.Checked = bl;
+            chkInventoryCheck.Checked = bl;
+
+            cmbBoxSplySft.Enabled = bl;
+            chkBoxPrtOrderByDept.Enabled = bl;
+            chkBoxPrtOrderX.Enabled = bl;
+
+            cmbBoxMenuCate1.Enabled = bl;
+            cmbBoxMenuCate2.Enabled = bl;
+            cmbBoxMenuCate3.Enabled = bl;
+        }
+
+        private void btnDADel_Click(object sender, EventArgs e)
+        {
+            if (dgvDAMenu.CurrentRow == null) return;
+            new OnLoadSystemCommonData().GetTAMenuItemList();
+            var taMenuItem =
+                CommonData.TaMenuItemList.FirstOrDefault(s => s.SystemKey.Equals(dgvDAMenu.CurrentRow.Cells[0].Value));
+            if (taMenuItem != null) _control.DeleteEntity(taMenuItem);
+
+            //刷新数据
+            new OnLoadSystemCommonData().GetTAMenuItemList();
+            dgvDAMenu.DataSource = CommonData.TaMenuItemList;
+        }
+
+        private void btnDACopy_Click(object sender, EventArgs e)
+        {
+            iStatus = 1;
+
+            txtDishCode.Text = "";
+
+            btnDAAdd.Enabled = false;
+            btnDAEdit.Enabled = false;
+            btnDACopy.Enabled = false;
+            btnDADel.Enabled = false;
+            btnDASave.Enabled = true;
+
+            txtDishCode.Enabled = true;
+            txtDisPosition.Enabled = true;
+            txtEngName.Enabled = true;
+            txtOtherName.Enabled = true;
+            txtWLarge.Enabled = true;
+            txtWRegular.Enabled = true;
+            txtWSmall.Enabled = true;
+            txtSLarge.Enabled = true;
+            txtSRegular.Enabled = true;
+            txtSSmall.Enabled = true;
+
+            chkUnavailable.Enabled = true;
+            chkNegativePrice.Enabled = true;
+            chkDisountable.Enabled = true;
+            chkWithoutVAT.Enabled = true;
+            chkInventoryCheck.Enabled = true;
+            chkUnavailable.Checked = false;
+            chkNegativePrice.Checked = false;
+            chkDisountable.Checked = false;
+            chkWithoutVAT.Checked = false;
+            chkInventoryCheck.Checked = false;
+
+            cmbBoxMenuCate1.Enabled = true;
+            cmbBoxMenuCate2.Enabled = true;
+            cmbBoxMenuCate3.Enabled = true;
+
+            cmbBoxSplySft.Enabled = true;
+            chkBoxPrtOrderByDept.Enabled = true;
+            chkBoxPrtOrderX.Enabled = true;
+        }
+
+        private void cmDABoxDish_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvDAMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmDABoxDish.Text)).ToList();
+        }
+
+        private void cmSCBoxDish_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvSCMenu.DataSource =
+                CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmSCBoxDish.Text)).ToList();
+        }
+
+        private void cmTCBoxDish_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvTCMenu.DataSource =
+                CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmTCBoxDish.Text)).ToList();
+        }
+
+        private void btnSCExit_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
+        private void btnTCExit_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
+        private void btnTHExit_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
+        private void cmTHBoxDish_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvTHMenu.DataSource =
+                CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmTHBoxDish.Text)).ToList();
+        }
+
+        private void dgvSCMenu_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvSCMenu.RowCount == 0)
+            {
+                MessageBox.Show("This table is empty,please add data first!");
+                return;
+            }
+
+            if (dgvSCMenu.CurrentRow == null) return;
+
+            if (dgvSCMenu.CurrentRow.Index < 0) return;
+
+            new OnLoadSystemCommonData().GetTAMenuItemSCList();
+            var scMenuList =
+                CommonData.TaMenuItemSCList.Where(
+                    s =>
+                        s.MenuSetID.Equals(btnSCGuid.ToString()) &&
+                        s.MenuItemID.Equals(dgvSCMenu.CurrentRow.Cells[0].Value.ToString()));
+
+            if (scMenuList.Any())
+            {
+                int i = 0;
+                foreach (var scMenu in scMenuList)
+                {
+                    scTxtEngName[i].Text = scMenu.EnglishName;
+                    scTxtOtherName[i].Text = scMenu.OtherName;
+                    scTxtPricce[i].Text = scMenu.AddPrice;
+                    scChkApd[i].Checked = scMenu.AutoAppend.Equals("Y");
+
+                    i++;
+                }
+                chkSCEnableChoices.Checked = scMenuList.FirstOrDefault().IsEnableChoices.Equals("Y");
+            }
+            else
+            {
+                for (int i = 0; i < 17; i++)
+                {
+                    scTxtEngName[i].Text = "";
+                    scTxtOtherName[i].Text = "";
+                    scTxtPricce[i].Text = "";
+                    scChkApd[i].Checked = false;
+                }
+            }
+        }
+
+        private void btnSCSave_Click(object sender, EventArgs e)
+        {
+            //删除原有的关联
+            var qDelList =
+                CommonData.TaMenuItemSCList.Where(
+                    s =>
+                        s.MenuSetID.Equals(btnSCGuid.ToString()) &&
+                        s.MenuItemID.Equals(dgvSCMenu.CurrentRow.Cells[0].Value.ToString()));
+            foreach (var taMenuItemScInfo in qDelList)
+            {
+                _control.DeleteEntity(taMenuItemScInfo);
+            }
+
+            for (int i = 0; i < 17; i++)
+            {
+                TAMenuItemSCInfo scMenuItem = new TAMenuItemSCInfo();
+                if (!string.IsNullOrEmpty(scTxtEngName[i].Text) &&
+                    !string.IsNullOrEmpty(scTxtOtherName[i].Text) &&
+                    !string.IsNullOrEmpty(scTxtPricce[i].Text))
+                {
+                    scMenuItem.SystemKey = Guid.NewGuid();
+                    scMenuItem.MenuItemID = dgvSCMenu.CurrentRow.Cells[0].Value.ToString();
+                    scMenuItem.MenuSetID = btnSCGuid.ToString();
+                    scMenuItem.EnglishName = scTxtEngName[i].Text;
+                    scMenuItem.OtherName = scTxtOtherName[i].Text;
+                    scMenuItem.AddPrice = scTxtPricce[i].Text;
+                    scMenuItem.AutoAppend = scChkApd[i].Checked ? "Y" : "N";
+                    scMenuItem.IsEnableChoices = chkSCEnableChoices.Checked ? "Y" : "N";
+                    _control.AddEntity(scMenuItem);
+                }
+            }
+        }
+
+        private void btnTCSave_Click(object sender, EventArgs e)
+        {
+            //删除原有的关联
+            var qDelList =
+                CommonData.TaMenuItemTCList.Where(
+                    s =>
+                        s.MenuSetID.Equals(btnTCGuid.ToString()) &&
+                        s.MenuItemID.Equals(dgvTCMenu.CurrentRow.Cells[0].Value.ToString()));
+            foreach (var taMenuItemTcInfo in qDelList)
+            {
+                _control.DeleteEntity(taMenuItemTcInfo);
+            }
+
+            for (int i = 0; i < 17; i++)
+            {
+                TAMenuItemTCInfo tcMenuItem = new TAMenuItemTCInfo();
+                if (!string.IsNullOrEmpty(tcTxtEngName[i].Text) &&
+                    !string.IsNullOrEmpty(tcTxtOtherName[i].Text) &&
+                    !string.IsNullOrEmpty(tcTxtPricce[i].Text))
+                {
+                    tcMenuItem.SystemKey = Guid.NewGuid();
+                    tcMenuItem.MenuItemID = dgvTCMenu.CurrentRow.Cells[0].Value.ToString();
+                    tcMenuItem.MenuSetID = btnTCGuid.ToString();
+                    tcMenuItem.EnglishName = tcTxtEngName[i].Text;
+                    tcMenuItem.OtherName = tcTxtOtherName[i].Text;
+                    tcMenuItem.AddPrice = tcTxtPricce[i].Text;
+                    tcMenuItem.AutoAppend = tcChkApd[i].Checked ? "Y" : "N";
+                    tcMenuItem.IsEnableChoices = chkTCEnableChoices.Checked ? "Y" : "N";
+                    _control.AddEntity(tcMenuItem);
+                }
+            }
+        }
+
+        private void dgvTCMenu_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvTCMenu.RowCount == 0)
+            {
+                MessageBox.Show("This table is empty,please add data first!");
+                return;
+            }
+
+            if (dgvTCMenu.CurrentRow == null) return;
+
+            if (dgvTCMenu.CurrentRow.Index < 0) return;
+
+            new OnLoadSystemCommonData().GetTAMenuItemTCList();
+            var tcMenuList = CommonData.TaMenuItemTCList.Where(s =>
+                        s.MenuSetID.Equals(btnTCGuid.ToString()) &&
+                        s.MenuItemID.Equals(dgvTCMenu.CurrentRow.Cells[0].Value.ToString()));
+
+            if (tcMenuList.Any())
+            {
+                int i = 0;
+                foreach (var tcMenu in tcMenuList)
+                {
+                    tcTxtEngName[i].Text = tcMenu.EnglishName;
+                    tcTxtOtherName[i].Text = tcMenu.OtherName;
+                    tcTxtPricce[i].Text = tcMenu.AddPrice;
+                    tcChkApd[i].Checked = tcMenu.AutoAppend.Equals("Y");
+
+                    i++;
+                }
+                chkTCEnableChoices.Checked = tcMenuList.FirstOrDefault().IsEnableChoices.Equals("Y");
+            }
+            else
+            {
+                for (int i = 0; i < 17; i++)
+                {
+                    tcTxtEngName[i].Text = "";
+                    tcTxtOtherName[i].Text = "";
+                    tcTxtPricce[i].Text = "";
+                    tcChkApd[i].Checked = false;
+                }
+            }
+        }
+
+        private void btnTHSave_Click(object sender, EventArgs e)
+        {
+            var qDelList = CommonData.TaMenuItemTHList.Where(s =>
+                        s.MenuSetID.Equals(btnTHGuid.ToString()) &&
+                        s.MenuItemID.Equals(dgvTHMenu.CurrentRow.Cells[0].Value.ToString()));
+            foreach (var taMenuItemThInfo in qDelList)
+            {
+                _control.DeleteEntity(taMenuItemThInfo);
+            }
+
+            for (int i = 0; i < 17; i++)
+            {
+                TAMenuItemTHInfo thMenuItem = new TAMenuItemTHInfo();
+                if (!string.IsNullOrEmpty(thTxtEngName[i].Text) &&
+                    !string.IsNullOrEmpty(thTxtOtherName[i].Text) &&
+                    !string.IsNullOrEmpty(thTxtPricce[i].Text))
+                {
+                    thMenuItem.SystemKey = Guid.NewGuid();
+                    thMenuItem.MenuItemID = dgvTHMenu.CurrentRow.Cells[0].Value.ToString();
+                    thMenuItem.MenuSetID = btnTHGuid.ToString();
+                    thMenuItem.EnglishName = thTxtEngName[i].Text;
+                    thMenuItem.OtherName = thTxtOtherName[i].Text;
+                    thMenuItem.AddPrice = thTxtPricce[i].Text;
+                    thMenuItem.AutoAppend = thChkApd[i].Checked ? "Y" : "N";
+                    thMenuItem.IsEnableChoices = chkTHEnableChoices.Checked ? "Y" : "N";
+                    _control.AddEntity(thMenuItem);
+                }
+            }
+        }
+
+        private void dgvTHMenu_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvTHMenu.RowCount == 0)
+            {
+                MessageBox.Show("This table is empty,please add data first!");
+                return;
+            }
+
+            if (dgvTHMenu.CurrentRow == null) return;
+
+            if (dgvTHMenu.CurrentRow.Index < 0) return;
+
+            new OnLoadSystemCommonData().GetTAMenuItemTHList();
+            var thMenuList = CommonData.TaMenuItemTHList.Where(s =>
+                        s.MenuSetID.Equals(btnTHGuid.ToString()) &&
+                        s.MenuItemID.Equals(dgvTHMenu.CurrentRow.Cells[0].Value.ToString()));
+
+            if (thMenuList.Any())
+            {
+                int i = 0;
+                foreach (var thMenu in thMenuList)
+                {
+                    thTxtEngName[i].Text = thMenu.EnglishName;
+                    thTxtOtherName[i].Text = thMenu.OtherName;
+                    thTxtPricce[i].Text = thMenu.AddPrice;
+                    thChkApd[i].Checked = thMenu.AutoAppend.Equals("Y");
+
+                    i++;
+                }
+                chkTHEnableChoices.Checked = thMenuList.FirstOrDefault().IsEnableChoices.Equals("Y");
+            }
+            else
+            {
+                for (int i = 0; i < 17; i++)
+                {
+                    thTxtEngName[i].Text = "";
+                    thTxtOtherName[i].Text = "";
+                    thTxtPricce[i].Text = "";
+                    thChkApd[i].Checked = false;
+                }
+            }
+        }
+
+        private void btnSubMenuAdd_Click(object sender, EventArgs e)
+        {
+            iSubMenuStatus = 1;
+
+            txtSMDishCode.Enabled = true;
+            txtSMDisplayPosition.Enabled = true;
+            txtSMEngName.Enabled = true;
+            txtSMOtherName.Enabled = true;
+            txtSMPrice.Enabled = true;
+            chkSMUnavailable.Enabled = true;
+            chkSMDisountable.Enabled = true;
+            chkSMInventoryCheck.Enabled = true;
+            chkSMNegativePrice.Enabled = true;
+            chkSMWithoutVAT.Enabled = true;
+
+            txtSMDishCode.Text = "";
+            txtSMDisplayPosition.Text = "";
+            txtSMEngName.Text = "";
+            txtSMOtherName.Text = "";
+            txtSMPrice.Text = "";
+            chkSMUnavailable.Checked = false;
+            chkSMDisountable.Checked = false;
+            chkSMInventoryCheck.Checked = false;
+            chkSMNegativePrice.Checked = false;
+            chkSMWithoutVAT.Checked = false;
+
+            cmbSMSupplyShift.Enabled = true;
+            cmbSMSupplyShift.SelectedIndex = 0;
+            chkSMPrtName.Enabled = true;
+            chkSMPrtName.Checked = false;
+            chkSMPrtOrder.Enabled = true;
+            chkSMPrtOrder.Checked = false;
+
+            for (int i = 0; i < 15; i++)
+            {
+                txtSubMenuEngName[i].Enabled = true;
+                txtSubMenuEngName[i].Text = "";
+                txtSubMenuOtherName[i].Enabled = true;
+                txtSubMenuOtherName[i].Text = "";
+            }
+
+            btnSubMenuDel.Enabled = false;
+            btnSubMenuEdit.Enabled = false;
+            btnSubMenuSave.Enabled = true;
+            btnSubMenuAdd.Enabled = true;
+        }
+
+        private void dgSubMenu_SelectionChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubMenuEdit_Click(object sender, EventArgs e)
+        {
+            iSubMenuStatus = 2;
+
+            txtSMDishCode.Enabled = true;
+            txtSMDisplayPosition.Enabled = true;
+            txtSMEngName.Enabled = true;
+            txtSMOtherName.Enabled = true;
+            txtSMPrice.Enabled = true;
+            chkSMUnavailable.Enabled = true;
+            chkDisountable.Enabled = true;
+            chkInventoryCheck.Enabled = true;
+            chkSMNegativePrice.Enabled = true;
+            chkSMWithoutVAT.Enabled = true;
+
+            cmbSMSupplyShift.Enabled = true;
+            chkSMPrtName.Enabled = true;
+            chkSMPrtOrder.Enabled = true;            
+
+            for (int i = 0; i < 15; i++)
+            {
+                txtSubMenuEngName[i].Enabled = true;
+                txtSubMenuOtherName[i].Enabled = true;
+            }
+
+            btnSubMenuDel.Enabled = false;
+            btnSubMenuEdit.Enabled = false;
+            btnSubMenuSave.Enabled = true;
+            btnSubMenuAdd.Enabled = false;
+        }
+
+        private void btnSubMenuDel_Click(object sender, EventArgs e)
+        {
+            if (dgvSCMenu.CurrentRow == null) return;
+            new OnLoadSystemCommonData().GetTAMenuItemSubMenuList();
+            new OnLoadSystemCommonData().GetTAMenuItemSubMenuDetailList();
+            var taMenuItemSubMenu = CommonData.TaMenuItemSubMenuList.FirstOrDefault(s => s.SystemKey.Equals(dgvDAMenu.CurrentRow.Cells[0].Value));
+            if (taMenuItemSubMenu != null) _control.DeleteEntity(taMenuItemSubMenu);
+            var taMenuItemSubMenuDetail = CommonData.TaMenuItemSubMenuDetailList.Where(s => s.SubMenuID.Equals(dgvDAMenu.CurrentRow.Cells[0].Value));
+            foreach (var subMenuDetail in taMenuItemSubMenuDetail) { _control.DeleteEntity(subMenuDetail); }
+
+            //刷新数据
+            new OnLoadSystemCommonData().GetTAMenuItemSubMenuList();
+            new OnLoadSystemCommonData().GetTAMenuItemSubMenuDetailList();
+            dgvDAMenu.DataSource = CommonData.TaMenuItemSubMenuList;
+        }
+
+        private void btnSubMenuSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSubMenuExit_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }
