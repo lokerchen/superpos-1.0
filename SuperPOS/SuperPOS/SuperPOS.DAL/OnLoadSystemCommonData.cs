@@ -46,5 +46,11 @@ namespace SuperPOS.DAL
         public void GetSysControlList() { CommonData.SysControlList = _control.SelectAll<SysControlInfo>(); }
 
         public void GetTAMenuItemList() { CommonData.TaMenuItemList = _control.SelectAll<TAMenuItemInfo>(); }
+
+        public void GetTAMenuItemSCList() { CommonData.TaMenuItemSCList = _control.SelectAll<TAMenuItemSCInfo>(); }
+
+        public void GetTAMenuItemTCList() { CommonData.TaMenuItemTCList = _control.SelectAll<TAMenuItemTCInfo>(); }
+
+        public void GetTAMenuItemTHList() { CommonData.TaMenuItemTHList = _control.SelectAll<TAMenuItemTHInfo>(); }
     }
 }

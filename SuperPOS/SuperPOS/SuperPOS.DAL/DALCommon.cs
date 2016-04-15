@@ -45,6 +45,9 @@ namespace SuperPOS.DAL
             onLoad.GetSysControlList();
             //Menu Item
             onLoad.GetTAMenuItemList();
+            onLoad.GetTAMenuItemSCList();
+            onLoad.GetTAMenuItemTCList();
+            onLoad.GetTAMenuItemTHList();
         }
         #endregion
     }

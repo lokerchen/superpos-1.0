@@ -42,5 +42,11 @@ namespace SuperPOS.DAL
         public static IList<SysControlInfo> SysControlList { get; set; }
 
         public static IList<TAMenuItemInfo> TaMenuItemList { get; set; }
+
+        public static IList<TAMenuItemSCInfo> TaMenuItemSCList { get; set; }
+
+        public static IList<TAMenuItemTCInfo> TaMenuItemTCList { get; set; }
+
+        public static IList<TAMenuItemTHInfo> TaMenuItemTHList { get; set; }
     }
 }
