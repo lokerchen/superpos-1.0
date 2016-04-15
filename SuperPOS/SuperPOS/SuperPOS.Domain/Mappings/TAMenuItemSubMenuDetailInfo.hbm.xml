@@ -10,6 +10,5 @@
     <property name="SubMenuID" column="SubMenuID" type="System.String" />
     <property name="EnglishName" column="EnglishName" type="System.String" />
     <property name="OtherName" column="OtherName" type="System.String" />
-    <property name="OtherName" column="OtherName" type="System.String" />
   </class>
 </hibernate-mapping>
