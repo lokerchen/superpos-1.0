@@ -1587,9 +1587,9 @@ namespace SuperPOS.UI.TakeAway
             if (dgvSCMenu.CurrentRow == null) return;
             new OnLoadSystemCommonData().GetTAMenuItemSubMenuList();
             new OnLoadSystemCommonData().GetTAMenuItemSubMenuDetailList();
-            var taMenuItemSubMenu = CommonData.TaMenuItemSubMenuList.FirstOrDefault(s => s.SystemKey.Equals(dgvDAMenu.CurrentRow.Cells[0].Value));
+            var taMenuItemSubMenu = CommonData.TaMenuItemSubMenuList.FirstOrDefault(s => s.SystemKey.Equals(dgvSubMenu.CurrentRow.Cells[0].Value));
             if (taMenuItemSubMenu != null) _control.DeleteEntity(taMenuItemSubMenu);
-            var taMenuItemSubMenuDetail = CommonData.TaMenuItemSubMenuDetailList.Where(s => s.SubMenuID.Equals(dgvDAMenu.CurrentRow.Cells[0].Value));
+            var taMenuItemSubMenuDetail = CommonData.TaMenuItemSubMenuDetailList.Where(s => s.SubMenuID.Equals(dgvSubMenu.CurrentRow.Cells[0].Value));
             foreach (var subMenuDetail in taMenuItemSubMenuDetail) { _control.DeleteEntity(subMenuDetail); }
 
             //刷新数据
@@ -1601,6 +1601,15 @@ namespace SuperPOS.UI.TakeAway
         private void btnSubMenuSave_Click(object sender, EventArgs e)
         {
 
+
+            if (iSubMenuStatus == 1) //Add
+            {
+
+            }
+            else if (iSubMenuStatus == 2) //Edit
+            {
+                
+            }
         }
 
         private void btnSubMenuExit_Click(object sender, EventArgs e)
