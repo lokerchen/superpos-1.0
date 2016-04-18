@@ -338,6 +338,9 @@
     <EmbeddedResource Include="TakeAway\FrmTAMenuItem.resx">
       <DependentUpon>FrmTAMenuItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTATblSetup.resx">
+      <DependentUpon>FrmTATblSetup.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
