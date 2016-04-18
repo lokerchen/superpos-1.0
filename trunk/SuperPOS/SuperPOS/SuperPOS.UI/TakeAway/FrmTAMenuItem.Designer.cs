@@ -4303,7 +4303,7 @@
             this.dgvSubMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSubMenu.Size = new System.Drawing.Size(298, 491);
             this.dgvSubMenu.TabIndex = 43;
-            this.dgvSubMenu.SelectionChanged += new System.EventHandler(this.dgSubMenu_SelectionChanged);
+            this.dgvSubMenu.SelectionChanged += new System.EventHandler(this.dgvSubMenu_SelectionChanged);
             // 
             // btnSubMenuEdit
             // 
