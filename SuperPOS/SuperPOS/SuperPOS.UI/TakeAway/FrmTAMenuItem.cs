@@ -1546,11 +1546,6 @@ namespace SuperPOS.UI.TakeAway
             btnSubMenuAdd.Enabled = true;
         }
 
-        private void dgSubMenu_SelectionChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSubMenuEdit_Click(object sender, EventArgs e)
         {
             iSubMenuStatus = 2;
@@ -1561,8 +1556,8 @@ namespace SuperPOS.UI.TakeAway
             txtSMOtherName.Enabled = true;
             txtSMPrice.Enabled = true;
             chkSMUnavailable.Enabled = true;
-            chkDisountable.Enabled = true;
-            chkInventoryCheck.Enabled = true;
+            chkSMDisountable.Enabled = true;
+            chkSMInventoryCheck.Enabled = true;
             chkSMNegativePrice.Enabled = true;
             chkSMWithoutVAT.Enabled = true;
 
@@ -1584,37 +1579,162 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnSubMenuDel_Click(object sender, EventArgs e)
         {
-            if (dgvSCMenu.CurrentRow == null) return;
+            if (dgvSubMenu.CurrentRow == null) return;
             new OnLoadSystemCommonData().GetTAMenuItemSubMenuList();
             new OnLoadSystemCommonData().GetTAMenuItemSubMenuDetailList();
-            var taMenuItemSubMenu = CommonData.TaMenuItemSubMenuList.FirstOrDefault(s => s.SystemKey.Equals(dgvSubMenu.CurrentRow.Cells[0].Value));
-            if (taMenuItemSubMenu != null) _control.DeleteEntity(taMenuItemSubMenu);
-            var taMenuItemSubMenuDetail = CommonData.TaMenuItemSubMenuDetailList.Where(s => s.SubMenuID.Equals(dgvSubMenu.CurrentRow.Cells[0].Value));
+
+            var taMenuItemSubMenuDetail = CommonData.TaMenuItemSubMenuDetailList.Where(s => s.SubMenuID.Equals(dgvSubMenu.CurrentRow.Cells[0].Value.ToString()));
             foreach (var subMenuDetail in taMenuItemSubMenuDetail) { _control.DeleteEntity(subMenuDetail); }
 
+            var taMenuItemSubMenu = CommonData.TaMenuItemSubMenuList.FirstOrDefault(s => s.SystemKey.Equals(new Guid(dgvSubMenu.CurrentRow.Cells[0].Value.ToString())));
+            if (taMenuItemSubMenu != null) _control.DeleteEntity(taMenuItemSubMenu);
+            
             //刷新数据
             new OnLoadSystemCommonData().GetTAMenuItemSubMenuList();
             new OnLoadSystemCommonData().GetTAMenuItemSubMenuDetailList();
-            dgvDAMenu.DataSource = CommonData.TaMenuItemSubMenuList;
+            dgvSubMenu.DataSource = CommonData.TaMenuItemSubMenuList;
         }
 
         private void btnSubMenuSave_Click(object sender, EventArgs e)
         {
+            TAMenuItemSubMenuInfo taMenuItemSubMenuInfo = new TAMenuItemSubMenuInfo();
 
-
+            taMenuItemSubMenuInfo.DishCode = txtSMDishCode.Text;
+            taMenuItemSubMenuInfo.DisplayPosition = txtSMDisplayPosition.Text;
+            taMenuItemSubMenuInfo.EnglishName = txtSMEngName.Text;
+            taMenuItemSubMenuInfo.OtherName = txtSMOtherName.Text;
+            taMenuItemSubMenuInfo.Price = txtSMPrice.Text;
+            taMenuItemSubMenuInfo.IsUnavailable = chkSMUnavailable.Checked ? "Y" : "N";
+            taMenuItemSubMenuInfo.IsDiscountable = chkSMDisountable.Checked ? "Y" : "N";
+            taMenuItemSubMenuInfo.IsInventoryChk = chkSMInventoryCheck.Checked ? "Y" : "N";
+            taMenuItemSubMenuInfo.IsNegativePrice = chkSMNegativePrice.Checked ? "Y" : "N";
+            taMenuItemSubMenuInfo.IsWithoutVAT = chkSMWithoutVAT.Checked ? "Y" : "N";
+            taMenuItemSubMenuInfo.SplyShift = cmbSMSupplyShift.Text;
+            taMenuItemSubMenuInfo.IsPrtName = chkSMPrtName.Checked ? "Y" : "N";
+            taMenuItemSubMenuInfo.IsPrtOrder = chkSMPrtOrder.Checked ? "Y" : "N";
+    
             if (iSubMenuStatus == 1) //Add
             {
-
+                taMenuItemSubMenuInfo.SystemKey = Guid.NewGuid();
+                _control.AddEntity(taMenuItemSubMenuInfo);
             }
             else if (iSubMenuStatus == 2) //Edit
             {
-                
+                taMenuItemSubMenuInfo.SystemKey = new Guid(dgvSubMenu.CurrentRow.Cells[0].Value.ToString());
+                _control.UpdateEntity(taMenuItemSubMenuInfo);
             }
+
+            var qDelList = new List<TAMenuItemSubMenuDetailInfo>();
+            if (iSubMenuStatus == 1)
+                qDelList = CommonData.TaMenuItemSubMenuDetailList.Where(s =>
+                        s.SubMenuID.Equals(taMenuItemSubMenuInfo.SystemKey.ToString())).ToList();            
+            else if (iSubMenuStatus == 2)
+                qDelList = CommonData.TaMenuItemSubMenuDetailList.Where(s =>
+                        s.SubMenuID.Equals(dgvSubMenu.CurrentRow.Cells[0].Value.ToString())).ToList();
+            foreach (var taMenuItemThInfo in qDelList)
+            {
+                _control.DeleteEntity(taMenuItemThInfo);
+            }
+
+            for (int i = 0; i < 15; i++)
+            {
+                TAMenuItemSubMenuDetailInfo taMenuItemSubMenuDetailInfo = new TAMenuItemSubMenuDetailInfo();
+                if (!string.IsNullOrEmpty(txtSubMenuEngName[i].Text) &&
+                    !string.IsNullOrEmpty(txtSubMenuOtherName[i].Text))
+                {
+                    taMenuItemSubMenuDetailInfo.SystemKey = Guid.NewGuid();
+                    taMenuItemSubMenuDetailInfo.EnglishName = txtSubMenuEngName[i].Text;
+                    taMenuItemSubMenuDetailInfo.OtherName = txtSubMenuOtherName[i].Text;
+                    if (iSubMenuStatus == 1)
+                        taMenuItemSubMenuDetailInfo.SubMenuID = taMenuItemSubMenuInfo.SystemKey.ToString();
+                    else if (iSubMenuStatus == 2)
+                        taMenuItemSubMenuDetailInfo.SubMenuID = dgvSubMenu.CurrentRow.Cells[0].Value.ToString();
+                    _control.AddEntity(taMenuItemSubMenuDetailInfo);
+                }
+            }
+
+            txtSMDishCode.Enabled = false;
+            txtSMDisplayPosition.Enabled = false;
+            txtSMEngName.Enabled = false;
+            txtSMOtherName.Enabled = false;
+            txtSMPrice.Enabled = false;
+            chkSMUnavailable.Enabled = false;
+            chkSMDisountable.Enabled = false;
+            chkSMInventoryCheck.Enabled = false;
+            chkSMNegativePrice.Enabled = false;
+            chkSMWithoutVAT.Enabled = false;
+
+            cmbSMSupplyShift.Enabled = false;
+            chkSMPrtName.Enabled = false;
+            chkSMPrtOrder.Enabled = false;
+
+            for (int i = 0; i < 15; i++)
+            {
+                txtSubMenuEngName[i].Enabled = false;
+                txtSubMenuOtherName[i].Enabled = false;
+            }
+
+            btnSubMenuDel.Enabled = true;
+            btnSubMenuEdit.Enabled = true;
+            btnSubMenuSave.Enabled = false;
+            btnSubMenuAdd.Enabled = true;
+
+            new OnLoadSystemCommonData().GetTAMenuItemSubMenuList();
+            dgvSubMenu.DataSource = CommonData.TaMenuItemSubMenuList;
         }
 
         private void btnSubMenuExit_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void dgvSubMenu_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvSubMenu.RowCount == 0)
+            {
+                MessageBox.Show("This table is empty,please add data first!");
+                return;
+            }
+
+            if (dgvSubMenu.CurrentRow == null) return;
+
+            if (dgvSubMenu.CurrentRow.Index < 0) return;
+
+            txtSMDishCode.Text = dgvSubMenu.CurrentRow.Cells[1].Value.ToString();
+            txtSMDisplayPosition.Text = dgvSubMenu.CurrentRow.Cells[2].Value.ToString();
+            txtSMEngName.Text = dgvSubMenu.CurrentRow.Cells[3].Value.ToString();
+            txtSMOtherName.Text = dgvSubMenu.CurrentRow.Cells[4].Value.ToString();
+            txtSMPrice.Text = dgvSubMenu.CurrentRow.Cells[5].Value.ToString();
+
+            chkSMUnavailable.Checked = dgvSubMenu.CurrentRow.Cells[6].Value.ToString().Equals("Y");
+            chkSMDisountable.Checked = dgvSubMenu.CurrentRow.Cells[7].Value.ToString().Equals("Y");
+            chkSMInventoryCheck.Checked = dgvSubMenu.CurrentRow.Cells[8].Value.ToString().Equals("Y");
+            chkSMNegativePrice.Checked = dgvSubMenu.CurrentRow.Cells[9].Value.ToString().Equals("Y");
+            chkSMWithoutVAT.Checked = dgvSubMenu.CurrentRow.Cells[10].Value.ToString().Equals("Y");
+
+            cmbSMSupplyShift.Text = dgvSubMenu.CurrentRow.Cells[11].Value.ToString();
+            chkSMPrtName.Checked = dgvSubMenu.CurrentRow.Cells[12].Value.ToString().Equals("Y");
+            chkSMPrtOrder.Checked = dgvSubMenu.CurrentRow.Cells[13].Value.ToString().Equals("Y");
+
+            for (int j = 0; j < 15; j++)
+            {
+                txtSubMenuEngName[j].Text = "";
+                txtSubMenuOtherName[j].Text = "";
+            }
+
+            new OnLoadSystemCommonData().GetTAMenuItemSubMenuDetailList();
+            var taMenuItemSubMenuDetail =
+                CommonData.TaMenuItemSubMenuDetailList.Where(
+                    s => s.SubMenuID.Equals(dgvSubMenu.CurrentRow.Cells[0].Value.ToString()));
+
+            int i = 0;
+            foreach (var taMenuItemSubMenuDetailInfo in taMenuItemSubMenuDetail)
+            {
+                txtSubMenuEngName[i].Text = taMenuItemSubMenuDetailInfo.EnglishName;
+                txtSubMenuOtherName[i].Text = taMenuItemSubMenuDetailInfo.OtherName;
+                i++;
+            }
+
         }
     }
 }
