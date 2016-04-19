@@ -58,5 +58,7 @@ namespace SuperPOS.DAL
         public void GetTAMenuItemSubMenuDetailList() { CommonData.TaMenuItemSubMenuDetailList = _control.SelectAll<TAMenuItemSubMenuDetailInfo>(); }
 
         public void GetTaTblSetup() { CommonData.TaTblSetupList = _control.SelectAll<TATblSetupInfo>(); }
+
+        public void GetExtraMenuEdit() { CommonData.TaExtraMenuEditList = _control.SelectAll<TAExtraMenuEditInfo>(); }
     }
 }
