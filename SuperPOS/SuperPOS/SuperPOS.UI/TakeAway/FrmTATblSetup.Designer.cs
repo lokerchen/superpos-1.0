@@ -674,6 +674,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -708,6 +709,7 @@
             // 
             // txtBtnNum
             // 
+            this.txtBtnNum.Enabled = false;
             this.txtBtnNum.Location = new System.Drawing.Point(128, 28);
             this.txtBtnNum.Name = "txtBtnNum";
             this.txtBtnNum.Size = new System.Drawing.Size(115, 23);
