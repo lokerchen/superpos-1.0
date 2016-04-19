@@ -48,13 +48,13 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgvExtraMenu = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDisplayPosition = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtOtherName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEngName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBtnName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(813, 506);
+            this.groupBox1.Size = new System.Drawing.Size(749, 494);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Extra Menu Edit";
@@ -118,6 +118,7 @@
             this.btnSave.TabIndex = 30;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDel
             // 
@@ -131,6 +132,7 @@
             this.btnDel.TabIndex = 29;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnEdit
             // 
@@ -144,6 +146,7 @@
             this.btnEdit.TabIndex = 28;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -157,6 +160,7 @@
             this.btnAdd.TabIndex = 27;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // groupBox5
             // 
@@ -170,7 +174,7 @@
             this.groupBox5.Controls.Add(this.btnBean);
             this.groupBox5.Controls.Add(this.btnVegetable2);
             this.groupBox5.Controls.Add(this.btnVegetable);
-            this.groupBox5.Location = new System.Drawing.Point(652, 13);
+            this.groupBox5.Location = new System.Drawing.Point(594, 13);
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
@@ -181,6 +185,7 @@
             // btnOthers
             // 
             this.btnOthers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnOthers.Enabled = false;
             this.btnOthers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnOthers.ForeColor = System.Drawing.Color.White;
             this.btnOthers.Location = new System.Drawing.Point(24, 425);
@@ -194,6 +199,7 @@
             // btnCooking
             // 
             this.btnCooking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnCooking.Enabled = false;
             this.btnCooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCooking.ForeColor = System.Drawing.Color.White;
             this.btnCooking.Location = new System.Drawing.Point(24, 380);
@@ -207,6 +213,7 @@
             // btnFruit
             // 
             this.btnFruit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnFruit.Enabled = false;
             this.btnFruit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFruit.ForeColor = System.Drawing.Color.White;
             this.btnFruit.Location = new System.Drawing.Point(24, 335);
@@ -220,6 +227,7 @@
             // btnTaste
             // 
             this.btnTaste.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnTaste.Enabled = false;
             this.btnTaste.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnTaste.ForeColor = System.Drawing.Color.White;
             this.btnTaste.Location = new System.Drawing.Point(24, 290);
@@ -233,6 +241,7 @@
             // btnSauce
             // 
             this.btnSauce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSauce.Enabled = false;
             this.btnSauce.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSauce.ForeColor = System.Drawing.Color.White;
             this.btnSauce.Location = new System.Drawing.Point(24, 245);
@@ -246,6 +255,7 @@
             // btnSeafood
             // 
             this.btnSeafood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSeafood.Enabled = false;
             this.btnSeafood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSeafood.ForeColor = System.Drawing.Color.White;
             this.btnSeafood.Location = new System.Drawing.Point(24, 200);
@@ -259,6 +269,7 @@
             // btnMeat
             // 
             this.btnMeat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnMeat.Enabled = false;
             this.btnMeat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMeat.ForeColor = System.Drawing.Color.White;
             this.btnMeat.Location = new System.Drawing.Point(24, 155);
@@ -272,6 +283,7 @@
             // btnBean
             // 
             this.btnBean.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnBean.Enabled = false;
             this.btnBean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnBean.ForeColor = System.Drawing.Color.White;
             this.btnBean.Location = new System.Drawing.Point(24, 110);
@@ -285,6 +297,7 @@
             // btnVegetable2
             // 
             this.btnVegetable2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnVegetable2.Enabled = false;
             this.btnVegetable2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVegetable2.ForeColor = System.Drawing.Color.White;
             this.btnVegetable2.Location = new System.Drawing.Point(24, 65);
@@ -298,6 +311,7 @@
             // btnVegetable
             // 
             this.btnVegetable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnVegetable.Enabled = false;
             this.btnVegetable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVegetable.ForeColor = System.Drawing.Color.White;
             this.btnVegetable.Location = new System.Drawing.Point(24, 20);
@@ -315,7 +329,7 @@
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(359, 471);
+            this.groupBox4.Size = new System.Drawing.Size(301, 471);
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             // 
@@ -325,20 +339,22 @@
             this.dgvExtraMenu.Location = new System.Drawing.Point(16, 17);
             this.dgvExtraMenu.MultiSelect = false;
             this.dgvExtraMenu.Name = "dgvExtraMenu";
+            this.dgvExtraMenu.ReadOnly = true;
             this.dgvExtraMenu.RowTemplate.Height = 23;
             this.dgvExtraMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvExtraMenu.Size = new System.Drawing.Size(331, 448);
+            this.dgvExtraMenu.Size = new System.Drawing.Size(274, 448);
             this.dgvExtraMenu.TabIndex = 0;
+            this.dgvExtraMenu.SelectionChanged += new System.EventHandler(this.dgvExtraMenu_SelectionChanged);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.textBox5);
+            this.groupBox3.Controls.Add(this.txtDisplayPosition);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.textBox4);
+            this.groupBox3.Controls.Add(this.txtPrice);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox3);
+            this.groupBox3.Controls.Add(this.txtOtherName);
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.txtEngName);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Location = new System.Drawing.Point(16, 176);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
@@ -349,13 +365,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Edit Item";
             // 
-            // textBox5
+            // txtDisplayPosition
             // 
-            this.textBox5.Location = new System.Drawing.Point(127, 120);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(116, 23);
-            this.textBox5.TabIndex = 10;
+            this.txtDisplayPosition.Enabled = false;
+            this.txtDisplayPosition.Location = new System.Drawing.Point(127, 120);
+            this.txtDisplayPosition.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDisplayPosition.Name = "txtDisplayPosition";
+            this.txtDisplayPosition.Size = new System.Drawing.Size(116, 23);
+            this.txtDisplayPosition.TabIndex = 10;
             // 
             // label5
             // 
@@ -367,13 +384,14 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Display Position";
             // 
-            // textBox4
+            // txtPrice
             // 
-            this.textBox4.Location = new System.Drawing.Point(127, 86);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(116, 23);
-            this.textBox4.TabIndex = 8;
+            this.txtPrice.Enabled = false;
+            this.txtPrice.Location = new System.Drawing.Point(127, 86);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(116, 23);
+            this.txtPrice.TabIndex = 8;
             // 
             // label4
             // 
@@ -385,13 +403,14 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Price";
             // 
-            // textBox3
+            // txtOtherName
             // 
-            this.textBox3.Location = new System.Drawing.Point(127, 53);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(116, 23);
-            this.textBox3.TabIndex = 6;
+            this.txtOtherName.Enabled = false;
+            this.txtOtherName.Location = new System.Drawing.Point(127, 53);
+            this.txtOtherName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtOtherName.Name = "txtOtherName";
+            this.txtOtherName.Size = new System.Drawing.Size(116, 23);
+            this.txtOtherName.TabIndex = 6;
             // 
             // label3
             // 
@@ -403,13 +422,14 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Other Name";
             // 
-            // textBox2
+            // txtEngName
             // 
-            this.textBox2.Location = new System.Drawing.Point(127, 22);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(116, 23);
-            this.textBox2.TabIndex = 4;
+            this.txtEngName.Enabled = false;
+            this.txtEngName.Location = new System.Drawing.Point(127, 22);
+            this.txtEngName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEngName.Name = "txtEngName";
+            this.txtEngName.Size = new System.Drawing.Size(116, 23);
+            this.txtEngName.TabIndex = 4;
             // 
             // label2
             // 
@@ -423,7 +443,8 @@
             // 
             // txtBtnName
             // 
-            this.txtBtnName.Location = new System.Drawing.Point(152, 145);
+            this.txtBtnName.Enabled = false;
+            this.txtBtnName.Location = new System.Drawing.Point(143, 145);
             this.txtBtnName.Margin = new System.Windows.Forms.Padding(4);
             this.txtBtnName.Name = "txtBtnName";
             this.txtBtnName.Size = new System.Drawing.Size(116, 23);
@@ -432,7 +453,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 154);
+            this.label1.Location = new System.Drawing.Point(56, 151);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 17);
@@ -454,6 +475,7 @@
             // chkDrinkItem
             // 
             this.chkDrinkItem.AutoSize = true;
+            this.chkDrinkItem.Enabled = false;
             this.chkDrinkItem.Location = new System.Drawing.Point(137, 24);
             this.chkDrinkItem.Margin = new System.Windows.Forms.Padding(4);
             this.chkDrinkItem.Name = "chkDrinkItem";
@@ -461,10 +483,12 @@
             this.chkDrinkItem.TabIndex = 1;
             this.chkDrinkItem.Text = "Drink Item";
             this.chkDrinkItem.UseVisualStyleBackColor = true;
+            this.chkDrinkItem.CheckedChanged += new System.EventHandler(this.chkDrinkItem_CheckedChanged);
             // 
             // chkTasteItem
             // 
             this.chkTasteItem.AutoSize = true;
+            this.chkTasteItem.Enabled = false;
             this.chkTasteItem.Location = new System.Drawing.Point(18, 24);
             this.chkTasteItem.Margin = new System.Windows.Forms.Padding(4);
             this.chkTasteItem.Name = "chkTasteItem";
@@ -478,7 +502,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(842, 531);
+            this.ClientSize = new System.Drawing.Size(778, 523);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -505,13 +529,13 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDisplayPosition;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtOtherName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEngName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBtnName;
         private System.Windows.Forms.Label label1;

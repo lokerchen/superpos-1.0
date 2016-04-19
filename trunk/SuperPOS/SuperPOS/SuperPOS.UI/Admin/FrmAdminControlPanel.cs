@@ -157,7 +157,8 @@ namespace SuperPOS.UI.Admin
                 case "205":
                     if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
                     {
-
+                        FrmTAExtraMenuEdit frmTaExtraMenuEdit = new FrmTAExtraMenuEdit(userInfo);
+                        frmTaExtraMenuEdit.ShowDialog();
                     }
                     else MessageBox.Show(strMsg);
                     break;
