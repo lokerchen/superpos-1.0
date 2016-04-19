@@ -50,6 +50,8 @@ namespace SuperPOS.DAL
             onLoad.GetTAMenuItemTHList();
             onLoad.GetTAMenuItemSubMenuList();
             onLoad.GetTAMenuItemSubMenuDetailList();
+            //Table Setup
+            onLoad.GetTaTblSetup();
         }
         #endregion
     }
