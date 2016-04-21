@@ -38,5 +38,8 @@ namespace SuperPOS.Domain.Entities
         //Remark
         [XmlElement(ElementName = "DishCode")]
         public virtual string DishCode { get; set; }
+
+        [XmlElement(ElementName = "Remark")]
+        public virtual string Remark { get; set; }
     }
 }
