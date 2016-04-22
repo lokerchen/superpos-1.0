@@ -432,6 +432,10 @@
             this.btnSubMenuSave = new System.Windows.Forms.Button();
             this.btnSubMenuDel = new System.Windows.Forms.Button();
             this.btnSubMenuAdd = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.btnImportMenu = new System.Windows.Forms.Button();
+            this.btnImportMenuCate = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -462,6 +466,8 @@
             this.groupBox17.SuspendLayout();
             this.groupBox16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubMenu)).BeginInit();
+            this.tabPage6.SuspendLayout();
+            this.groupBox19.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -481,6 +487,7 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.Location = new System.Drawing.Point(19, 22);
             this.tabControl1.Name = "tabControl1";
@@ -1241,7 +1248,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(967, 600);
+            this.tabPage2.Size = new System.Drawing.Size(892, 600);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Second Choices";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2074,7 +2081,7 @@
             this.tabPage3.Controls.Add(this.groupBox11);
             this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(967, 600);
+            this.tabPage3.Size = new System.Drawing.Size(892, 600);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Third Choices";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -2907,7 +2914,7 @@
             this.tabPage4.Controls.Add(this.groupBox14);
             this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(967, 600);
+            this.tabPage4.Size = new System.Drawing.Size(892, 600);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Taste Handling";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -3783,7 +3790,7 @@
             this.groupBox18.Controls.Add(this.label46);
             this.groupBox18.Controls.Add(this.label47);
             this.groupBox18.Controls.Add(this.txtDishEngName1);
-            this.groupBox18.Location = new System.Drawing.Point(632, 20);
+            this.groupBox18.Location = new System.Drawing.Point(602, 20);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(297, 558);
             this.groupBox18.TabIndex = 56;
@@ -4375,6 +4382,55 @@
             this.btnSubMenuAdd.UseVisualStyleBackColor = false;
             this.btnSubMenuAdd.Click += new System.EventHandler(this.btnSubMenuAdd_Click);
             // 
+            // tabPage6
+            // 
+            this.tabPage6.Controls.Add(this.groupBox19);
+            this.tabPage6.Location = new System.Drawing.Point(4, 26);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(967, 600);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "Menu Item & Menu Category Import";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.btnImportMenuCate);
+            this.groupBox19.Controls.Add(this.btnImportMenu);
+            this.groupBox19.Location = new System.Drawing.Point(49, 42);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(882, 508);
+            this.groupBox19.TabIndex = 0;
+            this.groupBox19.TabStop = false;
+            // 
+            // btnImportMenu
+            // 
+            this.btnImportMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnImportMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImportMenu.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnImportMenu.ForeColor = System.Drawing.Color.White;
+            this.btnImportMenu.Location = new System.Drawing.Point(188, 128);
+            this.btnImportMenu.Name = "btnImportMenu";
+            this.btnImportMenu.Size = new System.Drawing.Size(515, 81);
+            this.btnImportMenu.TabIndex = 0;
+            this.btnImportMenu.Text = "Import Menu from xls/xlsx file";
+            this.btnImportMenu.UseVisualStyleBackColor = false;
+            this.btnImportMenu.Click += new System.EventHandler(this.btnImportMenu_Click);
+            // 
+            // btnImportMenuCate
+            // 
+            this.btnImportMenuCate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnImportMenuCate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImportMenuCate.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnImportMenuCate.ForeColor = System.Drawing.Color.White;
+            this.btnImportMenuCate.Location = new System.Drawing.Point(188, 227);
+            this.btnImportMenuCate.Name = "btnImportMenuCate";
+            this.btnImportMenuCate.Size = new System.Drawing.Size(515, 81);
+            this.btnImportMenuCate.TabIndex = 2;
+            this.btnImportMenuCate.Text = "Import Menu Category from xls/xlsx file";
+            this.btnImportMenuCate.UseVisualStyleBackColor = false;
+            this.btnImportMenuCate.Click += new System.EventHandler(this.btnImportMenuCate_Click);
+            // 
             // FrmTAMenuItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -4432,6 +4488,8 @@
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubMenu)).EndInit();
+            this.tabPage6.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -4842,5 +4900,9 @@
         private System.Windows.Forms.TextBox txtDishEngName12;
         private System.Windows.Forms.TextBox txtDishOtherName11;
         private System.Windows.Forms.TextBox txtDishEngName11;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.Button btnImportMenuCate;
+        private System.Windows.Forms.Button btnImportMenu;
     }
 }

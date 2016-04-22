@@ -1736,5 +1736,29 @@ namespace SuperPOS.UI.TakeAway
             }
 
         }
+
+        private void btnImportMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnImportMenuCate_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = false;
+            fileDialog.Title = "Please select file";
+            fileDialog.Filter = "Images|*.xls;*.bmp;*.xlsx";
+
+            string strExcelFilePath = "";
+            if (fileDialog.ShowDialog() == DialogResult.OK) { strExcelFilePath = fileDialog.FileName; }
+
+            if (!string.IsNullOrEmpty(strExcelFilePath))
+            {
+                if (DALCommon.ImportMenuCate(strExcelFilePath, "TA CATE"))
+                    MessageBox.Show("Data import is successful!");
+                else
+                    MessageBox.Show("Data import failed!");
+            }
+        }
     }
 }
