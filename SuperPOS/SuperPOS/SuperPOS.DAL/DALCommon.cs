@@ -13,6 +13,15 @@ namespace SuperPOS.DAL
     {
         private static readonly EntityControl _control = new EntityControl();
 
+        //Menu Item每页大小
+        public static int PAGESIZE_MENUITEM = 16;
+
+        //Menu Category每页大小
+        public static int PAGESIZE_MENUCATE = 35;
+
+        //页码
+        private static int PAGE_NUM = 0;
+
         #region 加载所有系统数据，所有系统List
         /// <summary>
         ///  加载所有系统数据，所有系统List
@@ -100,9 +109,9 @@ namespace SuperPOS.DAL
         }
         #endregion
 
-        #region 导入数据到数据表
+        #region 导入数据到数据表 Menu Category
         /// <summary>
-        /// 导入数据到数据库
+        /// 导入数据到数据库Menu Category
         /// </summary>    
         /// <param name="outFile">文件</param>
         /// <returns></returns>
@@ -121,13 +130,19 @@ namespace SuperPOS.DAL
                 //添加数据
                 foreach (DataRow item in dt.Rows)
                 {
-                    TAMenuCategoryInfo taMenuCategoryInfo = new TAMenuCategoryInfo();
-                    taMenuCategoryInfo.SystemKey = Guid.NewGuid();
-                    taMenuCategoryInfo.Remark = item[0].ToString();
-                    taMenuCategoryInfo.DisplayPosition = item[1].ToString();
-                    taMenuCategoryInfo.EnglishName = item[2].ToString();
-                    taMenuCategoryInfo.OtherName = item[3].ToString();
-                    _control.AddEntity(taMenuCategoryInfo);
+                    if (!string.IsNullOrEmpty(item[0].ToString())
+                        && !string.IsNullOrEmpty(item[1].ToString())
+                        && !string.IsNullOrEmpty(item[2].ToString())
+                        && !string.IsNullOrEmpty(item[3].ToString()))
+                    {
+                        TAMenuCategoryInfo taMenuCategoryInfo = new TAMenuCategoryInfo();
+                        taMenuCategoryInfo.SystemKey = Guid.NewGuid();
+                        taMenuCategoryInfo.Remark = item[0].ToString();
+                        taMenuCategoryInfo.DisplayPosition = item[1].ToString();
+                        taMenuCategoryInfo.EnglishName = item[2].ToString();
+                        taMenuCategoryInfo.OtherName = item[3].ToString();
+                        _control.AddEntity(taMenuCategoryInfo);
+                    }
                 }
                 return true;
             }
@@ -137,6 +152,88 @@ namespace SuperPOS.DAL
                 string aa = ex.Message;
                 return false;
             }
+        }
+        #endregion
+
+        #region 导入数据到数据表MenuItem
+        /// <summary>
+        /// 导入数据到数据库Menu Item
+        /// </summary>    
+        /// <param name="outFile">文件</param>
+        /// <returns></returns>
+        public static bool ImportMenuItem(string importFile, string SheetName)
+        {
+            DataTable dt = GetExcelFileData(importFile, SheetName).Tables[0];
+            try
+            {
+                //清除Menu Cate中的数据
+                new OnLoadSystemCommonData().GetTAMenuItemList();
+                foreach (var taMenuItem in CommonData.TaMenuItemList)
+                {
+                    _control.DeleteEntity(taMenuItem);
+                }
+
+                //添加数据
+                foreach (DataRow item in dt.Rows)
+                {
+                    if (!string.IsNullOrEmpty(item[0].ToString())
+                        && !string.IsNullOrEmpty(item[1].ToString())
+                        && !string.IsNullOrEmpty(item[2].ToString())
+                        && !string.IsNullOrEmpty(item[3].ToString())
+                        && !string.IsNullOrEmpty(item[4].ToString()))
+                    {
+                        new OnLoadSystemCommonData().GetTAMenuCategory();
+                        var qList = CommonData.TaMenuCategoryList.Where(
+                                s => s.Remark.Equals(string.IsNullOrEmpty(item[0].ToString())));
+                        if (qList.Any())
+                        {
+                            TAMenuItemInfo taMenuItemInfo = new TAMenuItemInfo();
+                            taMenuItemInfo.SystemKey = Guid.NewGuid();
+                            taMenuItemInfo.DishCode = item[1].ToString();
+                            taMenuItemInfo.EnglishName = item[2].ToString();
+                            taMenuItemInfo.OtherName = item[3].ToString();
+                            taMenuItemInfo.wRegular = item[4].ToString();
+                            taMenuItemInfo.MenuCateID = qList.FirstOrDefault().EnglishName;
+                            _control.AddEntity(taMenuItemInfo);
+                        }
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // MessBox.Show("");
+                string aa = ex.Message;
+                return false;
+            }
+        }
+        #endregion
+
+        #region Menu Item 分页
+        /// <summary>
+        /// Menu Item 分页
+        /// </summary>
+        /// <param name="iPageNum">页码</param>
+        /// <returns></returns>
+        public static List<TAMenuItemInfo> GetListQueryPageMenuItem(int iPageNum)
+        {
+            new OnLoadSystemCommonData().GetTAMenuItemList();
+
+            return CommonData.TaMenuItemList.Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
+        }
+        #endregion
+
+        #region Menu Category分页
+        /// <summary>
+        /// Menu Category分页
+        /// </summary>
+        /// <param name="iPageNum">页码</param>
+        /// <returns></returns>
+        public static List<TAMenuCategoryInfo> GetListQueryPageMenuCate(int iPageNum)
+        {
+            new OnLoadSystemCommonData().GetTAMenuCategory();
+
+            return CommonData.TaMenuCategoryList.Skip(PAGESIZE_MENUCATE * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
         }
         #endregion
     }
