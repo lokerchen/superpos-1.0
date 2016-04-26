@@ -96,7 +96,8 @@ namespace SuperPOS.UI
         {
             if (sysControlInfo.IsQuickFood.Equals("Y"))
             {
-                
+                FrmTAMain frmTaMain = new FrmTAMain(userInfo);
+                frmTaMain.ShowDialog();
             }
         }
         #endregion
@@ -128,7 +129,7 @@ namespace SuperPOS.UI
         #region Show Order按钮
         private void btnShowOrder_Click(object sender, EventArgs e)
         {
-            Hide();
+            //Hide();
             FrmTAShowOrder frmShowOrder = new FrmTAShowOrder(userInfo);
             frmShowOrder.ShowDialog();
         }
