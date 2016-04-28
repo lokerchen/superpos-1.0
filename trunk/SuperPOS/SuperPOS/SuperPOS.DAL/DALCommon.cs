@@ -195,7 +195,7 @@ namespace SuperPOS.DAL
                             taMenuItemInfo.EnglishName = item[3].ToString();
                             taMenuItemInfo.OtherName = item[4].ToString();
                             taMenuItemInfo.wRegular = item[5].ToString();
-                            taMenuItemInfo.MenuCateID = qList.FirstOrDefault().EnglishName;
+                            taMenuItemInfo.MenuCateID = qList.FirstOrDefault().EnglishName + ",";
                             _control.AddEntity(taMenuItemInfo);
                         }
                     }
