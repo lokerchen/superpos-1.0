@@ -95,15 +95,23 @@ namespace SuperPOS.UI.TakeAway
 
             #region Menu Item按钮填充
 
-            SetMenuItem(1, 1);
+            SetMenuItem(1, 1, "");
             SetMenuCate(1, 1);
 
             #endregion
+
+            #region Menu Category按钮事件
+            for (int i = 0; i < 35; i++) { btnMC[i].Click += btnMC_Click; }
+            #endregion
+
+            #region Menu Item按钮事件
+            for (int i = 0; i < 16; i++) { btnMI[i].Click += btnMI_Click; }
+            #endregion
         }
 
-        private void SetMenuItem(int i, int iPage)
+        private void SetMenuItem(int i, int iPage, string strMenuCate)
         {
-            var miList = DALCommon.GetListQueryPageMenuItem(iPage);
+            var miList = DALCommon.GetListQueryPageMenuItem(iPage, strMenuCate);
 
             int j = 0;
             foreach (var mi in miList)
@@ -143,6 +151,17 @@ namespace SuperPOS.UI.TakeAway
         private void btnMILeft_Click(object sender, EventArgs e)
         {
             I_MI_PAGE = I_MI_PAGE <= 1 ? 1 : I_MI_PAGE - 1;
+        }
+
+        private void btnMC_Click(object sender, EventArgs e)
+        {
+            Button btn = sender as Button;
+            SetMenuItem(1, 1, btn.Text);
+        }
+
+        private void btnMI_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
