@@ -951,6 +951,31 @@ namespace SuperPOS.UI.TakeAway
 
         private void BindCmbData()
         {
+            //foreach (var dc in CommonData.TaMenuCategoryList)
+            //{
+            //    if (!(!string.IsNullOrEmpty(dc.SystemKey.ToString()) && string.IsNullOrEmpty(dc.EnglishName)))
+            //    {
+            //        TAMenuItemInfo taMenuItemInfo = new TAMenuItemInfo();
+            //        taMenuItemInfo.SystemKey = Guid.NewGuid();
+            //        taMenuItemInfo.EnglishName = "";
+            //        taMenuItemInfo.OtherName = "";
+            //        taMenuItemInfo.DishCode = "";
+            //        _control.AddEntity(taMenuItemInfo);
+            //    }
+            //}
+
+            if (!CommonData.TaMenuCategoryList.Any(s => !string.IsNullOrEmpty(s.SystemKey.ToString()) && string.IsNullOrEmpty(s.EnglishName)))
+            {
+                TAMenuCategoryInfo taMenuCategoryInfo = new TAMenuCategoryInfo();
+                taMenuCategoryInfo.SystemKey = Guid.NewGuid();
+                taMenuCategoryInfo.EnglishName = "";
+                taMenuCategoryInfo.OtherName = "";
+                taMenuCategoryInfo.DishCode = "";
+                _control.AddEntity(taMenuCategoryInfo);
+            }
+
+
+            new OnLoadSystemCommonData().GetTAMenuCategory();
             var lstDeptCate =
                 CommonData.TaMenuCategoryList.OrderBy(s => s.DisplayPosition)
                     .Select(lstDC => new {DeptCode = lstDC.EnglishName, SysKey = lstDC.SystemKey});
@@ -960,7 +985,6 @@ namespace SuperPOS.UI.TakeAway
             cmbBoxMenuCate1.DataSource = lstDeptCate.ToList();
             cmbBoxMenuCate1.ValueMember = "SysKey";
             cmbBoxMenuCate1.DisplayMember = "DeptCode";
-
 
             cmbBoxMenuCate2.DataSource = lstDeptCate.ToList();
             cmbBoxMenuCate2.ValueMember = "SysKey";
@@ -1069,21 +1093,27 @@ namespace SuperPOS.UI.TakeAway
             string[] strMenuCate = dgvDAMenu.CurrentRow.Cells[22].Value.ToString().Split(',');
             if (strMenuCate.Length <= 0)
             {
-                cmbBoxMenuCate1.SelectedIndex = 0;
-                cmbBoxMenuCate2.SelectedIndex = 0;
-                cmbBoxMenuCate3.SelectedIndex = 0;
+                //cmbBoxMenuCate1.SelectedIndex = 0;
+                //cmbBoxMenuCate2.SelectedIndex = 0;
+                //cmbBoxMenuCate3.SelectedIndex = 0;
+                cmbBoxMenuCate1.Text = "";
+                cmbBoxMenuCate2.Text = "";
+                cmbBoxMenuCate3.Text = "";
             }
             else if (strMenuCate.Length == 1)
             {
                 cmbBoxMenuCate1.Text = strMenuCate[0];
-                cmbBoxMenuCate2.SelectedIndex = 0;
-                cmbBoxMenuCate3.SelectedIndex = 0;
+                //cmbBoxMenuCate2.SelectedIndex = 0;
+                //cmbBoxMenuCate3.SelectedIndex = 0;
+                cmbBoxMenuCate2.Text = "";
+                cmbBoxMenuCate3.Text = "";
             }
             else if (strMenuCate.Length == 2)
             {
                 cmbBoxMenuCate1.Text = strMenuCate[0];
                 cmbBoxMenuCate2.Text = strMenuCate[1];
-                cmbBoxMenuCate3.SelectedIndex = 0;
+                //cmbBoxMenuCate3.SelectedIndex = 0;
+                cmbBoxMenuCate3.Text = "";
             }
             else if (strMenuCate.Length == 3)
             {
@@ -1265,19 +1295,18 @@ namespace SuperPOS.UI.TakeAway
 
         private void cmDABoxDish_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvDAMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmDABoxDish.Text)).ToList();
+            dgvDAMenu.DataSource = string.IsNullOrEmpty(cmDABoxDish.Text) ? CommonData.TaMenuItemList.ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmDABoxDish.Text)).ToList();
         }
 
         private void cmSCBoxDish_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvSCMenu.DataSource =
-                CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmSCBoxDish.Text)).ToList();
+            dgvSCMenu.DataSource = string.IsNullOrEmpty(cmSCBoxDish.Text) ? CommonData.TaMenuItemList.ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmSCBoxDish.Text)).ToList();
         }
 
         private void cmTCBoxDish_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvTCMenu.DataSource =
-                CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmTCBoxDish.Text)).ToList();
+            //dgvTCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmTCBoxDish.Text)).ToList();
+            dgvTCMenu.DataSource = string.IsNullOrEmpty(cmTCBoxDish.Text) ? CommonData.TaMenuItemList.ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmTCBoxDish.Text)).ToList();
         }
 
         private void btnSCExit_Click(object sender, EventArgs e)
@@ -1778,10 +1807,9 @@ namespace SuperPOS.UI.TakeAway
 
             if (!string.IsNullOrEmpty(strExcelFilePath))
             {
-                if (DALCommon.ImportMenuItem(strExcelFilePath, "TA"))
-                    MessageBox.Show("Data import is successful!");
-                else
-                    MessageBox.Show("Data import failed!");
+                MessageBox.Show(DALCommon.ImportMenuItem(strExcelFilePath, "TA")
+                    ? "Data import is successful!"
+                    : "Data import failed!");
             }
         }
 
@@ -1797,10 +1825,9 @@ namespace SuperPOS.UI.TakeAway
 
             if (!string.IsNullOrEmpty(strExcelFilePath))
             {
-                if (DALCommon.ImportMenuCate(strExcelFilePath, "TA CATE"))
-                    MessageBox.Show("Data import is successful!");
-                else
-                    MessageBox.Show("Data import failed!");
+                MessageBox.Show(DALCommon.ImportMenuCate(strExcelFilePath, "TA CATE")
+                    ? "Data import is successful!"
+                    : "Data import failed!");
             }
         }
 
