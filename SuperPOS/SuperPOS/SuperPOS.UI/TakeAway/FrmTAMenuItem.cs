@@ -303,56 +303,41 @@ namespace SuperPOS.UI.TakeAway
 
             #region DataGrid控制
 
-            for (int i = 4; i < 23; i++)
-            {
-                dgvDAMenu.Columns[i].Visible = false;
-            }
             dgvDAMenu.Columns[0].Visible = false;
             dgvDAMenu.Columns[1].HeaderText = @"Code";
             dgvDAMenu.Columns[1].Width = 40;
             dgvDAMenu.Columns[2].Visible = false;
             dgvDAMenu.Columns[3].HeaderText = @"Item Name";
+            for (int i = 4; i < 23; i++) { dgvDAMenu.Columns[i].Visible = false; }
 
-            for (int i = 4; i < 23; i++)
-            {
-                dgvSCMenu.Columns[i].Visible = false;
-            }
             dgvSCMenu.Columns[0].Visible = false;
             dgvSCMenu.Columns[1].HeaderText = @"Code";
             dgvSCMenu.Columns[1].Width = 40;
             dgvSCMenu.Columns[2].Visible = false;
             dgvSCMenu.Columns[3].HeaderText = @"ItemName";
+            for (int i = 4; i < 23; i++) { dgvSCMenu.Columns[i].Visible = false; }
 
-            for (int i = 4; i < 23; i++)
-            {
-                dgvTCMenu.Columns[i].Visible = false;
-            }
             dgvTCMenu.Columns[0].Visible = false;
             dgvTCMenu.Columns[1].HeaderText = @"Code";
             dgvTCMenu.Columns[1].Width = 40;
             dgvTCMenu.Columns[2].Visible = false;
             dgvTCMenu.Columns[3].HeaderText = @"Item Name";
+            for (int i = 4; i < 23; i++) { dgvTCMenu.Columns[i].Visible = false; }
 
-            for (int i = 4; i < 23; i++)
-            {
-                dgvTHMenu.Columns[i].Visible = false;
-            }
             dgvTHMenu.Columns[0].Visible = false;
             dgvTHMenu.Columns[1].HeaderText = @"Code";
             dgvTHMenu.Columns[1].Width = 40;
             dgvTHMenu.Columns[2].Visible = false;
             dgvTHMenu.Columns[3].HeaderText = @"Item Name";
+            for (int i = 4; i < 23; i++) { dgvTHMenu.Columns[i].Visible = false; }
 
-            for (int i = 6; i < 14; i++)
-            {
-                dgvSubMenu.Columns[i].Visible = false;
-            }
             dgvSubMenu.Columns[0].Visible = false;
             dgvSubMenu.Columns[1].HeaderText = @"Code";
             dgvSubMenu.Columns[2].Visible = false;
             dgvSubMenu.Columns[3].HeaderText = @"Item Name";
             dgvSubMenu.Columns[4].Visible = false;
             dgvSubMenu.Columns[5].HeaderText = @"Price";
+            for (int i = 6; i < 14; i++) { dgvSubMenu.Columns[i].Visible = false; }
             #endregion
 
             #endregion

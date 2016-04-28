@@ -434,8 +434,8 @@
             this.btnSubMenuAdd = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.btnImportMenu = new System.Windows.Forms.Button();
             this.btnImportMenuCate = new System.Windows.Forms.Button();
+            this.btnImportMenu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -809,6 +809,7 @@
             // 
             // dgvDAMenu
             // 
+            this.dgvDAMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvDAMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDAMenu.Location = new System.Drawing.Point(10, 73);
             this.dgvDAMenu.Name = "dgvDAMenu";
@@ -1248,7 +1249,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 26);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(892, 600);
+            this.tabPage2.Size = new System.Drawing.Size(967, 600);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Second Choices";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1945,6 +1946,7 @@
             // 
             // dgvSCMenu
             // 
+            this.dgvSCMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSCMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSCMenu.Location = new System.Drawing.Point(10, 73);
             this.dgvSCMenu.Name = "dgvSCMenu";
@@ -2081,7 +2083,7 @@
             this.tabPage3.Controls.Add(this.groupBox11);
             this.tabPage3.Location = new System.Drawing.Point(4, 26);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(892, 600);
+            this.tabPage3.Size = new System.Drawing.Size(967, 600);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Third Choices";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -2778,6 +2780,7 @@
             // 
             // dgvTCMenu
             // 
+            this.dgvTCMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvTCMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTCMenu.Location = new System.Drawing.Point(10, 73);
             this.dgvTCMenu.Name = "dgvTCMenu";
@@ -2914,7 +2917,7 @@
             this.tabPage4.Controls.Add(this.groupBox14);
             this.tabPage4.Location = new System.Drawing.Point(4, 26);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(892, 600);
+            this.tabPage4.Size = new System.Drawing.Size(967, 600);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Taste Handling";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -3612,6 +3615,7 @@
             // 
             // dgvTHMenu
             // 
+            this.dgvTHMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvTHMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTHMenu.Location = new System.Drawing.Point(10, 73);
             this.dgvTHMenu.Name = "dgvTHMenu";
@@ -4303,6 +4307,7 @@
             // 
             // dgvSubMenu
             // 
+            this.dgvSubMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSubMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubMenu.Location = new System.Drawing.Point(13, 11);
             this.dgvSubMenu.Name = "dgvSubMenu";
@@ -4403,20 +4408,6 @@
             this.groupBox19.TabIndex = 0;
             this.groupBox19.TabStop = false;
             // 
-            // btnImportMenu
-            // 
-            this.btnImportMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnImportMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImportMenu.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnImportMenu.ForeColor = System.Drawing.Color.White;
-            this.btnImportMenu.Location = new System.Drawing.Point(188, 128);
-            this.btnImportMenu.Name = "btnImportMenu";
-            this.btnImportMenu.Size = new System.Drawing.Size(515, 81);
-            this.btnImportMenu.TabIndex = 0;
-            this.btnImportMenu.Text = "Import Menu from xls/xlsx file";
-            this.btnImportMenu.UseVisualStyleBackColor = false;
-            this.btnImportMenu.Click += new System.EventHandler(this.btnImportMenu_Click);
-            // 
             // btnImportMenuCate
             // 
             this.btnImportMenuCate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -4430,6 +4421,20 @@
             this.btnImportMenuCate.Text = "Import Menu Category from xls/xlsx file";
             this.btnImportMenuCate.UseVisualStyleBackColor = false;
             this.btnImportMenuCate.Click += new System.EventHandler(this.btnImportMenuCate_Click);
+            // 
+            // btnImportMenu
+            // 
+            this.btnImportMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnImportMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImportMenu.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnImportMenu.ForeColor = System.Drawing.Color.White;
+            this.btnImportMenu.Location = new System.Drawing.Point(188, 128);
+            this.btnImportMenu.Name = "btnImportMenu";
+            this.btnImportMenu.Size = new System.Drawing.Size(515, 81);
+            this.btnImportMenu.TabIndex = 0;
+            this.btnImportMenu.Text = "Import Menu from xls/xlsx file";
+            this.btnImportMenu.UseVisualStyleBackColor = false;
+            this.btnImportMenu.Click += new System.EventHandler(this.btnImportMenu_Click);
             // 
             // FrmTAMenuItem
             // 
