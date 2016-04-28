@@ -199,23 +199,23 @@ namespace SuperPOS.UI.TakeAway
 
             if (dgvCategory.CurrentRow.Index < 0) return;
             //ShiftCode
-            txtEnglishName.Text = dgvCategory.CurrentRow.Cells[1].Value.ToString();
+            txtEnglishName.Text = dgvCategory.CurrentRow.Cells[1].Value?.ToString() ?? "";
             //ShiftName
-            txtOtherName.Text = dgvCategory.CurrentRow.Cells[2].Value.ToString();
+            txtOtherName.Text = dgvCategory.CurrentRow.Cells[2].Value?.ToString() ?? "";
             //OtherName
-            txtDisplayPosition.Text = dgvCategory.CurrentRow.Cells[3].Value.ToString();
+            txtDisplayPosition.Text = dgvCategory.CurrentRow.Cells[3].Value?.ToString() ?? "";
 
             //cmbBoxDeptCode.SelectedItem = dgvCategory.CurrentRow.Cells[5].Value.ToString();
             var tc = CommonData.TaDeptCodeList.Select(lstDC => new {DeptCode = lstDC.DeptCode, SysKey = lstDC.SystemKey})
-                    .Where(s => s.DeptCode.Equals(dgvCategory.CurrentRow.Cells[5].Value.ToString()));
+                    .Where(s => s.DeptCode.Equals(dgvCategory.CurrentRow.Cells[5].Value?.ToString() ?? ""));
             if (tc.Any())
             {
                 cmbBoxDeptCode.Text = tc.FirstOrDefault().DeptCode;
             }
 
-            chkHotKey.Checked = dgvCategory.CurrentRow.Cells[6].Value.ToString().Equals("Y");
+            chkHotKey.Checked = dgvCategory.CurrentRow.Cells[6].Value?.ToString().Equals("Y") ?? false;
             
-            txtDishCode.Text = dgvCategory.CurrentRow.Cells[7].Value.ToString();
+            txtDishCode.Text = dgvCategory.CurrentRow.Cells[7].Value?.ToString() ?? "";
         }
 
         private void cmbBoxDeptCode_SelectedIndexChanged(object sender, EventArgs e)
