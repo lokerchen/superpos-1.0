@@ -351,6 +351,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAMenuItem.resx">
       <DependentUpon>FrmTAMenuItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTATblSetup.resx">
       <DependentUpon>FrmTATblSetup.cs</DependentUpon>
