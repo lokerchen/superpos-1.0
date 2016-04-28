@@ -1056,30 +1056,59 @@ namespace SuperPOS.UI.TakeAway
             if (dgvDAMenu.CurrentRow.Index < 0) return;
 
             txtDishCode.Text = dgvDAMenu.CurrentRow.Cells[1].Value.ToString();
-            txtDisPosition.Text = dgvDAMenu.CurrentRow.Cells[2].Value.ToString();
+            txtDisPosition.Text = dgvDAMenu.CurrentRow.Cells[2].Value?.ToString() ?? "";
             txtEngName.Text = dgvDAMenu.CurrentRow.Cells[3].Value.ToString();
             txtOtherName.Text = dgvDAMenu.CurrentRow.Cells[4].Value.ToString();
-            txtWLarge.Text = dgvDAMenu.CurrentRow.Cells[5].Value.ToString();
-            txtWRegular.Text = dgvDAMenu.CurrentRow.Cells[6].Value.ToString();
-            txtWSmall.Text = dgvDAMenu.CurrentRow.Cells[7].Value.ToString();
-            txtSLarge.Text = dgvDAMenu.CurrentRow.Cells[8].Value.ToString();
-            txtSRegular.Text = dgvDAMenu.CurrentRow.Cells[9].Value.ToString();
-            txtSSmall.Text = dgvDAMenu.CurrentRow.Cells[10].Value.ToString();
+            txtWLarge.Text = dgvDAMenu.CurrentRow.Cells[5].Value?.ToString() ?? "";
+            txtWRegular.Text = dgvDAMenu.CurrentRow.Cells[6].Value?.ToString() ?? "";
+            txtWSmall.Text = dgvDAMenu.CurrentRow.Cells[7].Value?.ToString() ?? "";
+            txtSLarge.Text = dgvDAMenu.CurrentRow.Cells[8].Value?.ToString() ?? "";
+            txtSRegular.Text = dgvDAMenu.CurrentRow.Cells[9].Value?.ToString() ?? "";
+            txtSSmall.Text = dgvDAMenu.CurrentRow.Cells[10].Value?.ToString() ?? "";
 
             string[] strMenuCate = dgvDAMenu.CurrentRow.Cells[22].Value.ToString().Split(',');
-            cmbBoxMenuCate1.Text = strMenuCate[0];
-            cmbBoxMenuCate2.Text = strMenuCate[1];
-            cmbBoxMenuCate3.Text = strMenuCate[2];
+            if (strMenuCate.Length <= 0)
+            {
+                cmbBoxMenuCate1.SelectedIndex = 0;
+                cmbBoxMenuCate2.SelectedIndex = 0;
+                cmbBoxMenuCate3.SelectedIndex = 0;
+            }
+            else if (strMenuCate.Length == 1)
+            {
+                cmbBoxMenuCate1.Text = strMenuCate[0];
+                cmbBoxMenuCate2.SelectedIndex = 0;
+                cmbBoxMenuCate3.SelectedIndex = 0;
+            }
+            else if (strMenuCate.Length == 2)
+            {
+                cmbBoxMenuCate1.Text = strMenuCate[0];
+                cmbBoxMenuCate2.Text = strMenuCate[1];
+                cmbBoxMenuCate3.SelectedIndex = 0;
+            }
+            else if (strMenuCate.Length == 3)
+            {
+                cmbBoxMenuCate1.Text = strMenuCate[0];
+                cmbBoxMenuCate2.Text = strMenuCate[1];
+                cmbBoxMenuCate3.Text = strMenuCate[2];
+            }
+            //if (strMenuCate.Length == 2) cmbBoxMenuCate2.Text = strMenuCate[1];
+            //if (strMenuCate.Length == 3) cmbBoxMenuCate3.Text = strMenuCate[2];
 
-            cmbBoxSplySft.Text = dgvDAMenu.CurrentRow.Cells[12].Value.ToString();
-            chkBoxPrtOrderByDept.Checked = dgvDAMenu.CurrentRow.Cells[13].Value.ToString().Equals("Y");
-            chkBoxPrtOrderX.Checked = dgvDAMenu.CurrentRow.Cells[14].Value.ToString().Equals("Y");
+            cmbBoxSplySft.Text = dgvDAMenu.CurrentRow.Cells[12].Value?.ToString() ?? "";
+            chkBoxPrtOrderByDept.Checked = dgvDAMenu.CurrentRow.Cells[13]?.ToString().Equals("Y") ?? false;
+            chkBoxPrtOrderX.Checked = dgvDAMenu.CurrentRow.Cells[14]?.ToString().Equals("Y") ?? false;
 
-            chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[16].Value.ToString().Equals("Y");
-            chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[17].Value.ToString().Equals("Y");
-            chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[18].Value.ToString().Equals("Y");
-            chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[19].Value.ToString().Equals("Y");
-            chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[20].Value.ToString().Equals("Y");
+            //chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[16].Value == null ? false : dgvDAMenu.CurrentRow.Cells[16].Value.ToString().Equals("Y");
+            //chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[17].Value == null ? false : dgvDAMenu.CurrentRow.Cells[16].Value.ToString().Equals("Y");
+            //chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[18].Value == null ? false : dgvDAMenu.CurrentRow.Cells[16].Value.ToString().Equals("Y");
+            //chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[19].Value == null ? false : dgvDAMenu.CurrentRow.Cells[16].Value.ToString().Equals("Y");
+            //chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[20].Value == null ? false : dgvDAMenu.CurrentRow.Cells[16].Value.ToString().Equals("Y");
+
+            chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[16].Value?.ToString().Equals("Y") ?? false;
+            chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[17].Value?.ToString().Equals("Y") ?? false;
+            chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[18].Value?.ToString().Equals("Y") ?? false;
+            chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[19].Value?.ToString().Equals("Y") ?? false;
+            chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[20].Value?.ToString().Equals("Y") ?? false;
         }
 
         private void btnDASave_Click(object sender, EventArgs e)
@@ -1739,7 +1768,21 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnImportMenu_Click(object sender, EventArgs e)
         {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Multiselect = false;
+            fileDialog.Title = "Please select file";
+            fileDialog.Filter = "Images|*.xls;*.bmp;*.xlsx";
 
+            string strExcelFilePath = "";
+            if (fileDialog.ShowDialog() == DialogResult.OK) { strExcelFilePath = fileDialog.FileName; }
+
+            if (!string.IsNullOrEmpty(strExcelFilePath))
+            {
+                if (DALCommon.ImportMenuItem(strExcelFilePath, "TA"))
+                    MessageBox.Show("Data import is successful!");
+                else
+                    MessageBox.Show("Data import failed!");
+            }
         }
 
         private void btnImportMenuCate_Click(object sender, EventArgs e)
@@ -1760,5 +1803,6 @@ namespace SuperPOS.UI.TakeAway
                     MessageBox.Show("Data import failed!");
             }
         }
+
     }
 }

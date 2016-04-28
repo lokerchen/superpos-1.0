@@ -166,7 +166,7 @@ namespace SuperPOS.DAL
             DataTable dt = GetExcelFileData(importFile, SheetName).Tables[0];
             try
             {
-                //清除Menu Cate中的数据
+                //清除Menu中的数据
                 new OnLoadSystemCommonData().GetTAMenuItemList();
                 foreach (var taMenuItem in CommonData.TaMenuItemList)
                 {
@@ -180,19 +180,21 @@ namespace SuperPOS.DAL
                         && !string.IsNullOrEmpty(item[1].ToString())
                         && !string.IsNullOrEmpty(item[2].ToString())
                         && !string.IsNullOrEmpty(item[3].ToString())
-                        && !string.IsNullOrEmpty(item[4].ToString()))
+                        && !string.IsNullOrEmpty(item[4].ToString())
+                        && !string.IsNullOrEmpty(item[5].ToString()))
                     {
                         new OnLoadSystemCommonData().GetTAMenuCategory();
                         var qList = CommonData.TaMenuCategoryList.Where(
-                                s => s.Remark.Equals(string.IsNullOrEmpty(item[0].ToString())));
+                                s => s.Remark.Equals(item[0].ToString()));
                         if (qList.Any())
                         {
                             TAMenuItemInfo taMenuItemInfo = new TAMenuItemInfo();
                             taMenuItemInfo.SystemKey = Guid.NewGuid();
-                            taMenuItemInfo.DishCode = item[1].ToString();
-                            taMenuItemInfo.EnglishName = item[2].ToString();
-                            taMenuItemInfo.OtherName = item[3].ToString();
-                            taMenuItemInfo.wRegular = item[4].ToString();
+                            taMenuItemInfo.DisplayPosition = item[1].ToString();
+                            taMenuItemInfo.DishCode = item[2].ToString();
+                            taMenuItemInfo.EnglishName = item[3].ToString();
+                            taMenuItemInfo.OtherName = item[4].ToString();
+                            taMenuItemInfo.wRegular = item[5].ToString();
                             taMenuItemInfo.MenuCateID = qList.FirstOrDefault().EnglishName;
                             _control.AddEntity(taMenuItemInfo);
                         }
