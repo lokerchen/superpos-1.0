@@ -217,12 +217,14 @@ namespace SuperPOS.DAL
         /// </summary>
         /// <param name="iPageNum">页码</param>
         /// <returns></returns>
-        public static List<TAMenuItemInfo> GetListQueryPageMenuItem(int iPageNum)
+        public static List<TAMenuItemInfo> GetListQueryPageMenuItem(int iPageNum, string sMenuCate)
         {
             new OnLoadSystemCommonData().GetTAMenuItemList();
 
-            return CommonData.TaMenuItemList.Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
+            //return CommonData.TaMenuItemList.Where(s => s.MenuCateID.Equals(sMenuCate)).Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
+            return string.IsNullOrEmpty(sMenuCate) ? CommonData.TaMenuItemList.Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Equals(sMenuCate)).Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
         }
+
         #endregion
 
         #region Menu Category分页
