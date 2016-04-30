@@ -38,9 +38,9 @@
             this.btnExprotData = new System.Windows.Forms.Button();
             this.btnImportData = new System.Windows.Forms.Button();
             this.chkBlackListed = new System.Windows.Forms.CheckBox();
-            this.txtMapRef = new System.Windows.Forms.TextBox();
+            this.txtPCZone = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtNotes = new System.Windows.Forms.TextBox();
+            this.txtIntNotes = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtReadyTime = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -58,13 +58,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvCustInfo = new System.Windows.Forms.DataGridView();
+            this.dgvCust = new System.Windows.Forms.DataGridView();
+            this.txtNotesOnBill = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCust)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtNotesOnBill);
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.btnDel);
             this.groupBox1.Controls.Add(this.btnSave);
@@ -74,9 +78,9 @@
             this.groupBox1.Controls.Add(this.btnExprotData);
             this.groupBox1.Controls.Add(this.btnImportData);
             this.groupBox1.Controls.Add(this.chkBlackListed);
-            this.groupBox1.Controls.Add(this.txtMapRef);
+            this.groupBox1.Controls.Add(this.txtPCZone);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.txtNotes);
+            this.groupBox1.Controls.Add(this.txtIntNotes);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtReadyTime);
             this.groupBox1.Controls.Add(this.label8);
@@ -94,11 +98,11 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtPhone);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.dgvCustInfo);
+            this.groupBox1.Controls.Add(this.dgvCust);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(969, 431);
+            this.groupBox1.Size = new System.Drawing.Size(899, 445);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Information";
@@ -107,11 +111,11 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.Olive;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnExit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(863, 375);
+            this.btnExit.Location = new System.Drawing.Point(744, 397);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(95, 46);
+            this.btnExit.Size = new System.Drawing.Size(80, 42);
             this.btnExit.TabIndex = 29;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -121,63 +125,67 @@
             // 
             this.btnDel.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDel.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(713, 375);
+            this.btnDel.Location = new System.Drawing.Point(644, 397);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(95, 46);
+            this.btnDel.Size = new System.Drawing.Size(80, 42);
             this.btnDel.TabIndex = 28;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSave.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(598, 375);
+            this.btnSave.Location = new System.Drawing.Point(544, 397);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(95, 46);
+            this.btnSave.Size = new System.Drawing.Size(80, 42);
             this.btnSave.TabIndex = 27;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnClear.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnClear.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(487, 375);
+            this.btnClear.Location = new System.Drawing.Point(444, 397);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(95, 46);
+            this.btnClear.Size = new System.Drawing.Size(80, 42);
             this.btnClear.TabIndex = 26;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnCID
             // 
             this.btnCID.BackColor = System.Drawing.Color.SkyBlue;
             this.btnCID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCID.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCID.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCID.ForeColor = System.Drawing.Color.White;
-            this.btnCID.Location = new System.Drawing.Point(372, 375);
+            this.btnCID.Location = new System.Drawing.Point(344, 397);
             this.btnCID.Name = "btnCID";
-            this.btnCID.Size = new System.Drawing.Size(95, 46);
+            this.btnCID.Size = new System.Drawing.Size(80, 42);
             this.btnCID.TabIndex = 25;
             this.btnCID.Text = "CID";
             this.btnCID.UseVisualStyleBackColor = false;
+            this.btnCID.Click += new System.EventHandler(this.btnCID_Click);
             // 
             // btnMap
             // 
             this.btnMap.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnMap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMap.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMap.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnMap.ForeColor = System.Drawing.Color.White;
-            this.btnMap.Location = new System.Drawing.Point(245, 371);
+            this.btnMap.Location = new System.Drawing.Point(181, 397);
             this.btnMap.Name = "btnMap";
-            this.btnMap.Size = new System.Drawing.Size(100, 50);
+            this.btnMap.Size = new System.Drawing.Size(80, 42);
             this.btnMap.TabIndex = 24;
             this.btnMap.Text = "Map";
             this.btnMap.UseVisualStyleBackColor = false;
@@ -186,11 +194,11 @@
             // 
             this.btnExprotData.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnExprotData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExprotData.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnExprotData.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExprotData.ForeColor = System.Drawing.Color.White;
-            this.btnExprotData.Location = new System.Drawing.Point(129, 371);
+            this.btnExprotData.Location = new System.Drawing.Point(95, 397);
             this.btnExprotData.Name = "btnExprotData";
-            this.btnExprotData.Size = new System.Drawing.Size(100, 50);
+            this.btnExprotData.Size = new System.Drawing.Size(80, 42);
             this.btnExprotData.TabIndex = 23;
             this.btnExprotData.Text = "Export Data";
             this.btnExprotData.UseVisualStyleBackColor = false;
@@ -199,56 +207,57 @@
             // 
             this.btnImportData.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnImportData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnImportData.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnImportData.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnImportData.ForeColor = System.Drawing.Color.White;
-            this.btnImportData.Location = new System.Drawing.Point(13, 371);
+            this.btnImportData.Location = new System.Drawing.Point(9, 397);
             this.btnImportData.Name = "btnImportData";
-            this.btnImportData.Size = new System.Drawing.Size(100, 50);
+            this.btnImportData.Size = new System.Drawing.Size(80, 42);
             this.btnImportData.TabIndex = 22;
             this.btnImportData.Text = "Import Data";
             this.btnImportData.UseVisualStyleBackColor = false;
+            this.btnImportData.Click += new System.EventHandler(this.btnImportData_Click);
             // 
             // chkBlackListed
             // 
             this.chkBlackListed.AutoSize = true;
-            this.chkBlackListed.Location = new System.Drawing.Point(22, 337);
+            this.chkBlackListed.Location = new System.Drawing.Point(22, 367);
             this.chkBlackListed.Name = "chkBlackListed";
             this.chkBlackListed.Size = new System.Drawing.Size(96, 21);
             this.chkBlackListed.TabIndex = 21;
             this.chkBlackListed.Text = "Black Listed";
             this.chkBlackListed.UseVisualStyleBackColor = true;
             // 
-            // txtMapRef
+            // txtPCZone
             // 
-            this.txtMapRef.Location = new System.Drawing.Point(117, 211);
-            this.txtMapRef.Name = "txtMapRef";
-            this.txtMapRef.Size = new System.Drawing.Size(90, 23);
-            this.txtMapRef.TabIndex = 20;
+            this.txtPCZone.Location = new System.Drawing.Point(117, 211);
+            this.txtPCZone.Name = "txtPCZone";
+            this.txtPCZone.Size = new System.Drawing.Size(90, 23);
+            this.txtPCZone.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(19, 217);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(58, 17);
+            this.label10.Size = new System.Drawing.Size(56, 17);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Map Ref";
+            this.label10.Text = "PC Zone";
             // 
-            // txtNotes
+            // txtIntNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(117, 301);
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(142, 23);
-            this.txtNotes.TabIndex = 18;
+            this.txtIntNotes.Location = new System.Drawing.Point(117, 301);
+            this.txtIntNotes.Name = "txtIntNotes";
+            this.txtIntNotes.Size = new System.Drawing.Size(142, 23);
+            this.txtIntNotes.TabIndex = 18;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(19, 307);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 17);
+            this.label9.Size = new System.Drawing.Size(65, 17);
             this.label9.TabIndex = 17;
-            this.label9.Text = "Notes";
+            this.label9.Text = "Int. Notes";
             // 
             // txtReadyTime
             // 
@@ -378,20 +387,40 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Phone #1";
             // 
-            // dgvCustInfo
+            // dgvCust
             // 
-            this.dgvCustInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustInfo.Location = new System.Drawing.Point(265, 22);
-            this.dgvCustInfo.Name = "dgvCustInfo";
-            this.dgvCustInfo.RowTemplate.Height = 23;
-            this.dgvCustInfo.Size = new System.Drawing.Size(697, 346);
-            this.dgvCustInfo.TabIndex = 0;
+            this.dgvCust.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCust.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCust.Location = new System.Drawing.Point(278, 22);
+            this.dgvCust.Name = "dgvCust";
+            this.dgvCust.ReadOnly = true;
+            this.dgvCust.RowTemplate.Height = 23;
+            this.dgvCust.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCust.Size = new System.Drawing.Size(604, 346);
+            this.dgvCust.TabIndex = 0;
+            this.dgvCust.SelectionChanged += new System.EventHandler(this.dgvCust_SelectionChanged);
+            // 
+            // txtNotesOnBill
+            // 
+            this.txtNotesOnBill.Location = new System.Drawing.Point(117, 334);
+            this.txtNotesOnBill.Name = "txtNotesOnBill";
+            this.txtNotesOnBill.Size = new System.Drawing.Size(142, 23);
+            this.txtNotesOnBill.TabIndex = 31;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(19, 340);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 17);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Notes on bill";
             // 
             // FrmTACustInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(991, 450);
+            this.ClientSize = new System.Drawing.Size(924, 469);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -399,9 +428,10 @@
             this.Name = "FrmTACustInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTACustInfo";
+            this.Load += new System.EventHandler(this.FrmTACustInfo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCustInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCust)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -409,11 +439,11 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvCustInfo;
+        private System.Windows.Forms.DataGridView dgvCust;
         private System.Windows.Forms.CheckBox chkBlackListed;
-        private System.Windows.Forms.TextBox txtMapRef;
+        private System.Windows.Forms.TextBox txtPCZone;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtNotes;
+        private System.Windows.Forms.TextBox txtIntNotes;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtReadyTime;
         private System.Windows.Forms.Label label8;
@@ -439,5 +469,7 @@
         private System.Windows.Forms.Button btnMap;
         private System.Windows.Forms.Button btnExprotData;
         private System.Windows.Forms.Button btnImportData;
+        private System.Windows.Forms.TextBox txtNotesOnBill;
+        private System.Windows.Forms.Label label11;
     }
 }
