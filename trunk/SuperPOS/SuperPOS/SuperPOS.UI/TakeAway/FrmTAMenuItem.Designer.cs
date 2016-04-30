@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabCtlMenuItem = new System.Windows.Forms.TabControl();
+            this.tabPageDish = new System.Windows.Forms.TabPage();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.chkBoxPrtOrderX = new System.Windows.Forms.CheckBox();
             this.chkBoxPrtOrderByDept = new System.Windows.Forms.CheckBox();
@@ -96,7 +96,7 @@
             this.btnDA3 = new System.Windows.Forms.Button();
             this.btnDA2 = new System.Windows.Forms.Button();
             this.btnDA1 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPageSecond = new System.Windows.Forms.TabPage();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.chkSCAutoAppend17 = new System.Windows.Forms.CheckBox();
             this.txtSCAddPrice17 = new System.Windows.Forms.TextBox();
@@ -187,7 +187,7 @@
             this.btnSC3 = new System.Windows.Forms.Button();
             this.btnSC2 = new System.Windows.Forms.Button();
             this.btnSC1 = new System.Windows.Forms.Button();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPageThird = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.chkTCAutoAppend17 = new System.Windows.Forms.CheckBox();
             this.txtTCAddPrice17 = new System.Windows.Forms.TextBox();
@@ -278,7 +278,7 @@
             this.btnTC3 = new System.Windows.Forms.Button();
             this.btnTC2 = new System.Windows.Forms.Button();
             this.btnTC1 = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPageTaste = new System.Windows.Forms.TabPage();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.chkTHAutoAppend17 = new System.Windows.Forms.CheckBox();
             this.txtTHAddPrice17 = new System.Windows.Forms.TextBox();
@@ -369,7 +369,7 @@
             this.btnTH3 = new System.Windows.Forms.Button();
             this.btnTH2 = new System.Windows.Forms.Button();
             this.btnTH1 = new System.Windows.Forms.Button();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPageSub = new System.Windows.Forms.TabPage();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.txtDishOtherName15 = new System.Windows.Forms.TextBox();
             this.txtDishEngName15 = new System.Windows.Forms.TextBox();
@@ -432,13 +432,13 @@
             this.btnSubMenuSave = new System.Windows.Forms.Button();
             this.btnSubMenuDel = new System.Windows.Forms.Button();
             this.btnSubMenuAdd = new System.Windows.Forms.Button();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPageMenu = new System.Windows.Forms.TabPage();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.btnImportMenuCate = new System.Windows.Forms.Button();
             this.btnImportMenu = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabCtlMenuItem.SuspendLayout();
+            this.tabPageDish.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -446,33 +446,33 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDAMenu)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.tabPageSecond.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSCMenu)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabPageThird.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTCMenu)).BeginInit();
             this.groupBox11.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tabPageTaste.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHMenu)).BeginInit();
             this.groupBox14.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.tabPageSub.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox16.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubMenu)).BeginInit();
-            this.tabPage6.SuspendLayout();
+            this.tabPageMenu.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tabControl1);
+            this.groupBox1.Controls.Add(this.tabCtlMenuItem);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1000, 658);
@@ -480,47 +480,47 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menu Item";
             // 
-            // tabControl1
+            // tabCtlMenuItem
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.Location = new System.Drawing.Point(19, 22);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(975, 630);
-            this.tabControl1.TabIndex = 13;
+            this.tabCtlMenuItem.Controls.Add(this.tabPageDish);
+            this.tabCtlMenuItem.Controls.Add(this.tabPageSecond);
+            this.tabCtlMenuItem.Controls.Add(this.tabPageThird);
+            this.tabCtlMenuItem.Controls.Add(this.tabPageTaste);
+            this.tabCtlMenuItem.Controls.Add(this.tabPageSub);
+            this.tabCtlMenuItem.Controls.Add(this.tabPageMenu);
+            this.tabCtlMenuItem.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabCtlMenuItem.Location = new System.Drawing.Point(19, 22);
+            this.tabCtlMenuItem.Name = "tabCtlMenuItem";
+            this.tabCtlMenuItem.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.tabCtlMenuItem.SelectedIndex = 0;
+            this.tabCtlMenuItem.Size = new System.Drawing.Size(975, 630);
+            this.tabCtlMenuItem.TabIndex = 13;
             // 
-            // tabPage1
+            // tabPageDish
             // 
-            this.tabPage1.Controls.Add(this.groupBox15);
-            this.tabPage1.Controls.Add(this.btnDAEdit);
-            this.tabPage1.Controls.Add(this.chkInventoryCheck);
-            this.tabPage1.Controls.Add(this.chkWithoutVAT);
-            this.tabPage1.Controls.Add(this.btnDAExit);
-            this.tabPage1.Controls.Add(this.chkDisountable);
-            this.tabPage1.Controls.Add(this.btnDASave);
-            this.tabPage1.Controls.Add(this.chkNegativePrice);
-            this.tabPage1.Controls.Add(this.btnDADel);
-            this.tabPage1.Controls.Add(this.chkUnavailable);
-            this.tabPage1.Controls.Add(this.btnDACopy);
-            this.tabPage1.Controls.Add(this.groupBox6);
-            this.tabPage1.Controls.Add(this.btnDAAdd);
-            this.tabPage1.Controls.Add(this.groupBox7);
-            this.tabPage1.Controls.Add(this.groupBox4);
-            this.tabPage1.Controls.Add(this.groupBox5);
-            this.tabPage1.Location = new System.Drawing.Point(4, 26);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(967, 600);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Dish Attributes";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPageDish.Controls.Add(this.groupBox15);
+            this.tabPageDish.Controls.Add(this.btnDAEdit);
+            this.tabPageDish.Controls.Add(this.chkInventoryCheck);
+            this.tabPageDish.Controls.Add(this.chkWithoutVAT);
+            this.tabPageDish.Controls.Add(this.btnDAExit);
+            this.tabPageDish.Controls.Add(this.chkDisountable);
+            this.tabPageDish.Controls.Add(this.btnDASave);
+            this.tabPageDish.Controls.Add(this.chkNegativePrice);
+            this.tabPageDish.Controls.Add(this.btnDADel);
+            this.tabPageDish.Controls.Add(this.chkUnavailable);
+            this.tabPageDish.Controls.Add(this.btnDACopy);
+            this.tabPageDish.Controls.Add(this.groupBox6);
+            this.tabPageDish.Controls.Add(this.btnDAAdd);
+            this.tabPageDish.Controls.Add(this.groupBox7);
+            this.tabPageDish.Controls.Add(this.groupBox4);
+            this.tabPageDish.Controls.Add(this.groupBox5);
+            this.tabPageDish.Location = new System.Drawing.Point(4, 26);
+            this.tabPageDish.Name = "tabPageDish";
+            this.tabPageDish.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDish.Size = new System.Drawing.Size(967, 600);
+            this.tabPageDish.TabIndex = 0;
+            this.tabPageDish.Text = "Dish Attributes";
+            this.tabPageDish.UseVisualStyleBackColor = true;
             // 
             // groupBox15
             // 
@@ -1239,20 +1239,20 @@
             this.btnDA1.Text = "button6";
             this.btnDA1.UseVisualStyleBackColor = false;
             // 
-            // tabPage2
+            // tabPageSecond
             // 
-            this.tabPage2.Controls.Add(this.groupBox8);
-            this.tabPage2.Controls.Add(this.btnSCExit);
-            this.tabPage2.Controls.Add(this.btnSCSave);
-            this.tabPage2.Controls.Add(this.groupBox2);
-            this.tabPage2.Controls.Add(this.groupBox3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 26);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(967, 600);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Second Choices";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPageSecond.Controls.Add(this.groupBox8);
+            this.tabPageSecond.Controls.Add(this.btnSCExit);
+            this.tabPageSecond.Controls.Add(this.btnSCSave);
+            this.tabPageSecond.Controls.Add(this.groupBox2);
+            this.tabPageSecond.Controls.Add(this.groupBox3);
+            this.tabPageSecond.Location = new System.Drawing.Point(4, 26);
+            this.tabPageSecond.Name = "tabPageSecond";
+            this.tabPageSecond.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageSecond.Size = new System.Drawing.Size(967, 600);
+            this.tabPageSecond.TabIndex = 1;
+            this.tabPageSecond.Text = "Second Choices";
+            this.tabPageSecond.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
@@ -2074,19 +2074,19 @@
             this.btnSC1.Text = "button6";
             this.btnSC1.UseVisualStyleBackColor = false;
             // 
-            // tabPage3
+            // tabPageThird
             // 
-            this.tabPage3.Controls.Add(this.groupBox9);
-            this.tabPage3.Controls.Add(this.btnTCExit);
-            this.tabPage3.Controls.Add(this.btnTCSave);
-            this.tabPage3.Controls.Add(this.groupBox10);
-            this.tabPage3.Controls.Add(this.groupBox11);
-            this.tabPage3.Location = new System.Drawing.Point(4, 26);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(967, 600);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Third Choices";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.tabPageThird.Controls.Add(this.groupBox9);
+            this.tabPageThird.Controls.Add(this.btnTCExit);
+            this.tabPageThird.Controls.Add(this.btnTCSave);
+            this.tabPageThird.Controls.Add(this.groupBox10);
+            this.tabPageThird.Controls.Add(this.groupBox11);
+            this.tabPageThird.Location = new System.Drawing.Point(4, 26);
+            this.tabPageThird.Name = "tabPageThird";
+            this.tabPageThird.Size = new System.Drawing.Size(967, 600);
+            this.tabPageThird.TabIndex = 2;
+            this.tabPageThird.Text = "Third Choices";
+            this.tabPageThird.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
@@ -2908,19 +2908,19 @@
             this.btnTC1.Text = "button6";
             this.btnTC1.UseVisualStyleBackColor = false;
             // 
-            // tabPage4
+            // tabPageTaste
             // 
-            this.tabPage4.Controls.Add(this.groupBox12);
-            this.tabPage4.Controls.Add(this.btnTHExit);
-            this.tabPage4.Controls.Add(this.btnTHSave);
-            this.tabPage4.Controls.Add(this.groupBox13);
-            this.tabPage4.Controls.Add(this.groupBox14);
-            this.tabPage4.Location = new System.Drawing.Point(4, 26);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(967, 600);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Taste Handling";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.tabPageTaste.Controls.Add(this.groupBox12);
+            this.tabPageTaste.Controls.Add(this.btnTHExit);
+            this.tabPageTaste.Controls.Add(this.btnTHSave);
+            this.tabPageTaste.Controls.Add(this.groupBox13);
+            this.tabPageTaste.Controls.Add(this.groupBox14);
+            this.tabPageTaste.Location = new System.Drawing.Point(4, 26);
+            this.tabPageTaste.Name = "tabPageTaste";
+            this.tabPageTaste.Size = new System.Drawing.Size(967, 600);
+            this.tabPageTaste.TabIndex = 3;
+            this.tabPageTaste.Text = "Taste Handling";
+            this.tabPageTaste.UseVisualStyleBackColor = true;
             // 
             // groupBox12
             // 
@@ -3243,7 +3243,6 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Enabled = false;
             this.label31.Location = new System.Drawing.Point(31, 57);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(88, 17);
@@ -3743,22 +3742,22 @@
             this.btnTH1.Text = "button6";
             this.btnTH1.UseVisualStyleBackColor = false;
             // 
-            // tabPage5
+            // tabPageSub
             // 
-            this.tabPage5.Controls.Add(this.groupBox18);
-            this.tabPage5.Controls.Add(this.groupBox17);
-            this.tabPage5.Controls.Add(this.dgvSubMenu);
-            this.tabPage5.Controls.Add(this.btnSubMenuEdit);
-            this.tabPage5.Controls.Add(this.btnSubMenuExit);
-            this.tabPage5.Controls.Add(this.btnSubMenuSave);
-            this.tabPage5.Controls.Add(this.btnSubMenuDel);
-            this.tabPage5.Controls.Add(this.btnSubMenuAdd);
-            this.tabPage5.Location = new System.Drawing.Point(4, 26);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(967, 600);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Sub Menu";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.tabPageSub.Controls.Add(this.groupBox18);
+            this.tabPageSub.Controls.Add(this.groupBox17);
+            this.tabPageSub.Controls.Add(this.dgvSubMenu);
+            this.tabPageSub.Controls.Add(this.btnSubMenuEdit);
+            this.tabPageSub.Controls.Add(this.btnSubMenuExit);
+            this.tabPageSub.Controls.Add(this.btnSubMenuSave);
+            this.tabPageSub.Controls.Add(this.btnSubMenuDel);
+            this.tabPageSub.Controls.Add(this.btnSubMenuAdd);
+            this.tabPageSub.Location = new System.Drawing.Point(4, 26);
+            this.tabPageSub.Name = "tabPageSub";
+            this.tabPageSub.Size = new System.Drawing.Size(967, 600);
+            this.tabPageSub.TabIndex = 4;
+            this.tabPageSub.Text = "Sub Menu";
+            this.tabPageSub.UseVisualStyleBackColor = true;
             // 
             // groupBox18
             // 
@@ -4387,16 +4386,16 @@
             this.btnSubMenuAdd.UseVisualStyleBackColor = false;
             this.btnSubMenuAdd.Click += new System.EventHandler(this.btnSubMenuAdd_Click);
             // 
-            // tabPage6
+            // tabPageMenu
             // 
-            this.tabPage6.Controls.Add(this.groupBox19);
-            this.tabPage6.Location = new System.Drawing.Point(4, 26);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(967, 600);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Menu Item & Menu Category Import";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.tabPageMenu.Controls.Add(this.groupBox19);
+            this.tabPageMenu.Location = new System.Drawing.Point(4, 26);
+            this.tabPageMenu.Name = "tabPageMenu";
+            this.tabPageMenu.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageMenu.Size = new System.Drawing.Size(967, 600);
+            this.tabPageMenu.TabIndex = 5;
+            this.tabPageMenu.Text = "Menu Item & Menu Category Import";
+            this.tabPageMenu.UseVisualStyleBackColor = true;
             // 
             // groupBox19
             // 
@@ -4450,9 +4449,9 @@
             this.Text = "FrmTAMenuItem";
             this.Load += new System.EventHandler(this.FrmTAMenuItem_Load);
             this.groupBox1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tabCtlMenuItem.ResumeLayout(false);
+            this.tabPageDish.ResumeLayout(false);
+            this.tabPageDish.PerformLayout();
             this.groupBox15.ResumeLayout(false);
             this.groupBox15.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -4464,28 +4463,28 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.tabPageSecond.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSCMenu)).EndInit();
             this.groupBox3.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            this.tabPageThird.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTCMenu)).EndInit();
             this.groupBox11.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
+            this.tabPageTaste.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHMenu)).EndInit();
             this.groupBox14.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
+            this.tabPageSub.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
             this.groupBox17.ResumeLayout(false);
@@ -4493,7 +4492,7 @@
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubMenu)).EndInit();
-            this.tabPage6.ResumeLayout(false);
+            this.tabPageMenu.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -4502,8 +4501,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabControl tabCtlMenuItem;
+        //public System.Windows.Forms.TabControl tabCtlMenuItem;
+        private System.Windows.Forms.TabPage tabPageDish;
         private System.Windows.Forms.CheckBox chkInventoryCheck;
         private System.Windows.Forms.CheckBox chkWithoutVAT;
         private System.Windows.Forms.Button btnDAExit;
@@ -4554,10 +4554,11 @@
         private System.Windows.Forms.Button btnDA3;
         private System.Windows.Forms.Button btnDA2;
         private System.Windows.Forms.Button btnDA1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.TabPage tabPageSecond;
+        private System.Windows.Forms.TabPage tabPageThird;
+        private System.Windows.Forms.TabPage tabPageTaste;
+        //public System.Windows.Forms.TabPage tabPageTaste;
+        private System.Windows.Forms.TabPage tabPageSub;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnDAEdit;
         private System.Windows.Forms.Label label1;
@@ -4905,7 +4906,7 @@
         private System.Windows.Forms.TextBox txtDishEngName12;
         private System.Windows.Forms.TextBox txtDishOtherName11;
         private System.Windows.Forms.TextBox txtDishEngName11;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage tabPageMenu;
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.Button btnImportMenuCate;
         private System.Windows.Forms.Button btnImportMenu;

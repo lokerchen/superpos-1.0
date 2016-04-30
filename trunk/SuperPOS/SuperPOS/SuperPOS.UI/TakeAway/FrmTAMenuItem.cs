@@ -71,6 +71,8 @@ namespace SuperPOS.UI.TakeAway
         private int iSubMenuStatus = 0;
 
         private readonly EntityControl _control = new EntityControl();
+
+        private bool isTastHand = false;
         #endregion
 
         public FrmTAMenuItem()
@@ -82,6 +84,13 @@ namespace SuperPOS.UI.TakeAway
         {
             InitializeComponent();
             userInfo = uInfo;
+        }
+
+        public FrmTAMenuItem(UserInfo uInfo, bool isOpenTastHand)
+        {
+            InitializeComponent();
+            userInfo = uInfo;
+            isTastHand = isOpenTastHand;
         }
 
         private void FrmTAMenuItem_Load(object sender, EventArgs e)
@@ -662,6 +671,8 @@ namespace SuperPOS.UI.TakeAway
             //dgvSCDetail.Columns[6].HeaderText = "Auto Append";
             //dgvSCDetail.Columns[7].Visible = false;
             //Console.Out.WriteLine(Guid.NewGuid());
+
+            if (isTastHand) tabCtlMenuItem.SelectTab(tabPageTaste);
         }
 
         private void btnDA_Click(object sender, EventArgs e)
