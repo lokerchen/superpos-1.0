@@ -18,6 +18,12 @@ namespace SuperPOS.UI.TakeAway
         private int I_MI_PAGE = 1;
         private int I_MC_PAGE = 1;
 
+        //记录Menu Cate值
+        private string strBtnText = "";
+
+        //Language语言状态值
+        private int I_LAN = 1;
+
         #region 定义
         Button[] btnMI = new Button[16];
         Button[] btnMC = new Button[35];
@@ -145,23 +151,53 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnMIRight_Click(object sender, EventArgs e)
         {
-            I_MI_PAGE = I_MI_PAGE + 1;
+            if (!string.IsNullOrEmpty(btnMI[0].Text) && !string.IsNullOrEmpty(btnMI[15].Text)) I_MI_PAGE = I_MI_PAGE + 1;
+
+            SetMenuItem(I_LAN, I_MI_PAGE, strBtnText);
         }
 
         private void btnMILeft_Click(object sender, EventArgs e)
         {
-            I_MI_PAGE = I_MI_PAGE <= 1 ? 1 : I_MI_PAGE - 1;
+            I_MI_PAGE = I_MI_PAGE <= 1 ? 1 : (I_MI_PAGE <= 1 ? 1 : I_MI_PAGE - 1);
+            SetMenuItem(I_LAN, I_MI_PAGE, strBtnText);
         }
 
         private void btnMC_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            SetMenuItem(1, 1, btn.Text);
+            strBtnText = btn.Text;
+            if (I_LAN != 1)
+            {
+                var qEngName = CommonData.TaMenuCategoryList.Where(s => s.OtherName.Equals(strBtnText));
+                if (qEngName.Any()) strBtnText = qEngName.FirstOrDefault().EnglishName;
+            }
+
+            I_MI_PAGE = 1;
+            SetMenuItem(I_LAN, I_MI_PAGE, strBtnText);
+            //SetMenuItem(1, 1, btn.Text);
         }
 
         private void btnMI_Click(object sender, EventArgs e)
         {
 
         }
+
+        #region 语言切换
+        private void btnLang_Click(object sender, EventArgs e)
+        {
+            if (I_LAN == 1)
+            {
+                I_LAN = 2;
+                SetMenuItem(I_LAN, 1, "");
+                SetMenuCate(I_LAN, 1);
+            }
+            else
+            {
+                I_LAN = 1;
+                SetMenuItem(I_LAN, 1, "");
+                SetMenuCate(I_LAN, 1);
+            }
+        }
+        #endregion
     }
 }
