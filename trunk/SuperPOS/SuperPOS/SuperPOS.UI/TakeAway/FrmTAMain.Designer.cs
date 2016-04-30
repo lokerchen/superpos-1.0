@@ -97,7 +97,7 @@
             this.btnMC13 = new System.Windows.Forms.Button();
             this.btnMC12 = new System.Windows.Forms.Button();
             this.btnMC11 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
+            this.btnLang = new System.Windows.Forms.Button();
             this.btnMC10 = new System.Windows.Forms.Button();
             this.btnMC9 = new System.Windows.Forms.Button();
             this.btnMC8 = new System.Windows.Forms.Button();
@@ -687,7 +687,7 @@
             this.groupBox3.Controls.Add(this.btnMC13);
             this.groupBox3.Controls.Add(this.btnMC12);
             this.groupBox3.Controls.Add(this.btnMC11);
-            this.groupBox3.Controls.Add(this.button41);
+            this.groupBox3.Controls.Add(this.btnLang);
             this.groupBox3.Controls.Add(this.btnMC10);
             this.groupBox3.Controls.Add(this.btnMC9);
             this.groupBox3.Controls.Add(this.btnMC8);
@@ -1116,19 +1116,20 @@
             this.btnMC11.Text = "BBQ Sauce";
             this.btnMC11.UseVisualStyleBackColor = false;
             // 
-            // button41
+            // btnLang
             // 
-            this.button41.BackColor = System.Drawing.Color.Olive;
-            this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button41.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button41.ForeColor = System.Drawing.Color.White;
-            this.button41.Location = new System.Drawing.Point(8, 136);
-            this.button41.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(100, 55);
-            this.button41.TabIndex = 12;
-            this.button41.Text = "LANGUAGE";
-            this.button41.UseVisualStyleBackColor = false;
+            this.btnLang.BackColor = System.Drawing.Color.Olive;
+            this.btnLang.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLang.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnLang.ForeColor = System.Drawing.Color.White;
+            this.btnLang.Location = new System.Drawing.Point(8, 136);
+            this.btnLang.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLang.Name = "btnLang";
+            this.btnLang.Size = new System.Drawing.Size(100, 55);
+            this.btnLang.TabIndex = 12;
+            this.btnLang.Text = "LANGUAGE";
+            this.btnLang.UseVisualStyleBackColor = false;
+            this.btnLang.Click += new System.EventHandler(this.btnLang_Click);
             // 
             // btnMC10
             // 
@@ -1426,7 +1427,7 @@
         private System.Windows.Forms.Button btnMC13;
         private System.Windows.Forms.Button btnMC12;
         private System.Windows.Forms.Button btnMC11;
-        private System.Windows.Forms.Button button41;
+        private System.Windows.Forms.Button btnLang;
         private System.Windows.Forms.Button btnMC10;
         private System.Windows.Forms.Button btnMC9;
         private System.Windows.Forms.Button btnMC8;
