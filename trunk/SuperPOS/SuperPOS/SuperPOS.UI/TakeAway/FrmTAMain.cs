@@ -199,5 +199,13 @@ namespace SuperPOS.UI.TakeAway
             }
         }
         #endregion
+
+        private void btnTasteHand_Click(object sender, EventArgs e)
+        {
+            FrmTAMenuItem frmTaMenuItem = new FrmTAMenuItem(userInfo, true);
+            //frmTaMenuItem.tabCtlMenuItem.SelectedTab = frmTaMenuItem.tabPageTaste;
+            //frmTaMenuItem.tabCtlMenuItem.SelectedTab = frmTaMenuItem.tabPageTaste;
+            frmTaMenuItem.ShowDialog();
+        }
     }
 }

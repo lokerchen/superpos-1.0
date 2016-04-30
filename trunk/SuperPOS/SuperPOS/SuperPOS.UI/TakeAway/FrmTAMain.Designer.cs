@@ -45,7 +45,7 @@
             this.btnPendOrder = new System.Windows.Forms.Button();
             this.btnIngredMode = new System.Windows.Forms.Button();
             this.btnDT = new System.Windows.Forms.Button();
-            this.btnAddRemove = new System.Windows.Forms.Button();
+            this.btnTasteHand = new System.Windows.Forms.Button();
             this.btnCID = new System.Windows.Forms.Button();
             this.btnCustInfo = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -280,7 +280,7 @@
             this.groupBox1.Controls.Add(this.btnPendOrder);
             this.groupBox1.Controls.Add(this.btnIngredMode);
             this.groupBox1.Controls.Add(this.btnDT);
-            this.groupBox1.Controls.Add(this.btnAddRemove);
+            this.groupBox1.Controls.Add(this.btnTasteHand);
             this.groupBox1.Controls.Add(this.btnCID);
             this.groupBox1.Controls.Add(this.btnCustInfo);
             this.groupBox1.Location = new System.Drawing.Point(14, 555);
@@ -347,19 +347,20 @@
             this.btnDT.Text = "DT";
             this.btnDT.UseVisualStyleBackColor = false;
             // 
-            // btnAddRemove
+            // btnTasteHand
             // 
-            this.btnAddRemove.BackColor = System.Drawing.Color.BlueViolet;
-            this.btnAddRemove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddRemove.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAddRemove.ForeColor = System.Drawing.Color.White;
-            this.btnAddRemove.Location = new System.Drawing.Point(171, 14);
-            this.btnAddRemove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnAddRemove.Name = "btnAddRemove";
-            this.btnAddRemove.Size = new System.Drawing.Size(75, 50);
-            this.btnAddRemove.TabIndex = 2;
-            this.btnAddRemove.Text = "+ / -";
-            this.btnAddRemove.UseVisualStyleBackColor = false;
+            this.btnTasteHand.BackColor = System.Drawing.Color.BlueViolet;
+            this.btnTasteHand.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTasteHand.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnTasteHand.ForeColor = System.Drawing.Color.White;
+            this.btnTasteHand.Location = new System.Drawing.Point(171, 14);
+            this.btnTasteHand.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnTasteHand.Name = "btnTasteHand";
+            this.btnTasteHand.Size = new System.Drawing.Size(75, 50);
+            this.btnTasteHand.TabIndex = 2;
+            this.btnTasteHand.Text = "+ / -";
+            this.btnTasteHand.UseVisualStyleBackColor = false;
+            this.btnTasteHand.Click += new System.EventHandler(this.btnTasteHand_Click);
             // 
             // btnCID
             // 
@@ -1368,7 +1369,7 @@
         private System.Windows.Forms.Button btnPendOrder;
         private System.Windows.Forms.Button btnIngredMode;
         private System.Windows.Forms.Button btnDT;
-        private System.Windows.Forms.Button btnAddRemove;
+        private System.Windows.Forms.Button btnTasteHand;
         private System.Windows.Forms.Button btnCID;
         private System.Windows.Forms.Button btnCustInfo;
         private System.Windows.Forms.GroupBox groupBox2;
