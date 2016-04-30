@@ -389,6 +389,7 @@
             this.btnCustInfo.TabIndex = 0;
             this.btnCustInfo.Text = "Cust Info";
             this.btnCustInfo.UseVisualStyleBackColor = false;
+            this.btnCustInfo.Click += new System.EventHandler(this.btnCustInfo_Click);
             // 
             // groupBox2
             // 

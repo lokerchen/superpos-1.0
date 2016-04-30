@@ -24,6 +24,8 @@ namespace SuperPOS.UI.TakeAway
         //Language语言状态值
         private int I_LAN = 1;
 
+        private string strCallID = "";
+
         #region 定义
         Button[] btnMI = new Button[16];
         Button[] btnMC = new Button[35];
@@ -206,6 +208,13 @@ namespace SuperPOS.UI.TakeAway
             //frmTaMenuItem.tabCtlMenuItem.SelectedTab = frmTaMenuItem.tabPageTaste;
             //frmTaMenuItem.tabCtlMenuItem.SelectedTab = frmTaMenuItem.tabPageTaste;
             frmTaMenuItem.ShowDialog();
+        }
+
+        private void btnCustInfo_Click(object sender, EventArgs e)
+        {
+            FrmTACustInfo frmTaCust = new FrmTACustInfo(strCallID);
+            frmTaCust.ShowDialog();
+
         }
     }
 }
