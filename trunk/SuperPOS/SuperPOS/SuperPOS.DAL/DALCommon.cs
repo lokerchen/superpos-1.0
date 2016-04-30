@@ -69,6 +69,8 @@ namespace SuperPOS.DAL
             onLoad.GetTaTblSetup();
             //TA Extra Menu Edit
             onLoad.GetExtraMenuEdit();
+            //TA Customer 
+            onLoad.GetTACust();
         }
         #endregion
 
@@ -240,5 +242,50 @@ namespace SuperPOS.DAL
             return CommonData.TaMenuCategoryList.Skip(PAGESIZE_MENUCATE * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
         }
         #endregion
+
+        public static bool ImportCust(string importFile, string SheetName)
+        {
+            DataTable dt = GetExcelFileData(importFile, SheetName).Tables[0];
+            try
+            {
+                //清除TA Customer中的数据
+                new OnLoadSystemCommonData().GetTACust();
+                foreach (var taCust in CommonData.TaCustList)
+                {
+                    _control.DeleteEntity(taCust);
+                }
+
+                //添加数据
+                foreach (DataRow item in dt.Rows)
+                {
+                    if (!string.IsNullOrEmpty(item[0].ToString())
+                        && !string.IsNullOrEmpty(item[1].ToString())
+                        && !string.IsNullOrEmpty(item[2].ToString())
+                        && !string.IsNullOrEmpty(item[3].ToString())
+                        && !string.IsNullOrEmpty(item[4].ToString())
+                        && !string.IsNullOrEmpty(item[5].ToString())
+                        && !string.IsNullOrEmpty(item[6].ToString()))
+                    {
+                        TACustInfo taCustInfo = new TACustInfo();
+                        taCustInfo.SystemKey = Guid.NewGuid();
+                        taCustInfo.Phone1 = item[0].ToString();
+                        taCustInfo.Name = item[1].ToString();
+                        taCustInfo.Address1 = item[2].ToString();
+                        taCustInfo.Postcode1 = item[3].ToString();
+                        taCustInfo.Distance = item[4].ToString();
+                        taCustInfo.PcZone = item[5].ToString();
+                        taCustInfo.IsBlackListed = item[6].ToString().ToUpper().Equals("YES") ? "Y" : "N";
+                        _control.AddEntity(taCustInfo);
+                    }
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // MessBox.Show("");
+                string aa = ex.Message;
+                return false;
+            }
+        }
     }
 }

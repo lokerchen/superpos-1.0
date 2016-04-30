@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SuperPOS"
+                   namespace="SuperPOS.Domain">
+
+  <class name="SuperPOS.Domain.Entities.TACustInfo, SuperPOS.Domain" table="TA_Customer">
+    <id name="SystemKey" column="SystemKey" type="System.Guid">
+      <generator class="guid" />
+    </id>
+    <property name="Phone1" column="Phone1" type="System.String" />
+    <property name="Name" column="Name" type="System.String" />
+    <property name="HouseNo" column="HouseNo" type="System.String" />
+    <property name="Address1" column="Address1" type="System.String" />
+    <property name="Postcode1" column="Postcode1" type="System.String" />
+    <property name="Distance" column="Distance" type="System.String" />
+    <property name="PcZone" column="PcZone" type="System.String" />
+    <property name="DelCharge" column="DelCharge" type="System.String" />
+    <property name="ReadyTime" column="ReadyTime" type="System.String" />
+    <property name="IntNotes" column="IntNotes" type="System.String" />
+    <property name="NotesOnBill" column="NotesOnBill" type="System.String" />
+    <property name="IsBlackListed" column="IsBlackListed" type="System.String" />
+    <property name="Remark" column="Remark" type="System.String" />
+  </class>
+
+</hibernate-mapping>
