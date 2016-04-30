@@ -101,7 +101,7 @@
             this.groupBox1.Size = new System.Drawing.Size(969, 431);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Customer Infomation";
+            this.groupBox1.Text = "Customer Information";
             // 
             // btnExit
             // 
