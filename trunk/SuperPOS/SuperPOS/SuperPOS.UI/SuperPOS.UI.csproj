@@ -163,6 +163,12 @@
     <Compile Include="TakeAway\FrmCallNewCus.Designer.cs">
       <DependentUpon>FrmCallNewCus.cs</DependentUpon>
     </Compile>
+    <Compile Include="TakeAway\FrmTAChangeOrderType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAChangeOrderType.Designer.cs">
+      <DependentUpon>FrmTAChangeOrderType.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeAway\FrmTACustInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmCallNewCus.resx">
       <DependentUpon>FrmCallNewCus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTAChangeOrderType.resx">
+      <DependentUpon>FrmTAChangeOrderType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTACustInfo.resx">
       <DependentUpon>FrmTACustInfo.cs</DependentUpon>
