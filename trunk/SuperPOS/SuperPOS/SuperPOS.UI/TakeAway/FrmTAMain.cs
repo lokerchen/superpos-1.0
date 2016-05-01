@@ -26,6 +26,9 @@ namespace SuperPOS.UI.TakeAway
 
         private string strCallID = "";
 
+        private string strOrderType = "";
+        //public string StrOrderType { set { strOrderType = value; } }
+
         #region 定义
         Button[] btnMI = new Button[16];
         Button[] btnMC = new Button[35];
@@ -215,6 +218,14 @@ namespace SuperPOS.UI.TakeAway
             FrmTACustInfo frmTaCust = new FrmTACustInfo(strCallID);
             frmTaCust.ShowDialog();
 
+        }
+
+        private void btnChangeOrderType_Click(object sender, EventArgs e)
+        {
+            FrmTAChangeOrderType frmTaChangeOrderType = new FrmTAChangeOrderType();
+            frmTaChangeOrderType.ShowDialog();
+
+            strOrderType = frmTaChangeOrderType.strOrderType;
         }
     }
 }
