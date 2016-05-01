@@ -130,6 +130,9 @@ namespace SuperPOS.UI.TakeAway
 
                 _control.UpdateEntity(taCustInfo);
             }
+
+            new OnLoadSystemCommonData().GetTACust();
+            dgvCust.DataSource = CommonData.TaCustList;
         }
 
         private void btnImportData_Click(object sender, EventArgs e)
@@ -148,6 +151,9 @@ namespace SuperPOS.UI.TakeAway
                     ? "Data import is successful!"
                     : "Data import failed!");
             }
+
+            new OnLoadSystemCommonData().GetTACust();
+            dgvCust.DataSource = CommonData.TaCustList;
         }
     }
 }
