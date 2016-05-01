@@ -91,7 +91,7 @@
             this.btnMC18 = new System.Windows.Forms.Button();
             this.btnMC17 = new System.Windows.Forms.Button();
             this.btnMC16 = new System.Windows.Forms.Button();
-            this.button47 = new System.Windows.Forms.Button();
+            this.btnChangeOrderType = new System.Windows.Forms.Button();
             this.btnMC15 = new System.Windows.Forms.Button();
             this.btnMC14 = new System.Windows.Forms.Button();
             this.btnMC13 = new System.Windows.Forms.Button();
@@ -683,7 +683,7 @@
             this.groupBox3.Controls.Add(this.btnMC18);
             this.groupBox3.Controls.Add(this.btnMC17);
             this.groupBox3.Controls.Add(this.btnMC16);
-            this.groupBox3.Controls.Add(this.button47);
+            this.groupBox3.Controls.Add(this.btnChangeOrderType);
             this.groupBox3.Controls.Add(this.btnMC15);
             this.groupBox3.Controls.Add(this.btnMC14);
             this.groupBox3.Controls.Add(this.btnMC13);
@@ -1034,19 +1034,20 @@
             this.btnMC16.Text = "Tomato";
             this.btnMC16.UseVisualStyleBackColor = false;
             // 
-            // button47
+            // btnChangeOrderType
             // 
-            this.button47.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button47.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button47.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button47.ForeColor = System.Drawing.Color.White;
-            this.button47.Location = new System.Drawing.Point(8, 196);
-            this.button47.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button47.Name = "button47";
-            this.button47.Size = new System.Drawing.Size(100, 55);
-            this.button47.TabIndex = 18;
-            this.button47.Text = "CHANGE ORDER TYPE";
-            this.button47.UseVisualStyleBackColor = false;
+            this.btnChangeOrderType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnChangeOrderType.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnChangeOrderType.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnChangeOrderType.ForeColor = System.Drawing.Color.White;
+            this.btnChangeOrderType.Location = new System.Drawing.Point(8, 196);
+            this.btnChangeOrderType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnChangeOrderType.Name = "btnChangeOrderType";
+            this.btnChangeOrderType.Size = new System.Drawing.Size(100, 55);
+            this.btnChangeOrderType.TabIndex = 18;
+            this.btnChangeOrderType.Text = "CHANGE ORDER TYPE";
+            this.btnChangeOrderType.UseVisualStyleBackColor = false;
+            this.btnChangeOrderType.Click += new System.EventHandler(this.btnChangeOrderType_Click);
             // 
             // btnMC15
             // 
@@ -1423,7 +1424,7 @@
         private System.Windows.Forms.Button btnMC18;
         private System.Windows.Forms.Button btnMC17;
         private System.Windows.Forms.Button btnMC16;
-        private System.Windows.Forms.Button button47;
+        private System.Windows.Forms.Button btnChangeOrderType;
         private System.Windows.Forms.Button btnMC15;
         private System.Windows.Forms.Button btnMC14;
         private System.Windows.Forms.Button btnMC13;
