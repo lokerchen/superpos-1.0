@@ -34,5 +34,10 @@ namespace SuperPOS.Common
 
         //默认管理员密码
         public static string SYS_CONTROL_PWD = "111";
+
+        //Order Type
+        public static string ORDER_TYPE_SHOP= "SHOP";
+        public static string ORDER_TYPE_DELIVERY = "DELIVERY";
+        public static string ORDER_TYPE_COLLECTION = "COLLECTION";
     }
 }
