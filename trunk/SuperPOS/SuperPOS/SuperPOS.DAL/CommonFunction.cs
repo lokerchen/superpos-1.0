@@ -147,5 +147,21 @@ namespace SuperPOS.DAL
             else return false;
         }
         #endregion
+
+        #region 生成订单号
+
+        public static string GetChkCode()
+        {
+            string chkNum = "";
+            new OnLoadSystemCommonData().GetSysValueList();
+            var chkCode = CommonData.SysValueList.Where(s => s.PropMod.Equals(CommonBase.SYS_VALUE_PROP_MODE_TA) && s.PropName.Equals(CommonBase.SYS_VALUE_PROP_NAME_CHECKCODE));
+            if (chkCode.Any())
+            {
+                chkNum = (Int64.Parse(chkCode.FirstOrDefault().PropValue) + 1).ToString();
+            }
+
+            return chkNum;
+        }
+        #endregion
     }
 }

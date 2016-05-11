@@ -71,6 +71,10 @@ namespace SuperPOS.DAL
             onLoad.GetExtraMenuEdit();
             //TA Customer 
             onLoad.GetTACust();
+            //TA OrderItem
+            onLoad.GetTAOrderItem();
+            //System Vlaue
+            onLoad.GetSysValueList();
         }
         #endregion
 
