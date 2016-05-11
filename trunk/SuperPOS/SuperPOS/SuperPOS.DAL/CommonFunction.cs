@@ -10,6 +10,8 @@ namespace SuperPOS.DAL
 {
     public class CommonFunction
     {
+        private static readonly EntityControl _control = new EntityControl();
+
         #region 判断是否有GSSSystemConfig权限
         /// <summary>
         /// 判断是否有GSSSystemConfig权限
@@ -158,6 +160,15 @@ namespace SuperPOS.DAL
             if (chkCode.Any())
             {
                 chkNum = (Int64.Parse(chkCode.FirstOrDefault().PropValue) + 1).ToString();
+
+                //更新后台的值
+                SysValueInfo sysValue = new SysValueInfo();
+                sysValue.SystemKey = chkCode.FirstOrDefault().SystemKey;
+                sysValue.PropMod = CommonBase.SYS_VALUE_PROP_MODE_TA;
+                sysValue.PropName = CommonBase.SYS_VALUE_PROP_NAME_CHECKCODE;
+                sysValue.PropValue = chkNum;
+                _control.UpdateEntity(sysValue);
+                
             }
 
             return chkNum;
