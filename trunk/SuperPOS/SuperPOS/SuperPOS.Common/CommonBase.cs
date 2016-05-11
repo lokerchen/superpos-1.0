@@ -39,5 +39,9 @@ namespace SuperPOS.Common
         public static string ORDER_TYPE_SHOP= "SHOP";
         public static string ORDER_TYPE_DELIVERY = "DELIVERY";
         public static string ORDER_TYPE_COLLECTION = "COLLECTION";
+
+        //System Value
+        public static string SYS_VALUE_PROP_MODE_TA = "TA";
+        public static string SYS_VALUE_PROP_NAME_CHECKCODE = "CHECKCODE";
     }
 }
