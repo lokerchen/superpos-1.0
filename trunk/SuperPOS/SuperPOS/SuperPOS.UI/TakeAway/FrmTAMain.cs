@@ -424,5 +424,11 @@ namespace SuperPOS.UI.TakeAway
         {
             txtMainTime.Text = DateTime.Now.ToLongTimeString();
         }
+
+        private void btnPay_Click(object sender, EventArgs e)
+        {
+            FrmTAPay frmTaPay = new FrmTAPay();
+            frmTaPay.ShowDialog();
+        }
     }
 }

@@ -311,6 +311,7 @@
             this.btnPay.TabIndex = 6;
             this.btnPay.Text = "PAY";
             this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // btnPendOrder
             // 
