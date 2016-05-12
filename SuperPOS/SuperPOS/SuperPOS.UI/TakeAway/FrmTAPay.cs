@@ -11,9 +11,17 @@ namespace SuperPOS.UI.TakeAway
 {
     public partial class FrmTAPay : Form
     {
+        //订单编号
+        private string chkNum = "";
         public FrmTAPay()
         {
             InitializeComponent();
+        }
+
+        public FrmTAPay(string strChkNum)
+        {
+            InitializeComponent();
+            chkNum = strChkNum;
         }
 
         #region 退出
@@ -22,5 +30,10 @@ namespace SuperPOS.UI.TakeAway
             Close();
         }
         #endregion
+
+        private void FrmTAPay_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
