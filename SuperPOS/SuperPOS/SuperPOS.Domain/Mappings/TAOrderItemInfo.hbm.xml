@@ -7,13 +7,15 @@
     <id name="SystemKey" column="SystemKey" type="System.Guid">
       <generator class="guid" />
     </id>
+
+    <property name="ItemQty" column="ItemQty" type="System.String" />
+    <property name="ItemDishName" column="ItemDishName" type="System.String" />
+    <property name="ItemTotalPrice" column="ItemTotalPrice" type="System.String" />
+    <property name="ItemCode" column="ItemCode" type="System.String" />
+    <property name="ItemPrice" column="ItemPrice" type="System.String" />
     <property name="CheckKey" column="CheckKey" type="System.String" />
     <property name="CheckCode" column="CheckCode" type="System.String" />
-    <property name="ItemCode" column="ItemCode" type="System.String" />
-    <property name="ItemDishName" column="ItemDishName" type="System.String" />
-    <property name="ItemPrice" column="ItemPrice" type="System.String" />
-    <property name="ItemQty" column="ItemQty" type="System.String" />
-    <property name="ItemTotalPrice" column="ItemTotalPrice" type="System.String" />
+    <property name="OrderTime" column="OrderTime" type="System.String" />
     <property name="Remark" column="Remark" type="System.String" />
   </class>
 </hibernate-mapping>
