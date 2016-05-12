@@ -249,6 +249,7 @@ namespace SuperPOS.UI.TakeAway
                 taOrderItemInfo.ItemPrice = taMiInfo.wRegular;
                 taOrderItemInfo.ItemQty = "1";
                 taOrderItemInfo.ItemTotalPrice = taMiInfo.wRegular;
+                taOrderItemInfo.ItemType = "1";
                 taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                 //AddDataGridRow(taOrderItemInfo);

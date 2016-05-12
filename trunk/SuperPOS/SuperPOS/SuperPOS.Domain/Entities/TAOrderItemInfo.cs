@@ -36,6 +36,9 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "OrderTime")]
         public virtual string OrderTime { get; set; }
 
+        [XmlElement(ElementName = "ItemType")]
+        public virtual string ItemType { get; set; }
+
         //Remark
         [XmlElement(ElementName = "Remark")]
         public virtual string Remark { get; set; }
