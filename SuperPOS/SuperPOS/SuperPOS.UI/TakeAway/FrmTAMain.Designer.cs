@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnMode = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            this.btnMode1 = new System.Windows.Forms.Button();
+            this.btnMode2 = new System.Windows.Forms.Button();
+            this.btnMode3 = new System.Windows.Forms.Button();
             this.dgvMenuItem = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTotalCount = new System.Windows.Forms.TextBox();
+            this.txtTotalPrice = new System.Windows.Forms.TextBox();
+            this.txtMainTime = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnUp = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnReduce = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnPay = new System.Windows.Forms.Button();
             this.btnPendOrder = new System.Windows.Forms.Button();
@@ -110,60 +111,64 @@
             this.btnMC2 = new System.Windows.Forms.Button();
             this.btnMC1 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.timerMain = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenuItem)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnMode
+            // btnMode1
             // 
-            this.btnMode.BackColor = System.Drawing.Color.Lime;
-            this.btnMode.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMode.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnMode.ForeColor = System.Drawing.Color.White;
-            this.btnMode.Location = new System.Drawing.Point(14, 17);
-            this.btnMode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnMode.Name = "btnMode";
-            this.btnMode.Size = new System.Drawing.Size(105, 50);
-            this.btnMode.TabIndex = 0;
-            this.btnMode.Text = "Delivery";
-            this.btnMode.UseVisualStyleBackColor = false;
+            this.btnMode1.BackColor = System.Drawing.Color.Lime;
+            this.btnMode1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMode1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMode1.ForeColor = System.Drawing.Color.White;
+            this.btnMode1.Location = new System.Drawing.Point(14, 17);
+            this.btnMode1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMode1.Name = "btnMode1";
+            this.btnMode1.Size = new System.Drawing.Size(105, 50);
+            this.btnMode1.TabIndex = 0;
+            this.btnMode1.Text = "Delivery";
+            this.btnMode1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnMode2
             // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(134, 17);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(105, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "2";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnMode2.BackColor = System.Drawing.Color.Silver;
+            this.btnMode2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMode2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMode2.ForeColor = System.Drawing.Color.White;
+            this.btnMode2.Location = new System.Drawing.Point(134, 17);
+            this.btnMode2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMode2.Name = "btnMode2";
+            this.btnMode2.Size = new System.Drawing.Size(105, 50);
+            this.btnMode2.TabIndex = 1;
+            this.btnMode2.Text = "2";
+            this.btnMode2.UseVisualStyleBackColor = false;
+            this.btnMode2.Click += new System.EventHandler(this.btnMode2_Click);
             // 
-            // button3
+            // btnMode3
             // 
-            this.button3.BackColor = System.Drawing.Color.Silver;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(254, 16);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "3";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnMode3.BackColor = System.Drawing.Color.Silver;
+            this.btnMode3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMode3.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMode3.ForeColor = System.Drawing.Color.White;
+            this.btnMode3.Location = new System.Drawing.Point(254, 16);
+            this.btnMode3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMode3.Name = "btnMode3";
+            this.btnMode3.Size = new System.Drawing.Size(105, 50);
+            this.btnMode3.TabIndex = 2;
+            this.btnMode3.Text = "3";
+            this.btnMode3.UseVisualStyleBackColor = false;
+            this.btnMode3.Click += new System.EventHandler(this.btnMode3_Click);
             // 
             // dgvMenuItem
             // 
             this.dgvMenuItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMenuItem.Location = new System.Drawing.Point(14, 75);
             this.dgvMenuItem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvMenuItem.MultiSelect = false;
             this.dgvMenuItem.Name = "dgvMenuItem";
             this.dgvMenuItem.ReadOnly = true;
             this.dgvMenuItem.RowTemplate.Height = 23;
@@ -171,41 +176,41 @@
             this.dgvMenuItem.Size = new System.Drawing.Size(345, 400);
             this.dgvMenuItem.TabIndex = 3;
             // 
-            // textBox1
+            // txtTotalCount
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(31, 483);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(60, 26);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "11";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotalCount.Enabled = false;
+            this.txtTotalCount.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtTotalCount.Location = new System.Drawing.Point(31, 483);
+            this.txtTotalCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotalCount.Name = "txtTotalCount";
+            this.txtTotalCount.Size = new System.Drawing.Size(60, 26);
+            this.txtTotalCount.TabIndex = 4;
+            this.txtTotalCount.Text = "11";
+            this.txtTotalCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox2
+            // txtTotalPrice
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(99, 483);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(83, 26);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.Text = "£69.95";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTotalPrice.Enabled = false;
+            this.txtTotalPrice.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtTotalPrice.Location = new System.Drawing.Point(99, 483);
+            this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtTotalPrice.Name = "txtTotalPrice";
+            this.txtTotalPrice.Size = new System.Drawing.Size(83, 26);
+            this.txtTotalPrice.TabIndex = 5;
+            this.txtTotalPrice.Text = "£69.95";
+            this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox3
+            // txtMainTime
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(216, 482);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(69, 26);
-            this.textBox3.TabIndex = 6;
-            this.textBox3.Text = "18:48:30";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMainTime.Enabled = false;
+            this.txtMainTime.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtMainTime.Location = new System.Drawing.Point(216, 482);
+            this.txtMainTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtMainTime.Name = "txtMainTime";
+            this.txtMainTime.Size = new System.Drawing.Size(69, 26);
+            this.txtMainTime.TabIndex = 6;
+            this.txtMainTime.Text = "18:48:30";
+            this.txtMainTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textBox4
             // 
@@ -246,33 +251,35 @@
             this.btnDown.Text = "↓";
             this.btnDown.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btnAdd
             // 
-            this.button6.BackColor = System.Drawing.Color.Silver;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(157, 513);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 40);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "+";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.Silver;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(157, 513);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(60, 40);
+            this.btnAdd.TabIndex = 10;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // button7
+            // btnReduce
             // 
-            this.button7.BackColor = System.Drawing.Color.Silver;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button7.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(223, 513);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 40);
-            this.button7.TabIndex = 11;
-            this.button7.Text = "-";
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnReduce.BackColor = System.Drawing.Color.Silver;
+            this.btnReduce.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReduce.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnReduce.ForeColor = System.Drawing.Color.White;
+            this.btnReduce.Location = new System.Drawing.Point(223, 513);
+            this.btnReduce.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReduce.Name = "btnReduce";
+            this.btnReduce.Size = new System.Drawing.Size(60, 40);
+            this.btnReduce.TabIndex = 11;
+            this.btnReduce.Text = "-";
+            this.btnReduce.UseVisualStyleBackColor = false;
+            this.btnReduce.Click += new System.EventHandler(this.btnReduce_Click);
             // 
             // groupBox1
             // 
@@ -1302,41 +1309,48 @@
             this.button1.Text = "Menu 1";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button26
+            // btnRemove
             // 
-            this.button26.BackColor = System.Drawing.Color.Red;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button26.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button26.ForeColor = System.Drawing.Color.White;
-            this.button26.Location = new System.Drawing.Point(289, 513);
-            this.button26.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(60, 40);
-            this.button26.TabIndex = 15;
-            this.button26.Text = "X";
-            this.button26.UseVisualStyleBackColor = false;
+            this.btnRemove.BackColor = System.Drawing.Color.Red;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRemove.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(289, 513);
+            this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(60, 40);
+            this.btnRemove.TabIndex = 15;
+            this.btnRemove.Text = "X";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // timerMain
+            // 
+            this.timerMain.Enabled = true;
+            this.timerMain.Interval = 1000;
+            this.timerMain.Tick += new System.EventHandler(this.timerMain_Tick);
             // 
             // FrmTAMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 700);
-            this.Controls.Add(this.button26);
+            this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.btnReduce);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnUp);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMainTime);
+            this.Controls.Add(this.txtTotalPrice);
+            this.Controls.Add(this.txtTotalCount);
             this.Controls.Add(this.dgvMenuItem);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btnMode);
+            this.Controls.Add(this.btnMode3);
+            this.Controls.Add(this.btnMode2);
+            this.Controls.Add(this.btnMode1);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1354,18 +1368,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnMode;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnMode1;
+        private System.Windows.Forms.Button btnMode2;
+        private System.Windows.Forms.Button btnMode3;
         private System.Windows.Forms.DataGridView dgvMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTotalCount;
+        private System.Windows.Forms.TextBox txtTotalPrice;
+        private System.Windows.Forms.TextBox txtMainTime;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnDown;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnReduce;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Button btnPendOrder;
@@ -1388,7 +1402,7 @@
         private System.Windows.Forms.Button btnMC2;
         private System.Windows.Forms.Button btnMC1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnMI16;
         private System.Windows.Forms.Button btnMI15;
         private System.Windows.Forms.Button btnMI14;
@@ -1437,5 +1451,6 @@
         private System.Windows.Forms.Button btnMC7;
         private System.Windows.Forms.Button btnMC6;
         private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.Timer timerMain;
     }
 }

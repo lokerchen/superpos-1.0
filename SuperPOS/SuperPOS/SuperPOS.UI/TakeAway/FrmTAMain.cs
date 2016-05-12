@@ -21,7 +21,7 @@ namespace SuperPOS.UI.TakeAway
         //记录Menu Cate值
         private string strBtnText = "";
 
-        //Language语言状态值
+        //Language语言状态值,1为英文状态，2为其他
         private int I_LAN = 1;
 
         private string strCallID = "";
@@ -32,6 +32,17 @@ namespace SuperPOS.UI.TakeAway
         #region 定义
         Button[] btnMI = new Button[16];
         Button[] btnMC = new Button[35];
+
+        private string ChkKey1 = "";
+        private string ChkNum1 = "";
+        private string ChkKey2 = "";
+        private string ChkNum2 = "";
+        private string ChkKey3 = "";
+        private string ChkNum3 = "";
+        //当前Check SystemKey和Check Number
+        private string ChkKey = "";
+        private string ChkNum = "";
+
         #endregion
 
         public FrmTAMain()
@@ -47,6 +58,18 @@ namespace SuperPOS.UI.TakeAway
 
         private void FrmTAMain_Load(object sender, EventArgs e)
         {
+            new OnLoadSystemCommonData().GetTAMenuItemList();
+
+            if (string.IsNullOrEmpty(ChkKey1)) ChkKey1 = Guid.NewGuid().ToString();
+
+            ChkNum1 = CommonFunction.GetChkCode();
+            //Console.Out.WriteLine(ChkNum);
+            //string g = Guid.NewGuid().ToString();
+            //Console.Out.WriteLine(g);
+
+            ChkKey = ChkKey1;
+            ChkNum = ChkNum1;
+
             #region MenuItem按钮 
             btnMI[0] = btnMI1;
             btnMI[1] = btnMI2;
@@ -118,6 +141,28 @@ namespace SuperPOS.UI.TakeAway
             #region Menu Item按钮事件
             for (int i = 0; i < 16; i++) { btnMI[i].Click += btnMI_Click; }
             #endregion
+
+            dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+
+            dgvMenuItem.Columns[0].Visible = false;
+            dgvMenuItem.Columns[0].Width = 10;
+            dgvMenuItem.Columns[1].HeaderText = @"Qty";
+            dgvMenuItem.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvMenuItem.Columns[1].Width = 30;
+            dgvMenuItem.Columns[2].HeaderText = @"Dish Name";
+            dgvMenuItem.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgvMenuItem.Columns[2].Width = 180;
+            dgvMenuItem.Columns[3].HeaderText = @"Price";
+            dgvMenuItem.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvMenuItem.Columns[3].Width = 50;
+            dgvMenuItem.Columns[4].HeaderText = @"Code";
+            dgvMenuItem.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvMenuItem.Columns[4].Width = 40;
+            dgvMenuItem.Columns[5].Visible = false;
+            dgvMenuItem.Columns[6].Visible = false;
+            dgvMenuItem.Columns[7].Visible = false;
+            dgvMenuItem.Columns[8].Visible = false;
+            dgvMenuItem.Columns[9].Visible = false;
         }
 
         private void SetMenuItem(int i, int iPage, string strMenuCate)
@@ -184,7 +229,36 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnMI_Click(object sender, EventArgs e)
         {
+            Button btn = sender as Button;
+            string strTxt = btn.Text;
 
+            TAOrderItemInfo taOrderItemInfo = new TAOrderItemInfo();
+            taOrderItemInfo.SystemKey = Guid.NewGuid();
+
+            IList<TAMenuItemInfo> qMiList = new List<TAMenuItemInfo>();
+
+            qMiList = I_LAN != 1 ? CommonData.TaMenuItemList.Where(s => s.OtherName.Equals(strTxt)).ToList() : CommonData.TaMenuItemList.Where(s => s.EnglishName.Equals(strTxt)).ToList();
+            TAMenuItemInfo taMiInfo = qMiList.FirstOrDefault();
+
+            if (taMiInfo != null)
+            {
+                taOrderItemInfo.CheckKey = ChkKey;
+                taOrderItemInfo.CheckCode = ChkNum;
+                taOrderItemInfo.ItemCode = taMiInfo.DishCode;
+                taOrderItemInfo.ItemDishName = taMiInfo.EnglishName;
+                taOrderItemInfo.ItemPrice = taMiInfo.wRegular;
+                taOrderItemInfo.ItemQty = "1";
+                taOrderItemInfo.ItemTotalPrice = taMiInfo.wRegular;
+                taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+                //AddDataGridRow(taOrderItemInfo);
+                CommonData.TaOrderItemList.Add(taOrderItemInfo);
+                //dgvMenuItem.Refresh();
+                dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+            }
+
+            txtTotalCount.Text = GetDgvItemCount().ToString();
+            txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
         }
 
         #region 语言切换
@@ -226,6 +300,129 @@ namespace SuperPOS.UI.TakeAway
             frmTaChangeOrderType.ShowDialog();
 
             strOrderType = frmTaChangeOrderType.strOrderType;
+        }
+
+        private void btnMode2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnMode3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private int GetDgvItemCount()
+        {
+            int sumItem = 0;
+            for (int i = 0; i < dgvMenuItem.Rows.Count; i++)
+            {
+                sumItem += string.IsNullOrEmpty(dgvMenuItem.Rows[i].Cells[1].Value.ToString())
+                    ? 0
+                    : Convert.ToInt32(dgvMenuItem.Rows[i].Cells[1].Value.ToString());
+            }
+
+            return sumItem;
+        }
+
+        private decimal GetDgvItemTotalPrice()
+        {
+            decimal sumItem = 0;
+            for (int i = 0; i < dgvMenuItem.Rows.Count; i++)
+            {
+                sumItem += string.IsNullOrEmpty(dgvMenuItem.Rows[i].Cells[3].Value.ToString())
+                    ? 0
+                    : Convert.ToDecimal(dgvMenuItem.Rows[i].Cells[3].Value.ToString());
+            }
+
+            return sumItem;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (dgvMenuItem.RowCount == 0) return;
+            if (dgvMenuItem.CurrentRow?.Index < 0) return;
+
+            //TAOrderItemInfo taOrderItem = new TAOrderItemInfo();
+            var qList =
+                CommonData.TaOrderItemList.Where(
+                    s =>
+                        s.CheckKey.Equals(ChkKey) &&
+                        s.SystemKey.ToString().Equals(dgvMenuItem.CurrentRow.Cells[0].Value.ToString()));
+
+            if (qList.Any())
+            {
+                qList.FirstOrDefault().ItemQty = (Convert.ToInt32(qList.FirstOrDefault().ItemQty) + 1).ToString();
+                qList.FirstOrDefault().ItemTotalPrice =
+                    ((Convert.ToInt32(qList.FirstOrDefault().ItemQty)) *
+                     Convert.ToDecimal(qList.FirstOrDefault().ItemPrice)).ToString();
+            }
+
+            dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+
+            txtTotalCount.Text = GetDgvItemCount().ToString();
+            txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+        }
+
+        private void btnReduce_Click(object sender, EventArgs e)
+        {
+            if (dgvMenuItem.RowCount == 0) return;
+            if (dgvMenuItem.CurrentRow?.Index < 0) return;
+
+            //TAOrderItemInfo taOrderItem = new TAOrderItemInfo();
+            var qList =
+                CommonData.TaOrderItemList.Where(
+                    s =>
+                        s.CheckKey.Equals(ChkKey) &&
+                        s.SystemKey.ToString().Equals(dgvMenuItem.CurrentRow.Cells[0].Value.ToString()));
+
+            if (qList.Any())
+            {
+                if (Convert.ToInt32(qList.FirstOrDefault().ItemQty) > 1)
+                {
+                    qList.FirstOrDefault().ItemQty = (Convert.ToInt32(qList.FirstOrDefault().ItemQty) - 1).ToString();
+                    qList.FirstOrDefault().ItemTotalPrice =
+                    ((Convert.ToInt32(qList.FirstOrDefault().ItemQty)) *
+                     Convert.ToDecimal(qList.FirstOrDefault().ItemPrice)).ToString();
+                }
+                else
+                {
+                    //删除？
+                    CommonData.TaOrderItemList.Remove(qList.FirstOrDefault());
+                }
+            }
+
+            dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+
+            txtTotalCount.Text = GetDgvItemCount().ToString();
+            txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+            if (dgvMenuItem.RowCount == 0) return;
+            if (dgvMenuItem.CurrentRow?.Index < 0) return;
+
+            var qList =
+                CommonData.TaOrderItemList.Where(
+                    s =>
+                        s.CheckKey.Equals(ChkKey) &&
+                        s.SystemKey.ToString().Equals(dgvMenuItem.CurrentRow.Cells[0].Value.ToString()));
+
+            if (qList.Any())
+            {
+                CommonData.TaOrderItemList.Remove(qList.FirstOrDefault());
+            }
+
+            dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+
+            txtTotalCount.Text = GetDgvItemCount().ToString();
+            txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+        }
+
+        private void timerMain_Tick(object sender, EventArgs e)
+        {
+            txtMainTime.Text = DateTime.Now.ToLongTimeString();
         }
     }
 }
