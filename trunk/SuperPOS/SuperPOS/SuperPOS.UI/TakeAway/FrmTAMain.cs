@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using SuperPOS.Common;
 using SuperPOS.DAL;
 using SuperPOS.Domain.Entities;
 
@@ -43,6 +44,9 @@ namespace SuperPOS.UI.TakeAway
         private string ChkKey = "";
         private string ChkNum = "";
 
+        //点餐类型，Delivery,Shop,Collection三种中的任意一个，默认为Delivery
+        private string ORDER_TYPE = "";
+
         #endregion
 
         public FrmTAMain()
@@ -63,6 +67,10 @@ namespace SuperPOS.UI.TakeAway
             if (string.IsNullOrEmpty(ChkKey1)) ChkKey1 = Guid.NewGuid().ToString();
 
             ChkNum1 = CommonFunction.GetChkCode();
+
+            //Order Type，默认为Delivery
+            ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+            btnMode1.Text = ORDER_TYPE;
             //Console.Out.WriteLine(ChkNum);
             //string g = Guid.NewGuid().ToString();
             //Console.Out.WriteLine(g);
@@ -163,6 +171,8 @@ namespace SuperPOS.UI.TakeAway
             dgvMenuItem.Columns[7].Visible = false;
             dgvMenuItem.Columns[8].Visible = false;
             dgvMenuItem.Columns[9].Visible = false;
+            dgvMenuItem.Columns[10].Visible = false;
+            dgvMenuItem.Columns[11].Visible = false;
         }
 
         private void SetMenuItem(int i, int iPage, string strMenuCate)
@@ -251,6 +261,7 @@ namespace SuperPOS.UI.TakeAway
                 taOrderItemInfo.ItemTotalPrice = taMiInfo.wRegular;
                 taOrderItemInfo.ItemType = "1";
                 taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                taOrderItemInfo.OrderType = ORDER_TYPE;
 
                 //AddDataGridRow(taOrderItemInfo);
                 CommonData.TaOrderItemList.Add(taOrderItemInfo);
@@ -428,8 +439,26 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            FrmTAPay frmTaPay = new FrmTAPay();
-            frmTaPay.ShowDialog();
+            //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
+            //frmTaPay.ShowDialog();
+            if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_DELIVERY))
+            {
+                //Delivery
+                FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
+                frmTaPay.ShowDialog();
+            }
+            else if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_COLLECTION))
+            {
+                //Collection
+                //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
+                //frmTaPay.ShowDialog();
+            }
+            else if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_SHOP))
+            {
+                //Shop
+                //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
+                //frmTaPay.ShowDialog();
+            }
         }
     }
 }
