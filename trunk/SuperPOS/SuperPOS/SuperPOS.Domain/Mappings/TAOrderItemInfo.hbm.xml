@@ -18,6 +18,7 @@
     <property name="OrderTime" column="OrderTime" type="System.String" />
     <property name="ItemType" column="ItemType" type="System.String" />
     <property name="OrderType" column="OrderType" type="System.String" />
+    <property name="ParentItem" column="ParentItem" type="System.String" />
     <property name="Remark" column="Remark" type="System.String" />
   </class>
 </hibernate-mapping>

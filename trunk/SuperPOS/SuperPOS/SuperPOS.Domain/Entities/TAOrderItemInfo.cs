@@ -42,6 +42,9 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "OrderType")]
         public virtual string OrderType { get; set; }
 
+        [XmlElement(ElementName = "ParentItem")]
+        public virtual string ParentItem { get; set; }
+
         //Remark
         [XmlElement(ElementName = "Remark")]
         public virtual string Remark { get; set; }
