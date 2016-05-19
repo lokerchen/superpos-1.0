@@ -41,6 +41,7 @@ namespace SuperPOS.UI.TakeAway
             onLoad.GetTADistChargeRemark();
             onLoad.GetTAPostCode();
             onLoad.GetTAPostCodeRemark();
+            onLoad.GetTAPreDefined();
 
             #region 绑定General Setting的Payment Type
             payTypeList = CommonData.TaPayTypeList.ToList();
@@ -74,6 +75,57 @@ namespace SuperPOS.UI.TakeAway
                 txtShopDis.Text = qList.ShopDisc;
                 txtShopDisThres.Text = qList.ShopDiscThres;
             }
+
+            //Pre-defined Delivery Notes
+            
+            #region Pre-defined Delivery Notes
+            if (CommonData.TaPreDefinedList.Any())
+            {
+                if (CommonData.TaPreDefinedList.Count == 0)
+                {
+                    txtPd1.Text = "";
+                    txtPd2.Text = "";
+                    txtPd3.Text = "";
+                    txtPd4.Text = "";
+                }
+                else if (CommonData.TaPreDefinedList.Count == 1)
+                {
+                    txtPd1.Text = CommonData.TaPreDefinedList[0].PreTxtValue;
+                    txtPd2.Text = "";
+                    txtPd3.Text = "";
+                    txtPd4.Text = "";
+                }
+                else if (CommonData.TaPreDefinedList.Count == 2)
+                {
+                    txtPd1.Text = CommonData.TaPreDefinedList[0].PreTxtValue;
+                    txtPd2.Text = CommonData.TaPreDefinedList[1].PreTxtValue;
+                    txtPd3.Text = "";
+                    txtPd4.Text = "";
+                }
+                else if (CommonData.TaPreDefinedList.Count == 3)
+                {
+                    txtPd1.Text = CommonData.TaPreDefinedList[0].PreTxtValue;
+                    txtPd2.Text = CommonData.TaPreDefinedList[1].PreTxtValue;
+                    txtPd3.Text = CommonData.TaPreDefinedList[2].PreTxtValue;
+                    txtPd4.Text = "";
+                }
+                else if (CommonData.TaPreDefinedList.Count == 4)
+                {
+                    txtPd1.Text = CommonData.TaPreDefinedList[0].PreTxtValue;
+                    txtPd2.Text = CommonData.TaPreDefinedList[1].PreTxtValue;
+                    txtPd3.Text = CommonData.TaPreDefinedList[2].PreTxtValue;
+                    txtPd4.Text = CommonData.TaPreDefinedList[3].PreTxtValue;
+                }
+            }
+            else
+            {
+                txtPd1.Text = "";
+                txtPd2.Text = "";
+                txtPd3.Text = "";
+                txtPd4.Text = "";
+            }
+            #endregion
+
             #endregion
 
             #region Delivery Setting Distance Charge
@@ -151,6 +203,41 @@ namespace SuperPOS.UI.TakeAway
 
             // 保存Pay type discount
             SavePayTypeDisc();
+
+            new OnLoadSystemCommonData().GetTAPreDefined();
+            foreach (var taPreDefinedInfo in CommonData.TaPreDefinedList)
+            {
+                _control.DeleteEntity(taPreDefinedInfo);
+            }
+
+            if (!string.IsNullOrEmpty(txtPd1.Text))
+            {
+                TAPreDefinedInfo taPreDefinedInfo = new TAPreDefinedInfo();
+                taPreDefinedInfo.SystemKey = Guid.NewGuid();
+                taPreDefinedInfo.PreTxtValue = txtPd1.Text;
+                _control.AddEntity(taPreDefinedInfo);
+            }
+            if (!string.IsNullOrEmpty(txtPd2.Text))
+            {
+                TAPreDefinedInfo taPreDefinedInfo = new TAPreDefinedInfo();
+                taPreDefinedInfo.SystemKey = Guid.NewGuid();
+                taPreDefinedInfo.PreTxtValue = txtPd2.Text;
+                _control.AddEntity(taPreDefinedInfo);
+            }
+            if (!string.IsNullOrEmpty(txtPd3.Text))
+            {
+                TAPreDefinedInfo taPreDefinedInfo = new TAPreDefinedInfo();
+                taPreDefinedInfo.SystemKey = Guid.NewGuid();
+                taPreDefinedInfo.PreTxtValue = txtPd3.Text;
+                _control.AddEntity(taPreDefinedInfo);
+            }
+            if (!string.IsNullOrEmpty(txtPd4.Text))
+            {
+                TAPreDefinedInfo taPreDefinedInfo = new TAPreDefinedInfo();
+                taPreDefinedInfo.SystemKey = Guid.NewGuid();
+                taPreDefinedInfo.PreTxtValue = txtPd4.Text;
+                _control.AddEntity(taPreDefinedInfo);
+            }
         }
         #endregion  
 

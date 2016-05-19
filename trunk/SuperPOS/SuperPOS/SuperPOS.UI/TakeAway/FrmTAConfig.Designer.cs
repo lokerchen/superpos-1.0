@@ -94,6 +94,11 @@
             this.label17 = new System.Windows.Forms.Label();
             this.txtYourPostCode = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtPd1 = new System.Windows.Forms.TextBox();
+            this.txtPd2 = new System.Windows.Forms.TextBox();
+            this.txtPd4 = new System.Windows.Forms.TextBox();
+            this.txtPd3 = new System.Windows.Forms.TextBox();
             this.grpTAConfig.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -108,6 +113,7 @@
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPostCode)).BeginInit();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpTAConfig
@@ -140,6 +146,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox7);
             this.tabPage1.Controls.Add(this.btnGSExit);
             this.tabPage1.Controls.Add(this.btnGSSave);
             this.tabPage1.Controls.Add(this.groupBox2);
@@ -195,7 +202,7 @@
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(119, 193);
+            this.groupBox2.Location = new System.Drawing.Point(241, 193);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -835,6 +842,47 @@
             this.label19.TabIndex = 13;
             this.label19.Text = "Your STD";
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.txtPd4);
+            this.groupBox7.Controls.Add(this.txtPd3);
+            this.groupBox7.Controls.Add(this.txtPd2);
+            this.groupBox7.Controls.Add(this.txtPd1);
+            this.groupBox7.Location = new System.Drawing.Point(6, 193);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(222, 177);
+            this.groupBox7.TabIndex = 4;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Pre-defined Delivery Notes";
+            // 
+            // txtPd1
+            // 
+            this.txtPd1.Location = new System.Drawing.Point(8, 41);
+            this.txtPd1.Name = "txtPd1";
+            this.txtPd1.Size = new System.Drawing.Size(208, 23);
+            this.txtPd1.TabIndex = 0;
+            // 
+            // txtPd2
+            // 
+            this.txtPd2.Location = new System.Drawing.Point(8, 70);
+            this.txtPd2.Name = "txtPd2";
+            this.txtPd2.Size = new System.Drawing.Size(208, 23);
+            this.txtPd2.TabIndex = 1;
+            // 
+            // txtPd4
+            // 
+            this.txtPd4.Location = new System.Drawing.Point(8, 128);
+            this.txtPd4.Name = "txtPd4";
+            this.txtPd4.Size = new System.Drawing.Size(208, 23);
+            this.txtPd4.TabIndex = 3;
+            // 
+            // txtPd3
+            // 
+            this.txtPd3.Location = new System.Drawing.Point(8, 99);
+            this.txtPd3.Name = "txtPd3";
+            this.txtPd3.Size = new System.Drawing.Size(208, 23);
+            this.txtPd3.TabIndex = 2;
+            // 
             // FrmTAConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
@@ -868,6 +916,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPostCode)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -938,5 +988,10 @@
         private System.Windows.Forms.Button btnDSExit;
         private System.Windows.Forms.Button btnDSSave;
         private System.Windows.Forms.CheckBox chkIgnoreCharge;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TextBox txtPd4;
+        private System.Windows.Forms.TextBox txtPd3;
+        private System.Windows.Forms.TextBox txtPd2;
+        private System.Windows.Forms.TextBox txtPd1;
     }
 }
