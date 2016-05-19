@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtIntNotes = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.chkBlackListed = new System.Windows.Forms.CheckBox();
@@ -94,12 +96,10 @@
             this.label11 = new System.Windows.Forms.Label();
             this.txtCash = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtDeliveryCollectionNote = new System.Windows.Forms.RichTextBox();
             this.btnCollection = new System.Windows.Forms.Button();
             this.btnShop = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.txtIntNotes = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.cmbNote = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -136,6 +136,25 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Information";
+            // 
+            // txtIntNotes
+            // 
+            this.txtIntNotes.Enabled = false;
+            this.txtIntNotes.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtIntNotes.Location = new System.Drawing.Point(110, 300);
+            this.txtIntNotes.Name = "txtIntNotes";
+            this.txtIntNotes.Size = new System.Drawing.Size(130, 23);
+            this.txtIntNotes.TabIndex = 20;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(19, 306);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 17);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Int. Notes";
             // 
             // txtNotes
             // 
@@ -856,19 +875,11 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(8, 411);
+            this.label10.Location = new System.Drawing.Point(12, 447);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(222, 22);
             this.label10.TabIndex = 7;
             this.label10.Text = "Delivery / Collection Note";
-            // 
-            // txtDeliveryCollectionNote
-            // 
-            this.txtDeliveryCollectionNote.Location = new System.Drawing.Point(12, 436);
-            this.txtDeliveryCollectionNote.Name = "txtDeliveryCollectionNote";
-            this.txtDeliveryCollectionNote.Size = new System.Drawing.Size(269, 48);
-            this.txtDeliveryCollectionNote.TabIndex = 8;
-            this.txtDeliveryCollectionNote.Text = "";
             // 
             // btnCollection
             // 
@@ -910,34 +921,24 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // txtIntNotes
+            // cmbNote
             // 
-            this.txtIntNotes.Enabled = false;
-            this.txtIntNotes.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtIntNotes.Location = new System.Drawing.Point(110, 300);
-            this.txtIntNotes.Name = "txtIntNotes";
-            this.txtIntNotes.Size = new System.Drawing.Size(130, 23);
-            this.txtIntNotes.TabIndex = 20;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(19, 306);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 17);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Int. Notes";
+            this.cmbNote.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbNote.FormattingEnabled = true;
+            this.cmbNote.Location = new System.Drawing.Point(12, 472);
+            this.cmbNote.Name = "cmbNote";
+            this.cmbNote.Size = new System.Drawing.Size(269, 25);
+            this.cmbNote.TabIndex = 12;
             // 
             // FrmTAPay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(902, 593);
+            this.Controls.Add(this.cmbNote);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnShop);
             this.Controls.Add(this.btnCollection);
-            this.Controls.Add(this.txtDeliveryCollectionNote);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -986,7 +987,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox txtDeliveryCollectionNote;
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnP;
         private System.Windows.Forms.Button btnS;
@@ -1031,5 +1031,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtIntNotes;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cmbNote;
     }
 }
