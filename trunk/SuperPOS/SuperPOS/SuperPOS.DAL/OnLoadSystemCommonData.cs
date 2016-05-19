@@ -66,5 +66,7 @@ namespace SuperPOS.DAL
         public void GetTAOrderItem() { CommonData.TaOrderItemList = _control.SelectAll<TAOrderItemInfo>(); }
 
         public void GetSysValueList() { CommonData.SysValueList = _control.SelectAll<SysValueInfo>(); }
+
+        public void GetTAPreDefined() { CommonData.TaPreDefinedList = _control.SelectAll<TAPreDefinedInfo>(); }
     }
 }
