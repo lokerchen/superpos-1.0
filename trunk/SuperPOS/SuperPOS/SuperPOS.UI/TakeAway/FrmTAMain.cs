@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using NHibernate.Linq;
 using SuperPOS.Common;
 using SuperPOS.DAL;
 using SuperPOS.Domain.Entities;
@@ -293,10 +294,75 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnTasteHand_Click(object sender, EventArgs e)
         {
-            FrmTAMenuItem frmTaMenuItem = new FrmTAMenuItem(userInfo, true);
-            //frmTaMenuItem.tabCtlMenuItem.SelectedTab = frmTaMenuItem.tabPageTaste;
-            //frmTaMenuItem.tabCtlMenuItem.SelectedTab = frmTaMenuItem.tabPageTaste;
-            frmTaMenuItem.ShowDialog();
+            //FrmTAMenuItem frmTaMenuItem = new FrmTAMenuItem(userInfo, true);
+            ////frmTaMenuItem.tabCtlMenuItem.SelectedTab = frmTaMenuItem.tabPageTaste;
+            ////frmTaMenuItem.tabCtlMenuItem.SelectedTab = frmTaMenuItem.tabPageTaste;
+            //frmTaMenuItem.ShowDialog();
+
+            if (dgvMenuItem.RowCount == 0) return;
+            if (dgvMenuItem.CurrentRow?.Index < 0) return;
+
+            string strParentKey = dgvMenuItem.CurrentRow.Cells[0].Value.ToString();
+
+            var qList =
+                CommonData.TaMenuItemList.Where(
+                    s => s.EnglishName.Equals(dgvMenuItem.CurrentRow.Cells[2].Value.ToString()));
+            string strMIKey = "";
+            if (qList.Any()) strMIKey = qList.FirstOrDefault().SystemKey.ToString();
+
+
+            FrmTATastHand frmTaTastHand = new FrmTATastHand(strMIKey);
+            if (frmTaTastHand.ShowDialog() == DialogResult.OK)
+            {
+                //获得改码
+                string sMod = frmTaTastHand.ValueString;
+
+                //暂停秒表
+                //timerMain.Enabled = false;
+
+                string[] strMod = sMod.Split(';');
+
+                for (int i = 0; i < strMod.Length; i++)
+                {
+                    //if(string.IsNullOrEmpty(strMod[i])) return;
+                    if (string.IsNullOrEmpty(strMod[i])) break;
+
+                    string[] sDetail = strMod[i].Split(',');
+
+                    //if (sDetail.Length <= 0) return;
+                    if (sDetail.Length <= 0) break;
+
+                    TAOrderItemInfo taOrderItemInfo = new TAOrderItemInfo();
+                    taOrderItemInfo.SystemKey = Guid.NewGuid();
+                    taOrderItemInfo.CheckKey = ChkKey;
+                    taOrderItemInfo.CheckCode = ChkNum;
+                    taOrderItemInfo.ItemCode = "";
+                    taOrderItemInfo.ItemDishName = sDetail[0];
+                    taOrderItemInfo.ItemPrice = sDetail[1];
+                    taOrderItemInfo.ItemQty = "1";
+                    taOrderItemInfo.ItemTotalPrice = sDetail[1];
+                    taOrderItemInfo.ItemType = "2";
+                    taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    taOrderItemInfo.OrderType = ORDER_TYPE;
+                    taOrderItemInfo.ParentItem = strParentKey;
+
+                    CommonData.TaOrderItemList.Add(taOrderItemInfo);
+
+                    //for (int j = 0; j < sDetail.Length; j++)
+                    //{
+                    //    if (string.IsNullOrEmpty(sDetail[j])) return;
+                    //}
+
+                    //dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                }
+
+                SetDgvData();
+
+                txtTotalCount.Text = GetDgvItemCount().ToString();
+                txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+            }
+            ////启动秒表
+            //timerMain.Enabled = true;
         }
 
         private void btnCustInfo_Click(object sender, EventArgs e)
@@ -329,6 +395,8 @@ namespace SuperPOS.UI.TakeAway
             int sumItem = 0;
             for (int i = 0; i < dgvMenuItem.Rows.Count; i++)
             {
+                if (!dgvMenuItem.Rows[i].Cells[9].Value.ToString().Equals("1")) continue;
+
                 sumItem += string.IsNullOrEmpty(dgvMenuItem.Rows[i].Cells[1].Value.ToString())
                     ? 0
                     : Convert.ToInt32(dgvMenuItem.Rows[i].Cells[1].Value.ToString());
@@ -459,6 +527,91 @@ namespace SuperPOS.UI.TakeAway
                 //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
                 //frmTaPay.ShowDialog();
             }
+        }
+
+        private void SetDgvData()
+        {
+            //foreach (DataGridViewRow row in dgvMenuItem.Rows)
+            //{
+            //    row.Cells.Clear();
+            //}
+
+            List<TAOrderItemInfo> lstPOI = new List<TAOrderItemInfo>();
+            List<TAOrderItemInfo> lstCOI = new List<TAOrderItemInfo>();
+            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).Where(s => s.ItemType.Equals("1")).ForEach(i => lstPOI.Add(i));
+            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).Where(s => s.ItemType.Equals("2")).ForEach(i => lstCOI.Add(i));
+
+            //CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList().Clear();
+
+            List<TAOrderItemInfo> lstTmp = new List<TAOrderItemInfo>();
+            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ForEach(i => lstTmp.Add(i));
+
+            foreach (var taOrderItemInfo in lstTmp)
+            {
+                CommonData.TaOrderItemList.Remove(taOrderItemInfo);
+            }
+
+
+            //CommonData.TaOrderItemList.cl
+
+            foreach (var taOI in lstPOI)
+            {
+                CommonData.TaOrderItemList.Add(taOI);
+
+                var qList = lstCOI.Where(s => s.ParentItem.Equals(taOI.SystemKey.ToString()));
+                if (qList.Any())
+                {
+                    foreach (var taOrderItemInfo in qList)
+                    {
+                        CommonData.TaOrderItemList.Add(taOrderItemInfo);
+                    }
+                }
+            }
+
+            dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+
+            //int i = 0;
+            //var lstTaOI = lstOI.Where(s => s.ItemType.Equals("1"));
+            //var lstTaOIMod = lstOI.Where(s => s.ItemType.Equals("2"));
+            //foreach (var taOrderItemInfo in lstTaOI)
+            //{
+            //    string strParentKey = taOrderItemInfo.SystemKey.ToString();
+            //    var qList = lstTaOIMod.Where(s => s.ParentItem.Equals(strParentKey));
+
+            //    foreach (var taOIParent in qList)
+            //    {
+            //        int iParent = dgvMenuItem.Rows.Add();
+            //        dgvMenuItem.Rows[iParent].Cells[0].Value = taOIParent.SystemKey;
+            //        dgvMenuItem.Rows[iParent].Cells[1].Value = taOIParent.ItemQty;
+            //        dgvMenuItem.Rows[iParent].Cells[2].Value = taOIParent.ItemDishName;
+            //        dgvMenuItem.Rows[iParent].Cells[3].Value = taOIParent.ItemTotalPrice;
+            //        dgvMenuItem.Rows[iParent].Cells[4].Value = taOIParent.ItemCode;
+            //        dgvMenuItem.Rows[iParent].Cells[5].Value = taOIParent.ItemPrice;
+            //        dgvMenuItem.Rows[iParent].Cells[6].Value = taOIParent.CheckKey;
+            //        dgvMenuItem.Rows[iParent].Cells[7].Value = taOIParent.CheckCode;
+            //        dgvMenuItem.Rows[iParent].Cells[8].Value = taOIParent.OrderTime;
+            //        dgvMenuItem.Rows[iParent].Cells[9].Value = taOIParent.ItemType;
+            //        dgvMenuItem.Rows[iParent].Cells[10].Value = taOIParent.OrderType;
+            //        dgvMenuItem.Rows[iParent].Cells[11].Value = taOIParent.ParentItem;
+            //        dgvMenuItem.Rows[iParent].Cells[12].Value = taOIParent.Remark;
+            //    }
+
+            //    int index = dgvMenuItem.Rows.Add();
+            //    dgvMenuItem.Rows[index].Cells[0].Value = taOrderItemInfo.SystemKey;
+            //    dgvMenuItem.Rows[index].Cells[1].Value = taOrderItemInfo.ItemQty;
+            //    dgvMenuItem.Rows[index].Cells[2].Value = taOrderItemInfo.ItemDishName;
+            //    dgvMenuItem.Rows[index].Cells[3].Value = taOrderItemInfo.ItemTotalPrice;
+            //    dgvMenuItem.Rows[index].Cells[4].Value = taOrderItemInfo.ItemCode;
+            //    dgvMenuItem.Rows[index].Cells[5].Value = taOrderItemInfo.ItemPrice;
+            //    dgvMenuItem.Rows[index].Cells[6].Value = taOrderItemInfo.CheckKey;
+            //    dgvMenuItem.Rows[index].Cells[7].Value = taOrderItemInfo.CheckCode;
+            //    dgvMenuItem.Rows[index].Cells[8].Value = taOrderItemInfo.OrderTime;
+            //    dgvMenuItem.Rows[index].Cells[9].Value = taOrderItemInfo.ItemType;
+            //    dgvMenuItem.Rows[index].Cells[10].Value = taOrderItemInfo.OrderType;
+            //    dgvMenuItem.Rows[index].Cells[11].Value = taOrderItemInfo.ParentItem;
+            //    dgvMenuItem.Rows[index].Cells[12].Value = taOrderItemInfo.Remark;
+
+            //}
         }
     }
 }
