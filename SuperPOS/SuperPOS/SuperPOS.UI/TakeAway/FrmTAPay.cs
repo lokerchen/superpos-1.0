@@ -38,6 +38,7 @@ namespace SuperPOS.UI.TakeAway
 
         private void FrmTAPay_Load(object sender, EventArgs e)
         {
+            #region 查询会员
             //查询会员
             new OnLoadSystemCommonData().GetTACust();
 
@@ -59,6 +60,15 @@ namespace SuperPOS.UI.TakeAway
                 txtNotes.Text = taCustInfo.NotesOnBill;
                 chkBlackListed.Checked = taCustInfo.IsBlackListed.Equals("Y");
             }
+            #endregion
+
+            #region Delivery / Collection Note
+            new OnLoadSystemCommonData().GetTAPreDefined();
+            var cmbList = CommonData.TaPreDefinedList.Select(lstPD => new { Prevalue = lstPD.PreTxtValue });
+            cmbNote.DataSource = cmbList.ToList();
+            cmbNote.ValueMember = "Prevalue";
+            cmbNote.DisplayMember = "Prevalue";
+            #endregion
         }
     }
 }
