@@ -75,6 +75,8 @@ namespace SuperPOS.DAL
             onLoad.GetTAOrderItem();
             //System Vlaue
             onLoad.GetSysValueList();
+            //TA Config Pre-Defined
+            onLoad.GetTAPreDefined();
         }
         #endregion
 
