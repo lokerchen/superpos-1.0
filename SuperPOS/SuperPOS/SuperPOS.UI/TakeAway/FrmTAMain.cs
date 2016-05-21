@@ -339,8 +339,9 @@ namespace SuperPOS.UI.TakeAway
                     taOrderItemInfo.ItemCode = "";
                     taOrderItemInfo.ItemDishName = sDetail[0];
                     taOrderItemInfo.ItemPrice = sDetail[1];
-                    taOrderItemInfo.ItemQty = "1";
-                    taOrderItemInfo.ItemTotalPrice = sDetail[1];
+                    //taOrderItemInfo.ItemQty = "1";
+                    taOrderItemInfo.ItemQty = dgvMenuItem.CurrentRow.Cells[1].Value.ToString();
+                    taOrderItemInfo.ItemTotalPrice = (Convert.ToDecimal(sDetail[1]) * Convert.ToInt32(dgvMenuItem.CurrentRow.Cells[1].Value.ToString())).ToString() ;
                     taOrderItemInfo.ItemType = "2";
                     taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                     taOrderItemInfo.OrderType = ORDER_TYPE;
@@ -424,18 +425,41 @@ namespace SuperPOS.UI.TakeAway
             if (dgvMenuItem.CurrentRow?.Index < 0) return;
 
             //TAOrderItemInfo taOrderItem = new TAOrderItemInfo();
+
+            string strParentKey = dgvMenuItem.CurrentRow.Cells[0].Value.ToString();
             var qList =
                 CommonData.TaOrderItemList.Where(
                     s =>
                         s.CheckKey.Equals(ChkKey) &&
-                        s.SystemKey.ToString().Equals(dgvMenuItem.CurrentRow.Cells[0].Value.ToString()));
+                        s.SystemKey.ToString().Equals(strParentKey));
+
+            string strQty = "1";
 
             if (qList.Any())
             {
-                qList.FirstOrDefault().ItemQty = (Convert.ToInt32(qList.FirstOrDefault().ItemQty) + 1).ToString();
+                strQty = qList.FirstOrDefault().ItemQty = (Convert.ToInt32(qList.FirstOrDefault().ItemQty) + 1).ToString();
                 qList.FirstOrDefault().ItemTotalPrice =
                     ((Convert.ToInt32(qList.FirstOrDefault().ItemQty)) *
                      Convert.ToDecimal(qList.FirstOrDefault().ItemPrice)).ToString();
+
+                //string strParentKey = qList.FirstOrDefault().SystemKey.ToString();
+                //qList.FirstOrDefault().ItemQty;
+                //var qChildList = CommonData.TaOrderItemList.Where(s => s.ParentItem.Equals(strParentKey));
+
+                //if (qChildList.Any())
+                //{
+                    //foreach (var taOrderItemInfo in qChildList)
+               
+            }
+
+            //改码数量自动改变
+            foreach (var taOrderItemInfo in CommonData.TaOrderItemList)
+            {
+                if (taOrderItemInfo.ParentItem != null && taOrderItemInfo.ParentItem.Equals(strParentKey))
+                {
+                    taOrderItemInfo.ItemQty = strQty;
+                    taOrderItemInfo.ItemTotalPrice = (Convert.ToInt32(taOrderItemInfo.ItemQty)*Convert.ToDecimal(taOrderItemInfo.ItemPrice)).ToString();
+                }
             }
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
@@ -449,18 +473,21 @@ namespace SuperPOS.UI.TakeAway
             if (dgvMenuItem.RowCount == 0) return;
             if (dgvMenuItem.CurrentRow?.Index < 0) return;
 
+            string strParentKey = dgvMenuItem.CurrentRow.Cells[0].Value.ToString();
+            string strQty = "1";
+
             //TAOrderItemInfo taOrderItem = new TAOrderItemInfo();
             var qList =
                 CommonData.TaOrderItemList.Where(
                     s =>
                         s.CheckKey.Equals(ChkKey) &&
-                        s.SystemKey.ToString().Equals(dgvMenuItem.CurrentRow.Cells[0].Value.ToString()));
+                        s.SystemKey.ToString().Equals(strParentKey));
 
             if (qList.Any())
             {
                 if (Convert.ToInt32(qList.FirstOrDefault().ItemQty) > 1)
                 {
-                    qList.FirstOrDefault().ItemQty = (Convert.ToInt32(qList.FirstOrDefault().ItemQty) - 1).ToString();
+                    strQty = qList.FirstOrDefault().ItemQty = (Convert.ToInt32(qList.FirstOrDefault().ItemQty) - 1).ToString();
                     qList.FirstOrDefault().ItemTotalPrice =
                     ((Convert.ToInt32(qList.FirstOrDefault().ItemQty)) *
                      Convert.ToDecimal(qList.FirstOrDefault().ItemPrice)).ToString();
@@ -469,6 +496,25 @@ namespace SuperPOS.UI.TakeAway
                 {
                     //删除？
                     CommonData.TaOrderItemList.Remove(qList.FirstOrDefault());
+
+                    //删除改码
+                    for (int i = CommonData.TaOrderItemList.Count - 1; i >= 0; i--)
+                    {
+                        if (CommonData.TaOrderItemList[i].ParentItem != null &&
+                            CommonData.TaOrderItemList[i].ParentItem.Equals(strParentKey))
+                        {
+                            CommonData.TaOrderItemList.Remove(CommonData.TaOrderItemList[i]);
+                        }
+                    }
+                }
+            }
+
+            foreach (var taOrderItemInfo in CommonData.TaOrderItemList)
+            {
+                if (taOrderItemInfo.ParentItem != null && taOrderItemInfo.ParentItem.Equals(strParentKey))
+                {
+                    taOrderItemInfo.ItemQty = strQty;
+                    taOrderItemInfo.ItemTotalPrice = (Convert.ToInt32(taOrderItemInfo.ItemQty) * Convert.ToDecimal(taOrderItemInfo.ItemPrice)).ToString();
                 }
             }
 
@@ -483,15 +529,27 @@ namespace SuperPOS.UI.TakeAway
             if (dgvMenuItem.RowCount == 0) return;
             if (dgvMenuItem.CurrentRow?.Index < 0) return;
 
+            string strParentKey = dgvMenuItem.CurrentRow.Cells[0].Value.ToString();
+
             var qList =
                 CommonData.TaOrderItemList.Where(
                     s =>
                         s.CheckKey.Equals(ChkKey) &&
-                        s.SystemKey.ToString().Equals(dgvMenuItem.CurrentRow.Cells[0].Value.ToString()));
+                        s.SystemKey.ToString().Equals(strParentKey));
 
             if (qList.Any())
             {
                 CommonData.TaOrderItemList.Remove(qList.FirstOrDefault());
+            }
+
+            //删除改码
+            for (int i = CommonData.TaOrderItemList.Count - 1; i >= 0; i--)
+            {
+                if (CommonData.TaOrderItemList[i].ParentItem != null &&
+                    CommonData.TaOrderItemList[i].ParentItem.Equals(strParentKey))
+                {
+                    CommonData.TaOrderItemList.Remove(CommonData.TaOrderItemList[i]);
+                }
             }
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
