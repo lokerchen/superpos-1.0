@@ -55,7 +55,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnC = new System.Windows.Forms.Button();
             this.btnP = new System.Windows.Forms.Button();
-            this.btnS = new System.Windows.Forms.Button();
             this.btnD = new System.Windows.Forms.Button();
             this.btnPoint = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -66,7 +65,7 @@
             this.btn2 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.btnPrtBillAssignDriver = new System.Windows.Forms.Button();
+            this.btnPrtAll = new System.Windows.Forms.Button();
             this.btn6 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.btn4 = new System.Windows.Forms.Button();
@@ -85,21 +84,33 @@
             this.label18 = new System.Windows.Forms.Label();
             this.txtDelivery = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.lblNotPaid = new System.Windows.Forms.Label();
             this.txtNotPaid = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txtJustEat = new System.Windows.Forms.TextBox();
-            this.lblSurcharge = new System.Windows.Forms.Label();
+            this.lblPayType3 = new System.Windows.Forms.Label();
+            this.txtPay3 = new System.Windows.Forms.TextBox();
+            this.lblSurcharge2 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.txtCard = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtCash = new System.Windows.Forms.TextBox();
+            this.lblPayType2 = new System.Windows.Forms.Label();
+            this.txtPay2 = new System.Windows.Forms.TextBox();
+            this.lblPayType1 = new System.Windows.Forms.Label();
+            this.txtPay1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.btnCollection = new System.Windows.Forms.Button();
             this.btnShop = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.cmbNote = new System.Windows.Forms.ComboBox();
+            this.lblSurcharge3 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.lblSurcharge1 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label24 = new System.Windows.Forms.Label();
+            this.btnDriver1 = new System.Windows.Forms.Button();
+            this.btnDriver2 = new System.Windows.Forms.Button();
+            this.btnDriver3 = new System.Windows.Forms.Button();
+            this.btnDriver4 = new System.Windows.Forms.Button();
+            this.btnDriver5 = new System.Windows.Forms.Button();
+            this.btnDriver6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -130,7 +141,7 @@
             this.groupBox1.Controls.Add(this.txtPhone);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(5, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(269, 390);
             this.groupBox1.TabIndex = 0;
@@ -359,9 +370,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.lblSurcharge1);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.lblSurcharge3);
+            this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.btnC);
             this.groupBox2.Controls.Add(this.btnP);
-            this.groupBox2.Controls.Add(this.btnS);
             this.groupBox2.Controls.Add(this.btnD);
             this.groupBox2.Controls.Add(this.btnPoint);
             this.groupBox2.Controls.Add(this.button5);
@@ -372,7 +387,7 @@
             this.groupBox2.Controls.Add(this.btn2);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.btn1);
-            this.groupBox2.Controls.Add(this.btnPrtBillAssignDriver);
+            this.groupBox2.Controls.Add(this.btnPrtAll);
             this.groupBox2.Controls.Add(this.btn6);
             this.groupBox2.Controls.Add(this.btn5);
             this.groupBox2.Controls.Add(this.btn4);
@@ -391,20 +406,20 @@
             this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.txtDelivery);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.lblNotPaid);
             this.groupBox2.Controls.Add(this.txtNotPaid);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.txtJustEat);
-            this.groupBox2.Controls.Add(this.lblSurcharge);
+            this.groupBox2.Controls.Add(this.lblPayType3);
+            this.groupBox2.Controls.Add(this.txtPay3);
+            this.groupBox2.Controls.Add(this.lblSurcharge2);
             this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.txtCard);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.txtCash);
+            this.groupBox2.Controls.Add(this.lblPayType2);
+            this.groupBox2.Controls.Add(this.txtPay2);
+            this.groupBox2.Controls.Add(this.lblPayType1);
+            this.groupBox2.Controls.Add(this.txtPay1);
             this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(297, 12);
+            this.groupBox2.Location = new System.Drawing.Point(285, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(586, 500);
+            this.groupBox2.Size = new System.Drawing.Size(586, 452);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment";
@@ -415,9 +430,9 @@
             this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnC.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnC.ForeColor = System.Drawing.Color.White;
-            this.btnC.Location = new System.Drawing.Point(375, 435);
+            this.btnC.Location = new System.Drawing.Point(335, 388);
             this.btnC.Name = "btnC";
-            this.btnC.Size = new System.Drawing.Size(60, 40);
+            this.btnC.Size = new System.Drawing.Size(101, 40);
             this.btnC.TabIndex = 36;
             this.btnC.Text = "Clear";
             this.btnC.UseVisualStyleBackColor = false;
@@ -428,25 +443,12 @@
             this.btnP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnP.ForeColor = System.Drawing.Color.White;
-            this.btnP.Location = new System.Drawing.Point(305, 435);
+            this.btnP.Location = new System.Drawing.Point(236, 388);
             this.btnP.Name = "btnP";
-            this.btnP.Size = new System.Drawing.Size(60, 40);
+            this.btnP.Size = new System.Drawing.Size(93, 40);
             this.btnP.TabIndex = 35;
             this.btnP.Text = "%";
             this.btnP.UseVisualStyleBackColor = false;
-            // 
-            // btnS
-            // 
-            this.btnS.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnS.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnS.ForeColor = System.Drawing.Color.White;
-            this.btnS.Location = new System.Drawing.Point(235, 435);
-            this.btnS.Name = "btnS";
-            this.btnS.Size = new System.Drawing.Size(60, 40);
-            this.btnS.TabIndex = 34;
-            this.btnS.Text = "Save";
-            this.btnS.UseVisualStyleBackColor = false;
             // 
             // btnD
             // 
@@ -454,7 +456,7 @@
             this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnD.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnD.ForeColor = System.Drawing.Color.White;
-            this.btnD.Location = new System.Drawing.Point(375, 390);
+            this.btnD.Location = new System.Drawing.Point(376, 343);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(60, 40);
             this.btnD.TabIndex = 33;
@@ -466,7 +468,7 @@
             this.btnPoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnPoint.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPoint.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnPoint.Location = new System.Drawing.Point(305, 390);
+            this.btnPoint.Location = new System.Drawing.Point(306, 343);
             this.btnPoint.Name = "btnPoint";
             this.btnPoint.Size = new System.Drawing.Size(60, 40);
             this.btnPoint.TabIndex = 32;
@@ -478,7 +480,7 @@
             this.button5.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(474, 416);
+            this.button5.Location = new System.Drawing.Point(474, 372);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(100, 60);
             this.button5.TabIndex = 6;
@@ -490,7 +492,7 @@
             this.btn0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn0.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn0.Location = new System.Drawing.Point(235, 390);
+            this.btn0.Location = new System.Drawing.Point(236, 343);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(60, 40);
             this.btn0.TabIndex = 31;
@@ -502,7 +504,7 @@
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(474, 330);
+            this.button4.Location = new System.Drawing.Point(474, 306);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(100, 60);
             this.button4.TabIndex = 5;
@@ -514,7 +516,7 @@
             this.btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn3.Location = new System.Drawing.Point(375, 345);
+            this.btn3.Location = new System.Drawing.Point(376, 298);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(60, 40);
             this.btn3.TabIndex = 30;
@@ -526,11 +528,11 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(474, 260);
+            this.button3.Location = new System.Drawing.Point(474, 170);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 60);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Receipt";
+            this.button3.Text = "Print Bill Only";
             this.button3.UseVisualStyleBackColor = false;
             // 
             // btn2
@@ -538,7 +540,7 @@
             this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn2.Location = new System.Drawing.Point(305, 345);
+            this.btn2.Location = new System.Drawing.Point(306, 298);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(60, 40);
             this.btn2.TabIndex = 29;
@@ -550,11 +552,11 @@
             this.button2.BackColor = System.Drawing.Color.Purple;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(474, 150);
+            this.button2.Location = new System.Drawing.Point(474, 104);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 60);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Print Bill";
+            this.button2.Text = "Print All / Receipt";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // btn1
@@ -562,31 +564,31 @@
             this.btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn1.Location = new System.Drawing.Point(235, 345);
+            this.btn1.Location = new System.Drawing.Point(236, 298);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(60, 40);
             this.btn1.TabIndex = 28;
             this.btn1.Text = "1";
             this.btn1.UseVisualStyleBackColor = false;
             // 
-            // btnPrtBillAssignDriver
+            // btnPrtAll
             // 
-            this.btnPrtBillAssignDriver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnPrtBillAssignDriver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnPrtBillAssignDriver.ForeColor = System.Drawing.Color.White;
-            this.btnPrtBillAssignDriver.Location = new System.Drawing.Point(474, 51);
-            this.btnPrtBillAssignDriver.Name = "btnPrtBillAssignDriver";
-            this.btnPrtBillAssignDriver.Size = new System.Drawing.Size(100, 80);
-            this.btnPrtBillAssignDriver.TabIndex = 2;
-            this.btnPrtBillAssignDriver.Text = "Print Bill Assign Driver";
-            this.btnPrtBillAssignDriver.UseVisualStyleBackColor = false;
+            this.btnPrtAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnPrtAll.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrtAll.ForeColor = System.Drawing.Color.White;
+            this.btnPrtAll.Location = new System.Drawing.Point(474, 18);
+            this.btnPrtAll.Name = "btnPrtAll";
+            this.btnPrtAll.Size = new System.Drawing.Size(100, 80);
+            this.btnPrtAll.TabIndex = 2;
+            this.btnPrtAll.Text = "Print All";
+            this.btnPrtAll.UseVisualStyleBackColor = false;
             // 
             // btn6
             // 
             this.btn6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn6.Location = new System.Drawing.Point(375, 300);
+            this.btn6.Location = new System.Drawing.Point(376, 253);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(60, 40);
             this.btn6.TabIndex = 27;
@@ -598,7 +600,7 @@
             this.btn5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn5.Location = new System.Drawing.Point(305, 300);
+            this.btn5.Location = new System.Drawing.Point(306, 253);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(60, 40);
             this.btn5.TabIndex = 26;
@@ -610,7 +612,7 @@
             this.btn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn4.Location = new System.Drawing.Point(235, 300);
+            this.btn4.Location = new System.Drawing.Point(236, 253);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(60, 40);
             this.btn4.TabIndex = 25;
@@ -622,7 +624,7 @@
             this.btn9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn9.Location = new System.Drawing.Point(375, 255);
+            this.btn9.Location = new System.Drawing.Point(376, 208);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(60, 40);
             this.btn9.TabIndex = 24;
@@ -634,7 +636,7 @@
             this.btn8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn8.Location = new System.Drawing.Point(305, 255);
+            this.btn8.Location = new System.Drawing.Point(306, 208);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(60, 40);
             this.btn8.TabIndex = 23;
@@ -646,7 +648,7 @@
             this.btn7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn7.Location = new System.Drawing.Point(235, 255);
+            this.btn7.Location = new System.Drawing.Point(236, 208);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(60, 40);
             this.btn7.TabIndex = 22;
@@ -655,7 +657,7 @@
             // 
             // txtChange
             // 
-            this.txtChange.Location = new System.Drawing.Point(117, 449);
+            this.txtChange.Location = new System.Drawing.Point(118, 402);
             this.txtChange.Name = "txtChange";
             this.txtChange.Size = new System.Drawing.Size(100, 29);
             this.txtChange.TabIndex = 21;
@@ -664,7 +666,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label22.Location = new System.Drawing.Point(33, 455);
+            this.label22.Location = new System.Drawing.Point(34, 408);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(78, 21);
             this.label22.TabIndex = 20;
@@ -672,7 +674,7 @@
             // 
             // txtToPay
             // 
-            this.txtToPay.Location = new System.Drawing.Point(117, 414);
+            this.txtToPay.Location = new System.Drawing.Point(118, 367);
             this.txtToPay.Name = "txtToPay";
             this.txtToPay.Size = new System.Drawing.Size(100, 29);
             this.txtToPay.TabIndex = 19;
@@ -684,7 +686,7 @@
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label21.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(37, 418);
+            this.label21.Location = new System.Drawing.Point(38, 371);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(74, 25);
             this.label21.TabIndex = 18;
@@ -692,7 +694,7 @@
             // 
             // txtTendered
             // 
-            this.txtTendered.Location = new System.Drawing.Point(117, 379);
+            this.txtTendered.Location = new System.Drawing.Point(118, 332);
             this.txtTendered.Name = "txtTendered";
             this.txtTendered.Size = new System.Drawing.Size(100, 29);
             this.txtTendered.TabIndex = 17;
@@ -704,7 +706,7 @@
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label20.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(12, 383);
+            this.label20.Location = new System.Drawing.Point(13, 336);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(99, 25);
             this.label20.TabIndex = 16;
@@ -712,7 +714,7 @@
             // 
             // txtSurcharge
             // 
-            this.txtSurcharge.Location = new System.Drawing.Point(117, 342);
+            this.txtSurcharge.Location = new System.Drawing.Point(118, 295);
             this.txtSurcharge.Name = "txtSurcharge";
             this.txtSurcharge.Size = new System.Drawing.Size(100, 29);
             this.txtSurcharge.TabIndex = 15;
@@ -724,7 +726,7 @@
             this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label19.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(6, 342);
+            this.label19.Location = new System.Drawing.Point(7, 295);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(105, 25);
             this.label19.TabIndex = 14;
@@ -732,7 +734,7 @@
             // 
             // txtDiscount
             // 
-            this.txtDiscount.Location = new System.Drawing.Point(117, 300);
+            this.txtDiscount.Location = new System.Drawing.Point(118, 253);
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(100, 29);
             this.txtDiscount.TabIndex = 13;
@@ -744,7 +746,7 @@
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label18.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(18, 302);
+            this.label18.Location = new System.Drawing.Point(19, 255);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(93, 25);
             this.label18.TabIndex = 12;
@@ -752,7 +754,7 @@
             // 
             // txtDelivery
             // 
-            this.txtDelivery.Location = new System.Drawing.Point(117, 256);
+            this.txtDelivery.Location = new System.Drawing.Point(118, 209);
             this.txtDelivery.Name = "txtDelivery";
             this.txtDelivery.Size = new System.Drawing.Size(100, 29);
             this.txtDelivery.TabIndex = 11;
@@ -764,118 +766,118 @@
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label17.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(26, 260);
+            this.label17.Location = new System.Drawing.Point(27, 213);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(85, 25);
             this.label17.TabIndex = 10;
             this.label17.Text = "Delivery";
             // 
-            // label16
+            // lblNotPaid
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label16.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(341, 191);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(100, 28);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "Not Paid";
+            this.lblNotPaid.AutoSize = true;
+            this.lblNotPaid.BackColor = System.Drawing.Color.RoyalBlue;
+            this.lblNotPaid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblNotPaid.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblNotPaid.ForeColor = System.Drawing.Color.White;
+            this.lblNotPaid.Location = new System.Drawing.Point(261, 170);
+            this.lblNotPaid.Name = "lblNotPaid";
+            this.lblNotPaid.Size = new System.Drawing.Size(100, 28);
+            this.lblNotPaid.TabIndex = 9;
+            this.lblNotPaid.Text = "Not Paid";
             // 
             // txtNotPaid
             // 
-            this.txtNotPaid.Location = new System.Drawing.Point(237, 190);
+            this.txtNotPaid.Location = new System.Drawing.Point(32, 169);
             this.txtNotPaid.Name = "txtNotPaid";
-            this.txtNotPaid.Size = new System.Drawing.Size(100, 29);
+            this.txtNotPaid.Size = new System.Drawing.Size(221, 29);
             this.txtNotPaid.TabIndex = 8;
             // 
-            // label15
+            // lblPayType3
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label15.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(341, 150);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 28);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "Just Eat";
+            this.lblPayType3.AutoSize = true;
+            this.lblPayType3.BackColor = System.Drawing.Color.RoyalBlue;
+            this.lblPayType3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblPayType3.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblPayType3.ForeColor = System.Drawing.Color.White;
+            this.lblPayType3.Location = new System.Drawing.Point(268, 114);
+            this.lblPayType3.Name = "lblPayType3";
+            this.lblPayType3.Size = new System.Drawing.Size(89, 28);
+            this.lblPayType3.TabIndex = 7;
+            this.lblPayType3.Text = "Just Eat";
             // 
-            // txtJustEat
+            // txtPay3
             // 
-            this.txtJustEat.Location = new System.Drawing.Point(237, 149);
-            this.txtJustEat.Name = "txtJustEat";
-            this.txtJustEat.Size = new System.Drawing.Size(100, 29);
-            this.txtJustEat.TabIndex = 6;
+            this.txtPay3.Location = new System.Drawing.Point(164, 114);
+            this.txtPay3.Name = "txtPay3";
+            this.txtPay3.Size = new System.Drawing.Size(100, 29);
+            this.txtPay3.TabIndex = 6;
             // 
-            // lblSurcharge
+            // lblSurcharge2
             // 
-            this.lblSurcharge.AutoSize = true;
-            this.lblSurcharge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSurcharge.Location = new System.Drawing.Point(157, 98);
-            this.lblSurcharge.Name = "lblSurcharge";
-            this.lblSurcharge.Size = new System.Drawing.Size(41, 21);
-            this.lblSurcharge.TabIndex = 5;
-            this.lblSurcharge.Text = "0.00";
+            this.lblSurcharge2.AutoSize = true;
+            this.lblSurcharge2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSurcharge2.Location = new System.Drawing.Point(116, 75);
+            this.lblSurcharge2.Name = "lblSurcharge2";
+            this.lblSurcharge2.Size = new System.Drawing.Size(41, 21);
+            this.lblSurcharge2.TabIndex = 5;
+            this.lblSurcharge2.Text = "0.00";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(60, 98);
+            this.label13.Location = new System.Drawing.Point(19, 75);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(91, 21);
             this.label13.TabIndex = 4;
             this.label13.Text = "Surcharge:";
             // 
-            // label12
+            // lblPayType2
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label12.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(341, 91);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 28);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "Card";
+            this.lblPayType2.AutoSize = true;
+            this.lblPayType2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.lblPayType2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblPayType2.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblPayType2.ForeColor = System.Drawing.Color.White;
+            this.lblPayType2.Location = new System.Drawing.Point(270, 70);
+            this.lblPayType2.Name = "lblPayType2";
+            this.lblPayType2.Size = new System.Drawing.Size(59, 28);
+            this.lblPayType2.TabIndex = 3;
+            this.lblPayType2.Text = "Card";
             // 
-            // txtCard
+            // txtPay2
             // 
-            this.txtCard.Location = new System.Drawing.Point(237, 92);
-            this.txtCard.Name = "txtCard";
-            this.txtCard.Size = new System.Drawing.Size(100, 29);
-            this.txtCard.TabIndex = 2;
+            this.txtPay2.Location = new System.Drawing.Point(164, 69);
+            this.txtPay2.Name = "txtPay2";
+            this.txtPay2.Size = new System.Drawing.Size(100, 29);
+            this.txtPay2.TabIndex = 2;
             // 
-            // label11
+            // lblPayType1
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label11.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(341, 48);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(61, 28);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Cash";
+            this.lblPayType1.AutoSize = true;
+            this.lblPayType1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.lblPayType1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblPayType1.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblPayType1.ForeColor = System.Drawing.Color.White;
+            this.lblPayType1.Location = new System.Drawing.Point(268, 25);
+            this.lblPayType1.Name = "lblPayType1";
+            this.lblPayType1.Size = new System.Drawing.Size(61, 28);
+            this.lblPayType1.TabIndex = 1;
+            this.lblPayType1.Text = "Cash";
             // 
-            // txtCash
+            // txtPay1
             // 
-            this.txtCash.Location = new System.Drawing.Point(237, 47);
-            this.txtCash.Name = "txtCash";
-            this.txtCash.Size = new System.Drawing.Size(100, 29);
-            this.txtCash.TabIndex = 0;
+            this.txtPay1.Location = new System.Drawing.Point(164, 24);
+            this.txtPay1.Name = "txtPay1";
+            this.txtPay1.Size = new System.Drawing.Size(100, 29);
+            this.txtPay1.TabIndex = 0;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(12, 447);
+            this.label10.Location = new System.Drawing.Point(8, 414);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(222, 22);
             this.label10.TabIndex = 7;
@@ -887,7 +889,7 @@
             this.btnCollection.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCollection.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCollection.ForeColor = System.Drawing.Color.White;
-            this.btnCollection.Location = new System.Drawing.Point(458, 529);
+            this.btnCollection.Location = new System.Drawing.Point(514, 475);
             this.btnCollection.Name = "btnCollection";
             this.btnCollection.Size = new System.Drawing.Size(100, 40);
             this.btnCollection.TabIndex = 9;
@@ -900,7 +902,7 @@
             this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnShop.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnShop.ForeColor = System.Drawing.Color.White;
-            this.btnShop.Location = new System.Drawing.Point(587, 529);
+            this.btnShop.Location = new System.Drawing.Point(643, 475);
             this.btnShop.Name = "btnShop";
             this.btnShop.Size = new System.Drawing.Size(100, 40);
             this.btnShop.TabIndex = 10;
@@ -913,7 +915,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(727, 529);
+            this.btnExit.Location = new System.Drawing.Point(769, 475);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 40);
             this.btnExit.TabIndex = 11;
@@ -925,16 +927,163 @@
             // 
             this.cmbNote.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNote.FormattingEnabled = true;
-            this.cmbNote.Location = new System.Drawing.Point(12, 472);
+            this.cmbNote.Location = new System.Drawing.Point(8, 439);
             this.cmbNote.Name = "cmbNote";
             this.cmbNote.Size = new System.Drawing.Size(269, 25);
             this.cmbNote.TabIndex = 12;
+            // 
+            // lblSurcharge3
+            // 
+            this.lblSurcharge3.AutoSize = true;
+            this.lblSurcharge3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSurcharge3.Location = new System.Drawing.Point(117, 121);
+            this.lblSurcharge3.Name = "lblSurcharge3";
+            this.lblSurcharge3.Size = new System.Drawing.Size(41, 21);
+            this.lblSurcharge3.TabIndex = 38;
+            this.lblSurcharge3.Text = "0.00";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label12.Location = new System.Drawing.Point(20, 121);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 21);
+            this.label12.TabIndex = 37;
+            this.label12.Text = "Surcharge:";
+            // 
+            // lblSurcharge1
+            // 
+            this.lblSurcharge1.AutoSize = true;
+            this.lblSurcharge1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSurcharge1.Location = new System.Drawing.Point(117, 30);
+            this.lblSurcharge1.Name = "lblSurcharge1";
+            this.lblSurcharge1.Size = new System.Drawing.Size(41, 21);
+            this.lblSurcharge1.TabIndex = 40;
+            this.lblSurcharge1.Text = "0.00";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label16.Location = new System.Drawing.Point(20, 30);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(91, 21);
+            this.label16.TabIndex = 39;
+            this.label16.Text = "Surcharge:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(474, 236);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 60);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Print Kitchen Only";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label24.Location = new System.Drawing.Point(888, 9);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(107, 27);
+            this.label24.TabIndex = 13;
+            this.label24.Text = "Driver List";
+            // 
+            // btnDriver1
+            // 
+            this.btnDriver1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDriver1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDriver1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDriver1.ForeColor = System.Drawing.Color.Black;
+            this.btnDriver1.Location = new System.Drawing.Point(877, 41);
+            this.btnDriver1.Name = "btnDriver1";
+            this.btnDriver1.Size = new System.Drawing.Size(130, 60);
+            this.btnDriver1.TabIndex = 14;
+            this.btnDriver1.Text = "Tommy";
+            this.btnDriver1.UseVisualStyleBackColor = false;
+            // 
+            // btnDriver2
+            // 
+            this.btnDriver2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDriver2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDriver2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDriver2.ForeColor = System.Drawing.Color.Black;
+            this.btnDriver2.Location = new System.Drawing.Point(877, 106);
+            this.btnDriver2.Name = "btnDriver2";
+            this.btnDriver2.Size = new System.Drawing.Size(130, 60);
+            this.btnDriver2.TabIndex = 15;
+            this.btnDriver2.Text = "Tommy";
+            this.btnDriver2.UseVisualStyleBackColor = false;
+            // 
+            // btnDriver3
+            // 
+            this.btnDriver3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDriver3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDriver3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDriver3.ForeColor = System.Drawing.Color.Black;
+            this.btnDriver3.Location = new System.Drawing.Point(877, 171);
+            this.btnDriver3.Name = "btnDriver3";
+            this.btnDriver3.Size = new System.Drawing.Size(130, 60);
+            this.btnDriver3.TabIndex = 16;
+            this.btnDriver3.Text = "Tommy";
+            this.btnDriver3.UseVisualStyleBackColor = false;
+            // 
+            // btnDriver4
+            // 
+            this.btnDriver4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDriver4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDriver4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDriver4.ForeColor = System.Drawing.Color.Black;
+            this.btnDriver4.Location = new System.Drawing.Point(877, 236);
+            this.btnDriver4.Name = "btnDriver4";
+            this.btnDriver4.Size = new System.Drawing.Size(130, 60);
+            this.btnDriver4.TabIndex = 17;
+            this.btnDriver4.Text = "Tommy";
+            this.btnDriver4.UseVisualStyleBackColor = false;
+            // 
+            // btnDriver5
+            // 
+            this.btnDriver5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDriver5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDriver5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDriver5.ForeColor = System.Drawing.Color.Black;
+            this.btnDriver5.Location = new System.Drawing.Point(877, 301);
+            this.btnDriver5.Name = "btnDriver5";
+            this.btnDriver5.Size = new System.Drawing.Size(130, 60);
+            this.btnDriver5.TabIndex = 18;
+            this.btnDriver5.Text = "Tommy";
+            this.btnDriver5.UseVisualStyleBackColor = false;
+            // 
+            // btnDriver6
+            // 
+            this.btnDriver6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnDriver6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDriver6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDriver6.ForeColor = System.Drawing.Color.Black;
+            this.btnDriver6.Location = new System.Drawing.Point(877, 366);
+            this.btnDriver6.Name = "btnDriver6";
+            this.btnDriver6.Size = new System.Drawing.Size(130, 60);
+            this.btnDriver6.TabIndex = 19;
+            this.btnDriver6.Text = "Tommy";
+            this.btnDriver6.UseVisualStyleBackColor = false;
             // 
             // FrmTAPay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 593);
+            this.ClientSize = new System.Drawing.Size(1019, 523);
+            this.Controls.Add(this.btnDriver6);
+            this.Controls.Add(this.btnDriver5);
+            this.Controls.Add(this.btnDriver4);
+            this.Controls.Add(this.btnDriver3);
+            this.Controls.Add(this.btnDriver2);
+            this.Controls.Add(this.btnDriver1);
+            this.Controls.Add(this.label24);
             this.Controls.Add(this.cmbNote);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnShop);
@@ -981,7 +1130,7 @@
         private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnPrtBillAssignDriver;
+        private System.Windows.Forms.Button btnPrtAll;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -989,7 +1138,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnP;
-        private System.Windows.Forms.Button btnS;
         private System.Windows.Forms.Button btnD;
         private System.Windows.Forms.Button btnPoint;
         private System.Windows.Forms.Button btn0;
@@ -1014,16 +1162,16 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtDelivery;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblNotPaid;
         private System.Windows.Forms.TextBox txtNotPaid;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txtJustEat;
-        private System.Windows.Forms.Label lblSurcharge;
+        private System.Windows.Forms.Label lblPayType3;
+        private System.Windows.Forms.TextBox txtPay3;
+        private System.Windows.Forms.Label lblSurcharge2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox txtCard;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtCash;
+        private System.Windows.Forms.Label lblPayType2;
+        private System.Windows.Forms.TextBox txtPay2;
+        private System.Windows.Forms.Label lblPayType1;
+        private System.Windows.Forms.TextBox txtPay1;
         private System.Windows.Forms.Button btnCollection;
         private System.Windows.Forms.Button btnShop;
         private System.Windows.Forms.Button btnExit;
@@ -1032,5 +1180,17 @@
         private System.Windows.Forms.TextBox txtIntNotes;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbNote;
+        private System.Windows.Forms.Label lblSurcharge1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblSurcharge3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button btnDriver1;
+        private System.Windows.Forms.Button btnDriver2;
+        private System.Windows.Forms.Button btnDriver3;
+        private System.Windows.Forms.Button btnDriver4;
+        private System.Windows.Forms.Button btnDriver5;
+        private System.Windows.Forms.Button btnDriver6;
     }
 }
