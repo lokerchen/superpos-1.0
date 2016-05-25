@@ -74,6 +74,7 @@
             this.dgvDriver.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDriver.Size = new System.Drawing.Size(229, 386);
             this.dgvDriver.TabIndex = 0;
+            this.dgvDriver.SelectionChanged += new System.EventHandler(this.dgvDriver_SelectionChanged);
             // 
             // label1
             // 
@@ -189,6 +190,7 @@
             this.btnExit.TabIndex = 20;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSave
             // 
@@ -202,6 +204,7 @@
             this.btnSave.TabIndex = 19;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDel
             // 
@@ -215,6 +218,7 @@
             this.btnDel.TabIndex = 18;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnEdit
             // 
@@ -228,6 +232,7 @@
             this.btnEdit.TabIndex = 17;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
@@ -241,6 +246,7 @@
             this.btnAdd.TabIndex = 16;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // groupBox2
             // 

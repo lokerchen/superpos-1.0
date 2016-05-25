@@ -15,5 +15,36 @@ namespace SuperPOS.UI.TakeAway
         {
             InitializeComponent();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
+        private void dgvDriver_SelectionChanged(object sender, EventArgs e)
+        {
+
+
+        }
     }
 }
