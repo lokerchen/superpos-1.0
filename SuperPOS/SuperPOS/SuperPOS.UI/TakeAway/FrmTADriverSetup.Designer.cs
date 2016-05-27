@@ -59,7 +59,7 @@
             this.groupBox1.Controls.Add(this.dgvDriver);
             this.groupBox1.Location = new System.Drawing.Point(12, -2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(248, 414);
+            this.groupBox1.Size = new System.Drawing.Size(272, 414);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -72,7 +72,7 @@
             this.dgvDriver.ReadOnly = true;
             this.dgvDriver.RowTemplate.Height = 23;
             this.dgvDriver.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDriver.Size = new System.Drawing.Size(229, 386);
+            this.dgvDriver.Size = new System.Drawing.Size(258, 386);
             this.dgvDriver.TabIndex = 0;
             this.dgvDriver.SelectionChanged += new System.EventHandler(this.dgvDriver_SelectionChanged);
             // 
@@ -96,6 +96,7 @@
             // 
             // txtDriverName
             // 
+            this.txtDriverName.Enabled = false;
             this.txtDriverName.Location = new System.Drawing.Point(108, 25);
             this.txtDriverName.Name = "txtDriverName";
             this.txtDriverName.Size = new System.Drawing.Size(100, 23);
@@ -103,6 +104,7 @@
             // 
             // txtPhoneNum
             // 
+            this.txtPhoneNum.Enabled = false;
             this.txtPhoneNum.Location = new System.Drawing.Point(108, 54);
             this.txtPhoneNum.Name = "txtPhoneNum";
             this.txtPhoneNum.Size = new System.Drawing.Size(100, 23);
@@ -111,6 +113,7 @@
             // chkSunday
             // 
             this.chkSunday.AutoSize = true;
+            this.chkSunday.Enabled = false;
             this.chkSunday.Location = new System.Drawing.Point(10, 25);
             this.chkSunday.Name = "chkSunday";
             this.chkSunday.Size = new System.Drawing.Size(69, 21);
@@ -121,6 +124,7 @@
             // chkMonday
             // 
             this.chkMonday.AutoSize = true;
+            this.chkMonday.Enabled = false;
             this.chkMonday.Location = new System.Drawing.Point(10, 50);
             this.chkMonday.Name = "chkMonday";
             this.chkMonday.Size = new System.Drawing.Size(75, 21);
@@ -131,6 +135,7 @@
             // chkTuesday
             // 
             this.chkTuesday.AutoSize = true;
+            this.chkTuesday.Enabled = false;
             this.chkTuesday.Location = new System.Drawing.Point(10, 75);
             this.chkTuesday.Name = "chkTuesday";
             this.chkTuesday.Size = new System.Drawing.Size(75, 21);
@@ -141,6 +146,7 @@
             // chkWednesday
             // 
             this.chkWednesday.AutoSize = true;
+            this.chkWednesday.Enabled = false;
             this.chkWednesday.Location = new System.Drawing.Point(10, 100);
             this.chkWednesday.Name = "chkWednesday";
             this.chkWednesday.Size = new System.Drawing.Size(95, 21);
@@ -151,6 +157,7 @@
             // chkThursday
             // 
             this.chkThursday.AutoSize = true;
+            this.chkThursday.Enabled = false;
             this.chkThursday.Location = new System.Drawing.Point(10, 125);
             this.chkThursday.Name = "chkThursday";
             this.chkThursday.Size = new System.Drawing.Size(80, 21);
@@ -161,6 +168,7 @@
             // chkFriday
             // 
             this.chkFriday.AutoSize = true;
+            this.chkFriday.Enabled = false;
             this.chkFriday.Location = new System.Drawing.Point(10, 150);
             this.chkFriday.Name = "chkFriday";
             this.chkFriday.Size = new System.Drawing.Size(62, 21);
@@ -171,6 +179,7 @@
             // chkSaturday
             // 
             this.chkSaturday.AutoSize = true;
+            this.chkSaturday.Enabled = false;
             this.chkSaturday.Location = new System.Drawing.Point(10, 175);
             this.chkSaturday.Name = "chkSaturday";
             this.chkSaturday.Size = new System.Drawing.Size(78, 21);
@@ -183,7 +192,7 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(428, 334);
+            this.btnExit.Location = new System.Drawing.Point(445, 334);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(67, 78);
@@ -197,7 +206,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(274, 377);
+            this.btnSave.Location = new System.Drawing.Point(291, 377);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(70, 35);
@@ -211,7 +220,7 @@
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(350, 377);
+            this.btnDel.Location = new System.Drawing.Point(367, 377);
             this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(70, 35);
@@ -225,7 +234,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(350, 334);
+            this.btnEdit.Location = new System.Drawing.Point(367, 334);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(70, 35);
@@ -239,7 +248,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(274, 334);
+            this.btnAdd.Location = new System.Drawing.Point(291, 334);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(70, 35);
@@ -255,7 +264,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.txtPhoneNum);
-            this.groupBox2.Location = new System.Drawing.Point(274, 12);
+            this.groupBox2.Location = new System.Drawing.Point(291, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(219, 304);
             this.groupBox2.TabIndex = 21;
@@ -281,7 +290,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 423);
+            this.ClientSize = new System.Drawing.Size(520, 423);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnSave);
@@ -295,6 +304,7 @@
             this.Name = "FrmTADriverSetup";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTADriverSetup";
+            this.Load += new System.EventHandler(this.FrmTADriverSetup_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDriver)).EndInit();
             this.groupBox2.ResumeLayout(false);

@@ -195,7 +195,8 @@ namespace SuperPOS.UI.Admin
                 case "210":
                     if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
                     {
-
+                        FrmTADriverSetup frmTaDriverSetup = new FrmTADriverSetup(userInfo);
+                        frmTaDriverSetup.ShowDialog();
                     }
                     else MessageBox.Show(strMsg);
                     break;
