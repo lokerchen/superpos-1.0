@@ -91,6 +91,13 @@ namespace SuperPOS.UI.TakeAway
             lblPaySurcharge[1] = lblSurcharge2;
             lblPaySurcharge[2] = lblSurcharge3;
 
+            btnDriver[0] = btnDriver1;
+            btnDriver[1] = btnDriver2;
+            btnDriver[2] = btnDriver3;
+            btnDriver[3] = btnDriver4;
+            btnDriver[4] = btnDriver5;
+            btnDriver[5] = btnDriver6;
+
             //付款
             int i = 0;
             foreach (var taPayTypeInfo in CommonData.TaPayTypeList)
@@ -113,14 +120,47 @@ namespace SuperPOS.UI.TakeAway
             }
 
             //司机清单
-            i = 0;
-            //foreach (var VARIABLE in CommonData)
-            //{
+            
+            if (!string.IsNullOrEmpty(GetWeek(DateTime.Today.DayOfWeek.ToString())))
+            {
+                i = 0;
+                foreach (var driverSet in CommonData.TaDriverSetUpList.Where(s => s.DriverWorkDay.Contains(GetWeek(DateTime.Today.DayOfWeek.ToString()))).TakeWhile(driverSet => i < 6))
+                {
+                    btnDriver[i].Text = driverSet.DriverName;
+                }
 
-            //}
+                for (int j = i + 1; j < btnDriver.Length; j++)
+                {
+                    btnDriver[j].Visible = false;
+                }
+            }
+
             #endregion
 
 
+        }
+
+        private string GetWeek(string weekName)
+        {
+            switch (weekName)
+            {
+                case "Sunday":
+                    return "7";
+                case "Monday":
+                    return "1";
+                case "Tuesday":
+                    return "2";
+                case "Wednesday":
+                    return "3";
+                case "Thursday":
+                    return "4";
+                case "Friday":
+                    return "5";
+                case "Saturday":
+                    return "6";
+                default:
+                    return "";
+            }
         }
     }
 }
