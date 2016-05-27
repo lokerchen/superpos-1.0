@@ -84,6 +84,7 @@
     <Compile Include="Entities\TADeptCodeDetailInfo.cs" />
     <Compile Include="Entities\TADistChargeInfo.cs" />
     <Compile Include="Entities\TADistChargeRemarkInfo.cs" />
+    <Compile Include="Entities\TADriverSetUpInfo.cs" />
     <Compile Include="Entities\TAExtraMenuEditInfo.cs" />
     <Compile Include="Entities\TAMenuCategoryInfo.cs" />
     <Compile Include="Entities\TAMenuItemInfo.cs" />
@@ -184,6 +185,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Mappings\TAPreDefinedInfo.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Mappings\TADriverSetUpInfo.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.97.0\build\net20\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.97.0\build\net20\System.Data.SQLite.Core.targets')" />

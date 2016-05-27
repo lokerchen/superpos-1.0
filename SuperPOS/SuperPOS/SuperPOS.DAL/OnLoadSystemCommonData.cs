@@ -68,5 +68,7 @@ namespace SuperPOS.DAL
         public void GetSysValueList() { CommonData.SysValueList = _control.SelectAll<SysValueInfo>(); }
 
         public void GetTAPreDefined() { CommonData.TaPreDefinedList = _control.SelectAll<TAPreDefinedInfo>(); }
+
+        public void GetTADriverSetUp() { CommonData.TaDriverSetUpList = _control.SelectAll<TADriverSetUpInfo>(); }
     }
 }
