@@ -53,6 +53,11 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblSurcharge1 = new System.Windows.Forms.Label();
+            this.lblSCharge1 = new System.Windows.Forms.Label();
+            this.lblSurcharge3 = new System.Windows.Forms.Label();
+            this.lblSCharge3 = new System.Windows.Forms.Label();
             this.btnC = new System.Windows.Forms.Button();
             this.btnP = new System.Windows.Forms.Button();
             this.btnD = new System.Windows.Forms.Button();
@@ -89,7 +94,7 @@
             this.lblPayType3 = new System.Windows.Forms.Label();
             this.txtPay3 = new System.Windows.Forms.TextBox();
             this.lblSurcharge2 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblSCharge2 = new System.Windows.Forms.Label();
             this.lblPayType2 = new System.Windows.Forms.Label();
             this.txtPay2 = new System.Windows.Forms.TextBox();
             this.lblPayType1 = new System.Windows.Forms.Label();
@@ -99,11 +104,6 @@
             this.btnShop = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.cmbNote = new System.Windows.Forms.ComboBox();
-            this.lblSurcharge3 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblSurcharge1 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label24 = new System.Windows.Forms.Label();
             this.btnDriver1 = new System.Windows.Forms.Button();
             this.btnDriver2 = new System.Windows.Forms.Button();
@@ -372,9 +372,9 @@
             // 
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.lblSurcharge1);
-            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.lblSCharge1);
             this.groupBox2.Controls.Add(this.lblSurcharge3);
-            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.lblSCharge3);
             this.groupBox2.Controls.Add(this.btnC);
             this.groupBox2.Controls.Add(this.btnP);
             this.groupBox2.Controls.Add(this.btnD);
@@ -411,7 +411,7 @@
             this.groupBox2.Controls.Add(this.lblPayType3);
             this.groupBox2.Controls.Add(this.txtPay3);
             this.groupBox2.Controls.Add(this.lblSurcharge2);
-            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.lblSCharge2);
             this.groupBox2.Controls.Add(this.lblPayType2);
             this.groupBox2.Controls.Add(this.txtPay2);
             this.groupBox2.Controls.Add(this.lblPayType1);
@@ -423,6 +423,62 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(474, 236);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 60);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Print Kitchen Only";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // lblSurcharge1
+            // 
+            this.lblSurcharge1.AutoSize = true;
+            this.lblSurcharge1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSurcharge1.Location = new System.Drawing.Point(117, 30);
+            this.lblSurcharge1.Name = "lblSurcharge1";
+            this.lblSurcharge1.Size = new System.Drawing.Size(41, 21);
+            this.lblSurcharge1.TabIndex = 40;
+            this.lblSurcharge1.Text = "0.00";
+            this.lblSurcharge1.Visible = false;
+            // 
+            // lblSCharge1
+            // 
+            this.lblSCharge1.AutoSize = true;
+            this.lblSCharge1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSCharge1.Location = new System.Drawing.Point(20, 30);
+            this.lblSCharge1.Name = "lblSCharge1";
+            this.lblSCharge1.Size = new System.Drawing.Size(91, 21);
+            this.lblSCharge1.TabIndex = 39;
+            this.lblSCharge1.Text = "Surcharge:";
+            this.lblSCharge1.Visible = false;
+            // 
+            // lblSurcharge3
+            // 
+            this.lblSurcharge3.AutoSize = true;
+            this.lblSurcharge3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSurcharge3.Location = new System.Drawing.Point(117, 121);
+            this.lblSurcharge3.Name = "lblSurcharge3";
+            this.lblSurcharge3.Size = new System.Drawing.Size(41, 21);
+            this.lblSurcharge3.TabIndex = 38;
+            this.lblSurcharge3.Text = "0.00";
+            this.lblSurcharge3.Visible = false;
+            // 
+            // lblSCharge3
+            // 
+            this.lblSCharge3.AutoSize = true;
+            this.lblSCharge3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSCharge3.Location = new System.Drawing.Point(20, 121);
+            this.lblSCharge3.Name = "lblSCharge3";
+            this.lblSCharge3.Size = new System.Drawing.Size(91, 21);
+            this.lblSCharge3.TabIndex = 37;
+            this.lblSCharge3.Text = "Surcharge:";
+            this.lblSCharge3.Visible = false;
             // 
             // btnC
             // 
@@ -436,6 +492,7 @@
             this.btnC.TabIndex = 36;
             this.btnC.Text = "Clear";
             this.btnC.UseVisualStyleBackColor = false;
+            this.btnC.Click += new System.EventHandler(this.btnC_Click);
             // 
             // btnP
             // 
@@ -449,6 +506,7 @@
             this.btnP.TabIndex = 35;
             this.btnP.Text = "%";
             this.btnP.UseVisualStyleBackColor = false;
+            this.btnP.Click += new System.EventHandler(this.btnP_Click);
             // 
             // btnD
             // 
@@ -462,6 +520,7 @@
             this.btnD.TabIndex = 33;
             this.btnD.Text = "Del";
             this.btnD.UseVisualStyleBackColor = false;
+            this.btnD.Click += new System.EventHandler(this.btnD_Click);
             // 
             // btnPoint
             // 
@@ -657,6 +716,7 @@
             // 
             // txtChange
             // 
+            this.txtChange.Enabled = false;
             this.txtChange.Location = new System.Drawing.Point(118, 402);
             this.txtChange.Name = "txtChange";
             this.txtChange.Size = new System.Drawing.Size(100, 29);
@@ -678,6 +738,7 @@
             this.txtToPay.Name = "txtToPay";
             this.txtToPay.Size = new System.Drawing.Size(100, 29);
             this.txtToPay.TabIndex = 19;
+            this.txtToPay.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtToPay_MouseDown);
             // 
             // label21
             // 
@@ -698,6 +759,7 @@
             this.txtTendered.Name = "txtTendered";
             this.txtTendered.Size = new System.Drawing.Size(100, 29);
             this.txtTendered.TabIndex = 17;
+            this.txtTendered.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtTendered_MouseDown);
             // 
             // label20
             // 
@@ -718,6 +780,7 @@
             this.txtSurcharge.Name = "txtSurcharge";
             this.txtSurcharge.Size = new System.Drawing.Size(100, 29);
             this.txtSurcharge.TabIndex = 15;
+            this.txtSurcharge.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtSurcharge_MouseDown);
             // 
             // label19
             // 
@@ -738,6 +801,7 @@
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(100, 29);
             this.txtDiscount.TabIndex = 13;
+            this.txtDiscount.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtDiscount_MouseDown);
             // 
             // label18
             // 
@@ -758,6 +822,7 @@
             this.txtDelivery.Name = "txtDelivery";
             this.txtDelivery.Size = new System.Drawing.Size(100, 29);
             this.txtDelivery.TabIndex = 11;
+            this.txtDelivery.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtDelivery_MouseDown);
             // 
             // label17
             // 
@@ -787,10 +852,12 @@
             // 
             // txtNotPaid
             // 
+            this.txtNotPaid.Enabled = false;
             this.txtNotPaid.Location = new System.Drawing.Point(32, 169);
             this.txtNotPaid.Name = "txtNotPaid";
             this.txtNotPaid.Size = new System.Drawing.Size(221, 29);
             this.txtNotPaid.TabIndex = 8;
+            this.txtNotPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblPayType3
             // 
@@ -804,6 +871,7 @@
             this.lblPayType3.Size = new System.Drawing.Size(89, 28);
             this.lblPayType3.TabIndex = 7;
             this.lblPayType3.Text = "Just Eat";
+            this.lblPayType3.Visible = false;
             // 
             // txtPay3
             // 
@@ -811,6 +879,7 @@
             this.txtPay3.Name = "txtPay3";
             this.txtPay3.Size = new System.Drawing.Size(100, 29);
             this.txtPay3.TabIndex = 6;
+            this.txtPay3.Visible = false;
             // 
             // lblSurcharge2
             // 
@@ -821,16 +890,18 @@
             this.lblSurcharge2.Size = new System.Drawing.Size(41, 21);
             this.lblSurcharge2.TabIndex = 5;
             this.lblSurcharge2.Text = "0.00";
+            this.lblSurcharge2.Visible = false;
             // 
-            // label13
+            // lblSCharge2
             // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label13.Location = new System.Drawing.Point(19, 75);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(91, 21);
-            this.label13.TabIndex = 4;
-            this.label13.Text = "Surcharge:";
+            this.lblSCharge2.AutoSize = true;
+            this.lblSCharge2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSCharge2.Location = new System.Drawing.Point(19, 75);
+            this.lblSCharge2.Name = "lblSCharge2";
+            this.lblSCharge2.Size = new System.Drawing.Size(91, 21);
+            this.lblSCharge2.TabIndex = 4;
+            this.lblSCharge2.Text = "Surcharge:";
+            this.lblSCharge2.Visible = false;
             // 
             // lblPayType2
             // 
@@ -844,6 +915,7 @@
             this.lblPayType2.Size = new System.Drawing.Size(59, 28);
             this.lblPayType2.TabIndex = 3;
             this.lblPayType2.Text = "Card";
+            this.lblPayType2.Visible = false;
             // 
             // txtPay2
             // 
@@ -851,6 +923,7 @@
             this.txtPay2.Name = "txtPay2";
             this.txtPay2.Size = new System.Drawing.Size(100, 29);
             this.txtPay2.TabIndex = 2;
+            this.txtPay2.Visible = false;
             // 
             // lblPayType1
             // 
@@ -864,6 +937,7 @@
             this.lblPayType1.Size = new System.Drawing.Size(61, 28);
             this.lblPayType1.TabIndex = 1;
             this.lblPayType1.Text = "Cash";
+            this.lblPayType1.Visible = false;
             // 
             // txtPay1
             // 
@@ -871,6 +945,8 @@
             this.txtPay1.Name = "txtPay1";
             this.txtPay1.Size = new System.Drawing.Size(100, 29);
             this.txtPay1.TabIndex = 0;
+            this.txtPay1.Visible = false;
+            this.txtPay1.TextChanged += new System.EventHandler(this.txtPay1_TextChanged);
             // 
             // label10
             // 
@@ -931,58 +1007,6 @@
             this.cmbNote.Name = "cmbNote";
             this.cmbNote.Size = new System.Drawing.Size(269, 25);
             this.cmbNote.TabIndex = 12;
-            // 
-            // lblSurcharge3
-            // 
-            this.lblSurcharge3.AutoSize = true;
-            this.lblSurcharge3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSurcharge3.Location = new System.Drawing.Point(117, 121);
-            this.lblSurcharge3.Name = "lblSurcharge3";
-            this.lblSurcharge3.Size = new System.Drawing.Size(41, 21);
-            this.lblSurcharge3.TabIndex = 38;
-            this.lblSurcharge3.Text = "0.00";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label12.Location = new System.Drawing.Point(20, 121);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 21);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Surcharge:";
-            // 
-            // lblSurcharge1
-            // 
-            this.lblSurcharge1.AutoSize = true;
-            this.lblSurcharge1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSurcharge1.Location = new System.Drawing.Point(117, 30);
-            this.lblSurcharge1.Name = "lblSurcharge1";
-            this.lblSurcharge1.Size = new System.Drawing.Size(41, 21);
-            this.lblSurcharge1.TabIndex = 40;
-            this.lblSurcharge1.Text = "0.00";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label16.Location = new System.Drawing.Point(20, 30);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(91, 21);
-            this.label16.TabIndex = 39;
-            this.label16.Text = "Surcharge:";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(474, 236);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 60);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Print Kitchen Only";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label24
             // 
@@ -1167,7 +1191,7 @@
         private System.Windows.Forms.Label lblPayType3;
         private System.Windows.Forms.TextBox txtPay3;
         private System.Windows.Forms.Label lblSurcharge2;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblSCharge2;
         private System.Windows.Forms.Label lblPayType2;
         private System.Windows.Forms.TextBox txtPay2;
         private System.Windows.Forms.Label lblPayType1;
@@ -1181,9 +1205,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbNote;
         private System.Windows.Forms.Label lblSurcharge1;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblSCharge1;
         private System.Windows.Forms.Label lblSurcharge3;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblSCharge3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button btnDriver1;
