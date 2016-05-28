@@ -31,6 +31,8 @@ namespace SuperPOS.UI.TakeAway
         private string strOrderType = "";
         //public string StrOrderType { set { strOrderType = value; } }
 
+        private readonly EntityControl _control = new EntityControl();
+
         #region 定义
         Button[] btnMI = new Button[16];
         Button[] btnMC = new Button[35];
@@ -151,6 +153,7 @@ namespace SuperPOS.UI.TakeAway
             for (int i = 0; i < 16; i++) { btnMI[i].Click += btnMI_Click; }
             #endregion
 
+            #region DGV设置
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
 
             dgvMenuItem.Columns[0].Visible = false;
@@ -174,6 +177,7 @@ namespace SuperPOS.UI.TakeAway
             dgvMenuItem.Columns[9].Visible = false;
             dgvMenuItem.Columns[10].Visible = false;
             dgvMenuItem.Columns[11].Visible = false;
+            #endregion
         }
 
         private void SetMenuItem(int i, int iPage, string strMenuCate)
@@ -567,12 +571,39 @@ namespace SuperPOS.UI.TakeAway
         {
             if (dgvMenuItem.RowCount <= 0) return;
 
+            ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+            strCallID = @"06f8d669-ba19-4922-b84d-43b23b1632e5";
+
+            TAPaymentInfo taPaymentInfo = new TAPaymentInfo();
+            taPaymentInfo.SystemKey = Guid.NewGuid();
+            taPaymentInfo.ChkNum = ChkNum;
+            taPaymentInfo.PayType1 = @"0.00";
+            taPaymentInfo.PayTypeSurCharge1 = @"0.00";
+            taPaymentInfo.PayType2 = @"0.00";
+            taPaymentInfo.PayTypeSurCharge2 = @"0.00";
+            taPaymentInfo.PayType3 = @"0.00";
+            taPaymentInfo.PayTypeSurCharge3 = @"0.00";
+            taPaymentInfo.NotPaid = txtTotalPrice.Text;
+            taPaymentInfo.Delivery = @"0.00";
+            taPaymentInfo.Discount = @"0.00";
+            taPaymentInfo.DiscountValue = @"0.00";
+            taPaymentInfo.Surcharge = @"0.00";
+            taPaymentInfo.Tendered = @"0.00";
+            taPaymentInfo.ToPay = txtTotalPrice.Text;
+            taPaymentInfo.ForChange = @"0.00";
+            taPaymentInfo.DCNote = "";
+            taPaymentInfo.CustInfo = strCallID;
+            taPaymentInfo.IsPaid = "N";
+            taPaymentInfo.Remark = "";
+
+            _control.AddEntity(taPaymentInfo);
+
             //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
             //frmTaPay.ShowDialog();
             if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_DELIVERY))
             {
                 //Delivery
-                FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
+                FrmTAPay frmTaPay = new FrmTAPay(ChkNum, strCallID);
                 frmTaPay.ShowDialog();
             }
             else if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_COLLECTION))
