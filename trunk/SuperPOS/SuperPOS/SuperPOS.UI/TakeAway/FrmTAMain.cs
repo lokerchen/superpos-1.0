@@ -565,6 +565,8 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnPay_Click(object sender, EventArgs e)
         {
+            if (dgvMenuItem.RowCount <= 0) return;
+
             //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
             //frmTaPay.ShowDialog();
             if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_DELIVERY))
