@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="SuperPOS"
+                   namespace="SuperPOS.Domain">
+
+  <class name="SuperPOS.Domain.Entities.TAPaymentInfo, SuperPOS.Domain" table="TA_Payment">
+    <id name="SystemKey" column="SystemKey" type="System.Guid">
+      <generator class="guid" />
+    </id>
+
+    <property name="ChkNum" column="ChkNum" type="System.String" />
+    <property name="PayType1" column="PayType1" type="System.String" />
+    <property name="PayTypeSurCharge1" column="PayTypeSurCharge1" type="System.String" />
+    <property name="PayType2" column="PayType2" type="System.String" />
+    <property name="PayTypeSurCharge2" column="PayTypeSurCharge2" type="System.String" />
+    <property name="PayType3" column="PayType3" type="System.String" />
+    <property name="PayTypeSurCharge3" column="PayTypeSurCharge3" type="System.String" />
+    <property name="NotPaid" column="NotPaid" type="System.String" />
+    <property name="Delivery" column="Delivery" type="System.String" />
+    <property name="Discount" column="Discount" type="System.String" />
+    <property name="DiscountValue" column="DiscountValue" type="System.String" />
+    <property name="Surcharge" column="Surcharge" type="System.String" />
+    <property name="Tendered" column="Tendered" type="System.String" />
+    <property name="ToPay" column="ToPay" type="System.String" />
+    <property name="ForChange" column="ForChange" type="System.String" />
+    <property name="DCNote" column="DCNote" type="System.String" />
+    <property name="CustInfo" column="CustInfo" type="System.String" />
+    <property name="IsPaid" column="IsPaid" type="System.String" />
+    <property name="Remark" column="Remark" type="System.String" />
+  </class>
+</hibernate-mapping>

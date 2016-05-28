@@ -79,6 +79,8 @@ namespace SuperPOS.DAL
             onLoad.GetTAPreDefined();
             //TA Driver Setup
             onLoad.GetTADriverSetUp();
+            //TA Payment
+            onLoad.GetTAPaymentList();
         }
         #endregion
 

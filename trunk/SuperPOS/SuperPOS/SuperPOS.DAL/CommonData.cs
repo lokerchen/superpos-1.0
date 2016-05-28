@@ -66,5 +66,7 @@ namespace SuperPOS.DAL
         public static IList<TAPreDefinedInfo> TaPreDefinedList { get; set; }
 
         public static IList<TADriverSetUpInfo> TaDriverSetUpList { get; set; }
+
+        public static IList<TAPaymentInfo> TAPaymentList { get; set; }
     }
 }
