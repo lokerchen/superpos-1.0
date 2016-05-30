@@ -50,16 +50,23 @@
             this.label10 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.dgvCategory = new System.Windows.Forms.DataGridView();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnMenuSet4 = new System.Windows.Forms.Button();
+            this.btnMenuSet3 = new System.Windows.Forms.Button();
+            this.btnMenuSet2 = new System.Windows.Forms.Button();
+            this.btnMenuSet1 = new System.Windows.Forms.Button();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.groupBox5);
             this.groupBox6.Controls.Add(this.btnExit);
             this.groupBox6.Controls.Add(this.btnSave);
             this.groupBox6.Controls.Add(this.btnDel);
@@ -82,7 +89,7 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(565, 325);
+            this.btnExit.Location = new System.Drawing.Point(564, 367);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 69);
             this.btnExit.TabIndex = 43;
@@ -95,7 +102,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(403, 364);
+            this.btnSave.Location = new System.Drawing.Point(402, 406);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 30);
             this.btnSave.TabIndex = 42;
@@ -108,7 +115,7 @@
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(484, 364);
+            this.btnDel.Location = new System.Drawing.Point(483, 406);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(75, 30);
             this.btnDel.TabIndex = 41;
@@ -121,7 +128,7 @@
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(484, 325);
+            this.btnEdit.Location = new System.Drawing.Point(483, 367);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 30);
             this.btnEdit.TabIndex = 40;
@@ -134,7 +141,7 @@
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(403, 325);
+            this.btnAdd.Location = new System.Drawing.Point(402, 367);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 30);
             this.btnAdd.TabIndex = 39;
@@ -306,6 +313,67 @@
             this.dgvCategory.TabIndex = 0;
             this.dgvCategory.SelectionChanged += new System.EventHandler(this.dgvCategory_SelectionChanged);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnMenuSet4);
+            this.groupBox5.Controls.Add(this.btnMenuSet3);
+            this.groupBox5.Controls.Add(this.btnMenuSet2);
+            this.groupBox5.Controls.Add(this.btnMenuSet1);
+            this.groupBox5.Location = new System.Drawing.Point(365, 291);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(309, 63);
+            this.groupBox5.TabIndex = 44;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Menu Set";
+            // 
+            // btnMenuSet4
+            // 
+            this.btnMenuSet4.BackColor = System.Drawing.Color.Gray;
+            this.btnMenuSet4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuSet4.ForeColor = System.Drawing.Color.White;
+            this.btnMenuSet4.Location = new System.Drawing.Point(234, 17);
+            this.btnMenuSet4.Name = "btnMenuSet4";
+            this.btnMenuSet4.Size = new System.Drawing.Size(70, 40);
+            this.btnMenuSet4.TabIndex = 3;
+            this.btnMenuSet4.Text = "button9";
+            this.btnMenuSet4.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuSet3
+            // 
+            this.btnMenuSet3.BackColor = System.Drawing.Color.Gray;
+            this.btnMenuSet3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuSet3.ForeColor = System.Drawing.Color.White;
+            this.btnMenuSet3.Location = new System.Drawing.Point(158, 17);
+            this.btnMenuSet3.Name = "btnMenuSet3";
+            this.btnMenuSet3.Size = new System.Drawing.Size(70, 40);
+            this.btnMenuSet3.TabIndex = 2;
+            this.btnMenuSet3.Text = "button8";
+            this.btnMenuSet3.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuSet2
+            // 
+            this.btnMenuSet2.BackColor = System.Drawing.Color.Gray;
+            this.btnMenuSet2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuSet2.ForeColor = System.Drawing.Color.White;
+            this.btnMenuSet2.Location = new System.Drawing.Point(82, 17);
+            this.btnMenuSet2.Name = "btnMenuSet2";
+            this.btnMenuSet2.Size = new System.Drawing.Size(70, 40);
+            this.btnMenuSet2.TabIndex = 1;
+            this.btnMenuSet2.Text = "button7";
+            this.btnMenuSet2.UseVisualStyleBackColor = false;
+            // 
+            // btnMenuSet1
+            // 
+            this.btnMenuSet1.BackColor = System.Drawing.Color.Gray;
+            this.btnMenuSet1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMenuSet1.ForeColor = System.Drawing.Color.White;
+            this.btnMenuSet1.Location = new System.Drawing.Point(6, 17);
+            this.btnMenuSet1.Name = "btnMenuSet1";
+            this.btnMenuSet1.Size = new System.Drawing.Size(70, 40);
+            this.btnMenuSet1.TabIndex = 0;
+            this.btnMenuSet1.Text = "button6";
+            this.btnMenuSet1.UseVisualStyleBackColor = false;
+            // 
             // FrmTAMenuCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -326,6 +394,7 @@
             this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -353,5 +422,10 @@
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnMenuSet4;
+        private System.Windows.Forms.Button btnMenuSet3;
+        private System.Windows.Forms.Button btnMenuSet2;
+        private System.Windows.Forms.Button btnMenuSet1;
     }
 }

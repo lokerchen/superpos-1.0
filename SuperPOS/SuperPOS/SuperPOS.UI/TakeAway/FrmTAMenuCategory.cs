@@ -20,6 +20,10 @@ namespace SuperPOS.UI.TakeAway
         private UserInfo userInfo = new UserInfo();
         private Guid TADeptCodeSysKey = Guid.NewGuid();
 
+        private string strMenuSetKey = "";
+
+        private string[] MenuSetKey = new string[4];
+
         public FrmTAMenuCategory()
         {
             InitializeComponent();
@@ -107,6 +111,7 @@ namespace SuperPOS.UI.TakeAway
             taMenuCategoryInfo.DeptCode = cmbBoxDeptCode.Text;
             taMenuCategoryInfo.IsHotKey = chkHotKey.Checked ? "Y" : "N";
             taMenuCategoryInfo.DishCode = txtDishCode.Text.Trim();
+            taMenuCategoryInfo.MenuSetID = strMenuSetKey;
 
             if (iStatus == 1)
             {
@@ -172,10 +177,37 @@ namespace SuperPOS.UI.TakeAway
             dgvCategory.Columns[5].Visible = false;
             dgvCategory.Columns[6].Visible = false;
             dgvCategory.Columns[7].Visible = false;
+            dgvCategory.Columns[8].Visible = false;
+            dgvCategory.Columns[9].Visible = false;
 
             dgvCategory.Columns[1].HeaderText = @"Category Name";
             dgvCategory.Columns[2].HeaderText = @"Category 2nd Name";
             dgvCategory.Columns[3].HeaderText = @"Position";
+
+            #region btnMenuSet赋值
+            Button[] btnMenuSet = new Button[4];
+            btnMenuSet[0] = btnMenuSet1;
+            btnMenuSet[1] = btnMenuSet2;
+            btnMenuSet[2] = btnMenuSet3;
+            btnMenuSet[3] = btnMenuSet4;
+
+            btnMenuSet1.Click += BtnMenuSet_Click;
+            btnMenuSet2.Click += BtnMenuSet_Click;
+            btnMenuSet3.Click += BtnMenuSet_Click;
+            btnMenuSet4.Click += BtnMenuSet_Click;
+
+            new OnLoadSystemCommonData().GetTAMenuSet();
+            int i = 0;
+            foreach (var taMenuSet in CommonData.TaMenuSetList)
+            {
+                if (i >= 4) break;
+
+                btnMenuSet[i].Text = taMenuSet.EnglishName;
+                MenuSetKey[i] = taMenuSet.SystemKey.ToString();
+
+                i++;
+            }
+            #endregion
 
             BindCmbData();
 
@@ -235,6 +267,49 @@ namespace SuperPOS.UI.TakeAway
             cmbBoxDeptCode.DataSource = lstDeptCode.ToList();
             cmbBoxDeptCode.ValueMember = "SysKey";
             cmbBoxDeptCode.DisplayMember = "DeptCode";
+        }
+
+        private void BtnMenuSet_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            switch (btn.Name)
+            {
+                case "btnMenuSet1":
+                    strMenuSetKey = MenuSetKey[0];
+                    btn.BackColor = Color.CornflowerBlue;
+                    btnMenuSet2.BackColor = Color.Gray;
+                    btnMenuSet3.BackColor = Color.Gray;
+                    btnMenuSet4.BackColor = Color.Gray;
+                    break;
+                case "btnMenuSet2":
+                    strMenuSetKey = MenuSetKey[1];
+                    btnMenuSet1.BackColor = Color.Gray;
+                    btn.BackColor = Color.CornflowerBlue;
+                    btnMenuSet3.BackColor = Color.Gray;
+                    btnMenuSet4.BackColor = Color.Gray;
+                    break;
+                case "btnMenuSet3":
+                    strMenuSetKey = MenuSetKey[2];
+                    btnMenuSet1.BackColor = Color.Gray;
+                    btnMenuSet2.BackColor = Color.Gray;
+                    btn.BackColor = Color.CornflowerBlue;
+                    btnMenuSet4.BackColor = Color.Gray;
+                    break;
+                case "btnMenuSet4":
+                    strMenuSetKey = MenuSetKey[3];
+                    btnMenuSet1.BackColor = Color.Gray;
+                    btnMenuSet2.BackColor = Color.Gray;
+                    btnMenuSet3.BackColor = Color.Gray;
+                    btn.BackColor = Color.CornflowerBlue;
+                    break;
+                default:
+                    strMenuSetKey = MenuSetKey[0];
+                    btn.BackColor = Color.CornflowerBlue;
+                    btnMenuSet2.BackColor = Color.Gray;
+                    btnMenuSet3.BackColor = Color.Gray;
+                    btnMenuSet4.BackColor = Color.Gray;
+                    break;
+            }
         }
 
     }
