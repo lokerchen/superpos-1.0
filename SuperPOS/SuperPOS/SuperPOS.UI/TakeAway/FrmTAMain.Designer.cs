@@ -1309,6 +1309,7 @@
             this.btnMenuSelect.TabIndex = 0;
             this.btnMenuSelect.Text = "Menu 1";
             this.btnMenuSelect.UseVisualStyleBackColor = false;
+            this.btnMenuSelect.Click += new System.EventHandler(this.btnMenuSelect_Click);
             // 
             // btnRemove
             // 

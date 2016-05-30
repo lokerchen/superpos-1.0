@@ -33,6 +33,8 @@ namespace SuperPOS.UI.TakeAway
 
         private readonly EntityControl _control = new EntityControl();
 
+        private string strMenuSetID = "";
+
         #region 定义
         Button[] btnMI = new Button[16];
         Button[] btnMC = new Button[35];
@@ -140,8 +142,8 @@ namespace SuperPOS.UI.TakeAway
 
             #region Menu Item按钮填充
 
-            SetMenuItem(1, 1, "");
-            SetMenuCate(1, 1);
+            SetMenuItem(1, 1, "", strMenuSetID);
+            SetMenuCate(1, 1, strMenuSetID);
 
             #endregion
 
@@ -180,9 +182,9 @@ namespace SuperPOS.UI.TakeAway
             #endregion
         }
 
-        private void SetMenuItem(int i, int iPage, string strMenuCate)
+        private void SetMenuItem(int i, int iPage, string strMenuCate, string strMenuSet)
         {
-            var miList = DALCommon.GetListQueryPageMenuItem(iPage, strMenuCate);
+            var miList = DALCommon.GetListQueryPageMenuItem(iPage, strMenuCate, strMenuSet);
 
             int j = 0;
             foreach (var mi in miList)
@@ -194,10 +196,10 @@ namespace SuperPOS.UI.TakeAway
             if (j < 16) { for (int k = j; k < 16; k++) { btnMI[k].Text = ""; } }
         }
 
-        private void SetMenuCate(int i, int iPage)
+        private void SetMenuCate(int i, int iPage, string strMenuSet)
         {
 
-            var mcList = DALCommon.GetListQueryPageMenuCate(iPage);
+            var mcList = DALCommon.GetListQueryPageMenuCate(iPage, strMenuSet);
 
             int j = 0;
             foreach (var mc in mcList)
@@ -218,13 +220,13 @@ namespace SuperPOS.UI.TakeAway
         {
             if (!string.IsNullOrEmpty(btnMI[0].Text) && !string.IsNullOrEmpty(btnMI[15].Text)) I_MI_PAGE = I_MI_PAGE + 1;
 
-            SetMenuItem(I_LAN, I_MI_PAGE, strBtnText);
+            SetMenuItem(I_LAN, I_MI_PAGE, strBtnText, strMenuSetID);
         }
 
         private void btnMILeft_Click(object sender, EventArgs e)
         {
             I_MI_PAGE = I_MI_PAGE <= 1 ? 1 : (I_MI_PAGE <= 1 ? 1 : I_MI_PAGE - 1);
-            SetMenuItem(I_LAN, I_MI_PAGE, strBtnText);
+            SetMenuItem(I_LAN, I_MI_PAGE, strBtnText, strMenuSetID);
         }
 
         private void btnMC_Click(object sender, EventArgs e)
@@ -238,7 +240,7 @@ namespace SuperPOS.UI.TakeAway
             }
 
             I_MI_PAGE = 1;
-            SetMenuItem(I_LAN, I_MI_PAGE, strBtnText);
+            SetMenuItem(I_LAN, I_MI_PAGE, strBtnText, strMenuSetID);
             //SetMenuItem(1, 1, btn.Text);
         }
 
@@ -284,14 +286,14 @@ namespace SuperPOS.UI.TakeAway
             if (I_LAN == 1)
             {
                 I_LAN = 2;
-                SetMenuItem(I_LAN, 1, "");
-                SetMenuCate(I_LAN, 1);
+                SetMenuItem(I_LAN, 1, "", strMenuSetID);
+                SetMenuCate(I_LAN, 1, strMenuSetID);
             }
             else
             {
                 I_LAN = 1;
-                SetMenuItem(I_LAN, 1, "");
-                SetMenuCate(I_LAN, 1);
+                SetMenuItem(I_LAN, 1, "", strMenuSetID);
+                SetMenuCate(I_LAN, 1, strMenuSetID);
             }
         }
         #endregion
@@ -770,5 +772,18 @@ namespace SuperPOS.UI.TakeAway
             }
         }
         #endregion
+
+        private void btnMenuSelect_Click(object sender, EventArgs e)
+        {
+            FrmTAMenuSelect frmTaMenuSelect = new FrmTAMenuSelect();
+            if (frmTaMenuSelect.ShowDialog() == DialogResult.OK)
+            {
+                //获得菜谱参数
+                strMenuSetID = frmTaMenuSelect.ValueString;
+                
+                SetMenuItem(I_LAN, 1, "", strMenuSetID);
+                SetMenuCate(I_LAN, 1, strMenuSetID);
+            }
+        }
     }
 }
