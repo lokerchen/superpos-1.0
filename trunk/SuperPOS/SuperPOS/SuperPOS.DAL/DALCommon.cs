@@ -229,12 +229,50 @@ namespace SuperPOS.DAL
         /// </summary>
         /// <param name="iPageNum">页码</param>
         /// <returns></returns>
-        public static List<TAMenuItemInfo> GetListQueryPageMenuItem(int iPageNum, string sMenuCate)
+        public static List<TAMenuItemInfo> GetListQueryPageMenuItem(int iPageNum, string sMenuCate, string strMenuSetID)
         {
             new OnLoadSystemCommonData().GetTAMenuItemList();
 
             //return CommonData.TaMenuItemList.Where(s => s.MenuCateID.Equals(sMenuCate)).Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
-            return string.IsNullOrEmpty(sMenuCate) ? CommonData.TaMenuItemList.Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Equals(sMenuCate)).Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
+            //return string.IsNullOrEmpty(sMenuCate) ? CommonData.TaMenuItemList.Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Equals(sMenuCate)).Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
+            if (string.IsNullOrEmpty(sMenuCate))
+            {
+                //return CommonData.TaMenuItemList.Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
+                if (string.IsNullOrEmpty(strMenuSetID))
+                {
+                    return
+                    CommonData.TaMenuItemList.Skip(PAGESIZE_MENUITEM * (iPageNum - 1))
+                        .Take(PAGESIZE_MENUITEM)
+                        .ToList();
+                }
+                else
+                {
+                    return
+                    CommonData.TaMenuItemList.Where(s => !string.IsNullOrEmpty(s.MenuSetID) && s.MenuSetID.Equals(strMenuSetID))
+                        .Skip(PAGESIZE_MENUITEM * (iPageNum - 1))
+                        .Take(PAGESIZE_MENUITEM)
+                        .ToList();
+                }
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(strMenuSetID))
+                {
+                    return
+                    CommonData.TaMenuItemList.Where(s => s.MenuCateID.Equals(sMenuCate))
+                        .Skip(PAGESIZE_MENUITEM * (iPageNum - 1))
+                        .Take(PAGESIZE_MENUITEM)
+                        .ToList();
+                }
+                else
+                {
+                    return
+                    CommonData.TaMenuItemList.Where(s => s.MenuCateID.Equals(sMenuCate) && !string.IsNullOrEmpty(s.MenuSetID) && s.MenuSetID.Equals(strMenuSetID))
+                        .Skip(PAGESIZE_MENUITEM * (iPageNum - 1))
+                        .Take(PAGESIZE_MENUITEM)
+                        .ToList();
+                }
+            }
         }
 
         #endregion
@@ -245,11 +283,24 @@ namespace SuperPOS.DAL
         /// </summary>
         /// <param name="iPageNum">页码</param>
         /// <returns></returns>
-        public static List<TAMenuCategoryInfo> GetListQueryPageMenuCate(int iPageNum)
+        public static List<TAMenuCategoryInfo> GetListQueryPageMenuCate(int iPageNum, string strMenuSetKey)
         {
             new OnLoadSystemCommonData().GetTAMenuCategory();
 
-            return CommonData.TaMenuCategoryList.Skip(PAGESIZE_MENUCATE * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
+            //return CommonData.TaMenuCategoryList.Where(s => s.MenuSetID.Equals(strMenuSetKey)).Skip(PAGESIZE_MENUCATE * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
+            if (string.IsNullOrEmpty(strMenuSetKey))
+            {
+                return
+                    CommonData.TaMenuCategoryList.Skip(PAGESIZE_MENUCATE*(iPageNum - 1))
+                        .Take(PAGESIZE_MENUITEM)
+                        .ToList();
+            }
+            else
+            {
+                return CommonData.TaMenuCategoryList.Where(s => !string.IsNullOrEmpty(s.MenuSetID) && s.MenuSetID.Equals(strMenuSetKey))
+                    .Skip(PAGESIZE_MENUCATE * (iPageNum - 1))
+                    .Take(PAGESIZE_MENUITEM).ToList();
+            }
         }
         #endregion
 
