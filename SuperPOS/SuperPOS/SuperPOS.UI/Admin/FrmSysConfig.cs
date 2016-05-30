@@ -134,7 +134,7 @@ namespace SuperPOS.UI.Admin
         #region Till Number只允许输入数字
         private void txtTillNum_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsNumber(e.KeyChar)) && e.KeyChar != (char)8) e.Handled = true;
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8) e.Handled = true;
         }
         #endregion
 
