@@ -181,6 +181,12 @@
     <Compile Include="TakeAway\FrmTADriverSetup.Designer.cs">
       <DependentUpon>FrmTADriverSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="TakeAway\FrmTAMenuSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAMenuSelect.Designer.cs">
+      <DependentUpon>FrmTAMenuSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeAway\FrmTAOrderListView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTADriverSetup.resx">
       <DependentUpon>FrmTADriverSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTAMenuSelect.resx">
+      <DependentUpon>FrmTAMenuSelect.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAOrderListView.resx">
       <DependentUpon>FrmTAOrderListView.cs</DependentUpon>
