@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn4 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
-            this.btn4 = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +50,17 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Select a menu";
+            // 
+            // btn4
+            // 
+            this.btn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btn4.Location = new System.Drawing.Point(352, 22);
+            this.btn4.Name = "btn4";
+            this.btn4.Size = new System.Drawing.Size(110, 60);
+            this.btn4.TabIndex = 3;
+            this.btn4.UseVisualStyleBackColor = false;
             // 
             // btn3
             // 
@@ -84,17 +95,6 @@
             this.btn1.TabIndex = 0;
             this.btn1.UseVisualStyleBackColor = false;
             // 
-            // btn4
-            // 
-            this.btn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btn4.Location = new System.Drawing.Point(352, 22);
-            this.btn4.Name = "btn4";
-            this.btn4.Size = new System.Drawing.Size(110, 60);
-            this.btn4.TabIndex = 3;
-            this.btn4.UseVisualStyleBackColor = false;
-            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -117,6 +117,7 @@
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTAMenuSelect";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmTAMenuSelect";
             this.Load += new System.EventHandler(this.FrmTAMenuSelect_Load);
             this.groupBox1.ResumeLayout(false);
