@@ -86,7 +86,7 @@
             this.btnMC23 = new System.Windows.Forms.Button();
             this.btnMC22 = new System.Windows.Forms.Button();
             this.btnMC21 = new System.Windows.Forms.Button();
-            this.button53 = new System.Windows.Forms.Button();
+            this.btnKeyPad = new System.Windows.Forms.Button();
             this.btnMC20 = new System.Windows.Forms.Button();
             this.btnMC19 = new System.Windows.Forms.Button();
             this.btnMC18 = new System.Windows.Forms.Button();
@@ -104,13 +104,13 @@
             this.btnMC8 = new System.Windows.Forms.Button();
             this.btnMC7 = new System.Windows.Forms.Button();
             this.btnMC6 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
+            this.btnSearchMeal = new System.Windows.Forms.Button();
             this.btnMC5 = new System.Windows.Forms.Button();
             this.btnMC4 = new System.Windows.Forms.Button();
             this.btnMC3 = new System.Windows.Forms.Button();
             this.btnMC2 = new System.Windows.Forms.Button();
             this.btnMC1 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMenuSelect = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.timerMain = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenuItem)).BeginInit();
@@ -685,7 +685,7 @@
             this.groupBox3.Controls.Add(this.btnMC23);
             this.groupBox3.Controls.Add(this.btnMC22);
             this.groupBox3.Controls.Add(this.btnMC21);
-            this.groupBox3.Controls.Add(this.button53);
+            this.groupBox3.Controls.Add(this.btnKeyPad);
             this.groupBox3.Controls.Add(this.btnMC20);
             this.groupBox3.Controls.Add(this.btnMC19);
             this.groupBox3.Controls.Add(this.btnMC18);
@@ -703,13 +703,13 @@
             this.groupBox3.Controls.Add(this.btnMC8);
             this.groupBox3.Controls.Add(this.btnMC7);
             this.groupBox3.Controls.Add(this.btnMC6);
-            this.groupBox3.Controls.Add(this.button35);
+            this.groupBox3.Controls.Add(this.btnSearchMeal);
             this.groupBox3.Controls.Add(this.btnMC5);
             this.groupBox3.Controls.Add(this.btnMC4);
             this.groupBox3.Controls.Add(this.btnMC3);
             this.groupBox3.Controls.Add(this.btnMC2);
             this.groupBox3.Controls.Add(this.btnMC1);
-            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.btnMenuSelect);
             this.groupBox3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox3.Location = new System.Drawing.Point(374, 248);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -958,19 +958,19 @@
             this.btnMC21.Text = "Foo Yung";
             this.btnMC21.UseVisualStyleBackColor = false;
             // 
-            // button53
+            // btnKeyPad
             // 
-            this.button53.BackColor = System.Drawing.Color.Olive;
-            this.button53.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button53.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button53.ForeColor = System.Drawing.Color.White;
-            this.button53.Location = new System.Drawing.Point(8, 256);
-            this.button53.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(100, 55);
-            this.button53.TabIndex = 24;
-            this.button53.Text = "KEYPAD";
-            this.button53.UseVisualStyleBackColor = false;
+            this.btnKeyPad.BackColor = System.Drawing.Color.Olive;
+            this.btnKeyPad.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnKeyPad.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnKeyPad.ForeColor = System.Drawing.Color.White;
+            this.btnKeyPad.Location = new System.Drawing.Point(8, 256);
+            this.btnKeyPad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnKeyPad.Name = "btnKeyPad";
+            this.btnKeyPad.Size = new System.Drawing.Size(100, 55);
+            this.btnKeyPad.TabIndex = 24;
+            this.btnKeyPad.Text = "KEYPAD";
+            this.btnKeyPad.UseVisualStyleBackColor = false;
             // 
             // btnMC20
             // 
@@ -1212,19 +1212,19 @@
             this.btnMC6.Text = "Szechuan";
             this.btnMC6.UseVisualStyleBackColor = false;
             // 
-            // button35
+            // btnSearchMeal
             // 
-            this.button35.BackColor = System.Drawing.Color.Olive;
-            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button35.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button35.ForeColor = System.Drawing.Color.White;
-            this.button35.Location = new System.Drawing.Point(8, 76);
-            this.button35.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(100, 55);
-            this.button35.TabIndex = 6;
-            this.button35.Text = "SEARCH MEAL";
-            this.button35.UseVisualStyleBackColor = false;
+            this.btnSearchMeal.BackColor = System.Drawing.Color.Olive;
+            this.btnSearchMeal.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearchMeal.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSearchMeal.ForeColor = System.Drawing.Color.White;
+            this.btnSearchMeal.Location = new System.Drawing.Point(8, 76);
+            this.btnSearchMeal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSearchMeal.Name = "btnSearchMeal";
+            this.btnSearchMeal.Size = new System.Drawing.Size(100, 55);
+            this.btnSearchMeal.TabIndex = 6;
+            this.btnSearchMeal.Text = "SEARCH MEAL";
+            this.btnSearchMeal.UseVisualStyleBackColor = false;
             // 
             // btnMC5
             // 
@@ -1296,19 +1296,19 @@
             this.btnMC1.Text = "Roast Pork";
             this.btnMC1.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnMenuSelect
             // 
-            this.button1.BackColor = System.Drawing.Color.Olive;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(8, 16);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 55);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Menu 1";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnMenuSelect.BackColor = System.Drawing.Color.Olive;
+            this.btnMenuSelect.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMenuSelect.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMenuSelect.ForeColor = System.Drawing.Color.White;
+            this.btnMenuSelect.Location = new System.Drawing.Point(8, 16);
+            this.btnMenuSelect.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMenuSelect.Name = "btnMenuSelect";
+            this.btnMenuSelect.Size = new System.Drawing.Size(100, 55);
+            this.btnMenuSelect.TabIndex = 0;
+            this.btnMenuSelect.Text = "Menu 1";
+            this.btnMenuSelect.UseVisualStyleBackColor = false;
             // 
             // btnRemove
             // 
@@ -1402,7 +1402,7 @@
         private System.Windows.Forms.Button btnMC3;
         private System.Windows.Forms.Button btnMC2;
         private System.Windows.Forms.Button btnMC1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMenuSelect;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Button btnMI16;
         private System.Windows.Forms.Button btnMI15;
@@ -1433,7 +1433,7 @@
         private System.Windows.Forms.Button btnMC23;
         private System.Windows.Forms.Button btnMC22;
         private System.Windows.Forms.Button btnMC21;
-        private System.Windows.Forms.Button button53;
+        private System.Windows.Forms.Button btnKeyPad;
         private System.Windows.Forms.Button btnMC20;
         private System.Windows.Forms.Button btnMC19;
         private System.Windows.Forms.Button btnMC18;
@@ -1451,7 +1451,7 @@
         private System.Windows.Forms.Button btnMC8;
         private System.Windows.Forms.Button btnMC7;
         private System.Windows.Forms.Button btnMC6;
-        private System.Windows.Forms.Button button35;
+        private System.Windows.Forms.Button btnSearchMeal;
         private System.Windows.Forms.Timer timerMain;
     }
 }
