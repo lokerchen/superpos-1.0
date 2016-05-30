@@ -62,7 +62,7 @@
             this.btnP = new System.Windows.Forms.Button();
             this.btnD = new System.Windows.Forms.Button();
             this.btnPoint = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
@@ -379,7 +379,7 @@
             this.groupBox2.Controls.Add(this.btnP);
             this.groupBox2.Controls.Add(this.btnD);
             this.groupBox2.Controls.Add(this.btnPoint);
-            this.groupBox2.Controls.Add(this.button5);
+            this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.btn0);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.btn3);
@@ -534,17 +534,18 @@
             this.btnPoint.Text = ".";
             this.btnPoint.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnSave
             // 
-            this.button5.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(474, 372);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(100, 60);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Save";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnSave.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(474, 372);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(100, 60);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btn0
             // 
@@ -755,10 +756,13 @@
             // 
             // txtTendered
             // 
+            this.txtTendered.Enabled = false;
             this.txtTendered.Location = new System.Drawing.Point(118, 332);
             this.txtTendered.Name = "txtTendered";
             this.txtTendered.Size = new System.Drawing.Size(100, 29);
             this.txtTendered.TabIndex = 17;
+            this.txtTendered.TextChanged += new System.EventHandler(this.txtTendered_TextChanged);
+            this.txtTendered.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTendered_KeyPress);
             this.txtTendered.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtTendered_MouseDown);
             // 
             // label20
@@ -780,6 +784,8 @@
             this.txtSurcharge.Name = "txtSurcharge";
             this.txtSurcharge.Size = new System.Drawing.Size(100, 29);
             this.txtSurcharge.TabIndex = 15;
+            this.txtSurcharge.TextChanged += new System.EventHandler(this.txtSurcharge_TextChanged);
+            this.txtSurcharge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurcharge_KeyPress);
             this.txtSurcharge.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtSurcharge_MouseDown);
             // 
             // label19
@@ -801,6 +807,7 @@
             this.txtDiscount.Name = "txtDiscount";
             this.txtDiscount.Size = new System.Drawing.Size(100, 29);
             this.txtDiscount.TabIndex = 13;
+            this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
             this.txtDiscount.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtDiscount_MouseDown);
             // 
             // label18
@@ -818,6 +825,7 @@
             // 
             // txtDelivery
             // 
+            this.txtDelivery.Enabled = false;
             this.txtDelivery.Location = new System.Drawing.Point(118, 209);
             this.txtDelivery.Name = "txtDelivery";
             this.txtDelivery.Size = new System.Drawing.Size(100, 29);
@@ -880,6 +888,8 @@
             this.txtPay3.Size = new System.Drawing.Size(100, 29);
             this.txtPay3.TabIndex = 6;
             this.txtPay3.Visible = false;
+            this.txtPay3.TextChanged += new System.EventHandler(this.txtPay3_TextChanged);
+            this.txtPay3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPay3_KeyPress);
             // 
             // lblSurcharge2
             // 
@@ -924,6 +934,8 @@
             this.txtPay2.Size = new System.Drawing.Size(100, 29);
             this.txtPay2.TabIndex = 2;
             this.txtPay2.Visible = false;
+            this.txtPay2.TextChanged += new System.EventHandler(this.txtPay2_TextChanged);
+            this.txtPay2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPay2_KeyPress);
             // 
             // lblPayType1
             // 
@@ -947,6 +959,7 @@
             this.txtPay1.TabIndex = 0;
             this.txtPay1.Visible = false;
             this.txtPay1.TextChanged += new System.EventHandler(this.txtPay1_TextChanged);
+            this.txtPay1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPay1_KeyPress);
             // 
             // label10
             // 
@@ -1158,7 +1171,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnC;
         private System.Windows.Forms.Button btnP;
