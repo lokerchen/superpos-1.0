@@ -14,6 +14,7 @@
     <property name="DeptCode" column="DeptCode" type="System.String" />
     <property name="IsHotKey" column="IsHotKey" type="System.String" />
     <property name="DishCode" column="DishCode" type="System.String" />
+    <property name="MenuSetID" column="MenuSetID" type="System.String" />
     <property name="Remark" column="Remark" type="System.String" />
   </class>
 
