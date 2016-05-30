@@ -594,6 +594,8 @@ namespace SuperPOS.UI.TakeAway
             taPaymentInfo.DCNote = "";
             taPaymentInfo.CustInfo = strCallID;
             taPaymentInfo.IsPaid = "N";
+            taPaymentInfo.AcctPay = txtTotalPrice.Text;
+            taPaymentInfo.DriverName = "";
             taPaymentInfo.Remark = "";
 
             _control.AddEntity(taPaymentInfo);
