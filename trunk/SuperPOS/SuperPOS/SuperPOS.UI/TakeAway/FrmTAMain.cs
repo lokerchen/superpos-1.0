@@ -574,8 +574,17 @@ namespace SuperPOS.UI.TakeAway
             ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
             strCallID = @"06f8d669-ba19-4922-b84d-43b23b1632e5";
 
+            AddDgvData();
+
+            new OnLoadSystemCommonData().GetTAPaymentList();
+            bool isNew = false;
             TAPaymentInfo taPaymentInfo = new TAPaymentInfo();
-            taPaymentInfo.SystemKey = Guid.NewGuid();
+
+            if (!CommonData.TAPaymentList.Any(s => s.ChkNum.Equals(ChkNum)))
+            {
+                isNew = true;
+                taPaymentInfo.SystemKey = Guid.NewGuid();
+            }
             taPaymentInfo.ChkNum = ChkNum;
             taPaymentInfo.PayType1 = @"0.00";
             taPaymentInfo.PayTypeSurCharge1 = @"0.00";
@@ -598,7 +607,7 @@ namespace SuperPOS.UI.TakeAway
             taPaymentInfo.DriverName = "";
             taPaymentInfo.Remark = "";
 
-            _control.AddEntity(taPaymentInfo);
+            if (isNew) _control.AddEntity(taPaymentInfo);
 
             //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
             //frmTaPay.ShowDialog();
@@ -606,7 +615,28 @@ namespace SuperPOS.UI.TakeAway
             {
                 //Delivery
                 FrmTAPay frmTaPay = new FrmTAPay(ChkNum, strCallID);
-                frmTaPay.ShowDialog();
+                //frmTaPay.ShowDialog();
+                if (frmTaPay.ShowDialog() == DialogResult.OK)
+                {
+                    bool IsPaid = frmTaPay.ValueString;
+
+                    if (IsPaid)
+                    {
+                        //if (string.IsNullOrEmpty(ChkKey1))
+                        ChkKey1 = Guid.NewGuid().ToString();
+                        ChkNum1 = CommonFunction.GetChkCode();
+                        //Order Type，默认为Delivery
+                        ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+                        btnMode1.Text = ORDER_TYPE;
+                        ChkKey = ChkKey1;
+                        ChkNum = ChkNum1;
+
+                        dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                    }
+
+                    ClearDgvData();
+                }
+
             }
             else if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_COLLECTION))
             {
@@ -706,5 +736,39 @@ namespace SuperPOS.UI.TakeAway
 
             //}
         }
+
+        private void ClearDgvData()
+        { 
+            List<TAOrderItemInfo> lstTmp = new List<TAOrderItemInfo>();
+            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ForEach(i => lstTmp.Add(i));
+
+            foreach (var taOrderItemInfo in lstTmp)
+            {
+                CommonData.TaOrderItemList.Remove(taOrderItemInfo);
+            }
+        }
+
+        #region AddDgvData
+
+        private void AddDgvData()
+        {
+            List<TAOrderItemInfo> lstPOI = new List<TAOrderItemInfo>();
+            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ForEach(i => lstPOI.Add(i));
+
+            new OnLoadSystemCommonData().GetTAOrderItem();
+
+            foreach (var taOrderItem in lstPOI)
+            {
+                if (CommonData.TaOrderItemList.Any(s => s.SystemKey.Equals(taOrderItem.SystemKey)))
+                {
+                    _control.UpdateEntity(taOrderItem);
+                }
+                else
+                {
+                    _control.AddEntity(taOrderItem);
+                }
+            }
+        }
+        #endregion
     }
 }
