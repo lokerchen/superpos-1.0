@@ -65,6 +65,12 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "IsPaid")]
         public virtual string IsPaid { get; set; }
 
+        [XmlElement(ElementName = "AcctPay")]
+        public virtual string AcctPay { get; set; }
+
+        [XmlElement(ElementName = "DriverName")]
+        public virtual string DriverName { get; set; }
+
         [XmlElement(ElementName = "Remark")]
         public virtual string Remark { get; set; }
     }

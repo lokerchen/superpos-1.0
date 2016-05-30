@@ -26,6 +26,8 @@
     <property name="DCNote" column="DCNote" type="System.String" />
     <property name="CustInfo" column="CustInfo" type="System.String" />
     <property name="IsPaid" column="IsPaid" type="System.String" />
+    <property name="AcctPay" column="AcctPay" type="System.String" />
+    <property name="DriverName" column="DriverName" type="System.String" />
     <property name="Remark" column="Remark" type="System.String" />
   </class>
 </hibernate-mapping>
