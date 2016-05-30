@@ -39,6 +39,9 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "DishCode")]
         public virtual string DishCode { get; set; }
 
+        [XmlElement(ElementName = "MenuSetID")]
+        public virtual string MenuSetID { get; set; }
+
         [XmlElement(ElementName = "Remark")]
         public virtual string Remark { get; set; }
     }
