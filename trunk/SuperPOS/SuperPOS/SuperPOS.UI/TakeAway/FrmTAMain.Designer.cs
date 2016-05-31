@@ -1225,6 +1225,7 @@
             this.btnSearchMeal.TabIndex = 6;
             this.btnSearchMeal.Text = "SEARCH MEAL";
             this.btnSearchMeal.UseVisualStyleBackColor = false;
+            this.btnSearchMeal.Click += new System.EventHandler(this.btnSearchMeal_Click);
             // 
             // btnMC5
             // 

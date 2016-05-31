@@ -36,8 +36,9 @@ namespace SuperPOS.UI.TakeAway
         private string strMenuSetID = "";
 
         #region 定义
-        Button[] btnMI = new Button[16];
-        Button[] btnMC = new Button[35];
+
+        private Button[] btnMI = new Button[16];
+        private Button[] btnMC = new Button[35];
 
         private string ChkKey1 = "";
         private string ChkNum1 = "";
@@ -84,6 +85,7 @@ namespace SuperPOS.UI.TakeAway
             ChkNum = ChkNum1;
 
             #region MenuItem按钮 
+
             btnMI[0] = btnMI1;
             btnMI[1] = btnMI2;
             btnMI[2] = btnMI3;
@@ -100,9 +102,11 @@ namespace SuperPOS.UI.TakeAway
             btnMI[13] = btnMI14;
             btnMI[14] = btnMI15;
             btnMI[15] = btnMI16;
+
             #endregion
 
             #region Menu Category
+
             btnMC[0] = btnMC1;
             btnMC[1] = btnMC2;
             btnMC[2] = btnMC3;
@@ -138,6 +142,7 @@ namespace SuperPOS.UI.TakeAway
             btnMC[32] = btnMC33;
             btnMC[33] = btnMC34;
             btnMC[34] = btnMC35;
+
             #endregion
 
             #region Menu Item按钮填充
@@ -148,14 +153,25 @@ namespace SuperPOS.UI.TakeAway
             #endregion
 
             #region Menu Category按钮事件
-            for (int i = 0; i < 35; i++) { btnMC[i].Click += btnMC_Click; }
+
+            for (int i = 0; i < 35; i++)
+            {
+                btnMC[i].Click += btnMC_Click;
+            }
+
             #endregion
 
             #region Menu Item按钮事件
-            for (int i = 0; i < 16; i++) { btnMI[i].Click += btnMI_Click; }
+
+            for (int i = 0; i < 16; i++)
+            {
+                btnMI[i].Click += btnMI_Click;
+            }
+
             #endregion
 
             #region DGV设置
+
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
 
             dgvMenuItem.Columns[0].Visible = false;
@@ -179,6 +195,7 @@ namespace SuperPOS.UI.TakeAway
             dgvMenuItem.Columns[9].Visible = false;
             dgvMenuItem.Columns[10].Visible = false;
             dgvMenuItem.Columns[11].Visible = false;
+
             #endregion
         }
 
@@ -193,8 +210,35 @@ namespace SuperPOS.UI.TakeAway
                 j++;
             }
 
-            if (j < 16) { for (int k = j; k < 16; k++) { btnMI[k].Text = ""; } }
+            if (j < 16)
+            {
+                for (int k = j; k < 16; k++)
+                {
+                    btnMI[k].Text = "";
+                }
+            }
         }
+
+        private void SetMenuItem(int i, int iPage, string strKeyWord)
+        {
+            var miList = DALCommon.GetListQueryPageMenuItem(iPage, strKeyWord);
+
+            int j = 0;
+            foreach (var mi in miList)
+            {
+                btnMI[j].Text = i == 1 ? mi.EnglishName : mi.OtherName;
+                j++;
+            }
+
+            if (j < 16)
+            {
+                for (int k = j; k < 16; k++)
+                {
+                    btnMI[k].Text = "";
+                }
+            }
+        }
+
 
         private void SetMenuCate(int i, int iPage, string strMenuSet)
         {
@@ -208,7 +252,13 @@ namespace SuperPOS.UI.TakeAway
                 j++;
             }
 
-            if (j < 35) { for (int k = j; k < 35; k++) { btnMC[k].Text = ""; } }
+            if (j < 35)
+            {
+                for (int k = j; k < 35; k++)
+                {
+                    btnMC[k].Text = "";
+                }
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -218,7 +268,8 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnMIRight_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(btnMI[0].Text) && !string.IsNullOrEmpty(btnMI[15].Text)) I_MI_PAGE = I_MI_PAGE + 1;
+            if (!string.IsNullOrEmpty(btnMI[0].Text) && !string.IsNullOrEmpty(btnMI[15].Text))
+                I_MI_PAGE = I_MI_PAGE + 1;
 
             SetMenuItem(I_LAN, I_MI_PAGE, strBtnText, strMenuSetID);
         }
@@ -254,7 +305,9 @@ namespace SuperPOS.UI.TakeAway
 
             IList<TAMenuItemInfo> qMiList = new List<TAMenuItemInfo>();
 
-            qMiList = I_LAN != 1 ? CommonData.TaMenuItemList.Where(s => s.OtherName.Equals(strTxt)).ToList() : CommonData.TaMenuItemList.Where(s => s.EnglishName.Equals(strTxt)).ToList();
+            qMiList = I_LAN != 1
+                ? CommonData.TaMenuItemList.Where(s => s.OtherName.Equals(strTxt)).ToList()
+                : CommonData.TaMenuItemList.Where(s => s.EnglishName.Equals(strTxt)).ToList();
             TAMenuItemInfo taMiInfo = qMiList.FirstOrDefault();
 
             if (taMiInfo != null)
@@ -281,6 +334,7 @@ namespace SuperPOS.UI.TakeAway
         }
 
         #region 语言切换
+
         private void btnLang_Click(object sender, EventArgs e)
         {
             if (I_LAN == 1)
@@ -296,6 +350,7 @@ namespace SuperPOS.UI.TakeAway
                 SetMenuCate(I_LAN, 1, strMenuSetID);
             }
         }
+
         #endregion
 
         private void btnTasteHand_Click(object sender, EventArgs e)
@@ -347,7 +402,9 @@ namespace SuperPOS.UI.TakeAway
                     taOrderItemInfo.ItemPrice = sDetail[1];
                     //taOrderItemInfo.ItemQty = "1";
                     taOrderItemInfo.ItemQty = dgvMenuItem.CurrentRow.Cells[1].Value.ToString();
-                    taOrderItemInfo.ItemTotalPrice = (Convert.ToDecimal(sDetail[1]) * Convert.ToInt32(dgvMenuItem.CurrentRow.Cells[1].Value.ToString())).ToString() ;
+                    taOrderItemInfo.ItemTotalPrice =
+                        (Convert.ToDecimal(sDetail[1])*Convert.ToInt32(dgvMenuItem.CurrentRow.Cells[1].Value.ToString()))
+                            .ToString();
                     taOrderItemInfo.ItemType = "2";
                     taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                     taOrderItemInfo.OrderType = ORDER_TYPE;
@@ -443,9 +500,10 @@ namespace SuperPOS.UI.TakeAway
 
             if (qList.Any())
             {
-                strQty = qList.FirstOrDefault().ItemQty = (Convert.ToInt32(qList.FirstOrDefault().ItemQty) + 1).ToString();
+                strQty =
+                    qList.FirstOrDefault().ItemQty = (Convert.ToInt32(qList.FirstOrDefault().ItemQty) + 1).ToString();
                 qList.FirstOrDefault().ItemTotalPrice =
-                    ((Convert.ToInt32(qList.FirstOrDefault().ItemQty)) *
+                    ((Convert.ToInt32(qList.FirstOrDefault().ItemQty))*
                      Convert.ToDecimal(qList.FirstOrDefault().ItemPrice)).ToString();
 
                 //string strParentKey = qList.FirstOrDefault().SystemKey.ToString();
@@ -454,8 +512,8 @@ namespace SuperPOS.UI.TakeAway
 
                 //if (qChildList.Any())
                 //{
-                    //foreach (var taOrderItemInfo in qChildList)
-               
+                //foreach (var taOrderItemInfo in qChildList)
+
             }
 
             //改码数量自动改变
@@ -464,7 +522,9 @@ namespace SuperPOS.UI.TakeAway
                 if (taOrderItemInfo.ParentItem != null && taOrderItemInfo.ParentItem.Equals(strParentKey))
                 {
                     taOrderItemInfo.ItemQty = strQty;
-                    taOrderItemInfo.ItemTotalPrice = (Convert.ToInt32(taOrderItemInfo.ItemQty)*Convert.ToDecimal(taOrderItemInfo.ItemPrice)).ToString();
+                    taOrderItemInfo.ItemTotalPrice =
+                        (Convert.ToInt32(taOrderItemInfo.ItemQty)*Convert.ToDecimal(taOrderItemInfo.ItemPrice)).ToString
+                            ();
                 }
             }
 
@@ -493,10 +553,12 @@ namespace SuperPOS.UI.TakeAway
             {
                 if (Convert.ToInt32(qList.FirstOrDefault().ItemQty) > 1)
                 {
-                    strQty = qList.FirstOrDefault().ItemQty = (Convert.ToInt32(qList.FirstOrDefault().ItemQty) - 1).ToString();
+                    strQty =
+                        qList.FirstOrDefault().ItemQty =
+                            (Convert.ToInt32(qList.FirstOrDefault().ItemQty) - 1).ToString();
                     qList.FirstOrDefault().ItemTotalPrice =
-                    ((Convert.ToInt32(qList.FirstOrDefault().ItemQty)) *
-                     Convert.ToDecimal(qList.FirstOrDefault().ItemPrice)).ToString();
+                        ((Convert.ToInt32(qList.FirstOrDefault().ItemQty))*
+                         Convert.ToDecimal(qList.FirstOrDefault().ItemPrice)).ToString();
                 }
                 else
                 {
@@ -520,7 +582,9 @@ namespace SuperPOS.UI.TakeAway
                 if (taOrderItemInfo.ParentItem != null && taOrderItemInfo.ParentItem.Equals(strParentKey))
                 {
                     taOrderItemInfo.ItemQty = strQty;
-                    taOrderItemInfo.ItemTotalPrice = (Convert.ToInt32(taOrderItemInfo.ItemQty) * Convert.ToDecimal(taOrderItemInfo.ItemPrice)).ToString();
+                    taOrderItemInfo.ItemTotalPrice =
+                        (Convert.ToInt32(taOrderItemInfo.ItemQty)*Convert.ToDecimal(taOrderItemInfo.ItemPrice)).ToString
+                            ();
                 }
             }
 
@@ -633,7 +697,8 @@ namespace SuperPOS.UI.TakeAway
                         ChkKey = ChkKey1;
                         ChkNum = ChkNum1;
 
-                        dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                        dgvMenuItem.DataSource =
+                            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
                     }
 
                     ClearDgvData();
@@ -663,8 +728,12 @@ namespace SuperPOS.UI.TakeAway
 
             List<TAOrderItemInfo> lstPOI = new List<TAOrderItemInfo>();
             List<TAOrderItemInfo> lstCOI = new List<TAOrderItemInfo>();
-            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).Where(s => s.ItemType.Equals("1")).ForEach(i => lstPOI.Add(i));
-            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).Where(s => s.ItemType.Equals("2")).ForEach(i => lstCOI.Add(i));
+            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey))
+                .Where(s => s.ItemType.Equals("1"))
+                .ForEach(i => lstPOI.Add(i));
+            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey))
+                .Where(s => s.ItemType.Equals("2"))
+                .ForEach(i => lstCOI.Add(i));
 
             //CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList().Clear();
 
@@ -740,7 +809,7 @@ namespace SuperPOS.UI.TakeAway
         }
 
         private void ClearDgvData()
-        { 
+        {
             List<TAOrderItemInfo> lstTmp = new List<TAOrderItemInfo>();
             CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ForEach(i => lstTmp.Add(i));
 
@@ -771,6 +840,7 @@ namespace SuperPOS.UI.TakeAway
                 }
             }
         }
+
         #endregion
 
         private void btnMenuSelect_Click(object sender, EventArgs e)
@@ -780,9 +850,21 @@ namespace SuperPOS.UI.TakeAway
             {
                 //获得菜谱参数
                 strMenuSetID = frmTaMenuSelect.ValueString;
-                
+
                 SetMenuItem(I_LAN, 1, "", strMenuSetID);
                 SetMenuCate(I_LAN, 1, strMenuSetID);
+            }
+        }
+
+        private void btnSearchMeal_Click(object sender, EventArgs e)
+        {
+            FrmTASearchMeal frmTaSearchMeal = new FrmTASearchMeal();
+            if (frmTaSearchMeal.ShowDialog() == DialogResult.OK)
+            {
+                //获得回传值
+                string sKeyWord = frmTaSearchMeal.ValueString;
+
+                SetMenuItem(I_LAN, 1, !string.IsNullOrEmpty(sKeyWord) ? sKeyWord : "");
             }
         }
     }
