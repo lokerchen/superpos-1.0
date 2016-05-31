@@ -36,7 +36,7 @@
             this.txtTotalCount = new System.Windows.Forms.TextBox();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
             this.txtMainTime = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtDishCode = new System.Windows.Forms.TextBox();
             this.btnUp = new System.Windows.Forms.Button();
             this.btnDown = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -212,16 +212,15 @@
             this.txtMainTime.Text = "18:48:30";
             this.txtMainTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // txtDishCode
             // 
-            this.textBox4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox4.Location = new System.Drawing.Point(316, 483);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(43, 26);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.Text = "86";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDishCode.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtDishCode.Location = new System.Drawing.Point(316, 483);
+            this.txtDishCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDishCode.Name = "txtDishCode";
+            this.txtDishCode.Size = new System.Drawing.Size(43, 26);
+            this.txtDishCode.TabIndex = 7;
+            this.txtDishCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnUp
             // 
@@ -971,6 +970,7 @@
             this.btnKeyPad.TabIndex = 24;
             this.btnKeyPad.Text = "KEYPAD";
             this.btnKeyPad.UseVisualStyleBackColor = false;
+            this.btnKeyPad.Click += new System.EventHandler(this.btnKeyPad_Click);
             // 
             // btnMC20
             // 
@@ -1346,7 +1346,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDown);
             this.Controls.Add(this.btnUp);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txtDishCode);
             this.Controls.Add(this.txtMainTime);
             this.Controls.Add(this.txtTotalPrice);
             this.Controls.Add(this.txtTotalCount);
@@ -1378,7 +1378,7 @@
         private System.Windows.Forms.TextBox txtTotalCount;
         private System.Windows.Forms.TextBox txtTotalPrice;
         private System.Windows.Forms.TextBox txtMainTime;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtDishCode;
         private System.Windows.Forms.Button btnUp;
         private System.Windows.Forms.Button btnDown;
         private System.Windows.Forms.Button btnAdd;

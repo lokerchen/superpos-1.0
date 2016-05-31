@@ -202,6 +202,7 @@ namespace SuperPOS.UI.TakeAway
             dgvMenuItem.Columns[9].Visible = false;
             dgvMenuItem.Columns[10].Visible = false;
             dgvMenuItem.Columns[11].Visible = false;
+            dgvMenuItem.Columns[12].Visible = false;
 
             #endregion
         }
@@ -896,6 +897,64 @@ namespace SuperPOS.UI.TakeAway
         private void ChangeOrderType(string sOrderType, Button btn)
         {
             btn.Text = ORDER_TYPE = sOrderType;
+        }
+        #endregion
+
+        private void btnKeyPad_Click(object sender, EventArgs e)
+        {
+            FrmTAKeyPad frmTaKeyPad = new FrmTAKeyPad();
+            if (frmTaKeyPad.ShowDialog() == DialogResult.OK)
+            {
+                string sDishCode = frmTaKeyPad.DisCode;
+                string sQty = frmTaKeyPad.Qty;
+
+                txtDishCode.Text = sDishCode;
+                sQty = sQty.Substring(1);
+
+                if (!string.IsNullOrEmpty(sDishCode))
+                {
+                    TAOrderItemInfo taOrderItemInfo = new TAOrderItemInfo();
+                    taOrderItemInfo = AddSingleOrderItem(sDishCode, sQty);
+                    if (taOrderItemInfo != null)
+                    {
+                        CommonData.TaOrderItemList.Add(taOrderItemInfo);
+                        dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+
+                        txtTotalCount.Text = GetDgvItemCount().ToString();
+                        txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+                    }
+                }
+            }
+        }
+
+        #region 插入单个OrderItem
+
+        private TAOrderItemInfo AddSingleOrderItem(string DCode, string sQty)
+        {
+            TAOrderItemInfo taOrderItemInfo = new TAOrderItemInfo();
+            taOrderItemInfo.SystemKey = Guid.NewGuid();
+
+            IList<TAMenuItemInfo> qMiList = new List<TAMenuItemInfo>();
+
+            qMiList = CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(DCode)).ToList();
+            TAMenuItemInfo taMiInfo = qMiList.FirstOrDefault();
+
+            if (taMiInfo != null)
+            {
+                taOrderItemInfo.CheckKey = ChkKey;
+                taOrderItemInfo.CheckCode = ChkNum;
+                taOrderItemInfo.ItemCode = taMiInfo.DishCode;
+                taOrderItemInfo.ItemDishName = taMiInfo.EnglishName;
+                taOrderItemInfo.ItemPrice = taMiInfo.wRegular;
+                taOrderItemInfo.ItemQty = sQty;
+                taOrderItemInfo.ItemTotalPrice = taMiInfo.wRegular;
+                taOrderItemInfo.ItemType = "1";
+                taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                taOrderItemInfo.OrderType = ORDER_TYPE;
+
+                return taOrderItemInfo;
+            }
+            else return null;
         }
         #endregion
     }
