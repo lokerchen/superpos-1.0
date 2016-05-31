@@ -13,7 +13,15 @@ namespace SuperPOS.UI.TakeAway
 {
     public partial class FrmTAChangeOrderType : Form
     {
-        public string strOrderType = "";
+        //默认为DELIVERY
+        public string strOrderType = CommonBase.ORDER_TYPE_DELIVERY;
+
+        public string ValueString
+        {
+            get { return strOrderType; }
+            set { ValueString = value; }
+        }
+
         public FrmTAChangeOrderType()
         {
             InitializeComponent();
@@ -28,18 +36,21 @@ namespace SuperPOS.UI.TakeAway
         private void btnShop_Click(object sender, EventArgs e)
         {
             strOrderType = CommonBase.ORDER_TYPE_SHOP;
+            this.DialogResult = DialogResult.OK;
             Hide();
         }
 
         private void btnDelivery_Click(object sender, EventArgs e)
         {
             strOrderType = CommonBase.ORDER_TYPE_DELIVERY;
+            this.DialogResult = DialogResult.OK;
             Hide();
         }
 
         private void btnCollection_Click(object sender, EventArgs e)
         {
             strOrderType = CommonBase.ORDER_TYPE_COLLECTION;
+            this.DialogResult = DialogResult.OK;
             Hide();
         }
     }

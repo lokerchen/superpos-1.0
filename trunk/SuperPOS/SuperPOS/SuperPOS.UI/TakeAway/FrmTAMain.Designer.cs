@@ -123,7 +123,7 @@
             // 
             this.btnMode1.BackColor = System.Drawing.Color.Lime;
             this.btnMode1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMode1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMode1.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnMode1.ForeColor = System.Drawing.Color.White;
             this.btnMode1.Location = new System.Drawing.Point(14, 17);
             this.btnMode1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -137,7 +137,7 @@
             // 
             this.btnMode2.BackColor = System.Drawing.Color.Silver;
             this.btnMode2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMode2.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMode2.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnMode2.ForeColor = System.Drawing.Color.White;
             this.btnMode2.Location = new System.Drawing.Point(134, 17);
             this.btnMode2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -152,7 +152,7 @@
             // 
             this.btnMode3.BackColor = System.Drawing.Color.Silver;
             this.btnMode3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMode3.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMode3.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnMode3.ForeColor = System.Drawing.Color.White;
             this.btnMode3.Location = new System.Drawing.Point(254, 16);
             this.btnMode3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

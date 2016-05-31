@@ -52,6 +52,10 @@ namespace SuperPOS.UI.TakeAway
 
         //点餐类型，Delivery,Shop,Collection三种中的任意一个，默认为Delivery
         private string ORDER_TYPE = "";
+        //private string CURRENT_ORDER_TYPE = "";
+
+        //存储当前OrderType按钮
+        private Button btnOrderType = new Button();
 
         #endregion
 
@@ -76,6 +80,7 @@ namespace SuperPOS.UI.TakeAway
 
             //Order Type，默认为Delivery
             ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+            
             btnMode1.Text = ORDER_TYPE;
             //Console.Out.WriteLine(ChkNum);
             //string g = Guid.NewGuid().ToString();
@@ -83,6 +88,8 @@ namespace SuperPOS.UI.TakeAway
 
             ChkKey = ChkKey1;
             ChkNum = ChkNum1;
+
+            btnOrderType = btnMode1;
 
             #region MenuItem按钮 
 
@@ -439,21 +446,26 @@ namespace SuperPOS.UI.TakeAway
         private void btnChangeOrderType_Click(object sender, EventArgs e)
         {
             FrmTAChangeOrderType frmTaChangeOrderType = new FrmTAChangeOrderType();
-            frmTaChangeOrderType.ShowDialog();
+            if (frmTaChangeOrderType.ShowDialog() == DialogResult.OK)
+            {
+                //获得回传值
+                string sOrderType = frmTaChangeOrderType.ValueString;
 
-            strOrderType = frmTaChangeOrderType.strOrderType;
+                ChangeOrderType(sOrderType, btnOrderType);
+            }
         }
 
         private void btnMode2_Click(object sender, EventArgs e)
         {
-
+            btnOrderType = btnMode2;
         }
 
         private void btnMode3_Click(object sender, EventArgs e)
         {
-
+            btnOrderType = btnMode3;
         }
 
+        #region 获得DGV中Item数量
         private int GetDgvItemCount()
         {
             int sumItem = 0;
@@ -468,7 +480,9 @@ namespace SuperPOS.UI.TakeAway
 
             return sumItem;
         }
+        #endregion
 
+        #region 获得DGV所有菜品价格总和
         private decimal GetDgvItemTotalPrice()
         {
             decimal sumItem = 0;
@@ -481,6 +495,7 @@ namespace SuperPOS.UI.TakeAway
 
             return sumItem;
         }
+        #endregion
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -719,6 +734,7 @@ namespace SuperPOS.UI.TakeAway
             }
         }
 
+        #region 重组DGV
         private void SetDgvData()
         {
             //foreach (DataGridViewRow row in dgvMenuItem.Rows)
@@ -807,7 +823,9 @@ namespace SuperPOS.UI.TakeAway
 
             //}
         }
+        #endregion
 
+        #region 清空DGV
         private void ClearDgvData()
         {
             List<TAOrderItemInfo> lstTmp = new List<TAOrderItemInfo>();
@@ -818,7 +836,8 @@ namespace SuperPOS.UI.TakeAway
                 CommonData.TaOrderItemList.Remove(taOrderItemInfo);
             }
         }
-
+        #endregion
+        
         #region AddDgvData
 
         private void AddDgvData()
@@ -867,5 +886,17 @@ namespace SuperPOS.UI.TakeAway
                 SetMenuItem(I_LAN, 1, !string.IsNullOrEmpty(sKeyWord) ? sKeyWord : "");
             }
         }
+
+        #region 更改OrderType
+        /// <summary>
+        /// 更改OrderType
+        /// </summary>
+        /// <param name="sOrderType">目标OrderType</param>
+        /// <param name="btn">当前按钮名称</param>
+        private void ChangeOrderType(string sOrderType, Button btn)
+        {
+            btn.Text = ORDER_TYPE = sOrderType;
+        }
+        #endregion
     }
 }
