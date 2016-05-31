@@ -277,6 +277,31 @@ namespace SuperPOS.DAL
 
         #endregion
 
+        #region Menu Item 关键字查询分页
+        /// <summary>
+        /// Menu Item 分页
+        /// </summary>
+        /// <param name="iPageNum">页码</param>
+        /// <returns></returns>
+        public static List<TAMenuItemInfo> GetListQueryPageMenuItem(int iPageNum, string sKeyWord)
+        {
+            new OnLoadSystemCommonData().GetTAMenuItemList();
+
+            if (string.IsNullOrEmpty(sKeyWord))
+            {
+                return CommonData.TaMenuItemList.Skip(PAGESIZE_MENUITEM * (iPageNum - 1)).Take(PAGESIZE_MENUITEM).ToList();
+            }
+            else
+            {
+                return CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(sKeyWord) || s.EnglishName.Contains(sKeyWord))
+                        .Skip(PAGESIZE_MENUITEM * (iPageNum - 1))
+                        .Take(PAGESIZE_MENUITEM)
+                        .ToList();
+            }
+        }
+
+        #endregion
+
         #region Menu Category分页
         /// <summary>
         /// Menu Category分页
