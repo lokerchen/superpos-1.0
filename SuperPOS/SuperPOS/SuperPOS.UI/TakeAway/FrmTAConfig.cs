@@ -21,6 +21,7 @@ namespace SuperPOS.UI.TakeAway
         private List<TADistChargeInfo> distChrgList = new List<TADistChargeInfo>();
         private Guid DisChrgRmkSyskey = Guid.NewGuid();
         private readonly EntityControl _control = new EntityControl();
+        private TextBox[] txtFreeItem = new TextBox[4];
         public FrmTAConfig()
         {
             InitializeComponent();
@@ -34,6 +35,12 @@ namespace SuperPOS.UI.TakeAway
 
         private void FrmTAConfig_Load(object sender, EventArgs e)
         {
+            txtFreeItem[0] = txtFreeItem1;
+            txtFreeItem[1] = txtFreeItem2;
+            txtFreeItem[2] = txtFreeItem3;
+            txtFreeItem[3] = txtFreeItem4;
+
+
             OnLoadSystemCommonData onLoad = new OnLoadSystemCommonData();
             onLoad.GetTAPayType();
             onLoad.GetTAPayTypeDisc();
@@ -42,6 +49,7 @@ namespace SuperPOS.UI.TakeAway
             onLoad.GetTAPostCode();
             onLoad.GetTAPostCodeRemark();
             onLoad.GetTAPreDefined();
+            onLoad.GetTAFreeFoodItemsList();
 
             #region 绑定General Setting的Payment Type
             payTypeList = CommonData.TaPayTypeList.ToList();
@@ -181,6 +189,22 @@ namespace SuperPOS.UI.TakeAway
                 txtPostCode.Text = qList.UrPostCode;
                 txtYourX.Text = qList.UrX;
                 txtYourY.Text = qList.UrY;
+            }
+            #endregion
+
+            #region 获得FreeItemCode
+
+            if (CommonData.TAFreeFoodItems.Any())
+            {
+                txtTotalAmountThreshold.Text = CommonData.TAFreeFoodItems.FirstOrDefault().FreeAmount;
+
+                int i = 0;
+                foreach (var taFreeFoodItemsInfo in CommonData.TAFreeFoodItems.TakeWhile(taFreeFoodItemsInfo => i < 4))
+                {
+                    txtFreeItem[i].Text = taFreeFoodItemsInfo.FreeCode;
+
+                    i++;
+                }
             }
             #endregion
 
@@ -394,6 +418,34 @@ namespace SuperPOS.UI.TakeAway
             taDistChargeRemark.OrderThreshold = txtOrderThreshold.Text;
             taDistChargeRemark.SurchargeAmount = txtSurchargeAmount.Text;
             _control.UpdateEntity(taDistChargeRemark);
+        }
+
+        private void btnFFISave_Click(object sender, EventArgs e)
+        {
+            foreach (var taFreeFoodItemsInfo in CommonData.TAFreeFoodItems)
+            {
+                _control.DeleteEntity(taFreeFoodItemsInfo);
+            }
+
+            TAFreeFoodItemsInfo taFreeFoodItems = new TAFreeFoodItemsInfo();
+
+            for (int i = 0; i < 4; i++)
+            {
+                taFreeFoodItems.SystemKey = Guid.NewGuid();
+                taFreeFoodItems.FreeAmount = txtTotalAmountThreshold.Text;
+                taFreeFoodItems.FreeCode = txtFreeItem[i].Text;
+
+                _control.AddEntity(taFreeFoodItems);
+            }
+
+            MessageBox.Show("Save success!", "Save", MessageBoxButtons.OK);
+
+            new OnLoadSystemCommonData().GetTAFreeFoodItemsList();
+        }
+
+        private void btnFFIExit_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }
