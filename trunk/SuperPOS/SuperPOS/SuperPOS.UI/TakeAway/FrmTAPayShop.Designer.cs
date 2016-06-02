@@ -1,6 +1,6 @@
 ﻿namespace SuperPOS.UI.TakeAway
 {
-    partial class FrmTAPayCollection
+    partial class FrmTAPayShop
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.btnShop = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblSurcharge1 = new System.Windows.Forms.Label();
             this.lblSCharge1 = new System.Windows.Forms.Label();
@@ -43,8 +47,6 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
-            this.cmbNote = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.btnPrtAll = new System.Windows.Forms.Button();
@@ -57,20 +59,7 @@
             this.txtChange = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtToPay = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.txtTendered = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtIntNotes = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtNotes = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.chkBlackListed = new System.Windows.Forms.CheckBox();
-            this.txtReadyTime = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtPCZone = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDistance = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSurcharge = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.txtDiscount = new System.Windows.Forms.TextBox();
@@ -87,26 +76,105 @@
             this.txtPay2 = new System.Windows.Forms.TextBox();
             this.lblPayType1 = new System.Windows.Forms.Label();
             this.txtPay1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtDelCharge = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPostcode = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtHouseNo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.btnShop = new System.Windows.Forms.Button();
             this.btnCollection = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label21.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(38, 371);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(74, 25);
+            this.label21.TabIndex = 18;
+            this.label21.Text = "To Pay";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.RoyalBlue;
+            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label20.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label20.ForeColor = System.Drawing.Color.White;
+            this.label20.Location = new System.Drawing.Point(13, 336);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(99, 25);
+            this.label20.TabIndex = 16;
+            this.label20.Text = "Tendered";
+            // 
+            // btnShop
+            // 
+            this.btnShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShop.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnShop.ForeColor = System.Drawing.Color.White;
+            this.btnShop.Location = new System.Drawing.Point(365, 461);
+            this.btnShop.Name = "btnShop";
+            this.btnShop.Size = new System.Drawing.Size(100, 40);
+            this.btnShop.TabIndex = 35;
+            this.btnShop.Text = "Shop";
+            this.btnShop.UseVisualStyleBackColor = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.lblSurcharge1);
+            this.groupBox2.Controls.Add(this.lblSCharge1);
+            this.groupBox2.Controls.Add(this.lblSurcharge3);
+            this.groupBox2.Controls.Add(this.lblSCharge3);
+            this.groupBox2.Controls.Add(this.btnC);
+            this.groupBox2.Controls.Add(this.btnP);
+            this.groupBox2.Controls.Add(this.btnD);
+            this.groupBox2.Controls.Add(this.btnPoint);
+            this.groupBox2.Controls.Add(this.btnSave);
+            this.groupBox2.Controls.Add(this.btn0);
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.btn3);
+            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btn2);
+            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btn1);
+            this.groupBox2.Controls.Add(this.btnPrtAll);
+            this.groupBox2.Controls.Add(this.btn6);
+            this.groupBox2.Controls.Add(this.btn5);
+            this.groupBox2.Controls.Add(this.btn4);
+            this.groupBox2.Controls.Add(this.btn9);
+            this.groupBox2.Controls.Add(this.btn8);
+            this.groupBox2.Controls.Add(this.btn7);
+            this.groupBox2.Controls.Add(this.txtChange);
+            this.groupBox2.Controls.Add(this.label22);
+            this.groupBox2.Controls.Add(this.txtToPay);
+            this.groupBox2.Controls.Add(this.label21);
+            this.groupBox2.Controls.Add(this.txtTendered);
+            this.groupBox2.Controls.Add(this.label20);
+            this.groupBox2.Controls.Add(this.txtSurcharge);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Controls.Add(this.txtDiscount);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.txtDelivery);
+            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.lblNotPaid);
+            this.groupBox2.Controls.Add(this.txtNotPaid);
+            this.groupBox2.Controls.Add(this.lblPayType3);
+            this.groupBox2.Controls.Add(this.txtPay3);
+            this.groupBox2.Controls.Add(this.lblSurcharge2);
+            this.groupBox2.Controls.Add(this.lblSCharge2);
+            this.groupBox2.Controls.Add(this.lblPayType2);
+            this.groupBox2.Controls.Add(this.txtPay2);
+            this.groupBox2.Controls.Add(this.lblPayType1);
+            this.groupBox2.Controls.Add(this.txtPay1);
+            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox2.Location = new System.Drawing.Point(7, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(586, 452);
+            this.groupBox2.TabIndex = 31;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Payment";
             // 
             // button1
             // 
@@ -229,6 +297,7 @@
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.TextChanged += new System.EventHandler(this.btnSave_Click);
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btn0
@@ -290,26 +359,6 @@
             this.btn2.TabIndex = 29;
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
-            // 
-            // cmbNote
-            // 
-            this.cmbNote.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbNote.FormattingEnabled = true;
-            this.cmbNote.Location = new System.Drawing.Point(6, 430);
-            this.cmbNote.Name = "cmbNote";
-            this.cmbNote.Size = new System.Drawing.Size(269, 20);
-            this.cmbNote.TabIndex = 26;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(6, 405);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(222, 22);
-            this.label10.TabIndex = 22;
-            this.label10.Text = "Delivery / Collection Note";
             // 
             // button2
             // 
@@ -445,19 +494,6 @@
             this.txtToPay.TabIndex = 19;
             this.txtToPay.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtToPay_MouseDown);
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label21.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(38, 371);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(74, 25);
-            this.label21.TabIndex = 18;
-            this.label21.Text = "To Pay";
-            // 
             // txtTendered
             // 
             this.txtTendered.Enabled = false;
@@ -468,171 +504,6 @@
             this.txtTendered.TextChanged += new System.EventHandler(this.txtTendered_TextChanged);
             this.txtTendered.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTendered_KeyPress);
             this.txtTendered.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtTendered_MouseDown);
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.RoyalBlue;
-            this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label20.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(13, 336);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(99, 25);
-            this.label20.TabIndex = 16;
-            this.label20.Text = "Tendered";
-            // 
-            // txtIntNotes
-            // 
-            this.txtIntNotes.Enabled = false;
-            this.txtIntNotes.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtIntNotes.Location = new System.Drawing.Point(110, 300);
-            this.txtIntNotes.Name = "txtIntNotes";
-            this.txtIntNotes.Size = new System.Drawing.Size(130, 23);
-            this.txtIntNotes.TabIndex = 20;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(19, 306);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 17);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Int. Notes";
-            // 
-            // txtNotes
-            // 
-            this.txtNotes.Enabled = false;
-            this.txtNotes.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtNotes.Location = new System.Drawing.Point(111, 330);
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(130, 23);
-            this.txtNotes.TabIndex = 18;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label23.Location = new System.Drawing.Point(20, 336);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(83, 17);
-            this.label23.TabIndex = 17;
-            this.label23.Text = "Notes on bill";
-            // 
-            // chkBlackListed
-            // 
-            this.chkBlackListed.AutoSize = true;
-            this.chkBlackListed.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.chkBlackListed.Location = new System.Drawing.Point(23, 366);
-            this.chkBlackListed.Name = "chkBlackListed";
-            this.chkBlackListed.Size = new System.Drawing.Size(96, 21);
-            this.chkBlackListed.TabIndex = 16;
-            this.chkBlackListed.Text = "Black Listed";
-            this.chkBlackListed.UseVisualStyleBackColor = true;
-            // 
-            // txtReadyTime
-            // 
-            this.txtReadyTime.Enabled = false;
-            this.txtReadyTime.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtReadyTime.Location = new System.Drawing.Point(111, 270);
-            this.txtReadyTime.Name = "txtReadyTime";
-            this.txtReadyTime.Size = new System.Drawing.Size(130, 23);
-            this.txtReadyTime.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(20, 276);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 17);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Ready Time";
-            // 
-            // txtPCZone
-            // 
-            this.txtPCZone.Enabled = false;
-            this.txtPCZone.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPCZone.Location = new System.Drawing.Point(111, 210);
-            this.txtPCZone.Name = "txtPCZone";
-            this.txtPCZone.Size = new System.Drawing.Size(130, 23);
-            this.txtPCZone.TabIndex = 13;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(20, 216);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 17);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "PC Zone";
-            // 
-            // txtDistance
-            // 
-            this.txtDistance.Enabled = false;
-            this.txtDistance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtDistance.Location = new System.Drawing.Point(111, 180);
-            this.txtDistance.Name = "txtDistance";
-            this.txtDistance.Size = new System.Drawing.Size(130, 23);
-            this.txtDistance.TabIndex = 11;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.lblSurcharge1);
-            this.groupBox2.Controls.Add(this.lblSCharge1);
-            this.groupBox2.Controls.Add(this.lblSurcharge3);
-            this.groupBox2.Controls.Add(this.lblSCharge3);
-            this.groupBox2.Controls.Add(this.btnC);
-            this.groupBox2.Controls.Add(this.btnP);
-            this.groupBox2.Controls.Add(this.btnD);
-            this.groupBox2.Controls.Add(this.btnPoint);
-            this.groupBox2.Controls.Add(this.btnSave);
-            this.groupBox2.Controls.Add(this.btn0);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.btn3);
-            this.groupBox2.Controls.Add(this.button3);
-            this.groupBox2.Controls.Add(this.btn2);
-            this.groupBox2.Controls.Add(this.button2);
-            this.groupBox2.Controls.Add(this.btn1);
-            this.groupBox2.Controls.Add(this.btnPrtAll);
-            this.groupBox2.Controls.Add(this.btn6);
-            this.groupBox2.Controls.Add(this.btn5);
-            this.groupBox2.Controls.Add(this.btn4);
-            this.groupBox2.Controls.Add(this.btn9);
-            this.groupBox2.Controls.Add(this.btn8);
-            this.groupBox2.Controls.Add(this.btn7);
-            this.groupBox2.Controls.Add(this.txtChange);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.txtToPay);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.txtTendered);
-            this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.txtSurcharge);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.txtDiscount);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.txtDelivery);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.lblNotPaid);
-            this.groupBox2.Controls.Add(this.txtNotPaid);
-            this.groupBox2.Controls.Add(this.lblPayType3);
-            this.groupBox2.Controls.Add(this.txtPay3);
-            this.groupBox2.Controls.Add(this.lblSurcharge2);
-            this.groupBox2.Controls.Add(this.lblSCharge2);
-            this.groupBox2.Controls.Add(this.lblPayType2);
-            this.groupBox2.Controls.Add(this.txtPay2);
-            this.groupBox2.Controls.Add(this.lblPayType1);
-            this.groupBox2.Controls.Add(this.txtPay1);
-            this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(283, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(586, 452);
-            this.groupBox2.TabIndex = 21;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Payment";
             // 
             // txtSurcharge
             // 
@@ -817,189 +688,19 @@
             this.txtPay1.TextChanged += new System.EventHandler(this.txtPay1_TextChanged);
             this.txtPay1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPay1_KeyPress);
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.txtIntNotes);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.txtNotes);
-            this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.chkBlackListed);
-            this.groupBox1.Controls.Add(this.txtReadyTime);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtPCZone);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtDistance);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtDelCharge);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.txtPostcode);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.txtAddress);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.txtHouseNo);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtName);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtPhone);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(269, 390);
-            this.groupBox1.TabIndex = 20;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Customer Information";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(20, 186);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 17);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Distance";
-            // 
-            // txtDelCharge
-            // 
-            this.txtDelCharge.Enabled = false;
-            this.txtDelCharge.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtDelCharge.Location = new System.Drawing.Point(111, 240);
-            this.txtDelCharge.Name = "txtDelCharge";
-            this.txtDelCharge.Size = new System.Drawing.Size(130, 23);
-            this.txtDelCharge.TabIndex = 11;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(20, 246);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 17);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Del Charge";
-            // 
-            // txtPostcode
-            // 
-            this.txtPostcode.Enabled = false;
-            this.txtPostcode.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPostcode.Location = new System.Drawing.Point(111, 150);
-            this.txtPostcode.Name = "txtPostcode";
-            this.txtPostcode.Size = new System.Drawing.Size(130, 23);
-            this.txtPostcode.TabIndex = 9;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(20, 156);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Postcode #1";
-            // 
-            // txtAddress
-            // 
-            this.txtAddress.Enabled = false;
-            this.txtAddress.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtAddress.Location = new System.Drawing.Point(111, 120);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(130, 23);
-            this.txtAddress.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(20, 126);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 17);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Address #1";
-            // 
-            // txtHouseNo
-            // 
-            this.txtHouseNo.Enabled = false;
-            this.txtHouseNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtHouseNo.Location = new System.Drawing.Point(111, 90);
-            this.txtHouseNo.Name = "txtHouseNo";
-            this.txtHouseNo.Size = new System.Drawing.Size(130, 23);
-            this.txtHouseNo.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(20, 96);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "House No.";
-            // 
-            // txtName
-            // 
-            this.txtName.Enabled = false;
-            this.txtName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtName.Location = new System.Drawing.Point(111, 60);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(130, 23);
-            this.txtName.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(20, 66);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Name";
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Enabled = false;
-            this.txtPhone.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPhone.Location = new System.Drawing.Point(111, 30);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(130, 23);
-            this.txtPhone.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(20, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Phone #1";
-            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Olive;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(767, 461);
+            this.btnExit.Location = new System.Drawing.Point(491, 461);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(100, 40);
-            this.btnExit.TabIndex = 29;
+            this.btnExit.TabIndex = 36;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnShop
-            // 
-            this.btnShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShop.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnShop.ForeColor = System.Drawing.Color.White;
-            this.btnShop.Location = new System.Drawing.Point(641, 461);
-            this.btnShop.Name = "btnShop";
-            this.btnShop.Size = new System.Drawing.Size(100, 40);
-            this.btnShop.TabIndex = 28;
-            this.btnShop.Text = "Shop";
-            this.btnShop.UseVisualStyleBackColor = false;
             // 
             // btnCollection
             // 
@@ -1007,41 +708,39 @@
             this.btnCollection.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCollection.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCollection.ForeColor = System.Drawing.Color.White;
-            this.btnCollection.Location = new System.Drawing.Point(512, 461);
+            this.btnCollection.Location = new System.Drawing.Point(236, 461);
             this.btnCollection.Name = "btnCollection";
             this.btnCollection.Size = new System.Drawing.Size(100, 40);
-            this.btnCollection.TabIndex = 27;
+            this.btnCollection.TabIndex = 34;
             this.btnCollection.Text = "Collection";
             this.btnCollection.UseVisualStyleBackColor = false;
             // 
-            // FrmTAPayCollection
+            // FrmTAPayShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 511);
-            this.Controls.Add(this.btnExit);
+            this.ClientSize = new System.Drawing.Size(601, 512);
             this.Controls.Add(this.btnShop);
-            this.Controls.Add(this.btnCollection);
-            this.Controls.Add(this.cmbNote);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnCollection);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmTAPayCollection";
+            this.Name = "FrmTAPayShop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FrmTAPayDelivery";
-            this.Load += new System.EventHandler(this.FrmTAPayCollection_Load);
+            this.Text = "FrmTAPayShop";
+            this.Load += new System.EventHandler(this.FrmTAPayShop_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button btnShop;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblSurcharge1;
         private System.Windows.Forms.Label lblSCharge1;
@@ -1057,8 +756,6 @@
         private System.Windows.Forms.Button btn3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.ComboBox cmbNote;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Button btnPrtAll;
@@ -1071,20 +768,7 @@
         private System.Windows.Forms.TextBox txtChange;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtToPay;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtTendered;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txtIntNotes;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtNotes;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.CheckBox chkBlackListed;
-        private System.Windows.Forms.TextBox txtReadyTime;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtPCZone;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtDistance;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtSurcharge;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox txtDiscount;
@@ -1101,22 +785,7 @@
         private System.Windows.Forms.TextBox txtPay2;
         private System.Windows.Forms.Label lblPayType1;
         private System.Windows.Forms.TextBox txtPay1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtDelCharge;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPostcode;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtHouseNo;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.Button btnShop;
         private System.Windows.Forms.Button btnCollection;
     }
 }

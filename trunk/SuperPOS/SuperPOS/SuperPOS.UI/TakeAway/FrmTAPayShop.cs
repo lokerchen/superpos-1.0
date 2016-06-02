@@ -13,13 +13,11 @@ using SuperPOS.Domain.Entities;
 
 namespace SuperPOS.UI.TakeAway
 {
-    public partial class FrmTAPayCollection : Form
+    public partial class FrmTAPayShop : Form
     {
         //订单编号
         private string chkNum = "";
-        //会员编号
-        private string CustNum = "";
-
+        
         //private string sSurcharge1 = @"0.0";
         //private string sSurcharge2 = @"0.0";
         //private string sSurcharge3 = @"0.0";
@@ -29,6 +27,7 @@ namespace SuperPOS.UI.TakeAway
         private TextBox[] txtPay = new TextBox[3];
         private Label[] lblPaySurcharge = new Label[3];
         private Label[] lblPayType = new Label[3];
+        private Button[] btnDriver = new Button[6];
         private Label[] lblSCharge = new Label[3];
 
         //默认焦点放置在txtDelivery上
@@ -56,24 +55,27 @@ namespace SuperPOS.UI.TakeAway
             set { ValueString = value; }
         }
 
-        public FrmTAPayCollection()
+        public FrmTAPayShop()
         {
             InitializeComponent();
         }
 
-        public FrmTAPayCollection(string strChkNum, string strCustNum)
+        public FrmTAPayShop(string strChkNum)
         {
             InitializeComponent();
             chkNum = strChkNum;
-            CustNum = strCustNum;
         }
+
+        #region 退出
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void FrmTAPayCollection_Load(object sender, EventArgs e)
+        #endregion
+
+        private void FrmTAPayShop_Load(object sender, EventArgs e)
         {
             OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
             onLoadSystemCommonData.GetTAPayType();
@@ -99,42 +101,6 @@ namespace SuperPOS.UI.TakeAway
             txtPay1.MouseDown += txtPay_Click;
             txtPay2.MouseDown += txtPay_Click;
             txtPay3.MouseDown += txtPay_Click;
-
-            #endregion
-
-            #region 查询会员
-
-            //查询会员
-            new OnLoadSystemCommonData().GetTACust();
-
-            var custList = CommonData.TaCustList.Where(s => s.SystemKey.ToString().Equals(CustNum));
-
-            if (custList.Any())
-            {
-                TACustInfo taCustInfo = custList.FirstOrDefault();
-                txtPhone.Text = taCustInfo.Phone1;
-                txtName.Text = taCustInfo.Name;
-                txtHouseNo.Text = taCustInfo.HouseNo;
-                txtAddress.Text = taCustInfo.Address1;
-                txtPostcode.Text = taCustInfo.Postcode1;
-                txtDistance.Text = taCustInfo.Distance;
-                txtPCZone.Text = taCustInfo.PcZone;
-                txtDelCharge.Text = taCustInfo.DelCharge;
-                txtReadyTime.Text = taCustInfo.ReadyTime;
-                txtIntNotes.Text = taCustInfo.IntNotes;
-                txtNotes.Text = taCustInfo.NotesOnBill;
-                chkBlackListed.Checked = taCustInfo.IsBlackListed.Equals("Y");
-            }
-
-            #endregion
-
-            #region Delivery / Collection Note
-
-            new OnLoadSystemCommonData().GetTAPreDefined();
-            var cmbList = CommonData.TaPreDefinedList.Select(lstPD => new { Prevalue = lstPD.PreTxtValue });
-            cmbNote.DataSource = cmbList.ToList();
-            cmbNote.ValueMember = "Prevalue";
-            cmbNote.DisplayMember = "Prevalue";
 
             #endregion
 
@@ -178,7 +144,7 @@ namespace SuperPOS.UI.TakeAway
                 txtPay[j].Visible = false;
                 lblPayType[j].Visible = false;
             }
-
+            
             #endregion
 
             #region 查询账单
@@ -219,29 +185,6 @@ namespace SuperPOS.UI.TakeAway
             }
 
             #endregion
-        }
-
-        private string GetWeek(string weekName)
-        {
-            switch (weekName)
-            {
-                case "Sunday":
-                    return "7";
-                case "Monday":
-                    return "1";
-                case "Tuesday":
-                    return "2";
-                case "Wednesday":
-                    return "3";
-                case "Thursday":
-                    return "4";
-                case "Friday":
-                    return "5";
-                case "Saturday":
-                    return "6";
-                default:
-                    return "";
-            }
         }
 
         private void txtPay_Click(object sender, EventArgs e)
@@ -359,8 +302,9 @@ namespace SuperPOS.UI.TakeAway
             }
         }
 
-
         #endregion
+
+        #region 折扣Discount
 
         private void btnP_Click(object sender, EventArgs e)
         {
@@ -371,6 +315,10 @@ namespace SuperPOS.UI.TakeAway
                 if (txtDiscount.Text.Contains("%")) return;
             }
         }
+
+        #endregion
+
+        #region 数字小键盘 Del
 
         private void btnD_Click(object sender, EventArgs e)
         {
@@ -422,6 +370,8 @@ namespace SuperPOS.UI.TakeAway
                 ;
             }
         }
+
+        #endregion
 
         private void txtPay1_TextChanged(object sender, EventArgs e)
         {
@@ -512,6 +462,7 @@ namespace SuperPOS.UI.TakeAway
         {
             return 0.00m;
         }
+
         #endregion
 
         #region 获得折扣信息
@@ -641,7 +592,6 @@ namespace SuperPOS.UI.TakeAway
 
             return s + s1 + s2 + s3;
         }
-
         #endregion
 
         private void txtDiscount_TextChanged(object sender, EventArgs e)
@@ -788,7 +738,7 @@ namespace SuperPOS.UI.TakeAway
                 taPaymentInfo.Delivery = txtDelivery.Text;
                 taPaymentInfo.Tendered = txtTendered.Text;
                 taPaymentInfo.ForChange = txtChange.Text;
-                taPaymentInfo.DCNote = cmbNote.Text;
+                taPaymentInfo.DCNote = "";
 
                 if (taPaymentInfo.NotPaid.Equals("0.00"))
                 {

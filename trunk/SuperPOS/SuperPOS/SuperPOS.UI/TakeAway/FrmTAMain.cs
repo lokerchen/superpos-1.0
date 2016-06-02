@@ -672,8 +672,8 @@ namespace SuperPOS.UI.TakeAway
         {
             if (dgvMenuItem.RowCount <= 0) return;
 
-            ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
-            strCallID = @"06f8d669-ba19-4922-b84d-43b23b1632e5";
+            //ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+            //strCallID = @"06f8d669-ba19-4922-b84d-43b23b1632e5";
 
             AddDgvData();
 
@@ -715,7 +715,7 @@ namespace SuperPOS.UI.TakeAway
             if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_DELIVERY))
             {
                 //Delivery
-                FrmTAPayCollection frmTaPay = new FrmTAPayCollection(ChkNum, strCallID);
+                FrmTAPayDelivery frmTaPay = new FrmTAPayDelivery(ChkNum, strCallID);
                 //frmTaPay.ShowDialog();
                 if (frmTaPay.ShowDialog() == DialogResult.OK)
                 {
@@ -745,12 +745,60 @@ namespace SuperPOS.UI.TakeAway
                 //Collection
                 //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
                 //frmTaPay.ShowDialog();
+                //Delivery
+                FrmTAPayCollection frmTaPayCollection = new FrmTAPayCollection(ChkNum, strCallID);
+                //frmTaPay.ShowDialog();
+                if (frmTaPayCollection.ShowDialog() == DialogResult.OK)
+                {
+                    bool IsPaid = frmTaPayCollection.ValueString;
+
+                    if (IsPaid)
+                    {
+                        //if (string.IsNullOrEmpty(ChkKey1))
+                        ChkKey1 = Guid.NewGuid().ToString();
+                        ChkNum1 = CommonFunction.GetChkCode();
+                        //Order Type，默认为Delivery
+                        ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+                        btnMode1.Text = ORDER_TYPE;
+                        ChkKey = ChkKey1;
+                        ChkNum = ChkNum1;
+
+                        dgvMenuItem.DataSource =
+                            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                    }
+
+                    ClearDgvData();
+                }
             }
             else if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_SHOP))
             {
                 //Shop
                 //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
                 //frmTaPay.ShowDialog();
+                //Delivery
+                FrmTAPayShop frmTaPayShop = new FrmTAPayShop(ChkNum);
+                //frmTaPay.ShowDialog();
+                if (frmTaPayShop.ShowDialog() == DialogResult.OK)
+                {
+                    bool IsPaid = frmTaPayShop.ValueString;
+
+                    if (IsPaid)
+                    {
+                        //if (string.IsNullOrEmpty(ChkKey1))
+                        ChkKey1 = Guid.NewGuid().ToString();
+                        ChkNum1 = CommonFunction.GetChkCode();
+                        //Order Type，默认为Delivery
+                        ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+                        btnMode1.Text = ORDER_TYPE;
+                        ChkKey = ChkKey1;
+                        ChkNum = ChkNum1;
+
+                        dgvMenuItem.DataSource =
+                            CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                    }
+
+                    ClearDgvData();
+                }
             }
         }
 
@@ -923,6 +971,12 @@ namespace SuperPOS.UI.TakeAway
         private void ChangeOrderType(string sOrderType, Button btn)
         {
             btn.Text = ORDER_TYPE = sOrderType;
+
+            //OrdrItem中的也修改
+            foreach (var taOrderItemInfo in CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)))
+            {
+                taOrderItemInfo.OrderType = ORDER_TYPE;
+            }
         }
         #endregion
 

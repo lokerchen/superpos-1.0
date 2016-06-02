@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using SuperPOS.Common;
 using SuperPOS.DAL;
@@ -13,7 +12,7 @@ using SuperPOS.Domain.Entities;
 
 namespace SuperPOS.UI.TakeAway
 {
-    public partial class FrmTAPayCollection : Form
+    public partial class FrmTAPayDelivery : Form
     {
         //订单编号
         private string chkNum = "";
@@ -29,6 +28,7 @@ namespace SuperPOS.UI.TakeAway
         private TextBox[] txtPay = new TextBox[3];
         private Label[] lblPaySurcharge = new Label[3];
         private Label[] lblPayType = new Label[3];
+        private Button[] btnDriver = new Button[6];
         private Label[] lblSCharge = new Label[3];
 
         //默认焦点放置在txtDelivery上
@@ -56,24 +56,28 @@ namespace SuperPOS.UI.TakeAway
             set { ValueString = value; }
         }
 
-        public FrmTAPayCollection()
+        public FrmTAPayDelivery()
         {
             InitializeComponent();
         }
 
-        public FrmTAPayCollection(string strChkNum, string strCustNum)
+        public FrmTAPayDelivery(string strChkNum, string strCustNum)
         {
             InitializeComponent();
             chkNum = strChkNum;
             CustNum = strCustNum;
         }
 
+        #region 退出
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void FrmTAPayCollection_Load(object sender, EventArgs e)
+        #endregion
+
+        private void FrmTAPay_Load(object sender, EventArgs e)
         {
             OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
             onLoadSystemCommonData.GetTAPayType();
@@ -99,6 +103,13 @@ namespace SuperPOS.UI.TakeAway
             txtPay1.MouseDown += txtPay_Click;
             txtPay2.MouseDown += txtPay_Click;
             txtPay3.MouseDown += txtPay_Click;
+
+            btnDriver1.Click += BtnDriver_Click;
+            btnDriver2.Click += BtnDriver_Click;
+            btnDriver3.Click += BtnDriver_Click;
+            btnDriver4.Click += BtnDriver_Click;
+            btnDriver5.Click += BtnDriver_Click;
+            btnDriver6.Click += BtnDriver_Click;
 
             #endregion
 
@@ -131,7 +142,7 @@ namespace SuperPOS.UI.TakeAway
             #region Delivery / Collection Note
 
             new OnLoadSystemCommonData().GetTAPreDefined();
-            var cmbList = CommonData.TaPreDefinedList.Select(lstPD => new { Prevalue = lstPD.PreTxtValue });
+            var cmbList = CommonData.TaPreDefinedList.Select(lstPD => new {Prevalue = lstPD.PreTxtValue});
             cmbNote.DataSource = cmbList.ToList();
             cmbNote.ValueMember = "Prevalue";
             cmbNote.DisplayMember = "Prevalue";
@@ -151,6 +162,13 @@ namespace SuperPOS.UI.TakeAway
             lblPaySurcharge[0] = lblSurcharge1;
             lblPaySurcharge[1] = lblSurcharge2;
             lblPaySurcharge[2] = lblSurcharge3;
+
+            btnDriver[0] = btnDriver1;
+            btnDriver[1] = btnDriver2;
+            btnDriver[2] = btnDriver3;
+            btnDriver[3] = btnDriver4;
+            btnDriver[4] = btnDriver5;
+            btnDriver[5] = btnDriver6;
 
             lblSCharge[0] = lblSCharge1;
             lblSCharge[1] = lblSCharge2;
@@ -179,6 +197,25 @@ namespace SuperPOS.UI.TakeAway
                 lblPayType[j].Visible = false;
             }
 
+            //司机清单
+            if (!string.IsNullOrEmpty(GetWeek(DateTime.Today.DayOfWeek.ToString())))
+            {
+                i = 0;
+                foreach (
+                    var driverSet in
+                        CommonData.TaDriverSetUpList.Where(
+                            s => s.DriverWorkDay.Contains(GetWeek(DateTime.Today.DayOfWeek.ToString())))
+                            .TakeWhile(driverSet => i < 6))
+                {
+                    btnDriver[i].Text = driverSet.DriverName;
+                }
+
+                for (int j = i + 1; j < btnDriver.Length; j++)
+                {
+                    btnDriver[j].Visible = false;
+                }
+            }
+
             #endregion
 
             #region 查询账单
@@ -194,7 +231,7 @@ namespace SuperPOS.UI.TakeAway
                 txtNotPaid.Text = taPaymentInfo.NotPaid;
                 txtDelivery.Text = taPaymentInfo.Delivery;
                 txtTendered.Text = taPaymentInfo.Tendered;
-
+                
                 AcctPay = Convert.ToDecimal(taPaymentInfo.AcctPay);
 
                 if (lblSCharge[0].Visible)
@@ -246,7 +283,7 @@ namespace SuperPOS.UI.TakeAway
 
         private void txtPay_Click(object sender, EventArgs e)
         {
-            TextBox txt = (TextBox)sender;
+            TextBox txt = (TextBox) sender;
             strCtlName = txt.Name;
 
             txt.SelectAll();
@@ -254,7 +291,7 @@ namespace SuperPOS.UI.TakeAway
 
         private void BtnNum_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
+            Button btn = (Button) sender;
             //txt.Text += btn.Text;
 
             if (strCtlName.Equals("txtPay1"))
@@ -359,8 +396,9 @@ namespace SuperPOS.UI.TakeAway
             }
         }
 
-
         #endregion
+
+        #region 折扣Discount
 
         private void btnP_Click(object sender, EventArgs e)
         {
@@ -371,6 +409,10 @@ namespace SuperPOS.UI.TakeAway
                 if (txtDiscount.Text.Contains("%")) return;
             }
         }
+
+        #endregion
+
+        #region 数字小键盘 Del
 
         private void btnD_Click(object sender, EventArgs e)
         {
@@ -423,6 +465,8 @@ namespace SuperPOS.UI.TakeAway
             }
         }
 
+        #endregion
+
         private void txtPay1_TextChanged(object sender, EventArgs e)
         {
             GetPayType();
@@ -454,7 +498,7 @@ namespace SuperPOS.UI.TakeAway
                     }
                     else
                     {
-                        lblSurcharge1.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay1).ToString();
+                        lblSurcharge1.Text = d2 > 0 ? d2.ToString() : ((d3/100) * Pay1).ToString();
                     }
                 }
                 catch (Exception)
@@ -479,7 +523,7 @@ namespace SuperPOS.UI.TakeAway
 
             //获得Delivery付款，默认为0
             dDelivery = GetDelivery();
-
+            
             //Surcharge附加费
             dSurChargeTotal = GetSurCharge();
 
@@ -512,6 +556,7 @@ namespace SuperPOS.UI.TakeAway
         {
             return 0.00m;
         }
+
         #endregion
 
         #region 获得折扣信息
@@ -527,8 +572,8 @@ namespace SuperPOS.UI.TakeAway
                     string strDis = txtDiscount.Text;
                     if (string.IsNullOrEmpty(txtDiscount.Text)) strDis = "0.00";
                     //百分比折扣
-                    decimal disDetail = (Convert.ToDecimal(strDis.Substring(0, strDis.Length - 1))) / 100;
-                    dis = dTotal * disDetail;
+                    decimal disDetail = (Convert.ToDecimal(strDis.Substring(0, strDis.Length - 1)))/100;
+                    dis = dTotal*disDetail;
                 }
                 catch (Exception)
                 {
@@ -634,14 +679,13 @@ namespace SuperPOS.UI.TakeAway
             }
             catch (Exception)
             {
-
+                
                 //throw;
             }
 
 
             return s + s1 + s2 + s3;
         }
-
         #endregion
 
         private void txtDiscount_TextChanged(object sender, EventArgs e)
@@ -660,27 +704,27 @@ namespace SuperPOS.UI.TakeAway
 
         private void txtSurcharge_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8 && e.KeyChar != '.') e.Handled = true;
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char) 8 && e.KeyChar != '.') e.Handled = true;
         }
 
         private void txtTendered_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8 && e.KeyChar != '.') e.Handled = true;
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char) 8 && e.KeyChar != '.') e.Handled = true;
         }
 
         private void txtPay1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8 && e.KeyChar != '.') e.Handled = true;
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char) 8 && e.KeyChar != '.') e.Handled = true;
         }
 
         private void txtPay2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8 && e.KeyChar != '.') e.Handled = true;
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char) 8 && e.KeyChar != '.') e.Handled = true;
         }
 
         private void txtPay3_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8 && e.KeyChar != '.') e.Handled = true;
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char) 8 && e.KeyChar != '.') e.Handled = true;
         }
 
         private void txtPay2_TextChanged(object sender, EventArgs e)
@@ -800,7 +844,7 @@ namespace SuperPOS.UI.TakeAway
                 }
 
                 taPaymentInfo.DriverName = strDriverName;
-
+                
                 if (lblSCharge[0].Visible)
                 {
                     taPaymentInfo.PayType1 = txtPay[0].Text;
@@ -839,6 +883,12 @@ namespace SuperPOS.UI.TakeAway
 
                 _control.UpdateEntity(taPaymentInfo);
             }
+        }
+
+        private void BtnDriver_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button) sender;
+            strDriverName = btn.Text;
         }
 
         private void txtSurcharge_TextChanged(object sender, EventArgs e)
