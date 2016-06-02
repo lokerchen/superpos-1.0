@@ -1099,5 +1099,10 @@ namespace SuperPOS.UI.TakeAway
             if (i == 1) SetShowFreeItem(txtTotalPrice.Text);
         }
         #endregion
+
+        private void dgvMenuItem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

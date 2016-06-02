@@ -68,6 +68,31 @@ namespace SuperPOS.UI.TakeAway
             dgvCust.Columns[11].Visible = false;
             dgvCust.Columns[12].HeaderText = @"Black Listed";
             dgvCust.Columns[13].Visible = false;
+
+            if (!string.IsNullOrEmpty(sCallID))
+            {
+                new OnLoadSystemCommonData().GetTACust();
+
+                if (CommonData.TaCustList.Any(s => s.Phone1.Equals(sCallID)))
+                {
+                    var taCustInfo = CommonData.TaCustList.FirstOrDefault(s => s.Phone1.Equals(sCallID));
+                    if (taCustInfo != null)
+                    {
+                        txtPhone.Text = taCustInfo.Phone1;
+                        txtName.Text = taCustInfo.Name;
+                        txtHouseNo.Text = taCustInfo.HouseNo;
+                        txtAddress.Text = taCustInfo.Address1;
+                        txtPostcode.Text = taCustInfo.Postcode1;
+                        txtDistance.Text = taCustInfo.Distance;
+                        txtPCZone.Text = taCustInfo.PcZone;
+                        txtDelCharge.Text = taCustInfo.DelCharge;
+                        txtReadyTime.Text = taCustInfo.ReadyTime;
+                        txtIntNotes.Text = taCustInfo.IntNotes;
+                        txtNotesOnBill.Text = taCustInfo.NotesOnBill;
+                        chkBlackListed.Checked = taCustInfo.IsBlackListed.Equals("Y");
+                    }
+                }
+            }
         }
 
         private void dgvCust_SelectionChanged(object sender, EventArgs e)
