@@ -175,6 +175,7 @@
             this.dgvMenuItem.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMenuItem.Size = new System.Drawing.Size(345, 400);
             this.dgvMenuItem.TabIndex = 3;
+            this.dgvMenuItem.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenuItem_CellDoubleClick);
             // 
             // txtTotalCount
             // 
