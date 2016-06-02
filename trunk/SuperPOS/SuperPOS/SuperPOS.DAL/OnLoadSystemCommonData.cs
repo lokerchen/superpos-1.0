@@ -72,5 +72,7 @@ namespace SuperPOS.DAL
         public void GetTADriverSetUp() { CommonData.TaDriverSetUpList = _control.SelectAll<TADriverSetUpInfo>(); }
 
         public void GetTAPaymentList() { CommonData.TAPaymentList = _control.SelectAll<TAPaymentInfo>(); }
+
+        public void GetTAFreeFoodItemsList() { CommonData.TAFreeFoodItems = _control.SelectAll<TAFreeFoodItemsInfo>(); }
     }
 }

@@ -81,6 +81,8 @@ namespace SuperPOS.DAL
             onLoad.GetTADriverSetUp();
             //TA Payment
             onLoad.GetTAPaymentList();
+            //Free Food Items
+            onLoad.GetTAFreeFoodItemsList();
         }
         #endregion
 
