@@ -57,6 +57,9 @@ namespace SuperPOS.UI.TakeAway
         //存储当前OrderType按钮
         private Button btnOrderType = new Button();
 
+        //是否已赠送Free Item
+        private bool isSentFreeItem = false;
+
         #endregion
 
         public FrmTAMain()
@@ -281,12 +284,15 @@ namespace SuperPOS.UI.TakeAway
                     //清空当前Dgv
                     ClearDgvData();
                     dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
-                    txtTotalCount.Text = GetDgvItemCount().ToString();
-                    txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+                    SetTotalCountAndPrice(1);
+
+                    //Free Item状态
+                    isSentFreeItem = false;
                 }
             }
             else
             {
+                isSentFreeItem = false;
                 Hide();
             }
             //Hide();
@@ -355,8 +361,7 @@ namespace SuperPOS.UI.TakeAway
                 dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
             }
 
-            txtTotalCount.Text = GetDgvItemCount().ToString();
-            txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+            SetTotalCountAndPrice(1);
         }
 
         #region 语言切换
@@ -448,8 +453,7 @@ namespace SuperPOS.UI.TakeAway
 
                 SetDgvData();
 
-                txtTotalCount.Text = GetDgvItemCount().ToString();
-                txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+                SetTotalCountAndPrice(1);
             }
             ////启动秒表
             //timerMain.Enabled = true;
@@ -511,11 +515,11 @@ namespace SuperPOS.UI.TakeAway
                     ? 0
                     : Convert.ToDecimal(dgvMenuItem.Rows[i].Cells[3].Value.ToString());
             }
-
+            
             return sumItem;
         }
         #endregion
-
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (dgvMenuItem.RowCount == 0) return;
@@ -564,8 +568,7 @@ namespace SuperPOS.UI.TakeAway
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
 
-            txtTotalCount.Text = GetDgvItemCount().ToString();
-            txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+            SetTotalCountAndPrice(1);
         }
 
         private void btnReduce_Click(object sender, EventArgs e)
@@ -624,8 +627,7 @@ namespace SuperPOS.UI.TakeAway
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
 
-            txtTotalCount.Text = GetDgvItemCount().ToString();
-            txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+            SetTotalCountAndPrice(1);
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -658,8 +660,7 @@ namespace SuperPOS.UI.TakeAway
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
 
-            txtTotalCount.Text = GetDgvItemCount().ToString();
-            txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+            SetTotalCountAndPrice(1);
         }
 
         private void timerMain_Tick(object sender, EventArgs e)
@@ -932,14 +933,13 @@ namespace SuperPOS.UI.TakeAway
                 if (!string.IsNullOrEmpty(sDishCode))
                 {
                     TAOrderItemInfo taOrderItemInfo = new TAOrderItemInfo();
-                    taOrderItemInfo = AddSingleOrderItem(sDishCode, sQty);
+                    taOrderItemInfo = AddSingleOrderItem(sDishCode, sQty, false);
                     if (taOrderItemInfo != null)
                     {
                         CommonData.TaOrderItemList.Add(taOrderItemInfo);
                         dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
 
-                        txtTotalCount.Text = GetDgvItemCount().ToString();
-                        txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+                        SetTotalCountAndPrice(1);
                     }
                 }
             }
@@ -947,7 +947,7 @@ namespace SuperPOS.UI.TakeAway
 
         #region 插入单个OrderItem
 
-        private TAOrderItemInfo AddSingleOrderItem(string DCode, string sQty)
+        private TAOrderItemInfo AddSingleOrderItem(string DCode, string sQty, bool isSentFree)
         {
             TAOrderItemInfo taOrderItemInfo = new TAOrderItemInfo();
             taOrderItemInfo.SystemKey = Guid.NewGuid();
@@ -963,9 +963,9 @@ namespace SuperPOS.UI.TakeAway
                 taOrderItemInfo.CheckCode = ChkNum;
                 taOrderItemInfo.ItemCode = taMiInfo.DishCode;
                 taOrderItemInfo.ItemDishName = taMiInfo.EnglishName;
-                taOrderItemInfo.ItemPrice = taMiInfo.wRegular;
+                taOrderItemInfo.ItemPrice = isSentFree ? "0.00" : taMiInfo.wRegular;
                 taOrderItemInfo.ItemQty = sQty;
-                taOrderItemInfo.ItemTotalPrice = taMiInfo.wRegular;
+                taOrderItemInfo.ItemTotalPrice = isSentFree ? "0.00" : taMiInfo.wRegular;
                 taOrderItemInfo.ItemType = "1";
                 taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
                 taOrderItemInfo.OrderType = ORDER_TYPE;
@@ -980,5 +980,63 @@ namespace SuperPOS.UI.TakeAway
         {
             btnKeyPad_Click(sender , e);
         }
+
+        #region 判断是否达到FreeItem条件
+
+        private void SetShowFreeItem(string strTotalPrice)
+        {
+            decimal sumItem = Convert.ToDecimal(strTotalPrice);
+            //判断是否达到FreeItem条件
+            new OnLoadSystemCommonData().GetTAFreeFoodItemsList();
+            decimal dTotal = 0.00m;
+            if (CommonData.TAFreeFoodItems.Any() && !isSentFreeItem)
+            {
+                try
+                {
+                    decimal dFreeAmout = Convert.ToDecimal(CommonData.TAFreeFoodItems.FirstOrDefault().FreeAmount);
+
+                    if (sumItem >= dFreeAmout)
+                    {
+                        FrmTAFreeItem frmTaFreeItem = new FrmTAFreeItem();
+                        if (frmTaFreeItem.ShowDialog() == DialogResult.OK)
+                        {
+                            string sDishCode = frmTaFreeItem.DishCode;
+
+                            if (!string.IsNullOrEmpty(sDishCode))
+                            {
+                                TAOrderItemInfo taOrderItemInfo = new TAOrderItemInfo();
+                                taOrderItemInfo = AddSingleOrderItem(sDishCode, "1", true);
+                                if (taOrderItemInfo != null)
+                                {
+                                    CommonData.TaOrderItemList.Add(taOrderItemInfo);
+                                    dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+
+                                    SetTotalCountAndPrice(0);
+
+                                    isSentFreeItem = true;
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    //throw; 
+                }
+            }
+        }
+
+        #endregion
+
+        #region 计算总数量和总价格
+
+        private void SetTotalCountAndPrice(int i)
+        {
+            txtTotalCount.Text = GetDgvItemCount().ToString();
+            txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+
+            if (i == 1) SetShowFreeItem(txtTotalPrice.Text);
+        }
+        #endregion
     }
 }
