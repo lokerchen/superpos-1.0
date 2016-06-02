@@ -271,7 +271,20 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Hide();
+            if (dgvMenuItem.Rows.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to cancel the order?", "Cancel Order", MessageBoxButtons.OKCancel);
+
+                if (dr == DialogResult.OK)
+                {
+                    //清空当前Dgv
+                    ClearDgvData();
+                    dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                    txtTotalCount.Text = GetDgvItemCount().ToString();
+                    txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
+                }
+            }
+            //Hide();
         }
 
         private void btnMIRight_Click(object sender, EventArgs e)
