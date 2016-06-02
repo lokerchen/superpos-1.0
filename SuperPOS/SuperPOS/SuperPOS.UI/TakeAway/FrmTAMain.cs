@@ -970,5 +970,10 @@ namespace SuperPOS.UI.TakeAway
             else return null;
         }
         #endregion
+
+        private void txtDishCode_Click(object sender, EventArgs e)
+        {
+            btnKeyPad_Click(sender , e);
+        }
     }
 }

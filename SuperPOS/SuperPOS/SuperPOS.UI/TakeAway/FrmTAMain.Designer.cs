@@ -221,6 +221,7 @@
             this.txtDishCode.Size = new System.Drawing.Size(43, 26);
             this.txtDishCode.TabIndex = 7;
             this.txtDishCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtDishCode.Click += new System.EventHandler(this.txtDishCode_Click);
             // 
             // btnUp
             // 
