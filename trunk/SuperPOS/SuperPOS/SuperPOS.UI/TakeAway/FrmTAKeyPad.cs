@@ -52,6 +52,7 @@ namespace SuperPOS.UI.TakeAway
 
         private void FrmTAKeyPad_Load(object sender, EventArgs e)
         {
+            txtQty.Text = "X1";
             #region 控件数组赋值
             btnNum[0] = btnN1;
             btnNum[1] = btnN2;
