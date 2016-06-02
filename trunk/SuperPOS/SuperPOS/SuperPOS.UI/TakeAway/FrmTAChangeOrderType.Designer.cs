@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnShop = new System.Windows.Forms.Button();
-            this.btnDelivery = new System.Windows.Forms.Button();
             this.btnCollection = new System.Windows.Forms.Button();
+            this.btnDelivery = new System.Windows.Forms.Button();
+            this.btnShop = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,18 +48,18 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Change order type";
             // 
-            // btnShop
+            // btnCollection
             // 
-            this.btnShop.BackColor = System.Drawing.Color.Green;
-            this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnShop.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnShop.Location = new System.Drawing.Point(7, 23);
-            this.btnShop.Name = "btnShop";
-            this.btnShop.Size = new System.Drawing.Size(110, 60);
-            this.btnShop.TabIndex = 0;
-            this.btnShop.Text = "Shop";
-            this.btnShop.UseVisualStyleBackColor = false;
-            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
+            this.btnCollection.BackColor = System.Drawing.Color.Lime;
+            this.btnCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCollection.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCollection.Location = new System.Drawing.Point(239, 22);
+            this.btnCollection.Name = "btnCollection";
+            this.btnCollection.Size = new System.Drawing.Size(110, 60);
+            this.btnCollection.TabIndex = 2;
+            this.btnCollection.Text = "Collection";
+            this.btnCollection.UseVisualStyleBackColor = false;
+            this.btnCollection.Click += new System.EventHandler(this.btnCollection_Click);
             // 
             // btnDelivery
             // 
@@ -74,18 +74,18 @@
             this.btnDelivery.UseVisualStyleBackColor = false;
             this.btnDelivery.Click += new System.EventHandler(this.btnDelivery_Click);
             // 
-            // btnCollection
+            // btnShop
             // 
-            this.btnCollection.BackColor = System.Drawing.Color.Lime;
-            this.btnCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCollection.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCollection.Location = new System.Drawing.Point(239, 22);
-            this.btnCollection.Name = "btnCollection";
-            this.btnCollection.Size = new System.Drawing.Size(110, 60);
-            this.btnCollection.TabIndex = 2;
-            this.btnCollection.Text = "Collection";
-            this.btnCollection.UseVisualStyleBackColor = false;
-            this.btnCollection.Click += new System.EventHandler(this.btnCollection_Click);
+            this.btnShop.BackColor = System.Drawing.Color.Lime;
+            this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShop.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnShop.Location = new System.Drawing.Point(7, 23);
+            this.btnShop.Name = "btnShop";
+            this.btnShop.Size = new System.Drawing.Size(110, 60);
+            this.btnShop.TabIndex = 0;
+            this.btnShop.Text = "Shop";
+            this.btnShop.UseVisualStyleBackColor = false;
+            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
             // 
             // FrmTAChangeOrderType
             // 
