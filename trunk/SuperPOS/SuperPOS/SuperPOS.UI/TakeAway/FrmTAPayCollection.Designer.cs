@@ -1,6 +1,6 @@
 ﻿namespace SuperPOS.UI.TakeAway
 {
-    partial class FrmTAPay
+    partial class FrmTAPayCollection
     {
         /// <summary>
         /// Required designer variable.
