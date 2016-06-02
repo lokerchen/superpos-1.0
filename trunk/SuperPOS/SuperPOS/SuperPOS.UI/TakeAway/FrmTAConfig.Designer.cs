@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpTAConfig = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -388,14 +388,14 @@
             // 
             this.dgvTAPayType.AllowUserToDeleteRows = false;
             this.dgvTAPayType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTAPayType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTAPayType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgvTAPayType.Location = new System.Drawing.Point(9, 24);
             this.dgvTAPayType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvTAPayType.MultiSelect = false;
@@ -603,14 +603,14 @@
             this.dgvDSDist.Location = new System.Drawing.Point(9, 24);
             this.dgvDSDist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvDSDist.Name = "dgvDSDist";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSDist.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSDist.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvDSDist.RowTemplate.Height = 23;
             this.dgvDSDist.Size = new System.Drawing.Size(516, 127);
             this.dgvDSDist.TabIndex = 0;
@@ -938,6 +938,7 @@
             this.txtTotalAmountThreshold.Name = "txtTotalAmountThreshold";
             this.txtTotalAmountThreshold.Size = new System.Drawing.Size(100, 23);
             this.txtTotalAmountThreshold.TabIndex = 2;
+            this.txtTotalAmountThreshold.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotalAmountThreshold_KeyPress);
             // 
             // txtFreeItem1
             // 
@@ -945,6 +946,7 @@
             this.txtFreeItem1.Name = "txtFreeItem1";
             this.txtFreeItem1.Size = new System.Drawing.Size(53, 23);
             this.txtFreeItem1.TabIndex = 3;
+            this.txtFreeItem1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem1_KeyPress);
             // 
             // txtFreeItem2
             // 
@@ -952,6 +954,7 @@
             this.txtFreeItem2.Name = "txtFreeItem2";
             this.txtFreeItem2.Size = new System.Drawing.Size(53, 23);
             this.txtFreeItem2.TabIndex = 4;
+            this.txtFreeItem2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem2_KeyPress);
             // 
             // txtFreeItem3
             // 
@@ -959,6 +962,7 @@
             this.txtFreeItem3.Name = "txtFreeItem3";
             this.txtFreeItem3.Size = new System.Drawing.Size(53, 23);
             this.txtFreeItem3.TabIndex = 5;
+            this.txtFreeItem3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem3_KeyPress);
             // 
             // txtFreeItem4
             // 
@@ -966,6 +970,7 @@
             this.txtFreeItem4.Name = "txtFreeItem4";
             this.txtFreeItem4.Size = new System.Drawing.Size(53, 23);
             this.txtFreeItem4.TabIndex = 6;
+            this.txtFreeItem4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem4_KeyPress);
             // 
             // btnFFIExit
             // 

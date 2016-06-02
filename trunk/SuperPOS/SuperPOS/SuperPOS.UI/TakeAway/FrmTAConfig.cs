@@ -447,5 +447,30 @@ namespace SuperPOS.UI.TakeAway
         {
             Hide();
         }
+
+        private void txtFreeItem1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8) e.Handled = true;
+        }
+
+        private void txtTotalAmountThreshold_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8 && e.KeyChar != '.') e.Handled = true;
+        }
+
+        private void txtFreeItem2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8) e.Handled = true;
+        }
+
+        private void txtFreeItem3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8) e.Handled = true;
+        }
+
+        private void txtFreeItem4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8) e.Handled = true;
+        }
     }
 }
