@@ -273,7 +273,8 @@ namespace SuperPOS.UI.TakeAway
         {
             if (dgvMenuItem.Rows.Count > 0)
             {
-                DialogResult dr = MessageBox.Show("Are you sure you want to cancel the order?", "Cancel Order", MessageBoxButtons.OKCancel);
+                DialogResult dr = MessageBox.Show("Are you sure you want to cancel the order?", "Cancel Order",
+                    MessageBoxButtons.OKCancel);
 
                 if (dr == DialogResult.OK)
                 {
@@ -283,6 +284,10 @@ namespace SuperPOS.UI.TakeAway
                     txtTotalCount.Text = GetDgvItemCount().ToString();
                     txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
                 }
+            }
+            else
+            {
+                Hide();
             }
             //Hide();
         }
