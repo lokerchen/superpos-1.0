@@ -205,11 +205,11 @@
     <Compile Include="TakeAway\FrmTAOrderListView.Designer.cs">
       <DependentUpon>FrmTAOrderListView.cs</DependentUpon>
     </Compile>
-    <Compile Include="TakeAway\FrmTAPay.cs">
+    <Compile Include="TakeAway\FrmTAPayCollection.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TakeAway\FrmTAPay.Designer.cs">
-      <DependentUpon>FrmTAPay.cs</DependentUpon>
+    <Compile Include="TakeAway\FrmTAPayCollection.Designer.cs">
+      <DependentUpon>FrmTAPayCollection.cs</DependentUpon>
     </Compile>
     <Compile Include="TakeAway\FrmTASearchMeal.cs">
       <SubType>Form</SubType>
@@ -357,8 +357,8 @@
     <EmbeddedResource Include="TakeAway\FrmTAOrderListView.resx">
       <DependentUpon>FrmTAOrderListView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TakeAway\FrmTAPay.resx">
-      <DependentUpon>FrmTAPay.cs</DependentUpon>
+    <EmbeddedResource Include="TakeAway\FrmTAPayCollection.resx">
+      <DependentUpon>FrmTAPayCollection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTASearchMeal.resx">
       <DependentUpon>FrmTASearchMeal.cs</DependentUpon>

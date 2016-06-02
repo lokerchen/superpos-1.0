@@ -12,7 +12,7 @@ using SuperPOS.Domain.Entities;
 
 namespace SuperPOS.UI.TakeAway
 {
-    public partial class FrmTAPay : Form
+    public partial class FrmTAPayCollection : Form
     {
         //订单编号
         private string chkNum = "";
@@ -56,12 +56,12 @@ namespace SuperPOS.UI.TakeAway
             set { ValueString = value; }
         }
 
-        public FrmTAPay()
+        public FrmTAPayCollection()
         {
             InitializeComponent();
         }
 
-        public FrmTAPay(string strChkNum, string strCustNum)
+        public FrmTAPayCollection(string strChkNum, string strCustNum)
         {
             InitializeComponent();
             chkNum = strChkNum;

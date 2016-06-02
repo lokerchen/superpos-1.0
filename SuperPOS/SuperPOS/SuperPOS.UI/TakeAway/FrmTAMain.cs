@@ -715,7 +715,7 @@ namespace SuperPOS.UI.TakeAway
             if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_DELIVERY))
             {
                 //Delivery
-                FrmTAPay frmTaPay = new FrmTAPay(ChkNum, strCallID);
+                FrmTAPayCollection frmTaPay = new FrmTAPayCollection(ChkNum, strCallID);
                 //frmTaPay.ShowDialog();
                 if (frmTaPay.ShowDialog() == DialogResult.OK)
                 {
