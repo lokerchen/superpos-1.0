@@ -181,6 +181,12 @@
     <Compile Include="TakeAway\FrmTADriverSetup.Designer.cs">
       <DependentUpon>FrmTADriverSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="TakeAway\FrmTAFreeItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAFreeItem.Designer.cs">
+      <DependentUpon>FrmTAFreeItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeAway\FrmTAKeyPad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTADriverSetup.resx">
       <DependentUpon>FrmTADriverSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTAFreeItem.resx">
+      <DependentUpon>FrmTAFreeItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAKeyPad.resx">
       <DependentUpon>FrmTAKeyPad.cs</DependentUpon>
