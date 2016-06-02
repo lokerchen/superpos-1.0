@@ -850,10 +850,17 @@ namespace SuperPOS.UI.TakeAway
         {
             List<TAOrderItemInfo> lstTmp = new List<TAOrderItemInfo>();
             CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ForEach(i => lstTmp.Add(i));
-
+            
             foreach (var taOrderItemInfo in lstTmp)
             {
                 CommonData.TaOrderItemList.Remove(taOrderItemInfo);
+
+                new OnLoadSystemCommonData().GetTAPaymentList();
+                if (CommonData.TAPaymentList.Any(s => s.ChkNum.Equals(taOrderItemInfo.CheckCode)))
+                {
+                    TAPaymentInfo taPayment = CommonData.TAPaymentList.FirstOrDefault(s => s.ChkNum.Equals(taOrderItemInfo.CheckCode));
+                    _control.DeleteEntity(taPayment);
+                }
             }
         }
         #endregion
