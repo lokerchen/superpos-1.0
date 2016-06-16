@@ -151,6 +151,8 @@
     <Compile Include="FrmSelectMenu.Designer.cs">
       <DependentUpon>FrmSelectMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Print\PrtCommon.cs" />
+    <Compile Include="Print\PrtStatic.cs" />
     <Compile Include="TakeAway\FrmCall.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -377,6 +379,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAPayShop.resx">
       <DependentUpon>FrmTAPayShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTAPrtSetup.resx">
+      <DependentUpon>FrmTAPrtSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTASearchMeal.resx">
       <DependentUpon>FrmTASearchMeal.cs</DependentUpon>

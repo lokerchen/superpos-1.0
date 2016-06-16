@@ -74,5 +74,7 @@ namespace SuperPOS.DAL
         public void GetTAPaymentList() { CommonData.TAPaymentList = _control.SelectAll<TAPaymentInfo>(); }
 
         public void GetTAFreeFoodItemsList() { CommonData.TAFreeFoodItems = _control.SelectAll<TAFreeFoodItemsInfo>(); }
+
+        public void GetTAPrtInfo() { CommonData.TAPrtInfos = _control.SelectAll<TAPrtInfo>(); }
     }
 }

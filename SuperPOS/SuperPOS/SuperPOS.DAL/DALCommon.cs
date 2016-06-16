@@ -83,6 +83,8 @@ namespace SuperPOS.DAL
             onLoad.GetTAPaymentList();
             //Free Food Items
             onLoad.GetTAFreeFoodItemsList();
+            //Print setup -> General -> Print Information
+            onLoad.GetTAPrtInfo();
         }
         #endregion
 
