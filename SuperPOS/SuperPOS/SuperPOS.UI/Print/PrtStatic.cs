@@ -24,6 +24,18 @@ namespace SuperPOS.UI.Print
         public static int PRT_LINE_SIZE_15 = 27;
 
         //20号字体每行最多可打印字符数
-        public static int PRT_LINE_SIZE_20 = 21;
+        public static int PRT_LINE_SIZE_20 = 20;
+
+        ////打印OrderItem详细列表时Code字符长度为3
+        //public static int PRT_OI_DETAIL_CODE = 3;
+
+        ////打印OrderItem详细列表时Code字符长度为3
+        //public static int PRT_OI_DETAIL_CODE = 3;
+
+        //公司名称
+        public static string PRT_COMP_NAME = "Powered by Milpo Technologies(萬保科技)";
+
+        //公司网址
+        public static string PRT_COMP_WEBSITE = "http://www.milpo.co.uk";
     }
 }
