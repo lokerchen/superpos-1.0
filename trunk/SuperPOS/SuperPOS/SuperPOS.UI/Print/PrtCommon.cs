@@ -165,7 +165,6 @@ namespace SuperPOS.UI.Print
 
             return sb;
         }
-
         #endregion
 
         public static StringBuilder GetHanZiTab(string sName)

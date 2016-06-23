@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -710,12 +711,21 @@ namespace SuperPOS.UI.TakeAway
 
             if (isNew) _control.AddEntity(taPaymentInfo);
 
+            //保存HashTable
+            Hashtable htPay = new Hashtable();
+            htPay["Staff"] = userInfo.UsrName;
+            htPay["ItemQty"] = txtTotalCount.Text;
+            htPay["SubTotal"] = txtTotalPrice.Text;
+            htPay["Total"] = txtTotalPrice.Text;
+            htPay["PayType"] = "CASH";
+            htPay["OrderNo"] = ChkNum;
+
             //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
             //frmTaPay.ShowDialog();
             if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_DELIVERY))
             {
                 //Delivery
-                FrmTAPayDelivery frmTaPay = new FrmTAPayDelivery(ChkNum, strCallID);
+                FrmTAPayDelivery frmTaPay = new FrmTAPayDelivery(ChkNum, strCallID, htPay);
                 //frmTaPay.ShowDialog();
                 if (frmTaPay.ShowDialog() == DialogResult.OK)
                 {
