@@ -152,6 +152,7 @@
       <DependentUpon>FrmSelectMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Print\PrtCommon.cs" />
+    <Compile Include="Print\PrtPrint.cs" />
     <Compile Include="Print\PrtStatic.cs" />
     <Compile Include="TakeAway\FrmCall.cs">
       <SubType>Form</SubType>
