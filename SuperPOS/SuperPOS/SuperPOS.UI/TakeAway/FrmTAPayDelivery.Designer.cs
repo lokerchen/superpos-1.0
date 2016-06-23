@@ -66,7 +66,7 @@
             this.btn0 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPrtBillOnly = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
@@ -383,7 +383,7 @@
             this.groupBox2.Controls.Add(this.btn0);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.btn3);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnPrtBillOnly);
             this.groupBox2.Controls.Add(this.btn2);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.btn1);
@@ -583,17 +583,18 @@
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnPrtBillOnly
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(474, 170);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 60);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Print Bill Only";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnPrtBillOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnPrtBillOnly.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrtBillOnly.ForeColor = System.Drawing.Color.White;
+            this.btnPrtBillOnly.Location = new System.Drawing.Point(474, 170);
+            this.btnPrtBillOnly.Name = "btnPrtBillOnly";
+            this.btnPrtBillOnly.Size = new System.Drawing.Size(100, 60);
+            this.btnPrtBillOnly.TabIndex = 4;
+            this.btnPrtBillOnly.Text = "Print Bill Only";
+            this.btnPrtBillOnly.UseVisualStyleBackColor = false;
+            this.btnPrtBillOnly.Click += new System.EventHandler(this.btnPrtBillOnly_Click);
             // 
             // btn2
             // 
@@ -1109,7 +1110,7 @@
             this.btnDriver6.Text = "Tommy";
             this.btnDriver6.UseVisualStyleBackColor = false;
             // 
-            // FrmTAPay
+            // FrmTAPayDelivery
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1131,7 +1132,7 @@
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrmTAPay";
+            this.Name = "FrmTAPayDelivery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTAPay";
             this.Load += new System.EventHandler(this.FrmTAPay_Load);
@@ -1169,7 +1170,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnPrtAll;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPrtBillOnly;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label10;

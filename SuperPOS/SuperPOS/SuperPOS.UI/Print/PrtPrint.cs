@@ -14,7 +14,10 @@ namespace SuperPOS.UI.Print
 {
     public class PrtPrint
     {
-        private List<string> textList;       //打印内容行
+        private static List<string> textList;       //打印内容行
+
+        //BILL双语中的行数
+        private static int PRT_BILL_SHUANGYU_ROW_COUNT;
 
         #region 根据内容进行分行
         /// <summary>
@@ -23,7 +26,7 @@ namespace SuperPOS.UI.Print
         /// <param name="linelen">每行字数</param>
         /// <param name="text">原文字行（段落）文字</param>
         /// <returns></returns>
-        private List<string> GetArr(int linelen, string text)
+        private static List<string> GetArr(int linelen, string text)
         {
             var list = new List<string>();
             int listcount = text.Length % linelen == 0 ? text.Length / linelen : (text.Length / linelen) + 1;
@@ -44,7 +47,7 @@ namespace SuperPOS.UI.Print
 
         #region 打印Bill-双语
 
-        public string GetPrtStrBillBilingual(List<TAOrderItemInfo> lstOI, Hashtable ht)
+        public static string GetPrtStrBillBilingual(List<TAOrderItemInfo> lstOI, Hashtable ht)
         {
             StringBuilder sb = new StringBuilder();
             string L = PrtCommon.GetSplit();
@@ -61,7 +64,7 @@ namespace SuperPOS.UI.Print
             sb.Append(Environment.NewLine);
 
             //餐厅地址
-            sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE - L2.Length)/2) + L2);
+            sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE - L2.Length) / 2) + L2);
             sb.Append(Environment.NewLine);
 
             //Tel
@@ -84,9 +87,11 @@ namespace SuperPOS.UI.Print
             sb.Append(L);
             sb.Append(Environment.NewLine);
 
-            sb.Append(PrtCommon.GetSpace(6) + L6);
+            //sb.Append(PrtCommon.GetSpace(6) + L6);
+            sb.Append(L6);
             sb.Append(Environment.NewLine);
-            sb.Append(PrtCommon.GetSpace(6) + L7);
+            //sb.Append(PrtCommon.GetSpace(6) + L7);
+            sb.Append(L7);
             sb.Append(Environment.NewLine);
             sb.Append(L);
             sb.Append(Environment.NewLine);
@@ -94,9 +99,14 @@ namespace SuperPOS.UI.Print
             sb.Append("Code" + PrtCommon.GetSpace(2) + "Qty" + PrtCommon.GetSpace(2) + "Name" + PrtCommon.GetSpace(17) + "Price" + PrtCommon.GetSpace(2));
             sb.Append(Environment.NewLine);
 
+            PRT_BILL_SHUANGYU_ROW_COUNT = lstOI.Count * 2;
+
             foreach (var taOrderItemInfo in lstOI)
             {
-                sb.Append(PrtCommon.GetTab(taOrderItemInfo.ItemCode, taOrderItemInfo.ItemQty,
+                //涉及到多行需要计算行数
+                //sb.Append(PrtCommon.GetTab(taOrderItemInfo.ItemCode, taOrderItemInfo.ItemQty,
+                //    taOrderItemInfo.ItemDishName, taOrderItemInfo.ItemTotalPrice));
+                sb.Append(GetTab(taOrderItemInfo.ItemCode, taOrderItemInfo.ItemQty,
                     taOrderItemInfo.ItemDishName, taOrderItemInfo.ItemTotalPrice));
                 sb.Append(Environment.NewLine);
                 var CNameList = CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(taOrderItemInfo.ItemCode));
@@ -136,7 +146,7 @@ namespace SuperPOS.UI.Print
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Prt_Content_BillBilingual(object sender, PrintPageEventArgs e)
+        private static void Prt_Content_BillBilingual(object sender, PrintPageEventArgs e)
         {
             var mark = 0;
             StringFormat sf = new StringFormat();
@@ -146,27 +156,27 @@ namespace SuperPOS.UI.Print
                 //e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), fontSize), System.Drawing.Brushes.Black, 0, mark * lineSize);
                 if (mark == 0)
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), Brushes.Black, 0, mark * 20);
                 }
                 else if (mark == 1)
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 10), Brushes.Black, 0, (mark + 1) * 20);
                 }
                 else if (mark == 5)
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), Brushes.Black, 0, (mark + 1) * 20);
                 }
                 else if (mark == textList.Count - 4)
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
                 }
                 else if (mark == textList.Count - 6)
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
                 }
                 else 
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 10), Brushes.Black, 0, (mark + 1) * 20);
                 }
 
                 mark++;
@@ -175,7 +185,7 @@ namespace SuperPOS.UI.Print
         #endregion
 
         #region 打印Bill主体打印事件
-        public void PrtBillBilingual(List<TAOrderItemInfo> lstOI, Hashtable ht)
+        public static void PrtBillBilingual(List<TAOrderItemInfo> lstOI, Hashtable ht)
         {
             if (string.IsNullOrWhiteSpace(GetPrtStrBillBilingual(lstOI, ht)))
             {
@@ -207,7 +217,8 @@ namespace SuperPOS.UI.Print
             pd.PrintPage += new PrintPageEventHandler(Prt_Content_BillBilingual);
             //纸张设置默认
             //PaperSize pageSize = new PaperSize("自定义纸张", fontSize * lineSize, (textList.Count * (int)(58 / 25.4 * 100)));
-            PaperSize pageSize = new PaperSize("自定义纸张", (textList.Count * (int)(58 / 25.4 * 100)), 600);
+            //PaperSize pageSize = new PaperSize("自定义纸张", (textList.Count * (int)(58 / 25.4 * 100)), 455);
+            PaperSize pageSize = new PaperSize("自定义纸张", (textList.Count * (int)(58 / 25.4 * 100)), PRT_BILL_SHUANGYU_ROW_COUNT * 20 + 415);
             pd.DefaultPageSettings.PaperSize = pageSize;
             //pd.PrinterSettings.PrinterName
             try
@@ -752,6 +763,31 @@ namespace SuperPOS.UI.Print
         public void PrtDrawStr(PrintPageEventArgs e, string strItem, int intFontSize, float fRow)
         {
             e.Graphics.DrawString(strItem, new Font(new FontFamily("宋体"), intFontSize), System.Drawing.Brushes.Black, 0, fRow);
+        }
+
+        public static StringBuilder GetTab(string sCode, string sQty, string sName, string sPrice)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append(sCode + PrtCommon.GetSpace(6 - sCode.Length) + sQty + PrtCommon.GetSpace(5 - sQty.Length));
+            if (sName.Length > 21)
+            {
+                sb.Append(sName.Substring(0, 20));
+                sb.Append(PrtCommon.GetSpace(1) + sPrice);
+                sb.Append(Environment.NewLine);
+                sb.Append(PrtCommon.GetSpace(11) + sName.Substring(20, sName.Length - 21));
+                sb.Append(Environment.NewLine);
+
+                //字符超过21，有换行，所以+1
+                PRT_BILL_SHUANGYU_ROW_COUNT += 1;
+            }
+            else
+            {
+                sb.Append(sName + PrtCommon.GetSpace(21 - sName.Length));
+                sb.Append(sPrice);
+            }
+
+            return sb;
         }
     }
 }

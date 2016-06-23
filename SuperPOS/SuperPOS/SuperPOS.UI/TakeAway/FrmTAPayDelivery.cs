@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,7 @@ using System.Windows.Forms;
 using SuperPOS.Common;
 using SuperPOS.DAL;
 using SuperPOS.Domain.Entities;
+using SuperPOS.UI.Print;
 
 namespace SuperPOS.UI.TakeAway
 {
@@ -50,6 +52,8 @@ namespace SuperPOS.UI.TakeAway
         private bool IsPaid = false;
 
         private readonly EntityControl _control = new EntityControl();
+
+        private Hashtable htPay = new Hashtable();
         public bool ValueString
         {
             get { return IsPaid; }
@@ -61,11 +65,12 @@ namespace SuperPOS.UI.TakeAway
             InitializeComponent();
         }
 
-        public FrmTAPayDelivery(string strChkNum, string strCustNum)
+        public FrmTAPayDelivery(string strChkNum, string strCustNum, Hashtable htDetail)
         {
             InitializeComponent();
             chkNum = strChkNum;
             CustNum = strCustNum;
+            htPay = htDetail;
         }
 
         #region 退出
@@ -894,6 +899,17 @@ namespace SuperPOS.UI.TakeAway
         private void txtSurcharge_TextChanged(object sender, EventArgs e)
         {
             GetAmount();
+        }
+
+        private void btnPrtBillOnly_Click(object sender, EventArgs e)
+        {
+            htPay["Tendered"] = txtTendered.Text;
+            htPay["Change"] = txtChange.Text;
+
+            new OnLoadSystemCommonData().GetTAOrderItem();
+            var lstOI = CommonData.TaOrderItemList.Where(s => s.CheckCode.Equals(chkNum)).ToList();
+            //List<TAOrderItemInfo> lstOI = new List<TAOrderItemInfo>();
+            PrtPrint.PrtBillBilingual(lstOI, htPay);
         }
     }
 }

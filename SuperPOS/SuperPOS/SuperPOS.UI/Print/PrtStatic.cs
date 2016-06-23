@@ -37,5 +37,11 @@ namespace SuperPOS.UI.Print
 
         //公司网址
         public static string PRT_COMP_WEBSITE = "http://www.milpo.co.uk";
+
+        //不打印OrderItem的基准高度
+        public static int PRT_PAPER_HIGHT = 415;
+
+        //每一行OrderItem的高度
+        public static int PRT_PAPER_ROWHIGHT = 20;
     }
 }
