@@ -127,6 +127,13 @@ namespace SuperPOS.UI.Print
             sb.Append(Environment.NewLine);
             sb.Append(L);
             sb.Append(Environment.NewLine);
+
+            sb.Append(PrtCommon.GetText("Tendered:", (string)ht["Tendered"]));
+            sb.Append(Environment.NewLine);
+            sb.Append(PrtCommon.GetText("Change:", (string)ht["Change"]));
+            sb.Append(Environment.NewLine);
+            sb.Append(L);
+
             sb.Append(PrtCommon.GetPay((string)ht["PayType"]));
             sb.Append(Environment.NewLine);
             sb.Append(L);
@@ -174,6 +181,14 @@ namespace SuperPOS.UI.Print
                 {
                     e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
                 }
+                else if (mark == textList.Count - 7)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
+                }
+                else if (mark == textList.Count - 9)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
+                }
                 else 
                 {
                     e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 10), Brushes.Black, 0, (mark + 1) * 20);
@@ -218,7 +233,7 @@ namespace SuperPOS.UI.Print
             //纸张设置默认
             //PaperSize pageSize = new PaperSize("自定义纸张", fontSize * lineSize, (textList.Count * (int)(58 / 25.4 * 100)));
             //PaperSize pageSize = new PaperSize("自定义纸张", (textList.Count * (int)(58 / 25.4 * 100)), 455);
-            PaperSize pageSize = new PaperSize("自定义纸张", (textList.Count * (int)(58 / 25.4 * 100)), PRT_BILL_SHUANGYU_ROW_COUNT * 20 + 415);
+            PaperSize pageSize = new PaperSize("自定义纸张", (textList.Count * (int)(58 / 25.4 * 100)), PRT_BILL_SHUANGYU_ROW_COUNT * 20 + 475);
             pd.DefaultPageSettings.PaperSize = pageSize;
             //pd.PrinterSettings.PrinterName
             try
