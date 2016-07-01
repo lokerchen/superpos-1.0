@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using SuperPOS.Common;
@@ -910,6 +911,89 @@ namespace SuperPOS.UI.TakeAway
             var lstOI = CommonData.TaOrderItemList.Where(s => s.CheckCode.Equals(chkNum)).ToList();
             //List<TAOrderItemInfo> lstOI = new List<TAOrderItemInfo>();
             PrtPrint.PrtBillBilingual(lstOI, htPay);
+        }
+
+        private void btnPrtAllReceipt_Click(object sender, EventArgs e)
+        {
+            htPay["Tendered"] = txtTendered.Text;
+            htPay["Change"] = txtChange.Text;
+
+            OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
+            onLoadSystemCommonData.GetTAOrderItem();
+            onLoadSystemCommonData.GetSysConfigList();
+            onLoadSystemCommonData.GetTAMenuItemList();
+
+            var lstOrderItem = CommonData.TaOrderItemList.Where(s => s.CheckCode.Equals(chkNum));
+            var lstOI = lstOrderItem.ToList();
+
+            #region VAT计算
+            if (CommonData.SysConfigList.Any())
+            {
+                //税率
+                htPay["Rate1"] = CommonData.SysConfigList.FirstOrDefault().VATPerct + "%";
+
+                var lstVAT = from o in lstOI
+                             join m in CommonData.TaMenuItemList on o.ItemCode equals m.DishCode
+                             where !string.IsNullOrEmpty(m.IsWithoutVAT) && m.IsWithoutVAT.Equals("Y")
+                             select new
+                             {
+                                 itemTotalPrice = o.ItemTotalPrice
+                             };
+
+                decimal dTotal = 0;
+                decimal dVat = 0;
+                if (lstVAT.Any())
+                {
+                    dTotal = lstVAT.ToList().Sum(vat => Convert.ToDecimal(vat.itemTotalPrice));
+                    //交税
+                    dVat = (Convert.ToDecimal(CommonData.SysConfigList.FirstOrDefault().VATPerct) / 100) * dTotal;
+                }
+
+                htPay["VAT-A"] = dVat.ToString();
+                //税前
+                htPay["Net1"] = (dTotal - dVat).ToString();
+                //总价
+                htPay["Gross1"] = dTotal.ToString();
+                htPay["Rate2"] = "0.00%";
+                htPay["Net2"] = (Convert.ToDecimal(txtToPay.Text) - dTotal).ToString();
+                htPay["VAT-B"] = "0.00";
+                htPay["Gross2"] = (Convert.ToDecimal(txtToPay.Text) - dTotal).ToString();
+            }
+            else
+            {
+                htPay["Rate1"] = "0.00%";
+                htPay["Net1"] = "0.00";
+                htPay["VAT-A"] = "0.00";
+                htPay["Gross1"] = "0.00";
+                htPay["Rate2"] = "0.00%";
+                htPay["Net2"] = "0.00";
+                htPay["VAT-B"] = "0.00";
+                htPay["Gross2"] = "0.00";
+            }
+            #endregion
+
+
+            PrtPrint.PrtReceipt(lstOI, htPay);
+
+            PrtPrint.PrtBillBilingual(lstOI, htPay);
+        }
+
+        private void btnPrtKitOnly_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrtAll_Click(object sender, EventArgs e)
+        {
+            htPay["Tendered"] = txtTendered.Text;
+            htPay["Change"] = txtChange.Text;
+
+            new OnLoadSystemCommonData().GetTAOrderItem();
+            var lstOI = CommonData.TaOrderItemList.Where(s => s.CheckCode.Equals(chkNum)).ToList();
+            
+            PrtPrint.PrtBillBilingual(lstOI, htPay);
+
+            //打印厨房单
         }
     }
 }

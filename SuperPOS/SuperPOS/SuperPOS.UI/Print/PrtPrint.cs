@@ -420,7 +420,7 @@ namespace SuperPOS.UI.Print
 
 
         #region 打印Receipt
-        public string GetPrtStrReceipt(List<TAOrderItemInfo> lstOI, Hashtable ht)
+        public static string GetPrtStrReceipt(List<TAOrderItemInfo> lstOI, Hashtable ht)
         {
             StringBuilder sb = new StringBuilder();
             string L = PrtCommon.GetSplit();
@@ -428,9 +428,9 @@ namespace SuperPOS.UI.Print
             string L2 = PrtCommon.GetRestAddr();
             string L3 = PrtCommon.GetRestTel();
             string L4 = PrtCommon.GetRestVATNo();
-            string L5 = PrtCommon.GetPrtTime();
+            //string L5 = PrtCommon.GetPrtTime();
             string L6 = PrtCommon.GetPrtDateTime();
-            string L7 = (string)ht["Staff"];
+            string L7 = "Staff:" + (string)ht["Staff"] ;
 
             //餐厅名称
             sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE_20 - L1.Length) / 2) + L1);
@@ -452,17 +452,17 @@ namespace SuperPOS.UI.Print
             sb.Append(L);
             sb.Append(Environment.NewLine);
 
-            //时间
-            sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE_20 - L5.Length) / 2) + L5);
-            sb.Append(Environment.NewLine);
+            ////时间
+            //sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE_20 - L5.Length) / 2) + L5);
+            //sb.Append(Environment.NewLine);
 
-            //分隔行
-            sb.Append(L);
-            sb.Append(Environment.NewLine);
+            ////分隔行
+            //sb.Append(L);
+            //sb.Append(Environment.NewLine);
 
-            sb.Append(PrtCommon.GetSpace(6) + L6);
+            sb.Append(L6);
             sb.Append(Environment.NewLine);
-            sb.Append(PrtCommon.GetSpace(6) + L7);
+            sb.Append(L7);
             sb.Append(Environment.NewLine);
             sb.Append(L);
             sb.Append(Environment.NewLine);
@@ -496,7 +496,26 @@ namespace SuperPOS.UI.Print
             sb.Append(PrtCommon.GetPay((string)ht["PayType"]));
             sb.Append(Environment.NewLine);
             sb.Append(L);
+
+            sb.Append(PrtCommon.GetSpace(15) + "VAT SUMMARY");
             sb.Append(Environment.NewLine);
+            sb.Append("Rate" + PrtCommon.GetSpace(7) + "Net" + PrtCommon.GetSpace(7) + "VAT-A" + PrtCommon.GetSpace(7) + "Gross");
+            sb.Append(Environment.NewLine);
+            sb.Append((string)ht["Rate1"] + PrtCommon.GetSpace(11 - ((string)ht["Rate1"]).Length) 
+                       + (string)ht["Net1"] + PrtCommon.GetSpace(10 - ((string)ht["Net1"]).Length)
+                       + (string)ht["VAT-A"] + PrtCommon.GetSpace(12 - ((string)ht["VAT-A"]).Length)
+                       + (string)ht["Gross1"]);
+            sb.Append(Environment.NewLine);
+            sb.Append("Rate" + PrtCommon.GetSpace(7) + "Net" + PrtCommon.GetSpace(7) + "VAT-B" + PrtCommon.GetSpace(7) + "Gross");
+            sb.Append(Environment.NewLine);
+            sb.Append((string)ht["Rate2"] + PrtCommon.GetSpace(11 - ((string)ht["Rate2"]).Length)
+                       + (string)ht["Net2"] + PrtCommon.GetSpace(10 - ((string)ht["Net2"]).Length)
+                       + (string)ht["VAT-B"] + PrtCommon.GetSpace(12 - ((string)ht["VAT-B"]).Length)
+                       + (string)ht["Gross2"]);
+            sb.Append(Environment.NewLine);
+            sb.Append(L);
+            sb.Append(Environment.NewLine);
+
             sb.Append(PrtStatic.PRT_COMP_NAME);
             sb.Append(Environment.NewLine);
             sb.Append(PrtCommon.GetSpace(8) + PrtStatic.PRT_COMP_WEBSITE);
@@ -512,7 +531,7 @@ namespace SuperPOS.UI.Print
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Prt_Content_Receipt(object sender, PrintPageEventArgs e)
+        private static void Prt_Content_Receipt(object sender, PrintPageEventArgs e)
         {
             var mark = 0;
             StringFormat sf = new StringFormat();
@@ -521,35 +540,35 @@ namespace SuperPOS.UI.Print
             {
                 if (mark == 0)
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), Brushes.Black, 0, mark * 20);
                 }
-                else if (mark == 1)
+                //else if (mark == 1)
+                //{
+                //    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 10), System.Drawing.Brushes.Black, 0, (mark + 1) * 20);
+                //}
+                //else if (mark == 5)
+                //{
+                //    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, (mark + 1) * 20);
+                //}
+                else if (mark == textList.Count - 10)
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
                 }
-                else if (mark == 5)
+                else if (mark == textList.Count - 12)
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
                 }
-                else if (mark == textList.Count - 4)
+                else if (mark == textList.Count - 13)
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
                 }
-                else if (mark == textList.Count - 6)
+                else if (mark == textList.Count - 15)
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
-                }
-                else if (mark == textList.Count - 7)
-                {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
-                }
-                else if (mark == textList.Count - 9)
-                {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
                 }
                 else
                 {
-                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), System.Drawing.Brushes.Black, 0, mark * 20);
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 10), Brushes.Black, 0, (mark + 1) * 20);
                 }
 
                 mark++;
@@ -558,7 +577,7 @@ namespace SuperPOS.UI.Print
         #endregion
 
         #region 打印Receipt主体打印事件
-        public void PrtReceipt(List<TAOrderItemInfo> lstOI, Hashtable ht)
+        public static void PrtReceipt(List<TAOrderItemInfo> lstOI, Hashtable ht)
         {
             if (string.IsNullOrWhiteSpace(GetPrtStrReceipt(lstOI, ht)))
             {
