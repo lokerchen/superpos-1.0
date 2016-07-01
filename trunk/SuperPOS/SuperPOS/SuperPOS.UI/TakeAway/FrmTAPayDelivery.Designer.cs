@@ -53,7 +53,7 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPrtKitOnly = new System.Windows.Forms.Button();
             this.lblSurcharge1 = new System.Windows.Forms.Label();
             this.lblSCharge1 = new System.Windows.Forms.Label();
             this.lblSurcharge3 = new System.Windows.Forms.Label();
@@ -68,7 +68,7 @@
             this.btn3 = new System.Windows.Forms.Button();
             this.btnPrtBillOnly = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPrtAllReceipt = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.btnPrtAll = new System.Windows.Forms.Button();
             this.btn6 = new System.Windows.Forms.Button();
@@ -370,7 +370,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnPrtKitOnly);
             this.groupBox2.Controls.Add(this.lblSurcharge1);
             this.groupBox2.Controls.Add(this.lblSCharge1);
             this.groupBox2.Controls.Add(this.lblSurcharge3);
@@ -385,7 +385,7 @@
             this.groupBox2.Controls.Add(this.btn3);
             this.groupBox2.Controls.Add(this.btnPrtBillOnly);
             this.groupBox2.Controls.Add(this.btn2);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnPrtAllReceipt);
             this.groupBox2.Controls.Add(this.btn1);
             this.groupBox2.Controls.Add(this.btnPrtAll);
             this.groupBox2.Controls.Add(this.btn6);
@@ -424,17 +424,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment";
             // 
-            // button1
+            // btnPrtKitOnly
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(474, 236);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 60);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Print Kitchen Only";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnPrtKitOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnPrtKitOnly.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrtKitOnly.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPrtKitOnly.ForeColor = System.Drawing.Color.White;
+            this.btnPrtKitOnly.Location = new System.Drawing.Point(474, 236);
+            this.btnPrtKitOnly.Name = "btnPrtKitOnly";
+            this.btnPrtKitOnly.Size = new System.Drawing.Size(100, 60);
+            this.btnPrtKitOnly.TabIndex = 41;
+            this.btnPrtKitOnly.Text = "Print Kitchen Only";
+            this.btnPrtKitOnly.UseVisualStyleBackColor = false;
+            this.btnPrtKitOnly.Click += new System.EventHandler(this.btnPrtKitOnly_Click);
             // 
             // lblSurcharge1
             // 
@@ -608,17 +610,18 @@
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnPrtAllReceipt
             // 
-            this.button2.BackColor = System.Drawing.Color.Purple;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(474, 104);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 60);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Print All / Receipt";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPrtAllReceipt.BackColor = System.Drawing.Color.Purple;
+            this.btnPrtAllReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrtAllReceipt.ForeColor = System.Drawing.Color.White;
+            this.btnPrtAllReceipt.Location = new System.Drawing.Point(474, 104);
+            this.btnPrtAllReceipt.Name = "btnPrtAllReceipt";
+            this.btnPrtAllReceipt.Size = new System.Drawing.Size(100, 60);
+            this.btnPrtAllReceipt.TabIndex = 3;
+            this.btnPrtAllReceipt.Text = "Print All / Receipt";
+            this.btnPrtAllReceipt.UseVisualStyleBackColor = false;
+            this.btnPrtAllReceipt.Click += new System.EventHandler(this.btnPrtAllReceipt_Click);
             // 
             // btn1
             // 
@@ -643,6 +646,7 @@
             this.btnPrtAll.TabIndex = 2;
             this.btnPrtAll.Text = "Print All";
             this.btnPrtAll.UseVisualStyleBackColor = false;
+            this.btnPrtAll.Click += new System.EventHandler(this.btnPrtAll_Click);
             // 
             // btn6
             // 
@@ -1169,7 +1173,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnPrtAll;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPrtAllReceipt;
         private System.Windows.Forms.Button btnPrtBillOnly;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnSave;
@@ -1222,7 +1226,7 @@
         private System.Windows.Forms.Label lblSCharge1;
         private System.Windows.Forms.Label lblSurcharge3;
         private System.Windows.Forms.Label lblSCharge3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPrtKitOnly;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Button btnDriver1;
         private System.Windows.Forms.Button btnDriver2;
