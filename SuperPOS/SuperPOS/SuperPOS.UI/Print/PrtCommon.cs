@@ -142,7 +142,7 @@ namespace SuperPOS.UI.Print
 
         #endregion
 
-        #region MyRegion
+        #region OrderItem格式
 
         public static StringBuilder GetTab(string sCode, string sQty, string sName, string sPrice)
         {
@@ -167,11 +167,41 @@ namespace SuperPOS.UI.Print
         }
         #endregion
 
+        #region OrderItem格式
+
+        public static StringBuilder GetTab(string sCode, string sQty, string sName)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append(sCode + GetSpace(4 - sCode.Length) + sQty + GetSpace(3 - sQty.Length));
+            if (sName.Length > 21)
+            {
+                sb.Append(sName.Substring(0, 20));
+                sb.Append(Environment.NewLine);
+                sb.Append(GetSpace(7) + sName.Substring(20, sName.Length - 21));
+                sb.Append(Environment.NewLine);
+            }
+            else
+            {
+                sb.Append(sName + GetSpace(21 - sName.Length));
+            }
+
+            return sb;
+        }
+        #endregion
+
         public static StringBuilder GetHanZiTab(string sName)
         {
             StringBuilder sb = new StringBuilder();
             int s = (20 - GetHanNumFromString(sName)) / 2;
             sb.Append(GetSpace(11) + sName);
+            return sb;
+        }
+
+        public static StringBuilder GetHanZiTabKitchen(string sName)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(GetSpace(7) + sName);
             return sb;
         }
 

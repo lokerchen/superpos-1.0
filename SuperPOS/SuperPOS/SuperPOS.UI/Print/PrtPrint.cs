@@ -622,7 +622,7 @@ namespace SuperPOS.UI.Print
         }
         #endregion
 
-        #region 打印Receipt
+        #region 打印Cash双语
         public string GetPrtStrCashBilingual(List<TAOrderItemInfo> lstOI, Hashtable ht)
         {
             StringBuilder sb = new StringBuilder();
@@ -703,7 +703,7 @@ namespace SuperPOS.UI.Print
         }
         #endregion
 
-        #region 打印Receipt内容事件
+        #region 打印Cash双语内容事件
         /// <summary>
         /// 打印Receipt内容事件
         /// </summary>
@@ -746,7 +746,7 @@ namespace SuperPOS.UI.Print
         }
         #endregion
 
-        #region 打印Receipt主体打印事件
+        #region 打印Cash双语主体打印事件
         public void PrtCashBilingual(List<TAOrderItemInfo> lstOI, Hashtable ht)
         {
             if (string.IsNullOrWhiteSpace(GetPrtStrCashBilingual(lstOI, ht)))
@@ -792,7 +792,139 @@ namespace SuperPOS.UI.Print
         }
         #endregion
 
+        #region 打印Kitchen厨房单
+        public static string GetPrtStrKit(List<TAOrderItemInfo> lstOI, Hashtable ht)
+        {
+            StringBuilder sb = new StringBuilder();
+            string L = PrtCommon.GetSplit();
+            string L1 = (string) ht["ChkNum"];
 
+            //账单号
+            sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE_20 - L1.Length) / 2) + L1);
+            sb.Append(Environment.NewLine);
+
+            //分隔行
+            sb.Append(L);
+            sb.Append(Environment.NewLine);
+
+            sb.Append("Code" + PrtCommon.GetSpace(2) + "Qty" + PrtCommon.GetSpace(2) + "Name" + PrtCommon.GetSpace(24));
+            sb.Append(Environment.NewLine);
+
+            //分隔行
+            sb.Append(L);
+            sb.Append(Environment.NewLine);
+
+            PRT_BILL_SHUANGYU_ROW_COUNT = lstOI.Count * 2;
+
+            foreach (var taOrderItemInfo in lstOI)
+            {
+                sb.Append(GetTab(taOrderItemInfo.ItemCode, taOrderItemInfo.ItemQty, taOrderItemInfo.ItemDishName));
+                sb.Append(Environment.NewLine);
+                var CNameList = CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(taOrderItemInfo.ItemCode));
+                if (CNameList.Any())
+                {
+                    sb.Append(PrtCommon.GetHanZiTabKitchen(CNameList.FirstOrDefault().OtherName));
+                    sb.Append(Environment.NewLine);
+                }
+            }
+
+            sb.Append(L);
+            sb.Append(Environment.NewLine);
+
+            return sb.ToString();
+        }
+        #endregion
+
+        #region 打印Kitchen内容事件
+        /// <summary>
+        /// 打印Kitchen内容事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void Prt_Content_Kitchen(object sender, PrintPageEventArgs e)
+        {
+            var mark = 0;
+            StringFormat sf = new StringFormat();
+            sf.Alignment = StringAlignment.Center;
+            foreach (var item in textList)
+            {
+                //e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), fontSize), System.Drawing.Brushes.Black, 0, mark * lineSize);
+                if (mark == 0)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), Brushes.Black, 0, mark*20);
+                }
+                else if (mark == 1)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 10), Brushes.Black, 0, (mark + 1)*20);
+                }
+                else if (mark == 2)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 10), Brushes.Black, 0, (mark + 1)*20);
+                }
+                else if (mark == 3)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 10), Brushes.Black, 0, (mark + 1)*20);
+                }
+                else if (mark == textList.Count)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 10), Brushes.Black, 0, (mark + 1)*20);
+                }
+                else
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1)*20);
+                }
+                mark++;
+            }
+        }
+        #endregion
+
+        #region 打印Kitchen主体打印事件
+        public static void PrtKitchen(List<TAOrderItemInfo> lstOI, Hashtable ht)
+        {
+            if (string.IsNullOrWhiteSpace(GetPrtStrKit(lstOI, ht)))
+            {
+                return;
+            }
+
+            //原文字行或者段落内容
+            var sourceTexts = GetPrtStrKit(lstOI, ht).Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
+            //重新把文字进行分行树立
+            textList = new List<string>();
+            foreach (var item in sourceTexts)
+            {
+                if (!string.IsNullOrWhiteSpace(item))
+                {
+                    if (item.Length > PrtStatic.PRT_LINE_SIZE)
+                    {
+                        textList.AddRange(GetArr(PrtStatic.PRT_LINE_SIZE, item));
+                    }
+                    else
+                    {
+                        textList.Add(item);
+                    }
+                }
+            }
+
+
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(Prt_Content_Kitchen);
+            //纸张设置默认
+            //PaperSize pageSize = new PaperSize("自定义纸张", fontSize * lineSize, (textList.Count * (int)(58 / 25.4 * 100)));
+            //PaperSize pageSize = new PaperSize("自定义纸张", (textList.Count * (int)(58 / 25.4 * 100)), 455);
+            PaperSize pageSize = new PaperSize("自定义纸张", (textList.Count * (int)(80 / 25.4 * 100)), PRT_BILL_SHUANGYU_ROW_COUNT * 20 + 120);
+            pd.DefaultPageSettings.PaperSize = pageSize;
+            //pd.PrinterSettings.PrinterName
+            try
+            {
+                pd.Print();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("打印失败." + ex.Message);
+            }
+        }
+        #endregion
 
         public void PrtDrawStr(PrintPageEventArgs e, string strItem, int intFontSize, float fRow)
         {
@@ -819,6 +951,28 @@ namespace SuperPOS.UI.Print
             {
                 sb.Append(sName + PrtCommon.GetSpace(21 - sName.Length));
                 sb.Append(sPrice);
+            }
+
+            return sb;
+        }
+
+        public static StringBuilder GetTab(string sCode, string sQty, string sName)
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.Append(sCode + PrtCommon.GetSpace(4 - sCode.Length) + sQty + PrtCommon.GetSpace(3 - sQty.Length));
+            if (sName.Length > 21)
+            {
+                sb.Append(sName.Substring(0, 20));
+                sb.Append(Environment.NewLine);
+                sb.Append(PrtCommon.GetSpace(7) + sName.Substring(20, sName.Length - 21));
+                sb.Append(Environment.NewLine);
+
+                PRT_BILL_SHUANGYU_ROW_COUNT += 1;
+            }
+            else
+            {
+                sb.Append(sName + PrtCommon.GetSpace(21 - sName.Length));
             }
 
             return sb;
