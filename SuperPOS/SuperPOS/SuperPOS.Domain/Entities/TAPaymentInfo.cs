@@ -32,6 +32,12 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "PayTypeSurCharge3")]
         public virtual string PayTypeSurCharge3 { get; set; }
 
+        [XmlElement(ElementName = "PayType4")]
+        public virtual string PayType4 { get; set; }
+
+        [XmlElement(ElementName = "PayTypeSurCharge4")]
+        public virtual string PayTypeSurCharge4 { get; set; }
+
         [XmlElement(ElementName = "NotPaid")]
         public virtual string NotPaid { get; set; }
 
