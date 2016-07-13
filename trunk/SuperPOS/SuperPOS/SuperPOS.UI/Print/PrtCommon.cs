@@ -252,5 +252,12 @@ namespace SuperPOS.UI.Print
             sb.Append(GetSpace((25 - s1.Length)) + s1);
             return sb;
         }
+
+        public static StringBuilder GetText(string sText)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(GetSpace((27 - sText.Length) / 2) + sText);
+            return sb;
+        }
     }
 }

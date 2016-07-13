@@ -977,5 +977,196 @@ namespace SuperPOS.UI.Print
 
             return sb;
         }
+
+        #region 打印付款方式为Collection
+        public static string GetPrtStrPayCollection(List<TAOrderItemInfo> lstOI, Hashtable ht)
+        {
+            StringBuilder sb = new StringBuilder();
+            string L = PrtCommon.GetSplit();
+            string L1 = PrtCommon.GetRestName();
+            string L2 = PrtCommon.GetRestAddr();
+            string L3 = PrtCommon.GetRestTel();
+            string L4 = PrtCommon.GetRestVATNo();
+            //string L5 = PrtCommon.GetPrtTime();
+            string L51 = (string)ht["CustName"];
+            string L52 = "[" + (string)ht["CustPhone"] + "]";
+            string L6 = PrtCommon.GetPrtDateTime();
+            string L7 = "Staff:" + (string)ht["Staff"];
+
+            //餐厅名称
+            sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE_20 - L1.Length) / 2) + L1);
+            sb.Append(Environment.NewLine);
+
+            //餐厅地址
+            sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE - L2.Length) / 2) + L2);
+            sb.Append(Environment.NewLine);
+
+            //Tel
+            sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE - L3.Length) / 2) + L3);
+            sb.Append(Environment.NewLine);
+
+            //VAT
+            sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE - L4.Length) / 2) + L4);
+            sb.Append(Environment.NewLine);
+
+            //分隔行
+            sb.Append(L);
+            sb.Append(Environment.NewLine);
+
+            //时间
+            sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE_15 - L51.Length) / 2) + L51);
+            sb.Append(Environment.NewLine);
+
+            sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE_15 - L52.Length) / 2) + L52);
+            sb.Append(Environment.NewLine);
+
+            //分隔行
+            sb.Append(L);
+            sb.Append(Environment.NewLine);
+
+            //sb.Append(PrtCommon.GetSpace(6) + L6);
+            sb.Append(L6);
+            sb.Append(Environment.NewLine);
+            //sb.Append(PrtCommon.GetSpace(6) + L7);
+            sb.Append(L7);
+            sb.Append(Environment.NewLine);
+            sb.Append(L);
+            sb.Append(Environment.NewLine);
+
+            sb.Append("Code" + PrtCommon.GetSpace(2) + "Qty" + PrtCommon.GetSpace(2) + "Name" + PrtCommon.GetSpace(17) + "Price" + PrtCommon.GetSpace(2));
+            sb.Append(Environment.NewLine);
+
+            foreach (var taOrderItemInfo in lstOI)
+            {
+                //涉及到多行需要计算行数
+                //sb.Append(PrtCommon.GetTab(taOrderItemInfo.ItemCode, taOrderItemInfo.ItemQty,
+                //    taOrderItemInfo.ItemDishName, taOrderItemInfo.ItemTotalPrice));
+                sb.Append(GetTab(taOrderItemInfo.ItemCode, taOrderItemInfo.ItemQty,
+                    taOrderItemInfo.ItemDishName, taOrderItemInfo.ItemTotalPrice));
+                sb.Append(Environment.NewLine);
+            }
+
+            sb.Append(L);
+            sb.Append(Environment.NewLine);
+            sb.Append(PrtCommon.GetItemTotal((string)ht["ItemQty"], (string)ht["SubTotal"]));
+            sb.Append(Environment.NewLine);
+            sb.Append(L);
+            sb.Append(Environment.NewLine);
+            sb.Append(PrtCommon.GetTotal((string)ht["Total"]));
+            sb.Append(Environment.NewLine);
+            sb.Append(L);
+            sb.Append(Environment.NewLine);
+
+            sb.Append(PrtCommon.GetText("NOT PAID"));
+            sb.Append(Environment.NewLine);
+            sb.Append(PrtCommon.GetText("[]CASH      []CARD"));
+            sb.Append(Environment.NewLine);
+            sb.Append(L);
+
+            sb.Append(Environment.NewLine);
+            sb.Append(PrtStatic.PRT_COMP_NAME);
+            sb.Append(Environment.NewLine);
+            sb.Append(PrtCommon.GetSpace(8) + PrtStatic.PRT_COMP_WEBSITE);
+            sb.Append(Environment.NewLine);
+
+            return sb.ToString();
+        }
+        #endregion
+
+        #region 打印付款方式为Collection内容事件
+        /// <summary>
+        /// 打印Bill内容事件
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private static void Prt_Content_PayCollection(object sender, PrintPageEventArgs e)
+        {
+            var mark = 0;
+            StringFormat sf = new StringFormat();
+            sf.Alignment = StringAlignment.Center;
+            foreach (var item in textList)
+            {
+                //e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), fontSize), System.Drawing.Brushes.Black, 0, mark * lineSize);
+                if (mark == 0)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 20), Brushes.Black, 0, mark * 20);
+                }
+                else if (mark == 5)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
+                }
+                else if (mark == 6)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
+                }
+                else if (mark == textList.Count - 4)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
+                }
+                else if (mark == textList.Count - 5)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
+                }
+                else if (mark == textList.Count - 7)
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 15), Brushes.Black, 0, (mark + 1) * 20);
+                }
+                else
+                {
+                    e.Graphics.DrawString(item, new Font(new FontFamily("宋体"), 10), Brushes.Black, 0, (mark + 1) * 20);
+                }
+
+                mark++;
+            }
+        }
+        #endregion
+
+        #region 打印付款方式为Collection主体打印事件
+        public static void PrtPayCollection(List<TAOrderItemInfo> lstOI, Hashtable ht)
+        {
+            if (string.IsNullOrWhiteSpace(GetPrtStrPayCollection(lstOI, ht)))
+            {
+                return;
+            }
+
+            //原文字行或者段落内容
+            var sourceTexts = GetPrtStrPayCollection(lstOI, ht).Split(new string[] { Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+
+            //重新把文字进行分行树立
+            textList = new List<string>();
+            foreach (var item in sourceTexts)
+            {
+                if (!string.IsNullOrWhiteSpace(item))
+                {
+                    if (item.Length > PrtStatic.PRT_LINE_SIZE)
+                    {
+                        textList.AddRange(GetArr(PrtStatic.PRT_LINE_SIZE, item));
+                    }
+                    else
+                    {
+                        textList.Add(item);
+                    }
+                }
+            }
+
+
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(Prt_Content_PayCollection);
+            //纸张设置默认
+            //PaperSize pageSize = new PaperSize("自定义纸张", fontSize * lineSize, (textList.Count * (int)(58 / 25.4 * 100)));
+            //PaperSize pageSize = new PaperSize("自定义纸张", (textList.Count * (int)(58 / 25.4 * 100)), 455);
+            PaperSize pageSize = new PaperSize("自定义纸张", (textList.Count * (int)(58 / 25.4 * 100)), PRT_BILL_SHUANGYU_ROW_COUNT * 20 + 475);
+            pd.DefaultPageSettings.PaperSize = pageSize;
+            //pd.PrinterSettings.PrinterName
+            try
+            {
+                pd.Print();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("打印失败." + ex.Message);
+            }
+        }
+        #endregion
     }
 }
