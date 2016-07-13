@@ -694,6 +694,8 @@ namespace SuperPOS.UI.TakeAway
             taPaymentInfo.PayTypeSurCharge2 = @"0.00";
             taPaymentInfo.PayType3 = @"0.00";
             taPaymentInfo.PayTypeSurCharge3 = @"0.00";
+            taPaymentInfo.PayType4 = @"0.00";
+            taPaymentInfo.PayTypeSurCharge4 = @"0.00";
             taPaymentInfo.NotPaid = txtTotalPrice.Text;
             taPaymentInfo.Delivery = @"0.00";
             taPaymentInfo.Discount = @"0.00";
@@ -756,7 +758,7 @@ namespace SuperPOS.UI.TakeAway
                 //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
                 //frmTaPay.ShowDialog();
                 //Delivery
-                FrmTAPayCollection frmTaPayCollection = new FrmTAPayCollection(ChkNum, strCallID);
+                FrmTAPayCollection frmTaPayCollection = new FrmTAPayCollection(ChkNum, strCallID, htPay);
                 //frmTaPay.ShowDialog();
                 if (frmTaPayCollection.ShowDialog() == DialogResult.OK)
                 {
@@ -786,7 +788,7 @@ namespace SuperPOS.UI.TakeAway
                 //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
                 //frmTaPay.ShowDialog();
                 //Delivery
-                FrmTAPayShop frmTaPayShop = new FrmTAPayShop(ChkNum);
+                FrmTAPayShop frmTaPayShop = new FrmTAPayShop(ChkNum, strCallID, htPay);
                 //frmTaPay.ShowDialog();
                 if (frmTaPayShop.ShowDialog() == DialogResult.OK)
                 {
