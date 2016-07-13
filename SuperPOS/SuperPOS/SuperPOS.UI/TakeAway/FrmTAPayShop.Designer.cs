@@ -32,7 +32,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.btnShop = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPrtKitOnly = new System.Windows.Forms.Button();
             this.lblSurcharge1 = new System.Windows.Forms.Label();
             this.lblSCharge1 = new System.Windows.Forms.Label();
             this.lblSurcharge3 = new System.Windows.Forms.Label();
@@ -43,11 +43,11 @@
             this.btnPoint = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btn0 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnOrderSlip = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPrtBillOnly = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPrtAllReceipt = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.btnPrtAll = new System.Windows.Forms.Button();
             this.btn6 = new System.Windows.Forms.Button();
@@ -122,7 +122,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.btnPrtKitOnly);
             this.groupBox2.Controls.Add(this.lblSurcharge1);
             this.groupBox2.Controls.Add(this.lblSCharge1);
             this.groupBox2.Controls.Add(this.lblSurcharge3);
@@ -133,11 +133,11 @@
             this.groupBox2.Controls.Add(this.btnPoint);
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.btn0);
-            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.btnOrderSlip);
             this.groupBox2.Controls.Add(this.btn3);
-            this.groupBox2.Controls.Add(this.button3);
+            this.groupBox2.Controls.Add(this.btnPrtBillOnly);
             this.groupBox2.Controls.Add(this.btn2);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnPrtAllReceipt);
             this.groupBox2.Controls.Add(this.btn1);
             this.groupBox2.Controls.Add(this.btnPrtAll);
             this.groupBox2.Controls.Add(this.btn6);
@@ -176,17 +176,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment";
             // 
-            // button1
+            // btnPrtKitOnly
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(474, 236);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 60);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Print Kitchen Only";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnPrtKitOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnPrtKitOnly.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrtKitOnly.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPrtKitOnly.ForeColor = System.Drawing.Color.White;
+            this.btnPrtKitOnly.Location = new System.Drawing.Point(474, 236);
+            this.btnPrtKitOnly.Name = "btnPrtKitOnly";
+            this.btnPrtKitOnly.Size = new System.Drawing.Size(100, 60);
+            this.btnPrtKitOnly.TabIndex = 41;
+            this.btnPrtKitOnly.Text = "Print Kitchen Only";
+            this.btnPrtKitOnly.UseVisualStyleBackColor = false;
+            this.btnPrtKitOnly.Click += new System.EventHandler(this.btnPrtKitOnly_Click);
             // 
             // lblSurcharge1
             // 
@@ -312,17 +314,17 @@
             this.btn0.Text = "0";
             this.btn0.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // btnOrderSlip
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(474, 306);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(100, 60);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Order Slip";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnOrderSlip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnOrderSlip.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOrderSlip.ForeColor = System.Drawing.Color.White;
+            this.btnOrderSlip.Location = new System.Drawing.Point(474, 306);
+            this.btnOrderSlip.Name = "btnOrderSlip";
+            this.btnOrderSlip.Size = new System.Drawing.Size(100, 60);
+            this.btnOrderSlip.TabIndex = 5;
+            this.btnOrderSlip.Text = "Order Slip";
+            this.btnOrderSlip.UseVisualStyleBackColor = false;
             // 
             // btn3
             // 
@@ -336,17 +338,18 @@
             this.btn3.Text = "3";
             this.btn3.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnPrtBillOnly
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(474, 170);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 60);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Print Bill Only";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnPrtBillOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnPrtBillOnly.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrtBillOnly.ForeColor = System.Drawing.Color.White;
+            this.btnPrtBillOnly.Location = new System.Drawing.Point(474, 170);
+            this.btnPrtBillOnly.Name = "btnPrtBillOnly";
+            this.btnPrtBillOnly.Size = new System.Drawing.Size(100, 60);
+            this.btnPrtBillOnly.TabIndex = 4;
+            this.btnPrtBillOnly.Text = "Print Bill Only";
+            this.btnPrtBillOnly.UseVisualStyleBackColor = false;
+            this.btnPrtBillOnly.Click += new System.EventHandler(this.btnPrtBillOnly_Click);
             // 
             // btn2
             // 
@@ -360,17 +363,18 @@
             this.btn2.Text = "2";
             this.btn2.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnPrtAllReceipt
             // 
-            this.button2.BackColor = System.Drawing.Color.Purple;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(474, 104);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 60);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Print All / Receipt";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnPrtAllReceipt.BackColor = System.Drawing.Color.Purple;
+            this.btnPrtAllReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnPrtAllReceipt.ForeColor = System.Drawing.Color.White;
+            this.btnPrtAllReceipt.Location = new System.Drawing.Point(474, 104);
+            this.btnPrtAllReceipt.Name = "btnPrtAllReceipt";
+            this.btnPrtAllReceipt.Size = new System.Drawing.Size(100, 60);
+            this.btnPrtAllReceipt.TabIndex = 3;
+            this.btnPrtAllReceipt.Text = "Print All / Receipt";
+            this.btnPrtAllReceipt.UseVisualStyleBackColor = false;
+            this.btnPrtAllReceipt.Click += new System.EventHandler(this.btnPrtAllReceipt_Click);
             // 
             // btn1
             // 
@@ -395,6 +399,7 @@
             this.btnPrtAll.TabIndex = 2;
             this.btnPrtAll.Text = "Print All";
             this.btnPrtAll.UseVisualStyleBackColor = false;
+            this.btnPrtAll.Click += new System.EventHandler(this.btnPrtAll_Click);
             // 
             // btn6
             // 
@@ -741,7 +746,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnShop;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPrtKitOnly;
         private System.Windows.Forms.Label lblSurcharge1;
         private System.Windows.Forms.Label lblSCharge1;
         private System.Windows.Forms.Label lblSurcharge3;
@@ -752,11 +757,11 @@
         private System.Windows.Forms.Button btnPoint;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btn0;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnOrderSlip;
         private System.Windows.Forms.Button btn3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPrtBillOnly;
         private System.Windows.Forms.Button btn2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPrtAllReceipt;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Button btnPrtAll;
         private System.Windows.Forms.Button btn6;
