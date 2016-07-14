@@ -53,6 +53,11 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnNotPaid = new System.Windows.Forms.Button();
+            this.lblSurcharge4 = new System.Windows.Forms.Label();
+            this.lblSCharge4 = new System.Windows.Forms.Label();
+            this.lblPayType4 = new System.Windows.Forms.Label();
+            this.txtPay4 = new System.Windows.Forms.TextBox();
             this.btnPrtKitOnly = new System.Windows.Forms.Button();
             this.lblSurcharge1 = new System.Windows.Forms.Label();
             this.lblSCharge1 = new System.Windows.Forms.Label();
@@ -111,11 +116,6 @@
             this.btnDriver4 = new System.Windows.Forms.Button();
             this.btnDriver5 = new System.Windows.Forms.Button();
             this.btnDriver6 = new System.Windows.Forms.Button();
-            this.lblSurcharge4 = new System.Windows.Forms.Label();
-            this.lblSCharge4 = new System.Windows.Forms.Label();
-            this.lblPayType4 = new System.Windows.Forms.Label();
-            this.txtPay4 = new System.Windows.Forms.TextBox();
-            this.btnNotPaid = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -433,6 +433,67 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment";
+            // 
+            // btnNotPaid
+            // 
+            this.btnNotPaid.BackColor = System.Drawing.Color.Red;
+            this.btnNotPaid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNotPaid.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnNotPaid.ForeColor = System.Drawing.Color.White;
+            this.btnNotPaid.Location = new System.Drawing.Point(229, 159);
+            this.btnNotPaid.Name = "btnNotPaid";
+            this.btnNotPaid.Size = new System.Drawing.Size(128, 40);
+            this.btnNotPaid.TabIndex = 46;
+            this.btnNotPaid.Text = "Not Paid";
+            this.btnNotPaid.UseVisualStyleBackColor = false;
+            this.btnNotPaid.Click += new System.EventHandler(this.btnNotPaid_Click);
+            // 
+            // lblSurcharge4
+            // 
+            this.lblSurcharge4.AutoSize = true;
+            this.lblSurcharge4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSurcharge4.Location = new System.Drawing.Point(117, 120);
+            this.lblSurcharge4.Name = "lblSurcharge4";
+            this.lblSurcharge4.Size = new System.Drawing.Size(41, 21);
+            this.lblSurcharge4.TabIndex = 45;
+            this.lblSurcharge4.Text = "0.00";
+            this.lblSurcharge4.Visible = false;
+            // 
+            // lblSCharge4
+            // 
+            this.lblSCharge4.AutoSize = true;
+            this.lblSCharge4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblSCharge4.Location = new System.Drawing.Point(20, 120);
+            this.lblSCharge4.Name = "lblSCharge4";
+            this.lblSCharge4.Size = new System.Drawing.Size(91, 21);
+            this.lblSCharge4.TabIndex = 44;
+            this.lblSCharge4.Text = "Surcharge:";
+            this.lblSCharge4.Visible = false;
+            // 
+            // lblPayType4
+            // 
+            this.lblPayType4.AutoSize = true;
+            this.lblPayType4.BackColor = System.Drawing.Color.RoyalBlue;
+            this.lblPayType4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblPayType4.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblPayType4.ForeColor = System.Drawing.Color.White;
+            this.lblPayType4.Location = new System.Drawing.Point(268, 121);
+            this.lblPayType4.Name = "lblPayType4";
+            this.lblPayType4.Size = new System.Drawing.Size(89, 28);
+            this.lblPayType4.TabIndex = 43;
+            this.lblPayType4.Text = "Just Eat";
+            this.lblPayType4.Visible = false;
+            // 
+            // txtPay4
+            // 
+            this.txtPay4.Location = new System.Drawing.Point(164, 120);
+            this.txtPay4.Name = "txtPay4";
+            this.txtPay4.Size = new System.Drawing.Size(100, 29);
+            this.txtPay4.TabIndex = 42;
+            this.txtPay4.Text = "0.00";
+            this.txtPay4.Visible = false;
+            this.txtPay4.TextChanged += new System.EventHandler(this.txtPay4_TextChanged);
+            this.txtPay4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPay4_KeyPress);
             // 
             // btnPrtKitOnly
             // 
@@ -872,6 +933,7 @@
             this.lblNotPaid.Size = new System.Drawing.Size(100, 28);
             this.lblNotPaid.TabIndex = 9;
             this.lblNotPaid.Text = "Not Paid";
+            this.lblNotPaid.Visible = false;
             // 
             // txtNotPaid
             // 
@@ -1124,67 +1186,6 @@
             this.btnDriver6.TabIndex = 19;
             this.btnDriver6.Text = "Tommy";
             this.btnDriver6.UseVisualStyleBackColor = false;
-            // 
-            // lblSurcharge4
-            // 
-            this.lblSurcharge4.AutoSize = true;
-            this.lblSurcharge4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSurcharge4.Location = new System.Drawing.Point(117, 120);
-            this.lblSurcharge4.Name = "lblSurcharge4";
-            this.lblSurcharge4.Size = new System.Drawing.Size(41, 21);
-            this.lblSurcharge4.TabIndex = 45;
-            this.lblSurcharge4.Text = "0.00";
-            this.lblSurcharge4.Visible = false;
-            // 
-            // lblSCharge4
-            // 
-            this.lblSCharge4.AutoSize = true;
-            this.lblSCharge4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblSCharge4.Location = new System.Drawing.Point(20, 120);
-            this.lblSCharge4.Name = "lblSCharge4";
-            this.lblSCharge4.Size = new System.Drawing.Size(91, 21);
-            this.lblSCharge4.TabIndex = 44;
-            this.lblSCharge4.Text = "Surcharge:";
-            this.lblSCharge4.Visible = false;
-            // 
-            // lblPayType4
-            // 
-            this.lblPayType4.AutoSize = true;
-            this.lblPayType4.BackColor = System.Drawing.Color.RoyalBlue;
-            this.lblPayType4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblPayType4.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblPayType4.ForeColor = System.Drawing.Color.White;
-            this.lblPayType4.Location = new System.Drawing.Point(268, 121);
-            this.lblPayType4.Name = "lblPayType4";
-            this.lblPayType4.Size = new System.Drawing.Size(89, 28);
-            this.lblPayType4.TabIndex = 43;
-            this.lblPayType4.Text = "Just Eat";
-            this.lblPayType4.Visible = false;
-            // 
-            // txtPay4
-            // 
-            this.txtPay4.Location = new System.Drawing.Point(164, 120);
-            this.txtPay4.Name = "txtPay4";
-            this.txtPay4.Size = new System.Drawing.Size(100, 29);
-            this.txtPay4.TabIndex = 42;
-            this.txtPay4.Text = "0.00";
-            this.txtPay4.Visible = false;
-            this.txtPay4.TextChanged += new System.EventHandler(this.txtPay4_TextChanged);
-            this.txtPay4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPay4_KeyPress);
-            // 
-            // btnNotPaid
-            // 
-            this.btnNotPaid.BackColor = System.Drawing.Color.Red;
-            this.btnNotPaid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNotPaid.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnNotPaid.ForeColor = System.Drawing.Color.White;
-            this.btnNotPaid.Location = new System.Drawing.Point(229, 159);
-            this.btnNotPaid.Name = "btnNotPaid";
-            this.btnNotPaid.Size = new System.Drawing.Size(128, 40);
-            this.btnNotPaid.TabIndex = 46;
-            this.btnNotPaid.Text = "Not Paid";
-            this.btnNotPaid.UseVisualStyleBackColor = false;
-            this.btnNotPaid.Click += new System.EventHandler(this.btnNotPaid_Click);
             // 
             // FrmTAPayDelivery
             // 
