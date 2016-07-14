@@ -615,7 +615,7 @@ namespace SuperPOS.UI.TakeAway
             {
                 try
                 {
-                    string sPay4 = txtPay3.Text;
+                    string sPay4 = txtPay4.Text;
                     if (string.IsNullOrEmpty(txtPay4.Text)) sPay4 = "0.00";
                     Pay4 = Convert.ToDecimal(sPay4);
                 }
