@@ -50,7 +50,7 @@
             // lblSuperPOS
             // 
             this.lblSuperPOS.BackColor = System.Drawing.Color.DarkOrange;
-            this.lblSuperPOS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblSuperPOS.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblSuperPOS.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblSuperPOS.Location = new System.Drawing.Point(546, 250);
             this.lblSuperPOS.Name = "lblSuperPOS";
@@ -63,7 +63,7 @@
             // lblRemote
             // 
             this.lblRemote.BackColor = System.Drawing.Color.Olive;
-            this.lblRemote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblRemote.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblRemote.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblRemote.Location = new System.Drawing.Point(386, 250);
             this.lblRemote.Name = "lblRemote";
@@ -76,7 +76,7 @@
             // lblNetShop
             // 
             this.lblNetShop.BackColor = System.Drawing.Color.RoyalBlue;
-            this.lblNetShop.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblNetShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblNetShop.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblNetShop.Location = new System.Drawing.Point(226, 250);
             this.lblNetShop.Name = "lblNetShop";
@@ -89,7 +89,7 @@
             // lblUpdate
             // 
             this.lblUpdate.BackColor = System.Drawing.Color.PaleGreen;
-            this.lblUpdate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblUpdate.Font = new System.Drawing.Font("Microsoft YaHei UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblUpdate.Location = new System.Drawing.Point(66, 250);
             this.lblUpdate.Name = "lblUpdate";
@@ -138,7 +138,7 @@
             this.picBoxLogo.TabIndex = 0;
             this.picBoxLogo.TabStop = false;
             // 
-            // FrmMain
+            // FrmMainShow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -153,7 +153,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.picBoxLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmMain";
+            this.Name = "FrmMainShow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMain";
             this.Load += new System.EventHandler(this.FrmMain_Load);
