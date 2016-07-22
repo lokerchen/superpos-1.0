@@ -96,11 +96,12 @@
             // 
             // txtPwd
             // 
+            this.txtPwd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPwd.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPwd.Location = new System.Drawing.Point(481, 174);
+            this.txtPwd.Location = new System.Drawing.Point(481, 176);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.PasswordChar = '*';
-            this.txtPwd.Size = new System.Drawing.Size(154, 35);
+            this.txtPwd.Size = new System.Drawing.Size(154, 28);
             this.txtPwd.TabIndex = 9;
             // 
             // panelKeyBoard
@@ -130,7 +131,8 @@
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOK.FlatAppearance.BorderSize = 0;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnOK.Location = new System.Drawing.Point(205, 190);
             this.btnOK.Name = "btnOK";
@@ -143,7 +145,8 @@
             // btn0
             // 
             this.btn0.BackColor = System.Drawing.Color.BlueViolet;
-            this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn0.FlatAppearance.BorderSize = 0;
+            this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn0.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn0.ForeColor = System.Drawing.Color.White;
             this.btn0.Location = new System.Drawing.Point(140, 190);
@@ -156,7 +159,8 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnClear.Location = new System.Drawing.Point(75, 190);
             this.btnClear.Name = "btnClear";
@@ -169,7 +173,8 @@
             // btn9
             // 
             this.btn9.BackColor = System.Drawing.Color.BlueViolet;
-            this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn9.FlatAppearance.BorderSize = 0;
+            this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn9.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn9.ForeColor = System.Drawing.Color.White;
             this.btn9.Location = new System.Drawing.Point(205, 130);
@@ -182,7 +187,8 @@
             // btn8
             // 
             this.btn8.BackColor = System.Drawing.Color.BlueViolet;
-            this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn8.FlatAppearance.BorderSize = 0;
+            this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn8.ForeColor = System.Drawing.Color.White;
             this.btn8.Location = new System.Drawing.Point(140, 130);
@@ -195,7 +201,8 @@
             // btn7
             // 
             this.btn7.BackColor = System.Drawing.Color.BlueViolet;
-            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn7.FlatAppearance.BorderSize = 0;
+            this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn7.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn7.ForeColor = System.Drawing.Color.White;
             this.btn7.Location = new System.Drawing.Point(75, 130);
@@ -208,7 +215,8 @@
             // btn6
             // 
             this.btn6.BackColor = System.Drawing.Color.BlueViolet;
-            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn6.FlatAppearance.BorderSize = 0;
+            this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn6.ForeColor = System.Drawing.Color.White;
             this.btn6.Location = new System.Drawing.Point(205, 70);
@@ -221,7 +229,8 @@
             // btn5
             // 
             this.btn5.BackColor = System.Drawing.Color.BlueViolet;
-            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn5.FlatAppearance.BorderSize = 0;
+            this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn5.ForeColor = System.Drawing.Color.White;
             this.btn5.Location = new System.Drawing.Point(140, 70);
@@ -234,7 +243,8 @@
             // btn4
             // 
             this.btn4.BackColor = System.Drawing.Color.BlueViolet;
-            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn4.FlatAppearance.BorderSize = 0;
+            this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn4.ForeColor = System.Drawing.Color.White;
             this.btn4.Location = new System.Drawing.Point(75, 70);
@@ -247,7 +257,8 @@
             // btn3
             // 
             this.btn3.BackColor = System.Drawing.Color.BlueViolet;
-            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn3.FlatAppearance.BorderSize = 0;
+            this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn3.ForeColor = System.Drawing.Color.White;
             this.btn3.Location = new System.Drawing.Point(205, 10);
@@ -260,7 +271,8 @@
             // btn2
             // 
             this.btn2.BackColor = System.Drawing.Color.BlueViolet;
-            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn2.FlatAppearance.BorderSize = 0;
+            this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn2.ForeColor = System.Drawing.Color.White;
             this.btn2.Location = new System.Drawing.Point(140, 10);
@@ -273,7 +285,8 @@
             // btn1
             // 
             this.btn1.BackColor = System.Drawing.Color.BlueViolet;
-            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn1.FlatAppearance.BorderSize = 0;
+            this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn1.ForeColor = System.Drawing.Color.White;
             this.btn1.Location = new System.Drawing.Point(75, 10);
@@ -286,7 +299,8 @@
             // btnD
             // 
             this.btnD.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnD.FlatAppearance.BorderSize = 0;
+            this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnD.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnD.ForeColor = System.Drawing.Color.White;
             this.btnD.Location = new System.Drawing.Point(10, 190);
@@ -299,7 +313,8 @@
             // btnC
             // 
             this.btnC.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnC.FlatAppearance.BorderSize = 0;
+            this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnC.ForeColor = System.Drawing.Color.White;
             this.btnC.Location = new System.Drawing.Point(10, 130);
@@ -312,7 +327,8 @@
             // btnB
             // 
             this.btnB.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnB.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnB.FlatAppearance.BorderSize = 0;
+            this.btnB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnB.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnB.ForeColor = System.Drawing.Color.White;
             this.btnB.Location = new System.Drawing.Point(10, 70);
@@ -325,7 +341,8 @@
             // btnA
             // 
             this.btnA.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnA.FlatAppearance.BorderSize = 0;
+            this.btnA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnA.Font = new System.Drawing.Font("微软雅黑", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnA.ForeColor = System.Drawing.Color.White;
             this.btnA.Location = new System.Drawing.Point(10, 10);
@@ -338,7 +355,6 @@
             // panelShow
             // 
             this.panelShow.BackColor = System.Drawing.Color.Lime;
-            this.panelShow.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelShow.Controls.Add(this.lblSession);
             this.panelShow.Controls.Add(this.lblForSession);
             this.panelShow.Controls.Add(this.lblTime);
@@ -432,7 +448,8 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(49, 418);
