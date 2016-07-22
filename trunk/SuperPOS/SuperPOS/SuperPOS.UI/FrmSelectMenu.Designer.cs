@@ -80,7 +80,8 @@
             // btnCtlPanel
             // 
             this.btnCtlPanel.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnCtlPanel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCtlPanel.FlatAppearance.BorderSize = 0;
+            this.btnCtlPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCtlPanel.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCtlPanel.ForeColor = System.Drawing.Color.White;
             this.btnCtlPanel.Location = new System.Drawing.Point(22, 380);
@@ -94,7 +95,8 @@
             // btnShowOrder
             // 
             this.btnShowOrder.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnShowOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShowOrder.FlatAppearance.BorderSize = 0;
+            this.btnShowOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowOrder.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnShowOrder.ForeColor = System.Drawing.Color.White;
             this.btnShowOrder.Location = new System.Drawing.Point(22, 300);
@@ -108,7 +110,8 @@
             // btnDrawer
             // 
             this.btnDrawer.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnDrawer.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDrawer.FlatAppearance.BorderSize = 0;
+            this.btnDrawer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDrawer.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDrawer.ForeColor = System.Drawing.Color.White;
             this.btnDrawer.Location = new System.Drawing.Point(22, 220);
@@ -123,6 +126,7 @@
             this.txtStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStaff.Enabled = false;
             this.txtStaff.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStaff.Location = new System.Drawing.Point(22, 144);
@@ -137,6 +141,7 @@
             this.txtSession.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSession.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSession.Enabled = false;
             this.txtSession.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtSession.Location = new System.Drawing.Point(22, 105);
@@ -151,6 +156,7 @@
             this.txtTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTime.Enabled = false;
             this.txtTime.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtTime.Location = new System.Drawing.Point(22, 65);
@@ -165,6 +171,7 @@
             this.txtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDate.Enabled = false;
             this.txtDate.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtDate.Location = new System.Drawing.Point(22, 22);
@@ -177,7 +184,8 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("微软雅黑", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(209, 36);
@@ -190,7 +198,8 @@
             // btnTakeaway
             // 
             this.btnTakeaway.BackColor = System.Drawing.Color.Silver;
-            this.btnTakeaway.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTakeaway.FlatAppearance.BorderSize = 0;
+            this.btnTakeaway.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTakeaway.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTakeaway.ForeColor = System.Drawing.Color.White;
             this.btnTakeaway.Location = new System.Drawing.Point(307, 169);
@@ -206,7 +215,8 @@
             // btnEatIn
             // 
             this.btnEatIn.BackColor = System.Drawing.Color.Silver;
-            this.btnEatIn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEatIn.FlatAppearance.BorderSize = 0;
+            this.btnEatIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEatIn.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnEatIn.ForeColor = System.Drawing.Color.White;
             this.btnEatIn.Location = new System.Drawing.Point(307, 275);
@@ -222,7 +232,8 @@
             // btnQuickFood
             // 
             this.btnQuickFood.BackColor = System.Drawing.Color.Silver;
-            this.btnQuickFood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnQuickFood.FlatAppearance.BorderSize = 0;
+            this.btnQuickFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuickFood.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnQuickFood.ForeColor = System.Drawing.Color.White;
             this.btnQuickFood.Location = new System.Drawing.Point(307, 381);
