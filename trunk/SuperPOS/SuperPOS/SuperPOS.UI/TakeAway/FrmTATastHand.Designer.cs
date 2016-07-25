@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dgvTasteHand = new System.Windows.Forms.DataGridView();
+            this.btnChange = new System.Windows.Forms.Button();
+            this.btnWithout = new System.Windows.Forms.Button();
+            this.btnMore = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnLess = new System.Windows.Forms.Button();
             this.btnOthers = new System.Windows.Forms.Button();
             this.btnCooking = new System.Windows.Forms.Button();
             this.btnFruit = new System.Windows.Forms.Button();
@@ -43,11 +44,8 @@
             this.btnBean = new System.Windows.Forms.Button();
             this.btnVegetable2 = new System.Windows.Forms.Button();
             this.btnVegetable = new System.Windows.Forms.Button();
-            this.btnChange = new System.Windows.Forms.Button();
-            this.btnWithout = new System.Windows.Forms.Button();
-            this.btnMore = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnLess = new System.Windows.Forms.Button();
+            this.dgvTasteHand = new System.Windows.Forms.DataGridView();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnDrinkItem = new System.Windows.Forms.Button();
             this.btnTasteItem = new System.Windows.Forms.Button();
             this.btnShowAllItem = new System.Windows.Forms.Button();
@@ -57,8 +55,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasteHand)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -88,188 +86,10 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Taste Handling";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnDrinkItem);
-            this.groupBox2.Controls.Add(this.btnTasteItem);
-            this.groupBox2.Location = new System.Drawing.Point(29, 26);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(351, 71);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            // 
-            // dgvTasteHand
-            // 
-            this.dgvTasteHand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTasteHand.DefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvTasteHand.Location = new System.Drawing.Point(29, 103);
-            this.dgvTasteHand.Name = "dgvTasteHand";
-            this.dgvTasteHand.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTasteHand.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvTasteHand.RowTemplate.Height = 23;
-            this.dgvTasteHand.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTasteHand.Size = new System.Drawing.Size(351, 366);
-            this.dgvTasteHand.TabIndex = 1;
-            this.dgvTasteHand.SelectionChanged += new System.EventHandler(this.dgvTasteHand_SelectionChanged);
-            // 
-            // btnOthers
-            // 
-            this.btnOthers.BackColor = System.Drawing.Color.Gray;
-            this.btnOthers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnOthers.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnOthers.ForeColor = System.Drawing.Color.White;
-            this.btnOthers.Location = new System.Drawing.Point(414, 434);
-            this.btnOthers.Margin = new System.Windows.Forms.Padding(4);
-            this.btnOthers.Name = "btnOthers";
-            this.btnOthers.Size = new System.Drawing.Size(100, 35);
-            this.btnOthers.TabIndex = 42;
-            this.btnOthers.Text = "Others";
-            this.btnOthers.UseVisualStyleBackColor = false;
-            // 
-            // btnCooking
-            // 
-            this.btnCooking.BackColor = System.Drawing.Color.Gray;
-            this.btnCooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCooking.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCooking.ForeColor = System.Drawing.Color.White;
-            this.btnCooking.Location = new System.Drawing.Point(414, 389);
-            this.btnCooking.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCooking.Name = "btnCooking";
-            this.btnCooking.Size = new System.Drawing.Size(100, 35);
-            this.btnCooking.TabIndex = 41;
-            this.btnCooking.Text = "Cooking";
-            this.btnCooking.UseVisualStyleBackColor = false;
-            // 
-            // btnFruit
-            // 
-            this.btnFruit.BackColor = System.Drawing.Color.Gray;
-            this.btnFruit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFruit.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnFruit.ForeColor = System.Drawing.Color.White;
-            this.btnFruit.Location = new System.Drawing.Point(414, 344);
-            this.btnFruit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFruit.Name = "btnFruit";
-            this.btnFruit.Size = new System.Drawing.Size(100, 35);
-            this.btnFruit.TabIndex = 40;
-            this.btnFruit.Text = "Fruit";
-            this.btnFruit.UseVisualStyleBackColor = false;
-            // 
-            // btnTaste
-            // 
-            this.btnTaste.BackColor = System.Drawing.Color.Gray;
-            this.btnTaste.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTaste.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnTaste.ForeColor = System.Drawing.Color.White;
-            this.btnTaste.Location = new System.Drawing.Point(414, 299);
-            this.btnTaste.Margin = new System.Windows.Forms.Padding(4);
-            this.btnTaste.Name = "btnTaste";
-            this.btnTaste.Size = new System.Drawing.Size(100, 35);
-            this.btnTaste.TabIndex = 39;
-            this.btnTaste.Text = "Taste";
-            this.btnTaste.UseVisualStyleBackColor = false;
-            // 
-            // btnSauce
-            // 
-            this.btnSauce.BackColor = System.Drawing.Color.Gray;
-            this.btnSauce.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSauce.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSauce.ForeColor = System.Drawing.Color.White;
-            this.btnSauce.Location = new System.Drawing.Point(414, 254);
-            this.btnSauce.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSauce.Name = "btnSauce";
-            this.btnSauce.Size = new System.Drawing.Size(100, 35);
-            this.btnSauce.TabIndex = 38;
-            this.btnSauce.Text = "Sauce";
-            this.btnSauce.UseVisualStyleBackColor = false;
-            // 
-            // btnSeafood
-            // 
-            this.btnSeafood.BackColor = System.Drawing.Color.Gray;
-            this.btnSeafood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSeafood.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSeafood.ForeColor = System.Drawing.Color.White;
-            this.btnSeafood.Location = new System.Drawing.Point(414, 209);
-            this.btnSeafood.Margin = new System.Windows.Forms.Padding(4);
-            this.btnSeafood.Name = "btnSeafood";
-            this.btnSeafood.Size = new System.Drawing.Size(100, 35);
-            this.btnSeafood.TabIndex = 37;
-            this.btnSeafood.Text = "Seafood";
-            this.btnSeafood.UseVisualStyleBackColor = false;
-            // 
-            // btnMeat
-            // 
-            this.btnMeat.BackColor = System.Drawing.Color.Gray;
-            this.btnMeat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnMeat.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnMeat.ForeColor = System.Drawing.Color.White;
-            this.btnMeat.Location = new System.Drawing.Point(414, 164);
-            this.btnMeat.Margin = new System.Windows.Forms.Padding(4);
-            this.btnMeat.Name = "btnMeat";
-            this.btnMeat.Size = new System.Drawing.Size(100, 35);
-            this.btnMeat.TabIndex = 36;
-            this.btnMeat.Text = "Meat";
-            this.btnMeat.UseVisualStyleBackColor = false;
-            // 
-            // btnBean
-            // 
-            this.btnBean.BackColor = System.Drawing.Color.Gray;
-            this.btnBean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnBean.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnBean.ForeColor = System.Drawing.Color.White;
-            this.btnBean.Location = new System.Drawing.Point(414, 119);
-            this.btnBean.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBean.Name = "btnBean";
-            this.btnBean.Size = new System.Drawing.Size(100, 35);
-            this.btnBean.TabIndex = 35;
-            this.btnBean.Text = "Bean";
-            this.btnBean.UseVisualStyleBackColor = false;
-            // 
-            // btnVegetable2
-            // 
-            this.btnVegetable2.BackColor = System.Drawing.Color.Gray;
-            this.btnVegetable2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVegetable2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnVegetable2.ForeColor = System.Drawing.Color.White;
-            this.btnVegetable2.Location = new System.Drawing.Point(414, 74);
-            this.btnVegetable2.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVegetable2.Name = "btnVegetable2";
-            this.btnVegetable2.Size = new System.Drawing.Size(100, 35);
-            this.btnVegetable2.TabIndex = 34;
-            this.btnVegetable2.Text = "Vegetable2";
-            this.btnVegetable2.UseVisualStyleBackColor = false;
-            // 
-            // btnVegetable
-            // 
-            this.btnVegetable.BackColor = System.Drawing.Color.Gray;
-            this.btnVegetable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnVegetable.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnVegetable.ForeColor = System.Drawing.Color.White;
-            this.btnVegetable.Location = new System.Drawing.Point(414, 29);
-            this.btnVegetable.Margin = new System.Windows.Forms.Padding(4);
-            this.btnVegetable.Name = "btnVegetable";
-            this.btnVegetable.Size = new System.Drawing.Size(100, 35);
-            this.btnVegetable.TabIndex = 33;
-            this.btnVegetable.Text = "Vegetable";
-            this.btnVegetable.UseVisualStyleBackColor = false;
-            // 
             // btnChange
             // 
             this.btnChange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChange.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnChange.ForeColor = System.Drawing.Color.White;
             this.btnChange.Location = new System.Drawing.Point(534, 379);
@@ -283,7 +103,7 @@
             // btnWithout
             // 
             this.btnWithout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnWithout.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnWithout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnWithout.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnWithout.ForeColor = System.Drawing.Color.White;
             this.btnWithout.Location = new System.Drawing.Point(534, 299);
@@ -297,7 +117,7 @@
             // btnMore
             // 
             this.btnMore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnMore.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMore.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnMore.ForeColor = System.Drawing.Color.White;
             this.btnMore.Location = new System.Drawing.Point(534, 219);
@@ -311,7 +131,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(534, 139);
@@ -325,7 +145,7 @@
             // btnLess
             // 
             this.btnLess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnLess.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLess.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnLess.ForeColor = System.Drawing.Color.White;
             this.btnLess.Location = new System.Drawing.Point(534, 59);
@@ -336,10 +156,172 @@
             this.btnLess.Text = "LESS (-)";
             this.btnLess.UseVisualStyleBackColor = false;
             // 
+            // btnOthers
+            // 
+            this.btnOthers.BackColor = System.Drawing.Color.Gray;
+            this.btnOthers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOthers.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnOthers.ForeColor = System.Drawing.Color.White;
+            this.btnOthers.Location = new System.Drawing.Point(414, 434);
+            this.btnOthers.Margin = new System.Windows.Forms.Padding(4);
+            this.btnOthers.Name = "btnOthers";
+            this.btnOthers.Size = new System.Drawing.Size(100, 35);
+            this.btnOthers.TabIndex = 42;
+            this.btnOthers.Text = "Others";
+            this.btnOthers.UseVisualStyleBackColor = false;
+            // 
+            // btnCooking
+            // 
+            this.btnCooking.BackColor = System.Drawing.Color.Gray;
+            this.btnCooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCooking.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCooking.ForeColor = System.Drawing.Color.White;
+            this.btnCooking.Location = new System.Drawing.Point(414, 389);
+            this.btnCooking.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCooking.Name = "btnCooking";
+            this.btnCooking.Size = new System.Drawing.Size(100, 35);
+            this.btnCooking.TabIndex = 41;
+            this.btnCooking.Text = "Cooking";
+            this.btnCooking.UseVisualStyleBackColor = false;
+            // 
+            // btnFruit
+            // 
+            this.btnFruit.BackColor = System.Drawing.Color.Gray;
+            this.btnFruit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFruit.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnFruit.ForeColor = System.Drawing.Color.White;
+            this.btnFruit.Location = new System.Drawing.Point(414, 344);
+            this.btnFruit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFruit.Name = "btnFruit";
+            this.btnFruit.Size = new System.Drawing.Size(100, 35);
+            this.btnFruit.TabIndex = 40;
+            this.btnFruit.Text = "Fruit";
+            this.btnFruit.UseVisualStyleBackColor = false;
+            // 
+            // btnTaste
+            // 
+            this.btnTaste.BackColor = System.Drawing.Color.Gray;
+            this.btnTaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaste.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnTaste.ForeColor = System.Drawing.Color.White;
+            this.btnTaste.Location = new System.Drawing.Point(414, 299);
+            this.btnTaste.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTaste.Name = "btnTaste";
+            this.btnTaste.Size = new System.Drawing.Size(100, 35);
+            this.btnTaste.TabIndex = 39;
+            this.btnTaste.Text = "Taste";
+            this.btnTaste.UseVisualStyleBackColor = false;
+            // 
+            // btnSauce
+            // 
+            this.btnSauce.BackColor = System.Drawing.Color.Gray;
+            this.btnSauce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSauce.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSauce.ForeColor = System.Drawing.Color.White;
+            this.btnSauce.Location = new System.Drawing.Point(414, 254);
+            this.btnSauce.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSauce.Name = "btnSauce";
+            this.btnSauce.Size = new System.Drawing.Size(100, 35);
+            this.btnSauce.TabIndex = 38;
+            this.btnSauce.Text = "Sauce";
+            this.btnSauce.UseVisualStyleBackColor = false;
+            // 
+            // btnSeafood
+            // 
+            this.btnSeafood.BackColor = System.Drawing.Color.Gray;
+            this.btnSeafood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSeafood.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSeafood.ForeColor = System.Drawing.Color.White;
+            this.btnSeafood.Location = new System.Drawing.Point(414, 209);
+            this.btnSeafood.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSeafood.Name = "btnSeafood";
+            this.btnSeafood.Size = new System.Drawing.Size(100, 35);
+            this.btnSeafood.TabIndex = 37;
+            this.btnSeafood.Text = "Seafood";
+            this.btnSeafood.UseVisualStyleBackColor = false;
+            // 
+            // btnMeat
+            // 
+            this.btnMeat.BackColor = System.Drawing.Color.Gray;
+            this.btnMeat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMeat.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMeat.ForeColor = System.Drawing.Color.White;
+            this.btnMeat.Location = new System.Drawing.Point(414, 164);
+            this.btnMeat.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMeat.Name = "btnMeat";
+            this.btnMeat.Size = new System.Drawing.Size(100, 35);
+            this.btnMeat.TabIndex = 36;
+            this.btnMeat.Text = "Meat";
+            this.btnMeat.UseVisualStyleBackColor = false;
+            // 
+            // btnBean
+            // 
+            this.btnBean.BackColor = System.Drawing.Color.Gray;
+            this.btnBean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBean.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnBean.ForeColor = System.Drawing.Color.White;
+            this.btnBean.Location = new System.Drawing.Point(414, 119);
+            this.btnBean.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBean.Name = "btnBean";
+            this.btnBean.Size = new System.Drawing.Size(100, 35);
+            this.btnBean.TabIndex = 35;
+            this.btnBean.Text = "Bean";
+            this.btnBean.UseVisualStyleBackColor = false;
+            // 
+            // btnVegetable2
+            // 
+            this.btnVegetable2.BackColor = System.Drawing.Color.Gray;
+            this.btnVegetable2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVegetable2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnVegetable2.ForeColor = System.Drawing.Color.White;
+            this.btnVegetable2.Location = new System.Drawing.Point(414, 74);
+            this.btnVegetable2.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVegetable2.Name = "btnVegetable2";
+            this.btnVegetable2.Size = new System.Drawing.Size(100, 35);
+            this.btnVegetable2.TabIndex = 34;
+            this.btnVegetable2.Text = "Vegetable2";
+            this.btnVegetable2.UseVisualStyleBackColor = false;
+            // 
+            // btnVegetable
+            // 
+            this.btnVegetable.BackColor = System.Drawing.Color.Gray;
+            this.btnVegetable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVegetable.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnVegetable.ForeColor = System.Drawing.Color.White;
+            this.btnVegetable.Location = new System.Drawing.Point(414, 29);
+            this.btnVegetable.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVegetable.Name = "btnVegetable";
+            this.btnVegetable.Size = new System.Drawing.Size(100, 35);
+            this.btnVegetable.TabIndex = 33;
+            this.btnVegetable.Text = "Vegetable";
+            this.btnVegetable.UseVisualStyleBackColor = false;
+            // 
+            // dgvTasteHand
+            // 
+            this.dgvTasteHand.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTasteHand.Location = new System.Drawing.Point(29, 103);
+            this.dgvTasteHand.Name = "dgvTasteHand";
+            this.dgvTasteHand.ReadOnly = true;
+            this.dgvTasteHand.RowTemplate.Height = 23;
+            this.dgvTasteHand.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTasteHand.Size = new System.Drawing.Size(351, 366);
+            this.dgvTasteHand.TabIndex = 1;
+            this.dgvTasteHand.SelectionChanged += new System.EventHandler(this.dgvTasteHand_SelectionChanged);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnDrinkItem);
+            this.groupBox2.Controls.Add(this.btnTasteItem);
+            this.groupBox2.Location = new System.Drawing.Point(29, 26);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(351, 71);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            // 
             // btnDrinkItem
             // 
             this.btnDrinkItem.BackColor = System.Drawing.Color.Gray;
-            this.btnDrinkItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDrinkItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDrinkItem.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDrinkItem.ForeColor = System.Drawing.Color.White;
             this.btnDrinkItem.Location = new System.Drawing.Point(191, 25);
@@ -354,7 +336,7 @@
             // btnTasteItem
             // 
             this.btnTasteItem.BackColor = System.Drawing.Color.Gray;
-            this.btnTasteItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTasteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTasteItem.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTasteItem.ForeColor = System.Drawing.Color.White;
             this.btnTasteItem.Location = new System.Drawing.Point(24, 25);
@@ -369,7 +351,7 @@
             // btnShowAllItem
             // 
             this.btnShowAllItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnShowAllItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShowAllItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowAllItem.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnShowAllItem.ForeColor = System.Drawing.Color.White;
             this.btnShowAllItem.Location = new System.Drawing.Point(233, 574);
@@ -384,7 +366,7 @@
             // btnShowPresetItem
             // 
             this.btnShowPresetItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnShowPresetItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShowPresetItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowPresetItem.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnShowPresetItem.ForeColor = System.Drawing.Color.White;
             this.btnShowPresetItem.Location = new System.Drawing.Point(40, 574);
@@ -408,7 +390,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(382, 513);
@@ -424,7 +406,7 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.Enabled = false;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(566, 588);
@@ -439,7 +421,7 @@
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnOK.ForeColor = System.Drawing.Color.White;
             this.btnOK.Location = new System.Drawing.Point(448, 588);
@@ -469,8 +451,8 @@
             this.Text = "FrmTATastHand";
             this.Load += new System.EventHandler(this.FrmTATastHand_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTasteHand)).EndInit();
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
