@@ -108,7 +108,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Olive;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(818, 27);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -122,7 +122,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(692, 27);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -136,7 +136,7 @@
             // btnEditUsr
             // 
             this.btnEditUsr.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnEditUsr.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEditUsr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditUsr.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnEditUsr.ForeColor = System.Drawing.Color.White;
             this.btnEditUsr.Location = new System.Drawing.Point(311, 26);
