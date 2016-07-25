@@ -53,7 +53,7 @@
             // btnRestoreData
             // 
             this.btnRestoreData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnRestoreData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRestoreData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRestoreData.ForeColor = System.Drawing.Color.White;
             this.btnRestoreData.Location = new System.Drawing.Point(203, 41);
             this.btnRestoreData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -67,7 +67,7 @@
             // btnBackupData
             // 
             this.btnBackupData.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnBackupData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBackupData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackupData.ForeColor = System.Drawing.Color.White;
             this.btnBackupData.Location = new System.Drawing.Point(32, 41);
             this.btnBackupData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -81,7 +81,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(432, 58);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
