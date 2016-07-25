@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpTAConfig = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -100,15 +100,15 @@
             this.txtYourPostCode = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.txtTotalAmountThreshold = new System.Windows.Forms.TextBox();
-            this.txtFreeItem1 = new System.Windows.Forms.TextBox();
-            this.txtFreeItem2 = new System.Windows.Forms.TextBox();
-            this.txtFreeItem3 = new System.Windows.Forms.TextBox();
-            this.txtFreeItem4 = new System.Windows.Forms.TextBox();
             this.btnFFIExit = new System.Windows.Forms.Button();
             this.btnFFISave = new System.Windows.Forms.Button();
+            this.txtFreeItem4 = new System.Windows.Forms.TextBox();
+            this.txtFreeItem3 = new System.Windows.Forms.TextBox();
+            this.txtFreeItem2 = new System.Windows.Forms.TextBox();
+            this.txtFreeItem1 = new System.Windows.Forms.TextBox();
+            this.txtTotalAmountThreshold = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.grpTAConfig.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -388,14 +388,14 @@
             // 
             this.dgvTAPayType.AllowUserToDeleteRows = false;
             this.dgvTAPayType.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTAPayType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTAPayType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTAPayType.Location = new System.Drawing.Point(9, 24);
             this.dgvTAPayType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvTAPayType.MultiSelect = false;
@@ -603,14 +603,14 @@
             this.dgvDSDist.Location = new System.Drawing.Point(9, 24);
             this.dgvDSDist.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvDSDist.Name = "dgvDSDist";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDSDist.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDSDist.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDSDist.RowTemplate.Height = 23;
             this.dgvDSDist.Size = new System.Drawing.Size(516, 127);
             this.dgvDSDist.TabIndex = 0;
@@ -646,7 +646,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(476, 6);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -659,7 +659,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(492, 328);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -673,7 +673,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(333, 384);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -686,7 +686,7 @@
             // btnDel
             // 
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.ForeColor = System.Drawing.Color.White;
             this.btnDel.Location = new System.Drawing.Point(413, 384);
             this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -699,7 +699,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Location = new System.Drawing.Point(413, 328);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -712,7 +712,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(333, 328);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -914,64 +914,6 @@
             this.tabPage4.Text = "Free Food Items";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(104, 41);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(148, 17);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Total Amount Threshold";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(113, 84);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(127, 17);
-            this.label20.TabIndex = 1;
-            this.label20.Text = "Free Item Dish Code";
-            // 
-            // txtTotalAmountThreshold
-            // 
-            this.txtTotalAmountThreshold.Location = new System.Drawing.Point(258, 35);
-            this.txtTotalAmountThreshold.Name = "txtTotalAmountThreshold";
-            this.txtTotalAmountThreshold.Size = new System.Drawing.Size(100, 23);
-            this.txtTotalAmountThreshold.TabIndex = 2;
-            this.txtTotalAmountThreshold.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotalAmountThreshold_KeyPress);
-            // 
-            // txtFreeItem1
-            // 
-            this.txtFreeItem1.Location = new System.Drawing.Point(258, 78);
-            this.txtFreeItem1.Name = "txtFreeItem1";
-            this.txtFreeItem1.Size = new System.Drawing.Size(53, 23);
-            this.txtFreeItem1.TabIndex = 3;
-            this.txtFreeItem1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem1_KeyPress);
-            // 
-            // txtFreeItem2
-            // 
-            this.txtFreeItem2.Location = new System.Drawing.Point(317, 78);
-            this.txtFreeItem2.Name = "txtFreeItem2";
-            this.txtFreeItem2.Size = new System.Drawing.Size(53, 23);
-            this.txtFreeItem2.TabIndex = 4;
-            this.txtFreeItem2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem2_KeyPress);
-            // 
-            // txtFreeItem3
-            // 
-            this.txtFreeItem3.Location = new System.Drawing.Point(376, 78);
-            this.txtFreeItem3.Name = "txtFreeItem3";
-            this.txtFreeItem3.Size = new System.Drawing.Size(53, 23);
-            this.txtFreeItem3.TabIndex = 5;
-            this.txtFreeItem3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem3_KeyPress);
-            // 
-            // txtFreeItem4
-            // 
-            this.txtFreeItem4.Location = new System.Drawing.Point(435, 78);
-            this.txtFreeItem4.Name = "txtFreeItem4";
-            this.txtFreeItem4.Size = new System.Drawing.Size(53, 23);
-            this.txtFreeItem4.TabIndex = 6;
-            this.txtFreeItem4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem4_KeyPress);
-            // 
             // btnFFIExit
             // 
             this.btnFFIExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
@@ -999,6 +941,64 @@
             this.btnFFISave.Text = "Save";
             this.btnFFISave.UseVisualStyleBackColor = false;
             this.btnFFISave.Click += new System.EventHandler(this.btnFFISave_Click);
+            // 
+            // txtFreeItem4
+            // 
+            this.txtFreeItem4.Location = new System.Drawing.Point(435, 78);
+            this.txtFreeItem4.Name = "txtFreeItem4";
+            this.txtFreeItem4.Size = new System.Drawing.Size(53, 23);
+            this.txtFreeItem4.TabIndex = 6;
+            this.txtFreeItem4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem4_KeyPress);
+            // 
+            // txtFreeItem3
+            // 
+            this.txtFreeItem3.Location = new System.Drawing.Point(376, 78);
+            this.txtFreeItem3.Name = "txtFreeItem3";
+            this.txtFreeItem3.Size = new System.Drawing.Size(53, 23);
+            this.txtFreeItem3.TabIndex = 5;
+            this.txtFreeItem3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem3_KeyPress);
+            // 
+            // txtFreeItem2
+            // 
+            this.txtFreeItem2.Location = new System.Drawing.Point(317, 78);
+            this.txtFreeItem2.Name = "txtFreeItem2";
+            this.txtFreeItem2.Size = new System.Drawing.Size(53, 23);
+            this.txtFreeItem2.TabIndex = 4;
+            this.txtFreeItem2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem2_KeyPress);
+            // 
+            // txtFreeItem1
+            // 
+            this.txtFreeItem1.Location = new System.Drawing.Point(258, 78);
+            this.txtFreeItem1.Name = "txtFreeItem1";
+            this.txtFreeItem1.Size = new System.Drawing.Size(53, 23);
+            this.txtFreeItem1.TabIndex = 3;
+            this.txtFreeItem1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtFreeItem1_KeyPress);
+            // 
+            // txtTotalAmountThreshold
+            // 
+            this.txtTotalAmountThreshold.Location = new System.Drawing.Point(258, 35);
+            this.txtTotalAmountThreshold.Name = "txtTotalAmountThreshold";
+            this.txtTotalAmountThreshold.Size = new System.Drawing.Size(100, 23);
+            this.txtTotalAmountThreshold.TabIndex = 2;
+            this.txtTotalAmountThreshold.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTotalAmountThreshold_KeyPress);
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(113, 84);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(127, 17);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "Free Item Dish Code";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(104, 41);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(148, 17);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Total Amount Threshold";
             // 
             // FrmTAConfig
             // 

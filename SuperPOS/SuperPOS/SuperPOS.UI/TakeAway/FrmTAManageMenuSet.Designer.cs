@@ -95,7 +95,7 @@
             // btnCopy
             // 
             this.btnCopy.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCopy.ForeColor = System.Drawing.Color.White;
             this.btnCopy.Location = new System.Drawing.Point(406, 61);
             this.btnCopy.Name = "btnCopy";
@@ -163,7 +163,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(381, 442);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -177,7 +177,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(147, 442);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -217,7 +217,7 @@
             // btnDelMenu4
             // 
             this.btnDelMenu4.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelMenu4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelMenu4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelMenu4.ForeColor = System.Drawing.Color.White;
             this.btnDelMenu4.Location = new System.Drawing.Point(333, 169);
             this.btnDelMenu4.Name = "btnDelMenu4";
@@ -230,7 +230,7 @@
             // btnDelMenu3
             // 
             this.btnDelMenu3.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelMenu3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelMenu3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelMenu3.ForeColor = System.Drawing.Color.White;
             this.btnDelMenu3.Location = new System.Drawing.Point(333, 134);
             this.btnDelMenu3.Name = "btnDelMenu3";
@@ -243,7 +243,7 @@
             // btnDelMenu2
             // 
             this.btnDelMenu2.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelMenu2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelMenu2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelMenu2.ForeColor = System.Drawing.Color.White;
             this.btnDelMenu2.Location = new System.Drawing.Point(333, 99);
             this.btnDelMenu2.Name = "btnDelMenu2";
@@ -256,7 +256,7 @@
             // btnDelMenu1
             // 
             this.btnDelMenu1.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnDelMenu1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDelMenu1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelMenu1.ForeColor = System.Drawing.Color.White;
             this.btnDelMenu1.Location = new System.Drawing.Point(333, 64);
             this.btnDelMenu1.Name = "btnDelMenu1";
@@ -349,7 +349,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(649, 592);
+            this.ClientSize = new System.Drawing.Size(649, 547);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

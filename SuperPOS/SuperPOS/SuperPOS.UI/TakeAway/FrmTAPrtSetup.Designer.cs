@@ -32,22 +32,22 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnGenSave = new System.Windows.Forms.Button();
-            this.btnGenExit = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtTelNo = new System.Windows.Forms.TextBox();
-            this.txtVATNo = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtMsg1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtMsg5 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtMsg4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtMsg3 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtMsg2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtMsg5 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
+            this.txtMsg1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtVATNo = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtTelNo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnGenSave = new System.Windows.Forms.Button();
+            this.btnGenExit = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -108,87 +108,23 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Print Information";
             // 
-            // btnGenSave
+            // txtMsg5
             // 
-            this.btnGenSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnGenSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGenSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnGenSave.ForeColor = System.Drawing.Color.White;
-            this.btnGenSave.Location = new System.Drawing.Point(152, 397);
-            this.btnGenSave.Name = "btnGenSave";
-            this.btnGenSave.Size = new System.Drawing.Size(100, 50);
-            this.btnGenSave.TabIndex = 1;
-            this.btnGenSave.Text = "Save";
-            this.btnGenSave.UseVisualStyleBackColor = false;
-            this.btnGenSave.Click += new System.EventHandler(this.btnGenSave_Click);
+            this.txtMsg5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtMsg5.Location = new System.Drawing.Point(199, 204);
+            this.txtMsg5.Name = "txtMsg5";
+            this.txtMsg5.Size = new System.Drawing.Size(235, 23);
+            this.txtMsg5.TabIndex = 13;
             // 
-            // btnGenExit
+            // label7
             // 
-            this.btnGenExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnGenExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGenExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnGenExit.ForeColor = System.Drawing.Color.White;
-            this.btnGenExit.Location = new System.Drawing.Point(391, 397);
-            this.btnGenExit.Name = "btnGenExit";
-            this.btnGenExit.Size = new System.Drawing.Size(100, 50);
-            this.btnGenExit.TabIndex = 2;
-            this.btnGenExit.Text = "Exit";
-            this.btnGenExit.UseVisualStyleBackColor = false;
-            this.btnGenExit.Click += new System.EventHandler(this.btnGenExit_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(100, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Telephone No.";
-            // 
-            // txtTelNo
-            // 
-            this.txtTelNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtTelNo.Location = new System.Drawing.Point(200, 24);
-            this.txtTelNo.Name = "txtTelNo";
-            this.txtTelNo.Size = new System.Drawing.Size(235, 23);
-            this.txtTelNo.TabIndex = 1;
-            // 
-            // txtVATNo
-            // 
-            this.txtVATNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtVATNo.Location = new System.Drawing.Point(200, 54);
-            this.txtVATNo.Name = "txtVATNo";
-            this.txtVATNo.Size = new System.Drawing.Size(235, 23);
-            this.txtVATNo.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(138, 60);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "VAT No.";
-            // 
-            // txtMsg1
-            // 
-            this.txtMsg1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtMsg1.Location = new System.Drawing.Point(199, 84);
-            this.txtMsg1.Name = "txtMsg1";
-            this.txtMsg1.Size = new System.Drawing.Size(235, 23);
-            this.txtMsg1.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(133, 90);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Message";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(133, 210);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 17);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Message";
             // 
             // txtMsg4
             // 
@@ -244,23 +180,87 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Message";
             // 
-            // txtMsg5
+            // txtMsg1
             // 
-            this.txtMsg5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtMsg5.Location = new System.Drawing.Point(199, 204);
-            this.txtMsg5.Name = "txtMsg5";
-            this.txtMsg5.Size = new System.Drawing.Size(235, 23);
-            this.txtMsg5.TabIndex = 13;
+            this.txtMsg1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtMsg1.Location = new System.Drawing.Point(199, 84);
+            this.txtMsg1.Name = "txtMsg1";
+            this.txtMsg1.Size = new System.Drawing.Size(235, 23);
+            this.txtMsg1.TabIndex = 5;
             // 
-            // label7
+            // label3
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(133, 210);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 17);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Message";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(133, 90);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Message";
+            // 
+            // txtVATNo
+            // 
+            this.txtVATNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtVATNo.Location = new System.Drawing.Point(200, 54);
+            this.txtVATNo.Name = "txtVATNo";
+            this.txtVATNo.Size = new System.Drawing.Size(235, 23);
+            this.txtVATNo.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(138, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 17);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "VAT No.";
+            // 
+            // txtTelNo
+            // 
+            this.txtTelNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtTelNo.Location = new System.Drawing.Point(200, 24);
+            this.txtTelNo.Name = "txtTelNo";
+            this.txtTelNo.Size = new System.Drawing.Size(235, 23);
+            this.txtTelNo.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(100, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 17);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Telephone No.";
+            // 
+            // btnGenSave
+            // 
+            this.btnGenSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnGenSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGenSave.ForeColor = System.Drawing.Color.White;
+            this.btnGenSave.Location = new System.Drawing.Point(152, 397);
+            this.btnGenSave.Name = "btnGenSave";
+            this.btnGenSave.Size = new System.Drawing.Size(100, 50);
+            this.btnGenSave.TabIndex = 1;
+            this.btnGenSave.Text = "Save";
+            this.btnGenSave.UseVisualStyleBackColor = false;
+            this.btnGenSave.Click += new System.EventHandler(this.btnGenSave_Click);
+            // 
+            // btnGenExit
+            // 
+            this.btnGenExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnGenExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGenExit.ForeColor = System.Drawing.Color.White;
+            this.btnGenExit.Location = new System.Drawing.Point(391, 397);
+            this.btnGenExit.Name = "btnGenExit";
+            this.btnGenExit.Size = new System.Drawing.Size(100, 50);
+            this.btnGenExit.TabIndex = 2;
+            this.btnGenExit.Text = "Exit";
+            this.btnGenExit.UseVisualStyleBackColor = false;
+            this.btnGenExit.Click += new System.EventHandler(this.btnGenExit_Click);
             // 
             // FrmTAPrtSetup
             // 

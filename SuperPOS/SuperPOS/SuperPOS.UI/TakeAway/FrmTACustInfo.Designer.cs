@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNotesOnBill = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -59,8 +61,6 @@
             this.txtPhone = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvCust = new System.Windows.Forms.DataGridView();
-            this.txtNotesOnBill = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCust)).BeginInit();
             this.SuspendLayout();
@@ -107,10 +107,26 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Customer Information";
             // 
+            // txtNotesOnBill
+            // 
+            this.txtNotesOnBill.Location = new System.Drawing.Point(117, 334);
+            this.txtNotesOnBill.Name = "txtNotesOnBill";
+            this.txtNotesOnBill.Size = new System.Drawing.Size(142, 23);
+            this.txtNotesOnBill.TabIndex = 31;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(19, 340);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(83, 17);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Notes on bill";
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Olive;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(744, 397);
@@ -124,7 +140,7 @@
             // btnDel
             // 
             this.btnDel.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDel.ForeColor = System.Drawing.Color.White;
             this.btnDel.Location = new System.Drawing.Point(644, 397);
@@ -138,7 +154,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(544, 397);
@@ -152,7 +168,7 @@
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
             this.btnClear.Location = new System.Drawing.Point(444, 397);
@@ -166,7 +182,7 @@
             // btnCID
             // 
             this.btnCID.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnCID.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCID.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCID.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCID.ForeColor = System.Drawing.Color.White;
             this.btnCID.Location = new System.Drawing.Point(344, 397);
@@ -180,7 +196,7 @@
             // btnMap
             // 
             this.btnMap.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnMap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMap.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnMap.ForeColor = System.Drawing.Color.White;
             this.btnMap.Location = new System.Drawing.Point(181, 397);
@@ -193,7 +209,7 @@
             // btnExprotData
             // 
             this.btnExprotData.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnExprotData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExprotData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExprotData.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExprotData.ForeColor = System.Drawing.Color.White;
             this.btnExprotData.Location = new System.Drawing.Point(95, 397);
@@ -206,7 +222,7 @@
             // btnImportData
             // 
             this.btnImportData.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnImportData.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImportData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportData.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnImportData.ForeColor = System.Drawing.Color.White;
             this.btnImportData.Location = new System.Drawing.Point(9, 397);
@@ -399,22 +415,6 @@
             this.dgvCust.Size = new System.Drawing.Size(604, 346);
             this.dgvCust.TabIndex = 0;
             this.dgvCust.SelectionChanged += new System.EventHandler(this.dgvCust_SelectionChanged);
-            // 
-            // txtNotesOnBill
-            // 
-            this.txtNotesOnBill.Location = new System.Drawing.Point(117, 334);
-            this.txtNotesOnBill.Name = "txtNotesOnBill";
-            this.txtNotesOnBill.Size = new System.Drawing.Size(142, 23);
-            this.txtNotesOnBill.TabIndex = 31;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(19, 340);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(83, 17);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Notes on bill";
             // 
             // FrmTACustInfo
             // 
