@@ -45,24 +45,24 @@
             this.txtKey1 = new System.Windows.Forms.TextBox();
             this.chkNotAccountFor = new System.Windows.Forms.CheckBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtImg1 = new System.Windows.Forms.TextBox();
-            this.txtImg2 = new System.Windows.Forms.TextBox();
-            this.txtImg3 = new System.Windows.Forms.TextBox();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.btnImg1 = new System.Windows.Forms.Button();
-            this.btnImg2 = new System.Windows.Forms.Button();
-            this.btnImg3 = new System.Windows.Forms.Button();
+            this.txtImg5 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.btnImg4 = new System.Windows.Forms.Button();
             this.txtImg4 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtImg5 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.btnImg3 = new System.Windows.Forms.Button();
+            this.btnImg2 = new System.Windows.Forms.Button();
+            this.btnImg1 = new System.Windows.Forms.Button();
+            this.txtImg3 = new System.Windows.Forms.TextBox();
+            this.txtImg2 = new System.Windows.Forms.TextBox();
+            this.txtImg1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -261,34 +261,6 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "System Control";
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Olive;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(656, 347);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(110, 50);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.Text = "Exit";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(478, 347);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(110, 50);
-            this.btnSave.TabIndex = 3;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.txtImg5);
@@ -313,93 +285,26 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "System Setting";
             // 
-            // label4
+            // txtImg5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(16, 26);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(331, 20);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Welcoming / Functional choices screen set up：";
+            this.txtImg5.Location = new System.Drawing.Point(20, 257);
+            this.txtImg5.Name = "txtImg5";
+            this.txtImg5.Size = new System.Drawing.Size(354, 26);
+            this.txtImg5.TabIndex = 13;
             // 
-            // label5
+            // label8
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 81);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(243, 20);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Log in screen logo picture set up：";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(16, 135);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(218, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "User login screen logo set up：";
-            // 
-            // txtImg1
-            // 
-            this.txtImg1.Enabled = false;
-            this.txtImg1.Location = new System.Drawing.Point(20, 50);
-            this.txtImg1.Name = "txtImg1";
-            this.txtImg1.Size = new System.Drawing.Size(354, 26);
-            this.txtImg1.TabIndex = 3;
-            // 
-            // txtImg2
-            // 
-            this.txtImg2.Enabled = false;
-            this.txtImg2.Location = new System.Drawing.Point(20, 105);
-            this.txtImg2.Name = "txtImg2";
-            this.txtImg2.Size = new System.Drawing.Size(354, 26);
-            this.txtImg2.TabIndex = 4;
-            // 
-            // txtImg3
-            // 
-            this.txtImg3.Enabled = false;
-            this.txtImg3.Location = new System.Drawing.Point(20, 157);
-            this.txtImg3.Name = "txtImg3";
-            this.txtImg3.Size = new System.Drawing.Size(354, 26);
-            this.txtImg3.TabIndex = 5;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialogImg";
-            // 
-            // btnImg1
-            // 
-            this.btnImg1.Location = new System.Drawing.Point(381, 50);
-            this.btnImg1.Name = "btnImg1";
-            this.btnImg1.Size = new System.Drawing.Size(56, 28);
-            this.btnImg1.TabIndex = 6;
-            this.btnImg1.Text = "...";
-            this.btnImg1.UseVisualStyleBackColor = true;
-            this.btnImg1.Click += new System.EventHandler(this.btnImg1_Click);
-            // 
-            // btnImg2
-            // 
-            this.btnImg2.Location = new System.Drawing.Point(380, 105);
-            this.btnImg2.Name = "btnImg2";
-            this.btnImg2.Size = new System.Drawing.Size(56, 29);
-            this.btnImg2.TabIndex = 7;
-            this.btnImg2.Text = "...";
-            this.btnImg2.UseVisualStyleBackColor = true;
-            this.btnImg2.Click += new System.EventHandler(this.btnImg2_Click);
-            // 
-            // btnImg3
-            // 
-            this.btnImg3.Location = new System.Drawing.Point(380, 156);
-            this.btnImg3.Name = "btnImg3";
-            this.btnImg3.Size = new System.Drawing.Size(56, 30);
-            this.btnImg3.TabIndex = 8;
-            this.btnImg3.Text = "...";
-            this.btnImg3.UseVisualStyleBackColor = true;
-            this.btnImg3.Click += new System.EventHandler(this.btnImg3_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(16, 235);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(263, 20);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Online order website address set up：";
             // 
             // btnImg4
             // 
+            this.btnImg4.FlatAppearance.BorderSize = 0;
+            this.btnImg4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnImg4.Location = new System.Drawing.Point(380, 207);
             this.btnImg4.Name = "btnImg4";
             this.btnImg4.Size = new System.Drawing.Size(56, 30);
@@ -425,21 +330,126 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "Remot Support button position set up：";
             // 
-            // txtImg5
+            // btnImg3
             // 
-            this.txtImg5.Location = new System.Drawing.Point(20, 257);
-            this.txtImg5.Name = "txtImg5";
-            this.txtImg5.Size = new System.Drawing.Size(354, 26);
-            this.txtImg5.TabIndex = 13;
+            this.btnImg3.FlatAppearance.BorderSize = 0;
+            this.btnImg3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImg3.Location = new System.Drawing.Point(380, 156);
+            this.btnImg3.Name = "btnImg3";
+            this.btnImg3.Size = new System.Drawing.Size(56, 30);
+            this.btnImg3.TabIndex = 8;
+            this.btnImg3.Text = "...";
+            this.btnImg3.UseVisualStyleBackColor = true;
+            this.btnImg3.Click += new System.EventHandler(this.btnImg3_Click);
             // 
-            // label8
+            // btnImg2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(16, 235);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(263, 20);
-            this.label8.TabIndex = 12;
-            this.label8.Text = "Online order website address set up：";
+            this.btnImg2.FlatAppearance.BorderSize = 0;
+            this.btnImg2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImg2.Location = new System.Drawing.Point(380, 105);
+            this.btnImg2.Name = "btnImg2";
+            this.btnImg2.Size = new System.Drawing.Size(56, 29);
+            this.btnImg2.TabIndex = 7;
+            this.btnImg2.Text = "...";
+            this.btnImg2.UseVisualStyleBackColor = true;
+            this.btnImg2.Click += new System.EventHandler(this.btnImg2_Click);
+            // 
+            // btnImg1
+            // 
+            this.btnImg1.FlatAppearance.BorderSize = 0;
+            this.btnImg1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImg1.Location = new System.Drawing.Point(381, 50);
+            this.btnImg1.Name = "btnImg1";
+            this.btnImg1.Size = new System.Drawing.Size(56, 28);
+            this.btnImg1.TabIndex = 6;
+            this.btnImg1.Text = "...";
+            this.btnImg1.UseVisualStyleBackColor = true;
+            this.btnImg1.Click += new System.EventHandler(this.btnImg1_Click);
+            // 
+            // txtImg3
+            // 
+            this.txtImg3.Enabled = false;
+            this.txtImg3.Location = new System.Drawing.Point(20, 157);
+            this.txtImg3.Name = "txtImg3";
+            this.txtImg3.Size = new System.Drawing.Size(354, 26);
+            this.txtImg3.TabIndex = 5;
+            // 
+            // txtImg2
+            // 
+            this.txtImg2.Enabled = false;
+            this.txtImg2.Location = new System.Drawing.Point(20, 105);
+            this.txtImg2.Name = "txtImg2";
+            this.txtImg2.Size = new System.Drawing.Size(354, 26);
+            this.txtImg2.TabIndex = 4;
+            // 
+            // txtImg1
+            // 
+            this.txtImg1.Enabled = false;
+            this.txtImg1.Location = new System.Drawing.Point(20, 50);
+            this.txtImg1.Name = "txtImg1";
+            this.txtImg1.Size = new System.Drawing.Size(354, 26);
+            this.txtImg1.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(16, 135);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(218, 20);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "User login screen logo set up：";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 81);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(243, 20);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Log in screen logo picture set up：";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(16, 26);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(331, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Welcoming / Functional choices screen set up：";
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Olive;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Location = new System.Drawing.Point(656, 347);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(110, 50);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(478, 347);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(110, 50);
+            this.btnSave.TabIndex = 3;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialogImg";
             // 
             // FrmSysCtl
             // 
