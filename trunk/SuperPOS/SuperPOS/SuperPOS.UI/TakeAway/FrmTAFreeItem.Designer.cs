@@ -57,7 +57,8 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCancel.Location = new System.Drawing.Point(160, 125);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -71,7 +72,8 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSave.Location = new System.Drawing.Point(10, 125);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -85,7 +87,8 @@
             // btnFreeItem4
             // 
             this.btnFreeItem4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnFreeItem4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFreeItem4.FlatAppearance.BorderSize = 0;
+            this.btnFreeItem4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFreeItem4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnFreeItem4.Location = new System.Drawing.Point(160, 77);
             this.btnFreeItem4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -98,7 +101,8 @@
             // btnFreeItem3
             // 
             this.btnFreeItem3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnFreeItem3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFreeItem3.FlatAppearance.BorderSize = 0;
+            this.btnFreeItem3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFreeItem3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnFreeItem3.Location = new System.Drawing.Point(10, 77);
             this.btnFreeItem3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -111,7 +115,8 @@
             // btnFreeItem2
             // 
             this.btnFreeItem2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnFreeItem2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFreeItem2.FlatAppearance.BorderSize = 0;
+            this.btnFreeItem2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFreeItem2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnFreeItem2.Location = new System.Drawing.Point(160, 29);
             this.btnFreeItem2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -124,7 +129,8 @@
             // btnFreeItem1
             // 
             this.btnFreeItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnFreeItem1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFreeItem1.FlatAppearance.BorderSize = 0;
+            this.btnFreeItem1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFreeItem1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnFreeItem1.Location = new System.Drawing.Point(10, 29);
             this.btnFreeItem1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtDate = new System.Windows.Forms.TextBox();
+            this.txtTime = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtTime = new System.Windows.Forms.TextBox();
-            this.txtDate = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtComePhone = new System.Windows.Forms.TextBox();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnTableBooking = new System.Windows.Forms.Button();
-            this.txtCurTime = new System.Windows.Forms.TextBox();
-            this.txtOutTime = new System.Windows.Forms.TextBox();
-            this.btnDelivery = new System.Windows.Forms.Button();
-            this.btnCollection = new System.Windows.Forms.Button();
-            this.btnAdd5 = new System.Windows.Forms.Button();
-            this.btnAdd10 = new System.Windows.Forms.Button();
-            this.btnAdd15 = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnAddBasic30 = new System.Windows.Forms.Button();
-            this.btnAdd40 = new System.Windows.Forms.Button();
-            this.btnAdd30 = new System.Windows.Forms.Button();
-            this.btnAdd20 = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
             this.btnReduce = new System.Windows.Forms.Button();
             this.btnAdd80 = new System.Windows.Forms.Button();
             this.btnAdd60 = new System.Windows.Forms.Button();
             this.btnAdd50 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
+            this.btnAddBasic30 = new System.Windows.Forms.Button();
+            this.btnAdd40 = new System.Windows.Forms.Button();
+            this.btnAdd30 = new System.Windows.Forms.Button();
+            this.btnAdd20 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnAdd15 = new System.Windows.Forms.Button();
+            this.btnAdd10 = new System.Windows.Forms.Button();
+            this.btnAdd5 = new System.Windows.Forms.Button();
+            this.btnCollection = new System.Windows.Forms.Button();
+            this.btnDelivery = new System.Windows.Forms.Button();
+            this.txtOutTime = new System.Windows.Forms.TextBox();
+            this.txtCurTime = new System.Windows.Forms.TextBox();
+            this.btnTableBooking = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.txtComePhone = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,24 @@
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Caller ID Information";
+            // 
+            // txtDate
+            // 
+            this.txtDate.Location = new System.Drawing.Point(164, 37);
+            this.txtDate.Name = "txtDate";
+            this.txtDate.Size = new System.Drawing.Size(116, 29);
+            this.txtDate.TabIndex = 1;
+            this.txtDate.Text = "2015-12-04";
+            this.txtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtTime
+            // 
+            this.txtTime.Location = new System.Drawing.Point(37, 37);
+            this.txtTime.Name = "txtTime";
+            this.txtTime.Size = new System.Drawing.Size(116, 29);
+            this.txtTime.TabIndex = 0;
+            this.txtTime.Text = "18:35";
+            this.txtTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnExit
             // 
@@ -113,216 +131,22 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
-            // txtTime
+            // label12
             // 
-            this.txtTime.Location = new System.Drawing.Point(37, 37);
-            this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(116, 29);
-            this.txtTime.TabIndex = 0;
-            this.txtTime.Text = "18:35";
-            this.txtTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtDate
-            // 
-            this.txtDate.Location = new System.Drawing.Point(164, 37);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(116, 29);
-            this.txtDate.TabIndex = 1;
-            this.txtDate.Text = "2015-12-04";
-            this.txtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(27, 38);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(158, 21);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Telephone Number";
-            // 
-            // txtComePhone
-            // 
-            this.txtComePhone.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtComePhone.ForeColor = System.Drawing.Color.Red;
-            this.txtComePhone.Location = new System.Drawing.Point(23, 62);
-            this.txtComePhone.Name = "txtComePhone";
-            this.txtComePhone.Size = new System.Drawing.Size(168, 34);
-            this.txtComePhone.TabIndex = 1;
-            this.txtComePhone.Text = "07533375888";
-            this.txtComePhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEdit.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(211, 26);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(90, 45);
-            this.btnEdit.TabIndex = 2;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // btnTableBooking
-            // 
-            this.btnTableBooking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnTableBooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnTableBooking.ForeColor = System.Drawing.Color.White;
-            this.btnTableBooking.Location = new System.Drawing.Point(211, 76);
-            this.btnTableBooking.Name = "btnTableBooking";
-            this.btnTableBooking.Size = new System.Drawing.Size(90, 45);
-            this.btnTableBooking.TabIndex = 3;
-            this.btnTableBooking.Text = "Table Booking";
-            this.btnTableBooking.UseVisualStyleBackColor = false;
-            // 
-            // txtCurTime
-            // 
-            this.txtCurTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtCurTime.Location = new System.Drawing.Point(19, 205);
-            this.txtCurTime.Name = "txtCurTime";
-            this.txtCurTime.Size = new System.Drawing.Size(118, 29);
-            this.txtCurTime.TabIndex = 4;
-            this.txtCurTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtOutTime
-            // 
-            this.txtOutTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtOutTime.Location = new System.Drawing.Point(153, 205);
-            this.txtOutTime.Name = "txtOutTime";
-            this.txtOutTime.Size = new System.Drawing.Size(118, 29);
-            this.txtOutTime.TabIndex = 5;
-            this.txtOutTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnDelivery
-            // 
-            this.btnDelivery.BackColor = System.Drawing.Color.Red;
-            this.btnDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDelivery.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnDelivery.ForeColor = System.Drawing.Color.White;
-            this.btnDelivery.Location = new System.Drawing.Point(31, 149);
-            this.btnDelivery.Name = "btnDelivery";
-            this.btnDelivery.Size = new System.Drawing.Size(100, 50);
-            this.btnDelivery.TabIndex = 6;
-            this.btnDelivery.Text = "Delivery";
-            this.btnDelivery.UseVisualStyleBackColor = false;
-            this.btnDelivery.Click += new System.EventHandler(this.btnDelivery_Click);
-            // 
-            // btnCollection
-            // 
-            this.btnCollection.BackColor = System.Drawing.Color.Gray;
-            this.btnCollection.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCollection.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCollection.ForeColor = System.Drawing.Color.White;
-            this.btnCollection.Location = new System.Drawing.Point(164, 149);
-            this.btnCollection.Name = "btnCollection";
-            this.btnCollection.Size = new System.Drawing.Size(100, 50);
-            this.btnCollection.TabIndex = 7;
-            this.btnCollection.Text = "Collection";
-            this.btnCollection.UseVisualStyleBackColor = false;
-            this.btnCollection.Click += new System.EventHandler(this.btnCollection_Click);
-            // 
-            // btnAdd5
-            // 
-            this.btnAdd5.BackColor = System.Drawing.Color.Green;
-            this.btnAdd5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAdd5.Location = new System.Drawing.Point(19, 263);
-            this.btnAdd5.Name = "btnAdd5";
-            this.btnAdd5.Size = new System.Drawing.Size(60, 40);
-            this.btnAdd5.TabIndex = 8;
-            this.btnAdd5.Text = "+ 5";
-            this.btnAdd5.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd10
-            // 
-            this.btnAdd10.BackColor = System.Drawing.Color.Green;
-            this.btnAdd10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAdd10.Location = new System.Drawing.Point(86, 263);
-            this.btnAdd10.Name = "btnAdd10";
-            this.btnAdd10.Size = new System.Drawing.Size(60, 40);
-            this.btnAdd10.TabIndex = 9;
-            this.btnAdd10.Text = "+ 10";
-            this.btnAdd10.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd15
-            // 
-            this.btnAdd15.BackColor = System.Drawing.Color.Green;
-            this.btnAdd15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAdd15.Location = new System.Drawing.Point(153, 263);
-            this.btnAdd15.Name = "btnAdd15";
-            this.btnAdd15.Size = new System.Drawing.Size(60, 40);
-            this.btnAdd15.TabIndex = 10;
-            this.btnAdd15.Text = "+ 15";
-            this.btnAdd15.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.Red;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(220, 263);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(60, 40);
-            this.btnAdd.TabIndex = 11;
-            this.btnAdd.Text = "+";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // btnAddBasic30
-            // 
-            this.btnAddBasic30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnAddBasic30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAddBasic30.Location = new System.Drawing.Point(220, 307);
-            this.btnAddBasic30.Name = "btnAddBasic30";
-            this.btnAddBasic30.Size = new System.Drawing.Size(60, 40);
-            this.btnAddBasic30.TabIndex = 15;
-            this.btnAddBasic30.Text = "+ 30";
-            this.btnAddBasic30.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd40
-            // 
-            this.btnAdd40.BackColor = System.Drawing.Color.Green;
-            this.btnAdd40.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd40.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAdd40.Location = new System.Drawing.Point(153, 307);
-            this.btnAdd40.Name = "btnAdd40";
-            this.btnAdd40.Size = new System.Drawing.Size(60, 40);
-            this.btnAdd40.TabIndex = 14;
-            this.btnAdd40.Text = "+ 40";
-            this.btnAdd40.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd30
-            // 
-            this.btnAdd30.BackColor = System.Drawing.Color.Green;
-            this.btnAdd30.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd30.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAdd30.Location = new System.Drawing.Point(86, 307);
-            this.btnAdd30.Name = "btnAdd30";
-            this.btnAdd30.Size = new System.Drawing.Size(60, 40);
-            this.btnAdd30.TabIndex = 13;
-            this.btnAdd30.Text = "+ 30";
-            this.btnAdd30.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd20
-            // 
-            this.btnAdd20.BackColor = System.Drawing.Color.Green;
-            this.btnAdd20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAdd20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAdd20.Location = new System.Drawing.Point(19, 307);
-            this.btnAdd20.Name = "btnAdd20";
-            this.btnAdd20.Size = new System.Drawing.Size(60, 40);
-            this.btnAdd20.TabIndex = 12;
-            this.btnAdd20.Text = "+ 20";
-            this.btnAdd20.UseVisualStyleBackColor = false;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.ForeColor = System.Drawing.Color.Blue;
+            this.label12.Location = new System.Drawing.Point(15, 99);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(194, 22);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "This is a new customer";
             // 
             // btnReduce
             // 
             this.btnReduce.BackColor = System.Drawing.Color.Red;
-            this.btnReduce.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnReduce.FlatAppearance.BorderSize = 0;
+            this.btnReduce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReduce.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnReduce.ForeColor = System.Drawing.Color.White;
             this.btnReduce.Location = new System.Drawing.Point(220, 351);
@@ -335,7 +159,8 @@
             // btnAdd80
             // 
             this.btnAdd80.BackColor = System.Drawing.Color.Green;
-            this.btnAdd80.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd80.FlatAppearance.BorderSize = 0;
+            this.btnAdd80.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd80.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnAdd80.Location = new System.Drawing.Point(153, 351);
             this.btnAdd80.Name = "btnAdd80";
@@ -347,7 +172,8 @@
             // btnAdd60
             // 
             this.btnAdd60.BackColor = System.Drawing.Color.Green;
-            this.btnAdd60.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd60.FlatAppearance.BorderSize = 0;
+            this.btnAdd60.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd60.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnAdd60.Location = new System.Drawing.Point(86, 351);
             this.btnAdd60.Name = "btnAdd60";
@@ -359,7 +185,8 @@
             // btnAdd50
             // 
             this.btnAdd50.BackColor = System.Drawing.Color.Green;
-            this.btnAdd50.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd50.FlatAppearance.BorderSize = 0;
+            this.btnAdd50.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd50.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnAdd50.Location = new System.Drawing.Point(19, 351);
             this.btnAdd50.Name = "btnAdd50";
@@ -368,16 +195,205 @@
             this.btnAdd50.Text = "+ 50";
             this.btnAdd50.UseVisualStyleBackColor = false;
             // 
-            // label12
+            // btnAddBasic30
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.ForeColor = System.Drawing.Color.Blue;
-            this.label12.Location = new System.Drawing.Point(15, 99);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(194, 22);
-            this.label12.TabIndex = 20;
-            this.label12.Text = "This is a new customer";
+            this.btnAddBasic30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnAddBasic30.FlatAppearance.BorderSize = 0;
+            this.btnAddBasic30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddBasic30.Location = new System.Drawing.Point(220, 307);
+            this.btnAddBasic30.Name = "btnAddBasic30";
+            this.btnAddBasic30.Size = new System.Drawing.Size(60, 40);
+            this.btnAddBasic30.TabIndex = 15;
+            this.btnAddBasic30.Text = "+ 30";
+            this.btnAddBasic30.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd40
+            // 
+            this.btnAdd40.BackColor = System.Drawing.Color.Green;
+            this.btnAdd40.FlatAppearance.BorderSize = 0;
+            this.btnAdd40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd40.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAdd40.Location = new System.Drawing.Point(153, 307);
+            this.btnAdd40.Name = "btnAdd40";
+            this.btnAdd40.Size = new System.Drawing.Size(60, 40);
+            this.btnAdd40.TabIndex = 14;
+            this.btnAdd40.Text = "+ 40";
+            this.btnAdd40.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd30
+            // 
+            this.btnAdd30.BackColor = System.Drawing.Color.Green;
+            this.btnAdd30.FlatAppearance.BorderSize = 0;
+            this.btnAdd30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd30.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAdd30.Location = new System.Drawing.Point(86, 307);
+            this.btnAdd30.Name = "btnAdd30";
+            this.btnAdd30.Size = new System.Drawing.Size(60, 40);
+            this.btnAdd30.TabIndex = 13;
+            this.btnAdd30.Text = "+ 30";
+            this.btnAdd30.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd20
+            // 
+            this.btnAdd20.BackColor = System.Drawing.Color.Green;
+            this.btnAdd20.FlatAppearance.BorderSize = 0;
+            this.btnAdd20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd20.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAdd20.Location = new System.Drawing.Point(19, 307);
+            this.btnAdd20.Name = "btnAdd20";
+            this.btnAdd20.Size = new System.Drawing.Size(60, 40);
+            this.btnAdd20.TabIndex = 12;
+            this.btnAdd20.Text = "+ 20";
+            this.btnAdd20.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.Red;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(220, 263);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(60, 40);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "+";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd15
+            // 
+            this.btnAdd15.BackColor = System.Drawing.Color.Green;
+            this.btnAdd15.FlatAppearance.BorderSize = 0;
+            this.btnAdd15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd15.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAdd15.Location = new System.Drawing.Point(153, 263);
+            this.btnAdd15.Name = "btnAdd15";
+            this.btnAdd15.Size = new System.Drawing.Size(60, 40);
+            this.btnAdd15.TabIndex = 10;
+            this.btnAdd15.Text = "+ 15";
+            this.btnAdd15.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd10
+            // 
+            this.btnAdd10.BackColor = System.Drawing.Color.Green;
+            this.btnAdd10.FlatAppearance.BorderSize = 0;
+            this.btnAdd10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAdd10.Location = new System.Drawing.Point(86, 263);
+            this.btnAdd10.Name = "btnAdd10";
+            this.btnAdd10.Size = new System.Drawing.Size(60, 40);
+            this.btnAdd10.TabIndex = 9;
+            this.btnAdd10.Text = "+ 10";
+            this.btnAdd10.UseVisualStyleBackColor = false;
+            // 
+            // btnAdd5
+            // 
+            this.btnAdd5.BackColor = System.Drawing.Color.Green;
+            this.btnAdd5.FlatAppearance.BorderSize = 0;
+            this.btnAdd5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAdd5.Location = new System.Drawing.Point(19, 263);
+            this.btnAdd5.Name = "btnAdd5";
+            this.btnAdd5.Size = new System.Drawing.Size(60, 40);
+            this.btnAdd5.TabIndex = 8;
+            this.btnAdd5.Text = "+ 5";
+            this.btnAdd5.UseVisualStyleBackColor = false;
+            // 
+            // btnCollection
+            // 
+            this.btnCollection.BackColor = System.Drawing.Color.Gray;
+            this.btnCollection.FlatAppearance.BorderSize = 0;
+            this.btnCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCollection.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCollection.ForeColor = System.Drawing.Color.White;
+            this.btnCollection.Location = new System.Drawing.Point(164, 149);
+            this.btnCollection.Name = "btnCollection";
+            this.btnCollection.Size = new System.Drawing.Size(100, 50);
+            this.btnCollection.TabIndex = 7;
+            this.btnCollection.Text = "Collection";
+            this.btnCollection.UseVisualStyleBackColor = false;
+            this.btnCollection.Click += new System.EventHandler(this.btnCollection_Click);
+            // 
+            // btnDelivery
+            // 
+            this.btnDelivery.BackColor = System.Drawing.Color.Red;
+            this.btnDelivery.FlatAppearance.BorderSize = 0;
+            this.btnDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelivery.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDelivery.ForeColor = System.Drawing.Color.White;
+            this.btnDelivery.Location = new System.Drawing.Point(31, 149);
+            this.btnDelivery.Name = "btnDelivery";
+            this.btnDelivery.Size = new System.Drawing.Size(100, 50);
+            this.btnDelivery.TabIndex = 6;
+            this.btnDelivery.Text = "Delivery";
+            this.btnDelivery.UseVisualStyleBackColor = false;
+            this.btnDelivery.Click += new System.EventHandler(this.btnDelivery_Click);
+            // 
+            // txtOutTime
+            // 
+            this.txtOutTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtOutTime.Location = new System.Drawing.Point(153, 205);
+            this.txtOutTime.Name = "txtOutTime";
+            this.txtOutTime.Size = new System.Drawing.Size(118, 29);
+            this.txtOutTime.TabIndex = 5;
+            this.txtOutTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtCurTime
+            // 
+            this.txtCurTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtCurTime.Location = new System.Drawing.Point(19, 205);
+            this.txtCurTime.Name = "txtCurTime";
+            this.txtCurTime.Size = new System.Drawing.Size(118, 29);
+            this.txtCurTime.TabIndex = 4;
+            this.txtCurTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnTableBooking
+            // 
+            this.btnTableBooking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnTableBooking.FlatAppearance.BorderSize = 0;
+            this.btnTableBooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTableBooking.ForeColor = System.Drawing.Color.White;
+            this.btnTableBooking.Location = new System.Drawing.Point(211, 76);
+            this.btnTableBooking.Name = "btnTableBooking";
+            this.btnTableBooking.Size = new System.Drawing.Size(90, 45);
+            this.btnTableBooking.TabIndex = 3;
+            this.btnTableBooking.Text = "Table Booking";
+            this.btnTableBooking.UseVisualStyleBackColor = false;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(211, 26);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(90, 45);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            // 
+            // txtComePhone
+            // 
+            this.txtComePhone.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtComePhone.ForeColor = System.Drawing.Color.Red;
+            this.txtComePhone.Location = new System.Drawing.Point(23, 62);
+            this.txtComePhone.Name = "txtComePhone";
+            this.txtComePhone.Size = new System.Drawing.Size(168, 34);
+            this.txtComePhone.TabIndex = 1;
+            this.txtComePhone.Text = "07533375888";
+            this.txtComePhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label11.Location = new System.Drawing.Point(27, 38);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(158, 21);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Telephone Number";
             // 
             // FrmCallNewCus
             // 

@@ -51,6 +51,7 @@
             // btnCollection
             // 
             this.btnCollection.BackColor = System.Drawing.Color.Lime;
+            this.btnCollection.FlatAppearance.BorderSize = 0;
             this.btnCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCollection.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCollection.Location = new System.Drawing.Point(239, 22);
@@ -64,6 +65,7 @@
             // btnDelivery
             // 
             this.btnDelivery.BackColor = System.Drawing.Color.Lime;
+            this.btnDelivery.FlatAppearance.BorderSize = 0;
             this.btnDelivery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelivery.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDelivery.Location = new System.Drawing.Point(122, 22);
@@ -77,7 +79,8 @@
             // btnShop
             // 
             this.btnShop.BackColor = System.Drawing.Color.Lime;
-            this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnShop.FlatAppearance.BorderSize = 0;
+            this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShop.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnShop.Location = new System.Drawing.Point(7, 23);
             this.btnShop.Name = "btnShop";

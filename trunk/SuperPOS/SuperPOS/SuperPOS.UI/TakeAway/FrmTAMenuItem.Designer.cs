@@ -599,7 +599,7 @@
             // btnDAEdit
             // 
             this.btnDAEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDAEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDAEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDAEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDAEdit.ForeColor = System.Drawing.Color.White;
             this.btnDAEdit.Location = new System.Drawing.Point(101, 527);
@@ -635,7 +635,7 @@
             // btnDAExit
             // 
             this.btnDAExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDAExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDAExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDAExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDAExit.ForeColor = System.Drawing.Color.White;
             this.btnDAExit.Location = new System.Drawing.Point(450, 527);
@@ -660,7 +660,7 @@
             // btnDASave
             // 
             this.btnDASave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDASave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDASave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDASave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDASave.ForeColor = System.Drawing.Color.White;
             this.btnDASave.Location = new System.Drawing.Point(273, 527);
@@ -685,7 +685,7 @@
             // btnDADel
             // 
             this.btnDADel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDADel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDADel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDADel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDADel.ForeColor = System.Drawing.Color.White;
             this.btnDADel.Location = new System.Drawing.Point(187, 527);
@@ -710,7 +710,7 @@
             // btnDACopy
             // 
             this.btnDACopy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDACopy.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDACopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDACopy.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDACopy.ForeColor = System.Drawing.Color.White;
             this.btnDACopy.Location = new System.Drawing.Point(359, 527);
@@ -746,15 +746,17 @@
             // 
             // btnDishNameCopy
             // 
+            this.btnDishNameCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDishNameCopy.Location = new System.Drawing.Point(182, 60);
             this.btnDishNameCopy.Name = "btnDishNameCopy";
-            this.btnDishNameCopy.Size = new System.Drawing.Size(75, 23);
+            this.btnDishNameCopy.Size = new System.Drawing.Size(75, 26);
             this.btnDishNameCopy.TabIndex = 11;
             this.btnDishNameCopy.Text = "Copy";
             this.btnDishNameCopy.UseVisualStyleBackColor = true;
             // 
             // btnDishNameSearch
             // 
+            this.btnDishNameSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDishNameSearch.Location = new System.Drawing.Point(182, 33);
             this.btnDishNameSearch.Name = "btnDishNameSearch";
             this.btnDishNameSearch.Size = new System.Drawing.Size(75, 23);
@@ -781,7 +783,7 @@
             // btnDAAdd
             // 
             this.btnDAAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDAAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDAAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDAAdd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDAAdd.ForeColor = System.Drawing.Color.White;
             this.btnDAAdd.Location = new System.Drawing.Point(15, 527);
@@ -841,7 +843,8 @@
             // btnDADishCodeSearch
             // 
             this.btnDADishCodeSearch.BackColor = System.Drawing.Color.Orange;
-            this.btnDADishCodeSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDADishCodeSearch.FlatAppearance.BorderSize = 0;
+            this.btnDADishCodeSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDADishCodeSearch.ForeColor = System.Drawing.Color.Black;
             this.btnDADishCodeSearch.Location = new System.Drawing.Point(163, 40);
             this.btnDADishCodeSearch.Name = "btnDADishCodeSearch";
@@ -1894,9 +1897,10 @@
             // 
             // btnCopyChoices
             // 
+            this.btnCopyChoices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCopyChoices.Location = new System.Drawing.Point(290, 28);
             this.btnCopyChoices.Name = "btnCopyChoices";
-            this.btnCopyChoices.Size = new System.Drawing.Size(97, 23);
+            this.btnCopyChoices.Size = new System.Drawing.Size(97, 31);
             this.btnCopyChoices.TabIndex = 51;
             this.btnCopyChoices.Text = "Copy Choices";
             this.btnCopyChoices.UseVisualStyleBackColor = true;
@@ -1904,7 +1908,7 @@
             // btnSCExit
             // 
             this.btnSCExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSCExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSCExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSCExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSCExit.ForeColor = System.Drawing.Color.White;
             this.btnSCExit.Location = new System.Drawing.Point(246, 534);
@@ -1918,7 +1922,7 @@
             // btnSCSave
             // 
             this.btnSCSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSCSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSCSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSCSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSCSave.ForeColor = System.Drawing.Color.White;
             this.btnSCSave.Location = new System.Drawing.Point(72, 534);
@@ -1978,7 +1982,8 @@
             // btnSCDishCodeSearch
             // 
             this.btnSCDishCodeSearch.BackColor = System.Drawing.Color.Orange;
-            this.btnSCDishCodeSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSCDishCodeSearch.FlatAppearance.BorderSize = 0;
+            this.btnSCDishCodeSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSCDishCodeSearch.ForeColor = System.Drawing.Color.Black;
             this.btnSCDishCodeSearch.Location = new System.Drawing.Point(163, 40);
             this.btnSCDishCodeSearch.Name = "btnSCDishCodeSearch";
@@ -2399,9 +2404,10 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(359, 29);
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(366, 22);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 23);
+            this.button1.Size = new System.Drawing.Size(97, 30);
             this.button1.TabIndex = 51;
             this.button1.Text = "Copy Choices";
             this.button1.UseVisualStyleBackColor = true;
@@ -2738,7 +2744,8 @@
             // btnTCExit
             // 
             this.btnTCExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTCExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTCExit.FlatAppearance.BorderSize = 0;
+            this.btnTCExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTCExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTCExit.ForeColor = System.Drawing.Color.White;
             this.btnTCExit.Location = new System.Drawing.Point(250, 532);
@@ -2752,7 +2759,8 @@
             // btnTCSave
             // 
             this.btnTCSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTCSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTCSave.FlatAppearance.BorderSize = 0;
+            this.btnTCSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTCSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTCSave.ForeColor = System.Drawing.Color.White;
             this.btnTCSave.Location = new System.Drawing.Point(66, 532);
@@ -2812,7 +2820,8 @@
             // btnTCDishCodeSearch
             // 
             this.btnTCDishCodeSearch.BackColor = System.Drawing.Color.Orange;
-            this.btnTCDishCodeSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTCDishCodeSearch.FlatAppearance.BorderSize = 0;
+            this.btnTCDishCodeSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTCDishCodeSearch.ForeColor = System.Drawing.Color.Black;
             this.btnTCDishCodeSearch.Location = new System.Drawing.Point(163, 40);
             this.btnTCDishCodeSearch.Name = "btnTCDishCodeSearch";
@@ -3233,9 +3242,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(359, 29);
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Location = new System.Drawing.Point(354, 24);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(97, 23);
+            this.button2.Size = new System.Drawing.Size(97, 26);
             this.button2.TabIndex = 51;
             this.button2.Text = "Copy Choices";
             this.button2.UseVisualStyleBackColor = true;
@@ -3572,7 +3582,7 @@
             // btnTHExit
             // 
             this.btnTHExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTHExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTHExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTHExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTHExit.ForeColor = System.Drawing.Color.White;
             this.btnTHExit.Location = new System.Drawing.Point(242, 531);
@@ -3586,7 +3596,7 @@
             // btnTHSave
             // 
             this.btnTHSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnTHSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTHSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTHSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTHSave.ForeColor = System.Drawing.Color.White;
             this.btnTHSave.Location = new System.Drawing.Point(82, 531);
@@ -3646,7 +3656,8 @@
             // btnTHDishCodeSearch
             // 
             this.btnTHDishCodeSearch.BackColor = System.Drawing.Color.Orange;
-            this.btnTHDishCodeSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTHDishCodeSearch.FlatAppearance.BorderSize = 0;
+            this.btnTHDishCodeSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTHDishCodeSearch.ForeColor = System.Drawing.Color.Black;
             this.btnTHDishCodeSearch.Location = new System.Drawing.Point(163, 40);
             this.btnTHDishCodeSearch.Name = "btnTHDishCodeSearch";
@@ -4319,7 +4330,7 @@
             // btnSubMenuEdit
             // 
             this.btnSubMenuEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSubMenuEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubMenuEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubMenuEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSubMenuEdit.ForeColor = System.Drawing.Color.White;
             this.btnSubMenuEdit.Location = new System.Drawing.Point(116, 528);
@@ -4333,7 +4344,7 @@
             // btnSubMenuExit
             // 
             this.btnSubMenuExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSubMenuExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubMenuExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubMenuExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSubMenuExit.ForeColor = System.Drawing.Color.White;
             this.btnSubMenuExit.Location = new System.Drawing.Point(374, 528);
@@ -4347,7 +4358,7 @@
             // btnSubMenuSave
             // 
             this.btnSubMenuSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSubMenuSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubMenuSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubMenuSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSubMenuSave.ForeColor = System.Drawing.Color.White;
             this.btnSubMenuSave.Location = new System.Drawing.Point(288, 528);
@@ -4361,7 +4372,7 @@
             // btnSubMenuDel
             // 
             this.btnSubMenuDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSubMenuDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubMenuDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubMenuDel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSubMenuDel.ForeColor = System.Drawing.Color.White;
             this.btnSubMenuDel.Location = new System.Drawing.Point(202, 528);
@@ -4375,7 +4386,7 @@
             // btnSubMenuAdd
             // 
             this.btnSubMenuAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSubMenuAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSubMenuAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubMenuAdd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSubMenuAdd.ForeColor = System.Drawing.Color.White;
             this.btnSubMenuAdd.Location = new System.Drawing.Point(30, 528);
@@ -4410,7 +4421,7 @@
             // btnImportMenuCate
             // 
             this.btnImportMenuCate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnImportMenuCate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImportMenuCate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportMenuCate.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnImportMenuCate.ForeColor = System.Drawing.Color.White;
             this.btnImportMenuCate.Location = new System.Drawing.Point(188, 227);
@@ -4424,7 +4435,7 @@
             // btnImportMenu
             // 
             this.btnImportMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnImportMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnImportMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportMenu.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnImportMenu.ForeColor = System.Drawing.Color.White;
             this.btnImportMenu.Location = new System.Drawing.Point(188, 128);

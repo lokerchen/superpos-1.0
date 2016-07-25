@@ -95,7 +95,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(52, 427);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
@@ -109,7 +109,7 @@
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(159, 384);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
@@ -123,7 +123,7 @@
             // btnDel
             // 
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.ForeColor = System.Drawing.Color.White;
             this.btnDel.Location = new System.Drawing.Point(50, 384);
             this.btnDel.Margin = new System.Windows.Forms.Padding(4);
@@ -137,7 +137,7 @@
             // btnEdit
             // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Location = new System.Drawing.Point(159, 341);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
@@ -151,7 +151,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Location = new System.Drawing.Point(50, 341);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
@@ -186,7 +186,7 @@
             // 
             this.btnOthers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnOthers.Enabled = false;
-            this.btnOthers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnOthers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOthers.ForeColor = System.Drawing.Color.White;
             this.btnOthers.Location = new System.Drawing.Point(24, 425);
             this.btnOthers.Margin = new System.Windows.Forms.Padding(4);
@@ -200,7 +200,7 @@
             // 
             this.btnCooking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnCooking.Enabled = false;
-            this.btnCooking.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCooking.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCooking.ForeColor = System.Drawing.Color.White;
             this.btnCooking.Location = new System.Drawing.Point(24, 380);
             this.btnCooking.Margin = new System.Windows.Forms.Padding(4);
@@ -214,7 +214,7 @@
             // 
             this.btnFruit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnFruit.Enabled = false;
-            this.btnFruit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFruit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFruit.ForeColor = System.Drawing.Color.White;
             this.btnFruit.Location = new System.Drawing.Point(24, 335);
             this.btnFruit.Margin = new System.Windows.Forms.Padding(4);
@@ -228,7 +228,7 @@
             // 
             this.btnTaste.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnTaste.Enabled = false;
-            this.btnTaste.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnTaste.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaste.ForeColor = System.Drawing.Color.White;
             this.btnTaste.Location = new System.Drawing.Point(24, 290);
             this.btnTaste.Margin = new System.Windows.Forms.Padding(4);
@@ -242,7 +242,7 @@
             // 
             this.btnSauce.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSauce.Enabled = false;
-            this.btnSauce.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSauce.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSauce.ForeColor = System.Drawing.Color.White;
             this.btnSauce.Location = new System.Drawing.Point(24, 245);
             this.btnSauce.Margin = new System.Windows.Forms.Padding(4);
@@ -256,7 +256,7 @@
             // 
             this.btnSeafood.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSeafood.Enabled = false;
-            this.btnSeafood.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSeafood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeafood.ForeColor = System.Drawing.Color.White;
             this.btnSeafood.Location = new System.Drawing.Point(24, 200);
             this.btnSeafood.Margin = new System.Windows.Forms.Padding(4);
@@ -270,7 +270,7 @@
             // 
             this.btnMeat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnMeat.Enabled = false;
-            this.btnMeat.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMeat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMeat.ForeColor = System.Drawing.Color.White;
             this.btnMeat.Location = new System.Drawing.Point(24, 155);
             this.btnMeat.Margin = new System.Windows.Forms.Padding(4);
@@ -284,7 +284,7 @@
             // 
             this.btnBean.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnBean.Enabled = false;
-            this.btnBean.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnBean.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBean.ForeColor = System.Drawing.Color.White;
             this.btnBean.Location = new System.Drawing.Point(24, 110);
             this.btnBean.Margin = new System.Windows.Forms.Padding(4);
@@ -298,7 +298,7 @@
             // 
             this.btnVegetable2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnVegetable2.Enabled = false;
-            this.btnVegetable2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVegetable2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVegetable2.ForeColor = System.Drawing.Color.White;
             this.btnVegetable2.Location = new System.Drawing.Point(24, 65);
             this.btnVegetable2.Margin = new System.Windows.Forms.Padding(4);
@@ -312,7 +312,7 @@
             // 
             this.btnVegetable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnVegetable.Enabled = false;
-            this.btnVegetable.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVegetable.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVegetable.ForeColor = System.Drawing.Color.White;
             this.btnVegetable.Location = new System.Drawing.Point(24, 20);
             this.btnVegetable.Margin = new System.Windows.Forms.Padding(4);
