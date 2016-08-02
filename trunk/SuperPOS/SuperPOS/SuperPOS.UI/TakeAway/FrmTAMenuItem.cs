@@ -1161,7 +1161,7 @@ namespace SuperPOS.UI.TakeAway
             taMenuItem.IsInventoryCheck = chkInventoryCheck.Checked ? "Y" : "N";
 
             string strMenuCate = "";
-            strMenuCate = cmbBoxMenuCate1.Text + "," + cmbBoxMenuCate2.Text + "," + cmbBoxMenuCate3.Text + ",";
+            strMenuCate = cmbBoxMenuCate1.Text + "," + cmbBoxMenuCate2.Text + "," + cmbBoxMenuCate3.Text;
             taMenuItem.MenuCateID = strMenuCate;
 
             taMenuItem.SupplyShift = cmbBoxSplySft.Text;
@@ -1195,7 +1195,7 @@ namespace SuperPOS.UI.TakeAway
             //btnDASave.Enabled = false;
             //btnDAEdit.Enabled = true;
 
-            SetCtlEnable(false);
+            //SetCtlEnable(false);
 
             iStatus = 0;
         }
@@ -1228,9 +1228,9 @@ namespace SuperPOS.UI.TakeAway
             //chkBoxPrtOrderByDept.Enabled = bl;
             //chkBoxPrtOrderX.Enabled = bl;
 
-            cmbBoxMenuCate1.Enabled = bl;
-            cmbBoxMenuCate2.Enabled = bl;
-            cmbBoxMenuCate3.Enabled = bl;
+            //cmbBoxMenuCate1.Enabled = bl;
+            //cmbBoxMenuCate2.Enabled = bl;
+            //cmbBoxMenuCate3.Enabled = bl;
         }
 
         private void btnDADel_Click(object sender, EventArgs e)
