@@ -890,7 +890,7 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnDAAdd_Click(object sender, EventArgs e)
         {
-            iStatus = 1;
+            //iStatus = 1;
 
             txtDishCode.Text = "";
             txtDisPosition.Text = "";
@@ -903,43 +903,43 @@ namespace SuperPOS.UI.TakeAway
             txtSRegular.Text = "";
             txtSSmall.Text = "";
 
-            txtDishCode.Enabled = true;
-            txtDisPosition.Enabled = true;
-            txtEngName.Enabled = true;
-            txtOtherName.Enabled = true;
-            txtWLarge.Enabled = true;
-            txtWRegular.Enabled = true;
-            txtWSmall.Enabled = true;
-            txtSLarge.Enabled = true;
-            txtSRegular.Enabled = true;
-            txtSSmall.Enabled = true;
+            //txtDishCode.Enabled = true;
+            //txtDisPosition.Enabled = true;
+            //txtEngName.Enabled = true;
+            //txtOtherName.Enabled = true;
+            //txtWLarge.Enabled = true;
+            //txtWRegular.Enabled = true;
+            //txtWSmall.Enabled = true;
+            //txtSLarge.Enabled = true;
+            //txtSRegular.Enabled = true;
+            //txtSSmall.Enabled = true;
 
-            chkUnavailable.Enabled = true;
-            chkNegativePrice.Enabled = true;
-            chkDisountable.Enabled = true;
-            chkWithoutVAT.Enabled = true;
-            chkInventoryCheck.Enabled = true;
+            //chkUnavailable.Enabled = true;
+            //chkNegativePrice.Enabled = true;
+            //chkDisountable.Enabled = true;
+            //chkWithoutVAT.Enabled = true;
+            //chkInventoryCheck.Enabled = true;
             chkUnavailable.Checked = false;
             chkNegativePrice.Checked = false;
             chkDisountable.Checked = false;
             chkWithoutVAT.Checked = false;
             chkInventoryCheck.Checked = false;
 
-            cmbBoxSplySft.Enabled = true;
+            //cmbBoxSplySft.Enabled = true;
             cmbBoxSplySft.SelectedIndex = 0;
-            chkBoxPrtOrderByDept.Enabled = true;
+            //chkBoxPrtOrderByDept.Enabled = true;
             chkBoxPrtOrderByDept.Checked = false;
-            chkBoxPrtOrderX.Enabled = true;
+            //chkBoxPrtOrderX.Enabled = true;
             chkBoxPrtOrderX.Checked = false;
 
-            cmbBoxMenuCate1.Enabled = true;
-            cmbBoxMenuCate2.Enabled = true;
-            cmbBoxMenuCate3.Enabled = true;
+            //cmbBoxMenuCate1.Enabled = true;
+            //cmbBoxMenuCate2.Enabled = true;
+            //cmbBoxMenuCate3.Enabled = true;
             cmbBoxMenuCate1.SelectedIndex = 0;
             cmbBoxMenuCate2.SelectedIndex = 0;
             cmbBoxMenuCate3.SelectedIndex = 0;
 
-            btnDAEdit.Enabled = false;
+            //btnDAEdit.Enabled = false;
             btnDADel.Enabled = false;
             btnDACopy.Enabled = false;
             btnDASave.Enabled = true;
@@ -1177,7 +1177,7 @@ namespace SuperPOS.UI.TakeAway
                 taMenuItem.SystemKey = Guid.NewGuid();
                 _control.AddEntity(taMenuItem);
             }
-            else if (iStatus == 2)
+            else //if (iStatus == 2)
             {
                 if (dgvDAMenu.CurrentRow != null)
                 {
@@ -1192,8 +1192,8 @@ namespace SuperPOS.UI.TakeAway
             btnDAAdd.Enabled = true;
             btnDACopy.Enabled = true;
             btnDADel.Enabled = true;
-            btnDASave.Enabled = false;
-            btnDAEdit.Enabled = true;
+            //btnDASave.Enabled = false;
+            //btnDAEdit.Enabled = true;
 
             SetCtlEnable(false);
 
@@ -1202,31 +1202,31 @@ namespace SuperPOS.UI.TakeAway
 
         private void SetCtlEnable(bool bl)
         {
-            txtDishCode.Enabled = bl;
-            txtDisPosition.Enabled = bl;
-            txtEngName.Enabled = bl;
-            txtOtherName.Enabled = bl;
-            txtWLarge.Enabled = bl;
-            txtWRegular.Enabled = bl;
-            txtWSmall.Enabled = bl;
-            txtSLarge.Enabled = bl;
-            txtSRegular.Enabled = bl;
-            txtSSmall.Enabled = bl;
+            //txtDishCode.Enabled = bl;
+            //txtDisPosition.Enabled = bl;
+            //txtEngName.Enabled = bl;
+            //txtOtherName.Enabled = bl;
+            //txtWLarge.Enabled = bl;
+            //txtWRegular.Enabled = bl;
+            //txtWSmall.Enabled = bl;
+            //txtSLarge.Enabled = bl;
+            //txtSRegular.Enabled = bl;
+            //txtSSmall.Enabled = bl;
 
-            chkUnavailable.Enabled = bl;
-            chkNegativePrice.Enabled = bl;
-            chkDisountable.Enabled = bl;
-            chkWithoutVAT.Enabled = bl;
-            chkInventoryCheck.Enabled = bl;
-            chkUnavailable.Checked = bl;
-            chkNegativePrice.Checked = bl;
-            chkDisountable.Checked = bl;
-            chkWithoutVAT.Checked = bl;
-            chkInventoryCheck.Checked = bl;
+            //chkUnavailable.Enabled = bl;
+            //chkNegativePrice.Enabled = bl;
+            //chkDisountable.Enabled = bl;
+            //chkWithoutVAT.Enabled = bl;
+            //chkInventoryCheck.Enabled = bl;
+            //chkUnavailable.Checked = bl;
+            //chkNegativePrice.Checked = bl;
+            //chkDisountable.Checked = bl;
+            //chkWithoutVAT.Checked = bl;
+            //chkInventoryCheck.Checked = bl;
 
-            cmbBoxSplySft.Enabled = bl;
-            chkBoxPrtOrderByDept.Enabled = bl;
-            chkBoxPrtOrderX.Enabled = bl;
+            //cmbBoxSplySft.Enabled = bl;
+            //chkBoxPrtOrderByDept.Enabled = bl;
+            //chkBoxPrtOrderX.Enabled = bl;
 
             cmbBoxMenuCate1.Enabled = bl;
             cmbBoxMenuCate2.Enabled = bl;
@@ -1253,40 +1253,40 @@ namespace SuperPOS.UI.TakeAway
             txtDishCode.Text = "";
 
             btnDAAdd.Enabled = false;
-            btnDAEdit.Enabled = false;
+            //btnDAEdit.Enabled = false;
             btnDACopy.Enabled = false;
             btnDADel.Enabled = false;
             btnDASave.Enabled = true;
 
-            txtDishCode.Enabled = true;
-            txtDisPosition.Enabled = true;
-            txtEngName.Enabled = true;
-            txtOtherName.Enabled = true;
-            txtWLarge.Enabled = true;
-            txtWRegular.Enabled = true;
-            txtWSmall.Enabled = true;
-            txtSLarge.Enabled = true;
-            txtSRegular.Enabled = true;
-            txtSSmall.Enabled = true;
+            //txtDishCode.Enabled = true;
+            //txtDisPosition.Enabled = true;
+            //txtEngName.Enabled = true;
+            //txtOtherName.Enabled = true;
+            //txtWLarge.Enabled = true;
+            //txtWRegular.Enabled = true;
+            //txtWSmall.Enabled = true;
+            //txtSLarge.Enabled = true;
+            //txtSRegular.Enabled = true;
+            //txtSSmall.Enabled = true;
 
-            chkUnavailable.Enabled = true;
-            chkNegativePrice.Enabled = true;
-            chkDisountable.Enabled = true;
-            chkWithoutVAT.Enabled = true;
-            chkInventoryCheck.Enabled = true;
+            //chkUnavailable.Enabled = true;
+            //chkNegativePrice.Enabled = true;
+            //chkDisountable.Enabled = true;
+            //chkWithoutVAT.Enabled = true;
+            //chkInventoryCheck.Enabled = true;
             chkUnavailable.Checked = false;
             chkNegativePrice.Checked = false;
             chkDisountable.Checked = false;
             chkWithoutVAT.Checked = false;
             chkInventoryCheck.Checked = false;
 
-            cmbBoxMenuCate1.Enabled = true;
-            cmbBoxMenuCate2.Enabled = true;
-            cmbBoxMenuCate3.Enabled = true;
+            //cmbBoxMenuCate1.Enabled = true;
+            //cmbBoxMenuCate2.Enabled = true;
+            //cmbBoxMenuCate3.Enabled = true;
 
-            cmbBoxSplySft.Enabled = true;
-            chkBoxPrtOrderByDept.Enabled = true;
-            chkBoxPrtOrderX.Enabled = true;
+            //cmbBoxSplySft.Enabled = true;
+            //chkBoxPrtOrderByDept.Enabled = true;
+            //chkBoxPrtOrderX.Enabled = true;
         }
 
         private void cmDABoxDish_SelectedIndexChanged(object sender, EventArgs e)
@@ -1557,16 +1557,16 @@ namespace SuperPOS.UI.TakeAway
         {
             iSubMenuStatus = 1;
 
-            txtSMDishCode.Enabled = true;
-            txtSMDisplayPosition.Enabled = true;
-            txtSMEngName.Enabled = true;
-            txtSMOtherName.Enabled = true;
-            txtSMPrice.Enabled = true;
-            chkSMUnavailable.Enabled = true;
-            chkSMDisountable.Enabled = true;
-            chkSMInventoryCheck.Enabled = true;
-            chkSMNegativePrice.Enabled = true;
-            chkSMWithoutVAT.Enabled = true;
+            //txtSMDishCode.Enabled = true;
+            //txtSMDisplayPosition.Enabled = true;
+            //txtSMEngName.Enabled = true;
+            //txtSMOtherName.Enabled = true;
+            //txtSMPrice.Enabled = true;
+            //chkSMUnavailable.Enabled = true;
+            //chkSMDisountable.Enabled = true;
+            //chkSMInventoryCheck.Enabled = true;
+            //chkSMNegativePrice.Enabled = true;
+            //chkSMWithoutVAT.Enabled = true;
 
             txtSMDishCode.Text = "";
             txtSMDisplayPosition.Text = "";
@@ -1579,11 +1579,11 @@ namespace SuperPOS.UI.TakeAway
             chkSMNegativePrice.Checked = false;
             chkSMWithoutVAT.Checked = false;
 
-            cmbSMSupplyShift.Enabled = true;
+            //cmbSMSupplyShift.Enabled = true;
             cmbSMSupplyShift.SelectedIndex = 0;
-            chkSMPrtName.Enabled = true;
+            //chkSMPrtName.Enabled = true;
             chkSMPrtName.Checked = false;
-            chkSMPrtOrder.Enabled = true;
+            //chkSMPrtOrder.Enabled = true;
             chkSMPrtOrder.Checked = false;
 
             for (int i = 0; i < 15; i++)
@@ -1595,7 +1595,7 @@ namespace SuperPOS.UI.TakeAway
             }
 
             btnSubMenuDel.Enabled = false;
-            btnSubMenuEdit.Enabled = false;
+            //btnSubMenuEdit.Enabled = false;
             btnSubMenuSave.Enabled = true;
             btnSubMenuAdd.Enabled = true;
         }
@@ -1626,7 +1626,7 @@ namespace SuperPOS.UI.TakeAway
             }
 
             btnSubMenuDel.Enabled = false;
-            btnSubMenuEdit.Enabled = false;
+            //btnSubMenuEdit.Enabled = false;
             btnSubMenuSave.Enabled = true;
             btnSubMenuAdd.Enabled = false;
         }
@@ -1672,7 +1672,7 @@ namespace SuperPOS.UI.TakeAway
                 taMenuItemSubMenuInfo.SystemKey = Guid.NewGuid();
                 _control.AddEntity(taMenuItemSubMenuInfo);
             }
-            else if (iSubMenuStatus == 2) //Edit
+            else //if (iSubMenuStatus == 2) //Edit
             {
                 taMenuItemSubMenuInfo.SystemKey = new Guid(dgvSubMenu.CurrentRow.Cells[0].Value.ToString());
                 _control.UpdateEntity(taMenuItemSubMenuInfo);
@@ -1682,7 +1682,7 @@ namespace SuperPOS.UI.TakeAway
             if (iSubMenuStatus == 1)
                 qDelList = CommonData.TaMenuItemSubMenuDetailList.Where(s =>
                         s.SubMenuID.Equals(taMenuItemSubMenuInfo.SystemKey.ToString())).ToList();            
-            else if (iSubMenuStatus == 2)
+            else //if (iSubMenuStatus == 2)
                 qDelList = CommonData.TaMenuItemSubMenuDetailList.Where(s =>
                         s.SubMenuID.Equals(dgvSubMenu.CurrentRow.Cells[0].Value.ToString())).ToList();
             foreach (var taMenuItemThInfo in qDelList)
@@ -1707,20 +1707,20 @@ namespace SuperPOS.UI.TakeAway
                 }
             }
 
-            txtSMDishCode.Enabled = false;
-            txtSMDisplayPosition.Enabled = false;
-            txtSMEngName.Enabled = false;
-            txtSMOtherName.Enabled = false;
-            txtSMPrice.Enabled = false;
-            chkSMUnavailable.Enabled = false;
-            chkSMDisountable.Enabled = false;
-            chkSMInventoryCheck.Enabled = false;
-            chkSMNegativePrice.Enabled = false;
-            chkSMWithoutVAT.Enabled = false;
+            //txtSMDishCode.Enabled = false;
+            //txtSMDisplayPosition.Enabled = false;
+            //txtSMEngName.Enabled = false;
+            //txtSMOtherName.Enabled = false;
+            //txtSMPrice.Enabled = false;
+            //chkSMUnavailable.Enabled = false;
+            //chkSMDisountable.Enabled = false;
+            //chkSMInventoryCheck.Enabled = false;
+            //chkSMNegativePrice.Enabled = false;
+            //chkSMWithoutVAT.Enabled = false;
 
-            cmbSMSupplyShift.Enabled = false;
-            chkSMPrtName.Enabled = false;
-            chkSMPrtOrder.Enabled = false;
+            //cmbSMSupplyShift.Enabled = false;
+            //chkSMPrtName.Enabled = false;
+            //chkSMPrtOrder.Enabled = false;
 
             for (int i = 0; i < 15; i++)
             {
@@ -1729,7 +1729,7 @@ namespace SuperPOS.UI.TakeAway
             }
 
             btnSubMenuDel.Enabled = true;
-            btnSubMenuEdit.Enabled = true;
+            //btnSubMenuEdit.Enabled = true;
             btnSubMenuSave.Enabled = false;
             btnSubMenuAdd.Enabled = true;
 
