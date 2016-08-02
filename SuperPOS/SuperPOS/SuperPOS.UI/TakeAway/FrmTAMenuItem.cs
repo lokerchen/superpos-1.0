@@ -318,6 +318,11 @@ namespace SuperPOS.UI.TakeAway
             dgvDAMenu.Columns[2].Visible = false;
             dgvDAMenu.Columns[3].HeaderText = @"Item Name";
             for (int i = 4; i < 23; i++) { dgvDAMenu.Columns[i].Visible = false; }
+            if (dgvDAMenu.RowCount > 0)
+            {
+                dgvDAMenu.CurrentCell = dgvDAMenu.Rows[0].Cells[1];
+                dgvDAMenu.Rows[dgvDAMenu.CurrentCell.RowIndex].Selected = true;
+            }
 
             dgvSCMenu.Columns[0].Visible = false;
             dgvSCMenu.Columns[1].HeaderText = @"Code";
@@ -325,6 +330,11 @@ namespace SuperPOS.UI.TakeAway
             dgvSCMenu.Columns[2].Visible = false;
             dgvSCMenu.Columns[3].HeaderText = @"ItemName";
             for (int i = 4; i < 23; i++) { dgvSCMenu.Columns[i].Visible = false; }
+            if (dgvSCMenu.RowCount > 0)
+            {
+                dgvSCMenu.CurrentCell = dgvSCMenu.Rows[0].Cells[1];
+                dgvSCMenu.Rows[dgvSCMenu.CurrentCell.RowIndex].Selected = true;
+            }
 
             dgvTCMenu.Columns[0].Visible = false;
             dgvTCMenu.Columns[1].HeaderText = @"Code";
@@ -332,6 +342,11 @@ namespace SuperPOS.UI.TakeAway
             dgvTCMenu.Columns[2].Visible = false;
             dgvTCMenu.Columns[3].HeaderText = @"Item Name";
             for (int i = 4; i < 23; i++) { dgvTCMenu.Columns[i].Visible = false; }
+            if (dgvTCMenu.RowCount > 0)
+            {
+                dgvTCMenu.CurrentCell = dgvTCMenu.Rows[0].Cells[1];
+                dgvTCMenu.Rows[dgvTCMenu.CurrentCell.RowIndex].Selected = true;
+            }
 
             dgvTHMenu.Columns[0].Visible = false;
             dgvTHMenu.Columns[1].HeaderText = @"Code";
@@ -339,6 +354,11 @@ namespace SuperPOS.UI.TakeAway
             dgvTHMenu.Columns[2].Visible = false;
             dgvTHMenu.Columns[3].HeaderText = @"Item Name";
             for (int i = 4; i < 23; i++) { dgvTHMenu.Columns[i].Visible = false; }
+            if (dgvTHMenu.RowCount > 0)
+            {
+                dgvTHMenu.CurrentCell = dgvTHMenu.Rows[0].Cells[1];
+                dgvTHMenu.Rows[dgvTHMenu.CurrentCell.RowIndex].Selected = true;
+            }
 
             dgvSubMenu.Columns[0].Visible = false;
             dgvSubMenu.Columns[1].HeaderText = @"Code";
@@ -347,6 +367,11 @@ namespace SuperPOS.UI.TakeAway
             dgvSubMenu.Columns[4].Visible = false;
             dgvSubMenu.Columns[5].HeaderText = @"Price";
             for (int i = 6; i < 14; i++) { dgvSubMenu.Columns[i].Visible = false; }
+            if (dgvSubMenu.RowCount > 0)
+            {
+                dgvSubMenu.CurrentCell = dgvSubMenu.Rows[0].Cells[1];
+                dgvSubMenu.Rows[dgvSubMenu.CurrentCell.RowIndex].Selected = true;
+            }
             #endregion
 
             #endregion
