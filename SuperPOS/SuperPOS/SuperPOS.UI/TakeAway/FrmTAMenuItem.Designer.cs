@@ -539,7 +539,6 @@
             // chkBoxPrtOrderX
             // 
             this.chkBoxPrtOrderX.AutoSize = true;
-            this.chkBoxPrtOrderX.Enabled = false;
             this.chkBoxPrtOrderX.Location = new System.Drawing.Point(123, 83);
             this.chkBoxPrtOrderX.Name = "chkBoxPrtOrderX";
             this.chkBoxPrtOrderX.Size = new System.Drawing.Size(35, 21);
@@ -550,7 +549,6 @@
             // chkBoxPrtOrderByDept
             // 
             this.chkBoxPrtOrderByDept.AutoSize = true;
-            this.chkBoxPrtOrderByDept.Enabled = false;
             this.chkBoxPrtOrderByDept.Location = new System.Drawing.Point(123, 55);
             this.chkBoxPrtOrderByDept.Name = "chkBoxPrtOrderByDept";
             this.chkBoxPrtOrderByDept.Size = new System.Drawing.Size(73, 21);
@@ -579,7 +577,6 @@
             // cmbBoxSplySft
             // 
             this.cmbBoxSplySft.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBoxSplySft.Enabled = false;
             this.cmbBoxSplySft.FormattingEnabled = true;
             this.cmbBoxSplySft.Location = new System.Drawing.Point(123, 16);
             this.cmbBoxSplySft.Name = "cmbBoxSplySft";
@@ -602,18 +599,18 @@
             this.btnDAEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDAEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDAEdit.ForeColor = System.Drawing.Color.White;
-            this.btnDAEdit.Location = new System.Drawing.Point(101, 527);
+            this.btnDAEdit.Location = new System.Drawing.Point(559, 527);
             this.btnDAEdit.Name = "btnDAEdit";
             this.btnDAEdit.Size = new System.Drawing.Size(80, 50);
             this.btnDAEdit.TabIndex = 41;
             this.btnDAEdit.Text = "Edit";
             this.btnDAEdit.UseVisualStyleBackColor = false;
+            this.btnDAEdit.Visible = false;
             this.btnDAEdit.Click += new System.EventHandler(this.btnDAEdit_Click);
             // 
             // chkInventoryCheck
             // 
             this.chkInventoryCheck.AutoSize = true;
-            this.chkInventoryCheck.Enabled = false;
             this.chkInventoryCheck.Location = new System.Drawing.Point(664, 489);
             this.chkInventoryCheck.Name = "chkInventoryCheck";
             this.chkInventoryCheck.Size = new System.Drawing.Size(120, 21);
@@ -624,7 +621,6 @@
             // chkWithoutVAT
             // 
             this.chkWithoutVAT.AutoSize = true;
-            this.chkWithoutVAT.Enabled = false;
             this.chkWithoutVAT.Location = new System.Drawing.Point(816, 458);
             this.chkWithoutVAT.Name = "chkWithoutVAT";
             this.chkWithoutVAT.Size = new System.Drawing.Size(99, 21);
@@ -638,7 +634,7 @@
             this.btnDAExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDAExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDAExit.ForeColor = System.Drawing.Color.White;
-            this.btnDAExit.Location = new System.Drawing.Point(450, 527);
+            this.btnDAExit.Location = new System.Drawing.Point(364, 527);
             this.btnDAExit.Name = "btnDAExit";
             this.btnDAExit.Size = new System.Drawing.Size(80, 50);
             this.btnDAExit.TabIndex = 40;
@@ -649,7 +645,6 @@
             // chkDisountable
             // 
             this.chkDisountable.AutoSize = true;
-            this.chkDisountable.Enabled = false;
             this.chkDisountable.Location = new System.Drawing.Point(664, 458);
             this.chkDisountable.Name = "chkDisountable";
             this.chkDisountable.Size = new System.Drawing.Size(96, 21);
@@ -663,7 +658,7 @@
             this.btnDASave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDASave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDASave.ForeColor = System.Drawing.Color.White;
-            this.btnDASave.Location = new System.Drawing.Point(273, 527);
+            this.btnDASave.Location = new System.Drawing.Point(187, 527);
             this.btnDASave.Name = "btnDASave";
             this.btnDASave.Size = new System.Drawing.Size(80, 50);
             this.btnDASave.TabIndex = 37;
@@ -674,7 +669,6 @@
             // chkNegativePrice
             // 
             this.chkNegativePrice.AutoSize = true;
-            this.chkNegativePrice.Enabled = false;
             this.chkNegativePrice.Location = new System.Drawing.Point(816, 431);
             this.chkNegativePrice.Name = "chkNegativePrice";
             this.chkNegativePrice.Size = new System.Drawing.Size(111, 21);
@@ -688,7 +682,7 @@
             this.btnDADel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDADel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDADel.ForeColor = System.Drawing.Color.White;
-            this.btnDADel.Location = new System.Drawing.Point(187, 527);
+            this.btnDADel.Location = new System.Drawing.Point(101, 527);
             this.btnDADel.Name = "btnDADel";
             this.btnDADel.Size = new System.Drawing.Size(80, 50);
             this.btnDADel.TabIndex = 35;
@@ -699,7 +693,6 @@
             // chkUnavailable
             // 
             this.chkUnavailable.AutoSize = true;
-            this.chkUnavailable.Enabled = false;
             this.chkUnavailable.Location = new System.Drawing.Point(664, 431);
             this.chkUnavailable.Name = "chkUnavailable";
             this.chkUnavailable.Size = new System.Drawing.Size(94, 21);
@@ -713,7 +706,7 @@
             this.btnDACopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDACopy.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDACopy.ForeColor = System.Drawing.Color.White;
-            this.btnDACopy.Location = new System.Drawing.Point(359, 527);
+            this.btnDACopy.Location = new System.Drawing.Point(273, 527);
             this.btnDACopy.Name = "btnDACopy";
             this.btnDACopy.Size = new System.Drawing.Size(80, 50);
             this.btnDACopy.TabIndex = 33;
@@ -928,7 +921,6 @@
             // cmbBoxMenuCate3
             // 
             this.cmbBoxMenuCate3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBoxMenuCate3.Enabled = false;
             this.cmbBoxMenuCate3.FormattingEnabled = true;
             this.cmbBoxMenuCate3.Location = new System.Drawing.Point(111, 456);
             this.cmbBoxMenuCate3.Name = "cmbBoxMenuCate3";
@@ -950,7 +942,6 @@
             // cmbBoxMenuCate2
             // 
             this.cmbBoxMenuCate2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBoxMenuCate2.Enabled = false;
             this.cmbBoxMenuCate2.FormattingEnabled = true;
             this.cmbBoxMenuCate2.Location = new System.Drawing.Point(111, 423);
             this.cmbBoxMenuCate2.Name = "cmbBoxMenuCate2";
@@ -972,7 +963,6 @@
             // cmbBoxMenuCate1
             // 
             this.cmbBoxMenuCate1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBoxMenuCate1.Enabled = false;
             this.cmbBoxMenuCate1.FormattingEnabled = true;
             this.cmbBoxMenuCate1.Location = new System.Drawing.Point(111, 388);
             this.cmbBoxMenuCate1.Name = "cmbBoxMenuCate1";
@@ -993,7 +983,6 @@
             // 
             // txtSSmall
             // 
-            this.txtSSmall.Enabled = false;
             this.txtSSmall.Location = new System.Drawing.Point(141, 347);
             this.txtSSmall.Name = "txtSSmall";
             this.txtSSmall.Size = new System.Drawing.Size(55, 23);
@@ -1012,7 +1001,6 @@
             // 
             // txtSRegular
             // 
-            this.txtSRegular.Enabled = false;
             this.txtSRegular.Location = new System.Drawing.Point(76, 347);
             this.txtSRegular.Name = "txtSRegular";
             this.txtSRegular.Size = new System.Drawing.Size(55, 23);
@@ -1031,7 +1019,6 @@
             // 
             // txtSLarge
             // 
-            this.txtSLarge.Enabled = false;
             this.txtSLarge.Location = new System.Drawing.Point(12, 347);
             this.txtSLarge.Name = "txtSLarge";
             this.txtSLarge.Size = new System.Drawing.Size(55, 23);
@@ -1050,7 +1037,6 @@
             // 
             // txtWSmall
             // 
-            this.txtWSmall.Enabled = false;
             this.txtWSmall.Location = new System.Drawing.Point(140, 254);
             this.txtWSmall.Name = "txtWSmall";
             this.txtWSmall.Size = new System.Drawing.Size(55, 23);
@@ -1069,7 +1055,6 @@
             // 
             // txtWRegular
             // 
-            this.txtWRegular.Enabled = false;
             this.txtWRegular.Location = new System.Drawing.Point(76, 254);
             this.txtWRegular.Name = "txtWRegular";
             this.txtWRegular.Size = new System.Drawing.Size(55, 23);
@@ -1088,7 +1073,6 @@
             // 
             // txtWLarge
             // 
-            this.txtWLarge.Enabled = false;
             this.txtWLarge.Location = new System.Drawing.Point(12, 254);
             this.txtWLarge.Name = "txtWLarge";
             this.txtWLarge.Size = new System.Drawing.Size(55, 23);
@@ -1107,7 +1091,6 @@
             // 
             // txtOtherName
             // 
-            this.txtOtherName.Enabled = false;
             this.txtOtherName.Location = new System.Drawing.Point(11, 184);
             this.txtOtherName.Name = "txtOtherName";
             this.txtOtherName.Size = new System.Drawing.Size(190, 23);
@@ -1126,7 +1109,6 @@
             // 
             // txtEngName
             // 
-            this.txtEngName.Enabled = false;
             this.txtEngName.Location = new System.Drawing.Point(11, 125);
             this.txtEngName.Name = "txtEngName";
             this.txtEngName.Size = new System.Drawing.Size(190, 23);
@@ -1145,7 +1127,6 @@
             // 
             // txtDisPosition
             // 
-            this.txtDisPosition.Enabled = false;
             this.txtDisPosition.Location = new System.Drawing.Point(115, 62);
             this.txtDisPosition.Name = "txtDisPosition";
             this.txtDisPosition.Size = new System.Drawing.Size(86, 23);
@@ -1164,7 +1145,6 @@
             // 
             // txtDishCode
             // 
-            this.txtDishCode.Enabled = false;
             this.txtDishCode.Location = new System.Drawing.Point(88, 25);
             this.txtDishCode.Name = "txtDishCode";
             this.txtDishCode.Size = new System.Drawing.Size(113, 23);
@@ -3812,7 +3792,6 @@
             // 
             // txtDishOtherName15
             // 
-            this.txtDishOtherName15.Enabled = false;
             this.txtDishOtherName15.Location = new System.Drawing.Point(174, 448);
             this.txtDishOtherName15.Name = "txtDishOtherName15";
             this.txtDishOtherName15.Size = new System.Drawing.Size(110, 23);
@@ -3820,7 +3799,6 @@
             // 
             // txtDishEngName15
             // 
-            this.txtDishEngName15.Enabled = false;
             this.txtDishEngName15.Location = new System.Drawing.Point(13, 448);
             this.txtDishEngName15.Name = "txtDishEngName15";
             this.txtDishEngName15.Size = new System.Drawing.Size(150, 23);
@@ -3828,7 +3806,6 @@
             // 
             // txtDishOtherName14
             // 
-            this.txtDishOtherName14.Enabled = false;
             this.txtDishOtherName14.Location = new System.Drawing.Point(174, 419);
             this.txtDishOtherName14.Name = "txtDishOtherName14";
             this.txtDishOtherName14.Size = new System.Drawing.Size(110, 23);
@@ -3836,7 +3813,6 @@
             // 
             // txtDishEngName14
             // 
-            this.txtDishEngName14.Enabled = false;
             this.txtDishEngName14.Location = new System.Drawing.Point(13, 419);
             this.txtDishEngName14.Name = "txtDishEngName14";
             this.txtDishEngName14.Size = new System.Drawing.Size(150, 23);
@@ -3844,7 +3820,6 @@
             // 
             // txtDishOtherName13
             // 
-            this.txtDishOtherName13.Enabled = false;
             this.txtDishOtherName13.Location = new System.Drawing.Point(174, 390);
             this.txtDishOtherName13.Name = "txtDishOtherName13";
             this.txtDishOtherName13.Size = new System.Drawing.Size(110, 23);
@@ -3852,7 +3827,6 @@
             // 
             // txtDishEngName13
             // 
-            this.txtDishEngName13.Enabled = false;
             this.txtDishEngName13.Location = new System.Drawing.Point(13, 390);
             this.txtDishEngName13.Name = "txtDishEngName13";
             this.txtDishEngName13.Size = new System.Drawing.Size(150, 23);
@@ -3860,7 +3834,6 @@
             // 
             // txtDishOtherName12
             // 
-            this.txtDishOtherName12.Enabled = false;
             this.txtDishOtherName12.Location = new System.Drawing.Point(174, 361);
             this.txtDishOtherName12.Name = "txtDishOtherName12";
             this.txtDishOtherName12.Size = new System.Drawing.Size(110, 23);
@@ -3868,7 +3841,6 @@
             // 
             // txtDishEngName12
             // 
-            this.txtDishEngName12.Enabled = false;
             this.txtDishEngName12.Location = new System.Drawing.Point(13, 361);
             this.txtDishEngName12.Name = "txtDishEngName12";
             this.txtDishEngName12.Size = new System.Drawing.Size(150, 23);
@@ -3876,7 +3848,6 @@
             // 
             // txtDishOtherName11
             // 
-            this.txtDishOtherName11.Enabled = false;
             this.txtDishOtherName11.Location = new System.Drawing.Point(174, 332);
             this.txtDishOtherName11.Name = "txtDishOtherName11";
             this.txtDishOtherName11.Size = new System.Drawing.Size(110, 23);
@@ -3884,7 +3855,6 @@
             // 
             // txtDishEngName11
             // 
-            this.txtDishEngName11.Enabled = false;
             this.txtDishEngName11.Location = new System.Drawing.Point(13, 332);
             this.txtDishEngName11.Name = "txtDishEngName11";
             this.txtDishEngName11.Size = new System.Drawing.Size(150, 23);
@@ -3892,7 +3862,6 @@
             // 
             // txtDishOtherName10
             // 
-            this.txtDishOtherName10.Enabled = false;
             this.txtDishOtherName10.Location = new System.Drawing.Point(174, 303);
             this.txtDishOtherName10.Name = "txtDishOtherName10";
             this.txtDishOtherName10.Size = new System.Drawing.Size(110, 23);
@@ -3900,7 +3869,6 @@
             // 
             // txtDishEngName10
             // 
-            this.txtDishEngName10.Enabled = false;
             this.txtDishEngName10.Location = new System.Drawing.Point(13, 303);
             this.txtDishEngName10.Name = "txtDishEngName10";
             this.txtDishEngName10.Size = new System.Drawing.Size(150, 23);
@@ -3908,7 +3876,6 @@
             // 
             // txtDishOtherName9
             // 
-            this.txtDishOtherName9.Enabled = false;
             this.txtDishOtherName9.Location = new System.Drawing.Point(174, 274);
             this.txtDishOtherName9.Name = "txtDishOtherName9";
             this.txtDishOtherName9.Size = new System.Drawing.Size(110, 23);
@@ -3916,7 +3883,6 @@
             // 
             // txtDishEngName9
             // 
-            this.txtDishEngName9.Enabled = false;
             this.txtDishEngName9.Location = new System.Drawing.Point(13, 274);
             this.txtDishEngName9.Name = "txtDishEngName9";
             this.txtDishEngName9.Size = new System.Drawing.Size(150, 23);
@@ -3924,7 +3890,6 @@
             // 
             // txtDishOtherName8
             // 
-            this.txtDishOtherName8.Enabled = false;
             this.txtDishOtherName8.Location = new System.Drawing.Point(174, 245);
             this.txtDishOtherName8.Name = "txtDishOtherName8";
             this.txtDishOtherName8.Size = new System.Drawing.Size(110, 23);
@@ -3932,7 +3897,6 @@
             // 
             // txtDishEngName8
             // 
-            this.txtDishEngName8.Enabled = false;
             this.txtDishEngName8.Location = new System.Drawing.Point(13, 245);
             this.txtDishEngName8.Name = "txtDishEngName8";
             this.txtDishEngName8.Size = new System.Drawing.Size(150, 23);
@@ -3940,7 +3904,6 @@
             // 
             // txtDishOtherName7
             // 
-            this.txtDishOtherName7.Enabled = false;
             this.txtDishOtherName7.Location = new System.Drawing.Point(174, 216);
             this.txtDishOtherName7.Name = "txtDishOtherName7";
             this.txtDishOtherName7.Size = new System.Drawing.Size(110, 23);
@@ -3948,7 +3911,6 @@
             // 
             // txtDishEngName7
             // 
-            this.txtDishEngName7.Enabled = false;
             this.txtDishEngName7.Location = new System.Drawing.Point(13, 216);
             this.txtDishEngName7.Name = "txtDishEngName7";
             this.txtDishEngName7.Size = new System.Drawing.Size(150, 23);
@@ -3956,7 +3918,6 @@
             // 
             // txtDishOtherName6
             // 
-            this.txtDishOtherName6.Enabled = false;
             this.txtDishOtherName6.Location = new System.Drawing.Point(174, 187);
             this.txtDishOtherName6.Name = "txtDishOtherName6";
             this.txtDishOtherName6.Size = new System.Drawing.Size(110, 23);
@@ -3964,7 +3925,6 @@
             // 
             // txtDishEngName6
             // 
-            this.txtDishEngName6.Enabled = false;
             this.txtDishEngName6.Location = new System.Drawing.Point(13, 187);
             this.txtDishEngName6.Name = "txtDishEngName6";
             this.txtDishEngName6.Size = new System.Drawing.Size(150, 23);
@@ -3972,7 +3932,6 @@
             // 
             // txtDishOtherName5
             // 
-            this.txtDishOtherName5.Enabled = false;
             this.txtDishOtherName5.Location = new System.Drawing.Point(174, 158);
             this.txtDishOtherName5.Name = "txtDishOtherName5";
             this.txtDishOtherName5.Size = new System.Drawing.Size(110, 23);
@@ -3980,7 +3939,6 @@
             // 
             // txtDishEngName5
             // 
-            this.txtDishEngName5.Enabled = false;
             this.txtDishEngName5.Location = new System.Drawing.Point(13, 158);
             this.txtDishEngName5.Name = "txtDishEngName5";
             this.txtDishEngName5.Size = new System.Drawing.Size(150, 23);
@@ -3988,7 +3946,6 @@
             // 
             // txtDishOtherName4
             // 
-            this.txtDishOtherName4.Enabled = false;
             this.txtDishOtherName4.Location = new System.Drawing.Point(174, 129);
             this.txtDishOtherName4.Name = "txtDishOtherName4";
             this.txtDishOtherName4.Size = new System.Drawing.Size(110, 23);
@@ -3996,7 +3953,6 @@
             // 
             // txtDishEngName4
             // 
-            this.txtDishEngName4.Enabled = false;
             this.txtDishEngName4.Location = new System.Drawing.Point(13, 129);
             this.txtDishEngName4.Name = "txtDishEngName4";
             this.txtDishEngName4.Size = new System.Drawing.Size(150, 23);
@@ -4004,7 +3960,6 @@
             // 
             // txtDishOtherName3
             // 
-            this.txtDishOtherName3.Enabled = false;
             this.txtDishOtherName3.Location = new System.Drawing.Point(174, 100);
             this.txtDishOtherName3.Name = "txtDishOtherName3";
             this.txtDishOtherName3.Size = new System.Drawing.Size(110, 23);
@@ -4012,7 +3967,6 @@
             // 
             // txtDishEngName3
             // 
-            this.txtDishEngName3.Enabled = false;
             this.txtDishEngName3.Location = new System.Drawing.Point(13, 100);
             this.txtDishEngName3.Name = "txtDishEngName3";
             this.txtDishEngName3.Size = new System.Drawing.Size(150, 23);
@@ -4020,7 +3974,6 @@
             // 
             // txtDishOtherName2
             // 
-            this.txtDishOtherName2.Enabled = false;
             this.txtDishOtherName2.Location = new System.Drawing.Point(174, 71);
             this.txtDishOtherName2.Name = "txtDishOtherName2";
             this.txtDishOtherName2.Size = new System.Drawing.Size(110, 23);
@@ -4028,7 +3981,6 @@
             // 
             // txtDishEngName2
             // 
-            this.txtDishEngName2.Enabled = false;
             this.txtDishEngName2.Location = new System.Drawing.Point(13, 71);
             this.txtDishEngName2.Name = "txtDishEngName2";
             this.txtDishEngName2.Size = new System.Drawing.Size(150, 23);
@@ -4036,7 +3988,6 @@
             // 
             // txtDishOtherName1
             // 
-            this.txtDishOtherName1.Enabled = false;
             this.txtDishOtherName1.Location = new System.Drawing.Point(174, 42);
             this.txtDishOtherName1.Name = "txtDishOtherName1";
             this.txtDishOtherName1.Size = new System.Drawing.Size(110, 23);
@@ -4062,7 +4013,6 @@
             // 
             // txtDishEngName1
             // 
-            this.txtDishEngName1.Enabled = false;
             this.txtDishEngName1.Location = new System.Drawing.Point(13, 42);
             this.txtDishEngName1.Name = "txtDishEngName1";
             this.txtDishEngName1.Size = new System.Drawing.Size(150, 23);
@@ -4109,7 +4059,6 @@
             // chkSMPrtOrder
             // 
             this.chkSMPrtOrder.AutoSize = true;
-            this.chkSMPrtOrder.Enabled = false;
             this.chkSMPrtOrder.Location = new System.Drawing.Point(123, 83);
             this.chkSMPrtOrder.Name = "chkSMPrtOrder";
             this.chkSMPrtOrder.Size = new System.Drawing.Size(35, 21);
@@ -4120,7 +4069,6 @@
             // chkSMPrtName
             // 
             this.chkSMPrtName.AutoSize = true;
-            this.chkSMPrtName.Enabled = false;
             this.chkSMPrtName.Location = new System.Drawing.Point(123, 55);
             this.chkSMPrtName.Name = "chkSMPrtName";
             this.chkSMPrtName.Size = new System.Drawing.Size(73, 21);
@@ -4149,7 +4097,6 @@
             // cmbSMSupplyShift
             // 
             this.cmbSMSupplyShift.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbSMSupplyShift.Enabled = false;
             this.cmbSMSupplyShift.FormattingEnabled = true;
             this.cmbSMSupplyShift.Location = new System.Drawing.Point(123, 16);
             this.cmbSMSupplyShift.Name = "cmbSMSupplyShift";
@@ -4168,7 +4115,6 @@
             // chkSMInventoryCheck
             // 
             this.chkSMInventoryCheck.AutoSize = true;
-            this.chkSMInventoryCheck.Enabled = false;
             this.chkSMInventoryCheck.Location = new System.Drawing.Point(11, 291);
             this.chkSMInventoryCheck.Name = "chkSMInventoryCheck";
             this.chkSMInventoryCheck.Size = new System.Drawing.Size(120, 21);
@@ -4179,7 +4125,6 @@
             // chkSMWithoutVAT
             // 
             this.chkSMWithoutVAT.AutoSize = true;
-            this.chkSMWithoutVAT.Enabled = false;
             this.chkSMWithoutVAT.Location = new System.Drawing.Point(11, 345);
             this.chkSMWithoutVAT.Name = "chkSMWithoutVAT";
             this.chkSMWithoutVAT.Size = new System.Drawing.Size(99, 21);
@@ -4190,7 +4135,6 @@
             // chkSMDisountable
             // 
             this.chkSMDisountable.AutoSize = true;
-            this.chkSMDisountable.Enabled = false;
             this.chkSMDisountable.Location = new System.Drawing.Point(115, 264);
             this.chkSMDisountable.Name = "chkSMDisountable";
             this.chkSMDisountable.Size = new System.Drawing.Size(96, 21);
@@ -4201,7 +4145,6 @@
             // chkSMNegativePrice
             // 
             this.chkSMNegativePrice.AutoSize = true;
-            this.chkSMNegativePrice.Enabled = false;
             this.chkSMNegativePrice.Location = new System.Drawing.Point(11, 318);
             this.chkSMNegativePrice.Name = "chkSMNegativePrice";
             this.chkSMNegativePrice.Size = new System.Drawing.Size(111, 21);
@@ -4212,7 +4155,6 @@
             // chkSMUnavailable
             // 
             this.chkSMUnavailable.AutoSize = true;
-            this.chkSMUnavailable.Enabled = false;
             this.chkSMUnavailable.Location = new System.Drawing.Point(11, 264);
             this.chkSMUnavailable.Name = "chkSMUnavailable";
             this.chkSMUnavailable.Size = new System.Drawing.Size(94, 21);
@@ -4222,7 +4164,6 @@
             // 
             // txtSMPrice
             // 
-            this.txtSMPrice.Enabled = false;
             this.txtSMPrice.Location = new System.Drawing.Point(56, 210);
             this.txtSMPrice.Name = "txtSMPrice";
             this.txtSMPrice.Size = new System.Drawing.Size(145, 23);
@@ -4241,7 +4182,6 @@
             // 
             // txtSMOtherName
             // 
-            this.txtSMOtherName.Enabled = false;
             this.txtSMOtherName.Location = new System.Drawing.Point(11, 179);
             this.txtSMOtherName.Name = "txtSMOtherName";
             this.txtSMOtherName.Size = new System.Drawing.Size(190, 23);
@@ -4260,7 +4200,6 @@
             // 
             // txtSMEngName
             // 
-            this.txtSMEngName.Enabled = false;
             this.txtSMEngName.Location = new System.Drawing.Point(11, 125);
             this.txtSMEngName.Name = "txtSMEngName";
             this.txtSMEngName.Size = new System.Drawing.Size(190, 23);
@@ -4279,7 +4218,6 @@
             // 
             // txtSMDisplayPosition
             // 
-            this.txtSMDisplayPosition.Enabled = false;
             this.txtSMDisplayPosition.Location = new System.Drawing.Point(115, 62);
             this.txtSMDisplayPosition.Name = "txtSMDisplayPosition";
             this.txtSMDisplayPosition.Size = new System.Drawing.Size(86, 23);
@@ -4298,7 +4236,6 @@
             // 
             // txtSMDishCode
             // 
-            this.txtSMDishCode.Enabled = false;
             this.txtSMDishCode.Location = new System.Drawing.Point(88, 25);
             this.txtSMDishCode.Name = "txtSMDishCode";
             this.txtSMDishCode.Size = new System.Drawing.Size(113, 23);
@@ -4333,12 +4270,13 @@
             this.btnSubMenuEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubMenuEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSubMenuEdit.ForeColor = System.Drawing.Color.White;
-            this.btnSubMenuEdit.Location = new System.Drawing.Point(116, 528);
+            this.btnSubMenuEdit.Location = new System.Drawing.Point(373, 528);
             this.btnSubMenuEdit.Name = "btnSubMenuEdit";
             this.btnSubMenuEdit.Size = new System.Drawing.Size(80, 50);
             this.btnSubMenuEdit.TabIndex = 55;
             this.btnSubMenuEdit.Text = "Edit";
             this.btnSubMenuEdit.UseVisualStyleBackColor = false;
+            this.btnSubMenuEdit.Visible = false;
             this.btnSubMenuEdit.Click += new System.EventHandler(this.btnSubMenuEdit_Click);
             // 
             // btnSubMenuExit
@@ -4347,7 +4285,7 @@
             this.btnSubMenuExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubMenuExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSubMenuExit.ForeColor = System.Drawing.Color.White;
-            this.btnSubMenuExit.Location = new System.Drawing.Point(374, 528);
+            this.btnSubMenuExit.Location = new System.Drawing.Point(287, 528);
             this.btnSubMenuExit.Name = "btnSubMenuExit";
             this.btnSubMenuExit.Size = new System.Drawing.Size(80, 50);
             this.btnSubMenuExit.TabIndex = 54;
@@ -4361,7 +4299,7 @@
             this.btnSubMenuSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubMenuSave.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSubMenuSave.ForeColor = System.Drawing.Color.White;
-            this.btnSubMenuSave.Location = new System.Drawing.Point(288, 528);
+            this.btnSubMenuSave.Location = new System.Drawing.Point(201, 528);
             this.btnSubMenuSave.Name = "btnSubMenuSave";
             this.btnSubMenuSave.Size = new System.Drawing.Size(80, 50);
             this.btnSubMenuSave.TabIndex = 53;
@@ -4375,7 +4313,7 @@
             this.btnSubMenuDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubMenuDel.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSubMenuDel.ForeColor = System.Drawing.Color.White;
-            this.btnSubMenuDel.Location = new System.Drawing.Point(202, 528);
+            this.btnSubMenuDel.Location = new System.Drawing.Point(115, 528);
             this.btnSubMenuDel.Name = "btnSubMenuDel";
             this.btnSubMenuDel.Size = new System.Drawing.Size(80, 50);
             this.btnSubMenuDel.TabIndex = 52;
