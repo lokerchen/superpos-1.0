@@ -182,11 +182,6 @@
             this.txtSCDishCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSC4 = new System.Windows.Forms.Button();
-            this.btnSC3 = new System.Windows.Forms.Button();
-            this.btnSC2 = new System.Windows.Forms.Button();
-            this.btnSC1 = new System.Windows.Forms.Button();
             this.tabPageThird = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.chkTCAutoAppend17 = new System.Windows.Forms.CheckBox();
@@ -273,11 +268,6 @@
             this.txtTCDishCode = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.btnTC4 = new System.Windows.Forms.Button();
-            this.btnTC3 = new System.Windows.Forms.Button();
-            this.btnTC2 = new System.Windows.Forms.Button();
-            this.btnTC1 = new System.Windows.Forms.Button();
             this.tabPageTaste = new System.Windows.Forms.TabPage();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.chkTHAutoAppend17 = new System.Windows.Forms.CheckBox();
@@ -364,11 +354,6 @@
             this.txtTHDishCode = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.btnTH4 = new System.Windows.Forms.Button();
-            this.btnTH3 = new System.Windows.Forms.Button();
-            this.btnTH2 = new System.Windows.Forms.Button();
-            this.btnTH1 = new System.Windows.Forms.Button();
             this.tabPageSub = new System.Windows.Forms.TabPage();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.txtDishOtherName15 = new System.Windows.Forms.TextBox();
@@ -450,17 +435,14 @@
             this.groupBox8.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSCMenu)).BeginInit();
-            this.groupBox3.SuspendLayout();
             this.tabPageThird.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTCMenu)).BeginInit();
-            this.groupBox11.SuspendLayout();
             this.tabPageTaste.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHMenu)).BeginInit();
-            this.groupBox14.SuspendLayout();
             this.tabPageSub.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox17.SuspendLayout();
@@ -1228,7 +1210,6 @@
             this.tabPageSecond.Controls.Add(this.btnSCExit);
             this.tabPageSecond.Controls.Add(this.btnSCSave);
             this.tabPageSecond.Controls.Add(this.groupBox2);
-            this.tabPageSecond.Controls.Add(this.groupBox3);
             this.tabPageSecond.Location = new System.Drawing.Point(4, 26);
             this.tabPageSecond.Name = "tabPageSecond";
             this.tabPageSecond.Padding = new System.Windows.Forms.Padding(3);
@@ -1922,9 +1903,9 @@
             this.groupBox2.Controls.Add(this.txtSCDishCode);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Location = new System.Drawing.Point(6, 81);
+            this.groupBox2.Location = new System.Drawing.Point(6, 9);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(392, 424);
+            this.groupBox2.Size = new System.Drawing.Size(392, 496);
             this.groupBox2.TabIndex = 43;
             this.groupBox2.TabStop = false;
             // 
@@ -1936,7 +1917,7 @@
             this.dgvSCMenu.Name = "dgvSCMenu";
             this.dgvSCMenu.ReadOnly = true;
             this.dgvSCMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSCMenu.Size = new System.Drawing.Size(373, 345);
+            this.dgvSCMenu.Size = new System.Drawing.Size(373, 417);
             this.dgvSCMenu.TabIndex = 6;
             this.dgvSCMenu.SelectionChanged += new System.EventHandler(this.dgvSCMenu_SelectionChanged);
             // 
@@ -1998,74 +1979,12 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "Dish code search";
             // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.btnSC4);
-            this.groupBox3.Controls.Add(this.btnSC3);
-            this.groupBox3.Controls.Add(this.btnSC2);
-            this.groupBox3.Controls.Add(this.btnSC1);
-            this.groupBox3.Location = new System.Drawing.Point(6, 6);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(392, 74);
-            this.groupBox3.TabIndex = 42;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Menu Set";
-            // 
-            // btnSC4
-            // 
-            this.btnSC4.BackColor = System.Drawing.Color.Gray;
-            this.btnSC4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSC4.ForeColor = System.Drawing.Color.White;
-            this.btnSC4.Location = new System.Drawing.Point(294, 17);
-            this.btnSC4.Name = "btnSC4";
-            this.btnSC4.Size = new System.Drawing.Size(75, 50);
-            this.btnSC4.TabIndex = 3;
-            this.btnSC4.Text = "button9";
-            this.btnSC4.UseVisualStyleBackColor = false;
-            // 
-            // btnSC3
-            // 
-            this.btnSC3.BackColor = System.Drawing.Color.Gray;
-            this.btnSC3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSC3.ForeColor = System.Drawing.Color.White;
-            this.btnSC3.Location = new System.Drawing.Point(204, 17);
-            this.btnSC3.Name = "btnSC3";
-            this.btnSC3.Size = new System.Drawing.Size(75, 50);
-            this.btnSC3.TabIndex = 2;
-            this.btnSC3.Text = "button8";
-            this.btnSC3.UseVisualStyleBackColor = false;
-            // 
-            // btnSC2
-            // 
-            this.btnSC2.BackColor = System.Drawing.Color.Gray;
-            this.btnSC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSC2.ForeColor = System.Drawing.Color.White;
-            this.btnSC2.Location = new System.Drawing.Point(114, 17);
-            this.btnSC2.Name = "btnSC2";
-            this.btnSC2.Size = new System.Drawing.Size(75, 50);
-            this.btnSC2.TabIndex = 1;
-            this.btnSC2.Text = "button7";
-            this.btnSC2.UseVisualStyleBackColor = false;
-            // 
-            // btnSC1
-            // 
-            this.btnSC1.BackColor = System.Drawing.Color.Gray;
-            this.btnSC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSC1.ForeColor = System.Drawing.Color.White;
-            this.btnSC1.Location = new System.Drawing.Point(24, 17);
-            this.btnSC1.Name = "btnSC1";
-            this.btnSC1.Size = new System.Drawing.Size(75, 50);
-            this.btnSC1.TabIndex = 0;
-            this.btnSC1.Text = "button6";
-            this.btnSC1.UseVisualStyleBackColor = false;
-            // 
             // tabPageThird
             // 
             this.tabPageThird.Controls.Add(this.groupBox9);
             this.tabPageThird.Controls.Add(this.btnTCExit);
             this.tabPageThird.Controls.Add(this.btnTCSave);
             this.tabPageThird.Controls.Add(this.groupBox10);
-            this.tabPageThird.Controls.Add(this.groupBox11);
             this.tabPageThird.Location = new System.Drawing.Point(4, 26);
             this.tabPageThird.Name = "tabPageThird";
             this.tabPageThird.Size = new System.Drawing.Size(967, 600);
@@ -2760,9 +2679,9 @@
             this.groupBox10.Controls.Add(this.txtTCDishCode);
             this.groupBox10.Controls.Add(this.label29);
             this.groupBox10.Controls.Add(this.label30);
-            this.groupBox10.Location = new System.Drawing.Point(9, 87);
+            this.groupBox10.Location = new System.Drawing.Point(9, 12);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(392, 424);
+            this.groupBox10.Size = new System.Drawing.Size(392, 499);
             this.groupBox10.TabIndex = 104;
             this.groupBox10.TabStop = false;
             // 
@@ -2774,7 +2693,7 @@
             this.dgvTCMenu.Name = "dgvTCMenu";
             this.dgvTCMenu.ReadOnly = true;
             this.dgvTCMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTCMenu.Size = new System.Drawing.Size(373, 345);
+            this.dgvTCMenu.Size = new System.Drawing.Size(373, 420);
             this.dgvTCMenu.TabIndex = 6;
             this.dgvTCMenu.SelectionChanged += new System.EventHandler(this.dgvTCMenu_SelectionChanged);
             // 
@@ -2836,74 +2755,12 @@
             this.label30.TabIndex = 0;
             this.label30.Text = "Dish code search";
             // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.btnTC4);
-            this.groupBox11.Controls.Add(this.btnTC3);
-            this.groupBox11.Controls.Add(this.btnTC2);
-            this.groupBox11.Controls.Add(this.btnTC1);
-            this.groupBox11.Location = new System.Drawing.Point(9, 12);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(392, 74);
-            this.groupBox11.TabIndex = 103;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Menu Set";
-            // 
-            // btnTC4
-            // 
-            this.btnTC4.BackColor = System.Drawing.Color.Gray;
-            this.btnTC4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTC4.ForeColor = System.Drawing.Color.White;
-            this.btnTC4.Location = new System.Drawing.Point(294, 17);
-            this.btnTC4.Name = "btnTC4";
-            this.btnTC4.Size = new System.Drawing.Size(75, 50);
-            this.btnTC4.TabIndex = 3;
-            this.btnTC4.Text = "button9";
-            this.btnTC4.UseVisualStyleBackColor = false;
-            // 
-            // btnTC3
-            // 
-            this.btnTC3.BackColor = System.Drawing.Color.Gray;
-            this.btnTC3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTC3.ForeColor = System.Drawing.Color.White;
-            this.btnTC3.Location = new System.Drawing.Point(204, 17);
-            this.btnTC3.Name = "btnTC3";
-            this.btnTC3.Size = new System.Drawing.Size(75, 50);
-            this.btnTC3.TabIndex = 2;
-            this.btnTC3.Text = "button8";
-            this.btnTC3.UseVisualStyleBackColor = false;
-            // 
-            // btnTC2
-            // 
-            this.btnTC2.BackColor = System.Drawing.Color.Gray;
-            this.btnTC2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTC2.ForeColor = System.Drawing.Color.White;
-            this.btnTC2.Location = new System.Drawing.Point(114, 17);
-            this.btnTC2.Name = "btnTC2";
-            this.btnTC2.Size = new System.Drawing.Size(75, 50);
-            this.btnTC2.TabIndex = 1;
-            this.btnTC2.Text = "button7";
-            this.btnTC2.UseVisualStyleBackColor = false;
-            // 
-            // btnTC1
-            // 
-            this.btnTC1.BackColor = System.Drawing.Color.Gray;
-            this.btnTC1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTC1.ForeColor = System.Drawing.Color.White;
-            this.btnTC1.Location = new System.Drawing.Point(24, 17);
-            this.btnTC1.Name = "btnTC1";
-            this.btnTC1.Size = new System.Drawing.Size(75, 50);
-            this.btnTC1.TabIndex = 0;
-            this.btnTC1.Text = "button6";
-            this.btnTC1.UseVisualStyleBackColor = false;
-            // 
             // tabPageTaste
             // 
             this.tabPageTaste.Controls.Add(this.groupBox12);
             this.tabPageTaste.Controls.Add(this.btnTHExit);
             this.tabPageTaste.Controls.Add(this.btnTHSave);
             this.tabPageTaste.Controls.Add(this.groupBox13);
-            this.tabPageTaste.Controls.Add(this.groupBox14);
             this.tabPageTaste.Location = new System.Drawing.Point(4, 26);
             this.tabPageTaste.Name = "tabPageTaste";
             this.tabPageTaste.Size = new System.Drawing.Size(967, 600);
@@ -3596,9 +3453,9 @@
             this.groupBox13.Controls.Add(this.txtTHDishCode);
             this.groupBox13.Controls.Add(this.label36);
             this.groupBox13.Controls.Add(this.label37);
-            this.groupBox13.Location = new System.Drawing.Point(3, 87);
+            this.groupBox13.Location = new System.Drawing.Point(3, 12);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(392, 424);
+            this.groupBox13.Size = new System.Drawing.Size(392, 499);
             this.groupBox13.TabIndex = 113;
             this.groupBox13.TabStop = false;
             // 
@@ -3610,7 +3467,7 @@
             this.dgvTHMenu.Name = "dgvTHMenu";
             this.dgvTHMenu.ReadOnly = true;
             this.dgvTHMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTHMenu.Size = new System.Drawing.Size(373, 345);
+            this.dgvTHMenu.Size = new System.Drawing.Size(373, 420);
             this.dgvTHMenu.TabIndex = 6;
             this.dgvTHMenu.SelectionChanged += new System.EventHandler(this.dgvTHMenu_SelectionChanged);
             // 
@@ -3671,67 +3528,6 @@
             this.label37.Size = new System.Drawing.Size(108, 17);
             this.label37.TabIndex = 0;
             this.label37.Text = "Dish code search";
-            // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.btnTH4);
-            this.groupBox14.Controls.Add(this.btnTH3);
-            this.groupBox14.Controls.Add(this.btnTH2);
-            this.groupBox14.Controls.Add(this.btnTH1);
-            this.groupBox14.Location = new System.Drawing.Point(3, 12);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(392, 74);
-            this.groupBox14.TabIndex = 112;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Menu Set";
-            // 
-            // btnTH4
-            // 
-            this.btnTH4.BackColor = System.Drawing.Color.Gray;
-            this.btnTH4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTH4.ForeColor = System.Drawing.Color.White;
-            this.btnTH4.Location = new System.Drawing.Point(294, 17);
-            this.btnTH4.Name = "btnTH4";
-            this.btnTH4.Size = new System.Drawing.Size(75, 50);
-            this.btnTH4.TabIndex = 3;
-            this.btnTH4.Text = "button9";
-            this.btnTH4.UseVisualStyleBackColor = false;
-            // 
-            // btnTH3
-            // 
-            this.btnTH3.BackColor = System.Drawing.Color.Gray;
-            this.btnTH3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTH3.ForeColor = System.Drawing.Color.White;
-            this.btnTH3.Location = new System.Drawing.Point(204, 17);
-            this.btnTH3.Name = "btnTH3";
-            this.btnTH3.Size = new System.Drawing.Size(75, 50);
-            this.btnTH3.TabIndex = 2;
-            this.btnTH3.Text = "button8";
-            this.btnTH3.UseVisualStyleBackColor = false;
-            // 
-            // btnTH2
-            // 
-            this.btnTH2.BackColor = System.Drawing.Color.Gray;
-            this.btnTH2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTH2.ForeColor = System.Drawing.Color.White;
-            this.btnTH2.Location = new System.Drawing.Point(114, 17);
-            this.btnTH2.Name = "btnTH2";
-            this.btnTH2.Size = new System.Drawing.Size(75, 50);
-            this.btnTH2.TabIndex = 1;
-            this.btnTH2.Text = "button7";
-            this.btnTH2.UseVisualStyleBackColor = false;
-            // 
-            // btnTH1
-            // 
-            this.btnTH1.BackColor = System.Drawing.Color.Gray;
-            this.btnTH1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTH1.ForeColor = System.Drawing.Color.White;
-            this.btnTH1.Location = new System.Drawing.Point(24, 17);
-            this.btnTH1.Name = "btnTH1";
-            this.btnTH1.Size = new System.Drawing.Size(75, 50);
-            this.btnTH1.TabIndex = 0;
-            this.btnTH1.Text = "button6";
-            this.btnTH1.UseVisualStyleBackColor = false;
             // 
             // tabPageSub
             // 
@@ -4418,21 +4214,18 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSCMenu)).EndInit();
-            this.groupBox3.ResumeLayout(false);
             this.tabPageThird.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTCMenu)).EndInit();
-            this.groupBox11.ResumeLayout(false);
             this.tabPageTaste.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTHMenu)).EndInit();
-            this.groupBox14.ResumeLayout(false);
             this.tabPageSub.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
@@ -4522,11 +4315,6 @@
         private System.Windows.Forms.TextBox txtSCDishCode;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnSC4;
-        private System.Windows.Forms.Button btnSC3;
-        private System.Windows.Forms.Button btnSC2;
-        private System.Windows.Forms.Button btnSC1;
         private System.Windows.Forms.Button btnSCExit;
         private System.Windows.Forms.Button btnSCSave;
         private System.Windows.Forms.GroupBox groupBox8;
@@ -4540,11 +4328,6 @@
         private System.Windows.Forms.TextBox txtTCDishCode;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Button btnTC4;
-        private System.Windows.Forms.Button btnTC3;
-        private System.Windows.Forms.Button btnTC2;
-        private System.Windows.Forms.Button btnTC1;
         private System.Windows.Forms.Button btnTHExit;
         private System.Windows.Forms.Button btnTHSave;
         private System.Windows.Forms.GroupBox groupBox13;
@@ -4555,11 +4338,6 @@
         private System.Windows.Forms.TextBox txtTHDishCode;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.Button btnTH4;
-        private System.Windows.Forms.Button btnTH3;
-        private System.Windows.Forms.Button btnTH2;
-        private System.Windows.Forms.Button btnTH1;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label39;
