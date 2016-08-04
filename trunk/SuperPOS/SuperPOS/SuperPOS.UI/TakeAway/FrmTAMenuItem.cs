@@ -24,24 +24,6 @@ namespace SuperPOS.UI.TakeAway
         private Guid btnDAGuid3 = Guid.Empty;
         private Guid btnDAGuid4 = Guid.Empty;
 
-        private Guid btnSCGuid = Guid.Empty;
-        private Guid btnSCGuid1 = Guid.Empty;
-        private Guid btnSCGuid2 = Guid.Empty;
-        private Guid btnSCGuid3 = Guid.Empty;
-        private Guid btnSCGuid4 = Guid.Empty;
-
-        private Guid btnTCGuid = Guid.Empty;
-        private Guid btnTCGuid1 = Guid.Empty;
-        private Guid btnTCGuid2 = Guid.Empty;
-        private Guid btnTCGuid3 = Guid.Empty;
-        private Guid btnTCGuid4 = Guid.Empty;
-
-        private Guid btnTHGuid = Guid.Empty;
-        private Guid btnTHGuid1 = Guid.Empty;
-        private Guid btnTHGuid2 = Guid.Empty;
-        private Guid btnTHGuid3 = Guid.Empty;
-        private Guid btnTHGuid4 = Guid.Empty;
-
         private string menuCate1 = "";
         private string menuCate2 = "";
         private string menuCate3 = "";
@@ -146,129 +128,6 @@ namespace SuperPOS.UI.TakeAway
                     case "4":
                         btnDA4.Text = tsl.EnglishName;
                         btnDAGuid4 = tsl.SystemKey;
-                        break;
-                }
-            }
-
-            #endregion
-
-            #region  Second Choices Menu Set 按钮
-
-            btnSC1.Click += btnSC_Click;
-            btnSC2.Click += btnSC_Click;
-            btnSC3.Click += btnSC_Click;
-            btnSC4.Click += btnSC_Click;
-
-            btnSC1.BackColor = Color.CornflowerBlue;
-            btnSC2.BackColor = Color.Gray;
-            btnSC3.BackColor = Color.Gray;
-            btnSC4.BackColor = Color.Gray;
-
-            onLoadSystemCommonData.GetTAMenuSet();
-
-            foreach (var tsl in CommonData.TaMenuSetList.OrderBy(s => s.ID))
-            {
-                switch (tsl.ID)
-                {
-                    case "1":
-                        btnSC1.Text = tsl.EnglishName;
-                        btnSCGuid1 = tsl.SystemKey;
-                        //默认值
-                        btnSCGuid = btnSCGuid1;
-                        break;
-                    case "2":
-                        btnSC2.Text = tsl.EnglishName;
-                        btnSCGuid2 = tsl.SystemKey;
-                        break;
-                    case "3":
-                        btnSC3.Text = tsl.EnglishName;
-                        btnSCGuid3 = tsl.SystemKey;
-                        break;
-                    case "4":
-                        btnSC4.Text = tsl.EnglishName;
-                        btnSCGuid4 = tsl.SystemKey;
-                        break;
-                }
-            }
-
-            #endregion
-
-            #region  Third Choices Menu Set 按钮
-
-            btnTC1.Click += btnTC_Click;
-            btnTC2.Click += btnTC_Click;
-            btnTC3.Click += btnTC_Click;
-            btnTC4.Click += btnTC_Click;
-
-            btnTC1.BackColor = Color.CornflowerBlue;
-            btnTC2.BackColor = Color.Gray;
-            btnTC3.BackColor = Color.Gray;
-            btnTC4.BackColor = Color.Gray;
-
-            onLoadSystemCommonData.GetTAMenuSet();
-
-            foreach (var tsl in CommonData.TaMenuSetList.OrderBy(s => s.ID))
-            {
-                switch (tsl.ID)
-                {
-                    case "1":
-                        btnTC1.Text = tsl.EnglishName;
-                        btnTCGuid1 = tsl.SystemKey;
-                        //默认值
-                        btnTCGuid = btnTCGuid1;
-                        break;
-                    case "2":
-                        btnTC2.Text = tsl.EnglishName;
-                        btnTCGuid2 = tsl.SystemKey;
-                        break;
-                    case "3":
-                        btnTC3.Text = tsl.EnglishName;
-                        btnTCGuid3 = tsl.SystemKey;
-                        break;
-                    case "4":
-                        btnTC4.Text = tsl.EnglishName;
-                        btnTCGuid4 = tsl.SystemKey;
-                        break;
-                }
-            }
-
-            #endregion
-
-            #region  Taste Handling Menu Set 按钮
-
-            btnTH1.Click += btnTH_Click;
-            btnTH2.Click += btnTH_Click;
-            btnTH3.Click += btnTH_Click;
-            btnTH4.Click += btnTH_Click;
-
-            btnTH1.BackColor = Color.CornflowerBlue;
-            btnTH2.BackColor = Color.Gray;
-            btnTH3.BackColor = Color.Gray;
-            btnTH4.BackColor = Color.Gray;
-
-            onLoadSystemCommonData.GetTAMenuSet();
-
-            foreach (var tsl in CommonData.TaMenuSetList.OrderBy(s => s.ID))
-            {
-                switch (tsl.ID)
-                {
-                    case "1":
-                        btnTH1.Text = tsl.EnglishName;
-                        btnTHGuid1 = tsl.SystemKey;
-                        //默认值
-                        btnTHGuid = btnTHGuid1;
-                        break;
-                    case "2":
-                        btnTH2.Text = tsl.EnglishName;
-                        btnTHGuid2 = tsl.SystemKey;
-                        break;
-                    case "3":
-                        btnTH3.Text = tsl.EnglishName;
-                        btnTHGuid3 = tsl.SystemKey;
-                        break;
-                    case "4":
-                        btnTH4.Text = tsl.EnglishName;
-                        btnTHGuid4 = tsl.SystemKey;
                         break;
                 }
             }
@@ -746,138 +605,24 @@ namespace SuperPOS.UI.TakeAway
                     btnDAGuid = btnDAGuid1;
                     break;
             }
-            dgvDAMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
-            //if (btn1.BackColor = Color.Gray)
-            //Console.Out.WriteLine(btnDAGuid.ToString());
-        }
 
-        private void btnSC_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button) sender;
-            switch (btn.Name)
+            //若按钮为空，则不显示
+            if (string.IsNullOrEmpty(btn.Text))
             {
-                case "btnSC1":
-                    btnID = "1";
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnSC2.BackColor = Color.Gray;
-                    btnSC3.BackColor = Color.Gray;
-                    btnSC4.BackColor = Color.Gray;
-                    btnSCGuid = btnSCGuid1;
-                    break;
-                case "btnSC2":
-                    btnID = "2";
-                    btnSC1.BackColor = Color.Gray;
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnSC3.BackColor = Color.Gray;
-                    btnSC4.BackColor = Color.Gray;
-                    btnSCGuid = btnSCGuid2;
-                    break;
-                case "btnSC3":
-                    btnID = "3";
-                    btnSC1.BackColor = Color.Gray;
-                    btnSC2.BackColor = Color.Gray;
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnSC4.BackColor = Color.Gray;
-                    btnSCGuid = btnSCGuid3;
-                    break;
-                case "btnSC4":
-                    btnID = "4";
-                    btnSC1.BackColor = Color.Gray;
-                    btnSC2.BackColor = Color.Gray;
-                    btnSC3.BackColor = Color.Gray;
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnSCGuid = btnSCGuid4;
-                    break;
+                dgvDAMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(Guid.NewGuid().ToString())).ToList();
+                dgvSCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(Guid.NewGuid().ToString())).ToList();
+                dgvTCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(Guid.NewGuid().ToString())).ToList();
+                dgvTHMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(Guid.NewGuid().ToString())).ToList();
+            }
+            else
+            {
+                dgvDAMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
+                dgvSCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
+                dgvTCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
+                dgvTHMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
             }
             //if (btn1.BackColor = Color.Gray)
             //Console.Out.WriteLine(btnDAGuid.ToString());
-            dgvSCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnSCGuid.ToString())).ToList();
-        }
-
-        private void btnTC_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button) sender;
-            switch (btn.Name)
-            {
-                case "btnTC1":
-                    btnID = "1";
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnTC2.BackColor = Color.Gray;
-                    btnTC3.BackColor = Color.Gray;
-                    btnTC4.BackColor = Color.Gray;
-                    btnTCGuid = btnTCGuid1;
-                    break;
-                case "btnTC2":
-                    btnID = "2";
-                    btnTC1.BackColor = Color.Gray;
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnTC3.BackColor = Color.Gray;
-                    btnTC4.BackColor = Color.Gray;
-                    btnTCGuid = btnTCGuid2;
-                    break;
-                case "btnTC3":
-                    btnID = "3";
-                    btnTC1.BackColor = Color.Gray;
-                    btnTC2.BackColor = Color.Gray;
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnTC4.BackColor = Color.Gray;
-                    btnTCGuid = btnTCGuid3;
-                    break;
-                case "btnTC4":
-                    btnID = "4";
-                    btnTC1.BackColor = Color.Gray;
-                    btnTC2.BackColor = Color.Gray;
-                    btnTC3.BackColor = Color.Gray;
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnTCGuid = btnTCGuid4;
-                    break;
-            }
-            //if (btn1.BackColor = Color.Gray)
-            //Console.Out.WriteLine(btnDAGuid.ToString());
-            dgvTCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnTCGuid.ToString())).ToList();
-        }
-
-        private void btnTH_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button) sender;
-            switch (btn.Name)
-            {
-                case "btnTH1":
-                    btnID = "1";
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnTH2.BackColor = Color.Gray;
-                    btnTH3.BackColor = Color.Gray;
-                    btnTH4.BackColor = Color.Gray;
-                    btnTHGuid = btnTHGuid1;
-                    break;
-                case "btnTH2":
-                    btnID = "2";
-                    btnTH1.BackColor = Color.Gray;
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnTH3.BackColor = Color.Gray;
-                    btnTH4.BackColor = Color.Gray;
-                    btnTHGuid = btnTHGuid2;
-                    break;
-                case "btnTH3":
-                    btnID = "3";
-                    btnTH1.BackColor = Color.Gray;
-                    btnTH2.BackColor = Color.Gray;
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnTH4.BackColor = Color.Gray;
-                    btnTHGuid = btnTHGuid3;
-                    break;
-                case "btnTH4":
-                    btnID = "4";
-                    btnTH1.BackColor = Color.Gray;
-                    btnTH2.BackColor = Color.Gray;
-                    btnTH3.BackColor = Color.Gray;
-                    btn.BackColor = Color.CornflowerBlue;
-                    btnTHGuid = btnTHGuid4;
-                    break;
-            }
-            //if (btn1.BackColor = Color.Gray)
-            //Console.Out.WriteLine(btnDAGuid.ToString());
-            dgvTHMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnTHGuid.ToString())).ToList();
         }
 
         private void btnDAExit_Click(object sender, EventArgs e)
@@ -1212,7 +957,7 @@ namespace SuperPOS.UI.TakeAway
             }
 
             new OnLoadSystemCommonData().GetTAMenuItemList();
-            dgvDAMenu.DataSource = CommonData.TaMenuItemList;
+            dgvDAMenu.DataSource = string.IsNullOrEmpty(btnDAGuid.ToString()) ? CommonData.TaMenuItemList : CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
 
             btnDAAdd.Enabled = true;
             btnDACopy.Enabled = true;
@@ -1367,7 +1112,7 @@ namespace SuperPOS.UI.TakeAway
             var scMenuList =
                 CommonData.TaMenuItemSCList.Where(
                     s =>
-                        s.MenuSetID.Equals(btnSCGuid.ToString()) &&
+                        s.MenuSetID.Equals(btnDAGuid.ToString()) &&
                         s.MenuItemID.Equals(dgvSCMenu.CurrentRow.Cells[0].Value.ToString()));
 
             if (scMenuList.Any())
@@ -1402,7 +1147,7 @@ namespace SuperPOS.UI.TakeAway
             var qDelList =
                 CommonData.TaMenuItemSCList.Where(
                     s =>
-                        s.MenuSetID.Equals(btnSCGuid.ToString()) &&
+                        s.MenuSetID.Equals(btnDAGuid.ToString()) &&
                         s.MenuItemID.Equals(dgvSCMenu.CurrentRow.Cells[0].Value.ToString()));
             foreach (var taMenuItemScInfo in qDelList)
             {
@@ -1418,7 +1163,7 @@ namespace SuperPOS.UI.TakeAway
                 {
                     scMenuItem.SystemKey = Guid.NewGuid();
                     scMenuItem.MenuItemID = dgvSCMenu.CurrentRow.Cells[0].Value.ToString();
-                    scMenuItem.MenuSetID = btnSCGuid.ToString();
+                    scMenuItem.MenuSetID = btnDAGuid.ToString();
                     scMenuItem.EnglishName = scTxtEngName[i].Text;
                     scMenuItem.OtherName = scTxtOtherName[i].Text;
                     scMenuItem.AddPrice = scTxtPricce[i].Text;
@@ -1435,7 +1180,7 @@ namespace SuperPOS.UI.TakeAway
             var qDelList =
                 CommonData.TaMenuItemTCList.Where(
                     s =>
-                        s.MenuSetID.Equals(btnTCGuid.ToString()) &&
+                        s.MenuSetID.Equals(btnDAGuid.ToString()) &&
                         s.MenuItemID.Equals(dgvTCMenu.CurrentRow.Cells[0].Value.ToString()));
             foreach (var taMenuItemTcInfo in qDelList)
             {
@@ -1451,7 +1196,7 @@ namespace SuperPOS.UI.TakeAway
                 {
                     tcMenuItem.SystemKey = Guid.NewGuid();
                     tcMenuItem.MenuItemID = dgvTCMenu.CurrentRow.Cells[0].Value.ToString();
-                    tcMenuItem.MenuSetID = btnTCGuid.ToString();
+                    tcMenuItem.MenuSetID = btnDAGuid.ToString();
                     tcMenuItem.EnglishName = tcTxtEngName[i].Text;
                     tcMenuItem.OtherName = tcTxtOtherName[i].Text;
                     tcMenuItem.AddPrice = tcTxtPricce[i].Text;
@@ -1476,7 +1221,7 @@ namespace SuperPOS.UI.TakeAway
 
             new OnLoadSystemCommonData().GetTAMenuItemTCList();
             var tcMenuList = CommonData.TaMenuItemTCList.Where(s =>
-                        s.MenuSetID.Equals(btnTCGuid.ToString()) &&
+                        s.MenuSetID.Equals(btnDAGuid.ToString()) &&
                         s.MenuItemID.Equals(dgvTCMenu.CurrentRow.Cells[0].Value.ToString()));
 
             if (tcMenuList.Any())
@@ -1508,7 +1253,7 @@ namespace SuperPOS.UI.TakeAway
         private void btnTHSave_Click(object sender, EventArgs e)
         {
             var qDelList = CommonData.TaMenuItemTHList.Where(s =>
-                        s.MenuSetID.Equals(btnTHGuid.ToString()) &&
+                        s.MenuSetID.Equals(btnDAGuid.ToString()) &&
                         s.MenuItemID.Equals(dgvTHMenu.CurrentRow.Cells[0].Value.ToString()));
             foreach (var taMenuItemThInfo in qDelList)
             {
@@ -1524,7 +1269,7 @@ namespace SuperPOS.UI.TakeAway
                 {
                     thMenuItem.SystemKey = Guid.NewGuid();
                     thMenuItem.MenuItemID = dgvTHMenu.CurrentRow.Cells[0].Value.ToString();
-                    thMenuItem.MenuSetID = btnTHGuid.ToString();
+                    thMenuItem.MenuSetID = btnDAGuid.ToString();
                     thMenuItem.EnglishName = thTxtEngName[i].Text;
                     thMenuItem.OtherName = thTxtOtherName[i].Text;
                     thMenuItem.AddPrice = thTxtPricce[i].Text;
@@ -1549,7 +1294,7 @@ namespace SuperPOS.UI.TakeAway
 
             new OnLoadSystemCommonData().GetTAMenuItemTHList();
             var thMenuList = CommonData.TaMenuItemTHList.Where(s =>
-                        s.MenuSetID.Equals(btnTHGuid.ToString()) &&
+                        s.MenuSetID.Equals(btnDAGuid.ToString()) &&
                         s.MenuItemID.Equals(dgvTHMenu.CurrentRow.Cells[0].Value.ToString()));
 
             if (thMenuList.Any())
