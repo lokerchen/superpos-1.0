@@ -39,12 +39,12 @@ namespace SuperPOS.UI.TakeAway
         {
             iStatus = 1;
 
-            txtEnglishName.Enabled = true;
-            txtOtherName.Enabled = true;
-            txtDisplayPosition.Enabled = true;
-            cmbBoxDeptCode.Enabled = true;
-            chkHotKey.Enabled = true;
-            txtDishCode.Enabled = false;
+            //txtEnglishName.Enabled = true;
+            //txtOtherName.Enabled = true;
+            //txtDisplayPosition.Enabled = true;
+            //cmbBoxDeptCode.Enabled = true;
+            //chkHotKey.Enabled = true;
+            //txtDishCode.Enabled = false;
 
             txtEnglishName.Text = "";
             txtOtherName.Text = "";
@@ -54,33 +54,33 @@ namespace SuperPOS.UI.TakeAway
             txtDishCode.Enabled = false;
 
             btnAdd.Enabled = false;
-            btnEdit.Enabled = false;
+            //btnEdit.Enabled = false;
             btnDel.Enabled = false;
             btnSave.Enabled = true;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            iStatus = 2;
+            //iStatus = 2;
 
-            txtEnglishName.Enabled = true;
-            txtOtherName.Enabled = true;
-            txtDisplayPosition.Enabled = true;
+            //txtEnglishName.Enabled = true;
+            //txtOtherName.Enabled = true;
+            //txtDisplayPosition.Enabled = true;
 
-            //OnLoadSystemCommonData onLoad = new OnLoadSystemCommonData();
-            //onLoad.GetTADeptCode();
-            //List<string> lst = new List<string>();
-            //cmbBoxDeptCode.DataSource = CommonData.TaDeptCodeList.Select(s => s.DeptCode + "-" + s.DeptName).ToList();
-            cmbBoxDeptCode.Enabled = true;
+            ////OnLoadSystemCommonData onLoad = new OnLoadSystemCommonData();
+            ////onLoad.GetTADeptCode();
+            ////List<string> lst = new List<string>();
+            ////cmbBoxDeptCode.DataSource = CommonData.TaDeptCodeList.Select(s => s.DeptCode + "-" + s.DeptName).ToList();
+            //cmbBoxDeptCode.Enabled = true;
 
-            chkHotKey.Enabled = true;
-            txtDishCode.Enabled = true;
-            txtDishCode.Enabled = chkHotKey.Checked;
+            //chkHotKey.Enabled = true;
+            //txtDishCode.Enabled = true;
+            //txtDishCode.Enabled = chkHotKey.Checked;
 
-            btnEdit.Enabled = false;
-            btnAdd.Enabled = false;
-            btnDel.Enabled = false;
-            btnSave.Enabled = true;
+            ////btnEdit.Enabled = false;
+            //btnAdd.Enabled = false;
+            //btnDel.Enabled = false;
+            //btnSave.Enabled = true;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -133,15 +133,15 @@ namespace SuperPOS.UI.TakeAway
 
             btnSave.Enabled = false;
             btnAdd.Enabled = true;
-            btnEdit.Enabled = true;
+            //btnEdit.Enabled = true;
             btnDel.Enabled = true;
 
-            txtEnglishName.Enabled = false;
-            txtOtherName.Enabled = false;
-            txtDisplayPosition.Enabled = false;
-            cmbBoxDeptCode.Enabled = false;
-            chkHotKey.Enabled = false;
-            txtDishCode.Enabled = false;
+            //txtEnglishName.Enabled = false;
+            //txtOtherName.Enabled = false;
+            //txtDisplayPosition.Enabled = false;
+            //cmbBoxDeptCode.Enabled = false;
+            //chkHotKey.Enabled = false;
+            //txtDishCode.Enabled = false;
         }
 
         private void btnDel_Click(object sender, EventArgs e)
@@ -238,13 +238,23 @@ namespace SuperPOS.UI.TakeAway
             txtDisplayPosition.Text = dgvCategory.CurrentRow.Cells[3].Value?.ToString() ?? "";
 
             //cmbBoxDeptCode.SelectedItem = dgvCategory.CurrentRow.Cells[5].Value.ToString();
-            var tc = CommonData.TaDeptCodeList.Select(lstDC => new {DeptCode = lstDC.DeptCode, SysKey = lstDC.SystemKey})
-                    .Where(s => s.DeptCode.Equals(dgvCategory.CurrentRow.Cells[5].Value?.ToString() ?? ""));
-            if (tc.Any())
+            if (dgvCategory.CurrentRow.Cells[5].Value == null)
             {
-                cmbBoxDeptCode.Text = tc.FirstOrDefault().DeptCode;
+                BindCmbData();
+                cmbBoxDeptCode.Text = "";
+                //cmbBoxDeptCode.Text = "";
             }
-
+            else
+            {
+                var tc = CommonData.TaDeptCodeList.Select(lstDC => new { DeptCode = lstDC.DeptCode, SysKey = lstDC.SystemKey })
+                    .Where(s => s.DeptCode.Equals(dgvCategory.CurrentRow.Cells[5].Value?.ToString() ?? ""));
+                if (tc.Any())
+                {
+                    BindCmbData();
+                    cmbBoxDeptCode.Text = tc.FirstOrDefault().DeptCode;
+                }
+            }
+            
             chkHotKey.Checked = dgvCategory.CurrentRow.Cells[6].Value?.ToString().Equals("Y") ?? false;
             
             txtDishCode.Text = dgvCategory.CurrentRow.Cells[7].Value?.ToString() ?? "";

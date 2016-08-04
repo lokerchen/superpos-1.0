@@ -37,7 +37,6 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.txtDishCode = new System.Windows.Forms.TextBox();
@@ -70,16 +69,17 @@
             this.groupBox6.Controls.Add(this.btnExit);
             this.groupBox6.Controls.Add(this.btnSave);
             this.groupBox6.Controls.Add(this.btnDel);
-            this.groupBox6.Controls.Add(this.btnEdit);
             this.groupBox6.Controls.Add(this.btnAdd);
             this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Controls.Add(this.groupBox8);
             this.groupBox6.Controls.Add(this.groupBox9);
             this.groupBox6.Controls.Add(this.groupBox10);
-            this.groupBox6.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox6.Location = new System.Drawing.Point(12, 10);
+            this.groupBox6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox6.Location = new System.Drawing.Point(14, 14);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(690, 451);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox6.Size = new System.Drawing.Size(805, 479);
             this.groupBox6.TabIndex = 0;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Menu Category";
@@ -90,9 +90,11 @@
             this.groupBox5.Controls.Add(this.btnMenuSet3);
             this.groupBox5.Controls.Add(this.btnMenuSet2);
             this.groupBox5.Controls.Add(this.btnMenuSet1);
-            this.groupBox5.Location = new System.Drawing.Point(365, 291);
+            this.groupBox5.Location = new System.Drawing.Point(424, 296);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(309, 63);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox5.Size = new System.Drawing.Size(360, 89);
             this.groupBox5.TabIndex = 44;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Menu Set";
@@ -102,9 +104,10 @@
             this.btnMenuSet4.BackColor = System.Drawing.Color.Gray;
             this.btnMenuSet4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuSet4.ForeColor = System.Drawing.Color.White;
-            this.btnMenuSet4.Location = new System.Drawing.Point(234, 17);
+            this.btnMenuSet4.Location = new System.Drawing.Point(273, 24);
+            this.btnMenuSet4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenuSet4.Name = "btnMenuSet4";
-            this.btnMenuSet4.Size = new System.Drawing.Size(70, 40);
+            this.btnMenuSet4.Size = new System.Drawing.Size(82, 57);
             this.btnMenuSet4.TabIndex = 3;
             this.btnMenuSet4.Text = "button9";
             this.btnMenuSet4.UseVisualStyleBackColor = false;
@@ -114,9 +117,10 @@
             this.btnMenuSet3.BackColor = System.Drawing.Color.Gray;
             this.btnMenuSet3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuSet3.ForeColor = System.Drawing.Color.White;
-            this.btnMenuSet3.Location = new System.Drawing.Point(158, 17);
+            this.btnMenuSet3.Location = new System.Drawing.Point(184, 24);
+            this.btnMenuSet3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenuSet3.Name = "btnMenuSet3";
-            this.btnMenuSet3.Size = new System.Drawing.Size(70, 40);
+            this.btnMenuSet3.Size = new System.Drawing.Size(82, 57);
             this.btnMenuSet3.TabIndex = 2;
             this.btnMenuSet3.Text = "button8";
             this.btnMenuSet3.UseVisualStyleBackColor = false;
@@ -126,9 +130,10 @@
             this.btnMenuSet2.BackColor = System.Drawing.Color.Gray;
             this.btnMenuSet2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuSet2.ForeColor = System.Drawing.Color.White;
-            this.btnMenuSet2.Location = new System.Drawing.Point(82, 17);
+            this.btnMenuSet2.Location = new System.Drawing.Point(96, 24);
+            this.btnMenuSet2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenuSet2.Name = "btnMenuSet2";
-            this.btnMenuSet2.Size = new System.Drawing.Size(70, 40);
+            this.btnMenuSet2.Size = new System.Drawing.Size(82, 57);
             this.btnMenuSet2.TabIndex = 1;
             this.btnMenuSet2.Text = "button7";
             this.btnMenuSet2.UseVisualStyleBackColor = false;
@@ -138,9 +143,10 @@
             this.btnMenuSet1.BackColor = System.Drawing.Color.Gray;
             this.btnMenuSet1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenuSet1.ForeColor = System.Drawing.Color.White;
-            this.btnMenuSet1.Location = new System.Drawing.Point(6, 17);
+            this.btnMenuSet1.Location = new System.Drawing.Point(7, 24);
+            this.btnMenuSet1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMenuSet1.Name = "btnMenuSet1";
-            this.btnMenuSet1.Size = new System.Drawing.Size(70, 40);
+            this.btnMenuSet1.Size = new System.Drawing.Size(82, 57);
             this.btnMenuSet1.TabIndex = 0;
             this.btnMenuSet1.Text = "button6";
             this.btnMenuSet1.UseVisualStyleBackColor = false;
@@ -150,9 +156,10 @@
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(564, 367);
+            this.btnExit.Location = new System.Drawing.Point(704, 393);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(75, 69);
+            this.btnExit.Size = new System.Drawing.Size(80, 80);
             this.btnExit.TabIndex = 43;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -163,9 +170,10 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(402, 406);
+            this.btnSave.Location = new System.Drawing.Point(520, 393);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 30);
+            this.btnSave.Size = new System.Drawing.Size(80, 80);
             this.btnSave.TabIndex = 42;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -176,35 +184,24 @@
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.ForeColor = System.Drawing.Color.White;
-            this.btnDel.Location = new System.Drawing.Point(483, 406);
+            this.btnDel.Location = new System.Drawing.Point(610, 393);
+            this.btnDel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(75, 30);
+            this.btnDel.Size = new System.Drawing.Size(80, 80);
             this.btnDel.TabIndex = 41;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
             this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(483, 367);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 30);
-            this.btnEdit.TabIndex = 40;
-            this.btnEdit.Text = "Edit";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(402, 367);
+            this.btnAdd.Location = new System.Drawing.Point(425, 393);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 30);
+            this.btnAdd.Size = new System.Drawing.Size(80, 80);
             this.btnAdd.TabIndex = 39;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = false;
@@ -215,38 +212,43 @@
             this.groupBox7.Controls.Add(this.txtDishCode);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.chkHotKey);
-            this.groupBox7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox7.Location = new System.Drawing.Point(365, 219);
+            this.groupBox7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox7.Location = new System.Drawing.Point(426, 228);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(309, 66);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox7.Size = new System.Drawing.Size(360, 60);
             this.groupBox7.TabIndex = 38;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Hot Key Set Up";
             // 
             // txtDishCode
             // 
-            this.txtDishCode.Enabled = false;
-            this.txtDishCode.Location = new System.Drawing.Point(192, 34);
+            this.txtDishCode.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtDishCode.Location = new System.Drawing.Point(208, 24);
+            this.txtDishCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDishCode.Name = "txtDishCode";
-            this.txtDishCode.Size = new System.Drawing.Size(100, 21);
+            this.txtDishCode.Size = new System.Drawing.Size(116, 23);
             this.txtDishCode.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(116, 40);
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(134, 30);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 12);
+            this.label6.Size = new System.Drawing.Size(68, 17);
             this.label6.TabIndex = 1;
             this.label6.Text = "Dish Code";
             // 
             // chkHotKey
             // 
             this.chkHotKey.AutoSize = true;
-            this.chkHotKey.Enabled = false;
-            this.chkHotKey.Location = new System.Drawing.Point(26, 39);
+            this.chkHotKey.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.chkHotKey.Location = new System.Drawing.Point(16, 30);
+            this.chkHotKey.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkHotKey.Name = "chkHotKey";
-            this.chkHotKey.Size = new System.Drawing.Size(66, 16);
+            this.chkHotKey.Size = new System.Drawing.Size(73, 21);
             this.chkHotKey.TabIndex = 0;
             this.chkHotKey.Text = "Hot Key";
             this.chkHotKey.UseVisualStyleBackColor = true;
@@ -256,10 +258,12 @@
             // 
             this.groupBox8.Controls.Add(this.cmbBoxDeptCode);
             this.groupBox8.Controls.Add(this.label7);
-            this.groupBox8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox8.Location = new System.Drawing.Point(365, 140);
+            this.groupBox8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox8.Location = new System.Drawing.Point(426, 154);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(309, 73);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox8.Size = new System.Drawing.Size(360, 66);
             this.groupBox8.TabIndex = 37;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Department Code";
@@ -267,20 +271,22 @@
             // cmbBoxDeptCode
             // 
             this.cmbBoxDeptCode.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBoxDeptCode.Enabled = false;
+            this.cmbBoxDeptCode.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbBoxDeptCode.FormattingEnabled = true;
-            this.cmbBoxDeptCode.Location = new System.Drawing.Point(145, 32);
+            this.cmbBoxDeptCode.Location = new System.Drawing.Point(169, 24);
+            this.cmbBoxDeptCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbBoxDeptCode.Name = "cmbBoxDeptCode";
-            this.cmbBoxDeptCode.Size = new System.Drawing.Size(128, 20);
+            this.cmbBoxDeptCode.Size = new System.Drawing.Size(149, 25);
             this.cmbBoxDeptCode.TabIndex = 1;
             this.cmbBoxDeptCode.SelectedIndexChanged += new System.EventHandler(this.cmbBoxDeptCode_SelectedIndexChanged);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 40);
+            this.label7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(51, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 12);
+            this.label7.Size = new System.Drawing.Size(112, 17);
             this.label7.TabIndex = 0;
             this.label7.Text = "Department Code";
             // 
@@ -293,70 +299,80 @@
             this.groupBox9.Controls.Add(this.label9);
             this.groupBox9.Controls.Add(this.label10);
             this.groupBox9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox9.Location = new System.Drawing.Point(365, 22);
+            this.groupBox9.Location = new System.Drawing.Point(426, 27);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(309, 112);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox9.Size = new System.Drawing.Size(360, 119);
             this.groupBox9.TabIndex = 36;
             this.groupBox9.TabStop = false;
             // 
             // txtDisplayPosition
             // 
-            this.txtDisplayPosition.Enabled = false;
-            this.txtDisplayPosition.Location = new System.Drawing.Point(145, 69);
+            this.txtDisplayPosition.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtDisplayPosition.Location = new System.Drawing.Point(169, 82);
+            this.txtDisplayPosition.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDisplayPosition.Name = "txtDisplayPosition";
-            this.txtDisplayPosition.Size = new System.Drawing.Size(128, 21);
+            this.txtDisplayPosition.Size = new System.Drawing.Size(149, 23);
             this.txtDisplayPosition.TabIndex = 5;
             // 
             // txtOtherName
             // 
-            this.txtOtherName.Enabled = false;
-            this.txtOtherName.Location = new System.Drawing.Point(145, 45);
+            this.txtOtherName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtOtherName.Location = new System.Drawing.Point(169, 55);
+            this.txtOtherName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOtherName.Name = "txtOtherName";
-            this.txtOtherName.Size = new System.Drawing.Size(128, 21);
+            this.txtOtherName.Size = new System.Drawing.Size(149, 23);
             this.txtOtherName.TabIndex = 4;
             // 
             // txtEnglishName
             // 
-            this.txtEnglishName.Enabled = false;
-            this.txtEnglishName.Location = new System.Drawing.Point(145, 20);
+            this.txtEnglishName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtEnglishName.Location = new System.Drawing.Point(169, 28);
+            this.txtEnglishName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEnglishName.Name = "txtEnglishName";
-            this.txtEnglishName.Size = new System.Drawing.Size(128, 21);
+            this.txtEnglishName.Size = new System.Drawing.Size(149, 23);
             this.txtEnglishName.TabIndex = 3;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(17, 78);
+            this.label8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.Location = new System.Drawing.Point(63, 88);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 12);
+            this.label8.Size = new System.Drawing.Size(100, 17);
             this.label8.TabIndex = 2;
             this.label8.Text = "Display Position";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(48, 54);
+            this.label9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.Location = new System.Drawing.Point(83, 61);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 12);
+            this.label9.Size = new System.Drawing.Size(80, 17);
             this.label9.TabIndex = 1;
             this.label9.Text = "Other Name";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(23, 29);
+            this.label10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(61, 34);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(95, 12);
+            this.label10.Size = new System.Drawing.Size(102, 17);
             this.label10.TabIndex = 0;
             this.label10.Text = "Name in English";
             // 
             // groupBox10
             // 
             this.groupBox10.Controls.Add(this.dgvCategory);
-            this.groupBox10.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox10.Location = new System.Drawing.Point(14, 16);
+            this.groupBox10.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox10.Location = new System.Drawing.Point(16, 23);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(345, 428);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox10.Size = new System.Drawing.Size(402, 450);
             this.groupBox10.TabIndex = 30;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Category";
@@ -364,23 +380,27 @@
             // dgvCategory
             // 
             this.dgvCategory.AllowUserToDeleteRows = false;
-            this.dgvCategory.ColumnHeadersHeight = 20;
-            this.dgvCategory.Location = new System.Drawing.Point(6, 20);
+            this.dgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCategory.Location = new System.Drawing.Point(7, 23);
+            this.dgvCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.ReadOnly = true;
             this.dgvCategory.RowTemplate.Height = 23;
             this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategory.Size = new System.Drawing.Size(315, 389);
+            this.dgvCategory.Size = new System.Drawing.Size(371, 419);
             this.dgvCategory.TabIndex = 0;
             this.dgvCategory.SelectionChanged += new System.EventHandler(this.dgvCategory_SelectionChanged);
             // 
             // FrmTAMenuCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 469);
+            this.ClientSize = new System.Drawing.Size(835, 498);
             this.Controls.Add(this.groupBox6);
+            this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FrmTAMenuCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTAMenuCategory";
@@ -420,7 +440,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnDel;
-        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button btnMenuSet4;
