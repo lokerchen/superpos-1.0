@@ -1328,7 +1328,7 @@
             this.btnMenuSelect.Name = "btnMenuSelect";
             this.btnMenuSelect.Size = new System.Drawing.Size(100, 55);
             this.btnMenuSelect.TabIndex = 0;
-            this.btnMenuSelect.Text = "Menu 1";
+            this.btnMenuSelect.Text = "Menu";
             this.btnMenuSelect.UseVisualStyleBackColor = false;
             this.btnMenuSelect.Click += new System.EventHandler(this.btnMenuSelect_Click);
             // 
