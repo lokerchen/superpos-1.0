@@ -957,6 +957,8 @@ namespace SuperPOS.UI.TakeAway
                 //获得菜谱参数
                 strMenuSetID = frmTaMenuSelect.ValueString;
 
+                btnMenuSelect.Text = string.IsNullOrEmpty(strMenuSetID) ? "MENU" : CommonData.TaMenuSetList.FirstOrDefault(s => s.SystemKey.Equals(new Guid(strMenuSetID))).EnglishName;
+
                 SetMenuItem(I_LAN, 1, "", strMenuSetID);
                 SetMenuCate(I_LAN, 1, strMenuSetID);
             }
