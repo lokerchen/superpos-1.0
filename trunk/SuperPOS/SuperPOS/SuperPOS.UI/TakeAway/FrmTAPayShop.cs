@@ -1142,5 +1142,25 @@ namespace SuperPOS.UI.TakeAway
         {
 
         }
+
+        private void lblPayType1_Click(object sender, EventArgs e)
+        {
+            txtPay1.Text = txtToPay.Text;
+        }
+
+        private void lblPayType2_Click(object sender, EventArgs e)
+        {
+            txtPay2.Text = txtToPay.Text;
+        }
+
+        private void lblPayType3_Click(object sender, EventArgs e)
+        {
+            txtPay3.Text = txtToPay.Text;
+        }
+
+        private void lblPayType4_Click(object sender, EventArgs e)
+        {
+            txtPay4.Text = txtToPay.Text;
+        }
     }
 }

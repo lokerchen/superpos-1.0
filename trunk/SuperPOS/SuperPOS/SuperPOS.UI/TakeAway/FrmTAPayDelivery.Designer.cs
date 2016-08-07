@@ -483,6 +483,7 @@
             this.lblPayType4.TabIndex = 43;
             this.lblPayType4.Text = "Just Eat";
             this.lblPayType4.Visible = false;
+            this.lblPayType4.Click += new System.EventHandler(this.lblPayType4_Click);
             // 
             // txtPay4
             // 
@@ -969,6 +970,7 @@
             this.lblPayType3.TabIndex = 7;
             this.lblPayType3.Text = "Just Eat";
             this.lblPayType3.Visible = false;
+            this.lblPayType3.Click += new System.EventHandler(this.lblPayType3_Click);
             // 
             // txtPay3
             // 
@@ -1015,6 +1017,7 @@
             this.lblPayType2.TabIndex = 3;
             this.lblPayType2.Text = "Card";
             this.lblPayType2.Visible = false;
+            this.lblPayType2.Click += new System.EventHandler(this.lblPayType2_Click);
             // 
             // txtPay2
             // 
@@ -1039,6 +1042,7 @@
             this.lblPayType1.TabIndex = 1;
             this.lblPayType1.Text = "Cash";
             this.lblPayType1.Visible = false;
+            this.lblPayType1.Click += new System.EventHandler(this.lblPayType1_Click);
             // 
             // txtPay1
             // 
