@@ -457,7 +457,7 @@ namespace SuperPOS.UI.TakeAway
         private void txtPay1_TextChanged(object sender, EventArgs e)
         {
             GetPayType();
-            txtTendered.Text = (Pay1 + Pay2 + Pay3).ToString();
+            txtTendered.Text = (Pay1 + Pay2 + Pay3 + Pay4).ToString();
 
             OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
             onLoadSystemCommonData.GetTAPayType();
@@ -765,7 +765,7 @@ namespace SuperPOS.UI.TakeAway
         private void txtPay2_TextChanged(object sender, EventArgs e)
         {
             GetPayType();
-            txtTendered.Text = (Pay1 + Pay2 + Pay3).ToString();
+            txtTendered.Text = (Pay1 + Pay2 + Pay3 + Pay4).ToString();
 
             OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
             onLoadSystemCommonData.GetTAPayType();
@@ -809,7 +809,7 @@ namespace SuperPOS.UI.TakeAway
         private void txtPay3_TextChanged(object sender, EventArgs e)
         {
             GetPayType();
-            txtTendered.Text = (Pay1 + Pay2 + Pay3).ToString();
+            txtTendered.Text = (Pay1 + Pay2 + Pay3 + Pay4).ToString();
 
             OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
             onLoadSystemCommonData.GetTAPayType();
