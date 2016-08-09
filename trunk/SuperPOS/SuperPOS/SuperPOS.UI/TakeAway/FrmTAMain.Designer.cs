@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnMode1 = new System.Windows.Forms.Button();
-            this.btnMode2 = new System.Windows.Forms.Button();
-            this.btnMode3 = new System.Windows.Forms.Button();
+            this.btnMode = new System.Windows.Forms.Button();
+            this.btnSaveOrder = new System.Windows.Forms.Button();
             this.dgvMenuItem = new System.Windows.Forms.DataGridView();
             this.txtTotalCount = new System.Windows.Forms.TextBox();
             this.txtTotalPrice = new System.Windows.Forms.TextBox();
@@ -119,49 +118,34 @@
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnMode1
+            // btnMode
             // 
-            this.btnMode1.BackColor = System.Drawing.Color.Lime;
-            this.btnMode1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMode1.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnMode1.ForeColor = System.Drawing.Color.White;
-            this.btnMode1.Location = new System.Drawing.Point(14, 17);
-            this.btnMode1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnMode1.Name = "btnMode1";
-            this.btnMode1.Size = new System.Drawing.Size(105, 50);
-            this.btnMode1.TabIndex = 0;
-            this.btnMode1.Text = "Delivery";
-            this.btnMode1.UseVisualStyleBackColor = false;
+            this.btnMode.BackColor = System.Drawing.Color.Lime;
+            this.btnMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMode.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMode.ForeColor = System.Drawing.Color.White;
+            this.btnMode.Location = new System.Drawing.Point(14, 17);
+            this.btnMode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnMode.Name = "btnMode";
+            this.btnMode.Size = new System.Drawing.Size(170, 50);
+            this.btnMode.TabIndex = 0;
+            this.btnMode.Text = "Delivery";
+            this.btnMode.UseVisualStyleBackColor = false;
             // 
-            // btnMode2
+            // btnSaveOrder
             // 
-            this.btnMode2.BackColor = System.Drawing.Color.Silver;
-            this.btnMode2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMode2.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnMode2.ForeColor = System.Drawing.Color.White;
-            this.btnMode2.Location = new System.Drawing.Point(134, 17);
-            this.btnMode2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnMode2.Name = "btnMode2";
-            this.btnMode2.Size = new System.Drawing.Size(105, 50);
-            this.btnMode2.TabIndex = 1;
-            this.btnMode2.Text = "2";
-            this.btnMode2.UseVisualStyleBackColor = false;
-            this.btnMode2.Click += new System.EventHandler(this.btnMode2_Click);
-            // 
-            // btnMode3
-            // 
-            this.btnMode3.BackColor = System.Drawing.Color.Silver;
-            this.btnMode3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMode3.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnMode3.ForeColor = System.Drawing.Color.White;
-            this.btnMode3.Location = new System.Drawing.Point(254, 16);
-            this.btnMode3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnMode3.Name = "btnMode3";
-            this.btnMode3.Size = new System.Drawing.Size(105, 50);
-            this.btnMode3.TabIndex = 2;
-            this.btnMode3.Text = "3";
-            this.btnMode3.UseVisualStyleBackColor = false;
-            this.btnMode3.Click += new System.EventHandler(this.btnMode3_Click);
+            this.btnSaveOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnSaveOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveOrder.Font = new System.Drawing.Font("微软雅黑", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSaveOrder.ForeColor = System.Drawing.Color.White;
+            this.btnSaveOrder.Location = new System.Drawing.Point(189, 17);
+            this.btnSaveOrder.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnSaveOrder.Name = "btnSaveOrder";
+            this.btnSaveOrder.Size = new System.Drawing.Size(170, 50);
+            this.btnSaveOrder.TabIndex = 2;
+            this.btnSaveOrder.Text = "Save Order";
+            this.btnSaveOrder.UseVisualStyleBackColor = false;
+            this.btnSaveOrder.Click += new System.EventHandler(this.btnSaveOrder_Click);
             // 
             // dgvMenuItem
             // 
@@ -1371,9 +1355,8 @@
             this.Controls.Add(this.txtTotalPrice);
             this.Controls.Add(this.txtTotalCount);
             this.Controls.Add(this.dgvMenuItem);
-            this.Controls.Add(this.btnMode3);
-            this.Controls.Add(this.btnMode2);
-            this.Controls.Add(this.btnMode1);
+            this.Controls.Add(this.btnSaveOrder);
+            this.Controls.Add(this.btnMode);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1391,9 +1374,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnMode1;
-        private System.Windows.Forms.Button btnMode2;
-        private System.Windows.Forms.Button btnMode3;
+        private System.Windows.Forms.Button btnMode;
+        private System.Windows.Forms.Button btnSaveOrder;
         private System.Windows.Forms.DataGridView dgvMenuItem;
         private System.Windows.Forms.TextBox txtTotalCount;
         private System.Windows.Forms.TextBox txtTotalPrice;

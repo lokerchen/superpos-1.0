@@ -55,8 +55,8 @@ namespace SuperPOS.UI.TakeAway
         private string ORDER_TYPE = "";
         //private string CURRENT_ORDER_TYPE = "";
 
-        //存储当前OrderType按钮
-        private Button btnOrderType = new Button();
+        ////存储当前OrderType按钮
+        //private Button btnOrderType = new Button();
 
         //是否已赠送Free Item
         private bool isSentFreeItem = false;
@@ -85,7 +85,7 @@ namespace SuperPOS.UI.TakeAway
             //Order Type，默认为Delivery
             ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
             
-            btnMode1.Text = ORDER_TYPE;
+            btnMode.Text = ORDER_TYPE;
             //Console.Out.WriteLine(ChkNum);
             //string g = Guid.NewGuid().ToString();
             //Console.Out.WriteLine(g);
@@ -93,7 +93,7 @@ namespace SuperPOS.UI.TakeAway
             ChkKey = ChkKey1;
             ChkNum = ChkNum1;
 
-            btnOrderType = btnMode1;
+            //btnOrderType = btnMode;
 
             #region MenuItem按钮 
 
@@ -475,18 +475,8 @@ namespace SuperPOS.UI.TakeAway
                 //获得回传值
                 string sOrderType = frmTaChangeOrderType.ValueString;
 
-                ChangeOrderType(sOrderType, btnOrderType);
+                ChangeOrderType(sOrderType, btnMode);
             }
-        }
-
-        private void btnMode2_Click(object sender, EventArgs e)
-        {
-            btnOrderType = btnMode2;
-        }
-
-        private void btnMode3_Click(object sender, EventArgs e)
-        {
-            btnOrderType = btnMode3;
         }
 
         #region 获得DGV中Item数量
@@ -740,7 +730,7 @@ namespace SuperPOS.UI.TakeAway
                         ChkNum1 = CommonFunction.GetChkCode();
                         //Order Type，默认为Delivery
                         ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
-                        btnMode1.Text = ORDER_TYPE;
+                        btnMode.Text = ORDER_TYPE;
                         ChkKey = ChkKey1;
                         ChkNum = ChkNum1;
 
@@ -771,7 +761,7 @@ namespace SuperPOS.UI.TakeAway
                         ChkNum1 = CommonFunction.GetChkCode();
                         //Order Type，默认为Delivery
                         ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
-                        btnMode1.Text = ORDER_TYPE;
+                        btnMode.Text = ORDER_TYPE;
                         ChkKey = ChkKey1;
                         ChkNum = ChkNum1;
 
@@ -801,7 +791,7 @@ namespace SuperPOS.UI.TakeAway
                         ChkNum1 = CommonFunction.GetChkCode();
                         //Order Type，默认为Delivery
                         ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
-                        btnMode1.Text = ORDER_TYPE;
+                        btnMode.Text = ORDER_TYPE;
                         ChkKey = ChkKey1;
                         ChkNum = ChkNum1;
 
@@ -1117,6 +1107,16 @@ namespace SuperPOS.UI.TakeAway
         private void dgvMenuItem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnSaveOrder_Click(object sender, EventArgs e)
+        {
+            if (dgvMenuItem.RowCount <= 0) return;
+
+            //ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+            //strCallID = @"06f8d669-ba19-4922-b84d-43b23b1632e5";
+
+            AddDgvData();
         }
     }
 }
