@@ -56,8 +56,8 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "Tendered")]
         public virtual string Tendered { get; set; }
 
-        [XmlElement(ElementName = "ToPay")]
-        public virtual string ToPay { get; set; }
+        [XmlElement(ElementName = "Total")]
+        public virtual string Total { get; set; }
 
         [XmlElement(ElementName = "ForChange")]
         public virtual string ForChange { get; set; }
