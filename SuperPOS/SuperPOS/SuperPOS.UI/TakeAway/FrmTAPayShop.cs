@@ -53,6 +53,9 @@ namespace SuperPOS.UI.TakeAway
 
         private bool IsPaid = false;
 
+        //菜谱ID
+        private string strMenuID = "";
+
         private readonly EntityControl _control = new EntityControl();
 
         private Hashtable htPay = new Hashtable();
@@ -91,6 +94,9 @@ namespace SuperPOS.UI.TakeAway
             onLoadSystemCommonData.GetTAOrderItem();
             onLoadSystemCommonData.GetTAPaymentList();
 
+            if (string.IsNullOrEmpty(strMenuID))
+                strMenuID = CommonData.TaMenuSetList.FirstOrDefault().SystemKey.ToString();
+
             strCtlName = "txtPay1";
 
             #region 各种附件事件
@@ -111,6 +117,7 @@ namespace SuperPOS.UI.TakeAway
             txtPay2.MouseDown += txtPay_Click;
             txtPay3.MouseDown += txtPay_Click;
             txtPay4.MouseDown += txtPay_Click;
+
             #endregion
 
             #region 控件数组
@@ -118,7 +125,7 @@ namespace SuperPOS.UI.TakeAway
             lblPayType[0] = lblPayType1;
             lblPayType[1] = lblPayType2;
             lblPayType[2] = lblPayType3;
-            lblPayType[3] = lblPayType3;
+            lblPayType[3] = lblPayType4;
 
             txtPay[0] = txtPay1;
             txtPay[1] = txtPay2;
@@ -143,6 +150,7 @@ namespace SuperPOS.UI.TakeAway
 
                 lblSCharge[i].Visible = true;
                 lblPaySurcharge[i].Visible = true;
+                lblPaySurcharge[i].Text = "0.00";
                 txtPay[i].Visible = true;
                 lblPayType[i].Visible = true;
                 lblPayType[i].Text = taPayTypeInfo.PaymentType;
@@ -157,6 +165,7 @@ namespace SuperPOS.UI.TakeAway
                 txtPay[j].Visible = false;
                 lblPayType[j].Visible = false;
             }
+
             #endregion
 
             #region 查询账单
@@ -168,10 +177,15 @@ namespace SuperPOS.UI.TakeAway
                 TAPaymentInfo taPaymentInfo = payList.FirstOrDefault();
                 txtDiscount.Text = taPaymentInfo.Discount;
                 txtSurcharge.Text = taPaymentInfo.Surcharge;
-                txtToPay.Text = taPaymentInfo.ToPay;
+                txtTotal.Text = taPaymentInfo.Total;
                 txtNotPaid.Text = taPaymentInfo.NotPaid;
                 txtDelivery.Text = taPaymentInfo.Delivery;
                 txtTendered.Text = taPaymentInfo.Tendered;
+
+                txtToPay.Text = Convert.ToDecimal(taPaymentInfo.Total) > Convert.ToDecimal(taPaymentInfo.Tendered)
+                                ? (Convert.ToDecimal(taPaymentInfo.Total) - Convert.ToDecimal(taPaymentInfo.Tendered)).ToString()
+                                : "0.00";
+
 
                 AcctPay = Convert.ToDecimal(taPaymentInfo.AcctPay);
 
@@ -195,12 +209,13 @@ namespace SuperPOS.UI.TakeAway
                     txtPay[3].Text = taPaymentInfo.PayType4;
                     lblPaySurcharge[3].Text = taPaymentInfo.PayTypeSurCharge4;
                 }
+
+                GetAmount();
             }
             else
             {
                 return;
             }
-
             #endregion
         }
 
@@ -242,19 +257,31 @@ namespace SuperPOS.UI.TakeAway
 
             if (strCtlName.Equals("txtPay1"))
             {
-                txtPay1.Text += btn.Text;
+                if (txtPay1.Text.Equals("0.00") || txtPay1.Text.Equals("0.0") || txtPay1.Text.Equals("0") ||
+                    string.IsNullOrEmpty(txtPay1.Text)) txtPay1.Text = btn.Text;
+                else
+                    txtPay1.Text += btn.Text;
             }
             else if (strCtlName.Equals("txtPay2"))
             {
-                txtPay2.Text += btn.Text;
+                if (txtPay2.Text.Equals("0.00") || txtPay2.Text.Equals("0.0") || txtPay2.Text.Equals("0") ||
+                    string.IsNullOrEmpty(txtPay2.Text)) txtPay2.Text = btn.Text;
+                else
+                    txtPay2.Text += btn.Text;
             }
             else if (strCtlName.Equals("txtPay3"))
             {
-                txtPay3.Text += btn.Text;
+                if (txtPay3.Text.Equals("0.00") || txtPay3.Text.Equals("0.0") || txtPay3.Text.Equals("0") ||
+                    string.IsNullOrEmpty(txtPay3.Text)) txtPay3.Text = btn.Text;
+                else
+                    txtPay3.Text += btn.Text;
             }
             else if (strCtlName.Equals("txtPay4"))
             {
-                txtPay4.Text += btn.Text;
+                if (txtPay4.Text.Equals("0.00") || txtPay4.Text.Equals("0.0") || txtPay4.Text.Equals("0") ||
+                    string.IsNullOrEmpty(txtPay4.Text)) txtPay4.Text = btn.Text;
+                else
+                    txtPay4.Text += btn.Text;
             }
             else if (strCtlName.Equals("txtDelivery"))
             {
@@ -262,17 +289,23 @@ namespace SuperPOS.UI.TakeAway
             }
             else if (strCtlName.Equals("txtDiscount"))
             {
-                txtDiscount.Text += btn.Text;
+                if (txtDiscount.Text.Equals("0.00") || txtDiscount.Text.Equals("0.0") || txtDiscount.Text.Equals("0") ||
+                    string.IsNullOrEmpty(txtDiscount.Text)) txtDiscount.Text = btn.Text;
+                else
+                    txtDiscount.Text += btn.Text;
             }
             else if (strCtlName.Equals("txtSurcharge"))
             {
-                txtSurcharge.Text += btn.Text;
+                if (txtSurcharge.Text.Equals("0.00") || txtSurcharge.Text.Equals("0.0") || txtSurcharge.Text.Equals("0") ||
+                    string.IsNullOrEmpty(txtSurcharge.Text)) txtSurcharge.Text = btn.Text;
+                else
+                    txtSurcharge.Text += btn.Text;
             }
             else if (strCtlName.Equals("txtTendered"))
             {
                 txtTendered.Text += btn.Text;
             }
-            else if (strCtlName.Equals("txtToPay"))
+            else if (strCtlName.Equals("txtTotal"))
             {
                 txtToPay.Text += btn.Text;
             }
@@ -302,12 +335,6 @@ namespace SuperPOS.UI.TakeAway
             txtTendered.SelectAll();
         }
 
-        private void txtToPay_MouseDown(object sender, MouseEventArgs e)
-        {
-            strCtlName = "txtToPay";
-            txtToPay.SelectAll();
-        }
-
         #region 小键盘，Clear按钮
 
         private void btnC_Click(object sender, EventArgs e)
@@ -323,10 +350,6 @@ namespace SuperPOS.UI.TakeAway
             else if (strCtlName.Equals("txtPay3"))
             {
                 txtPay3.Text = "";
-            }
-            else if (strCtlName.Equals("txtPay4"))
-            {
-                txtPay4.Text = "";
             }
             else if (strCtlName.Equals("txtDelivery"))
             {
@@ -344,9 +367,9 @@ namespace SuperPOS.UI.TakeAway
             {
                 txtTendered.Text = "";
             }
-            else if (strCtlName.Equals("txtToPay"))
+            else if (strCtlName.Equals("txtTotal"))
             {
-                txtToPay.Text = "";
+                txtTotal.Text = "";
             }
         }
 
@@ -382,10 +405,6 @@ namespace SuperPOS.UI.TakeAway
             {
                 txtPay3.Text = txtPay3.Text.Length > 0 ? txtPay3.Text.Substring(0, txtPay3.TextLength - 1) : "";
             }
-            else if (strCtlName.Equals("txtPay4"))
-            {
-                txtPay4.Text = txtPay4.Text.Length > 0 ? txtPay4.Text.Substring(0, txtPay4.TextLength - 1) : "";
-            }
             else if (strCtlName.Equals("txtDelivery"))
             {
                 txtDelivery.Text = txtDelivery.Text.Length > 0
@@ -410,9 +429,9 @@ namespace SuperPOS.UI.TakeAway
                     ? txtTendered.Text.Substring(0, txtTendered.TextLength - 1)
                     : "";
             }
-            else if (strCtlName.Equals("txtToPay"))
+            else if (strCtlName.Equals("txtTotal"))
             {
-                txtToPay.Text = txtToPay.Text.Length > 0 ? txtToPay.Text.Substring(0, txtToPay.TextLength - 1) : "";
+                txtTotal.Text = txtTotal.Text.Length > 0 ? txtTotal.Text.Substring(0, txtTotal.TextLength - 1) : "";
             }
         }
 
@@ -440,17 +459,18 @@ namespace SuperPOS.UI.TakeAway
                     d2 = Convert.ToDecimal(taPayType.SurchargeAmount);
                     d3 = Convert.ToDecimal(taPayType.SurchargePercent);
 
-                    if (d1 > 0)
-                    {
-                        if (Pay1 > d1)
-                        {
-                            lblSurcharge1.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay1).ToString();
-                        }
-                    }
-                    else
-                    {
-                        lblSurcharge1.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay1).ToString();
-                    }
+                    //if (d1 > 0)
+                    //{
+                    //    if (Pay1 > d1)
+                    //    {
+                    //        lblSurcharge1.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay1).ToString();
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    lblSurcharge1.Text = d2 > 0 ? d2.ToString() : ((d3/100) * Pay1).ToString();
+                    //}
+                    lblSurcharge1.Text = d1 > 0 ? (Pay1 <= d1 ? (d2 > 0 ? d2.ToString() : "0.00") : "0.00") : "0.00";
                 }
                 catch (Exception)
                 {
@@ -489,7 +509,7 @@ namespace SuperPOS.UI.TakeAway
             decimal total = AcctPay + dDelivery - Pay1 - Pay2 - Pay3 - Pay4 - dDiscount + dSurChargeTotal + dVAT;
 
             //需要付款
-            txtToPay.Text = (AcctPay + dDelivery + dSurChargeTotal - dDiscount + dVAT).ToString();
+            txtTotal.Text = (AcctPay + dDelivery + dSurChargeTotal - dDiscount + dVAT).ToString();
 
             //已经付款
             txtTendered.Text = (Pay1 + Pay2 + Pay3 + Pay4).ToString();
@@ -500,8 +520,14 @@ namespace SuperPOS.UI.TakeAway
 
             if (total <= 0) total = 0.00m;
 
-            //未付款
-            txtNotPaid.Text = total.ToString();
+            //需付款
+            txtToPay.Text = total.ToString();
+
+            //显示VAT
+            txtVAT.Text = dVAT > 0 ? dVAT.ToString() : "0.00";
+
+            ////未付款
+            //txtNotPaid.Text = total.ToString();
         }
         #endregion
 
@@ -637,7 +663,6 @@ namespace SuperPOS.UI.TakeAway
             decimal s1 = 0.00m;
             decimal s2 = 0.00m;
             decimal s3 = 0.00m;
-            decimal s4 = 0.00m;
 
             new OnLoadSystemCommonData().GetTAPayType();
 
@@ -647,7 +672,6 @@ namespace SuperPOS.UI.TakeAway
                 s1 = Convert.ToDecimal(lblSurcharge1.Text);
                 s2 = Convert.ToDecimal(lblSurcharge2.Text);
                 s3 = Convert.ToDecimal(lblSurcharge3.Text);
-                s4 = Convert.ToDecimal(lblSurcharge4.Text);
             }
             catch (Exception)
             {
@@ -656,7 +680,7 @@ namespace SuperPOS.UI.TakeAway
             }
 
 
-            return s + s1 + s2 + s3 + s4;
+            return s + s1 + s2 + s3;
         }
         #endregion
 
@@ -673,7 +697,7 @@ namespace SuperPOS.UI.TakeAway
             {
                 var lstVAT = from o in lstOI
                              join m in CommonData.TaMenuItemList on o.ItemCode equals m.DishCode
-                             where !string.IsNullOrEmpty(m.IsWithoutVAT) && m.IsWithoutVAT.Equals("Y")
+                             where !string.IsNullOrEmpty(m.IsWithoutVAT) && m.IsWithoutVAT.Equals("Y") && m.MenuSetID.Equals(strMenuID)
                              select new
                              {
                                  itemTotalPrice = o.ItemTotalPrice
@@ -714,7 +738,7 @@ namespace SuperPOS.UI.TakeAway
 
         private void txtTendered_TextChanged(object sender, EventArgs e)
         {
-            decimal dChange = Convert.ToDecimal(txtTendered.Text) - Convert.ToDecimal(txtToPay.Text);
+            decimal dChange = Convert.ToDecimal(txtTendered.Text) - Convert.ToDecimal(txtTotal.Text);
             txtChange.Text = dChange <= 0 ? "0.00" : dChange.ToString();
         }
 
@@ -765,16 +789,27 @@ namespace SuperPOS.UI.TakeAway
                     d2 = Convert.ToDecimal(taPayType.SurchargeAmount);
                     d3 = Convert.ToDecimal(taPayType.SurchargePercent);
 
+                    //if (d1 > 0)
+                    //{
+                    //    if (Pay2 > d1)
+                    //    {
+                    //        lblSurcharge2.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay2).ToString();
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    lblSurcharge2.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay2).ToString();
+                    //}
                     if (d1 > 0)
                     {
-                        if (Pay2 > d1)
+                        if (Pay2 <= d1)
                         {
-                            lblSurcharge2.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay2).ToString();
+                            lblSurcharge2.Text = d2 > 0 ? d2.ToString() : "0.00";
                         }
                     }
                     else
                     {
-                        lblSurcharge2.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay2).ToString();
+                        lblSurcharge2.Text = "0.00";
                     }
                 }
                 catch (Exception)
@@ -809,16 +844,27 @@ namespace SuperPOS.UI.TakeAway
                     d2 = Convert.ToDecimal(taPayType.SurchargeAmount);
                     d3 = Convert.ToDecimal(taPayType.SurchargePercent);
 
+                    //if (d1 > 0)
+                    //{
+                    //    if (Pay3 > d1)
+                    //    {
+                    //        lblSurcharge3.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay3).ToString();
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    lblSurcharge3.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay3).ToString();
+                    //}
                     if (d1 > 0)
                     {
-                        if (Pay3 > d1)
+                        if (Pay3 <= d1)
                         {
-                            lblSurcharge3.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay3).ToString();
+                            lblSurcharge3.Text = d2 > 0 ? d2.ToString() : "0.00";
                         }
                     }
                     else
                     {
-                        lblSurcharge3.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay3).ToString();
+                        lblSurcharge3.Text = "0.00";
                     }
                 }
                 catch (Exception)
@@ -843,13 +889,12 @@ namespace SuperPOS.UI.TakeAway
                 taPaymentInfo.Discount = txtDiscount.Text;
                 taPaymentInfo.DiscountValue = DisValue.ToString();
                 taPaymentInfo.Surcharge = txtSurcharge.Text;
-                taPaymentInfo.ToPay = txtToPay.Text;
+                taPaymentInfo.Total = txtTotal.Text;
                 taPaymentInfo.NotPaid = txtNotPaid.Text;
                 taPaymentInfo.Delivery = txtDelivery.Text;
                 taPaymentInfo.Tendered = txtTendered.Text;
                 taPaymentInfo.ForChange = txtChange.Text;
-                taPaymentInfo.DCNote = "";
-                
+
                 taPaymentInfo.DriverName = strDriverName;
 
                 if (lblSCharge[0].Visible)
@@ -873,7 +918,6 @@ namespace SuperPOS.UI.TakeAway
                 {
                     taPaymentInfo.PayType2 = "0.00";
                     taPaymentInfo.PayTypeSurCharge2 = "0.00";
-
                 }
 
                 if (lblSCharge[2].Visible)
@@ -896,6 +940,7 @@ namespace SuperPOS.UI.TakeAway
                 {
                     taPaymentInfo.PayType4 = "0.00";
                     taPaymentInfo.PayTypeSurCharge4 = "0.00";
+
                 }
 
                 if (taPaymentInfo.NotPaid.Equals("0.00"))
@@ -972,9 +1017,9 @@ namespace SuperPOS.UI.TakeAway
                 //总价
                 htPay["Gross1"] = dTotal.ToString();
                 htPay["Rate2"] = "0.00%";
-                htPay["Net2"] = (Convert.ToDecimal(txtToPay.Text) - dTotal).ToString();
+                htPay["Net2"] = (Convert.ToDecimal(txtTotal.Text) - dTotal).ToString();
                 htPay["VAT-B"] = "0.00";
-                htPay["Gross2"] = (Convert.ToDecimal(txtToPay.Text) - dTotal).ToString();
+                htPay["Gross2"] = (Convert.ToDecimal(txtTotal.Text) - dTotal).ToString();
             }
             else
             {
@@ -1024,55 +1069,6 @@ namespace SuperPOS.UI.TakeAway
             PrtPrint.PrtKitchen(lstOI, htPay);
         }
 
-        private void txtPay4_TextChanged(object sender, EventArgs e)
-        {
-            GetPayType();
-            txtTendered.Text = (Pay1 + Pay2 + Pay3 + Pay4).ToString();
-
-            OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
-            onLoadSystemCommonData.GetTAPayType();
-
-            if (CommonData.TaPayTypeList.Any(s => s.PaymentType.Equals(lblPayType4.Text)))
-            {
-                TAPayTypeInfo taPayType = CommonData.TaPayTypeList.FirstOrDefault(s => s.PaymentType.Equals(lblPayType4.Text));
-
-                try
-                {
-                    decimal d1 = 0.00m;
-                    decimal d2 = 0.00m;
-                    decimal d3 = 0.00m;
-
-                    d1 = Convert.ToDecimal(taPayType.SurchargeThreshold);
-                    d2 = Convert.ToDecimal(taPayType.SurchargeAmount);
-                    d3 = Convert.ToDecimal(taPayType.SurchargePercent);
-
-                    if (d1 > 0)
-                    {
-                        if (Pay4 > d1)
-                        {
-                            lblSurcharge4.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay3).ToString();
-                        }
-                    }
-                    else
-                    {
-                        lblSurcharge4.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay3).ToString();
-                    }
-                }
-                catch (Exception)
-                {
-                    lblSurcharge4.Text = "0.00";
-                    //throw;
-                }
-            }
-
-            GetAmount();
-        }
-
-        private void txtPay4_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8 && e.KeyChar != '.') e.Handled = true;
-        }
-
         private void btnNotPaid_Click(object sender, EventArgs e)
         {
             htPay["Tendered"] = txtTendered.Text;
@@ -1118,9 +1114,9 @@ namespace SuperPOS.UI.TakeAway
                 //总价
                 htPay["Gross1"] = dTotal.ToString();
                 htPay["Rate2"] = "0.00%";
-                htPay["Net2"] = (Convert.ToDecimal(txtToPay.Text) - dTotal).ToString();
+                htPay["Net2"] = (Convert.ToDecimal(txtTotal.Text) - dTotal).ToString();
                 htPay["VAT-B"] = "0.00";
-                htPay["Gross2"] = (Convert.ToDecimal(txtToPay.Text) - dTotal).ToString();
+                htPay["Gross2"] = (Convert.ToDecimal(txtTotal.Text) - dTotal).ToString();
             }
             else
             {
@@ -1138,29 +1134,98 @@ namespace SuperPOS.UI.TakeAway
             PrtPrint.PrtReceipt(lstOI, htPay);
         }
 
-        private void btnOrderSlip_Click(object sender, EventArgs e)
+        private void txtPay4_TextChanged(object sender, EventArgs e)
         {
+            GetPayType();
+            txtTendered.Text = (Pay1 + Pay2 + Pay3 + Pay4).ToString();
 
+            OnLoadSystemCommonData onLoadSystemCommonData = new OnLoadSystemCommonData();
+            onLoadSystemCommonData.GetTAPayType();
+
+            if (CommonData.TaPayTypeList.Any(s => s.PaymentType.Equals(lblPayType4.Text)))
+            {
+                TAPayTypeInfo taPayType = CommonData.TaPayTypeList.FirstOrDefault(s => s.PaymentType.Equals(lblPayType4.Text));
+
+                try
+                {
+                    decimal d1 = 0.00m;
+                    decimal d2 = 0.00m;
+                    decimal d3 = 0.00m;
+
+                    d1 = Convert.ToDecimal(taPayType.SurchargeThreshold);
+                    d2 = Convert.ToDecimal(taPayType.SurchargeAmount);
+                    d3 = Convert.ToDecimal(taPayType.SurchargePercent);
+
+                    //if (d1 > 0)
+                    //{
+                    //    if (Pay1 > d1)
+                    //    {
+                    //        lblSurcharge4.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay4).ToString();
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    lblSurcharge4.Text = d2 > 0 ? d2.ToString() : ((d3 / 100) * Pay4).ToString();
+                    //}
+                    if (d1 > 0)
+                    {
+                        if (Pay4 <= d1)
+                        {
+                            lblSurcharge4.Text = d2 > 0 ? d2.ToString() : "0.00";
+                        }
+                    }
+                    else
+                    {
+                        lblSurcharge4.Text = "0.00";
+                    }
+                }
+                catch (Exception)
+                {
+                    lblSurcharge4.Text = "0.00";
+                    throw;
+                }
+            }
+
+            GetAmount();
+        }
+
+        private void txtPay4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar)) && e.KeyChar != (char)8 && e.KeyChar != '.') e.Handled = true;
         }
 
         private void lblPayType1_Click(object sender, EventArgs e)
         {
-            txtPay1.Text = txtToPay.Text;
+            txtPay1.Text = txtTotal.Text;
+
+            if (!txtPay1.Text.Equals(txtTotal.Text)) txtPay1.Text = txtTotal.Text;
         }
 
         private void lblPayType2_Click(object sender, EventArgs e)
         {
-            txtPay2.Text = txtToPay.Text;
+            txtPay2.Text = txtTotal.Text;
+
+            if (!txtPay2.Text.Equals(txtTotal.Text)) txtPay2.Text = txtTotal.Text;
         }
 
         private void lblPayType3_Click(object sender, EventArgs e)
         {
-            txtPay3.Text = txtToPay.Text;
+            txtPay3.Text = txtTotal.Text;
+
+            if (!txtPay3.Text.Equals(txtTotal.Text)) txtPay3.Text = txtTotal.Text;
         }
 
         private void lblPayType4_Click(object sender, EventArgs e)
         {
-            txtPay4.Text = txtToPay.Text;
+            txtPay4.Text = txtTotal.Text;
+
+            if (!txtPay4.Text.Equals(txtTotal.Text)) txtPay4.Text = txtTotal.Text;
+        }
+
+        private void txtTotal_MouseDown(object sender, MouseEventArgs e)
+        {
+            strCtlName = "txtTotal";
+            txtTotal.SelectAll();
         }
     }
 }
