@@ -692,7 +692,7 @@ namespace SuperPOS.UI.TakeAway
             taPaymentInfo.DiscountValue = @"0.00";
             taPaymentInfo.Surcharge = @"0.00";
             taPaymentInfo.Tendered = @"0.00";
-            taPaymentInfo.ToPay = txtTotalPrice.Text;
+            taPaymentInfo.Total = txtTotalPrice.Text;
             taPaymentInfo.ForChange = @"0.00";
             taPaymentInfo.DCNote = "";
             taPaymentInfo.CustInfo = strCallID;
@@ -899,11 +899,13 @@ namespace SuperPOS.UI.TakeAway
         private void ClearDgvData()
         {
             List<TAOrderItemInfo> lstTmp = new List<TAOrderItemInfo>();
+            new OnLoadSystemCommonData().GetTAOrderItem();
             CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ForEach(i => lstTmp.Add(i));
             
             foreach (var taOrderItemInfo in lstTmp)
             {
                 CommonData.TaOrderItemList.Remove(taOrderItemInfo);
+                _control.DeleteEntity(taOrderItemInfo);
 
                 new OnLoadSystemCommonData().GetTAPaymentList();
                 if (CommonData.TAPaymentList.Any(s => s.ChkNum.Equals(taOrderItemInfo.CheckCode)))
