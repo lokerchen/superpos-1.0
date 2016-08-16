@@ -55,11 +55,12 @@ namespace SuperPOS.UI.TakeAway
             payTypeList = CommonData.TaPayTypeList.ToList();
             dgvTAPayType.DataSource = payTypeList;
             dgvTAPayType.Columns[0].Visible = false;
+            dgvTAPayType.Columns[4].Visible = false;
             dgvTAPayType.Columns[5].Visible = false;
             dgvTAPayType.Columns[1].HeaderCell.Value = "Payment Type";
             dgvTAPayType.Columns[2].HeaderCell.Value = "Surcharge Threshold";
             dgvTAPayType.Columns[3].HeaderCell.Value = "Surcharge Amount";
-            dgvTAPayType.Columns[4].HeaderCell.Value = "Surcharge %";
+            //dgvTAPayType.Columns[4].HeaderCell.Value = "Surcharge %";
             #endregion
 
             #region General Setting Auto Discount Settings 
