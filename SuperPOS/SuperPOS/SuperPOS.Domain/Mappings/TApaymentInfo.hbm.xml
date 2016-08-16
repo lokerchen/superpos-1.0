@@ -23,7 +23,7 @@
     <property name="DiscountValue" column="DiscountValue" type="System.String" />
     <property name="Surcharge" column="Surcharge" type="System.String" />
     <property name="Tendered" column="Tendered" type="System.String" />
-    <property name="ToPay" column="ToPay" type="System.String" />
+    <property name="Total" column="Total" type="System.String" />
     <property name="ForChange" column="ForChange" type="System.String" />
     <property name="DCNote" column="DCNote" type="System.String" />
     <property name="CustInfo" column="CustInfo" type="System.String" />
