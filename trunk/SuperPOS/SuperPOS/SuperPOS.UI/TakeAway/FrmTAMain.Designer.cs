@@ -311,6 +311,7 @@
             this.btnPendOrder.TabIndex = 5;
             this.btnPendOrder.Text = "Pending Orders";
             this.btnPendOrder.UseVisualStyleBackColor = false;
+            this.btnPendOrder.Click += new System.EventHandler(this.btnPendOrder_Click);
             // 
             // btnIngredMode
             // 
