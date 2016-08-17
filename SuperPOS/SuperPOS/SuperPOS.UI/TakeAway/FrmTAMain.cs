@@ -1120,5 +1120,11 @@ namespace SuperPOS.UI.TakeAway
 
             AddDgvData();
         }
+
+        private void btnPendOrder_Click(object sender, EventArgs e)
+        {
+            FrmTAPendOrder frmPendOrder = new FrmTAPendOrder();
+            frmPendOrder.ShowDialog();
+        }
     }
 }
