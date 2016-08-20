@@ -1129,5 +1129,12 @@ namespace SuperPOS.UI.TakeAway
             FrmTAPendOrder frmPendOrder = new FrmTAPendOrder();
             frmPendOrder.ShowDialog();
         }
+
+        private void btnIngredMode_Click(object sender, EventArgs e)
+        {
+            FrmTAPendOrder frmTaPendOrder = new FrmTAPendOrder(userInfo);
+            Hide();
+            frmTaPendOrder.ShowDialog();
+        }
     }
 }
