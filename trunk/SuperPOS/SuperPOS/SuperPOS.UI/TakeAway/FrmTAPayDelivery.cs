@@ -966,6 +966,7 @@ namespace SuperPOS.UI.TakeAway
                 taPaymentInfo.Tendered = txtTendered.Text;
                 taPaymentInfo.ForChange = txtChange.Text;
                 taPaymentInfo.DCNote = cmbNote.Text;
+                taPaymentInfo.PayTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                 taPaymentInfo.DriverName = strDriverName;
                 

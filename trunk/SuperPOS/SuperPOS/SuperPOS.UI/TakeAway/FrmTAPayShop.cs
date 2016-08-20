@@ -896,6 +896,7 @@ namespace SuperPOS.UI.TakeAway
                 taPaymentInfo.ForChange = txtChange.Text;
 
                 taPaymentInfo.DriverName = strDriverName;
+                taPaymentInfo.PayTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
                 if (lblSCharge[0].Visible)
                 {
