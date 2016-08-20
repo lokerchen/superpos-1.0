@@ -700,6 +700,7 @@ namespace SuperPOS.UI.TakeAway
             taPaymentInfo.AcctPay = txtTotalPrice.Text;
             taPaymentInfo.DriverName = "";
             taPaymentInfo.Remark = "";
+            taPaymentInfo.PayTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
             if (isNew) _control.AddEntity(taPaymentInfo);
 
