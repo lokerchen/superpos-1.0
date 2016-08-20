@@ -80,6 +80,12 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "PayTime")]
         public virtual string PayTime { get; set; }
 
+        [XmlElement(ElementName = "OrderType")]
+        public virtual string OrderType { get; set; }
+
+        [XmlElement(ElementName = "OpUsr")]
+        public virtual string OpUsr { get; set; }
+
         [XmlElement(ElementName = "Remark")]
         public virtual string Remark { get; set; }
     }
