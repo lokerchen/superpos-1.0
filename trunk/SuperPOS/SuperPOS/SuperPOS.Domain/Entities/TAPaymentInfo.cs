@@ -77,6 +77,9 @@ namespace SuperPOS.Domain.Entities
         [XmlElement(ElementName = "DriverName")]
         public virtual string DriverName { get; set; }
 
+        [XmlElement(ElementName = "PayTime")]
+        public virtual string PayTime { get; set; }
+
         [XmlElement(ElementName = "Remark")]
         public virtual string Remark { get; set; }
     }
