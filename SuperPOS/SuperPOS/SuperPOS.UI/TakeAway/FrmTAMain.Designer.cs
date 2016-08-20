@@ -168,7 +168,7 @@
             this.txtTotalCount.Location = new System.Drawing.Point(31, 483);
             this.txtTotalCount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalCount.Name = "txtTotalCount";
-            this.txtTotalCount.Size = new System.Drawing.Size(60, 26);
+            this.txtTotalCount.Size = new System.Drawing.Size(60, 31);
             this.txtTotalCount.TabIndex = 4;
             this.txtTotalCount.Text = "11";
             this.txtTotalCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -180,7 +180,7 @@
             this.txtTotalPrice.Location = new System.Drawing.Point(99, 483);
             this.txtTotalPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.Size = new System.Drawing.Size(83, 26);
+            this.txtTotalPrice.Size = new System.Drawing.Size(83, 31);
             this.txtTotalPrice.TabIndex = 5;
             this.txtTotalPrice.Text = "£69.95";
             this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -192,7 +192,7 @@
             this.txtMainTime.Location = new System.Drawing.Point(216, 482);
             this.txtMainTime.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtMainTime.Name = "txtMainTime";
-            this.txtMainTime.Size = new System.Drawing.Size(69, 26);
+            this.txtMainTime.Size = new System.Drawing.Size(69, 31);
             this.txtMainTime.TabIndex = 6;
             this.txtMainTime.Text = "18:48:30";
             this.txtMainTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -203,7 +203,7 @@
             this.txtDishCode.Location = new System.Drawing.Point(316, 483);
             this.txtDishCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtDishCode.Name = "txtDishCode";
-            this.txtDishCode.Size = new System.Drawing.Size(43, 26);
+            this.txtDishCode.Size = new System.Drawing.Size(43, 31);
             this.txtDishCode.TabIndex = 7;
             this.txtDishCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtDishCode.Click += new System.EventHandler(this.txtDishCode_Click);
@@ -326,6 +326,7 @@
             this.btnIngredMode.TabIndex = 4;
             this.btnIngredMode.Text = "Ingred Mode";
             this.btnIngredMode.UseVisualStyleBackColor = false;
+            this.btnIngredMode.Click += new System.EventHandler(this.btnIngredMode_Click);
             // 
             // btnDT
             // 
@@ -1340,7 +1341,7 @@
             // 
             // FrmTAMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1005, 700);
             this.Controls.Add(this.btnRemove);
