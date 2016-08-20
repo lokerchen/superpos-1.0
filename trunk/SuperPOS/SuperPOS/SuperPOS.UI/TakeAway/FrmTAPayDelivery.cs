@@ -1033,10 +1033,12 @@ namespace SuperPOS.UI.TakeAway
 
                 _control.UpdateEntity(taPaymentInfo);
 
-                if (Convert.ToDecimal(txtTendered.Text) >= Convert.ToDecimal(txtTotal.Text)) IsPaid = true;
-
-                this.DialogResult = DialogResult.OK;
-                Hide();
+                if (Convert.ToDecimal(txtTendered.Text) >= Convert.ToDecimal(txtTotal.Text))
+                {
+                    IsPaid = true;
+                    this.DialogResult = DialogResult.OK;
+                    Hide();
+                }
             }
         }
 
