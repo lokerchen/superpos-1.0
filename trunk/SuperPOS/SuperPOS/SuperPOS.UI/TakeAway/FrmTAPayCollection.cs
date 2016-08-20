@@ -963,16 +963,21 @@ namespace SuperPOS.UI.TakeAway
 
                 }
 
-                if (taPaymentInfo.NotPaid.Equals("0.00"))
-                {
-                    taPaymentInfo.IsPaid = "Y";
-                    IsPaid = true;
+                //if (taPaymentInfo.NotPaid.Equals("0.00"))
+                //{
+                //    taPaymentInfo.IsPaid = "Y";
+                //    IsPaid = true;
 
-                    this.DialogResult = DialogResult.OK;
-                    Hide();
-                }
+                //    this.DialogResult = DialogResult.OK;
+                //    Hide();
+                //}
 
                 _control.UpdateEntity(taPaymentInfo);
+
+                if (Convert.ToDecimal(txtTendered.Text) >= Convert.ToDecimal(txtTotal.Text)) IsPaid = true;
+
+                this.DialogResult = DialogResult.OK;
+                Hide();
             }
         }
 
