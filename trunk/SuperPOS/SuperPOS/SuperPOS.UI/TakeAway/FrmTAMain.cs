@@ -699,6 +699,8 @@ namespace SuperPOS.UI.TakeAway
             taPaymentInfo.IsPaid = "N";
             taPaymentInfo.AcctPay = txtTotalPrice.Text;
             taPaymentInfo.DriverName = "";
+            taPaymentInfo.OpUsr = userInfo.SystemKey.ToString();
+            taPaymentInfo.OrderType = ORDER_TYPE;
             taPaymentInfo.Remark = "";
             taPaymentInfo.PayTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
@@ -718,7 +720,7 @@ namespace SuperPOS.UI.TakeAway
             if (ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_DELIVERY))
             {
                 //Delivery
-                FrmTAPayDelivery frmTaPay = new FrmTAPayDelivery(ChkNum, strCallID, htPay);
+                FrmTAPayDelivery frmTaPay = new FrmTAPayDelivery(ChkNum, strCallID, userInfo, ORDER_TYPE, htPay);
                 //frmTaPay.ShowDialog();
                 if (frmTaPay.ShowDialog() == DialogResult.OK)
                 {
@@ -749,7 +751,7 @@ namespace SuperPOS.UI.TakeAway
                 //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
                 //frmTaPay.ShowDialog();
                 //Delivery
-                FrmTAPayCollection frmTaPayCollection = new FrmTAPayCollection(ChkNum, strCallID, htPay);
+                FrmTAPayCollection frmTaPayCollection = new FrmTAPayCollection(ChkNum, strCallID, userInfo, ORDER_TYPE, htPay);
                 //frmTaPay.ShowDialog();
                 if (frmTaPayCollection.ShowDialog() == DialogResult.OK)
                 {
@@ -779,7 +781,7 @@ namespace SuperPOS.UI.TakeAway
                 //FrmTAPay frmTaPay = new FrmTAPay("", "06f8d669-ba19-4922-b84d-43b23b1632e5");
                 //frmTaPay.ShowDialog();
                 //Delivery
-                FrmTAPayShop frmTaPayShop = new FrmTAPayShop(ChkNum, strCallID, htPay);
+                FrmTAPayShop frmTaPayShop = new FrmTAPayShop(ChkNum, strCallID, userInfo, ORDER_TYPE, htPay);
                 //frmTaPay.ShowDialog();
                 if (frmTaPayShop.ShowDialog() == DialogResult.OK)
                 {

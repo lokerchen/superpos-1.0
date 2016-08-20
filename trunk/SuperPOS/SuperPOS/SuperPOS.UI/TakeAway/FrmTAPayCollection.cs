@@ -17,6 +17,8 @@ namespace SuperPOS.UI.TakeAway
 {
     public partial class FrmTAPayCollection : Form
     {
+        private UserInfo userInfo = new UserInfo();
+        private string sOrderType = "";
         //订单编号
         private string chkNum = "";
         //会员编号
@@ -70,12 +72,14 @@ namespace SuperPOS.UI.TakeAway
             InitializeComponent();
         }
 
-        public FrmTAPayCollection(string strChkNum, string strCustNum, Hashtable htDetail)
+        public FrmTAPayCollection(string strChkNum, string strCustNum, UserInfo uInfo, string strOrderType, Hashtable htDetail)
         {
             InitializeComponent();
             chkNum = strChkNum;
             CustNum = strCustNum;
             htPay = htDetail;
+            userInfo = uInfo;
+            sOrderType = strOrderType;
         }
 
         #region 退出
@@ -908,6 +912,8 @@ namespace SuperPOS.UI.TakeAway
                 taPaymentInfo.ForChange = txtChange.Text;
                 taPaymentInfo.DCNote = cmbNote.Text;
                 taPaymentInfo.PayTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                taPaymentInfo.OpUsr = userInfo.SystemKey.ToString();
+                taPaymentInfo.OrderType = sOrderType;
 
                 taPaymentInfo.DriverName = strDriverName;
 
