@@ -27,7 +27,7 @@ namespace SuperPOS.UI.TakeAway
         //Language语言状态值,1为英文状态，2为其他
         private int I_LAN = 1;
 
-        private string strCallID = "";
+        private string strCallID = "2cb97513-44b2-46e8-9327-be14b8aa7d65";
 
         private string strOrderType = "";
         //public string StrOrderType { set { strOrderType = value; } }
@@ -35,6 +35,11 @@ namespace SuperPOS.UI.TakeAway
         private readonly EntityControl _control = new EntityControl();
 
         private string strMenuSetID = "";
+
+        private bool isPO = false;
+        private string sPOChkKey;
+        private string sPOChkNum;
+        private string sPOOrderType;
 
         #region 定义
 
@@ -74,16 +79,37 @@ namespace SuperPOS.UI.TakeAway
             userInfo = user;
         }
 
+        public FrmTAMain(UserInfo user, bool isPendOrder, string stringChkKey, string stringChkNum, string stringOrderType)
+        {
+            InitializeComponent();
+            userInfo = user;
+            isPO = isPendOrder;
+            sPOChkKey = stringChkKey;
+            sPOChkNum = stringChkNum;
+            sPOOrderType = stringOrderType;
+        }
+
         private void FrmTAMain_Load(object sender, EventArgs e)
         {
             new OnLoadSystemCommonData().GetTAMenuItemList();
+            new OnLoadSystemCommonData().GetTAOrderItem();
+            new OnLoadSystemCommonData().GetTAPaymentList();
 
-            if (string.IsNullOrEmpty(ChkKey1)) ChkKey1 = Guid.NewGuid().ToString();
+            if (isPO)
+            {
+                ChkKey1 = sPOChkKey;
+                ChkNum1 = sPOChkNum;
+                ORDER_TYPE = sPOOrderType;
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(ChkKey1)) ChkKey1 = Guid.NewGuid().ToString();
 
-            ChkNum1 = CommonFunction.GetChkCode();
+                ChkNum1 = CommonFunction.GetChkCode();
 
-            //Order Type，默认为Delivery
-            ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+                //Order Type，默认为Delivery
+                ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+            }
             
             btnMode.Text = ORDER_TYPE;
             //Console.Out.WriteLine(ChkNum);
@@ -677,6 +703,9 @@ namespace SuperPOS.UI.TakeAway
                 isNew = true;
                 taPaymentInfo.SystemKey = Guid.NewGuid();
             }
+            else
+                taPaymentInfo.SystemKey = new Guid(ChkKey);
+
             taPaymentInfo.ChkNum = ChkNum;
             taPaymentInfo.PayType1 = @"0.00";
             taPaymentInfo.PayTypeSurCharge1 = @"0.00";
@@ -1126,15 +1155,15 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnPendOrder_Click(object sender, EventArgs e)
         {
-            FrmTAPendOrder frmPendOrder = new FrmTAPendOrder();
+            Hide();
+            FrmTAPendOrder frmPendOrder = new FrmTAPendOrder(userInfo);
             frmPendOrder.ShowDialog();
         }
 
         private void btnIngredMode_Click(object sender, EventArgs e)
         {
-            FrmTAPendOrder frmTaPendOrder = new FrmTAPendOrder(userInfo);
-            Hide();
-            frmTaPendOrder.ShowDialog();
+            //FrmTAPendOrder frmTaPendOrder = new FrmTAPendOrder(userInfo);
+            //frmTaPendOrder.ShowDialog();
         }
     }
 }
