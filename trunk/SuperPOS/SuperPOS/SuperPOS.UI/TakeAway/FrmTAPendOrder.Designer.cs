@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvPendOrder = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -70,23 +69,15 @@
             // 
             this.dgvPendOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPendOrder.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPendOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPendOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvPendOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPendOrder.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPendOrder.Location = new System.Drawing.Point(10, 29);
             this.dgvPendOrder.MultiSelect = false;
             this.dgvPendOrder.Name = "dgvPendOrder";
@@ -125,6 +116,7 @@
             this.btnAll.TabIndex = 93;
             this.btnAll.Text = "All";
             this.btnAll.UseVisualStyleBackColor = false;
+            this.btnAll.Click += new System.EventHandler(this.btnAll_Click);
             // 
             // btnShop
             // 
@@ -140,6 +132,7 @@
             this.btnShop.TabIndex = 92;
             this.btnShop.Text = "Shop";
             this.btnShop.UseVisualStyleBackColor = false;
+            this.btnShop.Click += new System.EventHandler(this.btnShop_Click);
             // 
             // btnCollection
             // 
@@ -155,6 +148,7 @@
             this.btnCollection.TabIndex = 91;
             this.btnCollection.Text = "Collection";
             this.btnCollection.UseVisualStyleBackColor = false;
+            this.btnCollection.Click += new System.EventHandler(this.btnCollection_Click);
             // 
             // btnDelivery
             // 
@@ -170,13 +164,15 @@
             this.btnDelivery.TabIndex = 90;
             this.btnDelivery.Text = "Delivery";
             this.btnDelivery.UseVisualStyleBackColor = false;
+            this.btnDelivery.Click += new System.EventHandler(this.btnDelivery_Click);
             // 
             // txtDeliveryCharge
             // 
             this.txtDeliveryCharge.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtDeliveryCharge.Location = new System.Drawing.Point(152, 22);
             this.txtDeliveryCharge.Name = "txtDeliveryCharge";
-            this.txtDeliveryCharge.Size = new System.Drawing.Size(100, 29);
+            this.txtDeliveryCharge.ReadOnly = true;
+            this.txtDeliveryCharge.Size = new System.Drawing.Size(100, 34);
             this.txtDeliveryCharge.TabIndex = 1;
             this.txtDeliveryCharge.Text = "0.00";
             // 
@@ -186,7 +182,7 @@
             this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(31, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 20);
+            this.label1.Size = new System.Drawing.Size(151, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Delivery Charge:";
             // 
@@ -204,6 +200,7 @@
             this.btnOpen.TabIndex = 2;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = false;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnPrtKit
             // 
@@ -217,6 +214,7 @@
             this.btnPrtKit.TabIndex = 88;
             this.btnPrtKit.Text = "Print Kitchen Paper";
             this.btnPrtKit.UseVisualStyleBackColor = false;
+            this.btnPrtKit.Click += new System.EventHandler(this.btnPrtKit_Click);
             // 
             // btnPrtBill
             // 
@@ -229,6 +227,7 @@
             this.btnPrtBill.TabIndex = 87;
             this.btnPrtBill.Text = "Print Bill";
             this.btnPrtBill.UseVisualStyleBackColor = false;
+            this.btnPrtBill.Click += new System.EventHandler(this.btnPrtBill_Click);
             // 
             // btnPrtReceipt
             // 
@@ -241,6 +240,7 @@
             this.btnPrtReceipt.TabIndex = 86;
             this.btnPrtReceipt.Text = "Print Receipt";
             this.btnPrtReceipt.UseVisualStyleBackColor = false;
+            this.btnPrtReceipt.Click += new System.EventHandler(this.btnPrtReceipt_Click);
             // 
             // btnPay
             // 
@@ -256,6 +256,7 @@
             this.btnPay.TabIndex = 89;
             this.btnPay.Text = "PAY";
             this.btnPay.UseVisualStyleBackColor = false;
+            this.btnPay.Click += new System.EventHandler(this.btnPay_Click);
             // 
             // btnExit
             // 
@@ -271,6 +272,7 @@
             this.btnExit.TabIndex = 90;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnDriver
             // 
@@ -286,6 +288,7 @@
             this.btnDriver.TabIndex = 94;
             this.btnDriver.Text = "Assign Driver";
             this.btnDriver.UseVisualStyleBackColor = false;
+            this.btnDriver.Click += new System.EventHandler(this.btnDriver_Click);
             // 
             // cmbDriver
             // 
@@ -294,7 +297,7 @@
             this.cmbDriver.FormattingEnabled = true;
             this.cmbDriver.Location = new System.Drawing.Point(21, 482);
             this.cmbDriver.Name = "cmbDriver";
-            this.cmbDriver.Size = new System.Drawing.Size(121, 29);
+            this.cmbDriver.Size = new System.Drawing.Size(121, 35);
             this.cmbDriver.TabIndex = 95;
             // 
             // btnShowAll
@@ -311,6 +314,7 @@
             this.btnShowAll.TabIndex = 96;
             this.btnShowAll.Text = "Show All";
             this.btnShowAll.UseVisualStyleBackColor = false;
+            this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
             // 
             // btnShowAssign
             // 
@@ -326,6 +330,7 @@
             this.btnShowAssign.TabIndex = 97;
             this.btnShowAssign.Text = "Show Assigned";
             this.btnShowAssign.UseVisualStyleBackColor = false;
+            this.btnShowAssign.Click += new System.EventHandler(this.btnShowAssign_Click);
             // 
             // btnShowUnAssign
             // 
@@ -341,10 +346,11 @@
             this.btnShowUnAssign.TabIndex = 98;
             this.btnShowUnAssign.Text = "Show Unassigned";
             this.btnShowUnAssign.UseVisualStyleBackColor = false;
+            this.btnShowUnAssign.Click += new System.EventHandler(this.btnShowUnAssign_Click);
             // 
-            // FrmPendOrder
+            // FrmTAPendOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 533);
             this.Controls.Add(this.btnShowUnAssign);
@@ -363,7 +369,7 @@
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrmPendOrder";
+            this.Name = "FrmTAPendOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPendOrder";
             this.Load += new System.EventHandler(this.FrmPendOrder_Load);
