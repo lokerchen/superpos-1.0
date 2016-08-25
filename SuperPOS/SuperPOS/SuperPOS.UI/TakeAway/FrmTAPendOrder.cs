@@ -89,6 +89,7 @@ namespace SuperPOS.UI.TakeAway
             dgvPendOrder.Columns[12].Visible = false;
 
             #endregion
+
         }
 
         private string GetWeek(string weekName)
@@ -142,7 +143,8 @@ namespace SuperPOS.UI.TakeAway
                     PTotal = pay.Total,
                     OrderUsr = user.UsrName,
                     Driver = pay.DriverName,
-                    CustID = cust.SystemKey
+                    CustID = cust.SystemKey,
+                    dDelivery = pay.Delivery
                 };
 
             //付款类型
@@ -162,7 +164,7 @@ namespace SuperPOS.UI.TakeAway
                     
             }
 
-
+            txtDeliveryCharge.Text = lstDb.Sum(sumDelivery => Convert.ToDecimal(sumDelivery.dDelivery)).ToString();
             //dgvPendOrder.DataSource = lstDb.ToList();
         }
 
@@ -236,7 +238,6 @@ namespace SuperPOS.UI.TakeAway
             htPay["PayType"] = "CASH";
             htPay["OrderNo"] = sChkNum;
 
-            
             if (sOrderType.Equals(CommonBase.ORDER_TYPE_DELIVERY))
             {
                 //Delivery
