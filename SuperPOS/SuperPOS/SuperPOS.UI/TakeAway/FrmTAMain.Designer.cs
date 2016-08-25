@@ -341,6 +341,7 @@
             this.btnDT.TabIndex = 3;
             this.btnDT.Text = "DT";
             this.btnDT.UseVisualStyleBackColor = false;
+            this.btnDT.Click += new System.EventHandler(this.btnDT_Click);
             // 
             // btnTasteHand
             // 

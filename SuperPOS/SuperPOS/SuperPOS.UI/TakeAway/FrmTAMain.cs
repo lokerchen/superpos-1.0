@@ -1165,5 +1165,30 @@ namespace SuperPOS.UI.TakeAway
             //FrmTAPendOrder frmTaPendOrder = new FrmTAPendOrder(userInfo);
             //frmTaPendOrder.ShowDialog();
         }
+
+        private void btnDT_Click(object sender, EventArgs e)
+        {
+            if (dgvMenuItem.Rows.Count > 0)
+            {
+                DialogResult dr = MessageBox.Show("Are you sure you want to cancel the order?", "Cancel Order",
+                    MessageBoxButtons.OKCancel);
+
+                if (dr == DialogResult.OK)
+                {
+                    //清空当前Dgv
+                    ClearDgvData();
+                    dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                    SetTotalCountAndPrice(1);
+
+                    //Free Item状态
+                    isSentFreeItem = false;
+                }
+            }
+            else
+            {
+                isSentFreeItem = false;
+                Hide();
+            }
+        }
     }
 }
