@@ -179,6 +179,7 @@ namespace SuperPOS.UI.TakeAway
             {
                 FrmTAMain frmTaMain = new FrmTAMain(userInfo, true, sChkKey, dgvPendOrder.CurrentRow.Cells[1].Value.ToString(), dgvPendOrder.CurrentRow.Cells[6].Value.ToString());
                 frmTaMain.ShowDialog();
+                Hide();
             }
         }
 
