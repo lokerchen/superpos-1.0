@@ -237,6 +237,8 @@ namespace SuperPOS.UI.TakeAway
             dgvMenuItem.Columns[11].Visible = false;
             dgvMenuItem.Columns[12].Visible = false;
 
+            if (isPO) SetTotalCountAndPrice(0);
+
             #endregion
         }
 
@@ -734,7 +736,7 @@ namespace SuperPOS.UI.TakeAway
                 taPaymentInfo.SystemKey = Guid.NewGuid();
             }
             else
-                taPaymentInfo.SystemKey = new Guid(ChkKey);
+                taPaymentInfo.SystemKey = CommonData.TAPaymentList.FirstOrDefault(s => s.ChkNum.Equals(ChkNum)).SystemKey;
 
             taPaymentInfo.ChkNum = ChkNum;
             taPaymentInfo.PayType1 = @"0.00";
@@ -1181,6 +1183,60 @@ namespace SuperPOS.UI.TakeAway
             //strCallID = @"06f8d669-ba19-4922-b84d-43b23b1632e5";
 
             AddDgvData();
+
+            new OnLoadSystemCommonData().GetTAPaymentList();
+            bool isNew = false;
+            TAPaymentInfo taPaymentInfo = new TAPaymentInfo();
+
+            if (!CommonData.TAPaymentList.Any(s => s.ChkNum.Equals(ChkNum)))
+            {
+                isNew = true;
+                taPaymentInfo.SystemKey = Guid.NewGuid();
+            }
+            else
+                taPaymentInfo.SystemKey = CommonData.TAPaymentList.FirstOrDefault(s => s.ChkNum.Equals(ChkNum)).SystemKey;
+
+            taPaymentInfo.ChkNum = ChkNum;
+            taPaymentInfo.PayType1 = @"0.00";
+            taPaymentInfo.PayTypeSurCharge1 = @"0.00";
+            taPaymentInfo.PayType2 = @"0.00";
+            taPaymentInfo.PayTypeSurCharge2 = @"0.00";
+            taPaymentInfo.PayType3 = @"0.00";
+            taPaymentInfo.PayTypeSurCharge3 = @"0.00";
+            taPaymentInfo.PayType4 = @"0.00";
+            taPaymentInfo.PayTypeSurCharge4 = @"0.00";
+            taPaymentInfo.NotPaid = txtTotalPrice.Text;
+            taPaymentInfo.Delivery = @"0.00";
+            taPaymentInfo.Discount = @"0.00";
+            taPaymentInfo.DiscountValue = @"0.00";
+            taPaymentInfo.Surcharge = @"0.00";
+            taPaymentInfo.Tendered = @"0.00";
+            taPaymentInfo.Total = txtTotalPrice.Text;
+            taPaymentInfo.ForChange = @"0.00";
+            taPaymentInfo.DCNote = "";
+            taPaymentInfo.CustInfo = strCallID;
+            taPaymentInfo.IsPaid = "N";
+            taPaymentInfo.AcctPay = txtTotalPrice.Text;
+            taPaymentInfo.DriverName = "";
+            taPaymentInfo.OpUsr = userInfo.SystemKey.ToString();
+            taPaymentInfo.OrderType = ORDER_TYPE;
+            taPaymentInfo.Remark = "";
+            taPaymentInfo.PayTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+
+            if (isNew) _control.AddEntity(taPaymentInfo);
+            else _control.UpdateEntity(taPaymentInfo);
+
+            ChkKey1 = Guid.NewGuid().ToString();
+            ChkNum1 = CommonFunction.GetChkCode();
+            //Order Type，默认为Delivery
+            ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
+            btnMode.Text = ORDER_TYPE;
+            ChkKey = ChkKey1;
+            ChkNum = ChkNum1;
+
+            dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+
+            ClearDgvData();
         }
 
         private void btnPendOrder_Click(object sender, EventArgs e)
