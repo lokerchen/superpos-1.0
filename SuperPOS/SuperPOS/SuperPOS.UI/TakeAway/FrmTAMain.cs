@@ -41,6 +41,9 @@ namespace SuperPOS.UI.TakeAway
         private string sPOChkNum;
         private string sPOOrderType;
 
+        private bool isIngredMode = false;
+        private string strIngredMode = "";
+
         #region 定义
 
         private Button[] btnMI = new Button[16];
@@ -371,16 +374,43 @@ namespace SuperPOS.UI.TakeAway
 
             if (taMiInfo != null)
             {
-                taOrderItemInfo.CheckKey = ChkKey;
-                taOrderItemInfo.CheckCode = ChkNum;
-                taOrderItemInfo.ItemCode = taMiInfo.DishCode;
-                taOrderItemInfo.ItemDishName = taMiInfo.EnglishName;
-                taOrderItemInfo.ItemPrice = taMiInfo.wRegular;
-                taOrderItemInfo.ItemQty = "1";
-                taOrderItemInfo.ItemTotalPrice = taMiInfo.wRegular;
-                taOrderItemInfo.ItemType = "1";
-                taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                taOrderItemInfo.OrderType = ORDER_TYPE;
+                if (isIngredMode)
+                {
+                    if (dgvMenuItem.RowCount == 0) return;
+                    if (dgvMenuItem.CurrentRow?.Index < 0) return;
+
+                    string strParentKey = dgvMenuItem.CurrentRow.Cells[0].Value.ToString();
+
+                    taOrderItemInfo.CheckKey = ChkKey;
+                    taOrderItemInfo.CheckCode = ChkNum;
+                    taOrderItemInfo.ItemCode = taMiInfo.DishCode;
+                    taOrderItemInfo.ItemDishName = strIngredMode + " " + taMiInfo.EnglishName;
+                    taOrderItemInfo.ItemPrice = "0.00";
+                    //taOrderItemInfo.ItemQty = "1";
+                    taOrderItemInfo.ItemQty = dgvMenuItem.CurrentRow.Cells[1].Value.ToString();
+                    taOrderItemInfo.ItemTotalPrice =
+                        (Convert.ToDecimal("0.00") * Convert.ToInt32(dgvMenuItem.CurrentRow.Cells[1].Value.ToString()))
+                            .ToString();
+                    taOrderItemInfo.ItemType = "2";
+                    taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    taOrderItemInfo.OrderType = ORDER_TYPE;
+                    taOrderItemInfo.ParentItem = strParentKey;
+
+                    //CommonData.TaOrderItemList.Add(taOrderItemInfo);
+                }
+                else
+                {
+                    taOrderItemInfo.CheckKey = ChkKey;
+                    taOrderItemInfo.CheckCode = ChkNum;
+                    taOrderItemInfo.ItemCode = taMiInfo.DishCode;
+                    taOrderItemInfo.ItemDishName = taMiInfo.EnglishName;
+                    taOrderItemInfo.ItemPrice = taMiInfo.wRegular;
+                    taOrderItemInfo.ItemQty = "1";
+                    taOrderItemInfo.ItemTotalPrice = taMiInfo.wRegular;
+                    taOrderItemInfo.ItemType = "1";
+                    taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                    taOrderItemInfo.OrderType = ORDER_TYPE;
+                }
 
                 //AddDataGridRow(taOrderItemInfo);
                 CommonData.TaOrderItemList.Add(taOrderItemInfo);
@@ -1162,8 +1192,15 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnIngredMode_Click(object sender, EventArgs e)
         {
-            //FrmTAPendOrder frmTaPendOrder = new FrmTAPendOrder(userInfo);
-            //frmTaPendOrder.ShowDialog();
+            isIngredMode = true;
+
+            FrmTAIngredMod frmTaIngredMod = new FrmTAIngredMod();
+            if (frmTaIngredMod.ShowDialog() == DialogResult.OK)
+            {
+                strIngredMode = frmTaIngredMod.ValueString;
+
+                if (string.IsNullOrEmpty(strIngredMode)) isIngredMode = false;
+            }
         }
 
         private void btnDT_Click(object sender, EventArgs e)
