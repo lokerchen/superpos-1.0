@@ -52,7 +52,6 @@ namespace SuperPOS.UI.TakeAway
 
             #region DGV设置
             //dgvPendOrder.DataSource = lstTest;
-
             dgvPendOrder.Columns[0].Visible = false;
             dgvPendOrder.Columns[0].Width = 5;
             dgvPendOrder.Columns[1].HeaderText = @"Order No";
@@ -87,7 +86,7 @@ namespace SuperPOS.UI.TakeAway
             dgvPendOrder.Columns[11].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvPendOrder.Columns[11].Width = 40;
             dgvPendOrder.Columns[12].Visible = false;
-
+            dgvPendOrder.Columns[13].Visible = false;
             #endregion
 
         }
@@ -177,9 +176,9 @@ namespace SuperPOS.UI.TakeAway
 
             if (!string.IsNullOrEmpty(sChkKey))
             {
+                Hide();
                 FrmTAMain frmTaMain = new FrmTAMain(userInfo, true, sChkKey, dgvPendOrder.CurrentRow.Cells[1].Value.ToString(), dgvPendOrder.CurrentRow.Cells[6].Value.ToString());
                 frmTaMain.ShowDialog();
-                Hide();
             }
         }
 
