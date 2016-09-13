@@ -743,11 +743,14 @@ namespace SuperPOS.UI.TakeAway
         {
             if (dgvMenuItem.RowCount <= 0) return;
 
+            //是否显示赠送
+            SetShowFreeItem(txtTotalPrice.Text);
+
             //ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
             //strCallID = @"06f8d669-ba19-4922-b84d-43b23b1632e5";
 
             AddDgvData();
-
+            
             new OnLoadSystemCommonData().GetTAPaymentList();
             bool isNew = false;
             TAPaymentInfo taPaymentInfo = new TAPaymentInfo();
@@ -1187,8 +1190,6 @@ namespace SuperPOS.UI.TakeAway
         {
             txtTotalCount.Text = GetDgvItemCount().ToString();
             txtTotalPrice.Text = GetDgvItemTotalPrice().ToString();
-
-            if (i == 1) SetShowFreeItem(txtTotalPrice.Text);
         }
         #endregion
 
