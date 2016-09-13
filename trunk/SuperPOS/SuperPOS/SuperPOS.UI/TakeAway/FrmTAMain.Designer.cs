@@ -332,14 +332,14 @@
             // 
             this.btnDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnDT.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDT.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDT.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDT.ForeColor = System.Drawing.Color.White;
             this.btnDT.Location = new System.Drawing.Point(9, 72);
             this.btnDT.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnDT.Name = "btnDT";
             this.btnDT.Size = new System.Drawing.Size(75, 50);
             this.btnDT.TabIndex = 3;
-            this.btnDT.Text = "DT";
+            this.btnDT.Text = "HOME";
             this.btnDT.UseVisualStyleBackColor = false;
             this.btnDT.Click += new System.EventHandler(this.btnDT_Click);
             // 
