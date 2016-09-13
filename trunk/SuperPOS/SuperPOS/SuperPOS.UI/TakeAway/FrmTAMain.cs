@@ -374,6 +374,9 @@ namespace SuperPOS.UI.TakeAway
                 : CommonData.TaMenuItemList.Where(s => s.EnglishName.Equals(strTxt)).ToList();
             TAMenuItemInfo taMiInfo = qMiList.FirstOrDefault();
 
+            //标识是添加还是修改状态
+            bool isAdd = true;
+
             if (taMiInfo != null)
             {
                 if (isIngredMode)
@@ -402,20 +405,39 @@ namespace SuperPOS.UI.TakeAway
                 }
                 else
                 {
-                    taOrderItemInfo.CheckKey = ChkKey;
-                    taOrderItemInfo.CheckCode = ChkNum;
-                    taOrderItemInfo.ItemCode = taMiInfo.DishCode;
-                    taOrderItemInfo.ItemDishName = taMiInfo.EnglishName;
-                    taOrderItemInfo.ItemPrice = taMiInfo.wRegular;
-                    taOrderItemInfo.ItemQty = "1";
-                    taOrderItemInfo.ItemTotalPrice = taMiInfo.wRegular;
-                    taOrderItemInfo.ItemType = "1";
-                    taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-                    taOrderItemInfo.OrderType = ORDER_TYPE;
+                    var lstChildOI =
+                        CommonData.TaOrderItemList.Where(
+                            s => s.CheckKey.Equals(ChkKey) 
+                            && s.ItemCode.Equals(taMiInfo.DishCode)
+                            && s.ItemDishName.Equals(taMiInfo.EnglishName));
+
+                    if (lstChildOI.Any())
+                    {
+                        isAdd = false;
+                        TAOrderItemInfo cOII = lstChildOI.FirstOrDefault();
+                        taOrderItemInfo = cOII;
+                        lstChildOI.FirstOrDefault().ItemQty = (Convert.ToInt32(lstChildOI.FirstOrDefault().ItemQty) + 1).ToString();
+                        lstChildOI.FirstOrDefault().ItemTotalPrice = (Convert.ToInt32(lstChildOI.FirstOrDefault().ItemQty) * Convert.ToDecimal(lstChildOI.FirstOrDefault().ItemPrice)).ToString();
+                    }
+                    else
+                    {
+                        taOrderItemInfo.CheckKey = ChkKey;
+                        taOrderItemInfo.CheckCode = ChkNum;
+                        taOrderItemInfo.ItemCode = taMiInfo.DishCode;
+                        taOrderItemInfo.ItemDishName = taMiInfo.EnglishName;
+                        taOrderItemInfo.ItemPrice = taMiInfo.wRegular;
+                        taOrderItemInfo.ItemQty = "1";
+                        taOrderItemInfo.ItemTotalPrice = taMiInfo.wRegular;
+                        taOrderItemInfo.ItemType = "1";
+                        taOrderItemInfo.OrderTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                        taOrderItemInfo.OrderType = ORDER_TYPE;
+                    }
                 }
 
                 //AddDataGridRow(taOrderItemInfo);
-                CommonData.TaOrderItemList.Add(taOrderItemInfo);
+                if (isAdd)
+                    CommonData.TaOrderItemList.Add(taOrderItemInfo);
+
                 //dgvMenuItem.Refresh();
                 dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
             }
