@@ -52,5 +52,12 @@ namespace SuperPOS.UI.TakeAway
             this.DialogResult = DialogResult.OK;
             Hide();
         }
+
+        private void btnNoAction_Click(object sender, EventArgs e)
+        {
+            strValue = " ";
+            this.DialogResult = DialogResult.OK;
+            Hide();
+        }
     }
 }
