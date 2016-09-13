@@ -1085,6 +1085,9 @@ namespace SuperPOS.UI.TakeAway
             //打印厨房单
             htPay["ChkNum"] = chkNum;
             PrtPrint.PrtKitchen(lstOI, htPay);
+
+            //保存账单信息
+            btnSave_Click(sender, e);
         }
 
         private void btnNotPaid_Click(object sender, EventArgs e)
