@@ -33,11 +33,13 @@
             this.btnChange = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnNo = new System.Windows.Forms.Button();
+            this.btnNoAction = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnNoAction);
             this.groupBox1.Controls.Add(this.btnExit);
             this.groupBox1.Controls.Add(this.btnChange);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -45,7 +47,7 @@
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(13, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(573, 93);
+            this.groupBox1.Size = new System.Drawing.Size(702, 93);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingredient Mode";
@@ -56,7 +58,7 @@
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExit.Location = new System.Drawing.Point(433, 32);
+            this.btnExit.Location = new System.Drawing.Point(567, 31);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(130, 50);
@@ -71,7 +73,7 @@
             this.btnChange.FlatAppearance.BorderSize = 0;
             this.btnChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnChange.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnChange.Location = new System.Drawing.Point(295, 31);
+            this.btnChange.Location = new System.Drawing.Point(427, 31);
             this.btnChange.Margin = new System.Windows.Forms.Padding(4);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(130, 50);
@@ -86,7 +88,7 @@
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnAdd.Location = new System.Drawing.Point(154, 31);
+            this.btnAdd.Location = new System.Drawing.Point(287, 31);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(130, 50);
@@ -101,7 +103,7 @@
             this.btnNo.FlatAppearance.BorderSize = 0;
             this.btnNo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNo.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnNo.Location = new System.Drawing.Point(13, 32);
+            this.btnNo.Location = new System.Drawing.Point(147, 31);
             this.btnNo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNo.Name = "btnNo";
             this.btnNo.Size = new System.Drawing.Size(130, 50);
@@ -110,11 +112,26 @@
             this.btnNo.UseVisualStyleBackColor = false;
             this.btnNo.Click += new System.EventHandler(this.btnNo_Click);
             // 
+            // btnNoAction
+            // 
+            this.btnNoAction.BackColor = System.Drawing.Color.SpringGreen;
+            this.btnNoAction.FlatAppearance.BorderSize = 0;
+            this.btnNoAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNoAction.Font = new System.Drawing.Font("微软雅黑", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnNoAction.Location = new System.Drawing.Point(7, 31);
+            this.btnNoAction.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNoAction.Name = "btnNoAction";
+            this.btnNoAction.Size = new System.Drawing.Size(130, 50);
+            this.btnNoAction.TabIndex = 7;
+            this.btnNoAction.Text = "No Action";
+            this.btnNoAction.UseVisualStyleBackColor = false;
+            this.btnNoAction.Click += new System.EventHandler(this.btnNoAction_Click);
+            // 
             // FrmTAIngredMod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 109);
+            this.ClientSize = new System.Drawing.Size(726, 109);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmTAIngredMod";
@@ -132,5 +149,6 @@
         private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnNo;
+        private System.Windows.Forms.Button btnNoAction;
     }
 }

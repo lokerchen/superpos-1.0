@@ -442,6 +442,8 @@ namespace SuperPOS.UI.TakeAway
                 dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
             }
 
+            if (isIngredMode) SetDgvData();
+
             SetTotalCountAndPrice(1);
         }
 
