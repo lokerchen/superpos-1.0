@@ -141,7 +141,7 @@ namespace SuperPOS.UI.Admin
         #region VAT Percent只允许输入数字
         private void txtVATPerct_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(Char.IsNumber(e.KeyChar)) && e.KeyChar != (char)8) e.Handled = true;
+            e.Handled = !(Char.IsNumber(e.KeyChar)) && e.KeyChar != (char)13 && e.KeyChar != (char)8 && e.KeyChar != '.';
         }
         #endregion
 
