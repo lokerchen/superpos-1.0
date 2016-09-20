@@ -244,12 +244,23 @@ namespace SuperPOS.UI.TakeAway
 
         private void SetMenuItem(int i, int iPage, string strMenuCate, string strMenuSet)
         {
+            bool bMI = false;
+            new OnLoadSystemCommonData().GetSysConfigList();
+            if (CommonData.SysConfigList.Any())
+            {
+                var lstSysConf = CommonData.SysConfigList.FirstOrDefault();
+
+                bMI = lstSysConf.IsDisplayItemCodeSelect.Equals("Y");
+            }
+
             var miList = DALCommon.GetListQueryPageMenuItem(iPage, strMenuCate, strMenuSet);
 
             int j = 0;
             foreach (var mi in miList)
             {
-                btnMI[j].Text = i == 1 ? mi.EnglishName : mi.OtherName;
+                btnMI[j].Text = bMI
+                    ? (i == 1 ? "(" + mi.DishCode + ")" + mi.EnglishName : "(" + mi.DishCode + ")" + mi.OtherName)
+                    : (i == 1 ? mi.EnglishName : mi.OtherName);
                 j++;
             }
 
@@ -264,12 +275,23 @@ namespace SuperPOS.UI.TakeAway
 
         private void SetMenuItem(int i, int iPage, string strKeyWord)
         {
+            bool bMI = false;
+            new OnLoadSystemCommonData().GetSysConfigList();
+            if (CommonData.SysConfigList.Any())
+            {
+                var lstSysConf = CommonData.SysConfigList.FirstOrDefault();
+
+                bMI = lstSysConf.IsDisplayItemCodeSelect.Equals("Y");
+            }
+
             var miList = DALCommon.GetListQueryPageMenuItem(iPage, strKeyWord);
 
             int j = 0;
             foreach (var mi in miList)
             {
-                btnMI[j].Text = i == 1 ? mi.EnglishName : mi.OtherName;
+                btnMI[j].Text = bMI
+                    ? (i == 1 ? "(" + mi.DishCode + ")" + mi.EnglishName : "(" + mi.DishCode + ")" + mi.OtherName)
+                    : (i == 1 ? mi.EnglishName : mi.OtherName);
                 j++;
             }
 
