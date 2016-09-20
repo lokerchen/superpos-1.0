@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SuperPOS.DAL;
 
 namespace SuperPOS.UI.TakeAway
 {
@@ -81,6 +82,24 @@ namespace SuperPOS.UI.TakeAway
             btnQty[2] = btnQ3;
             btnQty[3] = btnQ4;
             btnQty[4] = btnQ5;
+
+            string[] strKeyPad = new string [11];
+            new OnLoadSystemCommonData().GetSysConfigList();
+            if (CommonData.SysConfigList.Any())
+            {
+                var lstSysConf = CommonData.SysConfigList.FirstOrDefault();
+
+                strKeyPad = lstSysConf.KeypadSet.Split(new char[] { ',' });
+            }
+
+            if (strKeyPad.Length > 0)
+            {
+                for (int i = 1; i < 11; i++)
+                {
+                    if (!string.IsNullOrEmpty(strKeyPad[i])) btnWord[i - 1].Text = strKeyPad[i];
+                    else btnWord[i - 1].Enabled = false;
+                }
+            }
 
 
             for (int i = 0; i < 10; i++)
