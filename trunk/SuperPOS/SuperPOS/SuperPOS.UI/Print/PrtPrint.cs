@@ -57,7 +57,7 @@ namespace SuperPOS.UI.Print
             string L4 = PrtCommon.GetRestVATNo();
             string L5 = PrtCommon.GetPrtTime();
             string L6 = PrtCommon.GetPrtDateTime();
-            string L7 = "Staff:" + (string)ht["Staff"] + "   " + @"Order No:" + (string)ht["OrderNo"];
+            string L7 = "Staff:" + (ht["Staff"]).ToString() + "   " + @"Order No:" + (ht["OrderNo"]).ToString();
 
             //餐厅名称
             sb.Append(PrtCommon.GetSpace((PrtStatic.PRT_LINE_SIZE_20 - L1.Length) / 2) + L1);
@@ -119,22 +119,22 @@ namespace SuperPOS.UI.Print
 
             sb.Append(L);
             sb.Append(Environment.NewLine);
-            sb.Append(PrtCommon.GetItemTotal((string)ht["ItemQty"], (string)ht["SubTotal"]));
+            sb.Append(PrtCommon.GetItemTotal((ht["ItemQty"]).ToString(), (ht["SubTotal"]).ToString()));
             sb.Append(Environment.NewLine);
             sb.Append(L);
             sb.Append(Environment.NewLine);
-            sb.Append(PrtCommon.GetTotal((string)ht["Total"]));
+            sb.Append(PrtCommon.GetTotal((ht["Total"]).ToString()));
             sb.Append(Environment.NewLine);
             sb.Append(L);
             sb.Append(Environment.NewLine);
 
-            sb.Append(PrtCommon.GetText("Tendered:", (string)ht["Tendered"]));
+            sb.Append(PrtCommon.GetText("Tendered:", (ht["Tendered"]).ToString()));
             sb.Append(Environment.NewLine);
-            sb.Append(PrtCommon.GetText("Change:", (string)ht["Change"]));
+            sb.Append(PrtCommon.GetText("Change:", (ht["Change"]).ToString()));
             sb.Append(Environment.NewLine);
             sb.Append(L);
 
-            sb.Append(PrtCommon.GetPay((string)ht["PayType"]));
+            sb.Append(PrtCommon.GetPay((ht["PayType"]).ToString()));
             sb.Append(Environment.NewLine);
             sb.Append(L);
             sb.Append(Environment.NewLine);
