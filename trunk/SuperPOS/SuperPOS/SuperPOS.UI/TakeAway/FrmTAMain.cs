@@ -809,7 +809,7 @@ namespace SuperPOS.UI.TakeAway
             taPaymentInfo.Total = txtTotalPrice.Text;
             taPaymentInfo.ForChange = @"0.00";
             taPaymentInfo.DCNote = "";
-            taPaymentInfo.CustInfo = strCallID;
+            taPaymentInfo.CustInfo = ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_SHOP) ? "00000000-0000-0000-0000-000000000000" : strCallID;
             taPaymentInfo.IsPaid = "N";
             taPaymentInfo.AcctPay = txtTotalPrice.Text;
             taPaymentInfo.DriverName = "";
@@ -1293,7 +1293,7 @@ namespace SuperPOS.UI.TakeAway
             taPaymentInfo.Total = txtTotalPrice.Text;
             taPaymentInfo.ForChange = @"0.00";
             taPaymentInfo.DCNote = "";
-            taPaymentInfo.CustInfo = strCallID;
+            taPaymentInfo.CustInfo = ORDER_TYPE.Equals(CommonBase.ORDER_TYPE_SHOP) ? "00000000-0000-0000-0000-000000000000" : strCallID;
             taPaymentInfo.IsPaid = "N";
             taPaymentInfo.AcctPay = txtTotalPrice.Text;
             taPaymentInfo.DriverName = "";

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -122,29 +123,77 @@ namespace SuperPOS.UI.TakeAway
             onLoadSystemCommonData.GetTAOrderItem();
             onLoadSystemCommonData.GetTADriverSetUp();
 
+            //var lstOther = from pay in CommonData.TAPaymentList
+            //    join cust in CommonData.TaCustList
+            //        on pay.CustInfo equals cust.SystemKey.ToString()
+            //    join user in CommonData.UsrList
+            //        on pay.OpUsr equals user.SystemKey.ToString()
+            //    where pay.IsPaid.Equals("N")
+            //    select new
+            //    {
+            //        OrderSysKey = pay.SystemKey,
+            //        OrderNo = pay.ChkNum,
+            //        PTime = pay.PayTime,
+            //        Postcode = cust.Postcode1,
+            //        PostcodeZone = cust.PcZone,
+            //        CustAddr = cust.Address1,
+            //        OType = pay.OrderType,
+            //        CustName = cust.Name,
+            //        PhoneNum = cust.Phone1,
+            //        PTotal = pay.Total,
+            //        OrderUsr = user.UsrName,
+            //        Driver = pay.DriverName,
+            //        CustID = cust.SystemKey,
+            //        dDelivery = pay.Delivery
+            //    };
+
+            //var lstShop = from pay in CommonData.TAPaymentList.Where(s => s.OrderType.Equals(CommonBase.ORDER_TYPE_SHOP))
+            //              join user in CommonData.UsrList on pay.OpUsr equals user.SystemKey.ToString()
+            //              where pay.IsPaid.Equals("N")
+            //              select new
+            //              {
+            //                  OrderSysKey = pay.SystemKey,
+            //                  OrderNo = pay.ChkNum,
+            //                  PTime = pay.PayTime,
+            //                  Postcode = "",
+            //                  PostcodeZone = "",
+            //                  CustAddr = "",
+            //                  OType = pay.OrderType,
+            //                  CustName = "",
+            //                  PhoneNum = "",
+            //                  PTotal = pay.Total,
+            //                  OrderUsr = user.UsrName,
+            //                  Driver = pay.DriverName,
+            //                  CustID = "",
+            //                  dDelivery = pay.Delivery
+            //              };
+
+            //var lstDb = Enumerable.Union(lstOther, lstShop);
+
+            //此处需要在表"TA_Customer"中增加空记录，因为Shop类型的需要显示
             var lstDb = from pay in CommonData.TAPaymentList
-                join cust in CommonData.TaCustList
-                    on pay.CustInfo equals cust.SystemKey.ToString()
-                join user in CommonData.UsrList
-                    on pay.OpUsr equals user.SystemKey.ToString()
-                where pay.IsPaid.Equals("N")
-                select new
-                {
-                    OrderSysKey = pay.SystemKey,
-                    OrderNo = pay.ChkNum,
-                    PTime = pay.PayTime,
-                    Postcode = cust.Postcode1,
-                    PostcodeZone = cust.PcZone,
-                    CustAddr = cust.Address1,
-                    OType = pay.OrderType,
-                    CustName = cust.Name,
-                    PhoneNum = cust.Phone1,
-                    PTotal = pay.Total,
-                    OrderUsr = user.UsrName,
-                    Driver = pay.DriverName,
-                    CustID = cust.SystemKey,
-                    dDelivery = pay.Delivery
-                };
+                           join cust in CommonData.TaCustList
+                               on pay.CustInfo equals cust.SystemKey.ToString()
+                           join user in CommonData.UsrList
+                               on pay.OpUsr equals user.SystemKey.ToString()
+                           where pay.IsPaid.Equals("N")
+                           select new
+                           {
+                               OrderSysKey = pay.SystemKey,
+                               OrderNo = pay.ChkNum,
+                               PTime = pay.PayTime,
+                               Postcode = cust.Postcode1,
+                               PostcodeZone = cust.PcZone,
+                               CustAddr = cust.Address1,
+                               OType = pay.OrderType,
+                               CustName = cust.Name,
+                               PhoneNum = cust.Phone1,
+                               PTotal = pay.Total,
+                               OrderUsr = user.UsrName,
+                               Driver = pay.DriverName,
+                               CustID = cust.SystemKey,
+                               dDelivery = pay.Delivery
+                           };
 
             //付款类型
             if (iType == 1)
