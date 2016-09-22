@@ -391,6 +391,11 @@ namespace SuperPOS.UI.TakeAway
 
             IList<TAMenuItemInfo> qMiList = new List<TAMenuItemInfo>();
 
+            if (GetShowDishCode())
+            {
+                strTxt = strTxt.Substring(strTxt.IndexOf(")") + 1);
+            }
+
             qMiList = I_LAN != 1
                 ? CommonData.TaMenuItemList.Where(s => s.OtherName.Equals(strTxt)).ToList()
                 : CommonData.TaMenuItemList.Where(s => s.EnglishName.Equals(strTxt)).ToList();
@@ -457,8 +462,7 @@ namespace SuperPOS.UI.TakeAway
                 }
 
                 //AddDataGridRow(taOrderItemInfo);
-                if (isAdd)
-                    CommonData.TaOrderItemList.Add(taOrderItemInfo);
+                if (isAdd) CommonData.TaOrderItemList.Add(taOrderItemInfo);
 
                 //dgvMenuItem.Refresh();
                 dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
@@ -1219,7 +1223,35 @@ namespace SuperPOS.UI.TakeAway
 
         private void dgvMenuItem_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (dgvMenuItem.RowCount == 0) return;
+            if (dgvMenuItem.CurrentRow?.Index < 0) return;
 
+            FrmTAChangePrice frmTaChangePrice = new FrmTAChangePrice(dgvMenuItem.CurrentRow.Cells[4].Value.ToString(),
+                                                                     dgvMenuItem.CurrentRow.Cells[5].Value.ToString());
+            if (frmTaChangePrice.ShowDialog() == DialogResult.OK)
+            {
+                //获得最新价格
+                string newPrice = frmTaChangePrice.ValueString;
+
+                if (!string.IsNullOrEmpty(newPrice))
+                {
+                    var lstOi = CommonData.TaOrderItemList.Where(
+                        s => s.SystemKey.ToString().Equals(dgvMenuItem.CurrentRow.Cells[0].Value.ToString()));
+                    if (lstOi.Any())
+                    {
+                        lstOi.FirstOrDefault().ItemPrice = newPrice;
+                        lstOi.FirstOrDefault().ItemTotalPrice =
+                            (Convert.ToDecimal(lstOi.FirstOrDefault().ItemPrice)*
+                             Convert.ToDecimal(lstOi.FirstOrDefault().ItemQty)).ToString();
+                    }
+
+                    SetDgvData();
+
+                    //dgvMenuItem.CurrentRow.Cells[3].Value = newPrice;
+
+                    SetTotalCountAndPrice(1);
+                }
+            }
         }
 
         private void btnSaveOrder_Click(object sender, EventArgs e)
@@ -1329,6 +1361,20 @@ namespace SuperPOS.UI.TakeAway
                 isSentFreeItem = false;
                 Hide();
             }
+        }
+
+        private bool GetShowDishCode()
+        {
+            bool bMI = false;
+            new OnLoadSystemCommonData().GetSysConfigList();
+            if (CommonData.SysConfigList.Any())
+            {
+                var lstSysConf = CommonData.SysConfigList.FirstOrDefault();
+
+                bMI = lstSysConf.IsDisplayItemCodeSelect.Equals("Y");
+            }
+
+            return bMI;
         }
     }
 }
