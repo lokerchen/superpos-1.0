@@ -76,10 +76,10 @@
             this.lblTillNum = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.grpBoxShopDetail = new System.Windows.Forms.GroupBox();
+            this.txtAddr = new System.Windows.Forms.RichTextBox();
             this.lblAddr = new System.Windows.Forms.Label();
             this.txtShopName = new System.Windows.Forms.TextBox();
             this.lblShopName = new System.Windows.Forms.Label();
-            this.txtAddr = new System.Windows.Forms.RichTextBox();
             this.grpBoxConf.SuspendLayout();
             this.grpBoxKeypadSet.SuspendLayout();
             this.grpBoxCashDrawerSet.SuspendLayout();
@@ -96,6 +96,7 @@
             this.grpBoxConf.Controls.Add(this.grpBoxCashDrawerSet);
             this.grpBoxConf.Controls.Add(this.grpBoxPrintOption);
             this.grpBoxConf.Controls.Add(this.grpBoxGenSet);
+            this.grpBoxConf.Controls.Add(this.chkBoxInputNumPerson);
             this.grpBoxConf.Controls.Add(this.grpBoxShopDetail);
             this.grpBoxConf.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.grpBoxConf.Location = new System.Drawing.Point(12, 7);
@@ -112,7 +113,7 @@
             this.btnExit.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(579, 485);
+            this.btnExit.Location = new System.Drawing.Point(552, 452);
             this.btnExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(101, 61);
@@ -126,7 +127,7 @@
             this.btnSave.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(447, 487);
+            this.btnSave.Location = new System.Drawing.Point(420, 454);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(101, 59);
@@ -381,7 +382,7 @@
             // 
             this.grpBoxCashDrawerSet.Controls.Add(this.chkBoxUseCashDrawer);
             this.grpBoxCashDrawerSet.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.grpBoxCashDrawerSet.Location = new System.Drawing.Point(17, 488);
+            this.grpBoxCashDrawerSet.Location = new System.Drawing.Point(17, 452);
             this.grpBoxCashDrawerSet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxCashDrawerSet.Name = "grpBoxCashDrawerSet";
             this.grpBoxCashDrawerSet.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -490,7 +491,6 @@
             this.grpBoxGenSet.Controls.Add(this.txtCurrency);
             this.grpBoxGenSet.Controls.Add(this.comBoxDefOrderInputPage);
             this.grpBoxGenSet.Controls.Add(this.txtTillNum);
-            this.grpBoxGenSet.Controls.Add(this.chkBoxInputNumPerson);
             this.grpBoxGenSet.Controls.Add(this.chkBoxDisItemCodeSelect);
             this.grpBoxGenSet.Controls.Add(this.lblVATPerct);
             this.grpBoxGenSet.Controls.Add(this.lblCurrency);
@@ -502,7 +502,7 @@
             this.grpBoxGenSet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.grpBoxGenSet.Name = "grpBoxGenSet";
             this.grpBoxGenSet.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.grpBoxGenSet.Size = new System.Drawing.Size(341, 294);
+            this.grpBoxGenSet.Size = new System.Drawing.Size(341, 258);
             this.grpBoxGenSet.TabIndex = 1;
             this.grpBoxGenSet.TabStop = false;
             this.grpBoxGenSet.Text = "General Setting";
@@ -512,7 +512,7 @@
             this.comBoxBackUpDrive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comBoxBackUpDrive.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comBoxBackUpDrive.FormattingEnabled = true;
-            this.comBoxBackUpDrive.Location = new System.Drawing.Point(137, 126);
+            this.comBoxBackUpDrive.Location = new System.Drawing.Point(137, 90);
             this.comBoxBackUpDrive.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comBoxBackUpDrive.Name = "comBoxBackUpDrive";
             this.comBoxBackUpDrive.Size = new System.Drawing.Size(94, 31);
@@ -522,7 +522,7 @@
             // 
             this.chkBoxBackUpWhenExit.AutoSize = true;
             this.chkBoxBackUpWhenExit.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.chkBoxBackUpWhenExit.Location = new System.Drawing.Point(23, 97);
+            this.chkBoxBackUpWhenExit.Location = new System.Drawing.Point(23, 61);
             this.chkBoxBackUpWhenExit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxBackUpWhenExit.Name = "chkBoxBackUpWhenExit";
             this.chkBoxBackUpWhenExit.Size = new System.Drawing.Size(193, 28);
@@ -533,7 +533,7 @@
             // txtVATPerct
             // 
             this.txtVATPerct.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtVATPerct.Location = new System.Drawing.Point(155, 256);
+            this.txtVATPerct.Location = new System.Drawing.Point(155, 220);
             this.txtVATPerct.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtVATPerct.Name = "txtVATPerct";
             this.txtVATPerct.Size = new System.Drawing.Size(86, 31);
@@ -543,7 +543,7 @@
             // txtCurrency
             // 
             this.txtCurrency.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtCurrency.Location = new System.Drawing.Point(104, 224);
+            this.txtCurrency.Location = new System.Drawing.Point(104, 188);
             this.txtCurrency.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCurrency.Name = "txtCurrency";
             this.txtCurrency.Size = new System.Drawing.Size(93, 31);
@@ -554,7 +554,7 @@
             this.comBoxDefOrderInputPage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comBoxDefOrderInputPage.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comBoxDefOrderInputPage.FormattingEnabled = true;
-            this.comBoxDefOrderInputPage.Location = new System.Drawing.Point(205, 185);
+            this.comBoxDefOrderInputPage.Location = new System.Drawing.Point(205, 149);
             this.comBoxDefOrderInputPage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.comBoxDefOrderInputPage.Name = "comBoxDefOrderInputPage";
             this.comBoxDefOrderInputPage.Size = new System.Drawing.Size(130, 31);
@@ -563,7 +563,7 @@
             // txtTillNum
             // 
             this.txtTillNum.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtTillNum.Location = new System.Drawing.Point(137, 156);
+            this.txtTillNum.Location = new System.Drawing.Point(137, 120);
             this.txtTillNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTillNum.Name = "txtTillNum";
             this.txtTillNum.Size = new System.Drawing.Size(85, 31);
@@ -574,13 +574,14 @@
             // 
             this.chkBoxInputNumPerson.AutoSize = true;
             this.chkBoxInputNumPerson.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.chkBoxInputNumPerson.Location = new System.Drawing.Point(23, 66);
+            this.chkBoxInputNumPerson.Location = new System.Drawing.Point(34, 532);
             this.chkBoxInputNumPerson.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkBoxInputNumPerson.Name = "chkBoxInputNumPerson";
             this.chkBoxInputNumPerson.Size = new System.Drawing.Size(248, 28);
             this.chkBoxInputNumPerson.TabIndex = 9;
             this.chkBoxInputNumPerson.Text = "Input Number of Persons";
             this.chkBoxInputNumPerson.UseVisualStyleBackColor = true;
+            this.chkBoxInputNumPerson.Visible = false;
             this.chkBoxInputNumPerson.CheckedChanged += new System.EventHandler(this.chkBoxInputNumPerson_CheckedChanged);
             // 
             // chkBoxDisItemCodeSelect
@@ -600,7 +601,7 @@
             // 
             this.lblVATPerct.AutoSize = true;
             this.lblVATPerct.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblVATPerct.Location = new System.Drawing.Point(19, 262);
+            this.lblVATPerct.Location = new System.Drawing.Point(19, 226);
             this.lblVATPerct.Name = "lblVATPerct";
             this.lblVATPerct.Size = new System.Drawing.Size(165, 24);
             this.lblVATPerct.TabIndex = 7;
@@ -610,7 +611,7 @@
             // 
             this.lblCurrency.AutoSize = true;
             this.lblCurrency.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblCurrency.Location = new System.Drawing.Point(19, 230);
+            this.lblCurrency.Location = new System.Drawing.Point(19, 194);
             this.lblCurrency.Name = "lblCurrency";
             this.lblCurrency.Size = new System.Drawing.Size(105, 24);
             this.lblCurrency.TabIndex = 6;
@@ -620,7 +621,7 @@
             // 
             this.lblDefOrderInputPage.AutoSize = true;
             this.lblDefOrderInputPage.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblDefOrderInputPage.Location = new System.Drawing.Point(19, 193);
+            this.lblDefOrderInputPage.Location = new System.Drawing.Point(19, 157);
             this.lblDefOrderInputPage.Name = "lblDefOrderInputPage";
             this.lblDefOrderInputPage.Size = new System.Drawing.Size(246, 24);
             this.lblDefOrderInputPage.TabIndex = 5;
@@ -630,7 +631,7 @@
             // 
             this.lblTillNum.AutoSize = true;
             this.lblTillNum.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblTillNum.Location = new System.Drawing.Point(19, 162);
+            this.lblTillNum.Location = new System.Drawing.Point(19, 126);
             this.lblTillNum.Name = "lblTillNum";
             this.lblTillNum.Size = new System.Drawing.Size(130, 24);
             this.lblTillNum.TabIndex = 4;
@@ -640,7 +641,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(19, 126);
+            this.label4.Location = new System.Drawing.Point(19, 90);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 24);
             this.label4.TabIndex = 3;
@@ -661,6 +662,16 @@
             this.grpBoxShopDetail.TabIndex = 0;
             this.grpBoxShopDetail.TabStop = false;
             this.grpBoxShopDetail.Text = "Shop Details";
+            // 
+            // txtAddr
+            // 
+            this.txtAddr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtAddr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtAddr.Location = new System.Drawing.Point(104, 64);
+            this.txtAddr.Name = "txtAddr";
+            this.txtAddr.Size = new System.Drawing.Size(221, 72);
+            this.txtAddr.TabIndex = 8;
+            this.txtAddr.Text = "";
             // 
             // lblAddr
             // 
@@ -691,16 +702,6 @@
             this.lblShopName.TabIndex = 0;
             this.lblShopName.Text = "Shop Name:";
             // 
-            // txtAddr
-            // 
-            this.txtAddr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddr.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtAddr.Location = new System.Drawing.Point(104, 64);
-            this.txtAddr.Name = "txtAddr";
-            this.txtAddr.Size = new System.Drawing.Size(221, 72);
-            this.txtAddr.TabIndex = 8;
-            this.txtAddr.Text = "";
-            // 
             // FrmSysConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -715,6 +716,7 @@
             this.Text = "FrmSysConfig";
             this.Load += new System.EventHandler(this.FrmSysConfig_Load);
             this.grpBoxConf.ResumeLayout(false);
+            this.grpBoxConf.PerformLayout();
             this.grpBoxKeypadSet.ResumeLayout(false);
             this.grpBoxKeypadSet.PerformLayout();
             this.grpBoxCashDrawerSet.ResumeLayout(false);
