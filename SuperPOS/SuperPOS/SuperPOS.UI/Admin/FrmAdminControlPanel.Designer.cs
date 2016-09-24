@@ -51,7 +51,8 @@
             System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Table Setup");
             System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Print Setup");
             System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Driver Setup");
-            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Takeaway & Quick Dining Setting", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Postcode Assignment");
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Takeaway & Quick Dining Setting", new System.Windows.Forms.TreeNode[] {
             treeNode8,
             treeNode9,
             treeNode10,
@@ -61,10 +62,11 @@
             treeNode14,
             treeNode15,
             treeNode16,
-            treeNode17});
-            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("Eat In Setting");
-            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Reporting");
-            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("System Control");
+            treeNode17,
+            treeNode18});
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Eat In Setting");
+            System.Windows.Forms.TreeNode treeNode21 = new System.Windows.Forms.TreeNode("Reporting");
+            System.Windows.Forms.TreeNode treeNode22 = new System.Windows.Forms.TreeNode("System Control");
             this.grpBoxCtrlPanel = new System.Windows.Forms.GroupBox();
             this.btnExit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -158,20 +160,22 @@
             treeNode16.Text = "Print Setup";
             treeNode17.Name = "210";
             treeNode17.Text = "Driver Setup";
-            treeNode18.Name = "2";
-            treeNode18.Text = "Takeaway & Quick Dining Setting";
-            treeNode19.Name = "3";
-            treeNode19.Text = "Eat In Setting";
-            treeNode20.Name = "4";
-            treeNode20.Text = "Reporting";
-            treeNode21.Name = "5";
-            treeNode21.Text = "System Control";
+            treeNode18.Name = "211";
+            treeNode18.Text = "Postcode Assignment";
+            treeNode19.Name = "2";
+            treeNode19.Text = "Takeaway & Quick Dining Setting";
+            treeNode20.Name = "3";
+            treeNode20.Text = "Eat In Setting";
+            treeNode21.Name = "4";
+            treeNode21.Text = "Reporting";
+            treeNode22.Name = "5";
+            treeNode22.Text = "System Control";
             this.treeViewMenu.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode7,
-            treeNode18,
             treeNode19,
             treeNode20,
-            treeNode21});
+            treeNode21,
+            treeNode22});
             this.treeViewMenu.Size = new System.Drawing.Size(291, 470);
             this.treeViewMenu.TabIndex = 0;
             this.treeViewMenu.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeViewMenu_AfterSelect);
@@ -179,7 +183,7 @@
             // 
             // FrmAdminControlPanel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(902, 556);
             this.Controls.Add(this.grpBoxCtrlPanel);

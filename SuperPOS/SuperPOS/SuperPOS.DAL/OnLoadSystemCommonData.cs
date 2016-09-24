@@ -76,5 +76,9 @@ namespace SuperPOS.DAL
         public void GetTAFreeFoodItemsList() { CommonData.TAFreeFoodItems = _control.SelectAll<TAFreeFoodItemsInfo>(); }
 
         public void GetTAPrtInfo() { CommonData.TAPrtInfos = _control.SelectAll<TAPrtInfo>(); }
+
+        public void GetPostcodeChargeList() { CommonData.TaPostcodeChargeList = _control.SelectAll<TAPostcodeChargeInfo>(); }
+
+        public void GetPostcodeZoneList() { CommonData.TaPostcodeZoneList = _control.SelectAll<TAPostcodeZoneInfo>(); }
     }
 }

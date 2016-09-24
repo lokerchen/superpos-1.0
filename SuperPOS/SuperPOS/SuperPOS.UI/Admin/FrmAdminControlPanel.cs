@@ -201,6 +201,14 @@ namespace SuperPOS.UI.Admin
                     }
                     else MessageBox.Show(strMsg);
                     break;
+                case "211":
+                    if (CommonFunction.GetUsrPermission(userInfo.UsrCode, "101"))
+                    {
+                        FrmTAPostcodeAssign frmTaPostcode = new FrmTAPostcodeAssign(userInfo);
+                        frmTaPostcode.ShowDialog();
+                    }
+                    else MessageBox.Show(strMsg);
+                    break;
                 case "5":
                     FrmSysCtl frmSysCtl = new FrmSysCtl();
                     frmSysCtl.ShowDialog();
