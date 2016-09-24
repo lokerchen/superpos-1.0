@@ -85,6 +85,9 @@ namespace SuperPOS.DAL
             onLoad.GetTAFreeFoodItemsList();
             //Print setup -> General -> Print Information
             onLoad.GetTAPrtInfo();
+            //Postcode Assignment
+            onLoad.GetPostcodeChargeList();
+            onLoad.GetPostcodeZoneList();
         }
         #endregion
 

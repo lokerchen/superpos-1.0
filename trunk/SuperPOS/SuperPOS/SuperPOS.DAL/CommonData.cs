@@ -72,5 +72,9 @@ namespace SuperPOS.DAL
         public static IList<TAFreeFoodItemsInfo> TAFreeFoodItems { get; set; }
 
         public static IList<TAPrtInfo> TAPrtInfos { get; set; }
+
+        public static IList<TAPostcodeChargeInfo> TaPostcodeChargeList { get; set; }
+
+        public static IList<TAPostcodeZoneInfo> TaPostcodeZoneList { get; set; }
     }
 }

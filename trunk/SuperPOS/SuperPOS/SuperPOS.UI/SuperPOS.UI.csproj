@@ -244,6 +244,12 @@
     <Compile Include="TakeAway\FrmTAPayShop.Designer.cs">
       <DependentUpon>FrmTAPayShop.cs</DependentUpon>
     </Compile>
+    <Compile Include="TakeAway\FrmTAPostcodeAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\FrmTAPostcodeAssign.Designer.cs">
+      <DependentUpon>FrmTAPostcodeAssign.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeAway\FrmTASearchMeal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -407,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAPayShop.resx">
       <DependentUpon>FrmTAPayShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\FrmTAPostcodeAssign.resx">
+      <DependentUpon>FrmTAPostcodeAssign.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTAPrtSetup.resx">
       <DependentUpon>FrmTAPrtSetup.cs</DependentUpon>
