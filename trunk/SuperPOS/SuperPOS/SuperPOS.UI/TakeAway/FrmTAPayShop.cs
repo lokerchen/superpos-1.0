@@ -981,6 +981,8 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnPrtBillOnly_Click(object sender, EventArgs e)
         {
+            if (Convert.ToDecimal(txtToPay.Text) > 0.0m) return;
+
             htPay["Tendered"] = txtTendered.Text;
             htPay["Change"] = txtChange.Text;
 
@@ -992,6 +994,8 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnPrtAllReceipt_Click(object sender, EventArgs e)
         {
+            if (Convert.ToDecimal(txtToPay.Text) > 0.0m) return;
+
             htPay["Tendered"] = txtTendered.Text;
             htPay["Change"] = txtChange.Text;
 
@@ -1064,6 +1068,8 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnPrtKitOnly_Click(object sender, EventArgs e)
         {
+            if (Convert.ToDecimal(txtToPay.Text) > 0.0m) return;
+
             new OnLoadSystemCommonData().GetTAOrderItem();
             var lstOI = CommonData.TaOrderItemList.Where(s => s.CheckCode.Equals(chkNum)).ToList();
 
@@ -1074,6 +1080,8 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnPrtAll_Click(object sender, EventArgs e)
         {
+            if (Convert.ToDecimal(txtToPay.Text) > 0.0m) return;
+
             htPay["Tendered"] = txtTendered.Text;
             htPay["Change"] = txtChange.Text;
 
