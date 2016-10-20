@@ -213,7 +213,12 @@ namespace SuperPOS.UI.TakeAway
             #region DGV设置
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
-
+            if (dgvMenuItem.RowCount > 0)
+            {
+                dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+            }
+            
             dgvMenuItem.Columns[0].Visible = false;
             dgvMenuItem.Columns[0].Width = 10;
             dgvMenuItem.Columns[1].HeaderText = @"Qty";
@@ -338,6 +343,12 @@ namespace SuperPOS.UI.TakeAway
                     //清空当前Dgv
                     ClearDgvData();
                     dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                    if (dgvMenuItem.RowCount > 0)
+                    {
+                        dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                        dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+                    }
+
                     SetTotalCountAndPrice(1);
 
                     //Free Item状态
@@ -466,6 +477,11 @@ namespace SuperPOS.UI.TakeAway
 
                 //dgvMenuItem.Refresh();
                 dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                if (dgvMenuItem.RowCount > 0)
+                {
+                    dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                    dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+                }
             }
 
             if (isIngredMode) SetDgvData();
@@ -666,6 +682,11 @@ namespace SuperPOS.UI.TakeAway
             }
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+            if (dgvMenuItem.RowCount > 0)
+            {
+                dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+            }
 
             SetTotalCountAndPrice(1);
         }
@@ -725,6 +746,11 @@ namespace SuperPOS.UI.TakeAway
             }
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+            if (dgvMenuItem.RowCount > 0)
+            {
+                dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+            }
 
             SetTotalCountAndPrice(1);
         }
@@ -758,6 +784,11 @@ namespace SuperPOS.UI.TakeAway
             }
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+            if (dgvMenuItem.RowCount > 0)
+            {
+                dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+            }
 
             SetTotalCountAndPrice(1);
         }
@@ -769,7 +800,7 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-            if (dgvMenuItem.RowCount <= 0) return;
+            if (dgvMenuItem.RowCount > 0) return;
 
             //是否显示赠送
             SetShowFreeItem(txtTotalPrice.Text);
@@ -853,6 +884,11 @@ namespace SuperPOS.UI.TakeAway
 
                         dgvMenuItem.DataSource =
                             CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                        if (dgvMenuItem.RowCount > 0)
+                        {
+                            dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                            dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+                        }
                     }
 
                     ClearDgvData();
@@ -884,6 +920,11 @@ namespace SuperPOS.UI.TakeAway
 
                         dgvMenuItem.DataSource =
                             CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                        if (dgvMenuItem.RowCount > 0)
+                        {
+                            dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                            dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+                        }
                     }
 
                     ClearDgvData();
@@ -914,6 +955,11 @@ namespace SuperPOS.UI.TakeAway
 
                         dgvMenuItem.DataSource =
                             CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                        if (dgvMenuItem.RowCount > 0)
+                        {
+                            dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                            dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+                        }
                     }
 
                     ClearDgvData();
@@ -966,6 +1012,11 @@ namespace SuperPOS.UI.TakeAway
             }
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+            if (dgvMenuItem.RowCount > 0)
+            {
+                dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+            }
 
             //int i = 0;
             //var lstTaOI = lstOI.Where(s => s.ItemType.Equals("1"));
@@ -1122,6 +1173,11 @@ namespace SuperPOS.UI.TakeAway
                     {
                         CommonData.TaOrderItemList.Add(taOrderItemInfo);
                         dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                        if (dgvMenuItem.RowCount > 0)
+                        {
+                            dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                            dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+                        }
 
                         SetTotalCountAndPrice(1);
                     }
@@ -1194,6 +1250,11 @@ namespace SuperPOS.UI.TakeAway
                                 {
                                     CommonData.TaOrderItemList.Add(taOrderItemInfo);
                                     dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+                                    if (dgvMenuItem.RowCount > 0)
+                                    {
+                                        dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                                        dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+                                    }
 
                                     SetTotalCountAndPrice(0);
 
@@ -1256,7 +1317,7 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnSaveOrder_Click(object sender, EventArgs e)
         {
-            if (dgvMenuItem.RowCount <= 0) return;
+            if (dgvMenuItem.RowCount > 0) return;
 
             //ORDER_TYPE = CommonBase.ORDER_TYPE_DELIVERY;
             //strCallID = @"06f8d669-ba19-4922-b84d-43b23b1632e5";
@@ -1314,6 +1375,11 @@ namespace SuperPOS.UI.TakeAway
             ChkNum = ChkNum1;
 
             dgvMenuItem.DataSource = CommonData.TaOrderItemList.Where(s => s.CheckKey.Equals(ChkKey)).ToList();
+            if (dgvMenuItem.RowCount > 0)
+            {
+                dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Selected = true;
+                dgvMenuItem.CurrentCell = dgvMenuItem.Rows[dgvMenuItem.RowCount - 1].Cells[1];
+            }
 
             ClearDgvData();
         }
