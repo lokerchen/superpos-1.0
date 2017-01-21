@@ -151,6 +151,8 @@
     <Compile Include="FrmSelectMenu.Designer.cs">
       <DependentUpon>FrmSelectMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Phone\brichiperr.cs" />
+    <Compile Include="Phone\BriSDKLib.cs" />
     <Compile Include="Print\PrtCommon.cs" />
     <Compile Include="Print\PrtPrint.cs" />
     <Compile Include="Print\PrtStatic.cs" />
