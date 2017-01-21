@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.OleDb;
 using System.Linq;
 using System.Text;
+using NHibernate.Linq;
 using SuperPOS.Common;
 using SuperPOS.Domain.Entities;
 
@@ -300,7 +301,9 @@ namespace SuperPOS.DAL
             }
             else
             {
-                return CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(sKeyWord) || s.EnglishName.Contains(sKeyWord))
+                //
+                //SqlMethods.Like(s.EnglishName, "%" + sKeyWord + "%")
+                return CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(sKeyWord) || s.EnglishName.ToUpper().Contains(sKeyWord.ToUpper()))
                         .Skip(PAGESIZE_MENUITEM * (iPageNum - 1))
                         .Take(PAGESIZE_MENUITEM)
                         .ToList();
