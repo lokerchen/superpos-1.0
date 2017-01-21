@@ -909,6 +909,19 @@ namespace SuperPOS.UI.TakeAway
 
         private void btnDASave_Click(object sender, EventArgs e)
         {
+            #region 判断DishCode是否重复
+            new OnLoadSystemCommonData().GetTAMenuItemList();
+
+            var qDishCode = CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtDishCode.Text));
+
+            if (qDishCode.Any())
+            {
+                MessageBox.Show("Dish code can not be duplicated!");
+                txtDishCode.Focus();
+                return;
+            }
+            #endregion
+
             TAMenuItemInfo taMenuItem = new TAMenuItemInfo();
 
             taMenuItem.DishCode = txtDishCode.Text;
