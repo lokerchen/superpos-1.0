@@ -48,6 +48,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.btnLogout);
             this.groupBox1.Controls.Add(this.btnCtlPanel);
             this.groupBox1.Controls.Add(this.btnShowOrder);
@@ -57,22 +58,26 @@
             this.groupBox1.Controls.Add(this.txtTime);
             this.groupBox1.Controls.Add(this.txtDate);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(182, 535);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(243, 669);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // btnLogout
             // 
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnLogout.BackColor = System.Drawing.Color.Red;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(22, 460);
+            this.btnLogout.Location = new System.Drawing.Point(29, 575);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(133, 60);
+            this.btnLogout.Size = new System.Drawing.Size(177, 75);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -80,14 +85,16 @@
             // 
             // btnCtlPanel
             // 
+            this.btnCtlPanel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCtlPanel.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnCtlPanel.FlatAppearance.BorderSize = 0;
             this.btnCtlPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCtlPanel.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCtlPanel.ForeColor = System.Drawing.Color.White;
-            this.btnCtlPanel.Location = new System.Drawing.Point(22, 380);
+            this.btnCtlPanel.Location = new System.Drawing.Point(29, 475);
+            this.btnCtlPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCtlPanel.Name = "btnCtlPanel";
-            this.btnCtlPanel.Size = new System.Drawing.Size(133, 60);
+            this.btnCtlPanel.Size = new System.Drawing.Size(177, 75);
             this.btnCtlPanel.TabIndex = 6;
             this.btnCtlPanel.Text = "Control Panel";
             this.btnCtlPanel.UseVisualStyleBackColor = false;
@@ -95,14 +102,16 @@
             // 
             // btnShowOrder
             // 
+            this.btnShowOrder.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShowOrder.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnShowOrder.FlatAppearance.BorderSize = 0;
             this.btnShowOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShowOrder.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnShowOrder.ForeColor = System.Drawing.Color.White;
-            this.btnShowOrder.Location = new System.Drawing.Point(22, 300);
+            this.btnShowOrder.Location = new System.Drawing.Point(29, 375);
+            this.btnShowOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnShowOrder.Name = "btnShowOrder";
-            this.btnShowOrder.Size = new System.Drawing.Size(133, 60);
+            this.btnShowOrder.Size = new System.Drawing.Size(177, 75);
             this.btnShowOrder.TabIndex = 5;
             this.btnShowOrder.Text = "Show Order";
             this.btnShowOrder.UseVisualStyleBackColor = false;
@@ -110,102 +119,104 @@
             // 
             // btnDrawer
             // 
+            this.btnDrawer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDrawer.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnDrawer.FlatAppearance.BorderSize = 0;
             this.btnDrawer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDrawer.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDrawer.ForeColor = System.Drawing.Color.White;
-            this.btnDrawer.Location = new System.Drawing.Point(22, 220);
+            this.btnDrawer.Location = new System.Drawing.Point(29, 275);
+            this.btnDrawer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDrawer.Name = "btnDrawer";
-            this.btnDrawer.Size = new System.Drawing.Size(133, 60);
+            this.btnDrawer.Size = new System.Drawing.Size(177, 75);
             this.btnDrawer.TabIndex = 4;
             this.btnDrawer.Text = "Cash Drawer";
             this.btnDrawer.UseVisualStyleBackColor = false;
             // 
             // txtStaff
             // 
-            this.txtStaff.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtStaff.Enabled = false;
             this.txtStaff.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtStaff.Location = new System.Drawing.Point(22, 144);
+            this.txtStaff.Location = new System.Drawing.Point(29, 180);
+            this.txtStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtStaff.Name = "txtStaff";
-            this.txtStaff.Size = new System.Drawing.Size(133, 34);
+            this.txtStaff.Size = new System.Drawing.Size(177, 33);
             this.txtStaff.TabIndex = 3;
             this.txtStaff.Text = "STAFF8";
             this.txtStaff.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtSession
             // 
-            this.txtSession.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSession.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSession.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSession.Enabled = false;
             this.txtSession.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtSession.Location = new System.Drawing.Point(22, 105);
+            this.txtSession.Location = new System.Drawing.Point(29, 131);
+            this.txtSession.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSession.Name = "txtSession";
-            this.txtSession.Size = new System.Drawing.Size(133, 34);
+            this.txtSession.Size = new System.Drawing.Size(177, 33);
             this.txtSession.TabIndex = 2;
             this.txtSession.Text = "DINNER";
             this.txtSession.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTime
             // 
-            this.txtTime.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTime.Enabled = false;
             this.txtTime.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtTime.Location = new System.Drawing.Point(22, 65);
+            this.txtTime.Location = new System.Drawing.Point(29, 81);
+            this.txtTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(133, 34);
+            this.txtTime.Size = new System.Drawing.Size(177, 33);
             this.txtTime.TabIndex = 1;
             this.txtTime.Text = "23:23:23";
             this.txtTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtDate
             // 
-            this.txtDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDate.Enabled = false;
             this.txtDate.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtDate.Location = new System.Drawing.Point(22, 22);
+            this.txtDate.Location = new System.Drawing.Point(29, 28);
+            this.txtDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(133, 34);
+            this.txtDate.Size = new System.Drawing.Size(177, 33);
             this.txtDate.TabIndex = 0;
             this.txtDate.Text = "25/11/2015";
             this.txtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button5
             // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("微软雅黑", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(209, 36);
+            this.button5.Location = new System.Drawing.Point(279, 45);
+            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(518, 98);
+            this.button5.Size = new System.Drawing.Size(691, 122);
             this.button5.TabIndex = 1;
             this.button5.Text = "Desktop Area";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // btnTakeaway
             // 
+            this.btnTakeaway.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnTakeaway.BackColor = System.Drawing.Color.Silver;
             this.btnTakeaway.FlatAppearance.BorderSize = 0;
             this.btnTakeaway.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTakeaway.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTakeaway.ForeColor = System.Drawing.Color.White;
-            this.btnTakeaway.Location = new System.Drawing.Point(307, 169);
+            this.btnTakeaway.Location = new System.Drawing.Point(409, 211);
+            this.btnTakeaway.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTakeaway.Name = "btnTakeaway";
-            this.btnTakeaway.Size = new System.Drawing.Size(300, 90);
+            this.btnTakeaway.Size = new System.Drawing.Size(400, 112);
             this.btnTakeaway.TabIndex = 2;
             this.btnTakeaway.Text = "Takeaway";
             this.btnTakeaway.UseVisualStyleBackColor = false;
@@ -215,14 +226,16 @@
             // 
             // btnEatIn
             // 
+            this.btnEatIn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEatIn.BackColor = System.Drawing.Color.Silver;
             this.btnEatIn.FlatAppearance.BorderSize = 0;
             this.btnEatIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEatIn.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnEatIn.ForeColor = System.Drawing.Color.White;
-            this.btnEatIn.Location = new System.Drawing.Point(307, 275);
+            this.btnEatIn.Location = new System.Drawing.Point(409, 344);
+            this.btnEatIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEatIn.Name = "btnEatIn";
-            this.btnEatIn.Size = new System.Drawing.Size(300, 90);
+            this.btnEatIn.Size = new System.Drawing.Size(400, 112);
             this.btnEatIn.TabIndex = 3;
             this.btnEatIn.Text = "Eat In";
             this.btnEatIn.UseVisualStyleBackColor = false;
@@ -232,14 +245,16 @@
             // 
             // btnQuickFood
             // 
+            this.btnQuickFood.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnQuickFood.BackColor = System.Drawing.Color.Silver;
             this.btnQuickFood.FlatAppearance.BorderSize = 0;
             this.btnQuickFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuickFood.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnQuickFood.ForeColor = System.Drawing.Color.White;
-            this.btnQuickFood.Location = new System.Drawing.Point(307, 381);
+            this.btnQuickFood.Location = new System.Drawing.Point(409, 476);
+            this.btnQuickFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnQuickFood.Name = "btnQuickFood";
-            this.btnQuickFood.Size = new System.Drawing.Size(300, 90);
+            this.btnQuickFood.Size = new System.Drawing.Size(400, 112);
             this.btnQuickFood.TabIndex = 4;
             this.btnQuickFood.Text = "Quick Food";
             this.btnQuickFood.UseVisualStyleBackColor = false;
@@ -255,18 +270,20 @@
             // 
             // FrmSelectMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 561);
+            this.ClientSize = new System.Drawing.Size(995, 701);
             this.Controls.Add(this.btnQuickFood);
             this.Controls.Add(this.btnEatIn);
             this.Controls.Add(this.btnTakeaway);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmSelectMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSelectMenu";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmSelectMenu_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
