@@ -33,7 +33,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lblSurcharge4 = new System.Windows.Forms.Label();
             this.lblSCharge4 = new System.Windows.Forms.Label();
+            this.txtNotPaid = new System.Windows.Forms.TextBox();
             this.lblPayType4 = new System.Windows.Forms.Label();
+            this.lblNotPaid = new System.Windows.Forms.Label();
             this.txtPay4 = new System.Windows.Forms.TextBox();
             this.lblSurcharge1 = new System.Windows.Forms.Label();
             this.lblSCharge1 = new System.Windows.Forms.Label();
@@ -118,14 +120,13 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnShop = new System.Windows.Forms.Button();
             this.btnCollection = new System.Windows.Forms.Button();
-            this.txtNotPaid = new System.Windows.Forms.TextBox();
-            this.lblNotPaid = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.txtVAT);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.lblSurcharge4);
@@ -190,14 +191,17 @@
             // 
             // txtVAT
             // 
+            this.txtVAT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtVAT.Enabled = false;
             this.txtVAT.Location = new System.Drawing.Point(120, 181);
             this.txtVAT.Name = "txtVAT";
-            this.txtVAT.Size = new System.Drawing.Size(100, 29);
+            this.txtVAT.Size = new System.Drawing.Size(100, 34);
             this.txtVAT.TabIndex = 103;
+            this.txtVAT.Visible = false;
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.RoyalBlue;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -205,36 +209,52 @@
             this.label12.ForeColor = System.Drawing.Color.White;
             this.label12.Location = new System.Drawing.Point(56, 185);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 25);
+            this.label12.Size = new System.Drawing.Size(67, 31);
             this.label12.TabIndex = 102;
             this.label12.Text = "VAT:";
+            this.label12.Visible = false;
             // 
             // lblSurcharge4
             // 
+            this.lblSurcharge4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSurcharge4.AutoSize = true;
             this.lblSurcharge4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSurcharge4.Location = new System.Drawing.Point(117, 149);
             this.lblSurcharge4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSurcharge4.Name = "lblSurcharge4";
-            this.lblSurcharge4.Size = new System.Drawing.Size(41, 21);
+            this.lblSurcharge4.Size = new System.Drawing.Size(53, 27);
             this.lblSurcharge4.TabIndex = 101;
             this.lblSurcharge4.Text = "0.00";
             this.lblSurcharge4.Visible = false;
             // 
             // lblSCharge4
             // 
+            this.lblSCharge4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSCharge4.AutoSize = true;
             this.lblSCharge4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSCharge4.Location = new System.Drawing.Point(14, 149);
             this.lblSCharge4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSCharge4.Name = "lblSCharge4";
-            this.lblSCharge4.Size = new System.Drawing.Size(91, 21);
+            this.lblSCharge4.Size = new System.Drawing.Size(114, 27);
             this.lblSCharge4.TabIndex = 100;
             this.lblSCharge4.Text = "Surcharge:";
             this.lblSCharge4.Visible = false;
             // 
+            // txtNotPaid
+            // 
+            this.txtNotPaid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNotPaid.Enabled = false;
+            this.txtNotPaid.Location = new System.Drawing.Point(435, 57);
+            this.txtNotPaid.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNotPaid.Name = "txtNotPaid";
+            this.txtNotPaid.Size = new System.Drawing.Size(68, 34);
+            this.txtNotPaid.TabIndex = 69;
+            this.txtNotPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtNotPaid.Visible = false;
+            // 
             // lblPayType4
             // 
+            this.lblPayType4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPayType4.AutoSize = true;
             this.lblPayType4.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblPayType4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -243,18 +263,35 @@
             this.lblPayType4.Location = new System.Drawing.Point(318, 142);
             this.lblPayType4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPayType4.Name = "lblPayType4";
-            this.lblPayType4.Size = new System.Drawing.Size(89, 28);
+            this.lblPayType4.Size = new System.Drawing.Size(114, 35);
             this.lblPayType4.TabIndex = 99;
             this.lblPayType4.Text = "Just Eat";
             this.lblPayType4.Visible = false;
             this.lblPayType4.Click += new System.EventHandler(this.lblPayType4_Click);
             // 
+            // lblNotPaid
+            // 
+            this.lblNotPaid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNotPaid.AutoSize = true;
+            this.lblNotPaid.BackColor = System.Drawing.Color.RoyalBlue;
+            this.lblNotPaid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.lblNotPaid.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblNotPaid.ForeColor = System.Drawing.Color.White;
+            this.lblNotPaid.Location = new System.Drawing.Point(435, 25);
+            this.lblNotPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNotPaid.Name = "lblNotPaid";
+            this.lblNotPaid.Size = new System.Drawing.Size(128, 35);
+            this.lblNotPaid.TabIndex = 70;
+            this.lblNotPaid.Text = "Not Paid";
+            this.lblNotPaid.Visible = false;
+            // 
             // txtPay4
             // 
+            this.txtPay4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPay4.Location = new System.Drawing.Point(179, 142);
             this.txtPay4.Margin = new System.Windows.Forms.Padding(4);
             this.txtPay4.Name = "txtPay4";
-            this.txtPay4.Size = new System.Drawing.Size(132, 29);
+            this.txtPay4.Size = new System.Drawing.Size(132, 34);
             this.txtPay4.TabIndex = 98;
             this.txtPay4.Text = "0.00";
             this.txtPay4.Visible = false;
@@ -263,54 +300,59 @@
             // 
             // lblSurcharge1
             // 
+            this.lblSurcharge1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSurcharge1.AutoSize = true;
             this.lblSurcharge1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSurcharge1.Location = new System.Drawing.Point(118, 30);
             this.lblSurcharge1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSurcharge1.Name = "lblSurcharge1";
-            this.lblSurcharge1.Size = new System.Drawing.Size(41, 21);
+            this.lblSurcharge1.Size = new System.Drawing.Size(53, 27);
             this.lblSurcharge1.TabIndex = 97;
             this.lblSurcharge1.Text = "0.00";
             this.lblSurcharge1.Visible = false;
             // 
             // lblSCharge1
             // 
+            this.lblSCharge1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSCharge1.AutoSize = true;
             this.lblSCharge1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSCharge1.Location = new System.Drawing.Point(15, 30);
             this.lblSCharge1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSCharge1.Name = "lblSCharge1";
-            this.lblSCharge1.Size = new System.Drawing.Size(91, 21);
+            this.lblSCharge1.Size = new System.Drawing.Size(114, 27);
             this.lblSCharge1.TabIndex = 96;
             this.lblSCharge1.Text = "Surcharge:";
             this.lblSCharge1.Visible = false;
             // 
             // lblSurcharge3
             // 
+            this.lblSurcharge3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSurcharge3.AutoSize = true;
             this.lblSurcharge3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSurcharge3.Location = new System.Drawing.Point(117, 109);
             this.lblSurcharge3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSurcharge3.Name = "lblSurcharge3";
-            this.lblSurcharge3.Size = new System.Drawing.Size(41, 21);
+            this.lblSurcharge3.Size = new System.Drawing.Size(53, 27);
             this.lblSurcharge3.TabIndex = 95;
             this.lblSurcharge3.Text = "0.00";
             this.lblSurcharge3.Visible = false;
             // 
             // lblSCharge3
             // 
+            this.lblSCharge3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSCharge3.AutoSize = true;
             this.lblSCharge3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSCharge3.Location = new System.Drawing.Point(14, 109);
             this.lblSCharge3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSCharge3.Name = "lblSCharge3";
-            this.lblSCharge3.Size = new System.Drawing.Size(91, 21);
+            this.lblSCharge3.Size = new System.Drawing.Size(114, 27);
             this.lblSCharge3.TabIndex = 94;
             this.lblSCharge3.Text = "Surcharge:";
             this.lblSCharge3.Visible = false;
             // 
             // lblPayType3
             // 
+            this.lblPayType3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPayType3.AutoSize = true;
             this.lblPayType3.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblPayType3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -319,7 +361,7 @@
             this.lblPayType3.Location = new System.Drawing.Point(318, 102);
             this.lblPayType3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPayType3.Name = "lblPayType3";
-            this.lblPayType3.Size = new System.Drawing.Size(89, 28);
+            this.lblPayType3.Size = new System.Drawing.Size(114, 35);
             this.lblPayType3.TabIndex = 93;
             this.lblPayType3.Text = "Just Eat";
             this.lblPayType3.Visible = false;
@@ -327,10 +369,11 @@
             // 
             // txtPay3
             // 
+            this.txtPay3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPay3.Location = new System.Drawing.Point(179, 101);
             this.txtPay3.Margin = new System.Windows.Forms.Padding(4);
             this.txtPay3.Name = "txtPay3";
-            this.txtPay3.Size = new System.Drawing.Size(132, 29);
+            this.txtPay3.Size = new System.Drawing.Size(132, 34);
             this.txtPay3.TabIndex = 92;
             this.txtPay3.Text = "0.00";
             this.txtPay3.Visible = false;
@@ -339,30 +382,33 @@
             // 
             // lblSurcharge2
             // 
+            this.lblSurcharge2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSurcharge2.AutoSize = true;
             this.lblSurcharge2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSurcharge2.Location = new System.Drawing.Point(118, 68);
             this.lblSurcharge2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSurcharge2.Name = "lblSurcharge2";
-            this.lblSurcharge2.Size = new System.Drawing.Size(41, 21);
+            this.lblSurcharge2.Size = new System.Drawing.Size(53, 27);
             this.lblSurcharge2.TabIndex = 91;
             this.lblSurcharge2.Text = "0.00";
             this.lblSurcharge2.Visible = false;
             // 
             // lblSCharge2
             // 
+            this.lblSCharge2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSCharge2.AutoSize = true;
             this.lblSCharge2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSCharge2.Location = new System.Drawing.Point(15, 68);
             this.lblSCharge2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSCharge2.Name = "lblSCharge2";
-            this.lblSCharge2.Size = new System.Drawing.Size(91, 21);
+            this.lblSCharge2.Size = new System.Drawing.Size(114, 27);
             this.lblSCharge2.TabIndex = 90;
             this.lblSCharge2.Text = "Surcharge:";
             this.lblSCharge2.Visible = false;
             // 
             // lblPayType2
             // 
+            this.lblPayType2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPayType2.AutoSize = true;
             this.lblPayType2.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblPayType2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -371,7 +417,7 @@
             this.lblPayType2.Location = new System.Drawing.Point(321, 62);
             this.lblPayType2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPayType2.Name = "lblPayType2";
-            this.lblPayType2.Size = new System.Drawing.Size(59, 28);
+            this.lblPayType2.Size = new System.Drawing.Size(75, 35);
             this.lblPayType2.TabIndex = 89;
             this.lblPayType2.Text = "Card";
             this.lblPayType2.Visible = false;
@@ -379,10 +425,11 @@
             // 
             // txtPay2
             // 
+            this.txtPay2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPay2.Location = new System.Drawing.Point(179, 61);
             this.txtPay2.Margin = new System.Windows.Forms.Padding(4);
             this.txtPay2.Name = "txtPay2";
-            this.txtPay2.Size = new System.Drawing.Size(132, 29);
+            this.txtPay2.Size = new System.Drawing.Size(132, 34);
             this.txtPay2.TabIndex = 88;
             this.txtPay2.Text = "0.00";
             this.txtPay2.Visible = false;
@@ -391,6 +438,7 @@
             // 
             // lblPayType1
             // 
+            this.lblPayType1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPayType1.AutoSize = true;
             this.lblPayType1.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblPayType1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -399,7 +447,7 @@
             this.lblPayType1.Location = new System.Drawing.Point(318, 22);
             this.lblPayType1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPayType1.Name = "lblPayType1";
-            this.lblPayType1.Size = new System.Drawing.Size(61, 28);
+            this.lblPayType1.Size = new System.Drawing.Size(78, 35);
             this.lblPayType1.TabIndex = 87;
             this.lblPayType1.Text = "Cash";
             this.lblPayType1.Visible = false;
@@ -407,10 +455,11 @@
             // 
             // txtPay1
             // 
+            this.txtPay1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPay1.Location = new System.Drawing.Point(179, 21);
             this.txtPay1.Margin = new System.Windows.Forms.Padding(4);
             this.txtPay1.Name = "txtPay1";
-            this.txtPay1.Size = new System.Drawing.Size(132, 29);
+            this.txtPay1.Size = new System.Drawing.Size(132, 34);
             this.txtPay1.TabIndex = 86;
             this.txtPay1.Text = "0.00";
             this.txtPay1.Visible = false;
@@ -419,6 +468,7 @@
             // 
             // btnPrtKitOnly
             // 
+            this.btnPrtKitOnly.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtKitOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnPrtKitOnly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtKitOnly.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -434,6 +484,7 @@
             // 
             // btnC
             // 
+            this.btnC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnC.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -449,6 +500,7 @@
             // 
             // btnP
             // 
+            this.btnP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -464,6 +516,7 @@
             // 
             // btnD
             // 
+            this.btnD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnD.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnD.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -479,6 +532,7 @@
             // 
             // btnPoint
             // 
+            this.btnPoint.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnPoint.FlatAppearance.BorderSize = 0;
             this.btnPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -493,6 +547,7 @@
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
@@ -507,6 +562,7 @@
             // 
             // btn0
             // 
+            this.btn0.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn0.FlatAppearance.BorderSize = 0;
             this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -521,6 +577,7 @@
             // 
             // btnOrderSlip
             // 
+            this.btnOrderSlip.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOrderSlip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnOrderSlip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrderSlip.ForeColor = System.Drawing.Color.White;
@@ -534,6 +591,7 @@
             // 
             // btn3
             // 
+            this.btn3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn3.FlatAppearance.BorderSize = 0;
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -548,6 +606,7 @@
             // 
             // btnPrtBillOnly
             // 
+            this.btnPrtBillOnly.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtBillOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnPrtBillOnly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtBillOnly.ForeColor = System.Drawing.Color.White;
@@ -562,6 +621,7 @@
             // 
             // btn2
             // 
+            this.btn2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn2.FlatAppearance.BorderSize = 0;
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -576,6 +636,7 @@
             // 
             // btnPrtAllReceipt
             // 
+            this.btnPrtAllReceipt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtAllReceipt.BackColor = System.Drawing.Color.Purple;
             this.btnPrtAllReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtAllReceipt.ForeColor = System.Drawing.Color.White;
@@ -590,6 +651,7 @@
             // 
             // btn1
             // 
+            this.btn1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn1.FlatAppearance.BorderSize = 0;
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -604,6 +666,7 @@
             // 
             // btnPrtAll
             // 
+            this.btnPrtAll.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnPrtAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtAll.ForeColor = System.Drawing.Color.White;
@@ -618,6 +681,7 @@
             // 
             // btn6
             // 
+            this.btn6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn6.FlatAppearance.BorderSize = 0;
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -632,6 +696,7 @@
             // 
             // btn5
             // 
+            this.btn5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn5.FlatAppearance.BorderSize = 0;
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -646,6 +711,7 @@
             // 
             // btn4
             // 
+            this.btn4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn4.FlatAppearance.BorderSize = 0;
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -660,6 +726,7 @@
             // 
             // btn9
             // 
+            this.btn9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn9.FlatAppearance.BorderSize = 0;
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -674,6 +741,7 @@
             // 
             // btn8
             // 
+            this.btn8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn8.FlatAppearance.BorderSize = 0;
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -688,6 +756,7 @@
             // 
             // btn7
             // 
+            this.btn7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn7.FlatAppearance.BorderSize = 0;
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -702,15 +771,17 @@
             // 
             // txtToPay
             // 
+            this.txtToPay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtToPay.Enabled = false;
             this.txtToPay.Location = new System.Drawing.Point(121, 422);
             this.txtToPay.Name = "txtToPay";
-            this.txtToPay.Size = new System.Drawing.Size(100, 29);
+            this.txtToPay.Size = new System.Drawing.Size(100, 34);
             this.txtToPay.TabIndex = 47;
             this.txtToPay.Text = "0.00";
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.RoyalBlue;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -718,40 +789,44 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(28, 426);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 25);
+            this.label11.Size = new System.Drawing.Size(97, 31);
             this.label11.TabIndex = 46;
             this.label11.Text = "To Pay:";
             // 
             // txtChange
             // 
+            this.txtChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtChange.Enabled = false;
             this.txtChange.Location = new System.Drawing.Point(121, 462);
             this.txtChange.Name = "txtChange";
-            this.txtChange.Size = new System.Drawing.Size(100, 29);
+            this.txtChange.Size = new System.Drawing.Size(100, 34);
             this.txtChange.TabIndex = 21;
             // 
             // label22
             // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label22.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label22.Location = new System.Drawing.Point(10, 465);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(97, 25);
+            this.label22.Size = new System.Drawing.Size(123, 31);
             this.label22.TabIndex = 20;
             this.label22.Text = "CHANGE:";
             // 
             // txtTotal
             // 
+            this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(121, 342);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(100, 29);
+            this.txtTotal.Size = new System.Drawing.Size(100, 34);
             this.txtTotal.TabIndex = 19;
             this.txtTotal.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtTotal_MouseDown);
             // 
             // label21
             // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.RoyalBlue;
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -759,16 +834,17 @@
             this.label21.ForeColor = System.Drawing.Color.White;
             this.label21.Location = new System.Drawing.Point(44, 346);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(63, 25);
+            this.label21.Size = new System.Drawing.Size(77, 31);
             this.label21.TabIndex = 18;
             this.label21.Text = "Total:";
             // 
             // txtTendered
             // 
+            this.txtTendered.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTendered.Enabled = false;
             this.txtTendered.Location = new System.Drawing.Point(121, 382);
             this.txtTendered.Name = "txtTendered";
-            this.txtTendered.Size = new System.Drawing.Size(100, 29);
+            this.txtTendered.Size = new System.Drawing.Size(100, 34);
             this.txtTendered.TabIndex = 17;
             this.txtTendered.TextChanged += new System.EventHandler(this.txtTendered_TextChanged);
             this.txtTendered.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTendered_KeyPress);
@@ -776,6 +852,7 @@
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.RoyalBlue;
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -783,15 +860,16 @@
             this.label20.ForeColor = System.Drawing.Color.White;
             this.label20.Location = new System.Drawing.Point(3, 385);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(104, 25);
+            this.label20.Size = new System.Drawing.Size(130, 31);
             this.label20.TabIndex = 16;
             this.label20.Text = "Tendered:";
             // 
             // txtSurcharge
             // 
+            this.txtSurcharge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSurcharge.Location = new System.Drawing.Point(121, 302);
             this.txtSurcharge.Name = "txtSurcharge";
-            this.txtSurcharge.Size = new System.Drawing.Size(100, 29);
+            this.txtSurcharge.Size = new System.Drawing.Size(100, 34);
             this.txtSurcharge.TabIndex = 15;
             this.txtSurcharge.TextChanged += new System.EventHandler(this.txtSurcharge_TextChanged);
             this.txtSurcharge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSurcharge_KeyPress);
@@ -799,6 +877,7 @@
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.RoyalBlue;
             this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -806,21 +885,23 @@
             this.label19.ForeColor = System.Drawing.Color.White;
             this.label19.Location = new System.Drawing.Point(-3, 305);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(110, 25);
+            this.label19.Size = new System.Drawing.Size(136, 31);
             this.label19.TabIndex = 14;
             this.label19.Text = "Surcharge:";
             // 
             // txtDiscount
             // 
+            this.txtDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDiscount.Location = new System.Drawing.Point(121, 262);
             this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(100, 29);
+            this.txtDiscount.Size = new System.Drawing.Size(100, 34);
             this.txtDiscount.TabIndex = 13;
             this.txtDiscount.TextChanged += new System.EventHandler(this.txtDiscount_TextChanged);
             this.txtDiscount.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtDiscount_MouseDown);
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.RoyalBlue;
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -828,21 +909,23 @@
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(12, 265);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 25);
+            this.label18.Size = new System.Drawing.Size(121, 31);
             this.label18.TabIndex = 12;
             this.label18.Text = "Discount:";
             // 
             // txtDelivery
             // 
+            this.txtDelivery.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDelivery.Enabled = false;
             this.txtDelivery.Location = new System.Drawing.Point(121, 222);
             this.txtDelivery.Name = "txtDelivery";
-            this.txtDelivery.Size = new System.Drawing.Size(100, 29);
+            this.txtDelivery.Size = new System.Drawing.Size(100, 34);
             this.txtDelivery.TabIndex = 11;
             this.txtDelivery.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtDelivery_MouseDown);
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.RoyalBlue;
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -850,22 +933,24 @@
             this.label17.ForeColor = System.Drawing.Color.White;
             this.label17.Location = new System.Drawing.Point(20, 225);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(90, 25);
+            this.label17.Size = new System.Drawing.Size(113, 31);
             this.label17.TabIndex = 10;
             this.label17.Text = "Delivery:";
             // 
             // label24
             // 
+            this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label24.Location = new System.Drawing.Point(1036, 22);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(107, 27);
+            this.label24.Size = new System.Drawing.Size(136, 32);
             this.label24.TabIndex = 13;
             this.label24.Text = "Driver List";
             // 
             // btnDriver1
             // 
+            this.btnDriver1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDriver1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDriver1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDriver1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -879,6 +964,7 @@
             // 
             // btnDriver2
             // 
+            this.btnDriver2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDriver2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDriver2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDriver2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -892,6 +978,7 @@
             // 
             // btnDriver3
             // 
+            this.btnDriver3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDriver3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDriver3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDriver3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -905,6 +992,7 @@
             // 
             // btnDriver4
             // 
+            this.btnDriver4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDriver4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDriver4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDriver4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -918,6 +1006,7 @@
             // 
             // btnDriver5
             // 
+            this.btnDriver5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDriver5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDriver5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDriver5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -931,6 +1020,7 @@
             // 
             // btnDriver6
             // 
+            this.btnDriver6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDriver6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnDriver6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDriver6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -944,28 +1034,31 @@
             // 
             // cmbNote
             // 
+            this.cmbNote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbNote.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbNote.FormattingEnabled = true;
             this.cmbNote.Location = new System.Drawing.Point(7, 540);
             this.cmbNote.Margin = new System.Windows.Forms.Padding(4);
             this.cmbNote.Name = "cmbNote";
-            this.cmbNote.Size = new System.Drawing.Size(314, 25);
+            this.cmbNote.Size = new System.Drawing.Size(314, 28);
             this.cmbNote.TabIndex = 49;
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label10.ForeColor = System.Drawing.Color.Red;
             this.label10.Location = new System.Drawing.Point(7, 508);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(222, 22);
+            this.label10.Size = new System.Drawing.Size(272, 27);
             this.label10.TabIndex = 48;
             this.label10.Text = "Delivery / Collection Note";
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.txtIntNotes);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.txtNotes);
@@ -1001,249 +1094,273 @@
             // 
             // txtIntNotes
             // 
+            this.txtIntNotes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIntNotes.Enabled = false;
             this.txtIntNotes.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtIntNotes.Location = new System.Drawing.Point(130, 363);
             this.txtIntNotes.Margin = new System.Windows.Forms.Padding(4);
             this.txtIntNotes.Name = "txtIntNotes";
-            this.txtIntNotes.Size = new System.Drawing.Size(172, 23);
+            this.txtIntNotes.Size = new System.Drawing.Size(172, 27);
             this.txtIntNotes.TabIndex = 20;
             // 
             // label14
             // 
+            this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label14.Location = new System.Drawing.Point(10, 369);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 17);
+            this.label14.Size = new System.Drawing.Size(80, 20);
             this.label14.TabIndex = 19;
             this.label14.Text = "Int. Notes";
             // 
             // txtNotes
             // 
+            this.txtNotes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNotes.Enabled = false;
             this.txtNotes.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtNotes.Location = new System.Drawing.Point(131, 400);
             this.txtNotes.Margin = new System.Windows.Forms.Padding(4);
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(172, 23);
+            this.txtNotes.Size = new System.Drawing.Size(172, 27);
             this.txtNotes.TabIndex = 18;
             // 
             // label23
             // 
+            this.label23.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label23.Location = new System.Drawing.Point(10, 403);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(83, 17);
+            this.label23.Size = new System.Drawing.Size(102, 20);
             this.label23.TabIndex = 17;
             this.label23.Text = "Notes on bill";
             // 
             // chkBlackListed
             // 
+            this.chkBlackListed.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chkBlackListed.AutoSize = true;
             this.chkBlackListed.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.chkBlackListed.Location = new System.Drawing.Point(13, 440);
             this.chkBlackListed.Margin = new System.Windows.Forms.Padding(4);
             this.chkBlackListed.Name = "chkBlackListed";
-            this.chkBlackListed.Size = new System.Drawing.Size(96, 21);
+            this.chkBlackListed.Size = new System.Drawing.Size(116, 24);
             this.chkBlackListed.TabIndex = 16;
             this.chkBlackListed.Text = "Black Listed";
             this.chkBlackListed.UseVisualStyleBackColor = true;
             // 
             // txtReadyTime
             // 
+            this.txtReadyTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtReadyTime.Enabled = false;
             this.txtReadyTime.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtReadyTime.Location = new System.Drawing.Point(131, 326);
             this.txtReadyTime.Margin = new System.Windows.Forms.Padding(4);
             this.txtReadyTime.Name = "txtReadyTime";
-            this.txtReadyTime.Size = new System.Drawing.Size(172, 23);
+            this.txtReadyTime.Size = new System.Drawing.Size(172, 27);
             this.txtReadyTime.TabIndex = 15;
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label9.Location = new System.Drawing.Point(10, 333);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(76, 17);
+            this.label9.Size = new System.Drawing.Size(94, 20);
             this.label9.TabIndex = 14;
             this.label9.Text = "Ready Time";
             // 
             // txtPCZone
             // 
+            this.txtPCZone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPCZone.Enabled = false;
             this.txtPCZone.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtPCZone.Location = new System.Drawing.Point(131, 250);
             this.txtPCZone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPCZone.Name = "txtPCZone";
-            this.txtPCZone.Size = new System.Drawing.Size(172, 23);
+            this.txtPCZone.Size = new System.Drawing.Size(172, 27);
             this.txtPCZone.TabIndex = 13;
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.Location = new System.Drawing.Point(10, 258);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 17);
+            this.label8.Size = new System.Drawing.Size(69, 20);
             this.label8.TabIndex = 12;
             this.label8.Text = "PC Zone";
             // 
             // txtDistance
             // 
+            this.txtDistance.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDistance.Enabled = false;
             this.txtDistance.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtDistance.Location = new System.Drawing.Point(131, 213);
             this.txtDistance.Margin = new System.Windows.Forms.Padding(4);
             this.txtDistance.Name = "txtDistance";
-            this.txtDistance.Size = new System.Drawing.Size(172, 23);
+            this.txtDistance.Size = new System.Drawing.Size(172, 27);
             this.txtDistance.TabIndex = 11;
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.Location = new System.Drawing.Point(10, 220);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(57, 17);
+            this.label7.Size = new System.Drawing.Size(71, 20);
             this.label7.TabIndex = 10;
             this.label7.Text = "Distance";
             // 
             // txtDelCharge
             // 
+            this.txtDelCharge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDelCharge.Enabled = false;
             this.txtDelCharge.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtDelCharge.Location = new System.Drawing.Point(131, 288);
             this.txtDelCharge.Margin = new System.Windows.Forms.Padding(4);
             this.txtDelCharge.Name = "txtDelCharge";
-            this.txtDelCharge.Size = new System.Drawing.Size(172, 23);
+            this.txtDelCharge.Size = new System.Drawing.Size(172, 27);
             this.txtDelCharge.TabIndex = 11;
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label6.Location = new System.Drawing.Point(10, 296);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 17);
+            this.label6.Size = new System.Drawing.Size(89, 20);
             this.label6.TabIndex = 10;
             this.label6.Text = "Del Charge";
             // 
             // txtPostcode
             // 
+            this.txtPostcode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPostcode.Enabled = false;
             this.txtPostcode.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtPostcode.Location = new System.Drawing.Point(131, 176);
             this.txtPostcode.Margin = new System.Windows.Forms.Padding(4);
             this.txtPostcode.Name = "txtPostcode";
-            this.txtPostcode.Size = new System.Drawing.Size(172, 23);
+            this.txtPostcode.Size = new System.Drawing.Size(172, 27);
             this.txtPostcode.TabIndex = 9;
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.Location = new System.Drawing.Point(10, 183);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 17);
+            this.label5.Size = new System.Drawing.Size(101, 20);
             this.label5.TabIndex = 8;
             this.label5.Text = "Postcode #1";
             // 
             // txtAddress
             // 
+            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAddress.Enabled = false;
             this.txtAddress.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtAddress.Location = new System.Drawing.Point(131, 138);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(172, 23);
+            this.txtAddress.Size = new System.Drawing.Size(172, 27);
             this.txtAddress.TabIndex = 7;
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label4.Location = new System.Drawing.Point(10, 146);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 17);
+            this.label4.Size = new System.Drawing.Size(92, 20);
             this.label4.TabIndex = 6;
             this.label4.Text = "Address #1";
             // 
             // txtHouseNo
             // 
+            this.txtHouseNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtHouseNo.Enabled = false;
             this.txtHouseNo.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtHouseNo.Location = new System.Drawing.Point(131, 100);
             this.txtHouseNo.Margin = new System.Windows.Forms.Padding(4);
             this.txtHouseNo.Name = "txtHouseNo";
-            this.txtHouseNo.Size = new System.Drawing.Size(172, 23);
+            this.txtHouseNo.Size = new System.Drawing.Size(172, 27);
             this.txtHouseNo.TabIndex = 5;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(10, 108);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
+            this.label3.Size = new System.Drawing.Size(86, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "House No.";
             // 
             // txtName
             // 
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtName.Location = new System.Drawing.Point(131, 63);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(172, 23);
+            this.txtName.Size = new System.Drawing.Size(172, 27);
             this.txtName.TabIndex = 3;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(10, 70);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 17);
+            this.label2.Size = new System.Drawing.Size(52, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Name";
             // 
             // txtPhone
             // 
+            this.txtPhone.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPhone.Enabled = false;
             this.txtPhone.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtPhone.Location = new System.Drawing.Point(131, 26);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(172, 23);
+            this.txtPhone.Size = new System.Drawing.Size(172, 27);
             this.txtPhone.TabIndex = 1;
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(10, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 17);
+            this.label1.Size = new System.Drawing.Size(78, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Phone #1";
             // 
             // btnNotPaid
             // 
+            this.btnNotPaid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNotPaid.BackColor = System.Drawing.Color.Red;
             this.btnNotPaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotPaid.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1259,6 +1376,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExit.BackColor = System.Drawing.Color.Olive;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1274,6 +1392,7 @@
             // 
             // btnShop
             // 
+            this.btnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShop.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1288,6 +1407,7 @@
             // 
             // btnCollection
             // 
+            this.btnCollection.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCollection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCollection.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -1300,35 +1420,9 @@
             this.btnCollection.Text = "Collection";
             this.btnCollection.UseVisualStyleBackColor = false;
             // 
-            // txtNotPaid
-            // 
-            this.txtNotPaid.Enabled = false;
-            this.txtNotPaid.Location = new System.Drawing.Point(435, 57);
-            this.txtNotPaid.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNotPaid.Name = "txtNotPaid";
-            this.txtNotPaid.Size = new System.Drawing.Size(68, 29);
-            this.txtNotPaid.TabIndex = 69;
-            this.txtNotPaid.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtNotPaid.Visible = false;
-            // 
-            // lblNotPaid
-            // 
-            this.lblNotPaid.AutoSize = true;
-            this.lblNotPaid.BackColor = System.Drawing.Color.RoyalBlue;
-            this.lblNotPaid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblNotPaid.Font = new System.Drawing.Font("微软雅黑", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblNotPaid.ForeColor = System.Drawing.Color.White;
-            this.lblNotPaid.Location = new System.Drawing.Point(435, 25);
-            this.lblNotPaid.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNotPaid.Name = "lblNotPaid";
-            this.lblNotPaid.Size = new System.Drawing.Size(100, 28);
-            this.lblNotPaid.TabIndex = 70;
-            this.lblNotPaid.Text = "Not Paid";
-            this.lblNotPaid.Visible = false;
-            // 
             // FrmTAPayDelivery
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1171, 585);
             this.Controls.Add(this.btnNotPaid);
@@ -1352,6 +1446,7 @@
             this.Name = "FrmTAPayDelivery";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmTAPay";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmTAPay_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

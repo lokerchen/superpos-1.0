@@ -578,7 +578,7 @@ namespace SuperPOS.UI.TakeAway
             DisValue = dDiscount = GetDiscount(AcctPay);
 
             //获得VAT
-            dVAT = GetVAT();
+            //dVAT = GetVAT();
 
             //获得总钱数
             decimal total = AcctPay + dDelivery - Pay1 - Pay2 - Pay3 - Pay4 - dDiscount + dSurChargeTotal + dVAT;

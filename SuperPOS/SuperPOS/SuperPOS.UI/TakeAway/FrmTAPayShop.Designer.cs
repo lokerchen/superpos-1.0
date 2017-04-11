@@ -92,12 +92,13 @@
             // 
             // btnNotPaid
             // 
+            this.btnNotPaid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNotPaid.BackColor = System.Drawing.Color.Red;
             this.btnNotPaid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNotPaid.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnNotPaid.ForeColor = System.Drawing.Color.White;
             this.btnNotPaid.Location = new System.Drawing.Point(36, 535);
-            this.btnNotPaid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNotPaid.Margin = new System.Windows.Forms.Padding(4);
             this.btnNotPaid.Name = "btnNotPaid";
             this.btnNotPaid.Size = new System.Drawing.Size(171, 50);
             this.btnNotPaid.TabIndex = 78;
@@ -107,12 +108,13 @@
             // 
             // btnExit
             // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExit.BackColor = System.Drawing.Color.Olive;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
             this.btnExit.Location = new System.Drawing.Point(564, 535);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(133, 50);
             this.btnExit.TabIndex = 75;
@@ -122,12 +124,13 @@
             // 
             // btnShop
             // 
+            this.btnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnShop.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnShop.ForeColor = System.Drawing.Color.White;
             this.btnShop.Location = new System.Drawing.Point(396, 535);
-            this.btnShop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShop.Margin = new System.Windows.Forms.Padding(4);
             this.btnShop.Name = "btnShop";
             this.btnShop.Size = new System.Drawing.Size(133, 50);
             this.btnShop.TabIndex = 74;
@@ -136,12 +139,13 @@
             // 
             // btnCollection
             // 
+            this.btnCollection.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCollection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnCollection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCollection.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCollection.ForeColor = System.Drawing.Color.White;
             this.btnCollection.Location = new System.Drawing.Point(224, 535);
-            this.btnCollection.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCollection.Margin = new System.Windows.Forms.Padding(4);
             this.btnCollection.Name = "btnCollection";
             this.btnCollection.Size = new System.Drawing.Size(133, 50);
             this.btnCollection.TabIndex = 73;
@@ -150,9 +154,10 @@
             // 
             // txtNotPaid
             // 
+            this.txtNotPaid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNotPaid.Enabled = false;
             this.txtNotPaid.Location = new System.Drawing.Point(429, 62);
-            this.txtNotPaid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNotPaid.Margin = new System.Windows.Forms.Padding(4);
             this.txtNotPaid.Name = "txtNotPaid";
             this.txtNotPaid.Size = new System.Drawing.Size(68, 34);
             this.txtNotPaid.TabIndex = 76;
@@ -161,6 +166,7 @@
             // 
             // lblNotPaid
             // 
+            this.lblNotPaid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNotPaid.AutoSize = true;
             this.lblNotPaid.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblNotPaid.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -176,6 +182,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.txtVAT);
             this.groupBox2.Controls.Add(this.label12);
             this.groupBox2.Controls.Add(this.lblSurcharge4);
@@ -242,15 +249,18 @@
             // 
             // txtVAT
             // 
+            this.txtVAT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtVAT.Enabled = false;
             this.txtVAT.Location = new System.Drawing.Point(160, 199);
             this.txtVAT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtVAT.Name = "txtVAT";
             this.txtVAT.Size = new System.Drawing.Size(100, 34);
             this.txtVAT.TabIndex = 103;
+            this.txtVAT.Visible = false;
             // 
             // label12
             // 
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.RoyalBlue;
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -261,9 +271,11 @@
             this.label12.Size = new System.Drawing.Size(67, 31);
             this.label12.TabIndex = 102;
             this.label12.Text = "VAT:";
+            this.label12.Visible = false;
             // 
             // lblSurcharge4
             // 
+            this.lblSurcharge4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSurcharge4.AutoSize = true;
             this.lblSurcharge4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSurcharge4.Location = new System.Drawing.Point(136, 149);
@@ -276,6 +288,7 @@
             // 
             // lblSCharge4
             // 
+            this.lblSCharge4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSCharge4.AutoSize = true;
             this.lblSCharge4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSCharge4.Location = new System.Drawing.Point(13, 149);
@@ -288,6 +301,7 @@
             // 
             // lblPayType4
             // 
+            this.lblPayType4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPayType4.AutoSize = true;
             this.lblPayType4.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblPayType4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -304,8 +318,9 @@
             // 
             // txtPay4
             // 
+            this.txtPay4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPay4.Location = new System.Drawing.Point(197, 142);
-            this.txtPay4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPay4.Margin = new System.Windows.Forms.Padding(4);
             this.txtPay4.Name = "txtPay4";
             this.txtPay4.Size = new System.Drawing.Size(132, 34);
             this.txtPay4.TabIndex = 98;
@@ -316,6 +331,7 @@
             // 
             // lblSurcharge1
             // 
+            this.lblSurcharge1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSurcharge1.AutoSize = true;
             this.lblSurcharge1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSurcharge1.Location = new System.Drawing.Point(137, 30);
@@ -328,6 +344,7 @@
             // 
             // lblSCharge1
             // 
+            this.lblSCharge1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSCharge1.AutoSize = true;
             this.lblSCharge1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSCharge1.Location = new System.Drawing.Point(15, 30);
@@ -340,6 +357,7 @@
             // 
             // lblSurcharge3
             // 
+            this.lblSurcharge3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSurcharge3.AutoSize = true;
             this.lblSurcharge3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSurcharge3.Location = new System.Drawing.Point(136, 109);
@@ -352,6 +370,7 @@
             // 
             // lblSCharge3
             // 
+            this.lblSCharge3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSCharge3.AutoSize = true;
             this.lblSCharge3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSCharge3.Location = new System.Drawing.Point(13, 109);
@@ -364,6 +383,7 @@
             // 
             // lblPayType3
             // 
+            this.lblPayType3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPayType3.AutoSize = true;
             this.lblPayType3.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblPayType3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -380,8 +400,9 @@
             // 
             // txtPay3
             // 
+            this.txtPay3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPay3.Location = new System.Drawing.Point(197, 101);
-            this.txtPay3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPay3.Margin = new System.Windows.Forms.Padding(4);
             this.txtPay3.Name = "txtPay3";
             this.txtPay3.Size = new System.Drawing.Size(132, 34);
             this.txtPay3.TabIndex = 92;
@@ -392,6 +413,7 @@
             // 
             // lblSurcharge2
             // 
+            this.lblSurcharge2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSurcharge2.AutoSize = true;
             this.lblSurcharge2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSurcharge2.Location = new System.Drawing.Point(137, 68);
@@ -404,6 +426,7 @@
             // 
             // lblSCharge2
             // 
+            this.lblSCharge2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSCharge2.AutoSize = true;
             this.lblSCharge2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSCharge2.Location = new System.Drawing.Point(15, 68);
@@ -416,6 +439,7 @@
             // 
             // lblPayType2
             // 
+            this.lblPayType2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPayType2.AutoSize = true;
             this.lblPayType2.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblPayType2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -432,8 +456,9 @@
             // 
             // txtPay2
             // 
+            this.txtPay2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPay2.Location = new System.Drawing.Point(197, 61);
-            this.txtPay2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPay2.Margin = new System.Windows.Forms.Padding(4);
             this.txtPay2.Name = "txtPay2";
             this.txtPay2.Size = new System.Drawing.Size(132, 34);
             this.txtPay2.TabIndex = 88;
@@ -444,6 +469,7 @@
             // 
             // lblPayType1
             // 
+            this.lblPayType1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPayType1.AutoSize = true;
             this.lblPayType1.BackColor = System.Drawing.Color.RoyalBlue;
             this.lblPayType1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -460,8 +486,9 @@
             // 
             // txtPay1
             // 
+            this.txtPay1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPay1.Location = new System.Drawing.Point(197, 21);
-            this.txtPay1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPay1.Margin = new System.Windows.Forms.Padding(4);
             this.txtPay1.Name = "txtPay1";
             this.txtPay1.Size = new System.Drawing.Size(132, 34);
             this.txtPay1.TabIndex = 86;
@@ -472,12 +499,13 @@
             // 
             // btnPrtKitOnly
             // 
+            this.btnPrtKitOnly.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtKitOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnPrtKitOnly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtKitOnly.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPrtKitOnly.ForeColor = System.Drawing.Color.White;
             this.btnPrtKitOnly.Location = new System.Drawing.Point(559, 258);
-            this.btnPrtKitOnly.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrtKitOnly.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrtKitOnly.Name = "btnPrtKitOnly";
             this.btnPrtKitOnly.Size = new System.Drawing.Size(133, 70);
             this.btnPrtKitOnly.TabIndex = 85;
@@ -487,12 +515,13 @@
             // 
             // btnC
             // 
+            this.btnC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnC.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnC.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnC.ForeColor = System.Drawing.Color.White;
             this.btnC.Location = new System.Drawing.Point(411, 428);
-            this.btnC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnC.Margin = new System.Windows.Forms.Padding(4);
             this.btnC.Name = "btnC";
             this.btnC.Size = new System.Drawing.Size(135, 50);
             this.btnC.TabIndex = 84;
@@ -502,12 +531,13 @@
             // 
             // btnP
             // 
+            this.btnP.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnP.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnP.ForeColor = System.Drawing.Color.White;
             this.btnP.Location = new System.Drawing.Point(277, 428);
-            this.btnP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnP.Margin = new System.Windows.Forms.Padding(4);
             this.btnP.Name = "btnP";
             this.btnP.Size = new System.Drawing.Size(124, 50);
             this.btnP.TabIndex = 83;
@@ -517,12 +547,13 @@
             // 
             // btnD
             // 
+            this.btnD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnD.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnD.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnD.ForeColor = System.Drawing.Color.White;
             this.btnD.Location = new System.Drawing.Point(464, 371);
-            this.btnD.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnD.Margin = new System.Windows.Forms.Padding(4);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(80, 50);
             this.btnD.TabIndex = 82;
@@ -532,12 +563,13 @@
             // 
             // btnPoint
             // 
+            this.btnPoint.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPoint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnPoint.FlatAppearance.BorderSize = 0;
             this.btnPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPoint.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPoint.Location = new System.Drawing.Point(371, 371);
-            this.btnPoint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPoint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPoint.Name = "btnPoint";
             this.btnPoint.Size = new System.Drawing.Size(80, 50);
             this.btnPoint.TabIndex = 81;
@@ -546,11 +578,12 @@
             // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(559, 418);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(133, 70);
             this.btnSave.TabIndex = 70;
@@ -560,12 +593,13 @@
             // 
             // btn0
             // 
+            this.btn0.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn0.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn0.FlatAppearance.BorderSize = 0;
             this.btn0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn0.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn0.Location = new System.Drawing.Point(277, 371);
-            this.btn0.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn0.Margin = new System.Windows.Forms.Padding(4);
             this.btn0.Name = "btn0";
             this.btn0.Size = new System.Drawing.Size(80, 50);
             this.btn0.TabIndex = 80;
@@ -574,11 +608,12 @@
             // 
             // btnOrderSlip
             // 
+            this.btnOrderSlip.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOrderSlip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnOrderSlip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrderSlip.ForeColor = System.Drawing.Color.White;
             this.btnOrderSlip.Location = new System.Drawing.Point(559, 338);
-            this.btnOrderSlip.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnOrderSlip.Margin = new System.Windows.Forms.Padding(4);
             this.btnOrderSlip.Name = "btnOrderSlip";
             this.btnOrderSlip.Size = new System.Drawing.Size(133, 70);
             this.btnOrderSlip.TabIndex = 69;
@@ -587,12 +622,13 @@
             // 
             // btn3
             // 
+            this.btn3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn3.FlatAppearance.BorderSize = 0;
             this.btn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn3.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn3.Location = new System.Drawing.Point(464, 314);
-            this.btn3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn3.Margin = new System.Windows.Forms.Padding(4);
             this.btn3.Name = "btn3";
             this.btn3.Size = new System.Drawing.Size(80, 50);
             this.btn3.TabIndex = 79;
@@ -601,11 +637,12 @@
             // 
             // btnPrtBillOnly
             // 
+            this.btnPrtBillOnly.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtBillOnly.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnPrtBillOnly.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtBillOnly.ForeColor = System.Drawing.Color.White;
             this.btnPrtBillOnly.Location = new System.Drawing.Point(559, 178);
-            this.btnPrtBillOnly.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrtBillOnly.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrtBillOnly.Name = "btnPrtBillOnly";
             this.btnPrtBillOnly.Size = new System.Drawing.Size(133, 70);
             this.btnPrtBillOnly.TabIndex = 68;
@@ -615,12 +652,13 @@
             // 
             // btn2
             // 
+            this.btn2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn2.FlatAppearance.BorderSize = 0;
             this.btn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn2.Location = new System.Drawing.Point(371, 314);
-            this.btn2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn2.Margin = new System.Windows.Forms.Padding(4);
             this.btn2.Name = "btn2";
             this.btn2.Size = new System.Drawing.Size(80, 50);
             this.btn2.TabIndex = 78;
@@ -629,11 +667,12 @@
             // 
             // btnPrtAllReceipt
             // 
+            this.btnPrtAllReceipt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtAllReceipt.BackColor = System.Drawing.Color.Purple;
             this.btnPrtAllReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtAllReceipt.ForeColor = System.Drawing.Color.White;
             this.btnPrtAllReceipt.Location = new System.Drawing.Point(559, 98);
-            this.btnPrtAllReceipt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrtAllReceipt.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrtAllReceipt.Name = "btnPrtAllReceipt";
             this.btnPrtAllReceipt.Size = new System.Drawing.Size(133, 70);
             this.btnPrtAllReceipt.TabIndex = 67;
@@ -643,12 +682,13 @@
             // 
             // btn1
             // 
+            this.btn1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn1.FlatAppearance.BorderSize = 0;
             this.btn1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn1.Location = new System.Drawing.Point(277, 314);
-            this.btn1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn1.Margin = new System.Windows.Forms.Padding(4);
             this.btn1.Name = "btn1";
             this.btn1.Size = new System.Drawing.Size(80, 50);
             this.btn1.TabIndex = 77;
@@ -657,11 +697,12 @@
             // 
             // btnPrtAll
             // 
+            this.btnPrtAll.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnPrtAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtAll.ForeColor = System.Drawing.Color.White;
             this.btnPrtAll.Location = new System.Drawing.Point(559, 18);
-            this.btnPrtAll.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrtAll.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrtAll.Name = "btnPrtAll";
             this.btnPrtAll.Size = new System.Drawing.Size(133, 70);
             this.btnPrtAll.TabIndex = 66;
@@ -671,12 +712,13 @@
             // 
             // btn6
             // 
+            this.btn6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn6.FlatAppearance.BorderSize = 0;
             this.btn6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn6.Location = new System.Drawing.Point(464, 258);
-            this.btn6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn6.Margin = new System.Windows.Forms.Padding(4);
             this.btn6.Name = "btn6";
             this.btn6.Size = new System.Drawing.Size(80, 50);
             this.btn6.TabIndex = 76;
@@ -685,12 +727,13 @@
             // 
             // btn5
             // 
+            this.btn5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn5.FlatAppearance.BorderSize = 0;
             this.btn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn5.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn5.Location = new System.Drawing.Point(371, 258);
-            this.btn5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn5.Margin = new System.Windows.Forms.Padding(4);
             this.btn5.Name = "btn5";
             this.btn5.Size = new System.Drawing.Size(80, 50);
             this.btn5.TabIndex = 75;
@@ -699,12 +742,13 @@
             // 
             // btn4
             // 
+            this.btn4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn4.FlatAppearance.BorderSize = 0;
             this.btn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn4.Location = new System.Drawing.Point(277, 258);
-            this.btn4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn4.Margin = new System.Windows.Forms.Padding(4);
             this.btn4.Name = "btn4";
             this.btn4.Size = new System.Drawing.Size(80, 50);
             this.btn4.TabIndex = 74;
@@ -713,12 +757,13 @@
             // 
             // btn9
             // 
+            this.btn9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn9.FlatAppearance.BorderSize = 0;
             this.btn9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn9.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn9.Location = new System.Drawing.Point(464, 202);
-            this.btn9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn9.Margin = new System.Windows.Forms.Padding(4);
             this.btn9.Name = "btn9";
             this.btn9.Size = new System.Drawing.Size(80, 50);
             this.btn9.TabIndex = 73;
@@ -727,12 +772,13 @@
             // 
             // btn8
             // 
+            this.btn8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn8.FlatAppearance.BorderSize = 0;
             this.btn8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn8.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn8.Location = new System.Drawing.Point(371, 202);
-            this.btn8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn8.Margin = new System.Windows.Forms.Padding(4);
             this.btn8.Name = "btn8";
             this.btn8.Size = new System.Drawing.Size(80, 50);
             this.btn8.TabIndex = 72;
@@ -741,12 +787,13 @@
             // 
             // btn7
             // 
+            this.btn7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn7.FlatAppearance.BorderSize = 0;
             this.btn7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn7.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btn7.Location = new System.Drawing.Point(277, 202);
-            this.btn7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn7.Margin = new System.Windows.Forms.Padding(4);
             this.btn7.Name = "btn7";
             this.btn7.Size = new System.Drawing.Size(80, 50);
             this.btn7.TabIndex = 71;
@@ -755,6 +802,7 @@
             // 
             // txtToPay
             // 
+            this.txtToPay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtToPay.Enabled = false;
             this.txtToPay.Location = new System.Drawing.Point(160, 440);
             this.txtToPay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -765,6 +813,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.RoyalBlue;
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -778,6 +827,7 @@
             // 
             // txtChange
             // 
+            this.txtChange.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtChange.Enabled = false;
             this.txtChange.Location = new System.Drawing.Point(160, 480);
             this.txtChange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -787,6 +837,7 @@
             // 
             // label22
             // 
+            this.label22.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label22.Font = new System.Drawing.Font("微软雅黑", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -798,6 +849,7 @@
             // 
             // txtTotal
             // 
+            this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTotal.Enabled = false;
             this.txtTotal.Location = new System.Drawing.Point(160, 360);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -808,6 +860,7 @@
             // 
             // label21
             // 
+            this.label21.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label21.AutoSize = true;
             this.label21.BackColor = System.Drawing.Color.RoyalBlue;
             this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -821,6 +874,7 @@
             // 
             // txtTendered
             // 
+            this.txtTendered.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTendered.Enabled = false;
             this.txtTendered.Location = new System.Drawing.Point(160, 400);
             this.txtTendered.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -833,6 +887,7 @@
             // 
             // label20
             // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.RoyalBlue;
             this.label20.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -846,6 +901,7 @@
             // 
             // txtSurcharge
             // 
+            this.txtSurcharge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSurcharge.Location = new System.Drawing.Point(160, 320);
             this.txtSurcharge.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSurcharge.Name = "txtSurcharge";
@@ -857,6 +913,7 @@
             // 
             // label19
             // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.RoyalBlue;
             this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -870,6 +927,7 @@
             // 
             // txtDiscount
             // 
+            this.txtDiscount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDiscount.Location = new System.Drawing.Point(160, 280);
             this.txtDiscount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiscount.Name = "txtDiscount";
@@ -880,6 +938,7 @@
             // 
             // label18
             // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label18.AutoSize = true;
             this.label18.BackColor = System.Drawing.Color.RoyalBlue;
             this.label18.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -893,6 +952,7 @@
             // 
             // txtDelivery
             // 
+            this.txtDelivery.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDelivery.Enabled = false;
             this.txtDelivery.Location = new System.Drawing.Point(160, 240);
             this.txtDelivery.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -903,6 +963,7 @@
             // 
             // label17
             // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label17.AutoSize = true;
             this.label17.BackColor = System.Drawing.Color.RoyalBlue;
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -925,10 +986,11 @@
             this.Controls.Add(this.btnCollection);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmTAPayShop";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FrmTAPayShop";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmTAPayShop_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
