@@ -95,5 +95,10 @@ namespace SuperPOS.UI.TakeAway
 
             txtDCTime.Text = (DateTime.Parse(txtDCTime.Text).AddMinutes(Int32.Parse(btn.Text))).ToLongTimeString();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

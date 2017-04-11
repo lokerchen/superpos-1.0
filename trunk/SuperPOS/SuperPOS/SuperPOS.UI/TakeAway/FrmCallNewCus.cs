@@ -31,5 +31,10 @@ namespace SuperPOS.UI.TakeAway
             btnDelivery.BackColor = Color.Gray;
             dType = "C";
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
     }
 }

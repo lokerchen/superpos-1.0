@@ -74,7 +74,7 @@
             // 
             this.txtDate.Location = new System.Drawing.Point(164, 37);
             this.txtDate.Name = "txtDate";
-            this.txtDate.Size = new System.Drawing.Size(116, 29);
+            this.txtDate.Size = new System.Drawing.Size(116, 34);
             this.txtDate.TabIndex = 1;
             this.txtDate.Text = "2015-12-04";
             this.txtDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -83,7 +83,7 @@
             // 
             this.txtTime.Location = new System.Drawing.Point(37, 37);
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(116, 29);
+            this.txtTime.Size = new System.Drawing.Size(116, 34);
             this.txtTime.TabIndex = 0;
             this.txtTime.Text = "18:35";
             this.txtTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -100,6 +100,7 @@
             this.btnExit.TabIndex = 18;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // groupBox3
             // 
@@ -138,7 +139,7 @@
             this.label12.ForeColor = System.Drawing.Color.Blue;
             this.label12.Location = new System.Drawing.Point(15, 99);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(194, 22);
+            this.label12.Size = new System.Drawing.Size(242, 27);
             this.label12.TabIndex = 20;
             this.label12.Text = "This is a new customer";
             // 
@@ -334,7 +335,7 @@
             this.txtOutTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtOutTime.Location = new System.Drawing.Point(153, 205);
             this.txtOutTime.Name = "txtOutTime";
-            this.txtOutTime.Size = new System.Drawing.Size(118, 29);
+            this.txtOutTime.Size = new System.Drawing.Size(118, 34);
             this.txtOutTime.TabIndex = 5;
             this.txtOutTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -343,7 +344,7 @@
             this.txtCurTime.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtCurTime.Location = new System.Drawing.Point(19, 205);
             this.txtCurTime.Name = "txtCurTime";
-            this.txtCurTime.Size = new System.Drawing.Size(118, 29);
+            this.txtCurTime.Size = new System.Drawing.Size(118, 34);
             this.txtCurTime.TabIndex = 4;
             this.txtCurTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -380,7 +381,7 @@
             this.txtComePhone.ForeColor = System.Drawing.Color.Red;
             this.txtComePhone.Location = new System.Drawing.Point(23, 62);
             this.txtComePhone.Name = "txtComePhone";
-            this.txtComePhone.Size = new System.Drawing.Size(168, 34);
+            this.txtComePhone.Size = new System.Drawing.Size(168, 40);
             this.txtComePhone.TabIndex = 1;
             this.txtComePhone.Text = "07533375888";
             this.txtComePhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -391,13 +392,13 @@
             this.label11.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label11.Location = new System.Drawing.Point(27, 38);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(158, 21);
+            this.label11.Size = new System.Drawing.Size(196, 27);
             this.label11.TabIndex = 0;
             this.label11.Text = "Telephone Number";
             // 
             // FrmCallNewCus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(336, 613);
             this.Controls.Add(this.groupBox3);
