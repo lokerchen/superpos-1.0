@@ -1511,7 +1511,7 @@ namespace SuperPOS.UI.TakeAway
                     taMenuItemSubMenuDetailInfo.OtherName = txtSubMenuOtherName[i].Text;
                     if (iSubMenuStatus == 1)
                         taMenuItemSubMenuDetailInfo.SubMenuID = taMenuItemSubMenuInfo.SystemKey.ToString();
-                    else if (iSubMenuStatus == 2)
+                    else //if (iSubMenuStatus == 2)
                         taMenuItemSubMenuDetailInfo.SubMenuID = dgvSubMenu.CurrentRow.Cells[0].Value.ToString();
                     _control.AddEntity(taMenuItemSubMenuDetailInfo);
                 }
@@ -1538,10 +1538,10 @@ namespace SuperPOS.UI.TakeAway
                 txtSubMenuOtherName[i].Enabled = false;
             }
 
-            btnSubMenuDel.Enabled = true;
-            //btnSubMenuEdit.Enabled = true;
-            btnSubMenuSave.Enabled = false;
-            btnSubMenuAdd.Enabled = true;
+            //btnSubMenuDel.Enabled = true;
+            ////btnSubMenuEdit.Enabled = true;
+            //btnSubMenuSave.Enabled = false;
+            //btnSubMenuAdd.Enabled = true;
 
             new OnLoadSystemCommonData().GetTAMenuItemSubMenuList();
             dgvSubMenu.DataSource = CommonData.TaMenuItemSubMenuList;
