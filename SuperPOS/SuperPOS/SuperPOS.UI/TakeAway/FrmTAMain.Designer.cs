@@ -422,7 +422,7 @@
             this.btnMI16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI16.FlatAppearance.BorderSize = 0;
             this.btnMI16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI16.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI16.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI16.Location = new System.Drawing.Point(410, 166);
             this.btnMI16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI16.Name = "btnMI16";
@@ -436,7 +436,7 @@
             this.btnMI15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI15.FlatAppearance.BorderSize = 0;
             this.btnMI15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI15.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI15.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI15.Location = new System.Drawing.Point(275, 166);
             this.btnMI15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI15.Name = "btnMI15";
@@ -450,7 +450,7 @@
             this.btnMI14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI14.FlatAppearance.BorderSize = 0;
             this.btnMI14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI14.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI14.Location = new System.Drawing.Point(140, 166);
             this.btnMI14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI14.Name = "btnMI14";
@@ -464,7 +464,7 @@
             this.btnMI13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI13.FlatAppearance.BorderSize = 0;
             this.btnMI13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI13.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI13.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI13.Location = new System.Drawing.Point(5, 166);
             this.btnMI13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI13.Name = "btnMI13";
@@ -478,7 +478,7 @@
             this.btnMI12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI12.FlatAppearance.BorderSize = 0;
             this.btnMI12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI12.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI12.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI12.Location = new System.Drawing.Point(410, 116);
             this.btnMI12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI12.Name = "btnMI12";
@@ -492,7 +492,7 @@
             this.btnMI11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI11.FlatAppearance.BorderSize = 0;
             this.btnMI11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI11.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI11.Location = new System.Drawing.Point(275, 116);
             this.btnMI11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI11.Name = "btnMI11";
@@ -506,7 +506,7 @@
             this.btnMI10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI10.FlatAppearance.BorderSize = 0;
             this.btnMI10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI10.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI10.Location = new System.Drawing.Point(140, 116);
             this.btnMI10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI10.Name = "btnMI10";
@@ -520,7 +520,7 @@
             this.btnMI9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI9.FlatAppearance.BorderSize = 0;
             this.btnMI9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI9.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI9.Location = new System.Drawing.Point(5, 116);
             this.btnMI9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI9.Name = "btnMI9";
@@ -534,7 +534,7 @@
             this.btnMI8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI8.FlatAppearance.BorderSize = 0;
             this.btnMI8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI8.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI8.Location = new System.Drawing.Point(410, 66);
             this.btnMI8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI8.Name = "btnMI8";
@@ -548,7 +548,7 @@
             this.btnMI7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI7.FlatAppearance.BorderSize = 0;
             this.btnMI7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI7.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI7.Location = new System.Drawing.Point(275, 66);
             this.btnMI7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI7.Name = "btnMI7";
@@ -562,7 +562,7 @@
             this.btnMI6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI6.FlatAppearance.BorderSize = 0;
             this.btnMI6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI6.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI6.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI6.Location = new System.Drawing.Point(140, 66);
             this.btnMI6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI6.Name = "btnMI6";
@@ -576,7 +576,7 @@
             this.btnMI5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI5.FlatAppearance.BorderSize = 0;
             this.btnMI5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI5.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI5.Location = new System.Drawing.Point(5, 66);
             this.btnMI5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI5.Name = "btnMI5";
@@ -622,7 +622,7 @@
             this.btnMI4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI4.FlatAppearance.BorderSize = 0;
             this.btnMI4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI4.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI4.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI4.Location = new System.Drawing.Point(410, 16);
             this.btnMI4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI4.Name = "btnMI4";
@@ -636,7 +636,7 @@
             this.btnMI3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI3.FlatAppearance.BorderSize = 0;
             this.btnMI3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI3.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI3.Location = new System.Drawing.Point(275, 16);
             this.btnMI3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI3.Name = "btnMI3";
@@ -650,7 +650,7 @@
             this.btnMI2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI2.FlatAppearance.BorderSize = 0;
             this.btnMI2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI2.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI2.Location = new System.Drawing.Point(140, 16);
             this.btnMI2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI2.Name = "btnMI2";
@@ -664,7 +664,7 @@
             this.btnMI1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnMI1.FlatAppearance.BorderSize = 0;
             this.btnMI1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMI1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnMI1.Font = new System.Drawing.Font("Consolas", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMI1.Location = new System.Drawing.Point(5, 16);
             this.btnMI1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnMI1.Name = "btnMI1";
