@@ -59,9 +59,9 @@
             this.groupBox1.Controls.Add(this.txtDate);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(16, 15);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(243, 669);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -75,7 +75,7 @@
             this.btnLogout.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Location = new System.Drawing.Point(29, 575);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(177, 75);
             this.btnLogout.TabIndex = 7;
@@ -92,7 +92,7 @@
             this.btnCtlPanel.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCtlPanel.ForeColor = System.Drawing.Color.White;
             this.btnCtlPanel.Location = new System.Drawing.Point(29, 475);
-            this.btnCtlPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCtlPanel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCtlPanel.Name = "btnCtlPanel";
             this.btnCtlPanel.Size = new System.Drawing.Size(177, 75);
             this.btnCtlPanel.TabIndex = 6;
@@ -109,7 +109,7 @@
             this.btnShowOrder.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnShowOrder.ForeColor = System.Drawing.Color.White;
             this.btnShowOrder.Location = new System.Drawing.Point(29, 375);
-            this.btnShowOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnShowOrder.Margin = new System.Windows.Forms.Padding(4);
             this.btnShowOrder.Name = "btnShowOrder";
             this.btnShowOrder.Size = new System.Drawing.Size(177, 75);
             this.btnShowOrder.TabIndex = 5;
@@ -126,7 +126,7 @@
             this.btnDrawer.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDrawer.ForeColor = System.Drawing.Color.White;
             this.btnDrawer.Location = new System.Drawing.Point(29, 275);
-            this.btnDrawer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDrawer.Margin = new System.Windows.Forms.Padding(4);
             this.btnDrawer.Name = "btnDrawer";
             this.btnDrawer.Size = new System.Drawing.Size(177, 75);
             this.btnDrawer.TabIndex = 4;
@@ -140,7 +140,7 @@
             this.txtStaff.Enabled = false;
             this.txtStaff.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtStaff.Location = new System.Drawing.Point(29, 180);
-            this.txtStaff.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStaff.Margin = new System.Windows.Forms.Padding(4);
             this.txtStaff.Name = "txtStaff";
             this.txtStaff.Size = new System.Drawing.Size(177, 33);
             this.txtStaff.TabIndex = 3;
@@ -154,7 +154,7 @@
             this.txtSession.Enabled = false;
             this.txtSession.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtSession.Location = new System.Drawing.Point(29, 131);
-            this.txtSession.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSession.Margin = new System.Windows.Forms.Padding(4);
             this.txtSession.Name = "txtSession";
             this.txtSession.Size = new System.Drawing.Size(177, 33);
             this.txtSession.TabIndex = 2;
@@ -168,7 +168,7 @@
             this.txtTime.Enabled = false;
             this.txtTime.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtTime.Location = new System.Drawing.Point(29, 81);
-            this.txtTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTime.Margin = new System.Windows.Forms.Padding(4);
             this.txtTime.Name = "txtTime";
             this.txtTime.Size = new System.Drawing.Size(177, 33);
             this.txtTime.TabIndex = 1;
@@ -182,7 +182,7 @@
             this.txtDate.Enabled = false;
             this.txtDate.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtDate.Location = new System.Drawing.Point(29, 28);
-            this.txtDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDate.Margin = new System.Windows.Forms.Padding(4);
             this.txtDate.Name = "txtDate";
             this.txtDate.Size = new System.Drawing.Size(177, 33);
             this.txtDate.TabIndex = 0;
@@ -198,11 +198,11 @@
             this.button5.Font = new System.Drawing.Font("微软雅黑", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(279, 45);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(691, 122);
             this.button5.TabIndex = 1;
-            this.button5.Text = "Desktop Area";
+            this.button5.Text = "HOME";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // btnTakeaway
@@ -214,7 +214,7 @@
             this.btnTakeaway.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnTakeaway.ForeColor = System.Drawing.Color.White;
             this.btnTakeaway.Location = new System.Drawing.Point(409, 211);
-            this.btnTakeaway.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTakeaway.Margin = new System.Windows.Forms.Padding(4);
             this.btnTakeaway.Name = "btnTakeaway";
             this.btnTakeaway.Size = new System.Drawing.Size(400, 112);
             this.btnTakeaway.TabIndex = 2;
@@ -233,7 +233,7 @@
             this.btnEatIn.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnEatIn.ForeColor = System.Drawing.Color.White;
             this.btnEatIn.Location = new System.Drawing.Point(409, 344);
-            this.btnEatIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEatIn.Margin = new System.Windows.Forms.Padding(4);
             this.btnEatIn.Name = "btnEatIn";
             this.btnEatIn.Size = new System.Drawing.Size(400, 112);
             this.btnEatIn.TabIndex = 3;
@@ -252,7 +252,7 @@
             this.btnQuickFood.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnQuickFood.ForeColor = System.Drawing.Color.White;
             this.btnQuickFood.Location = new System.Drawing.Point(409, 476);
-            this.btnQuickFood.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuickFood.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuickFood.Name = "btnQuickFood";
             this.btnQuickFood.Size = new System.Drawing.Size(400, 112);
             this.btnQuickFood.TabIndex = 4;
@@ -279,7 +279,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmSelectMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSelectMenu";
