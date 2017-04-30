@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvPendOrder = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -56,6 +56,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.dgvPendOrder);
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(6, 4);
@@ -67,16 +68,17 @@
             // 
             // dgvPendOrder
             // 
+            this.dgvPendOrder.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgvPendOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvPendOrder.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPendOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPendOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPendOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPendOrder.Location = new System.Drawing.Point(10, 29);
             this.dgvPendOrder.MultiSelect = false;
@@ -90,6 +92,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox2.Controls.Add(this.btnAll);
             this.groupBox2.Controls.Add(this.btnShop);
             this.groupBox2.Controls.Add(this.btnCollection);
@@ -104,6 +107,7 @@
             // 
             // btnAll
             // 
+            this.btnAll.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnAll.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAll.FlatAppearance.BorderSize = 0;
@@ -120,6 +124,7 @@
             // 
             // btnShop
             // 
+            this.btnShop.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShop.BackColor = System.Drawing.Color.DarkSalmon;
             this.btnShop.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnShop.FlatAppearance.BorderSize = 0;
@@ -136,6 +141,7 @@
             // 
             // btnCollection
             // 
+            this.btnCollection.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCollection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btnCollection.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCollection.FlatAppearance.BorderSize = 0;
@@ -152,6 +158,7 @@
             // 
             // btnDelivery
             // 
+            this.btnDelivery.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelivery.BackColor = System.Drawing.Color.Red;
             this.btnDelivery.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnDelivery.FlatAppearance.BorderSize = 0;
@@ -168,6 +175,7 @@
             // 
             // txtDeliveryCharge
             // 
+            this.txtDeliveryCharge.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDeliveryCharge.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtDeliveryCharge.Location = new System.Drawing.Point(152, 22);
             this.txtDeliveryCharge.Name = "txtDeliveryCharge";
@@ -178,6 +186,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(31, 29);
@@ -188,6 +197,7 @@
             // 
             // btnOpen
             // 
+            this.btnOpen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnOpen.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnOpen.FlatAppearance.BorderSize = 0;
@@ -204,6 +214,7 @@
             // 
             // btnPrtKit
             // 
+            this.btnPrtKit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtKit.BackColor = System.Drawing.Color.Navy;
             this.btnPrtKit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtKit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -218,6 +229,7 @@
             // 
             // btnPrtBill
             // 
+            this.btnPrtBill.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtBill.BackColor = System.Drawing.Color.Navy;
             this.btnPrtBill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtBill.ForeColor = System.Drawing.Color.White;
@@ -231,6 +243,7 @@
             // 
             // btnPrtReceipt
             // 
+            this.btnPrtReceipt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPrtReceipt.BackColor = System.Drawing.Color.Navy;
             this.btnPrtReceipt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrtReceipt.ForeColor = System.Drawing.Color.White;
@@ -244,6 +257,7 @@
             // 
             // btnPay
             // 
+            this.btnPay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPay.BackColor = System.Drawing.Color.Blue;
             this.btnPay.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnPay.FlatAppearance.BorderSize = 0;
@@ -260,6 +274,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnExit.FlatAppearance.BorderSize = 0;
@@ -276,6 +291,7 @@
             // 
             // btnDriver
             // 
+            this.btnDriver.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDriver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnDriver.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnDriver.FlatAppearance.BorderSize = 0;
@@ -292,6 +308,7 @@
             // 
             // cmbDriver
             // 
+            this.cmbDriver.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cmbDriver.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDriver.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbDriver.FormattingEnabled = true;
@@ -302,6 +319,7 @@
             // 
             // btnShowAll
             // 
+            this.btnShowAll.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShowAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnShowAll.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnShowAll.FlatAppearance.BorderSize = 0;
@@ -318,6 +336,7 @@
             // 
             // btnShowAssign
             // 
+            this.btnShowAssign.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShowAssign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnShowAssign.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnShowAssign.FlatAppearance.BorderSize = 0;
@@ -334,6 +353,7 @@
             // 
             // btnShowUnAssign
             // 
+            this.btnShowUnAssign.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnShowUnAssign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnShowUnAssign.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnShowUnAssign.FlatAppearance.BorderSize = 0;
@@ -372,6 +392,7 @@
             this.Name = "FrmTAPendOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPendOrder";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPendOrder_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPendOrder)).EndInit();
