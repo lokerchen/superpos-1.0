@@ -613,6 +613,33 @@ namespace SuperPOS.UI.TakeAway
                 dgvSCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(Guid.NewGuid().ToString())).ToList();
                 dgvTCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(Guid.NewGuid().ToString())).ToList();
                 dgvTHMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(Guid.NewGuid().ToString())).ToList();
+
+                #region 清空数据
+                txtDishCode.Text = "";
+                txtDisPosition.Text = "";
+                txtEngName.Text = "";
+                txtOtherName.Text = "";
+                txtWLarge.Text = "";
+                txtWRegular.Text = "";
+                txtWSmall.Text = "";
+                txtSLarge.Text = "";
+                txtSRegular.Text = "";
+                txtSSmall.Text = "";
+
+                chkUnavailable.Checked = false;
+                chkNegativePrice.Checked = false;
+                chkDisountable.Checked = false;
+                chkWithoutVAT.Checked = false;
+                chkInventoryCheck.Checked = false;
+
+                cmbBoxSplySft.SelectedIndex = 0;
+                chkBoxPrtOrderByDept.Checked = false;
+                chkBoxPrtOrderX.Checked = false;
+
+                cmbBoxMenuCate1.SelectedIndex = 0;
+                cmbBoxMenuCate2.SelectedIndex = 0;
+                cmbBoxMenuCate3.SelectedIndex = 0;
+                #endregion
             }
             else
             {
@@ -912,9 +939,9 @@ namespace SuperPOS.UI.TakeAway
             #region 判断DishCode是否重复
             new OnLoadSystemCommonData().GetTAMenuItemList();
 
-            var qDishCode = CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtDishCode.Text));
+            var qDishCode = CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtDishCode.Text) && s.MenuSetID.Equals(btnDAGuid.ToString()));
 
-            if (qDishCode.Any())
+            if (qDishCode.Count() >= 2)
             {
                 MessageBox.Show("Dish code can not be duplicated!");
                 txtDishCode.Focus();
