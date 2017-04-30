@@ -660,7 +660,7 @@ namespace SuperPOS.UI.TakeAway
         private void btnDADishCodeSearch_Click(object sender, EventArgs e)
         {
             dgvDAMenu.DataSource = !string.IsNullOrEmpty(txtDADishCode.Text)
-                ? CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtDADishCode.Text.Trim())).ToList()
+                ? CommonData.TaMenuItemList.Where(s => s.DishCode.Equals(txtDADishCode.Text.Trim()) && s.MenuSetID.Equals(btnDAGuid.ToString())).ToList()
                 : CommonData.TaMenuItemList.ToList();
         }
 
