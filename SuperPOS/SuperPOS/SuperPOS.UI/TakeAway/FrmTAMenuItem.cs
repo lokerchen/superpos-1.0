@@ -1101,18 +1101,18 @@ namespace SuperPOS.UI.TakeAway
 
         private void cmDABoxDish_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvDAMenu.DataSource = string.IsNullOrEmpty(cmDABoxDish.Text) ? CommonData.TaMenuItemList.ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmDABoxDish.Text)).ToList();
+            dgvDAMenu.DataSource = string.IsNullOrEmpty(cmDABoxDish.Text) ? CommonData.TaMenuItemList.ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmDABoxDish.Text) && s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
         }
 
         private void cmSCBoxDish_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dgvSCMenu.DataSource = string.IsNullOrEmpty(cmSCBoxDish.Text) ? CommonData.TaMenuItemList.ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmSCBoxDish.Text)).ToList();
+            dgvSCMenu.DataSource = string.IsNullOrEmpty(cmSCBoxDish.Text) ? CommonData.TaMenuItemList.ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmSCBoxDish.Text) && s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
         }
 
         private void cmTCBoxDish_SelectedIndexChanged(object sender, EventArgs e)
         {
             //dgvTCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmTCBoxDish.Text)).ToList();
-            dgvTCMenu.DataSource = string.IsNullOrEmpty(cmTCBoxDish.Text) ? CommonData.TaMenuItemList.ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmTCBoxDish.Text)).ToList();
+            dgvTCMenu.DataSource = string.IsNullOrEmpty(cmTCBoxDish.Text) ? CommonData.TaMenuItemList.ToList() : CommonData.TaMenuItemList.Where(s => s.MenuCateID.Contains(cmTCBoxDish.Text) && s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
         }
 
         private void btnSCExit_Click(object sender, EventArgs e)
