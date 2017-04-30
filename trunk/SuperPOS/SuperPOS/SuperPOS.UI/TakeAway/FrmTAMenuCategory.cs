@@ -169,21 +169,6 @@ namespace SuperPOS.UI.TakeAway
             onLoad.GetTAMenuCategory();
             onLoad.GetTADeptCode();
 
-            dgvCategory.DataSource = CommonData.TaMenuCategoryList;
-            
-
-            dgvCategory.Columns[0].Visible = false;
-            dgvCategory.Columns[4].Visible = false;
-            dgvCategory.Columns[5].Visible = false;
-            dgvCategory.Columns[6].Visible = false;
-            dgvCategory.Columns[7].Visible = false;
-            dgvCategory.Columns[8].Visible = false;
-            dgvCategory.Columns[9].Visible = false;
-
-            dgvCategory.Columns[1].HeaderText = @"Category Name";
-            dgvCategory.Columns[2].HeaderText = @"Category 2nd Name";
-            dgvCategory.Columns[3].HeaderText = @"Position";
-
             #region btnMenuSet赋值
             Button[] btnMenuSet = new Button[4];
             btnMenuSet[0] = btnMenuSet1;
@@ -205,13 +190,39 @@ namespace SuperPOS.UI.TakeAway
                 btnMenuSet[i].Text = taMenuSet.EnglishName;
                 MenuSetKey[i] = taMenuSet.SystemKey.ToString();
 
+                if (i == 0) strMenuSetKey = MenuSetKey[i];
                 i++;
             }
             #endregion
 
+            btnMenuSet1.BackColor = Color.CornflowerBlue;
+            btnMenuSet1.Select();
+            btnMenuSet2.BackColor = Color.Gray;
+            btnMenuSet3.BackColor = Color.Gray;
+            btnMenuSet4.BackColor = Color.Gray;
+
+            //dgvCategory.DataSource = CommonData.TaMenuCategoryList.Where(s => s.MenuSetID.Equals(strMenuSetKey));
+            dgvCategory.DataSource = CommonData.TaMenuCategoryList.Where(s => s.MenuSetID.Equals(strMenuSetKey)).ToList();
+
+            dgvCategory.Columns[0].Visible = false;
+            dgvCategory.Columns[4].Visible = false;
+            dgvCategory.Columns[5].Visible = false;
+            dgvCategory.Columns[6].Visible = false;
+            dgvCategory.Columns[7].Visible = false;
+            dgvCategory.Columns[8].Visible = false;
+            dgvCategory.Columns[9].Visible = false;
+
+            dgvCategory.Columns[1].HeaderText = @"Category Name";
+            dgvCategory.Columns[2].HeaderText = @"Category 2nd Name";
+            dgvCategory.Columns[3].HeaderText = @"Position";
+
+            //if (string.IsNullOrEmpty(strMenuSetKey)) return;
+
             BindCmbData();
 
             txtDishCode.Enabled = false;
+
+            
 
             //comboBox1.SelectedValue;
         }
@@ -314,11 +325,24 @@ namespace SuperPOS.UI.TakeAway
                     break;
                 default:
                     strMenuSetKey = MenuSetKey[0];
-                    btn.BackColor = Color.CornflowerBlue;
+                    btnMenuSet1.BackColor = Color.CornflowerBlue;
+                    btnMenuSet1.Select();
                     btnMenuSet2.BackColor = Color.Gray;
                     btnMenuSet3.BackColor = Color.Gray;
                     btnMenuSet4.BackColor = Color.Gray;
                     break;
+            }
+
+            dgvCategory.DataSource = CommonData.TaMenuCategoryList.Where(s => s.MenuSetID.Equals(strMenuSetKey)).ToList();
+
+            if (!CommonData.TaMenuCategoryList.Any(s => s.MenuSetID.Equals(strMenuSetKey)))
+            {
+                txtEnglishName.Text = "";
+                txtOtherName.Text = "";
+                txtDisplayPosition.Text = "";
+                BindCmbData();
+                chkHotKey.Checked = false;
+                txtDishCode.Enabled = false;
             }
         }
 
