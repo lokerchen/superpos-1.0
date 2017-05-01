@@ -29,5 +29,6 @@
     <property name="IsInventoryCheck" column="IsInventoryCheck" type="System.String" />
     <property name="MenuSetID" column="MenuSetID" type="System.String" />
     <property name="MenuCateID" column="MenuCateID" type="System.String" />
+    <property name="WorkDay" column="WorkDay" type="System.String" />
   </class>
 </hibernate-mapping>

@@ -79,5 +79,8 @@ namespace SuperPOS.Domain.Entities
 
         [XmlElement(ElementName = "MenuCateID")]
         public virtual string MenuCateID { get; set; }
+
+        [XmlElement(ElementName = "WorkDay")]
+        public virtual string WorkDay { get; set; }
     }
 }
