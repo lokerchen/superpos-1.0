@@ -596,6 +596,20 @@ namespace SuperPOS.UI.TakeAway
             }
             #endregion
 
+            #region Word Day
+            if (dgvDAMenu.RowCount > 0)
+            {
+                if (dgvDAMenu.CurrentRow != null && dgvDAMenu.CurrentRow.Cells[23].Value != null)
+                {
+                    var sTemp = dgvDAMenu.CurrentRow.Cells[23].Value.ToString().Split(',');
+                    foreach (var s in sTemp)
+                    {
+                        if (!string.IsNullOrEmpty(s)) ChkStatusTrue(Convert.ToInt32(s));
+                    }
+                }
+            }
+            #endregion
+
             if (isTastHand) tabCtlMenuItem.SelectTab(tabPageTaste);
         }
 
@@ -1013,6 +1027,21 @@ namespace SuperPOS.UI.TakeAway
             chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[18].Value?.ToString().Equals("Y") ?? false;
             chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[19].Value?.ToString().Equals("Y") ?? false;
             chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[20].Value?.ToString().Equals("Y") ?? false;
+
+            if (dgvDAMenu.CurrentRow != null && dgvDAMenu.CurrentRow.Cells[23].Value != null)
+            {
+                var sTemp = dgvDAMenu.CurrentRow.Cells[23].Value.ToString().Split(',');
+                foreach (var s in sTemp)
+                {
+                    //ChkEnableTrue(Convert.ToInt32(s));
+                    if (!string.IsNullOrEmpty(s)) ChkStatusTrue(Convert.ToInt32(s));
+                }
+            }
+            else
+            {
+                ChkStatusFalse();
+            }
+            
         }
 
         private void btnDASave_Click(object sender, EventArgs e)
@@ -1059,6 +1088,18 @@ namespace SuperPOS.UI.TakeAway
             taMenuItem.PrinterName = cmbPrtName.Text;
             taMenuItem.PrinterOrder = cmbPrtOrder.Text;
 
+            var sb = new StringBuilder();
+            sb.Append(",");
+            if (chkMonday.Checked) sb.Append("1,");
+            if (chkTuesday.Checked) sb.Append("2,");
+            if (chkWednesday.Checked) sb.Append("3,");
+            if (chkThursday.Checked) sb.Append("4,");
+            if (chkFriday.Checked) sb.Append("5,");
+            if (chkSaturday.Checked) sb.Append("6,");
+            if (chkSunday.Checked) sb.Append("7,");
+
+            taMenuItem.WorkDay = sb.ToString();
+
             taMenuItem.Qty = "0";
 
             taMenuItem.MenuSetID = btnDAGuid.ToString();
@@ -1089,6 +1130,7 @@ namespace SuperPOS.UI.TakeAway
             //SetCtlEnable(false);
 
             iStatus = 0;
+            
         }
 
         private void SetCtlEnable(bool bl)
@@ -1749,6 +1791,66 @@ namespace SuperPOS.UI.TakeAway
             cmbPrtOrder.DisplayMember = "DeptCode";
         }
         #endregion
+
+        #region 各CheckBox状态
+
+        /// <summary>
+        ///     各CheckBox状态
+        /// </summary>
+        /// <param name="i">checkbox名</param>
+        private void ChkStatusTrue(int i)
+        {
+            switch (i)
+            {
+                case 1:
+                    chkMonday.Checked = true;
+                    break;
+                case 2:
+                    chkTuesday.Checked = true;
+                    break;
+                case 3:
+                    chkWednesday.Checked = true;
+                    break;
+                case 4:
+                    chkThursday.Checked = true;
+                    break;
+                case 5:
+                    chkFriday.Checked = true;
+                    break;
+                case 6:
+                    chkSaturday.Checked = true;
+                    break;
+                case 7:
+                    chkSunday.Checked = true;
+                    break;
+                default:
+                    ChkStatusTrue();
+                    break;
+            }
+        }
+
+        private void ChkStatusFalse()
+        {
+            chkMonday.Checked = false;
+            chkTuesday.Checked = false;
+            chkWednesday.Checked = false;
+            chkThursday.Checked = false;     
+            chkFriday.Checked = false;     
+            chkSaturday.Checked = false;   
+            chkSunday.Checked = false;
+        }
+        #endregion
+
+        private void ChkStatusTrue()
+        {
+            chkSunday.Checked = true;
+            chkMonday.Checked = true;
+            chkTuesday.Checked = true;
+            chkWednesday.Checked = true;
+            chkThursday.Checked = true;
+            chkFriday.Checked = true;
+            chkSaturday.Checked = true;
+        }
 
     }
 }

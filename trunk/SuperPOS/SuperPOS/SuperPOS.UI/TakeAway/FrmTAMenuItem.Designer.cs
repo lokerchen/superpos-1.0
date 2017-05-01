@@ -421,6 +421,14 @@
             this.btnImportMenu = new System.Windows.Forms.Button();
             this.cmbPrtName = new System.Windows.Forms.ComboBox();
             this.cmbPrtOrder = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.chkSunday = new System.Windows.Forms.CheckBox();
+            this.chkThursday = new System.Windows.Forms.CheckBox();
+            this.chkWednesday = new System.Windows.Forms.CheckBox();
+            this.chkFriday = new System.Windows.Forms.CheckBox();
+            this.chkTuesday = new System.Windows.Forms.CheckBox();
+            this.chkMonday = new System.Windows.Forms.CheckBox();
+            this.chkSaturday = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.tabCtlMenuItem.SuspendLayout();
             this.tabPageDish.SuspendLayout();
@@ -450,6 +458,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubMenu)).BeginInit();
             this.tabPageMenu.SuspendLayout();
             this.groupBox19.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -480,6 +489,7 @@
             // 
             // tabPageDish
             // 
+            this.tabPageDish.Controls.Add(this.groupBox3);
             this.tabPageDish.Controls.Add(this.groupBox15);
             this.tabPageDish.Controls.Add(this.btnDAEdit);
             this.tabPageDish.Controls.Add(this.chkInventoryCheck);
@@ -512,9 +522,9 @@
             this.groupBox15.Controls.Add(this.label39);
             this.groupBox15.Controls.Add(this.cmbBoxSplySft);
             this.groupBox15.Controls.Add(this.label38);
-            this.groupBox15.Location = new System.Drawing.Point(634, 21);
+            this.groupBox15.Location = new System.Drawing.Point(634, 4);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(269, 115);
+            this.groupBox15.Size = new System.Drawing.Size(269, 125);
             this.groupBox15.TabIndex = 42;
             this.groupBox15.TabStop = false;
             // 
@@ -561,7 +571,7 @@
             this.btnDAEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDAEdit.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnDAEdit.ForeColor = System.Drawing.Color.White;
-            this.btnDAEdit.Location = new System.Drawing.Point(559, 527);
+            this.btnDAEdit.Location = new System.Drawing.Point(546, 527);
             this.btnDAEdit.Name = "btnDAEdit";
             this.btnDAEdit.Size = new System.Drawing.Size(80, 50);
             this.btnDAEdit.TabIndex = 41;
@@ -573,7 +583,7 @@
             // chkInventoryCheck
             // 
             this.chkInventoryCheck.AutoSize = true;
-            this.chkInventoryCheck.Location = new System.Drawing.Point(664, 489);
+            this.chkInventoryCheck.Location = new System.Drawing.Point(639, 549);
             this.chkInventoryCheck.Name = "chkInventoryCheck";
             this.chkInventoryCheck.Size = new System.Drawing.Size(148, 24);
             this.chkInventoryCheck.TabIndex = 28;
@@ -583,7 +593,7 @@
             // chkWithoutVAT
             // 
             this.chkWithoutVAT.AutoSize = true;
-            this.chkWithoutVAT.Location = new System.Drawing.Point(816, 458);
+            this.chkWithoutVAT.Location = new System.Drawing.Point(791, 518);
             this.chkWithoutVAT.Name = "chkWithoutVAT";
             this.chkWithoutVAT.Size = new System.Drawing.Size(124, 24);
             this.chkWithoutVAT.TabIndex = 25;
@@ -607,7 +617,7 @@
             // chkDisountable
             // 
             this.chkDisountable.AutoSize = true;
-            this.chkDisountable.Location = new System.Drawing.Point(664, 458);
+            this.chkDisountable.Location = new System.Drawing.Point(639, 518);
             this.chkDisountable.Name = "chkDisountable";
             this.chkDisountable.Size = new System.Drawing.Size(118, 24);
             this.chkDisountable.TabIndex = 20;
@@ -631,7 +641,7 @@
             // chkNegativePrice
             // 
             this.chkNegativePrice.AutoSize = true;
-            this.chkNegativePrice.Location = new System.Drawing.Point(816, 431);
+            this.chkNegativePrice.Location = new System.Drawing.Point(791, 491);
             this.chkNegativePrice.Name = "chkNegativePrice";
             this.chkNegativePrice.Size = new System.Drawing.Size(137, 24);
             this.chkNegativePrice.TabIndex = 17;
@@ -655,7 +665,7 @@
             // chkUnavailable
             // 
             this.chkUnavailable.AutoSize = true;
-            this.chkUnavailable.Location = new System.Drawing.Point(664, 431);
+            this.chkUnavailable.Location = new System.Drawing.Point(639, 491);
             this.chkUnavailable.Name = "chkUnavailable";
             this.chkUnavailable.Size = new System.Drawing.Size(114, 24);
             this.chkUnavailable.TabIndex = 16;
@@ -683,9 +693,9 @@
             this.groupBox6.Controls.Add(this.btnDishNameSearch);
             this.groupBox6.Controls.Add(this.txtDishName);
             this.groupBox6.Controls.Add(this.label14);
-            this.groupBox6.Location = new System.Drawing.Point(634, 142);
+            this.groupBox6.Location = new System.Drawing.Point(634, 266);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(269, 261);
+            this.groupBox6.Size = new System.Drawing.Size(269, 219);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Search Other Name";
@@ -693,7 +703,7 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 66);
+            this.dataGridView2.Location = new System.Drawing.Point(6, 61);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 23;
             this.dataGridView2.Size = new System.Drawing.Size(170, 150);
@@ -702,7 +712,7 @@
             // btnDishNameCopy
             // 
             this.btnDishNameCopy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDishNameCopy.Location = new System.Drawing.Point(182, 60);
+            this.btnDishNameCopy.Location = new System.Drawing.Point(182, 55);
             this.btnDishNameCopy.Name = "btnDishNameCopy";
             this.btnDishNameCopy.Size = new System.Drawing.Size(75, 26);
             this.btnDishNameCopy.TabIndex = 11;
@@ -712,7 +722,7 @@
             // btnDishNameSearch
             // 
             this.btnDishNameSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDishNameSearch.Location = new System.Drawing.Point(182, 33);
+            this.btnDishNameSearch.Location = new System.Drawing.Point(182, 28);
             this.btnDishNameSearch.Name = "btnDishNameSearch";
             this.btnDishNameSearch.Size = new System.Drawing.Size(75, 23);
             this.btnDishNameSearch.TabIndex = 10;
@@ -721,7 +731,7 @@
             // 
             // txtDishName
             // 
-            this.txtDishName.Location = new System.Drawing.Point(80, 33);
+            this.txtDishName.Location = new System.Drawing.Point(80, 28);
             this.txtDishName.Name = "txtDishName";
             this.txtDishName.Size = new System.Drawing.Size(100, 27);
             this.txtDishName.TabIndex = 9;
@@ -729,7 +739,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(9, 39);
+            this.label14.Location = new System.Drawing.Point(9, 34);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(87, 20);
             this.label14.TabIndex = 8;
@@ -4178,6 +4188,92 @@
             this.cmbPrtOrder.Size = new System.Drawing.Size(121, 28);
             this.cmbPrtOrder.TabIndex = 8;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.chkSunday);
+            this.groupBox3.Controls.Add(this.chkThursday);
+            this.groupBox3.Controls.Add(this.chkWednesday);
+            this.groupBox3.Controls.Add(this.chkFriday);
+            this.groupBox3.Controls.Add(this.chkTuesday);
+            this.groupBox3.Controls.Add(this.chkMonday);
+            this.groupBox3.Controls.Add(this.chkSaturday);
+            this.groupBox3.Location = new System.Drawing.Point(634, 130);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(269, 130);
+            this.groupBox3.TabIndex = 23;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Working Day";
+            // 
+            // chkSunday
+            // 
+            this.chkSunday.AutoSize = true;
+            this.chkSunday.Location = new System.Drawing.Point(123, 80);
+            this.chkSunday.Name = "chkSunday";
+            this.chkSunday.Size = new System.Drawing.Size(84, 24);
+            this.chkSunday.TabIndex = 5;
+            this.chkSunday.Text = "Sunday";
+            this.chkSunday.UseVisualStyleBackColor = true;
+            // 
+            // chkThursday
+            // 
+            this.chkThursday.AutoSize = true;
+            this.chkThursday.Location = new System.Drawing.Point(6, 101);
+            this.chkThursday.Name = "chkThursday";
+            this.chkThursday.Size = new System.Drawing.Size(97, 24);
+            this.chkThursday.TabIndex = 9;
+            this.chkThursday.Text = "Thursday";
+            this.chkThursday.UseVisualStyleBackColor = true;
+            // 
+            // chkWednesday
+            // 
+            this.chkWednesday.AutoSize = true;
+            this.chkWednesday.Location = new System.Drawing.Point(6, 76);
+            this.chkWednesday.Name = "chkWednesday";
+            this.chkWednesday.Size = new System.Drawing.Size(116, 24);
+            this.chkWednesday.TabIndex = 8;
+            this.chkWednesday.Text = "Wednesday";
+            this.chkWednesday.UseVisualStyleBackColor = true;
+            // 
+            // chkFriday
+            // 
+            this.chkFriday.AutoSize = true;
+            this.chkFriday.Location = new System.Drawing.Point(123, 21);
+            this.chkFriday.Name = "chkFriday";
+            this.chkFriday.Size = new System.Drawing.Size(75, 24);
+            this.chkFriday.TabIndex = 10;
+            this.chkFriday.Text = "Friday";
+            this.chkFriday.UseVisualStyleBackColor = true;
+            // 
+            // chkTuesday
+            // 
+            this.chkTuesday.AutoSize = true;
+            this.chkTuesday.Location = new System.Drawing.Point(6, 51);
+            this.chkTuesday.Name = "chkTuesday";
+            this.chkTuesday.Size = new System.Drawing.Size(91, 24);
+            this.chkTuesday.TabIndex = 7;
+            this.chkTuesday.Text = "Tuesday";
+            this.chkTuesday.UseVisualStyleBackColor = true;
+            // 
+            // chkMonday
+            // 
+            this.chkMonday.AutoSize = true;
+            this.chkMonday.Location = new System.Drawing.Point(6, 26);
+            this.chkMonday.Name = "chkMonday";
+            this.chkMonday.Size = new System.Drawing.Size(91, 24);
+            this.chkMonday.TabIndex = 6;
+            this.chkMonday.Text = "Monday";
+            this.chkMonday.UseVisualStyleBackColor = true;
+            // 
+            // chkSaturday
+            // 
+            this.chkSaturday.AutoSize = true;
+            this.chkSaturday.Location = new System.Drawing.Point(123, 50);
+            this.chkSaturday.Name = "chkSaturday";
+            this.chkSaturday.Size = new System.Drawing.Size(95, 24);
+            this.chkSaturday.TabIndex = 11;
+            this.chkSaturday.Text = "Saturday";
+            this.chkSaturday.UseVisualStyleBackColor = true;
+            // 
             // FrmTAMenuItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -4234,6 +4330,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubMenu)).EndInit();
             this.tabPageMenu.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4635,5 +4733,13 @@
         private System.Windows.Forms.Button btnImportMenu;
         private System.Windows.Forms.ComboBox cmbPrtName;
         private System.Windows.Forms.ComboBox cmbPrtOrder;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.CheckBox chkSunday;
+        private System.Windows.Forms.CheckBox chkThursday;
+        private System.Windows.Forms.CheckBox chkWednesday;
+        private System.Windows.Forms.CheckBox chkFriday;
+        private System.Windows.Forms.CheckBox chkTuesday;
+        private System.Windows.Forms.CheckBox chkMonday;
+        private System.Windows.Forms.CheckBox chkSaturday;
     }
 }
