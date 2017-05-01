@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -556,6 +557,45 @@ namespace SuperPOS.UI.TakeAway
             //dgvSCDetail.Columns[7].Visible = false;
             //Console.Out.WriteLine(Guid.NewGuid());
 
+            #region Print Name和Print Order控制
+            if (dgvDAMenu.RowCount > 0)
+            {
+                if (dgvDAMenu.CurrentRow.Cells[13].Value == null)
+                {
+                    GetPrtLst();
+                    cmbPrtName.Text = "";
+                    //cmbBoxDeptCode.Text = "";
+                }
+                else
+                {
+                    cmbPrtName.Items.Clear();
+
+                    foreach (string sPrint in PrinterSettings.InstalledPrinters)//获取所有打印机名称
+                    {
+                        string sDefault = dgvDAMenu.CurrentRow.Cells[13].Value.ToString();//默认打印机名
+
+                        cmbPrtName.Items.Add(sPrint);
+                        if (sPrint == sDefault) cmbPrtName.SelectedIndex = cmbPrtName.Items.IndexOf(sPrint);
+                    }
+                }
+
+                if (dgvDAMenu.CurrentRow.Cells[14].Value == null)
+                {
+                    GetDeptCodeLst();
+                    cmbPrtName.Text = "";
+                    //cmbBoxDeptCode.Text = "";
+                }
+                else
+                {
+                    GetDeptCodeLst();
+
+                    var tc = CommonData.TaDeptCodeList.Select(lstDC => new { DeptCode = lstDC.DeptCode, DeptName = lstDC.DeptName })
+                        .Where(s => s.DeptCode.Equals(dgvDAMenu.CurrentRow.Cells[14].Value?.ToString() ?? ""));
+                    cmbPrtOrder.Text = tc.Any() ? tc.FirstOrDefault().DeptCode : "";
+                }
+            }
+            #endregion
+
             if (isTastHand) tabCtlMenuItem.SelectTab(tabPageTaste);
         }
 
@@ -633,8 +673,8 @@ namespace SuperPOS.UI.TakeAway
                 chkInventoryCheck.Checked = false;
 
                 cmbBoxSplySft.SelectedIndex = 0;
-                chkBoxPrtOrderByDept.Checked = false;
-                chkBoxPrtOrderX.Checked = false;
+                GetPrtLst(); //设置cmbPrtName.Text
+                GetDeptCodeLst(); //设置cmbPrtOrder.Text
 
                 cmbBoxMenuCate1.SelectedIndex = 0;
                 cmbBoxMenuCate2.SelectedIndex = 0;
@@ -725,9 +765,9 @@ namespace SuperPOS.UI.TakeAway
             //cmbBoxSplySft.Enabled = true;
             cmbBoxSplySft.SelectedIndex = 0;
             //chkBoxPrtOrderByDept.Enabled = true;
-            chkBoxPrtOrderByDept.Checked = false;
+            cmbPrtName.SelectedIndex = 0;
             //chkBoxPrtOrderX.Enabled = true;
-            chkBoxPrtOrderX.Checked = false;
+            cmbPrtOrder.SelectedIndex = 0;
 
             //cmbBoxMenuCate1.Enabled = true;
             //cmbBoxMenuCate2.Enabled = true;
@@ -856,8 +896,8 @@ namespace SuperPOS.UI.TakeAway
             cmbBoxMenuCate3.Enabled = true;
 
             cmbBoxSplySft.Enabled = true;
-            chkBoxPrtOrderByDept.Enabled = true;
-            chkBoxPrtOrderX.Enabled = true;
+            cmbPrtName.Enabled = true;
+            cmbPrtOrder.Enabled = true;
         }
 
         private void dgvDAMenu_SelectionChanged(object sender, EventArgs e)
@@ -918,8 +958,49 @@ namespace SuperPOS.UI.TakeAway
             //if (strMenuCate.Length == 3) cmbBoxMenuCate3.Text = strMenuCate[2];
 
             cmbBoxSplySft.Text = dgvDAMenu.CurrentRow.Cells[12].Value?.ToString() ?? "";
-            chkBoxPrtOrderByDept.Checked = dgvDAMenu.CurrentRow.Cells[13]?.ToString().Equals("Y") ?? false;
-            chkBoxPrtOrderX.Checked = dgvDAMenu.CurrentRow.Cells[14]?.ToString().Equals("Y") ?? false;
+
+            if (dgvDAMenu.CurrentRow.Cells[13].Value == null)
+            {
+                GetPrtLst();
+                cmbPrtName.Text = "";
+                //cmbBoxDeptCode.Text = "";
+            }
+            else
+            {
+                //var tc = CommonData.TaDeptCodeList.Select(lstDC => new { DeptCode = lstDC.DeptCode, DeptName = lstDC.DeptName })
+                //    .Where(s => s.DeptCode.Equals(dgvDAMenu.CurrentRow.Cells[13].Value?.ToString() ?? ""));
+                //if (tc.Any())
+                //{
+                //    GetPrtLst();
+                //    cmbPrtName.Text = tc.FirstOrDefault().DeptCode;
+                //}
+                cmbPrtName.Items.Clear();
+
+                foreach (string sPrint in PrinterSettings.InstalledPrinters)//获取所有打印机名称
+                {
+                    PrintDocument print = new PrintDocument();
+                    string sDefault = dgvDAMenu.CurrentRow.Cells[13].Value.ToString();//默认打印机名
+
+                    cmbPrtName.Items.Add(sPrint);
+                    if (sPrint == sDefault) cmbPrtName.SelectedIndex = cmbPrtName.Items.IndexOf(sPrint);
+                }
+            }
+
+            if (dgvDAMenu.CurrentRow.Cells[14].Value == null)
+            {
+                GetDeptCodeLst();
+                cmbPrtName.Text = "";
+                //cmbBoxDeptCode.Text = "";
+            }
+            else
+            {
+                new OnLoadSystemCommonData().GetTADeptCode();
+
+                var tc = CommonData.TaDeptCodeList.Select(lstDC => new { DeptCode = lstDC.DeptCode, DeptName = lstDC.DeptName })
+                    .Where(s => s.DeptCode.Equals(dgvDAMenu.CurrentRow.Cells[14].Value?.ToString() ?? ""));
+                cmbPrtOrder.Text = tc.Any() ? tc.FirstOrDefault().DeptCode : "";
+                //cmbPrtOrder.SelectedIndex = cmbPrtOrder.Items.IndexOf(dgvDAMenu.CurrentRow.Cells[14].Value.ToString());
+            }
 
             //chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[16].Value == null ? false : dgvDAMenu.CurrentRow.Cells[16].Value.ToString().Equals("Y");
             //chkUnavailable.Checked = dgvDAMenu.CurrentRow.Cells[17].Value == null ? false : dgvDAMenu.CurrentRow.Cells[16].Value.ToString().Equals("Y");
@@ -975,8 +1056,8 @@ namespace SuperPOS.UI.TakeAway
             taMenuItem.MenuCateID = strMenuCate;
 
             taMenuItem.SupplyShift = cmbBoxSplySft.Text;
-            taMenuItem.PrinterName = chkBoxPrtOrderByDept.Checked ? "Y" : "N";
-            taMenuItem.PrinterOrder = chkBoxPrtOrderX.Checked ? "Y" : "N";
+            taMenuItem.PrinterName = cmbPrtName.Text;
+            taMenuItem.PrinterOrder = cmbPrtOrder.Text;
 
             taMenuItem.Qty = "0";
 
@@ -1636,6 +1717,38 @@ namespace SuperPOS.UI.TakeAway
                     : "Data import failed!");
             }
         }
+
+        #region 获得所有打印列表
+        private void GetPrtLst()
+        {
+            cmbPrtName.Items.Clear();
+
+            foreach (string sPrint in PrinterSettings.InstalledPrinters)//获取所有打印机名称
+            {
+                PrintDocument print = new PrintDocument();
+                string sDefault = print.PrinterSettings.PrinterName;//默认打印机名
+
+                cmbPrtName.Items.Add(sPrint);
+                if (sPrint == sDefault)
+                    cmbPrtName.SelectedIndex = cmbPrtName.Items.IndexOf(sPrint);
+            }
+        }
+        #endregion
+
+        #region 获得Department Code
+
+        private void GetDeptCodeLst()
+        {
+            //cmbPrtOrder.Items.Clear();
+
+            new OnLoadSystemCommonData().GetTAMenuCategory();
+            var lstDeptCode = CommonData.TaDeptCodeList.Select(lstDC => new { DeptCode = lstDC.DeptCode, DeptName = lstDC.DeptName });
+
+            cmbPrtOrder.DataSource = lstDeptCode.ToList();
+            cmbPrtOrder.ValueMember = "DeptCode";
+            cmbPrtOrder.DisplayMember = "DeptCode";
+        }
+        #endregion
 
     }
 }
