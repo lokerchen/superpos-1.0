@@ -156,6 +156,12 @@
     <Compile Include="Print\PrtCommon.cs" />
     <Compile Include="Print\PrtPrint.cs" />
     <Compile Include="Print\PrtStatic.cs" />
+    <Compile Include="TakeAway\Frm3rdChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\Frm3rdChoice.Designer.cs">
+      <DependentUpon>Frm3rdChoice.cs</DependentUpon>
+    </Compile>
     <Compile Include="TakeAway\FrmCall.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -338,6 +344,12 @@
     <Compile Include="TakeAway\FrmTATblSetup.Designer.cs">
       <DependentUpon>FrmTATblSetup.cs</DependentUpon>
     </Compile>
+    <Compile Include="TakeAway\Frm2ndChoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TakeAway\Frm2ndChoice.Designer.cs">
+      <DependentUpon>Frm2ndChoice.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\FrmAdminControlPanel.resx">
       <DependentUpon>FrmAdminControlPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSelectMenu.resx">
       <DependentUpon>FrmSelectMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\Frm3rdChoice.resx">
+      <DependentUpon>Frm3rdChoice.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmCall.resx">
       <DependentUpon>FrmCall.cs</DependentUpon>
@@ -471,6 +486,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TakeAway\FrmTATblSetup.resx">
       <DependentUpon>FrmTATblSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TakeAway\Frm2ndChoice.resx">
+      <DependentUpon>Frm2ndChoice.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="packages.config" />
