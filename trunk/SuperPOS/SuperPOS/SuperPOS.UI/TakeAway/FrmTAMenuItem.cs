@@ -164,9 +164,9 @@ namespace SuperPOS.UI.TakeAway
             #region dgvMenu
 
             onLoadSystemCommonData.GetTAMenuItemList();
-            dgvDAMenu.DataSource = CommonData.TaMenuItemList;
-            dgvSCMenu.DataSource = CommonData.TaMenuItemList;
-            dgvTCMenu.DataSource = CommonData.TaMenuItemList;
+            dgvDAMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
+            dgvSCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
+            dgvTCMenu.DataSource = CommonData.TaMenuItemList.Where(s => s.MenuSetID.Equals(btnDAGuid.ToString())).ToList();
             dgvTHMenu.DataSource = CommonData.TaMenuItemList;
             dgvSubMenu.DataSource = CommonData.TaMenuItemSubMenuList;
 
